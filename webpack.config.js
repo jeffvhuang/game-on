@@ -1,62 +1,32 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+  entry: {
+    // NB: The entry points will help optimization.splitChunks decide how to chunk the bundles
+    app: './src/index.js'
+  },
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/'
+  },
+  plugins: [
+    new CleanWebpackPlugin(['build']),
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html",
+      inject: true
+    })
+  ],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        enforce: "pre",
+        test: /\.(js|jsx|mjs)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "style-loader",
-          "css-loader",
-          "postcss-loader"
-        ]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[hash:8].[ext]',
-              outputPath: 'assets/'
-            }
-          }
-        ]
+        loader: "eslint-loader",
       }
     ]
-  },
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin(),
-      new OptimizeCSSAssetsPlugin()
-    ]
-  },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'app.[contenthash:8].css',
-    })
-  ]
+  }
 };
