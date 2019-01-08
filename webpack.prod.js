@@ -3,6 +3,7 @@ const common = require('./webpack.common.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -44,9 +45,7 @@ module.exports = merge(common, {
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
-    new ManifestPlugin({
-      fileName: 'asset-manifest.json',
-    })
+    new ManifestPlugin()
   ],
   output: {
     filename: '[name].[chunkhash:8].bundle.js',
