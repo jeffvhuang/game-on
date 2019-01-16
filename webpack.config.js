@@ -19,6 +19,9 @@ module.exports = {
       inject: true
     })
   ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.less']
+  },
   module: {
     rules: [
       {
