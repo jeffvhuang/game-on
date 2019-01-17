@@ -1,30 +1,59 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-import { appName } from '../../../helpers/constants';
+import { appName, paths } from '../../../helpers/constants';
+import { Link } from 'react-router-dom';
 
 export default class NavBarContainer extends React.Component {
+  state = {
+    current: 'app'
+  }
+  
+  handleClick = e => {
+    this.setState({ current: e.key });
+  }
+
   render() {
     return (
-      <Menu>
-        <Menu.Item>
-          <Icon type="play-circle" />{appName}
+      <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]}>
+        <Menu.Item key="app">
+          <Link to={paths.LANDING}>
+            <Icon type="play-circle" />{appName}
+          </Link>
         </Menu.Item>
-        <Menu.Item>Highlights</Menu.Item>
-        <Menu.SubMenu>
-          Sports
-          <Menu.Item>Basketball</Menu.Item>
-          <Menu.Item>Football</Menu.Item>
-          <Menu.Item>Tennis</Menu.Item>
+        <Menu.Item key="highlights">
+          <Link to={paths.HIGHLIGHTS}>Highlights</Link>
+        </Menu.Item>
+        <Menu.SubMenu title="Sports">
+          <Menu.Item key="basketball">
+            <Link to={paths.SPORTS + paths.BASKETBALL}>Basketball</Link>
+          </Menu.Item>
+          <Menu.Item key="football">
+            <Link to={paths.SPORTS + paths.FOOTBALL}>Football</Link>
+          </Menu.Item>
+          <Menu.Item key="tennis">
+            <Link to={paths.SPORTS + paths.TENNIS}>Tennis</Link>
+          </Menu.Item>
         </Menu.SubMenu>
-        <Menu.SubMenu>
-          E-Sports
-          <Menu.Item>Dota 2</Menu.Item>
-          <Menu.Item>League of Legends</Menu.Item>
-          <Menu.Item>Counter Strike: GO</Menu.Item>
-          <Menu.Item>Overwatch</Menu.Item>
+        <Menu.SubMenu title="E-Sports">
+          <Menu.Item key="dota">
+            <Link to={paths.ESPORTS + paths.DOTA}>Dota 2</Link>
+          </Menu.Item>
+          <Menu.Item key="lol">
+            <Link to={paths.ESPORTS + paths.LOL}>League of Legends</Link>
+          </Menu.Item>
+          <Menu.Item key="csgo">
+            <Link to={paths.ESPORTS + paths.CSGO}>Counter Strike: GO</Link>
+          </Menu.Item>
+          <Menu.Item key="overwatch">
+            <Link to={paths.ESPORTS + paths.OVERWATCH}>Overwatch</Link>
+          </Menu.Item>
         </Menu.SubMenu>
-        <Menu.Item>Events</Menu.Item>
-        <Menu.Item>Login</Menu.Item>
+        <Menu.Item key="events">
+          <Link to={paths.EVENTS}>Events</Link>
+        </Menu.Item>
+        <Menu.Item key="login">
+          <Link to={paths.LOGIN}>Login</Link>
+        </Menu.Item>
       </Menu>
     );
   }

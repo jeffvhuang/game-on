@@ -5,6 +5,13 @@ export const paths = {
   LOGIN: '/login',
   HIGHLIGHTS: '/highlights',
   SPORTS: '/sports',
+  BASKETBALL: '/basketball',
+  FOOTBALL: '/football',
+  TENNIS: '/tennis',
   ESPORTS: '/esports',
+  DOTA: '/dota',
+  LOL: '/lol',
+  CSGO: '/csgo',
+  OVERWATCH: '/overwatch',
   EVENTS: '/events'
 };
