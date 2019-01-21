@@ -14,7 +14,7 @@ export default class NavBarContainer extends React.Component {
 
   render() {
     return (
-      <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]}>
+      <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]} subMenuOpenDelay={0}>
         <Menu.Item key="app">
           <Link to={paths.LANDING}>
             <Icon type="play-circle" />{appName}
@@ -51,7 +51,7 @@ export default class NavBarContainer extends React.Component {
         <Menu.Item key="events">
           <Link to={paths.EVENTS}>Events</Link>
         </Menu.Item>
-        <Menu.Item key="login">
+        <Menu.Item key="login" className="right">
           <Link to={paths.LOGIN}>Login</Link>
         </Menu.Item>
       </Menu>
