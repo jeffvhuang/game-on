@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-import { appName, paths } from '../../../helpers/constants';
+import { appName, paths, sports, esports } from '../../../helpers/constants';
 import { Link } from 'react-router-dom';
 
 export default class NavBarContainer extends React.Component {
@@ -25,27 +25,27 @@ export default class NavBarContainer extends React.Component {
         </Menu.Item>
         <Menu.SubMenu title="Sports">
           <Menu.Item key="basketball">
-            <Link to={paths.SPORTS + paths.BASKETBALL}>Basketball</Link>
+            <Link to={paths.SPORTS + paths.BASKETBALL}>{sports.BASKETBALL}</Link>
           </Menu.Item>
           <Menu.Item key="football">
-            <Link to={paths.SPORTS + paths.FOOTBALL}>Football</Link>
+            <Link to={paths.SPORTS + paths.FOOTBALL}>{sports.FOOTBALL}</Link>
           </Menu.Item>
           <Menu.Item key="tennis">
-            <Link to={paths.SPORTS + paths.TENNIS}>Tennis</Link>
+            <Link to={paths.SPORTS + paths.TENNIS}>{sports.TENNIS}</Link>
           </Menu.Item>
         </Menu.SubMenu>
         <Menu.SubMenu title="E-Sports">
           <Menu.Item key="dota">
-            <Link to={paths.ESPORTS + paths.DOTA}>Dota 2</Link>
+            <Link to={paths.ESPORTS + paths.DOTA}>{esports.DOTA}</Link>
           </Menu.Item>
           <Menu.Item key="lol">
-            <Link to={paths.ESPORTS + paths.LOL}>League of Legends</Link>
+            <Link to={paths.ESPORTS + paths.LOL}>{esports.LEAGUE}</Link>
           </Menu.Item>
           <Menu.Item key="csgo">
-            <Link to={paths.ESPORTS + paths.CSGO}>Counter Strike: GO</Link>
+            <Link to={paths.ESPORTS + paths.CSGO}>{esports.CSGO}</Link>
           </Menu.Item>
           <Menu.Item key="overwatch">
-            <Link to={paths.ESPORTS + paths.OVERWATCH}>Overwatch</Link>
+            <Link to={paths.ESPORTS + paths.OVERWATCH}>{esports.OVERWATCH}</Link>
           </Menu.Item>
         </Menu.SubMenu>
         <Menu.Item key="events">

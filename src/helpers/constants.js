@@ -15,3 +15,16 @@ export const paths = {
   OVERWATCH: '/overwatch',
   EVENTS: '/events'
 };
+
+export const sports = {
+  BASKETBALL: "Basketball",
+  TENNIS: "Tennis",
+  FOOTBALL: "Football"
+};
+
+export const esports = {
+  DOTA: "Dota 2",
+  LEAGUE: "League of Legends",
+  CSGO: "Counter Strike: GO",
+  OVERWATCH: "Overwatch"
+};
