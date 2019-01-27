@@ -14,7 +14,7 @@ export default class HighlightsContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ]
-    }
+    };
   }
 
   render() {

@@ -7,6 +7,7 @@ import HighlightsPageContainer from './components/highlights/HighlightsPageConta
 import SportsPageContainer from './components/sports/SportsPageContainer';
 import ESportsPageContainer from './components/esports/ESportsPageContainer';
 import EventsPageContainer from './components/events/EventsPageContainer';
+import VideoPageContainer from './components/video/VideoPageContainer';
 
 export default class Routes extends React.Component {
   render() {
@@ -18,6 +19,7 @@ export default class Routes extends React.Component {
         <Route path={paths.SPORTS + '/:sport'} component={SportsPageContainer} />
         <Route path={paths.ESPORTS + '/:esport'} component={ESportsPageContainer} />
         <Route path={paths.EVENTS} component={EventsPageContainer} />
+        <Route path={paths.VIDEO + '/:id'} component={VideoPageContainer} />
       </Switch>
     );
   }

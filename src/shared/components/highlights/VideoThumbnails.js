@@ -1,6 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { string, array } from 'prop-types';
+import { paths } from '../../../helpers/constants';
+import { Link } from 'react-router-dom';
 
 const VideoThumbnails = ({ heading, videos }) => {
   return (
@@ -10,7 +12,7 @@ const VideoThumbnails = ({ heading, videos }) => {
         {videos.map((video, i) => {
           return (
             <Col span={5} key={i}>
-              <img src={video} />
+              <Link to={paths.VIDEO + '/' + '1'} ><img src={video} /></Link>
             </Col>
           );
         })}

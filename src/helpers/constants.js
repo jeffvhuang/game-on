@@ -13,7 +13,8 @@ export const paths = {
   LOL: '/lol',
   CSGO: '/csgo',
   OVERWATCH: '/overwatch',
-  EVENTS: '/events'
+  EVENTS: '/events',
+  VIDEO: '/video'
 };
 
 export const sports = {
