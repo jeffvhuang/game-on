@@ -14,7 +14,7 @@ export default class VideoPageContainer extends React.Component {
     return (
       <div className="mid-container">
         <div className="section">
-          <div className="video-container">
+          <div className="mid-flex">
             <video controls width="600" height="400" />
           </div>
         </div>

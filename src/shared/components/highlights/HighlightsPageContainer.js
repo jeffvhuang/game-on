@@ -1,6 +1,8 @@
 import React from 'react';
 import VideoThumbnails from './VideoThumbnails';
 import { paths, sports, esports } from '../../../helpers/constants';
+import SelectDropdown from './SelectDropdown';
+import { Select } from 'antd';
 
 export default class HighlightsPageContainer extends React.Component {
   state = {
@@ -12,9 +14,14 @@ export default class HighlightsPageContainer extends React.Component {
     ]
   }
 
+  handleChange = value => {
+    console.log(`selected ${value}`);
+  }
+
   render() {
     return (
       <div className="mid-container">
+        <SelectDropdown handleChange={this.handleChange} />
         <VideoThumbnails heading="Popular" videos={this.state.videos} />
         <VideoThumbnails heading={sports.FOOTBALL} videos={this.state.videos} />
         <VideoThumbnails heading={sports.BASKETBALL} videos={this.state.videos} />
