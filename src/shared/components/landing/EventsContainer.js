@@ -21,7 +21,7 @@ export default class EventsContainer extends React.Component {
 
   render() {
     return (
-      <div className="pad-sides">
+      <div className="section">
         <h2>Events</h2>
         <div className="margin-bot">
           <h3>Coming Up</h3>

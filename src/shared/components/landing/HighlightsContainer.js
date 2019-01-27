@@ -19,7 +19,7 @@ export default class HighlightsContainer extends React.Component {
 
   render() {
     return (
-      <div className="pad-sides">
+      <div className="section">
         <h2>Highlights</h2>
         <Row gutter={8} type="flex" justify="space-between" className="margin-bot">
           {this.state.videos.map((video, i) => {
