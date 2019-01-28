@@ -12,7 +12,11 @@ const SelectDropdown = ({ handleChange }) => {
         placeholder="Select sports to filter"
         mode="multiple"
         size="large"
-        style={{ width: '80%' }} >
+        style={{ width: '80%' }}
+        allowClear >
+        <OptGroup label="General">
+          <Option value="Popular">Popular</Option>
+        </OptGroup>
         <OptGroup label="Sports">
           {Object.keys(sports).map(key => {
             return <Option key={key} value={key}>{sports[key]}</Option>;
