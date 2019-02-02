@@ -1,4 +1,5 @@
 import React from 'react';
+
 import VideoThumbnails from './VideoThumbnails';
 import { sportsList, esportsList } from '../../../helpers/constants';
 import SelectDropdown from './SelectDropdown';
@@ -16,8 +17,6 @@ export default class HighlightsPageContainer extends React.Component {
       ],
       show: this.getCompleteList()
     };
-
-    this.getCompleteList = this.getCompleteList.bind(this);
   }
   
   getCompleteList = () => {
