@@ -1,11 +1,12 @@
 import React from 'react';
-import { func } from 'prop-types';
-import { sports, esports } from '../../../helpers/constants';
+import { func, bool } from 'prop-types';
 import { Select } from 'antd';
+
+import { sports, esports } from '../../../helpers/constants';
 
 const { Option, OptGroup } = Select;
 
-const SelectDropdown = ({ handleChange }) => {
+const SelectDropdown = ({ handleChange, showGeneral=false }) => {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -14,9 +15,11 @@ const SelectDropdown = ({ handleChange }) => {
         size="large"
         style={{ width: '80%' }}
         allowClear >
-        <OptGroup label="General">
-          <Option value="Popular">Popular</Option>
-        </OptGroup>
+        {showGeneral && 
+          <OptGroup label="General">
+            <Option value="Popular">Popular</Option>
+          </OptGroup>
+        }
         <OptGroup label="Sports">
           {Object.keys(sports).map(key => {
             return <Option key={key} value={key}>{sports[key]}</Option>;
@@ -33,7 +36,8 @@ const SelectDropdown = ({ handleChange }) => {
 };
 
 SelectDropdown.propTypes = {
-  handleChange: func.isRequired
+  handleChange: func.isRequired,
+  showGeneral: bool
 };
 
 export default SelectDropdown;
