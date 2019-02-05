@@ -1,6 +1,9 @@
+import { sports, esports } from './constants';
+
 // List of events in each sport
 const basketballEvents = [
   {
+    sport: sports.BASKETBALL,
     name: "NBA",
     startDate: '2018-10-16',
     endDate: '2019-4-10',
@@ -25,6 +28,7 @@ const basketballEvents = [
 
 const tennisEvents = [
   {
+    sport: sports.TENNIS,
     name: "Australian Open",
     startDate: '2019-1-7',
     endDate: '2019-1-27',
@@ -46,6 +50,7 @@ const tennisEvents = [
     ]
   },
   {
+    sport: sports.TENNIS,
     name: "French Open",
     startDate: '2019-5-20',
     endDate: '2019-6-9',
@@ -57,6 +62,7 @@ const tennisEvents = [
 
 const footballEvents = [
   {
+    sport: sports.FOOTBALL,
     name: "English Premier League",
     startDate: '2018-8-11',
     endDate: '2019-5-9',
@@ -79,6 +85,7 @@ const footballEvents = [
   },
   {
     name: "UEFA Champions League",
+    sport: sports.FOOTBALL,
     startDate: '2018-6-26',
     endDate: '2019-6-1',
     matches: [
@@ -103,6 +110,7 @@ const footballEvents = [
 const dotaEvents = [
   {
     name: "Chongqing Major",
+    sport: esports.DOTA,
     startDate: '2019-1-19',
     endDate: '2019-1-27',
     matches: [
@@ -127,6 +135,7 @@ const dotaEvents = [
 const lolEvents = [
   {
     name: "League of Legends World Championship",
+    sport: esports.LEAGUE,
     startDate: '2018-8-1',
     endDate: '2018-11-3',
     matches: [
@@ -144,6 +153,7 @@ const lolEvents = [
 const csgoEvents = [
   {
     name: "BLAST Pro Series: Miami 2019",
+    sport: esports.CSGO,
     startDate: '2019-4-12',
     endDate: '2019-4-13',
     matches: []
@@ -153,6 +163,7 @@ const csgoEvents = [
 const overwatchEvents = [
   {
     name: "Overwatch League 2019 Regular Season",
+    sport: esports.OVERWATCH,
     startDate: '2019-2-14',
     endDate: '2019-8-25',
     matches: [

@@ -11,14 +11,13 @@ export default class EventsPageContainer extends React.Component {
     const eventsObject = this.sortEvents(sportsEvents, eSportsEvents);
 
     this.state = {
+      eventsObject: eventsObject, // to hold the original sorting
       ongoing: eventsObject.ongoing,
       upcoming: eventsObject.upcoming,
       completed: eventsObject.completed,
-      show: this.getCompleteList(),
-      events: {
-        sports: Object.assign({}, sportsEvents),
-        eSports: Object.assign({}, eSportsEvents),
-      }
+      ongoingHidden: [],
+      upcomingHidden: [],
+      completedHidden: []
     };
   }
 
@@ -60,15 +59,43 @@ export default class EventsPageContainer extends React.Component {
     };
   }
 
-  getCompleteList = () => {
-    return sportsList.concat(esportsList);
-  }
+  handleChange = values => {
+    const length = values.length;
+    if (length > 0) {
+      const eventsObject = this.state.eventsObject;
 
-  handleChange = value => {
-    if (value.length > 0) {
-      this.setState({ show: value });
+      const ongoingForSelected = eventsObject.ongoing.filter(
+        event => event.sport.toUpperCase() == values[length - 1]
+      );
+      const upcomingForSelected = eventsObject.upcoming.filter(
+        event => event.sport.toUpperCase() == values[length - 1]
+      );
+      const completedForSelected = eventsObject.completed.filter(
+        event => event.sport.toUpperCase() == values[length - 1]
+      );
+
+      // If only one has been selected, the previous data was all the data,
+      // so don't add on, just replace.
+      if (length == 1) {
+        this.setState(prevState => ({
+          ongoing: ongoingForSelected,
+          upcoming: upcomingForSelected,
+          completed: completedForSelected
+        }));
+      } else {
+        this.setState(prevState => ({
+          ongoing: prevState.ongoing.concat(ongoingForSelected),
+          upcoming: prevState.upcoming.concat(upcomingForSelected),
+          completed: prevState.completed.concat(completedForSelected)
+        }));
+      }
     } else {
-      this.setState({ show: this.getCompleteList() });
+      // Filters removed, so replace with all sports events again
+      this.setState(prevState => ({
+        ongoing: prevState.eventsObject.ongoing,
+        upcoming: prevState.eventsObject.upcoming,
+        completed: prevState.eventsObject.completed
+      }));
     }
   }
 
@@ -76,30 +103,36 @@ export default class EventsPageContainer extends React.Component {
     return (
       <div className="mid-container">
         <SelectDropdown handleChange={this.handleChange} showGeneral={false} />
-        <h2>Ongoing</h2>
-        {this.state.ongoing.map(event => {
-          return (
-            <div key={event.name}>
-              {event.name}: {event.startDate} - {event.endDate}
-            </div>
-          );
-        })}
-        <h2>Upcoming</h2>
-        {this.state.upcoming.map(event => {
-          return (
-            <div key={event.name}>
-              {event.name}: {event.startDate} - {event.endDate}
-            </div>
-          );
-        })}
-        <h2>Completed</h2>
-        {this.state.completed.map(event => {
-          return (
-            <div key={event.name}>
-              {event.name}: {event.startDate} - {event.endDate}
-            </div>
-          );
-        })}
+        <div className="section">
+          <h2>Ongoing</h2>
+          {this.state.ongoing.map(event => {
+            return (
+              <div key={event.name}>
+                {event.name}: {event.startDate} - {event.endDate}
+              </div>
+            );
+          })}
+        </div>
+        <div className="section">
+          <h2>Upcoming</h2>
+          {this.state.upcoming.map(event => {
+            return (
+              <div key={event.name}>
+                {event.name}: {event.startDate} - {event.endDate}
+              </div>
+            );
+          })}
+        </div>
+        <div className="section">
+          <h2>Completed</h2>
+          {this.state.completed.map(event => {
+            return (
+              <div key={event.name}>
+                {event.name}: {event.startDate} - {event.endDate}
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

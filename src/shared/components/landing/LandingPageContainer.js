@@ -6,7 +6,7 @@ import EventsContainer from './EventsContainer';
 export default class LandingPageContainer extends React.Component {
   render() {
     return (
-      <div className="mid-container">
+      <div>
         <Posters />
         <HighlightsContainer />
         <EventsContainer />
