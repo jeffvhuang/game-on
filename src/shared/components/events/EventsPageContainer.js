@@ -65,13 +65,13 @@ export default class EventsPageContainer extends React.Component {
       const eventsObject = this.state.eventsObject;
 
       const ongoingForSelected = eventsObject.ongoing.filter(
-        event => event.sport.toUpperCase() == values[length - 1]
+        event => event.sport == values[length - 1]
       );
       const upcomingForSelected = eventsObject.upcoming.filter(
-        event => event.sport.toUpperCase() == values[length - 1]
+        event => event.sport == values[length - 1]
       );
       const completedForSelected = eventsObject.completed.filter(
-        event => event.sport.toUpperCase() == values[length - 1]
+        event => event.sport == values[length - 1]
       );
 
       // If only one has been selected, the previous data was all the data,

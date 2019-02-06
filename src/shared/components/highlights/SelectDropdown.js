@@ -22,12 +22,12 @@ const SelectDropdown = ({ handleChange, showGeneral=false }) => {
         }
         <OptGroup label="Sports">
           {Object.keys(sports).map(key => {
-            return <Option key={key} value={key}>{sports[key]}</Option>;
+            return <Option key={key} value={sports[key]}>{sports[key]}</Option>;
           })}
         </OptGroup>
         <OptGroup label="E-Sports">
           {Object.keys(esports).map(key => {
-            return <Option key={key} value={key}>{esports[key]}</Option>;
+            return <Option key={key} value={esports[key]}>{esports[key]}</Option>;
           })}
         </OptGroup>
       </Select>
