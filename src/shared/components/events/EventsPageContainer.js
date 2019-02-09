@@ -1,7 +1,6 @@
 import React from 'react';
 
 import SelectDropdown from '../highlights/SelectDropdown';
-import { sportsList, esportsList } from '../../../helpers/constants';
 import { sportsEvents, eSportsEvents } from '../../../helpers/eventData';
 
 export default class EventsPageContainer extends React.Component {
@@ -56,12 +55,9 @@ export default class EventsPageContainer extends React.Component {
   handleChange = values => {
     const length = values.length;
     
-    // Need check for 0 here because if removed all in one go, prev length would have
-    // been larger, so in if check below 
-    if (length == 0) {
-      // Filters removed, so replace with all sports events again
+    // Set state arrays depending on whetehr value has been selected or removed
+    if (length == 0) { // All removed
       this.resetInitialState();
-      // Check whether item has been removed or added
     } else if (length > this.state.previousValues.length) {
       this.handleAddedSelect(length, values);
     } else {
@@ -79,50 +75,39 @@ export default class EventsPageContainer extends React.Component {
   }
 
   handleAddedSelect = (length, values) => {
-    // Check whether 
-    if (length > 0) {
-      const initialState = this.state.initialState;
-      const selectedSport = values[length - 1];
+    const initialState = this.state.initialState;
+    const selectedSport = values[length - 1];
 
-      const ongoingForSelected = initialState.ongoing.filter(
-        event => event.sport == selectedSport
-      );
-      const upcomingForSelected = initialState.upcoming.filter(
-        event => event.sport == selectedSport
-      );
-      const completedForSelected = initialState.completed.filter(
-        event => event.sport == selectedSport
-      );
+    const ongoingForSelected = initialState.ongoing.filter(
+      event => event.sport == selectedSport
+    );
+    const upcomingForSelected = initialState.upcoming.filter(
+      event => event.sport == selectedSport
+    );
+    const completedForSelected = initialState.completed.filter(
+      event => event.sport == selectedSport
+    );
 
-      // If only one has been selected, the previous data was all the data,
-      // so replace instead of add on.
-      if (length == 1) {
-        this.setState({
-          ongoing: ongoingForSelected,
-          upcoming: upcomingForSelected,
-          completed: completedForSelected,
-          previousValues: values
-        });
-      } else {
-        this.setState(prevState => ({
-          ongoing: prevState.ongoing.concat(ongoingForSelected),
-          upcoming: prevState.upcoming.concat(upcomingForSelected),
-          completed: prevState.completed.concat(completedForSelected),
-          previousValues: values
-        }));
-      }
+    // If only one has been selected, the previous data was all the data,
+    // so replace instead of add on.
+    if (length == 1) {
+      this.setState({
+        ongoing: ongoingForSelected,
+        upcoming: upcomingForSelected,
+        completed: completedForSelected,
+        previousValues: values
+      });
     } else {
-      // Filters removed, so replace with all sports events again
       this.setState(prevState => ({
-        ongoing: prevState.initialState.ongoing,
-        upcoming: prevState.initialState.upcoming,
-        completed: prevState.initialState.completed,
+        ongoing: prevState.ongoing.concat(ongoingForSelected),
+        upcoming: prevState.upcoming.concat(upcomingForSelected),
+        completed: prevState.completed.concat(completedForSelected),
         previousValues: values
       }));
     }
   }
 
-  handleRemovedSelect = (values) => {
+  handleRemovedSelect = values => {
     const previousValues = this.state.previousValues;
     let selectedSport;
     // Find the removed sport
