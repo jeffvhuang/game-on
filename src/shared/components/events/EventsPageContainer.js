@@ -8,20 +8,18 @@ export default class EventsPageContainer extends React.Component {
   constructor() {
     super();
 
-    const eventsObject = this.sortEvents(sportsEvents, eSportsEvents);
+    const initialState = this.getInitialState(sportsEvents, eSportsEvents);
 
     this.state = {
-      eventsObject: eventsObject, // to hold the original sorting
-      ongoing: eventsObject.ongoing,
-      upcoming: eventsObject.upcoming,
-      completed: eventsObject.completed,
-      ongoingHidden: [],
-      upcomingHidden: [],
-      completedHidden: []
+      initialState: initialState, // to hold the original sorting
+      ongoing: initialState.ongoing,
+      upcoming: initialState.upcoming,
+      completed: initialState.completed,
+      previousValues: []
     };
   }
 
-  sortEvents = (sportsEvents, eSportsEvents) => {
+  getInitialState = (sportsEvents, eSportsEvents) => {
     const ongoing = [];
     const upcoming = [];
     const completed = [];
@@ -52,51 +50,105 @@ export default class EventsPageContainer extends React.Component {
       });
     }
 
-    return {
-      ongoing: ongoing,
-      upcoming: upcoming,
-      completed: completed
-    };
+    return { ongoing, upcoming, completed };
   }
 
   handleChange = values => {
     const length = values.length;
-    if (length > 0) {
-      const eventsObject = this.state.eventsObject;
+    
+    // Need check for 0 here because if removed all in one go, prev length would have
+    // been larger, so in if check below 
+    if (length == 0) {
+      // Filters removed, so replace with all sports events again
+      this.resetInitialState();
+      // Check whether item has been removed or added
+    } else if (length > this.state.previousValues.length) {
+      this.handleAddedSelect(length, values);
+    } else {
+      this.handleRemovedSelect(values);
+    }
+  }
 
-      const ongoingForSelected = eventsObject.ongoing.filter(
-        event => event.sport == values[length - 1]
+  resetInitialState = () => {
+    this.setState(prevState => ({
+      ongoing: prevState.initialState.ongoing,
+      upcoming: prevState.initialState.upcoming,
+      completed: prevState.initialState.completed,
+      previousValues: []
+    }));
+  }
+
+  handleAddedSelect = (length, values) => {
+    // Check whether 
+    if (length > 0) {
+      const initialState = this.state.initialState;
+      const selectedSport = values[length - 1];
+
+      const ongoingForSelected = initialState.ongoing.filter(
+        event => event.sport == selectedSport
       );
-      const upcomingForSelected = eventsObject.upcoming.filter(
-        event => event.sport == values[length - 1]
+      const upcomingForSelected = initialState.upcoming.filter(
+        event => event.sport == selectedSport
       );
-      const completedForSelected = eventsObject.completed.filter(
-        event => event.sport == values[length - 1]
+      const completedForSelected = initialState.completed.filter(
+        event => event.sport == selectedSport
       );
 
       // If only one has been selected, the previous data was all the data,
-      // so don't add on, just replace.
+      // so replace instead of add on.
       if (length == 1) {
-        this.setState(prevState => ({
+        this.setState({
           ongoing: ongoingForSelected,
           upcoming: upcomingForSelected,
-          completed: completedForSelected
-        }));
+          completed: completedForSelected,
+          previousValues: values
+        });
       } else {
         this.setState(prevState => ({
           ongoing: prevState.ongoing.concat(ongoingForSelected),
           upcoming: prevState.upcoming.concat(upcomingForSelected),
-          completed: prevState.completed.concat(completedForSelected)
+          completed: prevState.completed.concat(completedForSelected),
+          previousValues: values
         }));
       }
     } else {
       // Filters removed, so replace with all sports events again
       this.setState(prevState => ({
-        ongoing: prevState.eventsObject.ongoing,
-        upcoming: prevState.eventsObject.upcoming,
-        completed: prevState.eventsObject.completed
+        ongoing: prevState.initialState.ongoing,
+        upcoming: prevState.initialState.upcoming,
+        completed: prevState.initialState.completed,
+        previousValues: values
       }));
     }
+  }
+
+  handleRemovedSelect = (values) => {
+    const previousValues = this.state.previousValues;
+    let selectedSport;
+    // Find the removed sport
+    for (let i = 0; i < previousValues.length; i++) {
+      if (!values.includes(previousValues[i])) {
+        selectedSport = previousValues[i];
+        break;
+      }
+    }
+
+    const filteredOngoing = this.state.ongoing.filter(
+      event => event.sport != selectedSport
+    );
+    const filteredUpcoming = this.state.upcoming.filter(
+      event => event.sport != selectedSport
+    );
+    const filteredCompleted = this.state.completed.filter(
+      event => event.sport != selectedSport
+    );
+
+    this.setState({
+      ongoing: filteredOngoing,
+      upcoming: filteredUpcoming,
+      completed: filteredCompleted,
+      previousValues: values
+    });
   }
 
   render() {
