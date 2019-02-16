@@ -1,20 +1,17 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
+import { array } from 'prop-types';
+
 import { paths } from '../../../helpers/constants';
 
-export default class HighlightsContainer extends React.Component {
-  constructor() {
-    super();
+const propTypes = {
+  videos: array.isRequired
+};
 
-    this.state = {
-      videos: [
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video2",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
-      ]
-    };
+export default class HighlightsContainer extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -22,7 +19,7 @@ export default class HighlightsContainer extends React.Component {
       <div className="section">
         <h2>Highlights</h2>
         <Row gutter={8} type="flex" justify="space-between" className="margin-bot">
-          {this.state.videos.map((video, i) => {
+          {this.props.videos.map((video, i) => {
             return (
               <Col span={5} key={i}>
                 <img src={video} />
@@ -35,3 +32,5 @@ export default class HighlightsContainer extends React.Component {
     );
   }
 }
+
+HighlightsContainer.propTypes = propTypes;

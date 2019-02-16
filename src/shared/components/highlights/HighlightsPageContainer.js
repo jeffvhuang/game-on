@@ -2,7 +2,7 @@ import React from 'react';
 
 import VideoThumbnails from './VideoThumbnails';
 import { sportsList, esportsList } from '../../../helpers/constants';
-import SelectDropdown from './SelectDropdown';
+import SelectDropdown from '../common/SelectDropdown';
 
 export default class HighlightsPageContainer extends React.Component {
   constructor() {

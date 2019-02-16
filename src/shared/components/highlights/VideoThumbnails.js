@@ -1,10 +1,16 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { string, array } from 'prop-types';
-import { paths } from '../../../helpers/constants';
 import { Link } from 'react-router-dom';
 
-const VideoThumbnails = ({ heading, videos }) => {
+import { paths } from '../../../helpers/constants';
+
+VideoThumbnails.propTypes = {
+  heading: string.isRequired,
+  videos: array.isRequired
+};
+
+function VideoThumbnails({ heading, videos }) {
   return (
     <div className="section">
       <h2>{heading}</h2>
@@ -19,11 +25,6 @@ const VideoThumbnails = ({ heading, videos }) => {
       </Row>
     </div>
   );
-};
-
-VideoThumbnails.propTypes = {
-  heading: string.isRequired,
-  videos: array.isRequired
-};
+}
 
 export default VideoThumbnails;

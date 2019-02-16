@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SelectDropdown from '../highlights/SelectDropdown';
+import SelectDropdown from '../common/SelectDropdown';
 import { sportsEvents, eSportsEvents } from '../../../helpers/eventData';
 
 export default class EventsPageContainer extends React.Component {
