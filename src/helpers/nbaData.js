@@ -32,7 +32,7 @@ const wizards = "Washington Wizards";
 const warriorsData = {
   name: warriors,
   players: [],
-  matches: [
+  games: [
     {
       date: '2019-2-13',
       home: warriors,
@@ -53,6 +53,13 @@ const warriorsData = {
       away: kings,
       winner: '',
       score: ''
+    },
+    {
+      date: '2019-4-11',
+      home: grizzlies,
+      away: warriors,
+      winner: '',
+      score: ''
     }
   ],
   highlights: []
@@ -61,7 +68,7 @@ const warriorsData = {
 const lakersData = {
   name: "Los Angeles Lakers",
   players: [],
-  matches: [
+  games: [
     {
       date: '2019-2-13',
       home: hawks,
@@ -75,6 +82,13 @@ const lakersData = {
       away: rockets,
       winner: '',
       score: ''
+    },
+    {
+      date: '2019-4-10',
+      home: lakers,
+      away: blazers,
+      winner: '',
+      score: ''
     }
   ],
   highlights: []
@@ -83,7 +97,7 @@ const lakersData = {
 const celticsData = {
   name: celtics,
   players: [],
-  matches: [
+  games: [
     {
       date: '2019-2-14',
       home: celtics,
@@ -94,6 +108,13 @@ const celticsData = {
     {
       date: '2019-2-22',
       home: bucks,
+      away: celtics,
+      winner: '',
+      score: ''
+    },
+    {
+      date: '2019-4-6',
+      home: pacers,
       away: celtics,
       winner: '',
       score: ''

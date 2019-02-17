@@ -55,7 +55,7 @@ export default class EventsPageContainer extends React.Component {
   handleChange = values => {
     const length = values.length;
     
-    // Set state arrays depending on whetehr value has been selected or removed
+    // Set state arrays depending on whether value has been selected or removed
     if (length == 0) { // All removed
       this.resetInitialState();
     } else if (length > this.state.previousValues.length) {
