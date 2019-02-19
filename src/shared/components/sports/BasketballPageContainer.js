@@ -2,7 +2,7 @@ import React from 'react';
 import { object } from 'prop-types';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
-import TeamSelectDropdown from './TeamSelectDropdown';
+import TeamSelectDropdown from '../common/TeamSelectDropdown';
 import ScheduleContainer from './ScheduleContainer';
 import { nbaTeams, nbaData } from '../../../helpers/nbaData';
 import { getNBASchedule } from '../../../helpers/utils';
