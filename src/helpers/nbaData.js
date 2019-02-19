@@ -128,3 +128,5 @@ export const nbaData = {
   lakers: lakersData,
   celtics: celticsData
 };
+
+export const nbaTeams = Object.keys(nbaData).map(key => nbaData[key].name);
