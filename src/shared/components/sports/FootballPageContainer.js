@@ -4,16 +4,16 @@ import { object } from 'prop-types';
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from './TeamSelectDropdown';
 import ScheduleContainer from './ScheduleContainer';
-import { nbaTeams } from '../../../helpers/nbaData';
-import { sortInitialSchedule } from '../../../helpers/utils';
+import { eplTeams, eplData } from '../../../helpers/eplData';
+import { getEPLSchedule } from '../../../helpers/utils';
 
 const propTypes = {
   match: object
 };
 
-const schedule = sortInitialSchedule();
+const schedule = getEPLSchedule(eplData);
 
-class SportsPageContainer extends React.Component {
+class FootballPageContainer extends React.Component {
   constructor() {
     super();
 
@@ -114,8 +114,8 @@ class SportsPageContainer extends React.Component {
             <video controls width="600" height="400" />
           </div>
         </div>
-        <h1>Sports Page: {this.props.match.params.sport}</h1>
-        <TeamSelectDropdown handleChange={this.handleChange} teams={nbaTeams} />
+        <h1>Football: English Premier League</h1>
+        <TeamSelectDropdown handleChange={this.handleChange} teams={eplTeams} />
         <HighlightsContainer videos={this.state.videos} />
         <ScheduleContainer gamesToday={this.state.gamesToday}
           upcoming={this.state.upcoming} />
@@ -124,6 +124,6 @@ class SportsPageContainer extends React.Component {
   }
 }
 
-SportsPageContainer.propTypes = propTypes;
+FootballPageContainer.propTypes = propTypes;
 
-export default SportsPageContainer;
+export default FootballPageContainer;

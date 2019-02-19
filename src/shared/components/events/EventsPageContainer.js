@@ -1,55 +1,21 @@
 import React from 'react';
 
 import SelectDropdown from '../common/SelectDropdown';
+import { sortEvents } from '../../../helpers/utils';
 import { sportsEvents, eSportsEvents } from '../../../helpers/eventData';
 
-export default class EventsPageContainer extends React.Component {
+const initialState = sortEvents(sportsEvents, eSportsEvents);
+
+class EventsPageContainer extends React.Component {
   constructor() {
     super();
 
-    const initialState = this.getInitialState(sportsEvents, eSportsEvents);
-
     this.state = {
-      initialState: initialState, // to hold the original sorting
+      selected: [],
       ongoing: initialState.ongoing,
       upcoming: initialState.upcoming,
-      completed: initialState.completed,
-      previousValues: []
+      completed: initialState.completed
     };
-  }
-
-  getInitialState = (sportsEvents, eSportsEvents) => {
-    const ongoing = [];
-    const upcoming = [];
-    const completed = [];
-    const now = Date.now();
-
-    // Check start - end dates and place into one of the above arrays
-    for (const property in sportsEvents) {
-      sportsEvents[property].forEach(event => {
-        if (new Date(event.startDate).getTime() > now) {
-          upcoming.push(event);
-        } else if (new Date(event.endDate).getTime() < now) {
-          completed.push(event);
-        } else {
-          ongoing.push(event);
-        }
-      });
-    }
-
-    for (const property in eSportsEvents) {
-      eSportsEvents[property].forEach(event => {
-        if (new Date(event.startDate).getTime() > now) {
-          upcoming.push(event);
-        } else if (new Date(event.endDate).getTime() < now) {
-          completed.push(event);
-        } else {
-          ongoing.push(event);
-        }
-      });
-    }
-
-    return { ongoing, upcoming, completed };
   }
 
   handleChange = values => {
@@ -58,24 +24,28 @@ export default class EventsPageContainer extends React.Component {
     // Set state arrays depending on whether value has been selected or removed
     if (length == 0) { // All removed
       this.resetInitialState();
-    } else if (length > this.state.previousValues.length) {
-      this.handleAddedSelect(length, values);
     } else {
-      this.handleRemovedSelect(values);
-    }
+      this.setState(prevState => {
+        if (length > prevState.selected.length) {
+          return this.handleAddedSelect(values, prevState);
+        } else {
+          return this.handleRemovedSelect(values, prevState);
+        }
+      });
+    } 
   }
 
   resetInitialState = () => {
-    this.setState(prevState => ({
-      ongoing: prevState.initialState.ongoing,
-      upcoming: prevState.initialState.upcoming,
-      completed: prevState.initialState.completed,
-      previousValues: []
-    }));
+    this.setState({
+      selected: [],
+      ongoing: initialState.ongoing,
+      upcoming: initialState.upcoming,
+      completed: initialState.completed
+    });
   }
 
-  handleAddedSelect = (length, values) => {
-    const initialState = this.state.initialState;
+  handleAddedSelect = (values, prevState) => {
+    const length = values.length;
     const selectedSport = values[length - 1];
 
     const ongoingForSelected = initialState.ongoing.filter(
@@ -91,24 +61,24 @@ export default class EventsPageContainer extends React.Component {
     // If only one has been selected, the previous data was all the data,
     // so replace instead of add on.
     if (length == 1) {
-      this.setState({
+      return {
+        selected: values,
         ongoing: ongoingForSelected,
         upcoming: upcomingForSelected,
-        completed: completedForSelected,
-        previousValues: values
-      });
+        completed: completedForSelected
+      };
     } else {
-      this.setState(prevState => ({
+      return {
+        selected: values,
         ongoing: prevState.ongoing.concat(ongoingForSelected),
         upcoming: prevState.upcoming.concat(upcomingForSelected),
-        completed: prevState.completed.concat(completedForSelected),
-        previousValues: values
-      }));
+        completed: prevState.completed.concat(completedForSelected)
+      };
     }
   }
 
-  handleRemovedSelect = values => {
-    const previousValues = this.state.previousValues;
+  handleRemovedSelect = (values, prevState) => {
+    const previousValues = prevState.selected;
     let selectedSport;
     // Find the removed sport
     for (let i = 0; i < previousValues.length; i++) {
@@ -129,10 +99,10 @@ export default class EventsPageContainer extends React.Component {
     );
 
     this.setState({
+      selected: values,
       ongoing: filteredOngoing,
       upcoming: filteredUpcoming,
-      completed: filteredCompleted,
-      previousValues: values
+      completed: filteredCompleted
     });
   }
 
@@ -174,3 +144,5 @@ export default class EventsPageContainer extends React.Component {
     );
   }
 }
+
+export default EventsPageContainer;
