@@ -6,7 +6,7 @@ import { sports, esports } from '../../../helpers/constants';
 
 const { Option, OptGroup } = Select;
 
-const SelectDropdown = ({ handleChange, showGeneral=false }) => {
+const SportSelectDropdown = ({ handleChange, showGeneral=false }) => {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -35,9 +35,9 @@ const SelectDropdown = ({ handleChange, showGeneral=false }) => {
   );
 };
 
-SelectDropdown.propTypes = {
+SportSelectDropdown.propTypes = {
   handleChange: func.isRequired,
   showGeneral: bool
 };
 
-export default SelectDropdown;
+export default SportSelectDropdown;

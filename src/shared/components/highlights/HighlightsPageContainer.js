@@ -2,7 +2,7 @@ import React from 'react';
 
 import VideoThumbnails from './VideoThumbnails';
 import { sportsList, esportsList } from '../../../helpers/constants';
-import SelectDropdown from '../common/SelectDropdown';
+import SportSelectDropdown from '../common/SportSelectDropdown';
 
 export default class HighlightsPageContainer extends React.Component {
   constructor() {
@@ -34,7 +34,7 @@ export default class HighlightsPageContainer extends React.Component {
   render() {
     return (
       <div className="mid-container">
-        <SelectDropdown handleChange={this.handleChange} />
+        <SportSelectDropdown handleChange={this.handleChange} />
         {this.state.show.map(sport => {
           return <VideoThumbnails key={sport} heading={sport} videos={this.state.videos} />;
         })}

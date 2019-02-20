@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SelectDropdown from '../common/SelectDropdown';
+import SelectDropdown from '../common/SportSelectDropdown';
 import { sortEvents } from '../../../helpers/utils';
 import { sportsEvents, eSportsEvents } from '../../../helpers/eventData';
 

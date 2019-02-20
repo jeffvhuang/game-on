@@ -77,25 +77,23 @@ export function getEPLSchedule(data) {
 }
 
 export function getDOTASchedule(data) {
-  const gamesToday = [];
+  const ongoing = [];
   const upcoming = [];
-  const currentDate = new Date();
+  const completed = [];
   const now = Date.now();
 
   // Sort each team for games not yet completed
-  for (const property in data) {
-    data[property].games.forEach(game => {
-      const gamesDate = new Date(game.date);
+  data.forEach(tournament => {
+    if (new Date(tournament.startDate).getTime() > now) {
+      upcoming.push(tournament);
+    } else if (new Date(tournament.endDate).getTime() < now) {
+      completed.push(tournament);
+    } else {
+      ongoing.push(tournament);
+    }
+  });
 
-      if (isSameDate(currentDate, gamesDate)) {
-        gamesToday.push(game);
-      } else if (gamesDate.getTime() > now) {
-        upcoming.push(game);
-      }
-    });
-  }
-
-  return { gamesToday, upcoming };
+  return { ongoing, upcoming, completed };
 }
 
 export function isSameDate(dateTestedAgainst, dateToTest) {
