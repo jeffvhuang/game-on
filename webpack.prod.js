@@ -87,11 +87,12 @@ module.exports = merge(common, {
             // to allow webpack tree shaking
           },
           {
-            test: /\.(sa|sc|c)ss$/,
+            test: /\.(le|c)ss$/,
             use: [
               MiniCssExtractPlugin.loader,
               "css-loader",
-              "postcss-loader"
+              "postcss-loader",
+              "less-loader"
             ]
           },
           // "file" loader makes sure assets end up in the `build` folder.

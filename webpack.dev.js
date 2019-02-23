@@ -2,6 +2,10 @@ const merge = require('webpack-merge');
 const common = require('./webpack.config');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const fs  = require('fs');
+const path = require('path');
+const lessToJs = require('less-vars-to-js');
+const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/styles/ant-theme-vars.less'), 'utf8'));
 
 module.exports = merge(common, {
   mode: 'development',
@@ -50,16 +54,26 @@ module.exports = merge(common, {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.(sc|sa|c)ss$$/,
+            test: /\.css$$/,
             use: [
               'style-loader', // creates style nodes from JS strings
-              {
-                loader: 'css-loader', // translates CSS into CommonJS
-                options: {
-                  module: true
-                }
-              },
+              'css-loader',
               'postcss-loader'
+            ]
+          },
+          {
+            test: /\.less$$/,
+            use: [
+              'style-loader',
+              'css-loader',
+              'postcss-loader',
+              {
+                loader: 'less-loader',
+                options: {
+                  javascriptEnabled: true,
+                  modifyVars: themeVariables
+                }
+              }
             ]
           },
           {
@@ -67,7 +81,7 @@ module.exports = merge(common, {
             // its runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
+            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.less$/],
             loader: require.resolve('file-loader'),
             // options: {
             //   name: 'static/media/[name].[hash:8].[ext]',
