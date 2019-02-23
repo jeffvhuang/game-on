@@ -4,8 +4,9 @@ import { object } from 'prop-types';
 import HighlightsContainer from '../landing/HighlightsContainer';
 import EventSelectDropdown from '../common/EventSelectDropdown';
 // import ScheduleContainer from './ScheduleContainer';
-import { dotaTeams, dotaData, dotaTournaments } from '../../../helpers/dotaData';
+import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
+import EventDatesSection from '../common/EventDatesSection';
 
 const propTypes = {
   match: object
@@ -32,19 +33,19 @@ class ESportsPageContainer extends React.Component {
   }
 
   handleChange = values => {   
-    // const length = values.length; 
-    // // Set state arrays depending on whether value has been selected or removed
-    // if (length == 0) { // All removed
-    //   this.resetInitialState();
-    // } else {
-    //   this.setState(prevState => {
-    //     if (length > prevState.selected.length) {
-    //       return this.handleAddedSelect(values, prevState);
-    //     } else {
-    //       return this.handleRemovedSelect(values, prevState);
-    //     }
-    //   });
-    // }
+    const length = values.length; 
+    // Set state arrays depending on whether value has been selected or removed
+    if (length == 0) { // All removed
+      this.resetInitialState();
+    } else {
+      this.setState(prevState => {
+        if (length > prevState.selected.length) {
+          return this.handleAddedSelect(values, prevState);
+        } else {
+          return this.handleRemovedSelect(values, prevState);
+        }
+      });
+    }
   }
 
   resetInitialState = () => {
@@ -57,55 +58,64 @@ class ESportsPageContainer extends React.Component {
   }
   
   handleAddedSelect = (values, prevState) => {
-    // const selectedTeam = values[values.length - 1];
+    const selected = values[values.length - 1];
   
-    // const todayForSelected = schedule.gamesToday.filter(
-    //   game => game.home == selectedTeam || game.away == selectedTeam
-    // );
-    // const upcomingForSelected = schedule.upcoming.filter(
-    //   game => game.home == selectedTeam || game.away == selectedTeam
-    // );
+    const ongoingForSelected = schedule.ongoing.filter(
+      event => event.name == selected
+    );
+    const upcomingForSelected = schedule.upcoming.filter(
+      event => event.name == selected
+    );
+    const completedForSelected = schedule.completed.filter(
+      event => event.name == selected
+    );
   
-    // // If only one has been selected, the previous data was all the data,
-    // // so replace instead of add on.
-    // if (values.length == 1) {
-    //   return {
-    //     selected: values,
-    //     gamesToday: todayForSelected,
-    //     upcoming: upcomingForSelected
-    //   };
-    // } else {
-    //   return {
-    //     selected: values,
-    //     gamesToday: prevState.gamesToday.concat(todayForSelected),
-    //     upcoming: prevState.upcoming.concat(upcomingForSelected)
-    //   };
-    // }
+    // If only one has been selected, the previous data was all the data,
+    // so replace instead of add on.
+    if (values.length == 1) {
+      return {
+        selected: values,
+        ongoing: ongoingForSelected,
+        upcoming: upcomingForSelected,
+        completed: completedForSelected
+      };
+    } else {
+      return {
+        selected: values,
+        ongoing: prevState.ongoing.concat(ongoingForSelected),
+        upcoming: prevState.upcoming.concat(upcomingForSelected),
+        completed: prevState.completed.concat(completedForSelected)
+      };
+    }
   };
   
   handleRemovedSelect = (values, prevState) => {
-    // const previousValues = prevState.selected;
-    // let selectedTeam;
-    // // Find the removed sport
-    // for (let i = 0; i < previousValues.length; i++) {
-    //   if (!values.includes(previousValues[i])) {
-    //     selectedTeam = previousValues[i];
-    //     break;
-    //   }
-    // }
-  
-    // const filteredToday = this.state.gamesToday.filter(
-    //   game => game.home != selectedTeam && game.away != selectedTeam
-    // );
-    // const filteredUpcoming = this.state.upcoming.filter(
-    //   game => game.home != selectedTeam && game.away != selectedTeam
-    // );
-  
-    // return {
-    //   selected: values,
-    //   gamesToday: filteredToday,
-    //   upcoming: filteredUpcoming
-    // };
+    const previousValues = prevState.selected;
+    let selected;
+    // Find the removed sport
+    for (let i = 0; i < previousValues.length; i++) {
+      if (!values.includes(previousValues[i])) {
+        selected = previousValues[i];
+        break;
+      }
+    }
+
+    const filteredOngoing = this.state.ongoing.filter(
+      event => event.name != selected
+    );
+    const filteredUpcoming = this.state.upcoming.filter(
+      event => event.sport != selected
+    );
+    const filteredCompleted = this.state.completed.filter(
+      event => event.sport != selected
+    );
+
+    this.setState({
+      selected: values,
+      ongoing: filteredOngoing,
+      upcoming: filteredUpcoming,
+      completed: filteredCompleted
+    });
   };
 
   getTournamentNames = () => {
@@ -124,8 +134,9 @@ class ESportsPageContainer extends React.Component {
         <EventSelectDropdown handleChange={this.handleChange} 
           events={this.getTournamentNames()} />
         <HighlightsContainer videos={this.state.videos} />
-        {/* <ScheduleContainer gamesToday={this.state.gamesToday}
-          upcoming={this.state.upcoming} /> */}
+        <EventDatesSection ongoing={this.state.ongoing}
+          upcoming={this.state.upcoming}
+          completed={this.state.completed} />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import { sports, esports } from './constants';
+import { dotaTournaments } from './dotaData';
 
 // List of events in each sport
 const basketballEvents = [
@@ -107,31 +108,6 @@ const footballEvents = [
   }
 ];
 
-const dotaEvents = [
-  {
-    name: "Chongqing Major",
-    sport: esports.DOTA,
-    startDate: '2019-1-19',
-    endDate: '2019-1-27',
-    matches: [
-      {
-        date: '2019-1-27',
-        team1: "Virtus.pro",
-        team2: "Secret",
-        winner: "Secret",
-        score: "1 - 3"
-      },
-      {
-        date: '2019-1-27',
-        team1: "Secret",
-        team2: "Evil Geniuses",
-        winner: "Secret",
-        score: "2 -0"
-      }
-    ]
-  }
-];
-
 const lolEvents = [
   {
     name: "League of Legends World Championship",
@@ -179,7 +155,7 @@ export const sportsEvents = {
 };
 
 export const eSportsEvents = {
-  dota: dotaEvents,
+  dota: dotaTournaments,
   league: lolEvents,
   csgo: csgoEvents,
   overwatch: overwatchEvents
