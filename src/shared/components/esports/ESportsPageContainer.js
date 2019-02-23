@@ -110,12 +110,12 @@ class ESportsPageContainer extends React.Component {
       event => event.sport != selected
     );
 
-    this.setState({
+    return {
       selected: values,
       ongoing: filteredOngoing,
       upcoming: filteredUpcoming,
       completed: filteredCompleted
-    });
+    };
   };
 
   getTournamentNames = () => {

@@ -1,10 +1,11 @@
 import React from 'react';
 
-import SelectDropdown from '../common/SportSelectDropdown';
+import SportSelectDropdown from '../common/SportSelectDropdown';
 import { sortEvents } from '../../../helpers/utils';
 import { sportsEvents, eSportsEvents } from '../../../helpers/eventData';
+import EventDatesSection from '../common/EventDatesSection';
 
-const initialState = sortEvents(sportsEvents, eSportsEvents);
+const schedule = sortEvents(sportsEvents, eSportsEvents);
 
 class EventsPageContainer extends React.Component {
   constructor() {
@@ -12,9 +13,9 @@ class EventsPageContainer extends React.Component {
 
     this.state = {
       selected: [],
-      ongoing: initialState.ongoing,
-      upcoming: initialState.upcoming,
-      completed: initialState.completed
+      ongoing: schedule.ongoing,
+      upcoming: schedule.upcoming,
+      completed: schedule.completed
     };
   }
 
@@ -38,9 +39,9 @@ class EventsPageContainer extends React.Component {
   resetInitialState = () => {
     this.setState({
       selected: [],
-      ongoing: initialState.ongoing,
-      upcoming: initialState.upcoming,
-      completed: initialState.completed
+      ongoing: schedule.ongoing,
+      upcoming: schedule.upcoming,
+      completed: schedule.completed
     });
   }
 
@@ -48,13 +49,13 @@ class EventsPageContainer extends React.Component {
     const length = values.length;
     const selectedSport = values[length - 1];
 
-    const ongoingForSelected = initialState.ongoing.filter(
+    const ongoingForSelected = schedule.ongoing.filter(
       event => event.sport == selectedSport
     );
-    const upcomingForSelected = initialState.upcoming.filter(
+    const upcomingForSelected = schedule.upcoming.filter(
       event => event.sport == selectedSport
     );
-    const completedForSelected = initialState.completed.filter(
+    const completedForSelected = schedule.completed.filter(
       event => event.sport == selectedSport
     );
 
@@ -98,48 +99,21 @@ class EventsPageContainer extends React.Component {
       event => event.sport != selectedSport
     );
 
-    this.setState({
+    return {
       selected: values,
       ongoing: filteredOngoing,
       upcoming: filteredUpcoming,
       completed: filteredCompleted
-    });
+    };
   }
 
   render() {
     return (
       <div className="mid-container">
-        <SelectDropdown handleChange={this.handleChange} showGeneral={false} />
-        <div className="section">
-          <h2>Ongoing</h2>
-          {this.state.ongoing.map(event => {
-            return (
-              <div key={event.name}>
-                {event.name}: {event.startDate} - {event.endDate}
-              </div>
-            );
-          })}
-        </div>
-        <div className="section">
-          <h2>Upcoming</h2>
-          {this.state.upcoming.map(event => {
-            return (
-              <div key={event.name}>
-                {event.name}: {event.startDate} - {event.endDate}
-              </div>
-            );
-          })}
-        </div>
-        <div className="section">
-          <h2>Completed</h2>
-          {this.state.completed.map(event => {
-            return (
-              <div key={event.name}>
-                {event.name}: {event.startDate} - {event.endDate}
-              </div>
-            );
-          })}
-        </div>
+        <SportSelectDropdown handleChange={this.handleChange} showGeneral={false} />
+        <EventDatesSection ongoing={this.state.ongoing}
+          upcoming={this.state.upcoming}
+          completed={this.state.completed} />
       </div>
     );
   }
