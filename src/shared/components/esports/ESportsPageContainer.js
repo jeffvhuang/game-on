@@ -3,7 +3,6 @@ import { object } from 'prop-types';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import EventSelectDropdown from '../common/EventSelectDropdown';
-// import ScheduleContainer from './ScheduleContainer';
 import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
@@ -130,7 +129,7 @@ class ESportsPageContainer extends React.Component {
             <video controls width="600" height="400" />
           </div>
         </div>
-        <h1>Dota 2</h1>
+        <h1>{this.props.match.params.esport}</h1>
         <EventSelectDropdown handleChange={this.handleChange} 
           events={this.getTournamentNames()} />
         <HighlightsContainer videos={this.state.videos} />
