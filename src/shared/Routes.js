@@ -22,7 +22,7 @@ export default class Routes extends React.Component {
         <Route path={paths.SPORTS + '/:sport'} component={BasketballPageContainer} />
         <Route path={paths.ESPORTS + '/:esport'} component={ESportsPageContainer} />
         <Route path={paths.EVENTS} component={EventsPageContainer} />
-        <Route path={paths.VIDEO + '/:id'} component={VideoPageContainer} />
+        <Route path={paths.VIDEO + '/:vidId'} component={VideoPageContainer} />
       </Switch>
     );
   }

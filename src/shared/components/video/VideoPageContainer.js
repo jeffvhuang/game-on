@@ -1,12 +1,16 @@
 import React from 'react';
 import { object } from 'prop-types';
 
-export default class VideoPageContainer extends React.Component {
+const propTypes = {
+  match: object
+};
+
+class VideoPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      id: props.match.params.id
+      vidId: "https://www.youtube.com/embed/" + props.match.params.vidId
     };
   }
 
@@ -15,7 +19,9 @@ export default class VideoPageContainer extends React.Component {
       <div className="mid-container">
         <div className="section">
           <div className="mid-flex">
-            <video controls width="600" height="400" />
+            <iframe width="1519" height="554" src={this.state.vidId} frameBorder="0" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen />
           </div>
         </div>
         <div className="section">
@@ -28,6 +34,6 @@ export default class VideoPageContainer extends React.Component {
   }
 }
 
-VideoPageContainer.propTypes = {
-  match: object
-};
+VideoPageContainer.propTypes = propTypes;
+
+export default VideoPageContainer;

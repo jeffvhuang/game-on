@@ -10,7 +10,7 @@ export default class HighlightsPageContainer extends React.Component {
 
     this.state = {
       videos: [
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
+        "k6B-UTAJd5U",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video2",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"

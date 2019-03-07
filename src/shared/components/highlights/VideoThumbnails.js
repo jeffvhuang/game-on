@@ -18,7 +18,7 @@ function VideoThumbnails({ heading, videos }) {
         {videos.map((video, i) => {
           return (
             <Col span={5} key={i}>
-              <Link to={paths.VIDEO + '/' + '1'} ><img src={video} /></Link>
+              <Link to={paths.VIDEO + '/' + video} ><img src="https://dummyimage.com/200x160/000/fff.jpg&text=Video" /></Link>
             </Col>
           );
         })}
