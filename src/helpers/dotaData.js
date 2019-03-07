@@ -1,5 +1,8 @@
 import { esports } from './constants';
 
+// Third party APIs
+export const dotaAPI = 'https://api.opendota.com/api';
+
 const nip = "Ninjas In Pyjamas";
 const secret = "Team Secret";
 const liquid = "Team Liquid";

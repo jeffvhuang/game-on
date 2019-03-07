@@ -8,7 +8,7 @@ import EventSelectDropdown from '../common/EventSelectDropdown';
 import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
-import { getDotaData } from '../../redux/actions/dota-actions';
+import { getDotaData, getDotaLeagues } from '../../redux/actions/dota-actions';
 
 const propTypes = {
   match: object,
@@ -21,6 +21,7 @@ class ESportsPageContainer extends React.Component {
     super(props);
 
     if (props.dota.data.length < 1) props.actions.getDotaData();
+    props.actions.getDotaLeagues();
 
     this.state = {
       videos: [
@@ -169,7 +170,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getDotaData }, dispatch)
+  actions: bindActionCreators({ getDotaData, getDotaLeagues }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ESportsPageContainer);
