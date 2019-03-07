@@ -28,18 +28,28 @@ export const dotaTournaments = [
     matches: [
       {
         date: '2019-1-27',
-        team1: "Virtus.pro",
-        team2: "Secret",
-        winner: "Secret",
+        team1: vp,
+        team2: secret,
+        winner: secret,
         score: "1 - 3"
       },
       {
         date: '2019-1-27',
-        team1: "Secret",
-        team2: "Evil Geniuses",
-        winner: "Secret",
-        score: "2 -0"
-      }
+        team1: secret,
+        team2: eg,
+        winner: secret,
+        score: "2 -0",
+        video: ""
+      },
+      {
+        date: '2019-1-27',
+        team1: eg,
+        team2: lgd,
+        winner: eg,
+        score: "2 - 0",
+        videoUrl: "https://www.youtube.com/embed/k6B-UTAJd5U",
+        video: "k6B-UTAJd5U"
+      },
     ]
   },
   {

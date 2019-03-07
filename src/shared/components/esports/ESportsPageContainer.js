@@ -1,21 +1,26 @@
 import React from 'react';
 import { object } from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import EventSelectDropdown from '../common/EventSelectDropdown';
 import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
+import { getDotaData } from '../../redux/actions/dota-actions';
 
 const propTypes = {
-  match: object
+  match: object,
+  dota: object.isRequired,
+  actions: object.isRequired
 };
 
-const schedule = getDOTASchedule(dotaTournaments);
-
 class ESportsPageContainer extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    if (props.dota.data.length < 1) props.actions.getDotaData();
 
     this.state = {
       videos: [
@@ -24,11 +29,25 @@ class ESportsPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
+      schedule: {},
       selected: [],
-      ongoing: schedule.ongoing,
-      upcoming: schedule.upcoming,
-      completed: schedule.completed
+      ongoing: [],
+      upcoming: [],
+      completed: []
     };
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (!prevState.schedule.hasOwnProperty('upcoming') && nextProps.dota.data.length > 0) {
+      const schedule = getDOTASchedule(nextProps.dota.data);
+      return {
+        schedule: schedule,
+        ongoing: schedule.ongoing,
+        upcoming: schedule.upcoming,
+        completed: schedule.completed
+      };
+    }
+    return null;
   }
 
   handleChange = values => {   
@@ -48,6 +67,7 @@ class ESportsPageContainer extends React.Component {
   }
 
   resetInitialState = () => {
+    const { schedule } = this.state;
     this.setState({ 
       selected: [],
       ongoing: schedule.ongoing,
@@ -58,6 +78,7 @@ class ESportsPageContainer extends React.Component {
   
   handleAddedSelect = (values, prevState) => {
     const selected = values[values.length - 1];
+    const { schedule } = this.state;
   
     const ongoingForSelected = schedule.ongoing.filter(
       event => event.name == selected
@@ -143,5 +164,13 @@ class ESportsPageContainer extends React.Component {
 
 ESportsPageContainer.propTypes = propTypes;
 
-export default ESportsPageContainer;
+const mapStateToProps = (state) => ({
+  dota: state.dota
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators({ getDotaData }, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ESportsPageContainer);
 
