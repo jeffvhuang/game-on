@@ -50,3 +50,22 @@ export const getDotaProMatches = () => {
       });
   };
 };
+
+// Get Teams
+export const getDotaTeamsRequest = () => ({ type: A.GET_DOTA_TEAMS_REQUEST });
+export const getDotaTeamsSuccess = (payload) => ({ type: A.GET_DOTA_TEAMS_SUCCESS, payload });
+export const getDotaTeamsFailure = (err) => ({ type: A.GET_DOTA_TEAMS_FAILURE, err });
+
+export const getDotaTeams = () => {
+  return (dispatch) => {
+    dispatch(getDotaTeamsRequest());
+    return axios.get(dotaAPI.HOST + dotaAPI.TEAMS)
+      .then(response => {
+        dispatch(getDotaTeamsSuccess(response.data));
+      })
+      .catch(err => {
+        dispatch(getDotaTeamsFailure(err));
+        throw(err);
+      });
+  };
+};

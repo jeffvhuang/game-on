@@ -8,7 +8,7 @@ import EventSelectDropdown from '../common/EventSelectDropdown';
 import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
-import { getDotaData, getDotaLeagues, getDotaProMatches } from '../../redux/actions/dota-actions';
+import { getDotaData, getDotaLeagues, getDotaProMatches, getDotaTeams } from '../../redux/actions/dota-actions';
 
 const propTypes = {
   match: object,
@@ -21,6 +21,7 @@ class DotaPageContainer extends React.Component {
     super(props);
 
     if (props.dota.data.length < 1) props.actions.getDotaData();
+    props.actions.getDotaLeagues();
     props.actions.getDotaProMatches();
 
     this.state = {
@@ -143,8 +144,16 @@ class DotaPageContainer extends React.Component {
     return dotaTournaments.map(tournament => tournament.name);
   }
 
+  getMatchesForLeague = (proMatches) => {
+    const leagueMatches = proMatches.filter(match => match.league_name == "DreamLeague Season 11");
+    return leagueMatches;
+  }
+
   render() {
-    console.log(this.props.dota.proMatches);
+    console.log(this.props.dota);
+
+    console.log(this.getMatchesForLeague(this.props.dota.proMatches));
+
     return (
       <div>
         <div className="section">
@@ -171,7 +180,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getDotaData, getDotaLeagues, getDotaProMatches }, dispatch)
+  actions: bindActionCreators({ getDotaData, getDotaLeagues, getDotaProMatches, getDotaTeams }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DotaPageContainer);

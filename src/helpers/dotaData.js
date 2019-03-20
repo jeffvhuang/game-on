@@ -11,7 +11,7 @@ export const dotaAPI = {
 
 // General
 const nip = "Ninjas In Pyjamas";
-const secret = "Team Secret";
+const secret = "Team Secret"; // team_id: 1838315, last_match_time: 1553088902
 const liquid = "Team Liquid";
 const vp = "Virtus.Pro";
 const navi = "Natus Vincere";
