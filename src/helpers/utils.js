@@ -1,3 +1,4 @@
+// Sorting functions
 export function sortEvents(sportsEvents, eSportsEvents) {
   const ongoing = [];
   const upcoming = [];
