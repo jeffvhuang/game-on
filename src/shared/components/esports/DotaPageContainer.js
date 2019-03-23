@@ -20,8 +20,7 @@ class DotaPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    if (props.dota.data.length < 1) props.actions.getDotaData();
-    props.actions.getDotaLeagues();
+    if (props.dota.data.length < 1) props.actions.getDotaData(); // this is seed data
     props.actions.getDotaProMatches();
 
     this.state = {

@@ -20,8 +20,8 @@ class ESportsPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    if (props.dota.data.length < 1) props.actions.getDotaData();
-    props.actions.getDotaLeagues();
+    // if (props.dota.data.length < 1) props.actions.getDotaData();
+    // if (props.dota.props.actions.getDotaLeagues();
 
     this.state = {
       videos: [

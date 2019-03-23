@@ -3,7 +3,9 @@ import axios from 'axios';
 
 // Temporary seed data
 import { dotaTournaments, dotaAPI } from '../../../helpers/dotaData';
+import { PRO_MATCHES, LEAGUES } from '../../../helpers/mockOpenDotaAPIData';
 
+// OpenDota API requests
 // Get data
 export const getDotaDataSuccess = (payload) => ({ type: A.GET_DOTA_DATA, payload });
 
@@ -18,17 +20,25 @@ export const getDotaLeaguesRequest = () => ({ type: A.GET_DOTA_LEAGUES_REQUEST }
 export const getDotaLeaguesSuccess = (payload) => ({ type: A.GET_DOTA_LEAGUES_SUCCESS, payload });
 export const getDotaLeaguesFailure = (err) => ({ type: A.GET_DOTA_LEAGUES_FAILURE, err });
 
+// export const getDotaLeagues = () => {
+//   return (dispatch) => {
+//     dispatch(getDotaLeaguesRequest());
+//     return axios.get(dotaAPI.HOST + dotaAPI.LEAGUES)
+//       .then(response => {
+//         dispatch(getDotaLeaguesSuccess(response.data));
+//       })
+//       .catch(err => {
+//         dispatch(getDotaLeaguesFailure(err));
+//         throw(err);
+//       });
+//   };
+// };
+
+// return mock data
 export const getDotaLeagues = () => {
   return (dispatch) => {
     dispatch(getDotaLeaguesRequest());
-    return axios.get(dotaAPI.HOST + dotaAPI.LEAGUES)
-      .then(response => {
-        dispatch(getDotaLeaguesSuccess(response.data));
-      })
-      .catch(err => {
-        dispatch(getDotaLeaguesFailure(err));
-        throw(err);
-      });
+    return dispatch(getDotaLeaguesSuccess(LEAGUES));
   };
 };
 
@@ -37,17 +47,25 @@ export const getDotaProMatchesRequest = () => ({ type: A.GET_DOTA_PRO_MATCHES_RE
 export const getDotaProMatchesSuccess = (payload) => ({ type: A.GET_DOTA_PRO_MATCHES_SUCCESS, payload });
 export const getDotaProMatchesFailure = (err) => ({ type: A.GET_DOTA_PRO_MATCHES_FAILURE, err });
 
+// export const getDotaProMatches = () => {
+//   return (dispatch) => {
+//     dispatch(getDotaProMatchesRequest());
+//     return axios.get(dotaAPI.HOST + dotaAPI.PRO_MATCHES)
+//       .then(response => {
+//         dispatch(getDotaProMatchesSuccess(response.data));
+//       })
+//       .catch(err => {
+//         dispatch(getDotaProMatchesFailure(err));
+//         throw(err);
+//       });
+//   };
+// };
+
+// This uses mock data to reduce requests to api
 export const getDotaProMatches = () => {
   return (dispatch) => {
     dispatch(getDotaProMatchesRequest());
-    return axios.get(dotaAPI.HOST + dotaAPI.PRO_MATCHES)
-      .then(response => {
-        dispatch(getDotaProMatchesSuccess(response.data));
-      })
-      .catch(err => {
-        dispatch(getDotaProMatchesFailure(err));
-        throw(err);
-      });
+    return dispatch(getDotaProMatchesSuccess(PRO_MATCHES));
   };
 };
 
