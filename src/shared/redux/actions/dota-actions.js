@@ -1,9 +1,9 @@
-import { dotaActions as A } from './actions';
+import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
 // Temporary seed data
 import { dotaTournaments, dotaAPI } from '../../../helpers/dotaData';
-import { PRO_MATCHES, LEAGUES } from '../../../helpers/mockOpenDotaAPIData';
+import { PRO_MATCHES, LEAGUES } from '../../../mockApiData/openDota';
 
 // OpenDota API requests
 // Get data

@@ -1,21 +1,29 @@
 import React from 'react';
 import { object } from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { nbaTeams, nbaData } from '../../../helpers/nbaData';
+import { getNBASchedule } from '../../../helpers/utils';
+import { getNbaSchedule } from '../../redux/actions/basketball-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
 import ScheduleContainer from './ScheduleContainer';
-import { nbaTeams, nbaData } from '../../../helpers/nbaData';
-import { getNBASchedule } from '../../../helpers/utils';
+
 
 const propTypes = {
-  match: object
+  basketball: object.isRequired,
+  actions: object.isRequired
 };
 
 const schedule = getNBASchedule(nbaData);
 
 class BasketballPageContainer extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    props.actions.getNbaSchedule();
 
     this.state = {
       videos: [
@@ -126,4 +134,12 @@ class BasketballPageContainer extends React.Component {
 
 BasketballPageContainer.propTypes = propTypes;
 
-export default BasketballPageContainer;
+const mapStateToProps = (state) => ({
+  basketball: state.basketball
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators({ getNbaSchedule }, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BasketballPageContainer);

@@ -1,4 +1,4 @@
-import { dotaActions as A } from '../actions/actions';
+import { dotaActions as A } from '../actions/action-types';
 
 const initialState = {
   inProgress: false,

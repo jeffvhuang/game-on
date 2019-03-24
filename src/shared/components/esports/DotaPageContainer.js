@@ -3,12 +3,13 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import HighlightsContainer from '../landing/HighlightsContainer';
-import EventSelectDropdown from '../common/EventSelectDropdown';
 import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
-import EventDatesSection from '../common/EventDatesSection';
 import { getDotaData, getDotaLeagues, getDotaProMatches, getDotaTeams } from '../../redux/actions/dota-actions';
+
+import HighlightsContainer from '../landing/HighlightsContainer';
+import EventSelectDropdown from '../common/EventSelectDropdown';
+import EventDatesSection from '../common/EventDatesSection';
 
 const propTypes = {
   match: object,
@@ -20,7 +21,7 @@ class DotaPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    if (props.dota.data.length < 1) props.actions.getDotaData(); // this is seed data
+    if (props.dota.data.length < 1) props.actions.getDotaData();
     props.actions.getDotaProMatches();
 
     this.state = {
@@ -149,10 +150,6 @@ class DotaPageContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props.dota);
-
-    console.log(this.getMatchesForLeague(this.props.dota.proMatches));
-
     return (
       <div>
         <div className="section">

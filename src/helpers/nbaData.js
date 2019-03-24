@@ -1,3 +1,9 @@
+// Third party APIs
+export const nbaAPI = {
+  HOST: 'http://data.nba.net/10s',
+  SCHEDULE: '/prod/v1/2018/schedule.json'
+};
+
 const hawks = "Atlanta Hawks";
 const celtics = "Boston Celtics";
 const nets = "Brooklyn Nets";
