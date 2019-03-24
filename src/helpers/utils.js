@@ -38,6 +38,7 @@ export function sortEvents(sportsEvents, eSportsEvents) {
   return { ongoing, upcoming, completed };
 }
 
+// Initial seed data functions to sort dates
 export function getNBASchedule(data) {
   const gamesToday = [];
   const upcoming = [];
@@ -102,6 +103,31 @@ export function getDOTASchedule(data) {
   return { ongoing, upcoming, completed };
 }
 
+// Functions to sort dates from API data
+// Sort each team for games not yet completed (today or in future)
+// data: array of game objects
+export function sortNBASchedule(data) {
+  const gamesToday = [];
+  const upcoming = [];
+  const dateToday = new Date();
+  const now = Date.now();
+
+  data.forEach(game => {
+    const gamesDate = new Date(game.startTimeUTC);
+    if (isSameDate(dateToday, gamesDate)) {
+      gamesToday.push(game);
+    } else if (gamesDate.getTime() > now) {
+      upcoming.push(game);
+    }
+  });
+
+  return { gamesToday, upcoming };
+}
+
+/* Function check 2 dates are the same
+* dateTestedAgainst: Date object
+* dateToTest: Date object
+*/
 export function isSameDate(dateTestedAgainst, dateToTest) {
   const year = dateTestedAgainst.getFullYear();
   const month = dateTestedAgainst.getMonth();

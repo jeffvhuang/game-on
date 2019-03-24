@@ -4,13 +4,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { nbaTeams, nbaData } from '../../../helpers/nbaData';
-import { getNBASchedule } from '../../../helpers/utils';
+import { getNBASchedule, isSameDate, sortNBASchedule } from '../../../helpers/utils';
 import { getNbaSchedule } from '../../redux/actions/basketball-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
 import ScheduleContainer from './ScheduleContainer';
-
 
 const propTypes = {
   basketball: object.isRequired,
@@ -25,6 +24,9 @@ class BasketballPageContainer extends React.Component {
 
     props.actions.getNbaSchedule();
 
+    const today = new Date();
+    const now = Date.now;
+
     this.state = {
       videos: [
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
@@ -32,10 +34,26 @@ class BasketballPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
+      schedule: {},
       selected: [],
-      gamesToday: schedule.gamesToday,
-      upcoming: schedule.upcoming
+      gamesToday: props.basketball.nba.schedule.filter(game => isSameDate(today, new Date(game.startTimeUTC))) || [],
+      upcoming: props.basketball.nba.schedule.filter(
+        game => game.startTimeUTC.getTime() > now  && !isSameDate(today, new Date(game.startTimeUTC))) || []
+        // TODO ?create function to check it is a date after today rather than check both time and date
     };
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    // Populate schedule once received in props
+    if (prevState.gamesToday.length < 1 && nextProps.basketball.nba.schedule.length > 0) {
+      const schedule = sortNBASchedule(nextProps.basketball.nba.schedule);
+      return {
+        schedule: schedule,
+        gamesToday: schedule.gamesToday,
+        upcoming: schedule.upcoming
+      };
+    }
+    return null;
   }
 
   handleChange = values => {   

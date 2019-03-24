@@ -2,7 +2,7 @@ import { basketballActions as A } from '../actions/action-types';
 
 const initialState = {
   inProgress: false,
-  nba: {},
+  nba: { schedule: [] },
   selected: {}
 };
 
