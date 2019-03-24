@@ -1,3 +1,8 @@
+// Sleep function to delay tasks to mock delayed api response
+export function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Sorting functions
 export function sortEvents(sportsEvents, eSportsEvents) {
   const ongoing = [];
