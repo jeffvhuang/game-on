@@ -11,13 +11,15 @@ export const getNbaScheduleFailure = (err) => ({ type: A.GET_NBA_SCHEDULE_FAILUR
 export const getNbaSchedule = () => {
   return (dispatch) => {
     dispatch(getNbaScheduleRequest());
-    return axios.get(nbaAPI.HOST + nbaAPI.SCHEDULE)
-      .then(response => {
-        dispatch(getNbaScheduleSuccess(response.data.league.standard));
-      })
-      .catch(err => {
-        dispatch(getNbaScheduleFailure(err));
-        throw(err);
-      });
+    return axios.get(nbaAPI.HOST + nbaAPI.SCHEDULE, {
+      headers: {
+        'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
+      }
+    }).then(response => {
+      dispatch(getNbaScheduleSuccess(response.data.api.games));
+    }).catch(err => {
+      dispatch(getNbaScheduleFailure(err));
+      throw(err);
+    });
   };
 };
