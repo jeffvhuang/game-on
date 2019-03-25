@@ -39,27 +39,27 @@ export function sortEvents(sportsEvents, eSportsEvents) {
 }
 
 // Initial seed data functions to sort dates
-export function getNBASchedule(data) {
-  const gamesToday = [];
-  const upcoming = [];
-  const currentDate = new Date();
-  const now = Date.now();
+// export function getNBASchedule(data) {
+//   const gamesToday = [];
+//   const upcoming = [];
+//   const currentDate = new Date();
+//   const now = Date.now();
 
-  // Sort each team for games not yet completed
-  for (const property in data) {
-    data[property].games.forEach(game => {
-      const gamesDate = new Date(game.date);
+//   // Sort each team for games not yet completed
+//   for (const property in data) {
+//     data[property].games.forEach(game => {
+//       const gamesDate = new Date(game.date);
 
-      if (isSameDate(currentDate, gamesDate)) {
-        gamesToday.push(game);
-      } else if (gamesDate.getTime() > now) {
-        upcoming.push(game);
-      }
-    });
-  }
+//       if (isSameDate(currentDate, gamesDate)) {
+//         gamesToday.push(game);
+//       } else if (gamesDate.getTime() > now) {
+//         upcoming.push(game);
+//       }
+//     });
+//   }
 
-  return { gamesToday, upcoming };
-}
+//   return { gamesToday, upcoming };
+// }
 
 export function getEPLSchedule(data) {
   const gamesToday = [];

@@ -8,7 +8,8 @@
 // API from Rapidapi.com
 export const nbaAPI = {
   HOST: 'https://api-nba-v1.p.rapidapi.com',
-  SCHEDULE: '/games/seasonYear' + '/2018'
+  SCHEDULE: '/games/seasonYear' + '/2018',
+  TEAMS: '/teams/league/standard'
 };
 
 const hawks = "Atlanta Hawks";

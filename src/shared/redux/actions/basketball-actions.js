@@ -2,7 +2,9 @@ import axios from 'axios';
 
 import { basketballActions as A } from './action-types';
 import { nbaAPI } from '../../../helpers/nbaData';
-import { SCHEDULE } from '../../../mockApiData/rapidNba';
+
+// Mock data
+import { SCHEDULE, TEAMS } from '../../../mockApiData/rapidNba';
 import { sleep } from '../../../helpers/utils';
 
 // Get Schedule
@@ -34,5 +36,39 @@ export const getNbaSchedule = () => {
     dispatch(getNbaScheduleRequest());
     await sleep(2000);
     return dispatch(getNbaScheduleSuccess(SCHEDULE));
+  };
+};
+
+// Get Teams
+export const getNbaTeamsRequest = () => ({ type: A.GET_NBA_TEAMS_REQUEST });
+export const getNbaTeamsSuccess = (payload) => ({ type: A.GET_NBA_TEAMS_SUCCESS, payload });
+export const getNbaTeamsFailure = (err) => ({ type: A.GET_NBA_TEAMS_FAILURE, err });
+
+// export const getNbaTeams = () => {
+//   return (dispatch) => {
+//     dispatch(getNbaTeamsRequest());
+//     return axios({
+//       method: 'get',
+//       url: nbaAPI.HOST + nbaAPI.TEAMS,
+//       headers: {
+//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
+//       }
+//     }).then(response => {
+//       const nbaTeams = response.data.api.teams.filter(team => team.nbaFranchise == '1');
+//       dispatch(getNbaTeamsSuccess(nbaTeams));
+//     }).catch(err => {
+//       dispatch(getNbaTeamsFailure(err));
+//       throw(err);
+//     });
+//   };
+// };
+
+// return mock data
+export const getNbaTeams = () => {
+  return async (dispatch) => {
+    dispatch(getNbaTeamsRequest());
+    await sleep(2000);
+    const nbaTeams = TEAMS.filter(team => team.nbaFranchise == '1');
+    return dispatch(getNbaTeamsSuccess(nbaTeams));
   };
 };

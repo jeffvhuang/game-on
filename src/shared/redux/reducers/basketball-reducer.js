@@ -2,7 +2,7 @@ import { basketballActions as A } from '../actions/action-types';
 
 const initialState = {
   inProgress: false,
-  nba: { schedule: [] },
+  nba: { schedule: [], teams: [] },
   selected: {}
 };
 
@@ -13,6 +13,13 @@ function basketballReducer(state = initialState, action) {
     case A.GET_NBA_SCHEDULE_SUCCESS:
       return Object.assign({}, state, { inProgress: false, nba: { ...state.nba, schedule: action.payload } });
     case A.GET_NBA_SCHEDULE_FAILURE:
+      return Object.assign({}, state, { inProgress: false, error: action.payload });
+    
+    case A.GET_NBA_TEAMS_REQUEST:
+      return Object.assign({}, state, { inProgress: true });
+    case A.GET_NBA_TEAMS_SUCCESS:
+      return Object.assign({}, state, { inProgress: false, nba: { ...state.nba, teams: action.payload } });
+    case A.GET_NBA_TEAMS_FAILURE:
       return Object.assign({}, state, { inProgress: false, error: action.payload });
 
     default:
