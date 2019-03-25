@@ -137,3 +137,10 @@ export function isSameDate(dateTestedAgainst, dateToTest) {
     (dateToTest.getMonth() == month) &&
     (dateToTest.getDate() == monthDate);
 }
+
+// Given a Date object, give the time formatted in 00:00
+export function getFormattedTime(date) {
+  const h = (date.getHours()<10?'0':'') + date.getHours(),
+    m = (date.getMinutes()<10?'0':'') + date.getMinutes();
+  return h + ':' + m;
+}
