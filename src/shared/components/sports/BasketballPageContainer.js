@@ -86,58 +86,55 @@ class BasketballPageContainer extends React.Component {
   handleAddedSelect = (values, prevState) => {
     const selectedTeam = values[values.length - 1];
 
-    const todayForSelected = [];
-    const upcomingForSelected = [];
-    const todayUnselected = [];
-    const upcomingUnselected = [];
-  
-    // If only one has been selected, the previous data was all the data,
-    // so replace instead of add on.
+    // Variables to help sorting
+    // Objects to hold arrays for games today into selected and unselected
+    let todayArrays;
+    let upcomingArrays;
+    // Final array returned for the games of the selected teams thus far
+    let gamesToday;
+    let upcoming;
+
+    // Sort games into selected and unselected for today and upcoming games
     if (values.length == 1) {
+      todayArrays = this.sortForTeam(selectedTeam, prevState.schedule.gamesToday);
+      upcomingArrays = this.sortForTeam(selectedTeam, prevState.schedule.upcoming);
 
-      // Sort games today into selected and unselected when not first value
-      prevState.schedule.gamesToday.forEach(game => {
-        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
-          todayForSelected.push(game);
-        } else todayUnselected.push(game);
-      });
+      // If only one has been selected then the previous data was all the teams,
+      // so replace instead of add on.
+      gamesToday = todayArrays.selected;
+      upcoming = upcomingArrays.selected;
+    } else {
+      todayArrays = this.sortForTeam(selectedTeam, prevState.unselectedGamesToday);
+      upcomingArrays = this.sortForTeam(selectedTeam, prevState.unselectedUpcoming);
 
-      prevState.schedule.upcoming.forEach(game => {
-        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
-          upcomingForSelected.push(game);
-        } else upcomingUnselected.push(game);
-      });
-
-      return {
-        selected: values,
-        gamesToday: todayForSelected,
-        upcoming: upcomingForSelected,
-        unselectedGamesToday: todayUnselected,
-        unselectedUpcoming: upcomingUnselected
-      };
-    } else { // Move games from unselected into selected for the team
-      prevState.unselectedGamesToday.forEach(game => {
-        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
-          todayForSelected.push(game);
-        } else todayUnselected.push(game);
-      });
-
-      prevState.unselectedUpcoming.forEach(game => {
-        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
-          upcomingForSelected.push(game);
-        } else upcomingUnselected.push(game);
-      });
-
-      return {
-        selected: values,
-        gamesToday: prevState.gamesToday.concat(todayForSelected),
-        upcoming: prevState.upcoming.concat(upcomingForSelected),
-        unselectedGamesToday: todayUnselected,
-        unselectedUpcoming: upcomingUnselected
-      };
+      gamesToday = prevState.gamesToday.concat(todayArrays.selected);
+      upcoming = prevState.upcoming.concat(upcomingArrays.selected);
     }
+
+    return {
+      selected: values,
+      gamesToday: gamesToday,
+      upcoming: upcoming,
+      unselectedGamesToday: todayArrays.unselected,
+      unselectedUpcoming: upcomingArrays.unselected
+    };
   };
+
+  // Sort out the games that include the selected team
+  sortForTeam = (team, array) => {
+    const selected = [];
+    const unselected = [];
+
+    array.forEach(game => {
+      if (game.hTeam.shortName == team || game.vTeam.shortName == team) {
+        selected.push(game);
+      } else unselected.push(game);
+    });
+
+    return { selected, unselected };
+  }
   
+  // TODO removing needs to add back into unselected
   handleRemovedSelect = (values, prevState) => {
     const previousValues = prevState.selected;
     let selectedTeam;
