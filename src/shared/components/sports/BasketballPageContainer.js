@@ -45,7 +45,8 @@ class BasketballPageContainer extends React.Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     // Populate schedule once received in props
-    if (prevState.gamesToday.length < 1 && nextProps.basketball.nba.schedule.length > 0) {
+    if (!prevState.schedule.hasOwnProperty('gamesToday') && 
+    nextProps.basketball.nba.schedule.length > 0) {
       const schedule = sortNBASchedule(nextProps.basketball.nba.schedule);
       return {
         schedule: schedule,
@@ -84,10 +85,10 @@ class BasketballPageContainer extends React.Component {
     const selectedTeam = values[values.length - 1];
   
     const todayForSelected = prevState.schedule.gamesToday.filter(
-      game => game.home == selectedTeam || game.away == selectedTeam
+      game => game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam
     );
     const upcomingForSelected = prevState.schedule.upcoming.filter(
-      game => game.home == selectedTeam || game.away == selectedTeam
+      game => game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam
     );
   
     // If only one has been selected, the previous data was all the data,
@@ -119,10 +120,10 @@ class BasketballPageContainer extends React.Component {
     }
   
     const filteredToday = this.state.gamesToday.filter(
-      game => game.home != selectedTeam && game.away != selectedTeam
+      game => game.hTeam.shortName != selectedTeam && game.vTeam.shortName != selectedTeam
     );
     const filteredUpcoming = this.state.upcoming.filter(
-      game => game.home != selectedTeam && game.away != selectedTeam
+      game => game.hTeam.shortName != selectedTeam && game.vTeam.shortName != selectedTeam
     );
   
     return {
