@@ -36,10 +36,12 @@ class BasketballPageContainer extends React.Component {
       selected: [],
       gamesToday: props.basketball.nba.schedule.filter(
         game => isSameDate(today, new Date(game.startTimeUTC))) || [],
+      // TODO ?create function to check it is a date after today rather than check both time and date
       upcoming: props.basketball.nba.schedule.filter(
-        game => game.startTimeUTC.getTime() > now  && 
-        !isSameDate(today, new Date(game.startTimeUTC))) || []
-        // TODO ?create function to check it is a date after today rather than check both time and date
+        game => game.startTimeUTC.getTime() > now && 
+          !isSameDate(today, new Date(game.startTimeUTC))) || [],
+      unselectedGamesToday: [],
+      unselectedUpcoming: []
     };
   }
 
@@ -83,27 +85,55 @@ class BasketballPageContainer extends React.Component {
   
   handleAddedSelect = (values, prevState) => {
     const selectedTeam = values[values.length - 1];
-  
-    const todayForSelected = prevState.schedule.gamesToday.filter(
-      game => game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam
-    );
-    const upcomingForSelected = prevState.schedule.upcoming.filter(
-      game => game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam
-    );
+
+    const todayForSelected = [];
+    const upcomingForSelected = [];
+    const todayUnselected = [];
+    const upcomingUnselected = [];
   
     // If only one has been selected, the previous data was all the data,
     // so replace instead of add on.
     if (values.length == 1) {
+
+      // Sort games today into selected and unselected when not first value
+      prevState.schedule.gamesToday.forEach(game => {
+        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
+          todayForSelected.push(game);
+        } else todayUnselected.push(game);
+      });
+
+      prevState.schedule.upcoming.forEach(game => {
+        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
+          upcomingForSelected.push(game);
+        } else upcomingUnselected.push(game);
+      });
+
       return {
         selected: values,
         gamesToday: todayForSelected,
-        upcoming: upcomingForSelected
+        upcoming: upcomingForSelected,
+        unselectedGamesToday: todayUnselected,
+        unselectedUpcoming: upcomingUnselected
       };
-    } else {
+    } else { // Move games from unselected into selected for the team
+      prevState.unselectedGamesToday.forEach(game => {
+        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
+          todayForSelected.push(game);
+        } else todayUnselected.push(game);
+      });
+
+      prevState.unselectedUpcoming.forEach(game => {
+        if (game.hTeam.shortName == selectedTeam || game.vTeam.shortName == selectedTeam) {
+          upcomingForSelected.push(game);
+        } else upcomingUnselected.push(game);
+      });
+
       return {
         selected: values,
         gamesToday: prevState.gamesToday.concat(todayForSelected),
-        upcoming: prevState.upcoming.concat(upcomingForSelected)
+        upcoming: prevState.upcoming.concat(upcomingForSelected),
+        unselectedGamesToday: todayUnselected,
+        unselectedUpcoming: upcomingUnselected
       };
     }
   };
