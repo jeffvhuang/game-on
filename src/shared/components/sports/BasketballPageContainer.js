@@ -113,8 +113,8 @@ class BasketballPageContainer extends React.Component {
 
     return {
       selected: values,
-      gamesToday: gamesToday,
-      upcoming: upcoming,
+      gamesToday,
+      upcoming,
       unselectedGamesToday: todayArrays.unselected,
       unselectedUpcoming: upcomingArrays.unselected
     };
@@ -134,7 +134,6 @@ class BasketballPageContainer extends React.Component {
     return { selected, unselected };
   }
   
-  // TODO removing needs to add back into unselected
   handleRemovedSelect = (values, prevState) => {
     const previousValues = prevState.selected;
     let selectedTeam;
@@ -145,20 +144,33 @@ class BasketballPageContainer extends React.Component {
         break;
       }
     }
-  
-    const filteredToday = this.state.gamesToday.filter(
-      game => game.hTeam.shortName != selectedTeam && game.vTeam.shortName != selectedTeam
-    );
-    const filteredUpcoming = this.state.upcoming.filter(
-      game => game.hTeam.shortName != selectedTeam && game.vTeam.shortName != selectedTeam
-    );
+
+    const todayArrays = this.removeForTeam(selectedTeam, prevState.gamesToday);
+    const upcomingArrays = this.removeForTeam(selectedTeam, prevState.upcoming);
   
     return {
       selected: values,
-      gamesToday: filteredToday,
-      upcoming: filteredUpcoming
+      gamesToday: todayArrays.selected,
+      upcoming: upcomingArrays.selected,
+      unselectedGamesToday: todayArrays.unselected,
+      unselectedUpcoming: upcomingArrays.unselected
     };
   };
+
+  // Sort array provided to remove if object contains team
+  removeForTeam = (team, array) => {
+    const selected = [];
+    const unselected = [];
+
+    array.forEach(game => {
+      // if the team is in the game object, it needs to be moved into unselected
+      if (game.hTeam.shortName == team || game.vTeam.shortName == team) {
+        unselected.push(game);
+      } else selected.push(game);
+    });
+
+    return { selected, unselected };
+  }
 
   render() {
     return (
