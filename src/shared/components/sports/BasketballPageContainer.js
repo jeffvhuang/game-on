@@ -145,31 +145,42 @@ class BasketballPageContainer extends React.Component {
       }
     }
 
-    const todayArrays = this.removeForTeam(selectedTeam, prevState.gamesToday);
-    const upcomingArrays = this.removeForTeam(selectedTeam, prevState.upcoming);
+    // Move the games with the team just removed from dropdown and return it to unselected/unshown array
+    const todayArrays = this.removeForTeam(values, selectedTeam, prevState.gamesToday);
+    const upcomingArrays = this.removeForTeam(values, selectedTeam, prevState.upcoming);
   
     return {
       selected: values,
-      gamesToday: todayArrays.selected,
-      upcoming: upcomingArrays.selected,
-      unselectedGamesToday: todayArrays.unselected,
-      unselectedUpcoming: upcomingArrays.unselected
+      gamesToday: todayArrays.remains,
+      upcoming: upcomingArrays.remains,
+      unselectedGamesToday: prevState.unselectedGamesToday.concat(todayArrays.removed),
+      unselectedUpcoming: prevState.unselectedUpcoming.concat(upcomingArrays.removed)
     };
   };
 
-  // Sort array provided to remove if object contains team
-  removeForTeam = (team, array) => {
-    const selected = [];
-    const unselected = [];
+  /**
+   * Remove object that contains the given team from the array 
+   * (except if the other team is in the values array)
+   * @param  {[array]} values from dropdown
+   * @param  {[string]} team the recently removed team
+   * @param  {[array]} games array of objects to be sorted
+   * @return {[object]} two properties for those still in values and those that arent
+   */
+  removeForTeam = (values, team, games) => {
+    const removed = [];
+    const remains = [];
 
-    array.forEach(game => {
-      // if the team is in the game object, it needs to be moved into unselected
-      if (game.hTeam.shortName == team || game.vTeam.shortName == team) {
-        unselected.push(game);
-      } else selected.push(game);
+    games.forEach(game => {
+      // if the team is in the game object and the other team is not in the selected values, 
+      // it needs to be removed
+      if (game.hTeam.shortName == team && !values.includes(game.vTeam.shortName)) {
+        removed.push(game);
+      } else if (game.vTeam.shortName == team && !values.includes(game.hTeam.shortName)) {
+        removed.push(game);
+      } else remains.push(game);
     });
 
-    return { selected, unselected };
+    return { removed, remains };
   }
 
   render() {
