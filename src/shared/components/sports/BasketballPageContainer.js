@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { isSameDate, sortNBASchedule } from '../../../helpers/utils';
 import { getNbaSchedule, getNbaTeams } from '../../redux/actions/basketball-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
@@ -24,9 +23,6 @@ class BasketballPageContainer extends React.Component {
     if (props.basketball.nba.teams.length < 1) props.actions.getNbaTeams();
     if (props.basketball.nba.schedule.length < 1) props.actions.getNbaSchedule();
 
-    const today = new Date();
-    const now = Date.now;
-
     this.state = {
       videos: [
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
@@ -34,28 +30,22 @@ class BasketballPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
-      schedule: {},
       selected: [],
-      gamesToday: props.basketball.nba.schedule.filter(
-        game => isSameDate(today, new Date(game.startTimeUTC))) || [],
-      // TODO ?create function to check it is a date after today rather than check both time and date
-      upcoming: props.basketball.nba.schedule.filter(
-        game => game.startTimeUTC.getTime() > now && 
-          !isSameDate(today, new Date(game.startTimeUTC))) || [],
+      gamesToday: props.basketball.nba.gamesToday,
+      upcoming: props.basketball.nba.upcoming,
       unselectedGamesToday: [],
       unselectedUpcoming: []
     };
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
+    const nba = nextProps.basketball.nba;
     // Populate schedule once received in props
-    if (!prevState.schedule.hasOwnProperty('gamesToday') && 
-    nextProps.basketball.nba.schedule.length > 0) {
-      const schedule = sortNBASchedule(nextProps.basketball.nba.schedule);
+    if (prevState.upcoming.length < 1 &&
+    (nba.gamesToday.length > 0 || nba.upcoming.length > 0)) {
       return {
-        schedule: schedule,
-        gamesToday: schedule.gamesToday,
-        upcoming: schedule.upcoming
+        gamesToday: nba.gamesToday,
+        upcoming: nba.upcoming
       };
     }
     return null;
@@ -78,15 +68,16 @@ class BasketballPageContainer extends React.Component {
   }
 
   resetInitialState = () => {
-    this.setState(prevState => ({ 
+    this.setState({ 
       selected: [],
-      gamesToday: prevState.schedule.gamesToday,
-      upcoming: prevState.schedule.upcoming
-    }));
+      gamesToday: this.props.basketball.nba.gamesToday,
+      upcoming: this.props.basketball.nba.upcoming
+    });
   }
   
   handleAddedSelect = (values, prevState) => {
     const selectedTeam = values[values.length - 1];
+
 
     // Variables to help sorting
     // Objects to hold arrays for games today into selected and unselected
@@ -98,8 +89,8 @@ class BasketballPageContainer extends React.Component {
 
     // Sort games into selected and unselected for today and upcoming games
     if (values.length == 1) {
-      todayArrays = this.sortForTeam(selectedTeam, prevState.schedule.gamesToday);
-      upcomingArrays = this.sortForTeam(selectedTeam, prevState.schedule.upcoming);
+      todayArrays = this.sortForTeam(selectedTeam, this.props.basketball.nba.gamesToday);
+      upcomingArrays = this.sortForTeam(selectedTeam, this.props.basketball.nba.upcoming);
 
       // If only one has been selected then the previous data was all the teams,
       // so replace instead of add on.

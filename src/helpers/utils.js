@@ -109,6 +109,7 @@ export function getDOTASchedule(data) {
 export function sortNBASchedule(data) {
   const gamesToday = [];
   const upcoming = [];
+  const beforeToday = [];
   const dateToday = new Date();
   const now = Date.now();
 
@@ -118,10 +119,12 @@ export function sortNBASchedule(data) {
       gamesToday.push(game);
     } else if (gamesDate.getTime() > now) {
       upcoming.push(game);
+    } else {
+      beforeToday.push(game);
     }
   });
 
-  return { gamesToday, upcoming };
+  return { gamesToday, upcoming, beforeToday };
 }
 
 /* Function check 2 dates are the same

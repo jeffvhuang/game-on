@@ -5,11 +5,11 @@ import { nbaAPI } from '../../../helpers/nbaData';
 
 // Mock data
 import { SCHEDULE, TEAMS } from '../../../mockApiData/rapidNba';
-import { sleep } from '../../../helpers/utils';
+import { sleep, sortNBASchedule } from '../../../helpers/utils';
 
 // Get Schedule
 export const getNbaScheduleRequest = () => ({ type: A.GET_NBA_SCHEDULE_REQUEST });
-export const getNbaScheduleSuccess = (payload) => ({ type: A.GET_NBA_SCHEDULE_SUCCESS, payload });
+export const getNbaScheduleSuccess = (payload, schedule) => ({ type: A.GET_NBA_SCHEDULE_SUCCESS, payload, schedule });
 export const getNbaScheduleFailure = (err) => ({ type: A.GET_NBA_SCHEDULE_FAILURE, err });
 
 // export const getNbaSchedule = () => {
@@ -35,7 +35,8 @@ export const getNbaSchedule = () => {
   return async (dispatch) => {
     dispatch(getNbaScheduleRequest());
     await sleep(2000);
-    return dispatch(getNbaScheduleSuccess(SCHEDULE));
+    const sortedSchedule = sortNBASchedule(SCHEDULE);
+    return dispatch(getNbaScheduleSuccess(sortedSchedule, SCHEDULE));
   };
 };
 
