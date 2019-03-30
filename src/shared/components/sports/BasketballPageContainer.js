@@ -2,13 +2,15 @@ import React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 
+import { paths } from '../../../helpers/constants';
 import { isSameDate, sortNBASchedule } from '../../../helpers/utils';
 import { getNbaSchedule, getNbaTeams } from '../../redux/actions/basketball-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
-import ScheduleContainer from './ScheduleContainer';
+import BasketballScheduleSection from './BasketballScheduleSection';
 
 const propTypes = {
   basketball: object.isRequired,
@@ -195,8 +197,11 @@ class BasketballPageContainer extends React.Component {
         <TeamSelectDropdown handleChange={this.handleChange} 
           teams={this.props.basketball.nba.teams} />
         <HighlightsContainer videos={this.state.videos} />
-        <ScheduleContainer gamesToday={this.state.gamesToday}
-          upcoming={this.state.upcoming} />
+        <div className="section">
+          <BasketballScheduleSection header="Today's Games" games={this.state.gamesToday} />
+          <BasketballScheduleSection header="Upcoming" games={this.state.upcoming} />
+          <Link to={paths.EVENTS} className="right">More ></Link>
+        </div>
       </div>
     );
   }

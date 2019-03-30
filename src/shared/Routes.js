@@ -20,7 +20,7 @@ export default class Routes extends React.Component {
         <Route path={paths.HIGHLIGHTS} component={HighlightsPageContainer} />
         <Route path={paths.SPORTS + '/basketball'} component={BasketballPageContainer} />
         <Route path={paths.SPORTS + '/football'} component={FootballPageContainer} />
-        <Route path={paths.SPORTS + '/:sport'} component={BasketballPageContainer} />
+        <Route path={paths.SPORTS + '/:sport'} component={FootballPageContainer} />
         <Route path={paths.ESPORTS + '/dota'} component={DotaPageContainer} />
         <Route path={paths.ESPORTS + '/:esport'} component={ESportsPageContainer} />
         <Route path={paths.EVENTS} component={EventsPageContainer} />
