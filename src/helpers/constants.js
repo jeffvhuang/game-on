@@ -37,3 +37,9 @@ export const esports = {
 export const esportsList = Object.keys(esports).map(key => {
   return esports[key];
 });
+
+export const youtubeAPI = {
+  HOST: 'https://www.googleapis.com/youtube/v3',
+  PLAYLIST_ITEMS: '/playlistItems',
+  NBA_ID: 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z' 
+};

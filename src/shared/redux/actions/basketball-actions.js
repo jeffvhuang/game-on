@@ -1,11 +1,35 @@
 import axios from 'axios';
 
 import { basketballActions as A } from './action-types';
+import { youtubeAPI } from '../../../helpers/constants';
 import { nbaAPI } from '../../../helpers/nbaData';
 
 // Mock data
 import { SCHEDULE, TEAMS } from '../../../mockApiData/rapidNba';
 import { sleep, sortNBASchedule } from '../../../helpers/utils';
+
+// Get Videos
+export const getNbaVideosRequest = () => ({ type: A.GET_NBA_VIDEOS_REQUEST });
+export const getNbaVideosSuccess = (payload) => ({ type: A.GET_NBA_VIDEOS_SUCCESS, payload });
+export const getNbaVideosFailure = (err) => ({ type: A.GET_NBA_VIDEOS_FAILURE, err });
+
+export const getNbaVideos = () => {
+  return (dispatch) => {
+    dispatch(getNbaVideosRequest());
+    return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+      params: {
+        'part': 'snippet,contentDetails',
+        'playlistId': 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z',
+        'maxResults': '25'
+      }
+    }).then(response => {
+      dispatch(getNbaVideosSuccess(response.items));
+    }).catch(err => {
+      dispatch(getNbaVideosFailure(err));
+      throw(err);
+    });
+  };
+};
 
 // Get Schedule
 export const getNbaScheduleRequest = () => ({ type: A.GET_NBA_SCHEDULE_REQUEST });
@@ -22,7 +46,8 @@ export const getNbaScheduleFailure = (err) => ({ type: A.GET_NBA_SCHEDULE_FAILUR
 //         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
 //       }
 //     }).then(response => {
-//       dispatch(getNbaScheduleSuccess(response.data.api.games));
+//       const sortedSchedule = sortNBASchedule(response.data.api.games);
+//       dispatch(getNbaScheduleSuccess(sortedSchedule, response.data.api.games));
 //     }).catch(err => {
 //       dispatch(getNbaScheduleFailure(err));
 //       throw(err);
