@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { basketballActions as A } from './action-types';
+import { nbaActions as A } from './action-types';
 import { youtubeAPI } from '../../../helpers/constants';
 import { nbaAPI } from '../../../helpers/nbaData';
 

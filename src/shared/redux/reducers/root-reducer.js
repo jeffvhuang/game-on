@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import dotaReducer from './dota-reducer';
-import basketballReducer from './basketball-reducer';
+import nbaReducer from './nba-reducer';
 
 const rootReducer = combineReducers({
   dota: dotaReducer,
-  basketball: basketballReducer
+  nba: nbaReducer
 });
 
 export default rootReducer;

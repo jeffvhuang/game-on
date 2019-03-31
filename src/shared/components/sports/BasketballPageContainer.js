@@ -5,14 +5,14 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/basketball-actions';
+import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/nba-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
 
 const propTypes = {
-  basketball: object.isRequired,
+  nba: object.isRequired,
   actions: object.isRequired
 };
 
@@ -20,11 +20,9 @@ class BasketballPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    if (props.basketball.nba.videos.length < 1) props.actions.getNbaVideos().then(
-      console.log(props.basketball.nba.videos)
-    );
-    if (props.basketball.nba.teams.length < 1) props.actions.getNbaTeams();
-    if (props.basketball.nba.schedule.length < 1) props.actions.getNbaSchedule();
+    if (props.nba.videos.length < 1) props.actions.getNbaVideos();
+    if (props.nba.teams.length < 1) props.actions.getNbaTeams();
+    if (props.nba.schedule.length < 1) props.actions.getNbaSchedule();
 
     this.state = {
       videos: [
@@ -34,15 +32,15 @@ class BasketballPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
       selected: [],
-      gamesToday: props.basketball.nba.gamesToday,
-      upcoming: props.basketball.nba.upcoming,
+      gamesToday: props.nba.gamesToday,
+      upcoming: props.nba.upcoming,
       unselectedGamesToday: [],
       unselectedUpcoming: []
     };
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const nba = nextProps.basketball.nba;
+    const nba = nextProps.nba;
     // Populate schedule once received in props
     if (prevState.upcoming.length < 1 &&
     (nba.gamesToday.length > 0 || nba.upcoming.length > 0)) {
@@ -73,8 +71,8 @@ class BasketballPageContainer extends React.Component {
   resetInitialState = () => {
     this.setState({ 
       selected: [],
-      gamesToday: this.props.basketball.nba.gamesToday,
-      upcoming: this.props.basketball.nba.upcoming
+      gamesToday: this.props.nba.gamesToday,
+      upcoming: this.props.nba.upcoming
     });
   }
   
@@ -92,8 +90,8 @@ class BasketballPageContainer extends React.Component {
 
     // Sort games into selected and unselected for today and upcoming games
     if (values.length == 1) {
-      todayArrays = this.sortForTeam(selectedTeam, this.props.basketball.nba.gamesToday);
-      upcomingArrays = this.sortForTeam(selectedTeam, this.props.basketball.nba.upcoming);
+      todayArrays = this.sortForTeam(selectedTeam, this.props.nba.gamesToday);
+      upcomingArrays = this.sortForTeam(selectedTeam, this.props.nba.upcoming);
 
       // If only one has been selected then the previous data was all the teams,
       // so replace instead of add on.
@@ -189,7 +187,7 @@ class BasketballPageContainer extends React.Component {
         </div>
         <h1>Basketball</h1>
         <TeamSelectDropdown handleChange={this.handleChange} 
-          teams={this.props.basketball.nba.teams} />
+          teams={this.props.nba.teams} />
         <HighlightsContainer videos={this.state.videos} />
         <div className="section">
           <BasketballScheduleSection header="Today's Games" games={this.state.gamesToday} />
@@ -204,7 +202,7 @@ class BasketballPageContainer extends React.Component {
 BasketballPageContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
-  basketball: state.basketball
+  nba: state.nba
 });
 
 const mapDispatchToProps = (dispatch) => ({
