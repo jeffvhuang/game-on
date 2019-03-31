@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getNbaSchedule, getNbaTeams } from '../../redux/actions/basketball-actions';
+import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/basketball-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
@@ -20,6 +20,9 @@ class BasketballPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
+    if (props.basketball.nba.videos.length < 1) props.actions.getNbaVideos().then(
+      console.log(props.basketball.nba.videos)
+    );
     if (props.basketball.nba.teams.length < 1) props.actions.getNbaTeams();
     if (props.basketball.nba.schedule.length < 1) props.actions.getNbaSchedule();
 
@@ -205,7 +208,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getNbaSchedule, getNbaTeams }, dispatch)
+  actions: bindActionCreators({ getNbaSchedule, getNbaTeams, getNbaVideos }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketballPageContainer);

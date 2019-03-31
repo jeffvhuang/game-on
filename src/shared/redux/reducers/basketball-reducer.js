@@ -2,7 +2,14 @@ import { basketballActions as A } from '../actions/action-types';
 
 const initialState = {
   inProgress: false,
-  nba: { schedule: [], teams: [], gamesToday: [], upcoming: [], completed: [] },
+  nba: { 
+    schedule: [],
+    teams: [],
+    gamesToday: [],
+    upcoming: [],
+    completed: [],
+    videos: []
+  },
   selected: {}
 };
 

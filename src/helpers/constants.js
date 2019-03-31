@@ -40,6 +40,7 @@ export const esportsList = Object.keys(esports).map(key => {
 
 export const youtubeAPI = {
   HOST: 'https://www.googleapis.com/youtube/v3',
+  KEY: 'AIzaSyDCn1lgLIzn3dZBl4n3b55VK1wwrLV3ako',
   PLAYLIST_ITEMS: '/playlistItems',
-  NBA_ID: 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z' 
+  NBA_ID: 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z'
 };
