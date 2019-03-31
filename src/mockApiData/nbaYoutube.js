@@ -3,16 +3,421 @@
  */
 export const PLAYLIST = {
   "kind": "youtube#playlistItemListResponse",
-  "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/lQ9KFqwRRvDe8jr__aOIzh3fP4Q\"",
+  "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/oKqFFi7fYeaScCClyRtuuZTJGBs\"",
   "nextPageToken": "CBkQAA",
   "pageInfo": {
-    "totalResults": 514,
+    "totalResults": 523,
     "resultsPerPage": 25
   },
   "items": [
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/mAoHwtl-jAZNyxhsD9eD1XBX2ck\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/suAMqFMA2fIl9P3BngwcsJTUwVo\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5GNEUxRjk0NTE2RDgyMDk3",
+      "snippet": {
+        "publishedAt": "2019-03-31T19:26:49.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Milwaukee Bucks vs Atlanta Hawks - Full Game Highlights | March 31, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nAtlanta Hawks  vs Milwaukee Bucks - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6kZJzQ_Uqu8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6kZJzQ_Uqu8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6kZJzQ_Uqu8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6kZJzQ_Uqu8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6kZJzQ_Uqu8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "6kZJzQ_Uqu8"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/JQba-QCnJZhGsztCGr0gZ6jEK78\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4wNzkyRUNFNTBEQkNEMjg0",
+      "snippet": {
+        "publishedAt": "2019-03-31T04:33:56.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Memphis Grizzlies vs Phoenix Suns - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nPhoenix Suns vs Memphis Grizzlies - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/O2vhw6ToLSY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/O2vhw6ToLSY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/O2vhw6ToLSY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/O2vhw6ToLSY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/O2vhw6ToLSY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "O2vhw6ToLSY"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/V60dhY-cFV0tD7s33x7qXj4XZ6M\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5EM0QyMDFGNzQ4ODk3MjhB",
+      "snippet": {
+        "publishedAt": "2019-03-31T03:01:46.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Toronto Raptors vs Chicago Bulls - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nChicago Bulls vs Toronto Raptors - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mA4cNaeSoKw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mA4cNaeSoKw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mA4cNaeSoKw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mA4cNaeSoKw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mA4cNaeSoKw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "mA4cNaeSoKw"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/e8XpqQT8jv2iA3yAfapf00Tnb5c\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5FNUY3QTdGNUU3NjlGMjYz",
+      "snippet": {
+        "publishedAt": "2019-03-31T02:53:08.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Portland Trail Blazers vs Detroit Pistons - Full Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nDetroit Pistons vs Portland Trail Blazers - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bul2sMLCEa8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bul2sMLCEa8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bul2sMLCEa8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bul2sMLCEa8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bul2sMLCEa8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "bul2sMLCEa8"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/rGKg9Bo8g-JzTWdomI23LHr79_Y\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei41NEZEQTVEMjlBNUUyNTU2",
+      "snippet": {
+        "publishedAt": "2019-03-31T02:23:32.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Philadelphia Sixers vs Minnesota Timberwolves - Full Highlights | March 30 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nMinnesota Timberwolves vs Philadelphia Sixers - Full Game Highlights | March 29, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vzRqqcUX2bs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vzRqqcUX2bs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vzRqqcUX2bs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vzRqqcUX2bs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vzRqqcUX2bs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "vzRqqcUX2bs"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/JlS2JqsjK_XN0PS1IMk-KytLB9o\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei45QkJFMDA5MUJGODNGMkY2",
+      "snippet": {
+        "publishedAt": "2019-03-31T01:57:31.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Miami Heat vs New York Knicks - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nNew York Knicks vs Miami Heat - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5snHGG1kq7I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5snHGG1kq7I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5snHGG1kq7I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5snHGG1kq7I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5snHGG1kq7I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5snHGG1kq7I"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/J9ntoYEaIDusTRK5CI-VSxKa-lw\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4yNTRCMzdFM0VDMDRDRkIz",
+      "snippet": {
+        "publishedAt": "2019-03-31T00:24:25.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Boston Celtics vs Brooklyn Nets - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nBrooklyn Nets vs Boston Celtics - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/51LOa5sUYRs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/51LOa5sUYRs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/51LOa5sUYRs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/51LOa5sUYRs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/51LOa5sUYRs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "51LOa5sUYRs"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/3clYdgYpakVy9xpSeQBb7u412ec\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei42NzgyQkFFNEUyOTZDMkE4",
+      "snippet": {
+        "publishedAt": "2019-03-31T00:22:38.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Sacramento Kings vs Houston Rockets - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nHouston Rockets vs Sacramento Kings - Full Game Highlights | March 29, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R3DMk8kUMmA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R3DMk8kUMmA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R3DMk8kUMmA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/R3DMk8kUMmA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/R3DMk8kUMmA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "R3DMk8kUMmA"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/cdZKljijweF1yRwE2xKWSE6y-eI\"",
+      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5DMDA1QTU3NjFEOEJENTND",
+      "snippet": {
+        "publishedAt": "2019-03-30T22:09:46.000Z",
+        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
+        "title": "Cleveland Cavaliers vs LA Clippers - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season",
+        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nLA Los Angeles Clippers vs Cleveland Cavaliers - Full Game Highlights | March 30, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wrtLQtGY0Rw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wrtLQtGY0Rw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wrtLQtGY0Rw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wrtLQtGY0Rw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wrtLQtGY0Rw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ximo Pierto",
+        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "wrtLQtGY0Rw"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/oW_CLR-t8nstszp9Ob-VXCkHMlE\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4yODM3QTMyMkFFRDdEMzNE",
       "snippet": {
         "publishedAt": "2019-03-30T04:53:25.000Z",
@@ -48,20 +453,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 0,
+        "position": 9,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "qH56xCebZRs"
         }
-      },
-      "contentDetails": {
-        "videoId": "qH56xCebZRs",
-        "videoPublishedAt": "2019-03-30T05:01:54.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/pycyw08RrP69bRZIO4v7TSBSCRA\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/slLd_DNr-BB3dC5r4hj5hxEa2ZU\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei42REM4MTcyRDk5RkFGMDg5",
       "snippet": {
         "publishedAt": "2019-03-30T04:09:02.000Z",
@@ -97,20 +498,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 1,
+        "position": 10,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "e4pFvc5Lmjs"
         }
-      },
-      "contentDetails": {
-        "videoId": "e4pFvc5Lmjs",
-        "videoPublishedAt": "2019-03-30T04:14:32.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/BzXVki5GYZCoFjy7iBqSZdih2e4\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/Znro2WyEoyOZ1sIFLMJI5-O1HvY\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei43QUY2NjhEOUFDMDE4Mjgx",
       "snippet": {
         "publishedAt": "2019-03-30T03:01:13.000Z",
@@ -146,20 +543,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 2,
+        "position": 11,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "luNm27VH6hY"
         }
-      },
-      "contentDetails": {
-        "videoId": "luNm27VH6hY",
-        "videoPublishedAt": "2019-03-30T03:04:07.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/EBi8c_nIvvAkEGpZ2PjeG9JA_E4\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/Q9Ot0uv-RUtzHTQMMLImN5WYhVM\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei41ODMwMTY5RkJCRDBDRDUy",
       "snippet": {
         "publishedAt": "2019-03-30T02:52:14.000Z",
@@ -195,20 +588,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 3,
+        "position": 12,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "NONaUFBELnI"
         }
-      },
-      "contentDetails": {
-        "videoId": "NONaUFBELnI",
-        "videoPublishedAt": "2019-03-30T02:58:15.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/Jk_f0iQyWMYSgYOBCvP_IVNY7nQ\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/UUKvx8Gh0AnUg_4M18dZkyHh8Nw\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4xMEVEM0Y0QUI2N0JEOTY5",
       "snippet": {
         "publishedAt": "2019-03-30T02:29:30.000Z",
@@ -244,20 +633,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 4,
+        "position": 13,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "LSaiWQwQvoQ"
         }
-      },
-      "contentDetails": {
-        "videoId": "LSaiWQwQvoQ",
-        "videoPublishedAt": "2019-03-30T02:35:26.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/d_nhLy-XF0he1O1j3RZVdscSzSU\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/Xchu3dliBAFXX8HnvryVbdbU1s4\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5FMEIzOTY1MURERTA1RTMx",
       "snippet": {
         "publishedAt": "2019-03-30T01:25:08.000Z",
@@ -293,20 +678,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 5,
+        "position": 14,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "4HSjn_dmIP4"
         }
-      },
-      "contentDetails": {
-        "videoId": "4HSjn_dmIP4",
-        "videoPublishedAt": "2019-03-30T01:31:05.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/QNH189P0q9NLJDxc-EaNqNlgfCE\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/LEgSVSw3B4hPYJ0SKJK_ULsF020\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5EOTVDMUUxREU1QUE1RjE4",
       "snippet": {
         "publishedAt": "2019-03-29T03:23:26.000Z",
@@ -342,20 +723,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 6,
+        "position": 15,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "AJBK_ELSqsw"
         }
-      },
-      "contentDetails": {
-        "videoId": "AJBK_ELSqsw",
-        "videoPublishedAt": "2019-03-29T03:28:34.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/9TYDX_SEBeVObQP7jmxw0bAmZWM\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/sL27gIJ6HnqFBQNJbIlObnmjzy4\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4wMUM3OUNGRDRERUUwQzdC",
       "snippet": {
         "publishedAt": "2019-03-29T03:23:11.000Z",
@@ -391,20 +768,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 7,
+        "position": 16,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "1Ov0TDFtEdY"
         }
-      },
-      "contentDetails": {
-        "videoId": "1Ov0TDFtEdY",
-        "videoPublishedAt": "2019-03-29T03:33:36.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/U3ecIkcpwhqyJ14wNkufnAQ36Ys\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/GiEN82w5n4Cwb37l2ygCx8tbo6E\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4zQkFFRDQ1REVCQjgwM0Ux",
       "snippet": {
         "publishedAt": "2019-03-29T02:50:25.000Z",
@@ -440,20 +813,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 8,
+        "position": 17,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "hj8T4atgx-E"
         }
-      },
-      "contentDetails": {
-        "videoId": "hj8T4atgx-E",
-        "videoPublishedAt": "2019-03-29T03:02:43.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/ypKE_XUr7KHPLia-j_A9We6UDvw\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/N40fcZvnGqV9l8UzPTSJbYgt2Ys\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4yMkNFMjVBNzFDQTZBM0E4",
       "snippet": {
         "publishedAt": "2019-03-29T02:16:12.000Z",
@@ -489,20 +858,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 9,
+        "position": 18,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "Ir3TXUGcFEo"
         }
-      },
-      "contentDetails": {
-        "videoId": "Ir3TXUGcFEo",
-        "videoPublishedAt": "2019-03-29T02:20:09.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/4puM0X1NmLMTRFaYOw2LeACmyQ8\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/CjOBexaJ9d3q7K6dkG9uUGRa9sg\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei43MkE0RTQyNUQ5RTk1NTg0",
       "snippet": {
         "publishedAt": "2019-03-29T02:06:56.000Z",
@@ -538,20 +903,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 10,
+        "position": 19,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "rnuMlC-culM"
         }
-      },
-      "contentDetails": {
-        "videoId": "rnuMlC-culM",
-        "videoPublishedAt": "2019-03-29T02:11:25.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/XSvsRP9GWeLo2do4FAh5pQTcT9Y\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/zOCtZwmv2LcfosN_cjsJFxpjy9A\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5BMDcyOTk4NUIwNjkzRkY4",
       "snippet": {
         "publishedAt": "2019-03-29T01:28:05.000Z",
@@ -587,20 +948,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 11,
+        "position": 20,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "SbOzp8oeUbE"
         }
-      },
-      "contentDetails": {
-        "videoId": "SbOzp8oeUbE",
-        "videoPublishedAt": "2019-03-29T01:32:25.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/2B3gaNwyhFzrZoD183a8S2mCPDg\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/wVhyOg9Dp7OJgqJa5zdB8vHjo64\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5DQkM5MzAzQ0QzNUJBMDlB",
       "snippet": {
         "publishedAt": "2019-03-28T05:04:54.000Z",
@@ -636,20 +993,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 12,
+        "position": 21,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "HB2xjxuchb8"
         }
-      },
-      "contentDetails": {
-        "videoId": "HB2xjxuchb8",
-        "videoPublishedAt": "2019-03-28T05:10:13.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/MPH-ABmSB3XKXyAqzwRmwsZWPac\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/_5OqCrwx_-cr7kn8P_93GPKtA9Y\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5CNTY2N0VCNUMyNjlFN0U5",
       "snippet": {
         "publishedAt": "2019-03-28T04:38:54.000Z",
@@ -685,20 +1038,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 13,
+        "position": 22,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "-P9qYZFclZM"
         }
-      },
-      "contentDetails": {
-        "videoId": "-P9qYZFclZM",
-        "videoPublishedAt": "2019-03-28T04:43:57.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/q7b3xlgYNvTbG7o8wmGvqfW4t6I\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/lOY18e4COZ8hi2h286jzxCGQaEg\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei45NEVEOEUyMjAyOUMzQjVG",
       "snippet": {
         "publishedAt": "2019-03-28T02:35:58.000Z",
@@ -734,20 +1083,16 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 14,
+        "position": 23,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "xOpDBmifMjM"
         }
-      },
-      "contentDetails": {
-        "videoId": "xOpDBmifMjM",
-        "videoPublishedAt": "2019-03-28T02:40:34.000Z"
       }
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/6kqxr5146AohZWsKMY0BNpYFYO8\"",
+      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/U1iQvwNAoSrVqWg7hLbnS6pNCPw\"",
       "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5ERkFEMTk1N0JBNjU0MzA4",
       "snippet": {
         "publishedAt": "2019-03-28T02:35:30.000Z",
@@ -783,456 +1128,11 @@ export const PLAYLIST = {
         },
         "channelTitle": "Ximo Pierto",
         "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 15,
+        "position": 24,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "vLziz6gFw6k"
         }
-      },
-      "contentDetails": {
-        "videoId": "vLziz6gFw6k",
-        "videoPublishedAt": "2019-03-28T02:41:17.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/_hnZtLSpc-SkOViEBCIOjf3JYPk\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4zN0ZDMTNFQzVFRDdDMjBF",
-      "snippet": {
-        "publishedAt": "2019-03-28T02:16:11.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Portland Trail Blazers vs Chicago Bulls - Full Game Highlights | March 27, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nChicago Bulls vs Portland Trail Blazers - Full Game Highlights | March 27, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/D7i81m-sKLs/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/D7i81m-sKLs/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/D7i81m-sKLs/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/D7i81m-sKLs/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/D7i81m-sKLs/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 16,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "D7i81m-sKLs"
-        }
-      },
-      "contentDetails": {
-        "videoId": "D7i81m-sKLs",
-        "videoPublishedAt": "2019-03-28T02:20:41.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/1QuoQJEiStdgeBesHI3ccVvDzrA\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4xNUZFM0IwNjRDNjZFRkQ0",
-      "snippet": {
-        "publishedAt": "2019-03-27T05:02:29.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Washington Wizards vs LA Lakers - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nLA Los Angeles Lakers vs Washington Wizards - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/lCykubcCiXA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/lCykubcCiXA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/lCykubcCiXA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/lCykubcCiXA/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/lCykubcCiXA/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 17,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "lCykubcCiXA"
-        }
-      },
-      "contentDetails": {
-        "videoId": "lCykubcCiXA",
-        "videoPublishedAt": "2019-03-27T05:06:57.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/dKS4VsFROYppIrPN52vtWcZ-llY\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei5BRDUxOTI4N0ZEREU3MEM1",
-      "snippet": {
-        "publishedAt": "2019-03-27T04:41:21.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Orlando Magic vs Miami Heat - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nMiami Heat vs Orlando Magic - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/xB8xpYz2ED4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/xB8xpYz2ED4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/xB8xpYz2ED4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/xB8xpYz2ED4/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/xB8xpYz2ED4/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 18,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "xB8xpYz2ED4"
-        }
-      },
-      "contentDetails": {
-        "videoId": "xB8xpYz2ED4",
-        "videoPublishedAt": "2019-03-27T04:44:02.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/3GH78_3edAsRpFL8jwZC8ah6BB4\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei45QTdFNDExQzQ3NzQyOTlC",
-      "snippet": {
-        "publishedAt": "2019-03-27T04:15:50.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Sacramento Kings vs Dallas Mavericks - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nDallas Mavericks vs Sacramento Kings - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/yCS4J3rgk4k/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/yCS4J3rgk4k/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/yCS4J3rgk4k/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/yCS4J3rgk4k/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/yCS4J3rgk4k/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 19,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "yCS4J3rgk4k"
-        }
-      },
-      "contentDetails": {
-        "videoId": "yCS4J3rgk4k",
-        "videoPublishedAt": "2019-03-27T04:24:31.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/5n1tjCyuc_RJSuP436LXcgubJFw\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei43MEQ5RjM3MDJBRjE3NDNB",
-      "snippet": {
-        "publishedAt": "2019-03-27T03:37:33.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "LA Clippers vs Minnesota Timberwolves - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nMinnesota Timberwolves vs LA Clippers - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/oPGHGK7IDK4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/oPGHGK7IDK4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/oPGHGK7IDK4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/oPGHGK7IDK4/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/oPGHGK7IDK4/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 20,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "oPGHGK7IDK4"
-        }
-      },
-      "contentDetails": {
-        "videoId": "oPGHGK7IDK4",
-        "videoPublishedAt": "2019-03-27T03:41:12.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/LA4AxEkrm64ic6JgVf_cXbxkzNM\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei4wOUExQjQ1QTZENTBBRjdE",
-      "snippet": {
-        "publishedAt": "2019-03-27T02:32:35.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Chicago Bulls vs Toronto Raptors - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nToronto Raptors vs Chicago Bulls - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/GCTMLXChDT4/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/GCTMLXChDT4/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/GCTMLXChDT4/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/GCTMLXChDT4/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/GCTMLXChDT4/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 21,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "GCTMLXChDT4"
-        }
-      },
-      "contentDetails": {
-        "videoId": "GCTMLXChDT4",
-        "videoPublishedAt": "2019-03-27T02:37:35.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/ytcVKGHPlvb5WmNTrKvV_y1Ne4g\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei41QkQ1MDFGQjMwMEU0MjND",
-      "snippet": {
-        "publishedAt": "2019-03-27T02:24:45.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Houston Rockets vs Milwaukee Bucks - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nMilwaukee Bucks vs Houston Rockets - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/889EekVI4Mg/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/889EekVI4Mg/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/889EekVI4Mg/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/889EekVI4Mg/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/889EekVI4Mg/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 22,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "889EekVI4Mg"
-        }
-      },
-      "contentDetails": {
-        "videoId": "889EekVI4Mg",
-        "videoPublishedAt": "2019-03-27T02:29:45.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/m5Q3IM5r3aylwyjnE8ar6A0KYd8\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei41RDlDNjkxMDgxRTI5QUJB",
-      "snippet": {
-        "publishedAt": "2019-03-27T01:44:46.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "San Antonio Spurs vs Charlotte Hornets - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nCharlotte Hornets vs San Antonio Spurs - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/8Yu2I1fpDWk/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/8Yu2I1fpDWk/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/8Yu2I1fpDWk/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/8Yu2I1fpDWk/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/8Yu2I1fpDWk/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 23,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "8Yu2I1fpDWk"
-        }
-      },
-      "contentDetails": {
-        "videoId": "8Yu2I1fpDWk",
-        "videoPublishedAt": "2019-03-27T01:50:50.000Z"
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/wc5iJyHygv1GHHT15Oi1FoYO1kE\"",
-      "id": "UExLZGRnNkNQNC1fd1ZtbUN2U3dPSWtIdTA2NzZUZFJfei45MDQ2MjlBRTY2REU1QjNF",
-      "snippet": {
-        "publishedAt": "2019-03-27T01:22:22.000Z",
-        "channelId": "UCS7kvhJx431xCKuSgkBaUWw",
-        "title": "Boston Celtics vs Cleveland Cavaliers - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season",
-        "description": "Buy Athletic Phone Case: http://athleticcases.com?aff=41\n\nCleveland Cavaliers vs Boston Celtics - Full Game Highlights | March 26, 2019 | 2018-19 NBA Season\n\nFollow Me on Twitter: https://twitter.com/XimoPierto \n\nLike Me on Facebook: https://www.facebook.com/XimoPierto\n\nVisit https://NBA.com for official scores & highlights.\n\nDisclaimer: Monetization disabled on this channel",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/-FvWM5Ax6nc/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/-FvWM5Ax6nc/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/-FvWM5Ax6nc/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/-FvWM5Ax6nc/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/-FvWM5Ax6nc/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "Ximo Pierto",
-        "playlistId": "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z",
-        "position": 24,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "-FvWM5Ax6nc"
-        }
-      },
-      "contentDetails": {
-        "videoId": "-FvWM5Ax6nc",
-        "videoPublishedAt": "2019-03-27T01:27:16.000Z"
       }
     }
   ]

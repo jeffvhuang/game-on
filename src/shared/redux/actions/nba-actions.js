@@ -3,32 +3,42 @@ import axios from 'axios';
 import { nbaActions as A } from './action-types';
 import { youtubeAPI } from '../../../helpers/constants';
 import { nbaAPI } from '../../../helpers/nbaData';
+import { sleep, sortNBASchedule } from '../../../helpers/utils';
 
 // Mock data
 import { SCHEDULE, TEAMS } from '../../../mockApiData/rapidNba';
-import { sleep, sortNBASchedule } from '../../../helpers/utils';
+import { PLAYLIST } from '../../../mockApiData/nbaYoutube';
+
 
 // Get video from youtube playlist of nba highlights
 export const getNbaVideosRequest = () => ({ type: A.GET_NBA_VIDEOS_REQUEST });
 export const getNbaVideosSuccess = (payload) => ({ type: A.GET_NBA_VIDEOS_SUCCESS, payload });
 export const getNbaVideosFailure = (err) => ({ type: A.GET_NBA_VIDEOS_FAILURE, err });
 
+// export const getNbaVideos = () => {
+//   return (dispatch) => {
+//     dispatch(getNbaVideosRequest());
+//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//       params: {
+//         'part': 'snippet',
+//         'playlistId': youtubeAPI.NBA_ID,
+//         'maxResults': '25',
+//         'key': youtubeAPI.KEY
+//       }
+//     }).then(response => {
+//       dispatch(getNbaVideosSuccess(response.data.items));
+//     }).catch(err => {
+//       dispatch(getNbaVideosFailure(err));
+//       throw(err);
+//     });
+//   };
+// };
+
+// mock data
 export const getNbaVideos = () => {
   return (dispatch) => {
     dispatch(getNbaVideosRequest());
-    return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-      params: {
-        'part': 'snippet,contentDetails',
-        'playlistId': youtubeAPI.NBA_ID,
-        'maxResults': '25',
-        'key': youtubeAPI.KEY
-      }
-    }).then(response => {
-      dispatch(getNbaVideosSuccess(response.data.items));
-    }).catch(err => {
-      dispatch(getNbaVideosFailure(err));
-      throw(err);
-    });
+    return dispatch(getNbaVideosSuccess(PLAYLIST.items));
   };
 };
 

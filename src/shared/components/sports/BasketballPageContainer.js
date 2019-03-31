@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { paths } from '../../../helpers/constants';
 import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/nba-actions';
 
-import HighlightsContainer from '../landing/HighlightsContainer';
+import NbaThumbnails from './NbaThumbnails';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
 
@@ -25,13 +25,6 @@ class BasketballPageContainer extends React.Component {
     if (props.nba.schedule.length < 1) props.actions.getNbaSchedule();
 
     this.state = {
-      videos: [
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video2",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
-      ],
-      selected: [],
       gamesToday: props.nba.gamesToday,
       upcoming: props.nba.upcoming,
       unselectedGamesToday: [],
@@ -188,7 +181,7 @@ class BasketballPageContainer extends React.Component {
         <h1>Basketball</h1>
         <TeamSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />
-        <HighlightsContainer videos={this.state.videos} />
+        <NbaThumbnails videos={this.props.nba.videos} />
         <div className="section">
           <BasketballScheduleSection header="Today's Games" games={this.state.gamesToday} />
           <BasketballScheduleSection header="Upcoming" games={this.state.upcoming} />
