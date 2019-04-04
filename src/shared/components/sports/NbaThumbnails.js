@@ -19,11 +19,13 @@ function NbaThumbnails({ videos }) {
       <h2>Highlights</h2>
       <Row gutter={8} type="flex" justify="space-between" className="margin-bot">
         {vidsToShow.map((video) => {
+          const videoId = video.snippet.resourceId.videoId;
           return (
-            <Col span={5} key={video.snippet.resourceId.videoId}>
-              <div>Video Id: {video.snippet.resourceId.videoId}</div>
-              <img src={video.snippet.thumbnails.default.url} />
-              <h4>{video.snippet.title}</h4>
+            <Col span={5} key={videoId}>
+              <Link to={paths.VIDEO + '/' + videoId}>
+                <img src={video.snippet.thumbnails.default.url} />
+                <h5>{video.snippet.title}</h5>
+              </Link>
             </Col>
           );
         })}

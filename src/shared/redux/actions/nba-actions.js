@@ -36,8 +36,9 @@ export const getNbaVideosFailure = (err) => ({ type: A.GET_NBA_VIDEOS_FAILURE, e
 
 // mock data
 export const getNbaVideos = () => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(getNbaVideosRequest());
+    await sleep(1500);
     return dispatch(getNbaVideosSuccess(PLAYLIST.items));
   };
 };

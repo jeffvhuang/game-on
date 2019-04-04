@@ -25,6 +25,9 @@ class BasketballPageContainer extends React.Component {
     if (props.nba.schedule.length < 1) props.actions.getNbaSchedule();
 
     this.state = {
+      // the selected values in the dropdown
+      selected: [],
+      // To sort out between games on today and after today with those that have not been selected
       gamesToday: props.nba.gamesToday,
       upcoming: props.nba.upcoming,
       unselectedGamesToday: [],
@@ -72,7 +75,6 @@ class BasketballPageContainer extends React.Component {
   handleAddedSelect = (values, prevState) => {
     const selectedTeam = values[values.length - 1];
 
-
     // Variables to help sorting
     // Objects to hold arrays for games today into selected and unselected
     let todayArrays;
@@ -83,16 +85,18 @@ class BasketballPageContainer extends React.Component {
 
     // Sort games into selected and unselected for today and upcoming games
     if (values.length == 1) {
-      todayArrays = this.sortForTeam(selectedTeam, this.props.nba.gamesToday);
-      upcomingArrays = this.sortForTeam(selectedTeam, this.props.nba.upcoming);
+      todayArrays = this.sortCalendarForTeam(selectedTeam, this.props.nba.gamesToday);
+      upcomingArrays = this.sortCalendarForTeam(selectedTeam, this.props.nba.upcoming);
 
       // If only one has been selected then the previous data was all the teams,
       // so replace instead of add on.
       gamesToday = todayArrays.selected;
       upcoming = upcomingArrays.selected;
     } else {
-      todayArrays = this.sortForTeam(selectedTeam, prevState.unselectedGamesToday);
-      upcomingArrays = this.sortForTeam(selectedTeam, prevState.unselectedUpcoming);
+      // When there is more than one value selected, only choose from those that 
+      // are unselected to prevent duplicates since each game contains two teams
+      todayArrays = this.sortCalendarForTeam(selectedTeam, prevState.unselectedGamesToday);
+      upcomingArrays = this.sortCalendarForTeam(selectedTeam, prevState.unselectedUpcoming);
 
       gamesToday = prevState.gamesToday.concat(todayArrays.selected);
       upcoming = prevState.upcoming.concat(upcomingArrays.selected);
@@ -108,7 +112,7 @@ class BasketballPageContainer extends React.Component {
   };
 
   // Sort out the games that include the selected team
-  sortForTeam = (team, array) => {
+  sortCalendarForTeam = (team, array) => {
     const selected = [];
     const unselected = [];
 
@@ -133,8 +137,8 @@ class BasketballPageContainer extends React.Component {
     }
 
     // Move the games with the team just removed from dropdown and return it to unselected/unshown array
-    const todayArrays = this.removeForTeam(values, selectedTeam, prevState.gamesToday);
-    const upcomingArrays = this.removeForTeam(values, selectedTeam, prevState.upcoming);
+    const todayArrays = this.removeInCalendarForTeam(values, selectedTeam, prevState.gamesToday);
+    const upcomingArrays = this.removeInCalendarForTeam(values, selectedTeam, prevState.upcoming);
   
     return {
       selected: values,
@@ -153,7 +157,7 @@ class BasketballPageContainer extends React.Component {
    * @param  {[array]} games array of objects to be sorted
    * @return {[object]} two properties for those still in values and those that arent
    */
-  removeForTeam = (values, team, games) => {
+  removeInCalendarForTeam = (values, team, games) => {
     const removed = [];
     const remains = [];
 

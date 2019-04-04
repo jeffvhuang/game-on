@@ -1,3 +1,5 @@
+import { paths } from './constants';
+
 // Sleep function to delay tasks to mock delayed api response
 export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -37,29 +39,6 @@ export function sortEvents(sportsEvents, eSportsEvents) {
 
   return { ongoing, upcoming, completed };
 }
-
-// Initial seed data functions to sort dates
-// export function getNBASchedule(data) {
-//   const gamesToday = [];
-//   const upcoming = [];
-//   const currentDate = new Date();
-//   const now = Date.now();
-
-//   // Sort each team for games not yet completed
-//   for (const property in data) {
-//     data[property].games.forEach(game => {
-//       const gamesDate = new Date(game.date);
-
-//       if (isSameDate(currentDate, gamesDate)) {
-//         gamesToday.push(game);
-//       } else if (gamesDate.getTime() > now) {
-//         upcoming.push(game);
-//       }
-//     });
-//   }
-
-//   return { gamesToday, upcoming };
-// }
 
 export function getEPLSchedule(data) {
   const gamesToday = [];
@@ -127,10 +106,24 @@ export function sortNBASchedule(data) {
   return { gamesToday, upcoming, beforeToday };
 }
 
-/* Function check 2 dates are the same
-* dateTestedAgainst: Date object
-* dateToTest: Date object
-*/
+// Methods to create objects from APIs to show in common thumbnails functions
+export function createNbaThumnailObjects(videos) {
+  const thumbnails = [];
+  videos.forEach(video => {
+    thumbnails.push({
+      videoId: video.snippet.resourceId.videoId,
+      imgSrc: video.snippet.thumbnails.default.url,
+      title: video.snippet.title
+    });
+  });
+  return thumbnails;
+}
+
+/**
+ * Check 2 dates are the same
+ * @param {Date} dateTestedAgainst 
+ * @param {Date} dateToTest 
+ */
 export function isSameDate(dateTestedAgainst, dateToTest) {
   const year = dateTestedAgainst.getFullYear();
   const month = dateTestedAgainst.getMonth();

@@ -7,18 +7,21 @@ import { paths } from '../../../helpers/constants';
 
 VideoThumbnails.propTypes = {
   heading: string.isRequired,
-  videos: array.isRequired
+  thumbnails: array.isRequired
 };
 
-function VideoThumbnails({ heading, videos }) {
+function VideoThumbnails({ heading, thumbnails }) {
   return (
     <div className="section">
       <h2>{heading}</h2>
       <Row gutter={8} type="flex" justify="space-between" className="margin-bot">
-        {videos.map((video, i) => {
+        {thumbnails.map((thumbnail, i) => {
           return (
             <Col span={5} key={i}>
-              <Link to={paths.VIDEO + '/' + video} ><img src="https://dummyimage.com/200x160/000/fff.jpg&text=Video" /></Link>
+              <Link key={i} to={paths.VIDEO + '/' + thumbnail.videoId}>
+                <img src={thumbnail.imgSrc} />
+                <h5>{thumbnail.title}</h5>
+              </Link>
             </Col>
           );
         })}
