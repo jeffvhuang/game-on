@@ -26,8 +26,7 @@ class HighlightsPageContainer extends React.Component {
         basketball: createNbaThumnailObjects(props.nba.videos),
         football: footballThumbnails
       },
-      show: this.getCompleteList(),
-      hide: []
+      show: this.getCompleteList()
     };
   }
 

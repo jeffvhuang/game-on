@@ -11,11 +11,13 @@ VideoThumbnails.propTypes = {
 };
 
 function VideoThumbnails({ heading, thumbnails }) {
+  const shownThumbnails = thumbnails.slice(0, 4);
+  
   return (
     <div className="section">
       <h2>{heading}</h2>
       <Row gutter={8} type="flex" justify="space-between" className="margin-bot">
-        {thumbnails.map((thumbnail, i) => {
+        {shownThumbnails.map((thumbnail, i) => {
           return (
             <Col span={5} key={i}>
               <Link key={i} to={paths.VIDEO + '/' + thumbnail.videoId}>
