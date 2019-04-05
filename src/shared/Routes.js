@@ -4,6 +4,7 @@ import { paths } from '../helpers/constants';
 import LandingPageContainer from './components/landing/LandingPageContainer';
 import LoginPageContainer from './components/login/LoginPageContainer';
 import HighlightsPageContainer from './components/highlights/HighlightsPageContainer';
+import SpecificHighlightsContainer from './components/highlights/SpecificHighlightsContainer';
 import BasketballPageContainer from './components/sports/BasketballPageContainer';
 import FootballPageContainer from './components/sports/FootballPageContainer';
 import ESportsPageContainer from './components/esports/ESportsPageContainer';
@@ -17,6 +18,7 @@ export default class Routes extends React.Component {
       <Switch>
         <Route exact path={paths.LANDING} component={LandingPageContainer} />
         <Route path={paths.LOGIN} component={LoginPageContainer} />
+        <Route path={paths.HIGHLIGHTS + '/:sport'} component={SpecificHighlightsContainer} />
         <Route path={paths.HIGHLIGHTS} component={HighlightsPageContainer} />
         <Route path={paths.SPORTS + '/basketball'} component={BasketballPageContainer} />
         <Route path={paths.SPORTS + '/football'} component={FootballPageContainer} />

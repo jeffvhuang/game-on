@@ -1,18 +1,22 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { string, array } from 'prop-types';
+import { string, array, number, bool } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 
 VideoThumbnails.propTypes = {
   heading: string.isRequired,
-  thumbnails: array.isRequired
+  thumbnails: array.isRequired,
+  showCount: number,
+  showMore: bool
 };
 
-function VideoThumbnails({ heading, thumbnails }) {
-  const shownThumbnails = thumbnails.slice(0, 4);
-  
+function VideoThumbnails({ heading, thumbnails, showCount, showMore = false }) {
+  let shownThumbnails;
+  if (showCount && showCount < thumbnails.length) shownThumbnails = thumbnails.slice(0, showCount);
+  else shownThumbnails = thumbnails;
+
   return (
     <div className="section">
       <h2>{heading}</h2>
@@ -28,6 +32,11 @@ function VideoThumbnails({ heading, thumbnails }) {
           );
         })}
       </Row>
+      {showMore && 
+        <Link to={paths.HIGHLIGHTS + '/' + heading.toLowerCase()} className="right">
+          More >
+        </Link>
+      }
     </div>
   );
 }

@@ -30,7 +30,7 @@ function NbaThumbnails({ videos }) {
           );
         })}
       </Row>
-      <Link to={paths.HIGHLIGHTS} className="right">More ></Link>
+      <Link to={paths.HIGHLIGHTS + '/basketball/nba'} className="right">More ></Link>
     </div>
   );
 }

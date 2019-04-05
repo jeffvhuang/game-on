@@ -61,7 +61,8 @@ class HighlightsPageContainer extends React.Component {
         <SportSelectDropdown handleChange={this.handleChange} />
         {this.state.show.map(sport => {
           const sportThumbnails = this.state.thumbnails[sport.toLowerCase()];
-          return <VideoThumbnails key={sport} heading={sport} thumbnails={sportThumbnails} />;
+          return <VideoThumbnails key={sport} heading={sport}
+            thumbnails={sportThumbnails} showCount={4} showMore />;
         })}
       </div>
     );
