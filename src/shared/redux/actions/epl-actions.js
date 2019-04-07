@@ -5,7 +5,7 @@ import { youtubeAPI, eplAPI } from '../../../helpers/constants';
 import { sleep } from '../../../helpers/utils';
 
 // Mock data
-// import { SCHEDULE, TEAMS } from '../../../mockApiData/rapidEpl';
+import { TEAMS } from '../../../mockApiData/rapidEpl';
 // import { PLAYLIST } from '../../../mockApiData/EplYoutube';
 
 
@@ -81,41 +81,51 @@ export const getEplTeamsRequest = () => ({ type: A.GET_EPL_TEAMS_REQUEST });
 export const getEplTeamsSuccess = (payload) => ({ type: A.GET_EPL_TEAMS_SUCCESS, payload });
 export const getEplTeamsFailure = (err) => ({ type: A.GET_EPL_TEAMS_FAILURE, err });
 
-export const getEplTeams = () => {
-  return (dispatch) => {
-    dispatch(getEplTeamsRequest());
-    return axios({
-      method: 'get',
-      url: eplAPI.HOST + eplAPI.TEAMS,
-      headers: {
-        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
-        'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
-      }
-    }).then(response => {
-      const teamsObj = response.data.api.teams;
-      const eplTeams = [];
-
-      Object.keys(teamsObj).forEach(t => eplTeams.push({
-        fullName: teamsObj[t].name,
-        shortName: teamsObj[t].code,
-        teamId: teamsObj[t].team_id,
-        logo: teamsObj[t].logo
-      }));
-
-      dispatch(getEplTeamsSuccess(eplTeams));
-    }).catch(err => {
-      dispatch(getEplTeamsFailure(err));
-      throw(err);
-    });
-  };
-};
-
-// return mock data
 // export const getEplTeams = () => {
-//   return async (dispatch) => {
+//   return (dispatch) => {
 //     dispatch(getEplTeamsRequest());
-//     await sleep(2000);
-//     const EplTeams = TEAMS.filter(team => team.EplFranchise == '1');
-//     return dispatch(getEplTeamsSuccess(EplTeams));
+//     return axios({
+//       method: 'get',
+//       url: eplAPI.HOST + eplAPI.TEAMS,
+//       headers: {
+//         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
+//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
+//       }
+//     }).then(response => {
+//       const teamsObj = response.data.api.teams;
+//       const eplTeams = [];
+
+//       Object.keys(teamsObj).forEach(t => eplTeams.push({
+//         fullName: teamsObj[t].name,
+//         shortName: teamsObj[t].code,
+//         teamId: teamsObj[t].team_id,
+//         logo: teamsObj[t].logo
+//       }));
+
+//       dispatch(getEplTeamsSuccess(eplTeams));
+//     }).catch(err => {
+//       dispatch(getEplTeamsFailure(err));
+//       throw(err);
+//     });
 //   };
 // };
+
+// return mock data
+export const getEplTeams = () => {
+  return async (dispatch) => {
+    dispatch(getEplTeamsRequest());
+    await sleep(2000);
+
+    const teamsObj = TEAMS;
+    const eplTeams = [];
+
+    Object.keys(teamsObj).forEach(t => eplTeams.push({
+      fullName: teamsObj[t].name,
+      shortName: teamsObj[t].code,
+      teamId: teamsObj[t].team_id,
+      logo: teamsObj[t].logo
+    }));
+
+    return dispatch(getEplTeamsSuccess(eplTeams));
+  };
+};
