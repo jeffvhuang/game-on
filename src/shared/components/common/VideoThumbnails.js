@@ -9,10 +9,11 @@ VideoThumbnails.propTypes = {
   heading: string.isRequired,
   thumbnails: array.isRequired,
   showCount: number,
-  showMore: bool
+  showMore: bool,
+  showMoreLink: string
 };
 
-function VideoThumbnails({ heading, thumbnails, showCount, showMore = false }) {
+function VideoThumbnails({ heading, thumbnails, showCount, showMore = false, showMoreLink }) {
   let shownThumbnails;
   if (showCount && showCount < thumbnails.length) shownThumbnails = thumbnails.slice(0, showCount);
   else shownThumbnails = thumbnails;
@@ -33,7 +34,7 @@ function VideoThumbnails({ heading, thumbnails, showCount, showMore = false }) {
         })}
       </Row>
       {showMore && 
-        <Link to={paths.HIGHLIGHTS + '/' + heading.toLowerCase()} className="right">
+        <Link to={showMoreLink} className="right">
           More >
         </Link>
       }

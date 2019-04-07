@@ -7,7 +7,7 @@ import { footballThumbnails } from '../../../helpers/constants';
 import { createNbaThumnailObjects } from '../../../helpers/utils';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
 
-import VideoThumbnails from './VideoThumbnails';
+import VideoThumbnails from '../common/VideoThumbnails';
 
 const propTypes = {
   match: object.isRequired,
@@ -20,11 +20,11 @@ class SpecificHighlightsContainer extends React.Component {
     super(props);
     
     const { sport } = props.match.params;
-    if (sport == 'basketball' && props.nba.videos.length < 1) 
+    if (sport.toLowerCase() == 'basketball' && props.nba.videos.length < 1) 
       props.actions.getNbaVideos();
 
     this.state = {
-      sport: sport,
+      sport: sport.toLowerCase(),
       thumbnails : this.getThumbnails(sport)
     };
   }

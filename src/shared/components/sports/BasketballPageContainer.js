@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/nba-actions';
+import { createNbaThumnailObjects } from '../../../helpers/utils';
 
-import NbaThumbnails from './NbaThumbnails';
+import VideoThumbnails from '../common/VideoThumbnails';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
 
@@ -185,7 +186,11 @@ class BasketballPageContainer extends React.Component {
         <h1>Basketball</h1>
         <TeamSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />
-        <NbaThumbnails videos={this.props.nba.videos} />
+        <VideoThumbnails heading="Basketball"
+          thumbnails={createNbaThumnailObjects(this.props.nba.videos)}
+          showCount={4}
+          showMore
+          showMoreLink={paths.HIGHLIGHTS + '/basketball/nba'} />
         <div className="section">
           <BasketballScheduleSection header="Today's Games" games={this.state.gamesToday} />
           <BasketballScheduleSection header="Upcoming" games={this.state.upcoming} />

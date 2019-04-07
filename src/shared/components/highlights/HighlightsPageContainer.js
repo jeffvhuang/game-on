@@ -3,11 +3,11 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { sportsList, esportsList, footballThumbnails } from '../../../helpers/constants';
+import { sportsList, esportsList, footballThumbnails, paths } from '../../../helpers/constants';
 import { createNbaThumnailObjects } from '../../../helpers/utils';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
 
-import VideoThumbnails from './VideoThumbnails';
+import VideoThumbnails from '../common/VideoThumbnails';
 import SportSelectDropdown from '../common/SportSelectDropdown';
 
 const propTypes = {
@@ -61,8 +61,8 @@ class HighlightsPageContainer extends React.Component {
         <SportSelectDropdown handleChange={this.handleChange} />
         {this.state.show.map(sport => {
           const sportThumbnails = this.state.thumbnails[sport.toLowerCase()];
-          return <VideoThumbnails key={sport} heading={sport}
-            thumbnails={sportThumbnails} showCount={4} showMore />;
+          return <VideoThumbnails key={sport} heading={sport} thumbnails={sportThumbnails}
+            showCount={4} showMore showMoreLink={paths.HIGHLIGHTS + '/' + sport.toLowerCase()} />;
         })}
       </div>
     );
