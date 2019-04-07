@@ -140,3 +140,9 @@ export function getFormattedTime(date) {
     m = (date.getMinutes()<10?'0':'') + date.getMinutes();
   return h + ':' + m;
 }
+
+export function createActionStringObjects(actions) {
+  const actionObj = {};
+  actions.forEach(action => actionObj[action] = action);
+  return actionObj;
+}
