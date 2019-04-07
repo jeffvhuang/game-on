@@ -1136,4 +1136,4 @@ export const PLAYLIST = {
       }
     }
   ]
-}
+};
