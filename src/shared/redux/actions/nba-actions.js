@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 import { nbaActions as A } from './action-types';
-import { youtubeAPI } from '../../../helpers/constants';
-import { nbaAPI } from '../../../helpers/nbaData';
+import { youtubeAPI, nbaAPI } from '../../../helpers/constants';
 import { sleep, sortNBASchedule } from '../../../helpers/utils';
 
 // Mock data

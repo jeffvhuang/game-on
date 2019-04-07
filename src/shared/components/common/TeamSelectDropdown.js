@@ -18,8 +18,8 @@ function TeamSelectDropdown({ handleChange, teams }) {
         size="large"
         style={{ width: '80%' }}
         allowClear >
-        {teams.map(team => {
-          return <Option key={team.shortName} value={team.shortName}>{team.fullName}</Option>;
+        {teams.map((team, i) => {
+          return <Option key={i} value={team.shortName}>{team.fullName}</Option>;
         })}
       </Select>
     </div>

@@ -67,3 +67,24 @@ export const youtubeAPI = {
   PLAYLIST_ITEMS: '/playlistItems',
   NBA_ID: 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z'
 };
+
+// Third party data APIs
+// APi from official NBA but CORS blocked
+// export const nbaAPI = {
+//   HOST: 'http://data.nba.net/10s',
+//   SCHEDULE: '/prod/v1/2018/schedule.json'
+// };
+
+// API from Rapidapi.com
+export const nbaAPI = {
+  HOST: 'https://api-nba-v1.p.rapidapi.com',
+  SCHEDULE: '/games/seasonYear' + '/2018',
+  TEAMS: '/teams/league/standard'
+};
+
+// Rapidapi.com > api-football api
+export const eplAPI = {
+  HOST: 'https://api-football-v1.p.rapidapi.com',
+  SCHEDULE: '/fixtures/league' + '/2',
+  TEAMS: '/teams/league/2'
+};

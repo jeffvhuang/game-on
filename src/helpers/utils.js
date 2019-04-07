@@ -105,6 +105,20 @@ export function sortNBASchedule(data) {
 
   return { gamesToday, upcoming, beforeToday };
 }
+/**
+ * convert to objects to be used in common dropdown function used across all apis
+ * @param {array} teams 
+ */
+export function convertEplTeamsToArray(teams) {
+  const ddTeams = [];
+  teams.forEach(t => ddTeams.push({
+    fullName: t.name,
+    shortName: t.code,
+    teamId: t.team_id,
+    logo: t.logo
+  }));
+  return ddTeams;
+}
 
 // Methods to create objects from APIs to show in common thumbnails functions
 export function createNbaThumnailObjects(videos) {
