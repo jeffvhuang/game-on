@@ -23,7 +23,7 @@ class FootballPageContainer extends React.Component {
 
     // if (props.epl.videos.length < 1) props.actions.getNbaVideos();
     if (props.epl.teams.length < 1) props.actions.getEplTeams();
-    // if (props.epl.schedule.length < 1) props.actions.getNbaSchedule();
+    if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
 
     this.state = {
       videos: [

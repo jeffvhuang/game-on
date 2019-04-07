@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { eplActions as A } from './action-types';
 import { youtubeAPI, eplAPI } from '../../../helpers/constants';
-import { sleep } from '../../../helpers/utils';
+import { sleep, sortEplSchedule } from '../../../helpers/utils';
 
 // Mock data
 import { TEAMS } from '../../../mockApiData/rapidEpl';
@@ -49,20 +49,27 @@ export const getEplScheduleFailure = (err) => ({ type: A.GET_EPL_SCHEDULE_FAILUR
 
 export const getEplSchedule = () => {
   return (dispatch) => {
-    // dispatch(getEplScheduleRequest());
-    // return axios({
-    //   method: 'get',
-    //   url: EplAPI.HOST + EplAPI.SCHEDULE,
-    //   headers: {
-    //     'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
-    //   }
-    // }).then(response => {
-    //   const sortedSchedule = sortEplSchedule(response.data.api.games);
-    //   dispatch(getEplScheduleSuccess(sortedSchedule, response.data.api.games));
-    // }).catch(err => {
-    //   dispatch(getEplScheduleFailure(err));
-    //   throw(err);
-    // });
+    dispatch(getEplScheduleRequest());
+    return axios({
+      method: 'get',
+      url: eplAPI.HOST + eplAPI.SCHEDULE,
+      headers: {
+        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
+        'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
+      }
+    }).then(response => {
+      const fixturesObj = response.data.api.fixtures;
+      const eplSchedule = [];
+
+      Object.keys(fixturesObj).forEach(t => eplSchedule.push(fixturesObj[t]));
+
+      const sortedSchedule = sortEplSchedule(eplSchedule);
+
+      dispatch(getEplScheduleSuccess(sortedSchedule, eplSchedule));
+    }).catch(err => {
+      dispatch(getEplScheduleFailure(err));
+      throw(err);
+    });
   };
 };
 

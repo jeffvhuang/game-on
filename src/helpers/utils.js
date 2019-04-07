@@ -105,6 +105,32 @@ export function sortNBASchedule(data) {
 
   return { gamesToday, upcoming, beforeToday };
 }
+
+/**
+ * sort schedule to find today and upcoming
+ * @param {array} data 
+ */
+export function sortEplSchedule(data) {
+  const gamesToday = [];
+  const upcoming = [];
+  const beforeToday = [];
+  const dateToday = new Date();
+  const now = Date.now();
+
+  data.forEach(game => {
+    const gamesDate = new Date(game.event_date);
+    if (isSameDate(dateToday, gamesDate)) {
+      gamesToday.push(game);
+    } else if (gamesDate.getTime() > now) {
+      upcoming.push(game);
+    } else {
+      beforeToday.push(game);
+    }
+  });
+
+  return { gamesToday, upcoming, beforeToday };
+}
+
 /**
  * convert to objects to be used in common dropdown function used across all apis
  * @param {array} teams 
