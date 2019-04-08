@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
+import { paths } from '../../../helpers/constants';
 import {  } from '../../../helpers/utils';
 import { getEplTeams, getEplSchedule, getEplVideos } from '../../redux/actions/epl-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
-import ScheduleContainer from './ScheduleContainer';
-
+import FootballScheduleSection from './FootballScheduleSection';
 
 const propTypes = {
   epl: object.isRequired,
@@ -21,10 +21,6 @@ class FootballPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    // if (props.epl.videos.length < 1) props.actions.getNbaVideos();
-    if (props.epl.teams.length < 1) props.actions.getEplTeams();
-    if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
-
     this.state = {
       videos: [
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
@@ -33,8 +29,8 @@ class FootballPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
       selected: [],
-      gamesToday: [],
-      upcoming: []
+      gamesToday: props.epl.gamesToday,
+      upcoming: props.epl.upcoming
     };
   }
 
@@ -49,6 +45,13 @@ class FootballPageContainer extends React.Component {
       };
     }
     return null;
+  }
+
+  componentDidMount() {
+    const props = this.props;
+    // if (props.epl.videos.length < 1) props.actions.getNbaVideos();
+    if (props.epl.teams.length < 1) props.actions.getEplTeams();
+    if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
   }
 
   handleChange = values => {   
@@ -139,8 +142,11 @@ class FootballPageContainer extends React.Component {
         <TeamSelectDropdown handleChange={this.handleChange}
           teams={this.props.epl.teams} />
         <HighlightsContainer videos={this.state.videos} />
-        <ScheduleContainer gamesToday={this.state.gamesToday}
-          upcoming={this.state.upcoming} />
+        <div className="section">
+          <FootballScheduleSection games={this.state.gamesToday} header="Today's Games" />
+          <FootballScheduleSection games={this.state.upcoming} header="Upcoming" />
+          <Link to={paths.EVENTS} className="right">More ></Link>
+        </div>
       </div>
     );
   }
