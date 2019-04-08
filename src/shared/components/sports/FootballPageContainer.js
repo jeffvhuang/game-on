@@ -9,7 +9,7 @@ import {  } from '../../../helpers/utils';
 import { getEplTeams, getEplSchedule, getEplVideos } from '../../redux/actions/epl-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
-import TeamSelectDropdown from '../common/TeamSelectDropdown';
+import EplSelectDropdown from './EplSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
 
 const propTypes = {
@@ -28,7 +28,6 @@ class FootballPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
-      selected: [],
       gamesToday: props.epl.gamesToday,
       upcoming: props.epl.upcoming
     };
@@ -59,76 +58,44 @@ class FootballPageContainer extends React.Component {
     // Set state arrays depending on whether value has been selected or removed
     if (length == 0) { // All removed
       this.resetInitialState();
+    } else if (length == 1) {
+      this.setState({
+        gamesToday: this.props.epl.gamesToday.filter(
+          g => g.awayTeam == values[0] || g.homeTeam == values[0]),
+        upcoming: this.props.epl.upcoming.filter(
+          g => g.awayTeam == values[0] || g.homeTeam == values[0])
+      });
     } else {
-      this.setState(prevState => {
-        if (length > prevState.selected.length) {
-          return this.handleAddedSelect(values, prevState);
-        } else {
-          return this.handleRemovedSelect(values, prevState);
-        }
+      this.setState(() => {
+        return this.handleSelect(values);
       });
     }
   }
 
   resetInitialState = () => {
-    this.setState({ 
-      selected: [],
-      // gamesToday: schedule.gamesToday,
-      // upcoming: schedule.upcoming
+    this.setState({
+      gamesToday: this.props.epl.gamesToday,
+      upcoming: this.props.epl.upcoming 
     });
   }
   
-  // handleAddedSelect = (values, prevState) => {
-  //   const selectedTeam = values[values.length - 1];
-  
-  //   const todayForSelected = schedule.gamesToday.filter(
-  //     game => game.home == selectedTeam || game.away == selectedTeam
-  //   );
-  //   const upcomingForSelected = schedule.upcoming.filter(
-  //     game => game.home == selectedTeam || game.away == selectedTeam
-  //   );
-  
-  //   // If only one has been selected, the previous data was all the data,
-  //   // so replace instead of add on.
-  //   if (values.length == 1) {
-  //     return {
-  //       selected: values,
-  //       gamesToday: todayForSelected,
-  //       upcoming: upcomingForSelected
-  //     };
-  //   } else {
-  //     return {
-  //       selected: values,
-  //       gamesToday: prevState.gamesToday.concat(todayForSelected),
-  //       upcoming: prevState.upcoming.concat(upcomingForSelected)
-  //     };
-  //   }
-  // };
-  
-  // handleRemovedSelect = (values, prevState) => {
-  //   const previousValues = prevState.selected;
-  //   let selectedTeam;
-  //   // Find the removed sport
-  //   for (let i = 0; i < previousValues.length; i++) {
-  //     if (!values.includes(previousValues[i])) {
-  //       selectedTeam = previousValues[i];
-  //       break;
-  //     }
-  //   }
-  
-  //   const filteredToday = this.state.gamesToday.filter(
-  //     game => game.home != selectedTeam && game.away != selectedTeam
-  //   );
-  //   const filteredUpcoming = this.state.upcoming.filter(
-  //     game => game.home != selectedTeam && game.away != selectedTeam
-  //   );
-  
-  //   return {
-  //     selected: values,
-  //     gamesToday: filteredToday,
-  //     upcoming: filteredUpcoming
-  //   };
-  // };
+  handleSelect = (values) => {
+    const today = [];
+    const upcoming = [];
+
+    this.props.epl.gamesToday.forEach(g => {
+      if (values.some(x => x == g.homeTeam || x == g.awayTeam)) today.push(g);
+    });
+
+    this.props.epl.upcoming.forEach(g => {
+      if (values.some(x => x == g.homeTeam || x == g.awayTeam)) upcoming.push(g);
+    });
+
+    return {
+      gamesToday: today,
+      upcoming: upcoming
+    };
+  };
 
   render() {
     return (
@@ -139,7 +106,7 @@ class FootballPageContainer extends React.Component {
           </div>
         </div>
         <h1>Football: English Premier League</h1>
-        <TeamSelectDropdown handleChange={this.handleChange}
+        <EplSelectDropdown handleChange={this.handleChange}
           teams={this.props.epl.teams} />
         <HighlightsContainer videos={this.state.videos} />
         <div className="section">
