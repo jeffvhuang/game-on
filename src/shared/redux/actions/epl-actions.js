@@ -132,12 +132,7 @@ export const getEplTeams = () => {
     const teamsObj = TEAMS;
     const eplTeams = [];
 
-    Object.keys(teamsObj).forEach(t => eplTeams.push({
-      fullName: teamsObj[t].name,
-      shortName: teamsObj[t].code,
-      teamId: teamsObj[t].team_id,
-      logo: teamsObj[t].logo
-    }));
+    Object.keys(teamsObj).forEach(t => eplTeams.push(teamsObj[t]));
 
     return dispatch(getEplTeamsSuccess(eplTeams));
   };

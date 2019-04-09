@@ -97,6 +97,15 @@ class FootballPageContainer extends React.Component {
     };
   };
 
+  // Teams will be an object array
+  sortTeamsForDropdown = (teams) => {
+    return teams.sort(function(a, b) {
+      const textA = a.name.toUpperCase();
+      const textB = b.name.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+  }
+
   render() {
     return (
       <div>
@@ -107,7 +116,7 @@ class FootballPageContainer extends React.Component {
         </div>
         <h1>Football: English Premier League</h1>
         <EplSelectDropdown handleChange={this.handleChange}
-          teams={this.props.epl.teams} />
+          teams={this.sortTeamsForDropdown(this.props.epl.teams)} />
         <HighlightsContainer videos={this.state.videos} />
         <div className="section">
           <FootballScheduleSection games={this.state.gamesToday} header="Today's Games" />
