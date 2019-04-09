@@ -111,24 +111,39 @@ export function sortNBASchedule(data) {
  * @param {array} data 
  */
 export function sortEplSchedule(data) {
-  const gamesToday = [];
-  const upcoming = [];
-  const beforeToday = [];
+  const today = [];
+  const upcomingGames = [];
+  const before = [];
   const dateToday = new Date();
   const now = Date.now();
 
+  // Separate into games past, today and upcoming
   data.forEach(game => {
     const gamesDate = new Date(game.event_date);
     if (isSameDate(dateToday, gamesDate)) {
-      gamesToday.push(game);
+      today.push(game);
     } else if (gamesDate.getTime() > now) {
-      upcoming.push(game);
+      upcomingGames.push(game);
     } else {
-      beforeToday.push(game);
+      before.push(game);
     }
   });
 
+  // Sort each one by date
+  const gamesToday = sortEplByDate(today);
+  const upcoming = sortEplByDate(upcomingGames);
+  const beforeToday = sortEplByDate(before);
+
   return { gamesToday, upcoming, beforeToday };
+}
+
+// Sort by date for epl api's data
+function sortEplByDate(data) {
+  return data.sort(function(a, b) {
+    const dateA = a.event_timestamp;
+    const dateB = b.event_timestamp;
+    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+  });
 }
 
 /**

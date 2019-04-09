@@ -28,22 +28,8 @@ class FootballPageContainer extends React.Component {
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
         "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
       ],
-      gamesToday: props.epl.gamesToday,
-      upcoming: props.epl.upcoming
+      values: []
     };
-  }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const epl = nextProps.epl;
-    // Populate schedule once received in props
-    if (prevState.upcoming.length < 1 &&
-    (epl.gamesToday.length > 0 || epl.upcoming.length > 0)) {
-      return {
-        gamesToday: epl.gamesToday,
-        upcoming: epl.upcoming
-      };
-    }
-    return null;
   }
 
   componentDidMount() {
@@ -53,23 +39,8 @@ class FootballPageContainer extends React.Component {
     if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
   }
 
-  handleChange = values => {   
-    const length = values.length; 
-    // Set state arrays depending on whether value has been selected or removed
-    if (length == 0) { // All removed
-      this.resetInitialState();
-    } else if (length == 1) {
-      this.setState({
-        gamesToday: this.props.epl.gamesToday.filter(
-          g => g.awayTeam == values[0] || g.homeTeam == values[0]),
-        upcoming: this.props.epl.upcoming.filter(
-          g => g.awayTeam == values[0] || g.homeTeam == values[0])
-      });
-    } else {
-      this.setState(() => {
-        return this.handleSelect(values);
-      });
-    }
+  handleChange = values => {
+    this.setState({ values });
   }
 
   resetInitialState = () => {
@@ -78,24 +49,6 @@ class FootballPageContainer extends React.Component {
       upcoming: this.props.epl.upcoming 
     });
   }
-  
-  handleSelect = (values) => {
-    const today = [];
-    const upcoming = [];
-
-    this.props.epl.gamesToday.forEach(g => {
-      if (values.some(x => x == g.homeTeam || x == g.awayTeam)) today.push(g);
-    });
-
-    this.props.epl.upcoming.forEach(g => {
-      if (values.some(x => x == g.homeTeam || x == g.awayTeam)) upcoming.push(g);
-    });
-
-    return {
-      gamesToday: today,
-      upcoming: upcoming
-    };
-  };
 
   // Teams will be an object array
   sortTeamsForDropdown = (teams) => {
@@ -119,8 +72,12 @@ class FootballPageContainer extends React.Component {
           teams={this.sortTeamsForDropdown(this.props.epl.teams)} />
         <HighlightsContainer videos={this.state.videos} />
         <div className="section">
-          <FootballScheduleSection games={this.state.gamesToday} header="Today's Games" />
-          <FootballScheduleSection games={this.state.upcoming} header="Upcoming" />
+          <FootballScheduleSection games={this.props.epl.gamesToday}
+            header="Today's Games"
+            values={this.state.values} />
+          <FootballScheduleSection games={this.props.epl.upcoming}
+            header="Upcoming"
+            values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
