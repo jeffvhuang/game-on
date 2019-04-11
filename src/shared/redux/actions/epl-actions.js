@@ -6,6 +6,7 @@ import { sleep, sortEplSchedule } from '../../../helpers/utils';
 
 // Mock data
 import { TEAMS, SCHEDULE } from '../../../mockApiData/rapidEpl';
+import { CL_PLAYLIST } from '../../../mockApiData/champsLeagueYoutube';
 // import { PLAYLIST } from '../../../mockApiData/EplYoutube';
 
 
@@ -33,29 +34,6 @@ import { TEAMS, SCHEDULE } from '../../../mockApiData/rapidEpl';
 //   };
 // };
 
-export const getChampionsLeagueVideosRequest = () => ({ type: C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST });
-export const getChampionsLeagueVideosSuccess = (payload) => ({ type: C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS, payload });
-export const getChampionsLeagueVideosFailure = (err) => ({ type: C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE, err });
-
-export const getChampionsLeagueVideos = () => {
-  return (dispatch) => {
-    dispatch(getChampionsLeagueVideosRequest());
-    return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-      params: {
-        'part': 'snippet',
-        'playlistId': youtubeAPI.CHAMPIONS_LEAGUE_ID,
-        'maxResults': '25',
-        'key': youtubeAPI.KEY
-      }
-    }).then(response => {
-      dispatch(getChampionsLeagueVideosSuccess(response.data.items));
-    }).catch(err => {
-      dispatch(getChampionsLeagueVideosFailure(err));
-      throw(err);
-    });
-  };
-};
-
 // mock data
 // export const getEplVideos = () => {
 //   return async (dispatch) => {
@@ -64,6 +42,38 @@ export const getChampionsLeagueVideos = () => {
 //     return dispatch(getEplVideosSuccess(PLAYLIST.items));
 //   };
 // };
+
+export const getChampionsLeagueVideosRequest = () => ({ type: C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST });
+export const getChampionsLeagueVideosSuccess = (payload) => ({ type: C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS, payload });
+export const getChampionsLeagueVideosFailure = (err) => ({ type: C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE, err });
+
+// export const getChampionsLeagueVideos = () => {
+//   return (dispatch) => {
+//     dispatch(getChampionsLeagueVideosRequest());
+//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//       params: {
+//         'part': 'snippet',
+//         'playlistId': youtubeAPI.CHAMPIONS_LEAGUE_ID,
+//         'maxResults': '25',
+//         'key': youtubeAPI.KEY
+//       }
+//     }).then(response => {
+//       dispatch(getChampionsLeagueVideosSuccess(response.data.items));
+//     }).catch(err => {
+//       dispatch(getChampionsLeagueVideosFailure(err));
+//       throw(err);
+//     });
+//   };
+// };
+
+// mock data
+export const getChampionsLeagueVideos = () => {
+  return async (dispatch) => {
+    dispatch(getChampionsLeagueVideosRequest());
+    await sleep(1500);
+    return dispatch(getChampionsLeagueVideosSuccess(CL_PLAYLIST.items));
+  };
+};
 
 // Get Schedule
 export const getEplScheduleRequest = () => ({ type: A.GET_EPL_SCHEDULE_REQUEST });
