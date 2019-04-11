@@ -36,3 +36,9 @@ export const eplActions = createActionStringObjects([
   'GET_EPL_VIDEOS_SUCCESS',
   'GET_EPL_VIDEOS_FAILURE'
 ]);
+
+export const championsLeagueActions = createActionStringObjects([
+  'GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST',
+  'GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS',
+  'GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE'
+]);

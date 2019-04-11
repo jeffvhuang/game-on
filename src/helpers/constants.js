@@ -64,8 +64,12 @@ export const esportsList = Object.keys(esports).map(key => {
 export const youtubeAPI = {
   HOST: 'https://www.googleapis.com/youtube/v3',
   KEY: 'AIzaSyDCn1lgLIzn3dZBl4n3b55VK1wwrLV3ako',
+  PLAYLIST: '/playlists',
   PLAYLIST_ITEMS: '/playlistItems',
-  NBA_ID: 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z'
+  // playlistId
+  NBA_ID: 'PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z', // Ximo Pierto - 2018/19
+  CHAMPIONS_LEAGUE_ID: 'PLubVgegS36EMhMb1j0NZL7Fcwy5jioEcg', // BTSport Channel, Champions League 2018/19
+  EUROPA_LEAGUE_ID: 'PLubVgegS36EMNu3zRwwppiq3HrOjSNveM', // BTSport Channel, Europ League 2018/19 
 };
 
 // Third party data APIs
