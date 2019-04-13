@@ -165,9 +165,11 @@ export function convertEplTeamsToArray(teams) {
 // Methods to create objects from APIs to show in common thumbnails functions
 export function createYoutubeThumnailObjects(videos) {
   const thumbnails = [];
+
   videos.forEach(video => {
-    const imgSrc = (video.snippet.thumbnails) ?
-      video.snippet.thumbnails.default.url : youtubeLogo; 
+    const imgSrc = (video.snippet.thumbnails)
+      ? video.snippet.thumbnails.medium.url
+      : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341450.jpg"; 
     thumbnails.push({
       videoId: video.snippet.resourceId.videoId,
       imgSrc: imgSrc,

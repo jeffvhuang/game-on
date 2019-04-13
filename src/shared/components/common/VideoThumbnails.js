@@ -26,7 +26,7 @@ function VideoThumbnails({ heading, thumbnails, showCount, showMore = false, sho
           return (
             <Col span={5} key={i}>
               <Link key={i} to={paths.VIDEO + '/' + thumbnail.videoId}>
-                <img src={thumbnail.imgSrc} />
+                <img src={thumbnail.imgSrc} className="thumbnail" />
                 <h5>{thumbnail.title}</h5>
               </Link>
             </Col>
