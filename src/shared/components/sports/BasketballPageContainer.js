@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/nba-actions';
-import { createNbaThumnailObjects } from '../../../helpers/utils';
+import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import TeamSelectDropdown from '../common/TeamSelectDropdown';
@@ -187,7 +187,7 @@ class BasketballPageContainer extends React.Component {
         <TeamSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />
         <VideoThumbnails heading="Basketball"
-          thumbnails={createNbaThumnailObjects(this.props.nba.videos)}
+          thumbnails={createYoutubeThumnailObjects(this.props.nba.videos)}
           showCount={4}
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/basketball/nba'} />

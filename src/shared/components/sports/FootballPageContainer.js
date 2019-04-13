@@ -5,13 +5,13 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import {  } from '../../../helpers/utils';
+import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 import { getEplTeams,
   getEplSchedule, 
   getChampionsLeagueVideos, 
   getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
 
-import HighlightsContainer from '../landing/HighlightsContainer';
+import VideoThumbnails from '../common/VideoThumbnails';
 import EplSelectDropdown from './EplSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
 
@@ -76,7 +76,11 @@ class FootballPageContainer extends React.Component {
         <h1>Football: English Premier League</h1>
         <EplSelectDropdown handleChange={this.handleChange}
           teams={this.sortTeamsForDropdown(this.props.epl.teams)} />
-        <HighlightsContainer videos={this.state.videos} />
+        <VideoThumbnails heading="Football"
+          thumbnails={createYoutubeThumnailObjects(this.props.epl.videos)}
+          showCount={4}
+          showMore
+          showMoreLink={paths.HIGHLIGHTS + '/football/epl'} />
         <div className="section">
           <FootballScheduleSection games={this.props.epl.gamesToday}
             header="Today's Games"

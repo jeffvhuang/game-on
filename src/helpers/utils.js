@@ -1,4 +1,5 @@
 import { paths } from './constants';
+import { youtubeLogo } from '../../public/assets/Youtube-logo-2017-640x480.png';
 
 // Sleep function to delay tasks to mock delayed api response
 export function sleep(ms) {
@@ -162,12 +163,14 @@ export function convertEplTeamsToArray(teams) {
 }
 
 // Methods to create objects from APIs to show in common thumbnails functions
-export function createNbaThumnailObjects(videos) {
+export function createYoutubeThumnailObjects(videos) {
   const thumbnails = [];
   videos.forEach(video => {
+    const imgSrc = (video.snippet.thumbnails) ?
+      video.snippet.thumbnails.default.url : youtubeLogo; 
     thumbnails.push({
       videoId: video.snippet.resourceId.videoId,
-      imgSrc: video.snippet.thumbnails.default.url,
+      imgSrc: imgSrc,
       title: video.snippet.title
     });
   });
