@@ -80,7 +80,8 @@ class HighlightsPageContainer extends React.Component {
 HighlightsPageContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
-  nba: state.nba
+  nba: state.nba,
+  epl: state.epl
 });
 
 const mapDispatchToProps = (dispatch) => ({

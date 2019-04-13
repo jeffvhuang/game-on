@@ -1,5 +1,6 @@
 
 import { eplActions as A, championsLeagueActions as C, europaLeagueActions as E } from '../actions/action-types';
+import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState = {
   isFetching: false,
@@ -8,7 +9,8 @@ const initialState = {
   gamesToday: [],
   upcoming: [],
   completed: [],
-  videos: []
+  videos: [],
+  thumbnails: []
 };
 
 function eplReducer(state = initialState, action) {
@@ -37,14 +39,20 @@ function eplReducer(state = initialState, action) {
     case C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, videos: [...state.videos].concat(action.payload) });
+      return Object.assign({}, state, { 
+        isFetching: false, 
+        videos: [...state.videos].concat(action.payload),
+        thumbnails: [...state.thumbnails].concat(createYoutubeThumnailObjects(action.payload)) });
     case C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
     case E.GET_EUROPA_LEAGUE_VIDEOS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case E.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, videos: [...state.videos].concat(action.payload) });
+      return Object.assign({}, state, { 
+        isFetching: false, 
+        videos: [...state.videos].concat(action.payload),
+        thumbnails: [...state.thumbnails].concat(createYoutubeThumnailObjects(action.payload)) });
     case E.GET_EUROPA_LEAGUE_VIDEOS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 

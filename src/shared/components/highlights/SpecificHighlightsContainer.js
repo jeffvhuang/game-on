@@ -3,54 +3,70 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { footballThumbnails } from '../../../helpers/constants';
-import { createNbaThumnailObjects } from '../../../helpers/utils';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
+import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 
 const propTypes = {
   match: object.isRequired,
   actions: object.isRequired,
-  nba: object.isRequired
+  nba: object.isRequired,
+  epl: object.isRequired
 };
 
 class SpecificHighlightsContainer extends React.Component {
   constructor(props) {
     super(props);
-    
-    const { sport } = props.match.params;
-    if (sport.toLowerCase() == 'basketball' && props.nba.videos.length < 1) 
-      props.actions.getNbaVideos();
 
     this.state = {
-      sport: sport.toLowerCase(),
-      thumbnails : this.getThumbnails(sport)
+      sport: props.match.params.sport.toLowerCase()
     };
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    // Populate thumbnails once received in props
-    if (prevState.sport == 'basketball' && prevState.thumbnails.length < 1 && nextProps.nba.videos.length > 0) {
-      return { thumbnails: createNbaThumnailObjects(nextProps.nba.videos) };
-    }
-    return null;
+  componentDidMount() {
+    const videos = this.getVideosArray(this.state.sport);
+    if (videos.length < 1) this.getVideosForSport(this.state.sport);
   }
 
-  getThumbnails = (sport) => {
+  getVideosArray = (sport) => {
+    const obj = this.getReduxObjectForSport(sport);
+    return (obj) ? this.props[obj].videos : [];
+  }
+
+  getVideosForSport = (sport) => {
     switch (sport.toLowerCase()) {
       case 'basketball':
-        return createNbaThumnailObjects(this.props.nba.videos);
+        this.props.actions.getNbaVideos();
+        break;
+      case 'football':
+        this.props.actions.getChampionsLeagueVideos();
+        this.props.actions.getEuropaLeagueVideos();
+        break;
       default:
-        return [];
+        break;
+    }
+  }
+
+  getReduxObjectForSport = (sport) => {
+    switch (sport.toLowerCase()) {
+      case 'basketball':
+        return 'nba';
+      case 'football':
+        return 'epl';
+      default:
+        return '';
     }
   }
 
   render() {
+    const obj = this.getReduxObjectForSport(this.state.sport);
+    const thumbnails = (obj) ? this.props[obj].thumbnails : [];
+
     return (
       <div className="mid-container">
         <VideoThumbnails heading={this.state.sport.toUpperCase()}
-          thumbnails={this.state.thumbnails} />;
+          thumbnails={thumbnails} />;
       </div>
     );
   }
@@ -59,11 +75,15 @@ class SpecificHighlightsContainer extends React.Component {
 SpecificHighlightsContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
-  nba: state.nba
+  nba: state.nba,
+  epl: state.epl
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getNbaVideos }, dispatch)
+  actions: bindActionCreators({
+    getNbaVideos,
+    getChampionsLeagueVideos,
+    getEuropaLeagueVideos }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpecificHighlightsContainer);
