@@ -48,3 +48,9 @@ export const europaLeagueActions = createActionStringObjects([
   'GET_EUROPA_LEAGUE_VIDEOS_SUCCESS',
   'GET_EUROPA_LEAGUE_VIDEOS_FAILURE'
 ]);
+
+export const tennisActions = createActionStringObjects([
+  'GET_TENNIS_SCHEDULE_REQUEST',
+  'GET_TENNIS_SCHEDULE_SUCCESS',
+  'GET_TENNIS_SCHEDULE_FAILURE'
+]);

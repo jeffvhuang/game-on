@@ -71,3 +71,9 @@ export const eplAPI = {
   SCHEDULE: '/fixtures/league' + '/2',
   TEAMS: '/teams/league/2'
 };
+
+export const tennisAPI = {
+  HOST: 'https://api.sportradar.com/tennis-t2/en',
+  SCHEDULE: '/tournaments' + '.json'
+  // TEAMS: '/teams/league/2'
+};

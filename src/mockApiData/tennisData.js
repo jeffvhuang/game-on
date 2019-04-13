@@ -1,3 +1,7 @@
+/**
+ * category.levels for men include: grand_slam, atp_1000, atp_500, atp_250
+ * level fors women include: grand_slam, wta_premier, wta_international
+ */
 export const SCHEDULE = {
   "generated_at": "2019-04-13T16:21:59+00:00",
   "schema": "http://schemas.sportradar.com/bsa/tennis/v1/json/endpoints/tennis/tournaments.json",

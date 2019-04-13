@@ -147,6 +147,30 @@ function sortEplByDate(data) {
   });
 }
 
+export function sortTennisSchedule(data) {
+  const ongoing = [];
+  const upcoming = [];
+  const completed = [];
+  const dateToday = new Date();
+  const now = Date.now();
+
+  console.log(new Date(data[0].current_season.start_date));
+
+  // Separate tournamentsinto past, ongoing and upcoming
+  data.forEach(t => {
+    if (new Date(t.current_season.start_date) > now) upcoming.push(t);
+    else if (new Date(t.current_season.end_date) < now) completed.push(t);
+    else ongoing.push(t);
+  });
+
+  // Sort each one by date
+  // const ongoing = sortEplByDate(ongoing);
+  // const upcoming = sortEplByDate(upcoming);
+  // const past = sortEplByDate(past);
+
+  return { ongoing, upcoming, completed };
+}
+
 /**
  * convert to objects to be used in common dropdown function used across all apis
  * @param {array} teams 
