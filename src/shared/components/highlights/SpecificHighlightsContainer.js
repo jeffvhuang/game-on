@@ -3,10 +3,12 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
 import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
+import WrongUrl from '../errors/WrongUrl';
 
 const propTypes = {
   match: object.isRequired,
@@ -60,6 +62,9 @@ class SpecificHighlightsContainer extends React.Component {
   }
 
   render() {
+    if (!allSportsList.some(s => s.toLowerCase() == this.state.sport.toLowerCase())) 
+      return <WrongUrl />;
+
     const obj = this.getReduxObjectForSport(this.state.sport);
     const thumbnails = (obj) ? this.props[obj].thumbnails : [];
 
