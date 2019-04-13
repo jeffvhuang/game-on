@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 import {  } from '../../../helpers/utils';
-import { getEplTeams, getEplSchedule, getChampionsLeagueVideos } from '../../redux/actions/epl-actions';
+import { getEplTeams,
+  getEplSchedule, 
+  getChampionsLeagueVideos, 
+  getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import EplSelectDropdown from './EplSelectDropdown';
@@ -34,7 +37,10 @@ class FootballPageContainer extends React.Component {
 
   componentDidMount() {
     const props = this.props;
-    if (props.epl.videos.length < 1) props.actions.getChampionsLeagueVideos();
+    if (props.epl.videos.length < 1) {
+      props.actions.getChampionsLeagueVideos();
+      props.actions.getEuropaLeagueVideos();
+    } 
     if (props.epl.teams.length < 1) props.actions.getEplTeams();
     if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
   }
@@ -92,7 +98,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getEplSchedule, getEplTeams, getChampionsLeagueVideos }, dispatch)
+  actions: bindActionCreators({ 
+    getEplSchedule,
+    getEplTeams,
+    getChampionsLeagueVideos, 
+    getEuropaLeagueVideos }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FootballPageContainer);

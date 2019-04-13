@@ -1,12 +1,13 @@
 import axios from 'axios';
 
-import { eplActions as A, championsLeagueActions as C } from './action-types';
+import { eplActions as A, championsLeagueActions as C, europaLeagueActions as E } from './action-types';
 import { youtubeAPI, eplAPI } from '../../../helpers/constants';
 import { sleep, sortEplSchedule } from '../../../helpers/utils';
 
 // Mock data
 import { TEAMS, SCHEDULE } from '../../../mockApiData/rapidEpl';
 import { CL_PLAYLIST } from '../../../mockApiData/champsLeagueYoutube';
+import { EL_PLAYLIST } from '../../../mockApiData/europaLeagueYoutube';
 // import { PLAYLIST } from '../../../mockApiData/EplYoutube';
 
 
@@ -72,6 +73,38 @@ export const getChampionsLeagueVideos = () => {
     dispatch(getChampionsLeagueVideosRequest());
     await sleep(1500);
     return dispatch(getChampionsLeagueVideosSuccess(CL_PLAYLIST.items));
+  };
+};
+
+export const getEuropaLeagueVideosRequest = () => ({ type: E.GET_EUROPA_LEAGUE_VIDEOS_REQUEST });
+export const getEuropaLeagueVideosSuccess = (payload) => ({ type: E.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS, payload });
+export const getEuropaLeagueVideosFailure = (err) => ({ type: E.GET_EUROPA_LEAGUE_VIDEOS_FAILURE, err });
+
+// export const getEuropaLeagueVideos = () => {
+//   return (dispatch) => {
+//     dispatch(getEuropaLeagueVideosRequest());
+//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//       params: {
+//         'part': 'snippet',
+//         'playlistId': youtubeAPI.EUROPA_LEAGUE_ID,
+//         'maxResults': '50',
+//         'key': youtubeAPI.KEY
+//       }
+//     }).then(response => {
+//       dispatch(getEuropaLeagueVideosSuccess(response.data.items));
+//     }).catch(err => {
+//       dispatch(getEuropaLeagueVideosFailure(err));
+//       throw(err);
+//     });
+//   };
+// };
+
+// mock data
+export const getEuropaLeagueVideos = () => {
+  return async (dispatch) => {
+    dispatch(getEuropaLeagueVideosRequest());
+    await sleep(1000);
+    return dispatch(getEuropaLeagueVideosSuccess(EL_PLAYLIST.items));
   };
 };
 

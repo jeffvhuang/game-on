@@ -1,5 +1,5 @@
 
-import { eplActions as A, championsLeagueActions as C } from '../actions/action-types';
+import { eplActions as A, championsLeagueActions as C, europaLeagueActions as E } from '../actions/action-types';
 
 const initialState = {
   isFetching: false,
@@ -37,8 +37,15 @@ function eplReducer(state = initialState, action) {
     case C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, videos: action.payload });
+      return Object.assign({}, state, { isFetching: false, videos: [...state.videos].concat(action.payload) });
     case C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+    
+    case E.GET_EUROPA_LEAGUE_VIDEOS_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case E.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS:
+      return Object.assign({}, state, { isFetching: false, videos: [...state.videos].concat(action.payload) });
+    case E.GET_EUROPA_LEAGUE_VIDEOS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
     // case A.GET_EPL_VIDEOS_REQUEST:
