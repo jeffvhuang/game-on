@@ -2,8 +2,6 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { string, array } from 'prop-types';
 
-import { getFormattedTime } from '../../../helpers/utils';
-
 import EplMatchSchedule from './EplMatchSchedule';
 
 FootballScheduleSection.propTypes = {

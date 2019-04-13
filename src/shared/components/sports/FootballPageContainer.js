@@ -38,9 +38,7 @@ class FootballPageContainer extends React.Component {
     if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
   }
 
-  handleChange = values => {
-    this.setState({ values });
-  }
+  handleChange = values => this.setState({ values });
 
   resetInitialState = () => {
     this.setState({
