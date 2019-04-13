@@ -4,7 +4,7 @@ import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 const initialState = {
   isFetching: false,
   schedule: [],
-  gamesToday: [],
+  ongoing: [],
   upcoming: [],
   completed: [],
   videos: [],

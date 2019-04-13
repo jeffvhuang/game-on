@@ -47,42 +47,55 @@ export const getTennisScheduleRequest = () => ({ type: A.GET_TENNIS_SCHEDULE_REQ
 export const getTennisScheduleSuccess = (payload, schedule) => ({ type: A.GET_TENNIS_SCHEDULE_SUCCESS, payload, schedule });
 export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_FAILURE, err });
 
-export const getTennisSchedule = () => {
-  return (dispatch) => {
-    dispatch(getTennisScheduleRequest());
-    return axios({
-      method: 'get',
-      url: tennisAPI.HOST + tennisAPI.SCHEDULE,
-      headers: {
-        'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
-      }
-    }).then(response => {
-      const today = new Date();
-      const thisYear = today.getFullYear();
-
-      const schedule = response.data.tournaments.filter(t => t.type == 'singles' && 
-        (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' ||
-        t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ) &&
-        t.current_season.year == thisYear);
-
-      const sortedSchedule = sortTennisSchedule(schedule);
-      dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));
-    }).catch(err => {
-      dispatch(getTennisScheduleFailure(err));
-      throw(err);
-    });
-  };
-};
-
-// return mock data
 // export const getTennisSchedule = () => {
-//   return async (dispatch) => {
+//   return (dispatch) => {
 //     dispatch(getTennisScheduleRequest());
-//     await sleep(2000);
-//     const sortedSchedule = sortTennisSchedule(SCHEDULE);
-//     return dispatch(getTennisScheduleSuccess(sortedSchedule, SCHEDULE));
+//     return axios({
+//       method: 'get',
+//       url: tennisAPI.HOST + tennisAPI.SCHEDULE,
+//       params: {
+//         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
+//       }
+//     }).then(response => {
+//       const today = new Date();
+//       const thisYear = today.getFullYear();
+
+//       const schedule = response.data.tournaments.filter(t => t.type == 'singles' && 
+//         (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' ||
+//         t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ) &&
+//         t.current_season.year == thisYear);
+
+//       const sortedSchedule = sortTennisSchedule(schedule);
+//       dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));
+//     }).catch(err => {
+//       dispatch(getTennisScheduleFailure(err));
+//       throw(err);
+//     });
 //   };
 // };
+
+// return mock data
+export const getTennisSchedule = () => {
+  return async (dispatch) => {
+    dispatch(getTennisScheduleRequest());
+    await sleep(2000);
+    const today = new Date();
+    const thisYear = today.getFullYear();
+
+    const schedule = SCHEDULE.tournaments.filter(t => 
+      (
+        (t.type == 'singles' && 
+        (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
+        t.category.level == 'atp_500' || t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ))
+        || 
+        t.type == 'mixed'
+      ) &&
+      t.current_season.year == thisYear);
+
+    const sortedSchedule = sortTennisSchedule(schedule);
+    return dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));
+  };
+};
 
 // Get Teams
 // export const getTennisTeamsRequest = () => ({ type: A.GET_TENNIS_TEAMS_REQUEST });

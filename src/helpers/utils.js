@@ -41,28 +41,6 @@ export function sortEvents(sportsEvents, eSportsEvents) {
   return { ongoing, upcoming, completed };
 }
 
-export function getEPLSchedule(data) {
-  const gamesToday = [];
-  const upcoming = [];
-  const currentDate = new Date();
-  const now = Date.now();
-
-  // Sort each team for games not yet completed
-  for (const property in data) {
-    data[property].games.forEach(game => {
-      const gamesDate = new Date(game.date);
-
-      if (isSameDate(currentDate, gamesDate)) {
-        gamesToday.push(game);
-      } else if (gamesDate.getTime() > now) {
-        upcoming.push(game);
-      }
-    });
-  }
-
-  return { gamesToday, upcoming };
-}
-
 export function getDOTASchedule(data) {
   const ongoing = [];
   const upcoming = [];
@@ -148,27 +126,32 @@ function sortEplByDate(data) {
 }
 
 export function sortTennisSchedule(data) {
-  const ongoing = [];
-  const upcoming = [];
-  const completed = [];
-  const dateToday = new Date();
+  const ongoingTournaments = [];
+  const upcomingTournaments = [];
+  const completedTournaments = [];
   const now = Date.now();
-
-  console.log(new Date(data[0].current_season.start_date));
 
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
-    if (new Date(t.current_season.start_date) > now) upcoming.push(t);
-    else if (new Date(t.current_season.end_date) < now) completed.push(t);
-    else ongoing.push(t);
+    if (new Date(t.current_season.start_date) > now) upcomingTournaments.push(t);
+    else if (new Date(t.current_season.end_date) < now) completedTournaments.push(t);
+    else ongoingTournaments.push(t);
   });
 
   // Sort each one by date
-  // const ongoing = sortEplByDate(ongoing);
-  // const upcoming = sortEplByDate(upcoming);
-  // const past = sortEplByDate(past);
+  const ongoing = sortTennisByDate(ongoingTournaments);
+  const upcoming = sortTennisByDate(upcomingTournaments);
+  const completed = sortTennisByDate(completedTournaments);
 
   return { ongoing, upcoming, completed };
+}
+
+function sortTennisByDate(data) {
+  return data.sort(function(a, b) {
+    const dateA = a.current_season.start_date;
+    const dateB = b.current_season.start_date;
+    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+  });
 }
 
 /**
