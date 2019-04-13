@@ -2258,5 +2258,5 @@ export const CL_PLAYLIST = {
     }
    }
   ]
- }
+ };
  

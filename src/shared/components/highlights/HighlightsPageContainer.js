@@ -3,9 +3,9 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { paths } from '../../../helpers/constants';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
+import { paths, allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
+import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SportSelectDropdown from '../common/SportSelectDropdown';
@@ -21,22 +21,8 @@ class HighlightsPageContainer extends React.Component {
     super(props);
 
     this.state = {
-      basketball: createYoutubeThumnailObjects(props.nba.videos),
-      football: createYoutubeThumnailObjects(props.epl.videos),
       show: this.getCompleteList()
     };
-  }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const nba = nextProps.nba;
-    
-    // Populate schedule once received in props
-    if (prevState.thumbnails.basketball.length < 1 && nba.videos.length > 0 ) {
-      const thumbnails = Object.assign({}, prevState.thumbnails);
-      thumbnails.basketball = createYoutubeThumnailObjects(nextProps.nba.videos);
-      return { thumbnails };
-    }
-    return null;
   }
 
   componentDidMount() {
@@ -52,14 +38,22 @@ class HighlightsPageContainer extends React.Component {
   
   getCompleteList = () => {
     return ['Basketball', 'Football'];
-    // return ["Popular"].concat(sportsList, esportsList);
+    // return ["Popular", ...allSportsList];
   }
 
   handleChange = value => {
-    if (value.length > 0) {
-      this.setState({ show: value });
-    } else {
-      this.setState({ show: this.getCompleteList() });
+    if (value.length > 0) this.setState({ show: value });
+    else this.setState({ show: this.getCompleteList() });
+  }
+
+  getReduxObjectForSport = (sport) => {
+    switch (sport.toLowerCase()) {
+      case 'basketball':
+        return 'nba';
+      case 'football':
+        return 'epl';
+      default:
+        return '';
     }
   }
 
@@ -68,8 +62,9 @@ class HighlightsPageContainer extends React.Component {
       <div className="mid-container">
         <SportSelectDropdown handleChange={this.handleChange} />
         {this.state.show.map(sport => {
-          const sportThumbnails = this.state[sport.toLowerCase()];
-          return <VideoThumbnails key={sport} heading={sport} thumbnails={sportThumbnails}
+          const obj = this.getReduxObjectForSport(sport.toLowerCase());
+          const thumbnails = (obj) ? this.props[obj].thumbnails : [];
+          return <VideoThumbnails key={sport} heading={sport} thumbnails={thumbnails}
             showCount={4} showMore showMoreLink={paths.HIGHLIGHTS + '/' + sport.toLowerCase()} />;
         })}
       </div>
@@ -85,7 +80,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getNbaVideos }, dispatch)
+  actions: bindActionCreators({
+    getNbaVideos,
+    getChampionsLeagueVideos,
+    getEuropaLeagueVideos }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HighlightsPageContainer);

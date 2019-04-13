@@ -1,4 +1,5 @@
 import { nbaActions as A } from '../actions/action-types';
+import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState = {
   isFetching: false,
@@ -7,7 +8,8 @@ const initialState = {
   gamesToday: [],
   upcoming: [],
   completed: [],
-  videos: []
+  videos: [],
+  thumbnails: []
 };
 
 function nbaReducer(state = initialState, action) {
@@ -36,7 +38,10 @@ function nbaReducer(state = initialState, action) {
     case A.GET_NBA_VIDEOS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_NBA_VIDEOS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, videos: action.payload });
+      return Object.assign({}, state, { 
+        isFetching: false,
+        videos: action.payload,
+        thumbnails: createYoutubeThumnailObjects(action.payload) });
     case A.GET_NBA_VIDEOS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 

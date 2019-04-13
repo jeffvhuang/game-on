@@ -1600,5 +1600,5 @@ export const EL_PLAYLIST = {
     }
    }
   ]
- }
+ };
  

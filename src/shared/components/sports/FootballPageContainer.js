@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 import { getEplTeams,
   getEplSchedule, 
   getChampionsLeagueVideos, 
@@ -25,12 +24,6 @@ class FootballPageContainer extends React.Component {
     super(props);
 
     this.state = {
-      videos: [
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video2",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
-      ],
       values: []
     };
   }
@@ -77,7 +70,7 @@ class FootballPageContainer extends React.Component {
         <EplSelectDropdown handleChange={this.handleChange}
           teams={this.sortTeamsForDropdown(this.props.epl.teams)} />
         <VideoThumbnails heading="Football"
-          thumbnails={createYoutubeThumnailObjects(this.props.epl.videos)}
+          thumbnails={this.props.epl.thumbnails}
           showCount={4}
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/football/epl'} />
