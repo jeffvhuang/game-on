@@ -9,7 +9,7 @@ import { getTennisTournamentSchedule } from '../../redux/actions/tennis-actions'
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import TennisSelectDropdown from './TennisSelectDropdown';
-import TennisTournaments from './TennisTournaments';
+import TennisMatches from './TennisMatches';
 
 const propTypes = {
   tennis: object.isRequired,
@@ -64,6 +64,9 @@ class TennisTournamentPageContainer extends React.Component {
   }
 
   render() {
+    const tournament = this.props.tennis.tournamentSchedules.find(t => t.tournament.id == this.state.tournamentId);
+    const matches = (tournament) ? tournament.sport_events : [];
+    
     return (
       <div>
         <div className="section">
@@ -79,10 +82,10 @@ class TennisTournamentPageContainer extends React.Component {
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/Tennis/tennis'} /> */}
         <div className="section">
-          <TennisTournaments games={this.state.schedule}
+          <TennisMatches games={matches}
             header="Matches"
             values={this.state.values} />
-          {/* <TennisTournaments games={this.props.tennis.upcoming}
+          {/* <TennisMatches games={this.props.tennis.upcoming}
             header="Upcoming"
             values={this.state.values} /> */}
           <Link to={paths.EVENTS} className="right">More ></Link>
