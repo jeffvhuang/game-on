@@ -9,7 +9,8 @@ const initialState = {
   completed: [],
   videos: [],
   thumbnails: [],
-  tournamentSchedules: []
+  tournamentSchedules: [],
+  tournamentInfo: []
 };
 
 function tennisReducer(state = initialState, action) {
@@ -31,20 +32,18 @@ function tennisReducer(state = initialState, action) {
     case A.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS:
-      return Object.assign({}, state,
-        { 
-          isFetching: false,
-          tournamentSchedules: [...state.tournamentSchedules, action.payload]
-        });
+      return Object.assign({}, state, 
+        { isFetching: false, tournamentSchedules: [...state.tournamentSchedules, action.payload] });
     case A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
-    // case A.GET_NBA_TEAMS_REQUEST:
-    //   return Object.assign({}, state, { isFetching: true });
-    // case A.GET_NBA_TEAMS_SUCCESS:
-    //   return Object.assign({}, state, { isFetching: false, teams: action.payload });
-    // case A.GET_NBA_TEAMS_FAILURE:
-    //   return Object.assign({}, state, { isFetching: false, error: action.err });
+    case A.GET_TENNIS_TOURNAMENT_INFO_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case A.GET_TENNIS_TOURNAMENT_INFO_SUCCESS:
+      return Object.assign({}, state,
+        { isFetching: false, tournamentInfo: [...state.tournamentInfo, action.payload] });
+    case A.GET_TENNIS_TOURNAMENT_INFO_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
     
     // case A.GET_NBA_VIDEOS_REQUEST:
     //   return Object.assign({}, state, { isFetching: true });

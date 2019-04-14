@@ -5,7 +5,7 @@ import { youtubeAPI, tennisAPI } from '../../../helpers/constants';
 import { sleep, sortTennisSchedule } from '../../../helpers/utils';
 
 // Mock data
-import { SCHEDULE, MONTE_CARLO_SCHEDULE } from '../../../mockApiData/tennisData';
+import { SCHEDULE, MONTE_CARLO_SCHEDULE, TOURNAMENT_INFO } from '../../../mockApiData/tennisData';
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
 
 
@@ -52,7 +52,7 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
 //     dispatch(getTennisScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + tennisAPI.TOURNAMENTS + tennisAPI.FORMAT,
+//       url: tennisAPI.HOST + tennisAPI.TOURNAMENTS,
 //       params: {
 //         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
 //       }
@@ -83,7 +83,7 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
 export const getTennisSchedule = () => {
   return async (dispatch) => {
     dispatch(getTennisScheduleRequest());
-    await sleep(2000);
+    await sleep(1000);
     const today = new Date();
     const thisYear = today.getFullYear();
 
@@ -106,7 +106,7 @@ export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS
 //     dispatch(getTennisTournamentScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + tennisAPI.TOURNAMENTS + '/' + tournamentId + tennisAPI.SCHEDULE + tennisAPI.FORMAT,
+//       url: tennisAPI.HOST + '/tournaments/' + tournamentId + tennisAPI.SCHEDULE,
 //       params: {
 //         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
 //       }
@@ -123,42 +123,41 @@ export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS
 export const getTennisTournamentSchedule = (tournamentId) => {
   return async (dispatch) => {
     dispatch(getTennisTournamentScheduleRequest());
-    await sleep(2000);
+    await sleep(1000);
     dispatch(getTennisTournamentScheduleSuccess(MONTE_CARLO_SCHEDULE));
     return MONTE_CARLO_SCHEDULE;
   };
 };
 
 // Get Teams
-// export const getTennisTeamsRequest = () => ({ type: A.GET_TENNIS_TEAMS_REQUEST });
-// export const getTennisTeamsSuccess = (payload) => ({ type: A.GET_TENNIS_TEAMS_SUCCESS, payload });
-// export const getTennisTeamsFailure = (err) => ({ type: A.GET_TENNIS_TEAMS_FAILURE, err });
+export const getTennisTournamentInfoRequest = () => ({ type: A.GET_TENNIS_TOURNAMENT_INFO_REQUEST });
+export const getTennisTournamentInfoSuccess = (payload) => ({ type: A.GET_TENNIS_TOURNAMENT_INFO_SUCCESS, payload });
+export const getTennisTournamentInfoFailure = (err) => ({ type: A.GET_TENNIS_TOURNAMENT_INFO_FAILURE, err });
 
-// export const getTennisTeams = () => {
+// export const getTennisTournamentInfo = (tournamentId) => {
 //   return (dispatch) => {
-//     dispatch(getTennisTeamsRequest());
+//     dispatch(getTennisTournamentInfoRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + tennisAPI.TEAMS,
-//       headers: {
-//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
+//       url: tennisAPI.HOST + '/tournaments/' + tournamentId + tennisAPI.INFO,
+//       params: {
+//         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
 //       }
 //     }).then(response => {
-//       const TennisTeams = response.data.api.teams.filter(team => team.TennisFranchise == '1');
-//       dispatch(getTennisTeamsSuccess(TennisTeams));
+//       dispatch(getTennisTournamentInfoSuccess(response.data));
+//       return response.data;
 //     }).catch(err => {
-//       dispatch(getTennisTeamsFailure(err));
+//       dispatch(getTennisTournamentInfoFailure(err));
 //       throw(err);
 //     });
 //   };
 // };
 
-// return mock data
-// export const getTennisTeams = () => {
-//   return async (dispatch) => {
-//     dispatch(getTennisTeamsRequest());
-//     await sleep(2000);
-//     const TennisTeams = TEAMS.filter(team => team.TennisFranchise == '1');
-//     return dispatch(getTennisTeamsSuccess(TennisTeams));
-//   };
-// };
+export const getTennisTournamentInfo = (tournamentId) => {
+  return async (dispatch) => {
+    dispatch(getTennisTournamentInfoRequest());
+    await sleep(1000);
+    dispatch(getTennisTournamentInfoSuccess(TOURNAMENT_INFO));
+    return TOURNAMENT_INFO;
+  };
+};

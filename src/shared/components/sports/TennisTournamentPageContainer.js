@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getTennisTournamentSchedule } from '../../redux/actions/tennis-actions';
+import { getTennisTournamentSchedule, getTennisTournamentInfo } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import TennisSelectDropdown from './TennisSelectDropdown';
@@ -23,12 +23,14 @@ class TennisTournamentPageContainer extends React.Component {
 
     const tournamentId = "sr:tournament:" + props.match.params.tournamentNumber;
     const tournament = props.tennis.tournamentSchedules.find(t => t.tournament.id == tournamentId);
+    const tournamentInfo = props.tennis.tournamentInfo.find(t => t.tournament.id == tournamentId);
 
     this.state = {
       tournamentId: tournamentId,
       values: [],
       matches: (tournament) ? tournament.sport_events : [],
-      tournamentName: (tournament) ? tournament.tournament.name : ''
+      tournamentName: (tournament) ? tournament.tournament.name : '',
+      competitors: (tournamentInfo) ? tournamentInfo.competitors : []
     };
   }
 
@@ -39,13 +41,16 @@ class TennisTournamentPageContainer extends React.Component {
     //   props.actions.getChampionsLeagueVideos();
     //   props.actions.getEuropaLeagueVideos();
     // } 
-    // if (props.tennis.teams.length < 1) props.actions.getTennisTeams();
     if (!props.tennis.tournamentSchedules.some(t => t.tournament.id == tournamentId)) 
       props.actions.getTennisTournamentSchedule(tournamentId)
         .then(data => this.setState({ 
           matches: data.sport_events,
           tournamentName: data.tournament.name
         }));
+    
+    if (!props.tennis.tournamentInfo.some(t => t.tournament.id == tournamentId)) 
+      props.actions.getTennisTournamentInfo(tournamentId)
+        .then(data => this.setState({ competitors: data.competitors }));
   }
 
   handleChange = values => this.setState({ values });
@@ -92,7 +97,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({ 
-    getTennisTournamentSchedule }, dispatch)
+    getTennisTournamentSchedule,
+    getTennisTournamentInfo }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);
