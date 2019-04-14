@@ -24,7 +24,7 @@ function FootballScheduleSection({ header, games, values }) {
         games.map((g, i) => <EplMatchSchedule key={i} game={g} />)
       ) : (
         games.map((g, i) => {
-          if (values.some(x => x == g.homeTeam || x == g.awayTeam)) {
+          if (values.some(x => x == g.homeTeam_id || x == g.awayTeam_id)) {
             return <EplMatchSchedule key={i} game={g} />;
           }
         })

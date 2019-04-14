@@ -8,13 +8,23 @@ import { paths } from '../../../helpers/constants';
 import { getTennisSchedule } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
-import TennisSelectDropdown from './TennisSelectDropdown';
+import SelectDropdown from '../common/SelectDropdown';
 import TennisTournaments from './TennisTournaments';
 
 const propTypes = {
   tennis: object.isRequired,
   actions: object.isRequired
 };
+
+const tournamentTypes = [
+  { name: 'Grand Slam', id: 'grand_slam' },
+  { name: 'ATP 1000', id: 'atp_1000' },
+  { name: 'ATP 500', id: 'atp_500' },
+  { name: 'ATP 250', id: 'atp_250' },
+  { name: 'WTA Premier', id: 'wta_premier' },
+  { name: 'WTA International', id: 'wta_international' },
+  { name: 'Mixed', id: 'mixed' }
+];
 
 class TennisPageContainer extends React.Component {
   constructor(props) {
@@ -37,13 +47,6 @@ class TennisPageContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
-  resetInitialState = () => {
-    this.setState({
-      ongoing: this.props.tennis.ongoing,
-      upcoming: this.props.tennis.upcoming 
-    });
-  }
-
   render() {
     return (
       <div>
@@ -53,7 +56,7 @@ class TennisPageContainer extends React.Component {
           </div>
         </div>
         <h1>Tennis</h1>
-        <TennisSelectDropdown handleChange={this.handleChange} />
+        <SelectDropdown handleChange={this.handleChange} options={tournamentTypes} />
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
           showCount={4}

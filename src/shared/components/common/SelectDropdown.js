@@ -4,12 +4,12 @@ import { Select } from 'antd';
 
 const propTypes = {
   handleChange: func.isRequired,
-  teams: array.isRequired
+  options: array.isRequired
 };
 
 const { Option } = Select;
 
-function TeamSelectDropdown({ handleChange, teams }) {
+function SelectDropdown({ handleChange, options }) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -18,14 +18,14 @@ function TeamSelectDropdown({ handleChange, teams }) {
         size="large"
         style={{ width: '80%' }}
         allowClear >
-        {teams.map((team, i) => {
-          return <Option key={i} value={team.shortName}>{team.fullName}</Option>;
+        {options.map((option, i) => {
+          return <Option key={i} value={option.id}>{option.name}</Option>;
         })}
       </Select>
     </div>
   );
 }
 
-TeamSelectDropdown.propTypes = propTypes;
+SelectDropdown.propTypes = propTypes;
 
-export default TeamSelectDropdown;
+export default SelectDropdown;

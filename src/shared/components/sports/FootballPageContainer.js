@@ -40,13 +40,6 @@ class FootballPageContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
-  resetInitialState = () => {
-    this.setState({
-      gamesToday: this.props.epl.gamesToday,
-      upcoming: this.props.epl.upcoming 
-    });
-  }
-
   // Teams will be an object array
   sortTeamsForDropdown = (teams) => {
     return teams.sort(function(a, b) {

@@ -8,7 +8,7 @@ import { paths } from '../../../helpers/constants';
 import { getTennisTournamentSchedule, getTennisTournamentInfo } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
-import TennisSelectDropdown from './TennisSelectDropdown';
+import SelectDropdown from '../common/SelectDropdown';
 import TennisMatches from './TennisMatches';
 
 const propTypes = {
@@ -55,15 +55,7 @@ class TennisTournamentPageContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
-  resetInitialState = () => {
-    this.setState({
-      ongoing: this.props.tennis.ongoing,
-      upcoming: this.props.tennis.upcoming 
-    });
-  }
-
   render() {
-    
     return (
       <div>
         <div className="section">
@@ -72,7 +64,7 @@ class TennisTournamentPageContainer extends React.Component {
           </div>
         </div>
         <h1>{this.state.tournamentName}</h1>
-        {/* <TennisSelectDropdown handleChange={this.handleChange} /> */}
+        <SelectDropdown handleChange={this.handleChange} options={this.state.competitors} />
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
           showCount={4}

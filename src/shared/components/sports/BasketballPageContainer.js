@@ -8,7 +8,7 @@ import { paths } from '../../../helpers/constants';
 import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/nba-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
-import TeamSelectDropdown from '../common/TeamSelectDropdown';
+import NbaSelectDropdown from './NbaSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
 
 const propTypes = {
@@ -34,13 +34,6 @@ class BasketballPageContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
-  resetInitialState = () => {
-    this.setState({
-      gamesToday: this.props.nba.gamesToday,
-      upcoming: this.props.nba.upcoming 
-    });
-  }
-
   render() {
     return (
       <div>
@@ -50,7 +43,7 @@ class BasketballPageContainer extends React.Component {
           </div>
         </div>
         <h1>Basketball</h1>
-        <TeamSelectDropdown handleChange={this.handleChange} 
+        <NbaSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />
         <VideoThumbnails heading="Basketball"
           thumbnails={this.props.nba.thumbnails}

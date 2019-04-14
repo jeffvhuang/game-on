@@ -9,7 +9,7 @@ const propTypes = {
 
 const { Option } = Select;
 
-function EplSelectDropdown({ handleChange, teams }) {
+function NbaSelectDropdown({ handleChange, teams }) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -19,13 +19,13 @@ function EplSelectDropdown({ handleChange, teams }) {
         style={{ width: '80%' }}
         allowClear >
         {teams.map((team, i) => {
-          return <Option key={i} value={team.team_id}>{team.name}</Option>;
+          return <Option key={i} value={team.shortName}>{team.fullName}</Option>;
         })}
       </Select>
     </div>
   );
 }
 
-EplSelectDropdown.propTypes = propTypes;
+NbaSelectDropdown.propTypes = propTypes;
 
-export default EplSelectDropdown;
+export default NbaSelectDropdown;
