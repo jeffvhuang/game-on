@@ -69,6 +69,9 @@ class TennisPageContainer extends React.Component {
           <TennisTournaments games={this.props.tennis.upcoming}
             header="Upcoming"
             values={this.state.values} />
+          <TennisTournaments games={this.props.tennis.completed}
+            header="Completed"
+            values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
