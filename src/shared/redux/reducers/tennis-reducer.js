@@ -8,7 +8,8 @@ const initialState = {
   upcoming: [],
   completed: [],
   videos: [],
-  thumbnails: []
+  thumbnails: [],
+  tournamentSchedules: []
 };
 
 function tennisReducer(state = initialState, action) {
@@ -25,6 +26,17 @@ function tennisReducer(state = initialState, action) {
           completed: action.payload.completed
         });
     case A.GET_TENNIS_SCHEDULE_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+
+    case A.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case A.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS:
+      return Object.assign({}, state,
+        { 
+          isFetching: false,
+          tournamentShedules: [...state.tournamentSchedules, action.payload]
+        });
+    case A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
     // case A.GET_NBA_TEAMS_REQUEST:

@@ -5,7 +5,7 @@ import { youtubeAPI, tennisAPI } from '../../../helpers/constants';
 import { sleep, sortTennisSchedule } from '../../../helpers/utils';
 
 // Mock data
-import { SCHEDULE } from '../../../mockApiData/tennisData';
+import { SCHEDULE, MONTE_CARLO_SCHEDULE } from '../../../mockApiData/tennisData';
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
 
 
@@ -93,6 +93,51 @@ export const getTennisSchedule = () => {
 
     const sortedSchedule = sortTennisSchedule(schedule);
     return dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));
+  };
+};
+
+// Get Tournament schedule
+export const getTennisTournamentScheduleRequest = () => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST });
+export const getTennisTournamentScheduleSuccess = (payload) => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS, payload });
+export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE, err });
+
+// export const getTennisTournamentSchedule = () => {
+//   return (dispatch) => {
+//     dispatch(getTennisTournamentScheduleRequest());
+//     return axios({
+//       method: 'get',
+//       url: tennisAPI.HOST + tennisAPI.SCHEDULE,
+//       params: {
+//         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
+//       }
+//     }).then(response => {
+//       const today = new Date();
+//       const thisYear = today.getFullYear();
+
+      // const schedule = SCHEDULE.tournaments.filter(t => 
+      //   (
+      //     (t.type == 'singles' && 
+      //     (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
+      //     t.category.level == 'atp_500' || t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ))
+      //     || 
+      //     t.type == 'mixed'
+      //   ) &&
+      //   t.current_season.year == thisYear);
+
+//       const sortedSchedule = sortTennisSchedule(schedule);
+//       dispatch(getTennisTournamentScheduleSuccess(sortedSchedule, schedule));
+//     }).catch(err => {
+//       dispatch(getTennisTournamentScheduleFailure(err));
+//       throw(err);
+//     });
+//   };
+// };
+
+export const getTennisTournamentSchedule = () => {
+  return async (dispatch) => {
+    dispatch(getTennisTournamentScheduleRequest());
+    await sleep(2000);
+    return dispatch(getTennisTournamentScheduleSuccess(MONTE_CARLO_SCHEDULE));
   };
 };
 
