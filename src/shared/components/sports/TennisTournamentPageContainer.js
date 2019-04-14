@@ -27,19 +27,8 @@ class TennisTournamentPageContainer extends React.Component {
     this.state = {
       tournamentId: tournamentId,
       values: [],
-      schedule: (tournament) ? tournament.sport_events : []
+      matches: (tournament) ? tournament.sport_events : []
     };
-  }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(prevState.schedule);
-    if (prevState.schedule.length < 0) {
-      console.log('en');
-      const tournament = nextProps.tennis.tournamentSchedules.find(t => t.tournament.id == prevState.tournamentId);
-      console.log(tournament);
-      if (tournament) return { schedule: tournament.sport_events };
-    } 
-    return null;
   }
 
   componentDidMount() {
@@ -51,7 +40,8 @@ class TennisTournamentPageContainer extends React.Component {
     // } 
     // if (props.tennis.teams.length < 1) props.actions.getTennisTeams();
     if (!props.tennis.tournamentSchedules.some(t => t.tournament.id == tournamentId)) 
-      props.actions.getTennisTournamentSchedule(tournamentId);
+      props.actions.getTennisTournamentSchedule(tournamentId)
+        .then(data => this.setState({ matches: data }));
   }
 
   handleChange = values => this.setState({ values });
@@ -64,8 +54,6 @@ class TennisTournamentPageContainer extends React.Component {
   }
 
   render() {
-    const tournament = this.props.tennis.tournamentSchedules.find(t => t.tournament.id == this.state.tournamentId);
-    const matches = (tournament) ? tournament.sport_events : [];
     
     return (
       <div>
@@ -74,7 +62,7 @@ class TennisTournamentPageContainer extends React.Component {
             <video controls width="600" height="400" />
           </div>
         </div>
-        <h1>Tennis</h1>
+        <h1>Matches</h1>
         {/* <TennisSelectDropdown handleChange={this.handleChange} /> */}
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
@@ -82,7 +70,7 @@ class TennisTournamentPageContainer extends React.Component {
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/Tennis/tennis'} /> */}
         <div className="section">
-          <TennisMatches games={matches}
+          <TennisMatches games={this.state.matches}
             header="Matches"
             values={this.state.values} />
           {/* <TennisMatches games={this.props.tennis.upcoming}

@@ -60,7 +60,7 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
 //       const today = new Date();
 //       const thisYear = today.getFullYear();
 
-      // const schedule = SCHEDULE.tournaments.filter(t => 
+      // const schedule = response.data.tournaments.filter(t => 
       //   (
       //     (t.type == 'singles' && 
       //     (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
@@ -111,7 +111,8 @@ export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS
 //         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
 //       }
 //     }).then(response => {
-//       dispatch(getTennisTournamentScheduleSuccess(sortedSchedule, schedule));
+//       dispatch(getTennisTournamentScheduleSuccess(response.data));
+//       return response.data.sport_events;
 //     }).catch(err => {
 //       dispatch(getTennisTournamentScheduleFailure(err));
 //       throw(err);
@@ -123,7 +124,8 @@ export const getTennisTournamentSchedule = (tournamentId) => {
   return async (dispatch) => {
     dispatch(getTennisTournamentScheduleRequest());
     await sleep(2000);
-    return dispatch(getTennisTournamentScheduleSuccess(MONTE_CARLO_SCHEDULE));
+    dispatch(getTennisTournamentScheduleSuccess(MONTE_CARLO_SCHEDULE));
+    return MONTE_CARLO_SCHEDULE.sport_events;
   };
 };
 

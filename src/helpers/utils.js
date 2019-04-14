@@ -1,4 +1,4 @@
-import { paths } from './constants';
+import { paths, days, months } from './constants';
 import { youtubeLogo } from '../../public/assets/Youtube-logo-2017-640x480.png';
 
 // Sleep function to delay tasks to mock delayed api response
@@ -212,4 +212,21 @@ export function createActionStringObjects(actions) {
   const actionObj = {};
   actions.forEach(action => actionObj[action] = action);
   return actionObj;
+}
+
+// Date = Date object
+export function getDayMonthDate(date) {
+  // return if it is not a valid date string or object
+  if (!isValidDate) return null;
+
+  // Convert to date if it isn't a date object
+  if (date instanceof Date) return days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate();
+  else {
+    const dateObj = new Date(date);
+    return days[dateObj.getDay()] + ' ' + months[dateObj.getMonth()] + ' ' + dateObj.getDate();
+  }
+}
+
+export function isValidDate(date) {
+  return date && Object.prototype.toString.call(date) === "[object Date]" && !isNaN(date);
 }
