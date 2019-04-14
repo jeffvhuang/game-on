@@ -17,7 +17,7 @@ function TennisTournaments({ header, games, values }) {
         games.map((g, i) => <TennisTournamentDate key={i} tournament={g} />)
       ) : (
         games.map((g, i) => {
-          if (values.some(x => x == g.homeTeam || x == g.awayTeam)) {
+          if (values.some(v => v == g.category.level || v == g.type)) {
             return <TennisTournamentDate key={i} tournament={g} />;
           }
         })

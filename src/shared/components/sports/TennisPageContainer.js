@@ -3,12 +3,13 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import { Select } from 'antd';
 
 import { paths } from '../../../helpers/constants';
 import { getTennisSchedule } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
-// import TennisSelectDropdown from './TennisSelectDropdown';
+import TennisSelectDropdown from './TennisSelectDropdown';
 import TennisTournaments from './TennisTournaments';
 
 const propTypes = {
@@ -53,9 +54,8 @@ class TennisPageContainer extends React.Component {
           </div>
         </div>
         <h1>Tennis</h1>
-        {/* <TennisSelectDropdown handleChange={this.handleChange}
-          teams={this.sortTeamsForDropdown(this.props.tennis.teams)} />
-        <VideoThumbnails heading="Tennis"
+        <TennisSelectDropdown handleChange={this.handleChange} />
+        {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
           showCount={4}
           showMore
