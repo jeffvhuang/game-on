@@ -1,3 +1,9 @@
+/**
+ * 
+ * Specific app related constants section
+ * 
+ */
+
 export const appName = 'Game On';
 
 export const paths = {
@@ -77,3 +83,12 @@ export const tennisAPI = {
   SCHEDULE: '/tournaments' + '.json'
   // TEAMS: '/teams/league/2'
 };
+
+
+/**
+ * 
+ * General helper constants
+ * 
+ */
+export const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];

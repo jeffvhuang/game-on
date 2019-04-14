@@ -60,10 +60,15 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
 //       const today = new Date();
 //       const thisYear = today.getFullYear();
 
-//       const schedule = response.data.tournaments.filter(t => t.type == 'singles' && 
-//         (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' ||
-//         t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ) &&
-//         t.current_season.year == thisYear);
+      // const schedule = SCHEDULE.tournaments.filter(t => 
+      //   (
+      //     (t.type == 'singles' && 
+      //     (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
+      //     t.category.level == 'atp_500' || t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ))
+      //     || 
+      //     t.type == 'mixed'
+      //   ) &&
+      //   t.current_season.year == thisYear);
 
 //       const sortedSchedule = sortTennisSchedule(schedule);
 //       dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));

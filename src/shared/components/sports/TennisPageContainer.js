@@ -9,7 +9,7 @@ import { getTennisSchedule } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 // import TennisSelectDropdown from './TennisSelectDropdown';
-// import TennisScheduleSection from './TennisScheduleSection';
+import TennisTournaments from './TennisTournaments';
 
 const propTypes = {
   tennis: object.isRequired,
@@ -61,12 +61,12 @@ class TennisPageContainer extends React.Component {
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/Tennis/tennis'} /> */}
         <div className="section">
-          {/* <TennisScheduleSection games={this.props.tennis.ongoing}
+          <TennisTournaments games={this.props.tennis.ongoing}
             header="Ongoing"
             values={this.state.values} />
-          <TennisScheduleSection games={this.props.tennis.upcoming}
+          <TennisTournaments games={this.props.tennis.upcoming}
             header="Upcoming"
-            values={this.state.values} /> */}
+            values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
