@@ -112,7 +112,7 @@ export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS
 //       }
 //     }).then(response => {
 //       dispatch(getTennisTournamentScheduleSuccess(response.data));
-//       return response.data.sport_events;
+//       return response.data;
 //     }).catch(err => {
 //       dispatch(getTennisTournamentScheduleFailure(err));
 //       throw(err);
@@ -125,7 +125,7 @@ export const getTennisTournamentSchedule = (tournamentId) => {
     dispatch(getTennisTournamentScheduleRequest());
     await sleep(2000);
     dispatch(getTennisTournamentScheduleSuccess(MONTE_CARLO_SCHEDULE));
-    return MONTE_CARLO_SCHEDULE.sport_events;
+    return MONTE_CARLO_SCHEDULE;
   };
 };
 

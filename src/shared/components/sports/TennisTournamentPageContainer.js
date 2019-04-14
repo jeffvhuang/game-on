@@ -27,7 +27,8 @@ class TennisTournamentPageContainer extends React.Component {
     this.state = {
       tournamentId: tournamentId,
       values: [],
-      matches: (tournament) ? tournament.sport_events : []
+      matches: (tournament) ? tournament.sport_events : [],
+      tournamentName: (tournament) ? tournament.tournament.name : ''
     };
   }
 
@@ -41,7 +42,10 @@ class TennisTournamentPageContainer extends React.Component {
     // if (props.tennis.teams.length < 1) props.actions.getTennisTeams();
     if (!props.tennis.tournamentSchedules.some(t => t.tournament.id == tournamentId)) 
       props.actions.getTennisTournamentSchedule(tournamentId)
-        .then(data => this.setState({ matches: data }));
+        .then(data => this.setState({ 
+          matches: data.sport_events,
+          tournamentName: data.tournament.name
+        }));
   }
 
   handleChange = values => this.setState({ values });
@@ -62,7 +66,7 @@ class TennisTournamentPageContainer extends React.Component {
             <video controls width="600" height="400" />
           </div>
         </div>
-        <h1>Matches</h1>
+        <h1>{this.state.tournamentName}</h1>
         {/* <TennisSelectDropdown handleChange={this.handleChange} /> */}
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
@@ -73,9 +77,6 @@ class TennisTournamentPageContainer extends React.Component {
           <TennisMatches games={this.state.matches}
             header="Matches"
             values={this.state.values} />
-          {/* <TennisMatches games={this.props.tennis.upcoming}
-            header="Upcoming"
-            values={this.state.values} /> */}
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
