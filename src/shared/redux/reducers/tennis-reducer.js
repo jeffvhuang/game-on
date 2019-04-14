@@ -34,7 +34,7 @@ function tennisReducer(state = initialState, action) {
       return Object.assign({}, state,
         { 
           isFetching: false,
-          tournamentShedules: [...state.tournamentSchedules, action.payload]
+          tournamentSchedules: [...state.tournamentSchedules, action.payload]
         });
     case A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });

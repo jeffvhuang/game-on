@@ -80,7 +80,9 @@ export const eplAPI = {
 
 export const tennisAPI = {
   HOST: 'https://api.sportradar.com/tennis-t2/en',
-  SCHEDULE: '/tournaments' + '.json'
+  TOURNAMENTS: '/tournaments',
+  SCHEDULE: '/schedule',
+  FORMAT: '.json'
   // TEAMS: '/teams/league/2'
 };
 

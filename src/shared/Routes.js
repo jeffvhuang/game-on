@@ -8,6 +8,7 @@ import SpecificHighlightsContainer from './components/highlights/SpecificHighlig
 import BasketballPageContainer from './components/sports/BasketballPageContainer';
 import FootballPageContainer from './components/sports/FootballPageContainer';
 import TennisPageContainer from './components/sports/TennisPageContainer';
+import TennisTournamentPageContainer from './components/sports/TennisTournamentPageContainer';
 import ESportsPageContainer from './components/esports/ESportsPageContainer';
 import DotaPageContainer from './components/esports/DotaPageContainer';
 import EventsPageContainer from './components/events/EventsPageContainer';
@@ -23,6 +24,7 @@ export default class Routes extends React.Component {
         <Route path={paths.HIGHLIGHTS} component={HighlightsPageContainer} />
         <Route path={paths.SPORTS + '/basketball'} component={BasketballPageContainer} />
         <Route path={paths.SPORTS + '/football'} component={FootballPageContainer} />
+        <Route path={paths.SPORTS + '/tennis/:tournamentNumber'} component={TennisTournamentPageContainer} />
         <Route path={paths.SPORTS + '/tennis'} component={TennisPageContainer} />
         <Route path={paths.ESPORTS + '/dota'} component={DotaPageContainer} />
         <Route path={paths.ESPORTS + '/:esport'} component={ESportsPageContainer} />

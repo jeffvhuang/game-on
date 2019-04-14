@@ -52,7 +52,7 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
 //     dispatch(getTennisScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + tennisAPI.SCHEDULE,
+//       url: tennisAPI.HOST + tennisAPI.TOURNAMENTS + tennisAPI.FORMAT,
 //       params: {
 //         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
 //       }
@@ -101,30 +101,16 @@ export const getTennisTournamentScheduleRequest = () => ({ type: A.GET_TENNIS_TO
 export const getTennisTournamentScheduleSuccess = (payload) => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS, payload });
 export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE, err });
 
-// export const getTennisTournamentSchedule = () => {
+// export const getTennisTournamentSchedule = (tournamentId) => {
 //   return (dispatch) => {
 //     dispatch(getTennisTournamentScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + tennisAPI.SCHEDULE,
+//       url: tennisAPI.HOST + tennisAPI.TOURNAMENTS + '/' + tournamentId + tennisAPI.SCHEDULE + tennisAPI.FORMAT,
 //       params: {
 //         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
 //       }
 //     }).then(response => {
-//       const today = new Date();
-//       const thisYear = today.getFullYear();
-
-      // const schedule = SCHEDULE.tournaments.filter(t => 
-      //   (
-      //     (t.type == 'singles' && 
-      //     (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
-      //     t.category.level == 'atp_500' || t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ))
-      //     || 
-      //     t.type == 'mixed'
-      //   ) &&
-      //   t.current_season.year == thisYear);
-
-//       const sortedSchedule = sortTennisSchedule(schedule);
 //       dispatch(getTennisTournamentScheduleSuccess(sortedSchedule, schedule));
 //     }).catch(err => {
 //       dispatch(getTennisTournamentScheduleFailure(err));
@@ -133,7 +119,7 @@ export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS
 //   };
 // };
 
-export const getTennisTournamentSchedule = () => {
+export const getTennisTournamentSchedule = (tournamentId) => {
   return async (dispatch) => {
     dispatch(getTennisTournamentScheduleRequest());
     await sleep(2000);
