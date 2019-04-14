@@ -5,22 +5,23 @@ import { object } from 'prop-types';
 import { getDayMonthDate } from '../../../helpers/utils';
 
 TennisMatchup.propTypes = {
-  game: object.isRequired
+  match: object.isRequired
 };
 
-function TennisMatchup({ game }) {
+function TennisMatchup({ match }) {
+  const player1 = match.competitors[0];
+  const player2 = match.competitors[1];
+
   return (
     <Row>
-      <Col span={4} className="capitalise">{game.tournament_round.name.replace(/_/g, ' ')}</Col>
-      <Col span={6}>
-        {game.competitors[0].name} {(game.competitors[0].seed) && '[' + game.competitors[0].seed + ']'}
-      </Col>
-      <Col span={2}>vs</Col>
-      <Col span={6}>
-        {game.competitors[1].name} {(game.competitors[1].seed) && '[' + game.competitors[1].seed + ']'}
-      </Col>
-      <Col span={3}>{getDayMonthDate(game.scheduled)}</Col>
-      <Col span={3} className="capitalise">{game.status.replace(/_/g, ' ')}</Col>
+      <Col span={3} className="capitalise">{match.tournament_round.name.replace(/_/g, ' ')}</Col>
+      <Col span={1}>{player1.country_code}</Col>
+      <Col span={6}>{player1.name} {(player1.seed) && '[' + player1.seed + ']'}</Col>
+      <Col span={1}>vs</Col>
+      <Col span={1}>{player2.country_code}</Col>
+      <Col span={6}>{player2.name} {(player2.seed) && '[' + player2.seed + ']'}</Col>
+      <Col span={3}>{getDayMonthDate(match.scheduled)}</Col>
+      <Col span={3} className="capitalise">{match.status.replace(/_/g, ' ')}</Col>
     </Row>
   );
 }
