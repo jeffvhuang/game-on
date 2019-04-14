@@ -88,13 +88,7 @@ export const getTennisSchedule = () => {
     const thisYear = today.getFullYear();
 
     const schedule = SCHEDULE.tournaments.filter(t => 
-      (
-        (t.type == 'singles' && 
-        (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
-        t.category.level == 'atp_500' || t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ))
-        || 
-        t.type == 'mixed'
-      ) &&
+      ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
       t.current_season.year == thisYear);
 
     const sortedSchedule = sortTennisSchedule(schedule);
