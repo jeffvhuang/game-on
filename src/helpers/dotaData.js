@@ -1,14 +1,5 @@
 import { esports } from './constants';
 
-// Third party APIs
-export const dotaAPI = {
-  HOST: 'https://api.opendota.com/api',
-  LEAGUES: '/leagues',
-  TEAMS: '/teams',
-  MATCHES: '/matches',
-  PRO_MATCHES: '/proMatches'
-};
-
 // General
 const nip = "Ninjas In Pyjamas";
 const secret = "Team Secret"; // team_id: 1838315, last_match_time: 1553088902

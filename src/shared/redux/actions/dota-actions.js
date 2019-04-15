@@ -1,9 +1,13 @@
 import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
+import { dotaAPI, youtubeAPI } from '../../../helpers/constants';
+import { sleep } from '../../../helpers/utils';
+
 // Temporary seed data
-import { dotaTournaments, dotaAPI } from '../../../helpers/dotaData';
+import { dotaTournaments } from '../../../helpers/dotaData';
 import { PRO_MATCHES, LEAGUES } from '../../../mockApiData/openDota';
+import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
 
 // OpenDota API requests
 // Get data
@@ -12,6 +16,39 @@ export const getDotaDataSuccess = (payload) => ({ type: A.GET_DOTA_DATA, payload
 export const getDotaData = () => {
   return (dispatch) => {
     return dispatch(getDotaDataSuccess(dotaTournaments));
+  };
+};
+
+// Get highlights from youtube
+export const getDotaVideosRequest = () => ({ type: A.GET_DOTA_VIDEOS_REQUEST });
+export const getDotaVideosSuccess = (payload) => ({ type: A.GET_DOTA_VIDEOS_SUCCESS, payload });
+export const getDotaVideosFailure = (err) => ({ type: A.GET_DOTA_VIDEOS_FAILURE, err });
+
+// export const getDotaVideos = () => {
+//   return (dispatch) => {
+//     dispatch(getDotaVideosRequest());
+//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//       params: {
+//         'part': 'snippet',
+//         'playlistId': youtubeAPI.DOTA_ID,
+//         'maxResults': '25',
+//         'key': youtubeAPI.KEY
+//       }
+//     }).then(response => {
+//       dispatch(getDotaVideosSuccess(response.data.items));
+//     }).catch(err => {
+//       dispatch(getDotaVideosFailure(err));
+//       throw(err);
+//     });
+//   };
+// };
+
+// mock data
+export const getDotaVideos = () => {
+  return async (dispatch) => {
+    dispatch(getDotaVideosRequest());
+    await sleep(1000);
+    return dispatch(getDotaVideosSuccess(PLAYLIST.items));
   };
 };
 
