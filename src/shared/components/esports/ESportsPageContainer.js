@@ -5,10 +5,9 @@ import { bindActionCreators } from 'redux';
 
 import HighlightsContainer from '../landing/HighlightsContainer';
 import EventSelectDropdown from '../common/EventSelectDropdown';
-import { dotaTournaments } from '../../../helpers/dotaData';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
-import { getDotaData, getDotaLeagues } from '../../redux/actions/dota-actions';
+import { getDotaLeagues } from '../../redux/actions/dota-actions';
 
 const propTypes = {
   match: object,
@@ -19,9 +18,6 @@ const propTypes = {
 class ESportsPageContainer extends React.Component {
   constructor(props) {
     super(props);
-
-    // if (props.dota.data.length < 1) props.actions.getDotaData();
-    // if (props.dota.props.actions.getDotaLeagues();
 
     this.state = {
       videos: [
@@ -139,10 +135,6 @@ class ESportsPageContainer extends React.Component {
     };
   };
 
-  getTournamentNames = () => {
-    return dotaTournaments.map(tournament => tournament.name);
-  }
-
   render() {
     return (
       <div>
@@ -152,8 +144,8 @@ class ESportsPageContainer extends React.Component {
           </div>
         </div>
         <h1>{this.props.match.params.esport}</h1>
-        <EventSelectDropdown handleChange={this.handleChange} 
-          events={this.getTournamentNames()} />
+        {/* <EventSelectDropdown handleChange={this.handleChange} 
+          events={this.getTournamentNames()} /> */}
         <HighlightsContainer videos={this.state.videos} />
         <EventDatesSection ongoing={this.state.ongoing}
           upcoming={this.state.upcoming}
@@ -170,7 +162,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getDotaData, getDotaLeagues }, dispatch)
+  actions: bindActionCreators({ getDotaLeagues }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ESportsPageContainer);

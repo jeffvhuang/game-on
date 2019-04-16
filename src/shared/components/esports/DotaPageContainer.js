@@ -3,7 +3,6 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { dotaTournaments } from '../../../helpers/dotaData';
 import { paths } from '../../../helpers/constants';
 import { getDOTASchedule } from '../../../helpers/utils';
 import { getDotaVideos, getDotaLeagues, getDotaProMatches, getDotaTeams } from '../../redux/actions/dota-actions';
@@ -139,10 +138,6 @@ class DotaPageContainer extends React.Component {
     };
   };
 
-  getTournamentNames = () => {
-    return dotaTournaments.map(tournament => tournament.name);
-  }
-
   getMatchesForLeague = (proMatches) => {
     const leagueMatches = proMatches.filter(match => match.league_name == "DreamLeague Season 11");
     return leagueMatches;
@@ -157,8 +152,8 @@ class DotaPageContainer extends React.Component {
           </div>
         </div>
         <h1>Dota 2</h1>
-        <EventSelectDropdown handleChange={this.handleChange}
-          events={this.getTournamentNames()} />
+        {/* <EventSelectDropdown handleChange={this.handleChange}
+          events={this.getTournamentNames()} /> */}
         <VideoThumbnails heading="Dota 2 Videos"
           thumbnails={this.props.dota.thumbnails}
           showCount={4}

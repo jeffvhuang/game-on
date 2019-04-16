@@ -5,19 +5,8 @@ import { dotaAPI, youtubeAPI } from '../../../helpers/constants';
 import { sleep } from '../../../helpers/utils';
 
 // Temporary seed data
-import { dotaTournaments } from '../../../helpers/dotaData';
 import { PRO_MATCHES, LEAGUES } from '../../../mockApiData/openDota';
 import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
-
-// OpenDota API requests
-// Get data
-export const getDotaDataSuccess = (payload) => ({ type: A.GET_DOTA_DATA, payload });
-
-export const getDotaData = () => {
-  return (dispatch) => {
-    return dispatch(getDotaDataSuccess(dotaTournaments));
-  };
-};
 
 // Get highlights from youtube
 export const getDotaVideosRequest = () => ({ type: A.GET_DOTA_VIDEOS_REQUEST });
@@ -52,6 +41,8 @@ export const getDotaVideos = () => {
   };
 };
 
+
+// OpenDota API requests
 // Get Leagues
 export const getDotaLeaguesRequest = () => ({ type: A.GET_DOTA_LEAGUES_REQUEST });
 export const getDotaLeaguesSuccess = (payload) => ({ type: A.GET_DOTA_LEAGUES_SUCCESS, payload });
