@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-import { appName, paths, sports, esports } from '../../../helpers/constants';
+import { appName, paths, sports, esportsTitles } from '../../../helpers/constants';
 import { Link } from 'react-router-dom';
 
 export default class NavBarContainer extends React.Component {
@@ -36,16 +36,16 @@ export default class NavBarContainer extends React.Component {
         </Menu.SubMenu>
         <Menu.SubMenu title="E-Sports">
           <Menu.Item key="dota">
-            <Link to={paths.ESPORTS + paths.DOTA}>{esports.DOTA}</Link>
+            <Link to={paths.ESPORTS + paths.DOTA}>{esportsTitles.DOTA}</Link>
           </Menu.Item>
           <Menu.Item key="lol">
-            <Link to={paths.ESPORTS + paths.LOL}>{esports.LEAGUE}</Link>
+            <Link to={paths.ESPORTS + paths.LOL}>{esportsTitles.LEAGUE}</Link>
           </Menu.Item>
           <Menu.Item key="csgo">
-            <Link to={paths.ESPORTS + paths.CSGO}>{esports.CSGO}</Link>
+            <Link to={paths.ESPORTS + paths.CSGO}>{esportsTitles.CSGO}</Link>
           </Menu.Item>
           <Menu.Item key="overwatch">
-            <Link to={paths.ESPORTS + paths.OVERWATCH}>{esports.OVERWATCH}</Link>
+            <Link to={paths.ESPORTS + paths.OVERWATCH}>{esportsTitles.OVERWATCH}</Link>
           </Menu.Item>
         </Menu.SubMenu>
         <Menu.Item key="events">

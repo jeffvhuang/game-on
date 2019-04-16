@@ -30,19 +30,6 @@ class DotaPageContainer extends React.Component {
     };
   }
 
-  // static getDerivedStateFromProps(nextProps, prevState) {
-  //   if (!prevState.schedule.hasOwnProperty('upcoming') && nextProps.dota.data.length > 0) {
-  //     const schedule = getDOTASchedule(nextProps.dota.data);
-  //     return {
-  //       schedule: schedule,
-  //       ongoing: schedule.ongoing,
-  //       upcoming: schedule.upcoming,
-  //       completed: schedule.completed
-  //     };
-  //   }
-  //   return null;
-  // }
-
   componentDidMount() {
     const props = this.props;
     if (props.dota.videos.length < 1) props.actions.getDotaVideos();
@@ -51,92 +38,8 @@ class DotaPageContainer extends React.Component {
   }
 
   handleChange = values => {
-    const length = values.length;
-    // Set state arrays depending on whether value has been selected or removed
-    if (length == 0) { // All removed
-      this.resetInitialState();
-    } else {
-      this.setState(prevState => {
-        if (length > prevState.selected.length) {
-          return this.handleAddedSelect(values, prevState);
-        } else {
-          return this.handleRemovedSelect(values, prevState);
-        }
-      });
-    }
+
   }
-
-  resetInitialState = () => {
-    const { schedule } = this.state;
-    this.setState({
-      selected: [],
-      ongoing: schedule.ongoing,
-      upcoming: schedule.upcoming,
-      completed: schedule.completed
-    });
-  }
-
-  handleAddedSelect = (values, prevState) => {
-    const selected = values[values.length - 1];
-    const { schedule } = this.state;
-
-    const ongoingForSelected = schedule.ongoing.filter(
-      event => event.name == selected
-    );
-    const upcomingForSelected = schedule.upcoming.filter(
-      event => event.name == selected
-    );
-    const completedForSelected = schedule.completed.filter(
-      event => event.name == selected
-    );
-
-    // If only one has been selected, the previous data was all the data,
-    // so replace instead of add on.
-    if (values.length == 1) {
-      return {
-        selected: values,
-        ongoing: ongoingForSelected,
-        upcoming: upcomingForSelected,
-        completed: completedForSelected
-      };
-    } else {
-      return {
-        selected: values,
-        ongoing: prevState.ongoing.concat(ongoingForSelected),
-        upcoming: prevState.upcoming.concat(upcomingForSelected),
-        completed: prevState.completed.concat(completedForSelected)
-      };
-    }
-  };
-
-  handleRemovedSelect = (values, prevState) => {
-    const previousValues = prevState.selected;
-    let selected;
-    // Find the removed sport
-    for (let i = 0; i < previousValues.length; i++) {
-      if (!values.includes(previousValues[i])) {
-        selected = previousValues[i];
-        break;
-      }
-    }
-
-    const filteredOngoing = this.state.ongoing.filter(
-      event => event.name != selected
-    );
-    const filteredUpcoming = this.state.upcoming.filter(
-      event => event.sport != selected
-    );
-    const filteredCompleted = this.state.completed.filter(
-      event => event.sport != selected
-    );
-
-    return {
-      selected: values,
-      ongoing: filteredOngoing,
-      upcoming: filteredUpcoming,
-      completed: filteredCompleted
-    };
-  };
 
   getMatchesForLeague = (proMatches) => {
     const leagueMatches = proMatches.filter(match => match.league_name == "DreamLeague Season 11");

@@ -7,40 +7,6 @@ export function sleep(ms) {
 }
 
 // Sorting functions
-export function sortEvents(sportsEvents, eSportsEvents) {
-  const ongoing = [];
-  const upcoming = [];
-  const completed = [];
-  const now = Date.now();
-
-  // Check start - end dates and place into one of the above arrays
-  for (const property in sportsEvents) {
-    sportsEvents[property].forEach(event => {
-      if (new Date(event.startDate).getTime() > now) {
-        upcoming.push(event);
-      } else if (new Date(event.endDate).getTime() < now) {
-        completed.push(event);
-      } else {
-        ongoing.push(event);
-      }
-    });
-  }
-
-  for (const property in eSportsEvents) {
-    eSportsEvents[property].forEach(event => {
-      if (new Date(event.startDate).getTime() > now) {
-        upcoming.push(event);
-      } else if (new Date(event.endDate).getTime() < now) {
-        completed.push(event);
-      } else {
-        ongoing.push(event);
-      }
-    });
-  }
-
-  return { ongoing, upcoming, completed };
-}
-
 export function getDOTASchedule(data) {
   const ongoing = [];
   const upcoming = [];
