@@ -6,6 +6,8 @@ import { bindActionCreators } from 'redux';
 import { allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
 import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
+// import { getTennisVideos } from '../../redux/actions/tennis-actions';
+import { getDotaVideos } from '../../redux/actions/dota-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import WrongUrl from '../errors/WrongUrl';
@@ -13,8 +15,10 @@ import WrongUrl from '../errors/WrongUrl';
 const propTypes = {
   match: object.isRequired,
   actions: object.isRequired,
-  nba: object.isRequired,
-  epl: object.isRequired
+  nba: object,
+  epl: object,
+  tennis: object,
+  dota: object
 };
 
 class SpecificHighlightsContainer extends React.Component {
@@ -37,13 +41,20 @@ class SpecificHighlightsContainer extends React.Component {
   }
 
   getVideosForSport = (sport) => {
+    const { actions } = this.props;
     switch (sport.toLowerCase()) {
       case 'basketball':
-        this.props.actions.getNbaVideos();
+        actions.getNbaVideos();
         break;
       case 'football':
-        this.props.actions.getChampionsLeagueVideos();
-        this.props.actions.getEuropaLeagueVideos();
+        actions.getChampionsLeagueVideos();
+        actions.getEuropaLeagueVideos();
+        break;
+      case 'tennis':
+        actions.getTennisVideos();
+        break;
+      case 'dota':
+        actions.getDotaVideos();
         break;
       default:
         break;
@@ -56,6 +67,10 @@ class SpecificHighlightsContainer extends React.Component {
         return 'nba';
       case 'football':
         return 'epl';
+      case 'tennis':
+        return 'tennis';
+      case 'dota':
+        return 'dota';
       default:
         return '';
     }
@@ -81,14 +96,17 @@ SpecificHighlightsContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
   nba: state.nba,
-  epl: state.epl
+  epl: state.epl,
+  tennis: state.tennis,
+  dota: state.dota
 });
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
     getNbaVideos,
     getChampionsLeagueVideos,
-    getEuropaLeagueVideos }, dispatch)
+    getEuropaLeagueVideos,
+    getDotaVideos }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpecificHighlightsContainer);

@@ -2,7 +2,7 @@ import React from 'react';
 import { func, bool } from 'prop-types';
 import { Select } from 'antd';
 
-import { sports, esports } from '../../../helpers/constants';
+import { sports, esportsTitles } from '../../../helpers/constants';
 
 const { Option, OptGroup } = Select;
 
@@ -26,8 +26,8 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }) => {
           })}
         </OptGroup>
         <OptGroup label="E-Sports">
-          {Object.keys(esports).map(key => {
-            return <Option key={key} value={esports[key]}>{esports[key]}</Option>;
+          {Object.keys(esportsTitles).map(key => {
+            return <Option key={key} value={esportsTitles[key]}>{esportsTitles[key]}</Option>;
           })}
         </OptGroup>
       </Select>

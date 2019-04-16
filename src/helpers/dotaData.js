@@ -1,4 +1,4 @@
-import { esports } from './constants';
+import { esportsTitles } from './constants';
 
 // General
 const nip = "Ninjas In Pyjamas";
@@ -20,7 +20,7 @@ const tnc = "TNC";
 
 export const dotaTournaments = [
   {
-    sport: esports.DOTA,
+    sport: esportsTitles.DOTA,
     name: "The Chongqing Major",
     tier: "Major",
     teams: [],
@@ -54,7 +54,7 @@ export const dotaTournaments = [
     ]
   },
   {
-    sport: esports.DOTA,
+    sport: esportsTitles.DOTA,
     name: "ESL One Katowice 2019",
     tier: "Minor",
     teams: [],
@@ -62,7 +62,7 @@ export const dotaTournaments = [
     endDate: '2019-02-24'
   },
   {
-    sport: esports.DOTA,
+    sport: esportsTitles.DOTA,
     name: "DreamLeague Season 11",
     tier: "Major",
     teams: [],

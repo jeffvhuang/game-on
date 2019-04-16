@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 
-import { paths, sports, esports } from '../../../helpers/constants';
+import { paths, sports, esportsTitles } from '../../../helpers/constants';
 
 export default class EventsContainer extends React.Component {
   constructor() {
@@ -11,10 +11,10 @@ export default class EventsContainer extends React.Component {
     this.state = {
       upcoming: [
         { sport: sports.FOOTBALL, comp: "Champion's League: Man Utd v PSG", date: "12 Feb" },
-        { sport: esports.DOTA, comp: "DreamLeague Season 11", date: "14 March" }
+        { sport: esportsTitles.DOTA, comp: "DreamLeague Season 11", date: "14 March" }
       ],
       completed: [
-        { sport: esports.DOTA, comp: "Chongqing Major", date: "31 Jan" },
+        { sport: esportsTitles.DOTA, comp: "Chongqing Major", date: "31 Jan" },
         { sport: sports.TENNIS, comp: "Aus Open Men's Final", date: "27 Jan" }
       ]
     };

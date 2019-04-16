@@ -1,4 +1,4 @@
-import { sports, esports } from './constants';
+import { sports, esportsTitles } from './constants';
 import { dotaTournaments } from './dotaData';
 
 // List of events in each sport
@@ -111,7 +111,7 @@ const footballEvents = [
 const lolEvents = [
   {
     name: "League of Legends World Championship",
-    sport: esports.LEAGUE,
+    sport: esportsTitles.LEAGUE,
     startDate: '2018-8-1',
     endDate: '2018-11-3',
     matches: [
@@ -129,7 +129,7 @@ const lolEvents = [
 const csgoEvents = [
   {
     name: "BLAST Pro Series: Miami 2019",
-    sport: esports.CSGO,
+    sport: esportsTitles.CSGO,
     startDate: '2019-4-12',
     endDate: '2019-4-13',
     matches: []
@@ -139,7 +139,7 @@ const csgoEvents = [
 const overwatchEvents = [
   {
     name: "Overwatch League 2019 Regular Season",
-    sport: esports.OVERWATCH,
+    sport: esportsTitles.OVERWATCH,
     startDate: '2019-2-14',
     endDate: '2019-8-25',
     matches: [

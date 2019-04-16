@@ -33,11 +33,18 @@ export const sportsList = Object.keys(sports).map(key => {
   return sports[key];
 });
 
-export const esports = {
+export const esportsTitles = {
   DOTA: "Dota 2",
   LEAGUE: "League of Legends",
   CSGO: "Counter Strike: GO",
   OVERWATCH: "Overwatch"
+};
+
+export const esports = {
+  DOTA: "dota",
+  LEAGUE: "lol",
+  CSGO: "csgo",
+  OVERWATCH: "overwatch"
 };
 
 export const esportsList = Object.keys(esports).map(key => {
