@@ -11,6 +11,9 @@ export const dotaActions = createActionStringObjects([
   'GET_DOTA_TEAMS_REQUEST',
   'GET_DOTA_TEAMS_SUCCESS',
   'GET_DOTA_TEAMS_FAILURE',
+  'GET_DOTA_VIDEOS_REQUEST',
+  'GET_DOTA_VIDEOS_SUCCESS',
+  'GET_DOTA_VIDEOS_FAILURE'
 ]);
 
 export const nbaActions = createActionStringObjects([

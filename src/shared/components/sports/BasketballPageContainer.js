@@ -45,7 +45,7 @@ class BasketballPageContainer extends React.Component {
         <h1>Basketball</h1>
         <NbaSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />
-        <VideoThumbnails heading="Basketball"
+        <VideoThumbnails heading="NBA Videos"
           thumbnails={this.props.nba.thumbnails}
           showCount={4}
           showMore

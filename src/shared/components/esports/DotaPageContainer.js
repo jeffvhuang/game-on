@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { dotaTournaments } from '../../../helpers/dotaData';
+import { paths } from '../../../helpers/constants';
 import { getDOTASchedule } from '../../../helpers/utils';
-import { getDotaData, getDotaLeagues, getDotaProMatches, getDotaTeams } from '../../redux/actions/dota-actions';
+import { getDotaVideos, getDotaLeagues, getDotaProMatches, getDotaTeams } from '../../redux/actions/dota-actions';
 
-import HighlightsContainer from '../landing/HighlightsContainer';
+import VideoThumbnails from '../common/VideoThumbnails';
 import EventSelectDropdown from '../common/EventSelectDropdown';
 import EventDatesSection from '../common/EventDatesSection';
 
@@ -21,16 +22,7 @@ class DotaPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    if (props.dota.data.length < 1) props.actions.getDotaData();
-    props.actions.getDotaProMatches();
-
     this.state = {
-      videos: [
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video2",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
-      ],
       schedule: {},
       selected: [],
       ongoing: [],
@@ -39,17 +31,24 @@ class DotaPageContainer extends React.Component {
     };
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (!prevState.schedule.hasOwnProperty('upcoming') && nextProps.dota.data.length > 0) {
-      const schedule = getDOTASchedule(nextProps.dota.data);
-      return {
-        schedule: schedule,
-        ongoing: schedule.ongoing,
-        upcoming: schedule.upcoming,
-        completed: schedule.completed
-      };
-    }
-    return null;
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   if (!prevState.schedule.hasOwnProperty('upcoming') && nextProps.dota.data.length > 0) {
+  //     const schedule = getDOTASchedule(nextProps.dota.data);
+  //     return {
+  //       schedule: schedule,
+  //       ongoing: schedule.ongoing,
+  //       upcoming: schedule.upcoming,
+  //       completed: schedule.completed
+  //     };
+  //   }
+  //   return null;
+  // }
+
+  componentDidMount() {
+    const props = this.props;
+    if (props.dota.videos.length < 1) props.actions.getDotaVideos();
+    // if (props.dota.teams.length < 1) props.actions.getDotaTeams();
+    // if (props.dota.proMatches.length < 1) props.actions.getDotaProMatches();
   }
 
   handleChange = values => {
@@ -157,10 +156,14 @@ class DotaPageContainer extends React.Component {
             <video controls width="600" height="400" />
           </div>
         </div>
-        <h1>{this.props.match.params.esport}</h1>
+        <h1>Dota 2</h1>
         <EventSelectDropdown handleChange={this.handleChange}
           events={this.getTournamentNames()} />
-        <HighlightsContainer videos={this.state.videos} />
+        <VideoThumbnails heading="Dota 2 Videos"
+          thumbnails={this.props.dota.thumbnails}
+          showCount={4}
+          showMore
+          showMoreLink={paths.HIGHLIGHTS + '/dota'} />
         <EventDatesSection ongoing={this.state.ongoing}
           upcoming={this.state.upcoming}
           completed={this.state.completed} />
@@ -176,7 +179,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getDotaData, getDotaLeagues, getDotaProMatches, getDotaTeams }, dispatch)
+  actions: bindActionCreators({ 
+    getDotaVideos, 
+    getDotaLeagues, 
+    getDotaProMatches, 
+    getDotaTeams }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DotaPageContainer);
