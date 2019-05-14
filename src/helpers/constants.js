@@ -79,11 +79,10 @@ export const nbaAPI = {
   TEAMS: '/teams/league/standard'
 };
 
-// Rapidapi.com > api-football api
 export const eplAPI = {
-  HOST: 'https://api-football-v1.p.rapidapi.com',
-  SCHEDULE: '/fixtures/league' + '/2',
-  TEAMS: '/teams/league/2'
+  HOST: 'https://localhost:44305',
+  SCHEDULE: '/api/epl/schedule',
+  TEAMS: '/api/epl/teams'
 };
 
 export const tennisAPI = {

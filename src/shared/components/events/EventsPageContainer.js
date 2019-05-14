@@ -1,7 +1,6 @@
 import React from 'react';
 
 import SportSelectDropdown from '../common/SportSelectDropdown';
-import { sortEvents } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
 
 class EventsPageContainer extends React.Component {

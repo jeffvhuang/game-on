@@ -119,19 +119,9 @@ export const getEplScheduleFailure = (err) => ({ type: A.GET_EPL_SCHEDULE_FAILUR
 //     return axios({
 //       method: 'get',
 //       url: eplAPI.HOST + eplAPI.SCHEDULE,
-//       headers: {
-//         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
-//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
-//       }
 //     }).then(response => {
-//       const fixturesObj = response.data.api.fixtures;
-//       const eplSchedule = [];
-
-//       Object.keys(fixturesObj).forEach(t => eplSchedule.push(fixturesObj[t]));
-
-//       const sortedSchedule = sortEplSchedule(eplSchedule);
-
-//       dispatch(getEplScheduleSuccess(sortedSchedule, eplSchedule));
+//       const sortedSchedule = sortEplSchedule(response.data);
+//       dispatch(getEplScheduleSuccess(sortedSchedule, response.data));
 //     }).catch(err => {
 //       dispatch(getEplScheduleFailure(err));
 //       throw(err);
@@ -143,15 +133,9 @@ export const getEplScheduleFailure = (err) => ({ type: A.GET_EPL_SCHEDULE_FAILUR
 export const getEplSchedule = () => {
   return async (dispatch) => {
     dispatch(getEplScheduleRequest());
-    await sleep(2000);
-    const fixturesObj = SCHEDULE;
-    const eplSchedule = [];
-
-    Object.keys(fixturesObj).forEach(t => eplSchedule.push(fixturesObj[t]));
-
-    const sortedSchedule = sortEplSchedule(eplSchedule);
-
-    return dispatch(getEplScheduleSuccess(sortedSchedule, eplSchedule));
+    await sleep(1000);
+    const sortedSchedule = sortEplSchedule(SCHEDULE);
+    return dispatch(getEplScheduleSuccess(sortedSchedule, SCHEDULE));
   };
 };
 
@@ -165,23 +149,9 @@ export const getEplTeamsFailure = (err) => ({ type: A.GET_EPL_TEAMS_FAILURE, err
 //     dispatch(getEplTeamsRequest());
 //     return axios({
 //       method: 'get',
-//       url: eplAPI.HOST + eplAPI.TEAMS,
-//       headers: {
-//         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
-//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
-//       }
+//       url: eplAPI.HOST + eplAPI.TEAMS
 //     }).then(response => {
-//       const teamsObj = response.data.api.teams;
-//       const eplTeams = [];
-
-//       Object.keys(teamsObj).forEach(t => eplTeams.push({
-//         fullName: teamsObj[t].name,
-//         shortName: teamsObj[t].code,
-//         teamId: teamsObj[t].team_id,
-//         logo: teamsObj[t].logo
-//       }));
-
-//       dispatch(getEplTeamsSuccess(eplTeams));
+//       dispatch(getEplTeamsSuccess(response.data));
 //     }).catch(err => {
 //       dispatch(getEplTeamsFailure(err));
 //       throw(err);
@@ -193,13 +163,7 @@ export const getEplTeamsFailure = (err) => ({ type: A.GET_EPL_TEAMS_FAILURE, err
 export const getEplTeams = () => {
   return async (dispatch) => {
     dispatch(getEplTeamsRequest());
-    await sleep(2000);
-
-    const teamsObj = TEAMS;
-    const eplTeams = [];
-
-    Object.keys(teamsObj).forEach(t => eplTeams.push(teamsObj[t]));
-
-    return dispatch(getEplTeamsSuccess(eplTeams));
+    await sleep(1000);
+    return dispatch(getEplTeamsSuccess(TEAMS));
   };
 };

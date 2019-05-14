@@ -19,7 +19,7 @@ function EplSelectDropdown({ handleChange, teams }) {
         style={{ width: '80%' }}
         allowClear >
         {teams.map((team, i) => {
-          return <Option key={i} value={team.team_id}>{team.name}</Option>;
+          return <Option key={i} value={team.name}>{team.name}</Option>;
         })}
       </Select>
     </div>

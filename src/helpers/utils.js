@@ -64,7 +64,7 @@ export function sortEplSchedule(data) {
 
   // Separate into games past, today and upcoming
   data.forEach(game => {
-    const gamesDate = new Date(game.event_date);
+    const gamesDate = new Date(game.eventDate);
     if (isSameDate(dateToday, gamesDate)) {
       today.push(game);
     } else if (gamesDate.getTime() > now) {
