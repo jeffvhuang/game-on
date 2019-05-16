@@ -5,7 +5,8 @@ import { youtubeAPI, eplAPI } from '../../../helpers/constants';
 import { sleep, sortEplSchedule } from '../../../helpers/utils';
 
 // Mock data
-import { TEAMS, SCHEDULE } from '../../../mockApiData/rapidEpl';
+import EPL_TEAMS from '../../../mockApiData/EplTeams.json';
+import EPL_SCHEDULE from '../../../mockApiData/EplSchedule.json';
 import { CL_PLAYLIST } from '../../../mockApiData/champsLeagueYoutube';
 import { EL_PLAYLIST } from '../../../mockApiData/europaLeagueYoutube';
 // import { PLAYLIST } from '../../../mockApiData/EplYoutube';
@@ -134,8 +135,8 @@ export const getEplSchedule = () => {
   return async (dispatch) => {
     dispatch(getEplScheduleRequest());
     await sleep(1000);
-    const sortedSchedule = sortEplSchedule(SCHEDULE);
-    return dispatch(getEplScheduleSuccess(sortedSchedule, SCHEDULE));
+    const sortedSchedule = sortEplSchedule(EPL_SCHEDULE);
+    return dispatch(getEplScheduleSuccess(sortedSchedule, EPL_SCHEDULE));
   };
 };
 
@@ -164,6 +165,6 @@ export const getEplTeams = () => {
   return async (dispatch) => {
     dispatch(getEplTeamsRequest());
     await sleep(1000);
-    return dispatch(getEplTeamsSuccess(TEAMS));
+    return dispatch(getEplTeamsSuccess(EPL_TEAMS));
   };
 };
