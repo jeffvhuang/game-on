@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 import { nbaActions as A } from './action-types';
-import { youtubeAPI, nbaAPI } from '../../../helpers/constants';
+import { youtubeAPI, gameonAPI } from '../../../helpers/constants';
 import { sleep, sortNBASchedule } from '../../../helpers/utils';
 
 // Mock data
-import { SCHEDULE, TEAMS } from '../../../mockApiData/rapidNba';
+import TEAMS from '../../../mockApiData/nbaTeams.json';
+import SCHEDULE from '../../../mockApiData/nbaSchedule.json';
 import { PLAYLIST } from '../../../mockApiData/nbaYoutube';
 
 
@@ -52,13 +53,10 @@ export const getNbaScheduleFailure = (err) => ({ type: A.GET_NBA_SCHEDULE_FAILUR
 //     dispatch(getNbaScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: nbaAPI.HOST + nbaAPI.SCHEDULE,
-//       headers: {
-//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
-//       }
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.SCHEDULE
 //     }).then(response => {
-//       const sortedSchedule = sortNBASchedule(response.data.api.games);
-//       dispatch(getNbaScheduleSuccess(sortedSchedule, response.data.api.games));
+//       const sortedSchedule = sortNBASchedule(response.data);
+//       dispatch(getNbaScheduleSuccess(sortedSchedule, response.data));
 //     }).catch(err => {
 //       dispatch(getNbaScheduleFailure(err));
 //       throw(err);
@@ -70,7 +68,7 @@ export const getNbaScheduleFailure = (err) => ({ type: A.GET_NBA_SCHEDULE_FAILUR
 export const getNbaSchedule = () => {
   return async (dispatch) => {
     dispatch(getNbaScheduleRequest());
-    await sleep(2000);
+    await sleep(1500);
     const sortedSchedule = sortNBASchedule(SCHEDULE);
     return dispatch(getNbaScheduleSuccess(sortedSchedule, SCHEDULE));
   };
@@ -86,10 +84,7 @@ export const getNbaTeamsFailure = (err) => ({ type: A.GET_NBA_TEAMS_FAILURE, err
 //     dispatch(getNbaTeamsRequest());
 //     return axios({
 //       method: 'get',
-//       url: nbaAPI.HOST + nbaAPI.TEAMS,
-//       headers: {
-//         'X-RapidAPI-Key': '9a04c3ec1dmshe9bb5802ba2545dp16f979jsndbae1452a5b5'
-//       }
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.SCHEDULE
 //     }).then(response => {
 //       const nbaTeams = response.data.api.teams.filter(team => team.nbaFranchise == '1');
 //       dispatch(getNbaTeamsSuccess(nbaTeams));
@@ -104,7 +99,7 @@ export const getNbaTeamsFailure = (err) => ({ type: A.GET_NBA_TEAMS_FAILURE, err
 export const getNbaTeams = () => {
   return async (dispatch) => {
     dispatch(getNbaTeamsRequest());
-    await sleep(2000);
+    await sleep(1500);
     const nbaTeams = TEAMS.filter(team => team.nbaFranchise == '1');
     return dispatch(getNbaTeamsSuccess(nbaTeams));
   };
