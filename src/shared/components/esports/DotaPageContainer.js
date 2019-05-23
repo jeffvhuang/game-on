@@ -2,6 +2,7 @@ import React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 import { getDOTASchedule } from '../../../helpers/utils';
@@ -9,7 +10,7 @@ import { getDotaVideos, getDotaTournaments, getDotaTeams } from '../../redux/act
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import EventSelectDropdown from '../common/EventSelectDropdown';
-import EventDatesSection from '../common/EventDatesSection';
+import DotaTournaments from './DotaTournaments';
 
 const propTypes = {
   match: object,
@@ -22,24 +23,17 @@ class DotaPageContainer extends React.Component {
     super(props);
 
     this.state = {
-      schedule: {},
-      selected: [],
-      ongoing: [],
-      upcoming: [],
-      completed: []
+      values: []
     };
   }
 
   componentDidMount() {
     const props = this.props;
-    if (props.dota.videos.length < 1) props.actions.getDotaVideos();
-    // if (props.dota.teams.length < 1) props.actions.getDotaTeams();
-    // if (props.dota.proMatches.length < 1) props.actions.getDotaProMatches();
+    // if (props.dota.videos.length < 1) props.actions.getDotaVideos();
+    if (props.dota.tournaments.length < 1) props.actions.getDotaTournaments();
   }
 
-  handleChange = values => {
-
-  }
+  handleChange = values => this.setState({ values });
 
   getMatchesForTournament = (tournaments) => {
     const tournament = tournaments.find(t => t.slug == "starladder-imbatv-minor-2-2019-qualifier-southeast-asia");
@@ -52,14 +46,23 @@ class DotaPageContainer extends React.Component {
         <h1>Dota 2</h1>
         {/* <EventSelectDropdown handleChange={this.handleChange}
           events={this.getTournamentNames()} /> */}
-        <VideoThumbnails heading="Dota 2 Videos"
+        {/* <VideoThumbnails heading="Dota 2 Videos"
           thumbnails={this.props.dota.thumbnails}
           showCount={4}
           showMore
-          showMoreLink={paths.HIGHLIGHTS + '/dota'} />
-        <EventDatesSection ongoing={this.state.ongoing}
-          upcoming={this.state.upcoming}
-          completed={this.state.completed} />
+          showMoreLink={paths.HIGHLIGHTS + '/dota'} /> */}
+        <div className="section">
+          <DotaTournaments header="Ongoing"
+            games={this.props.dota.ongoing}
+            values={this.state.values} />
+          <DotaTournaments header="Upcoming"
+            games={this.props.dota.upcoming}
+            values={this.state.values} />
+          <DotaTournaments header="Completed"
+            games={this.props.dota.completed}
+            alues={this.state.values} />
+          <Link to={paths.EVENTS} className="right">More ></Link>
+        </div>
       </div>
     );
   }
@@ -72,10 +75,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ 
-    getDotaVideos, 
-    getDotaTournaments, 
-    getDotaTeams }, dispatch)
+  actions: bindActionCreators({
+    getDotaVideos,
+    getDotaTournaments,
+    getDotaTeams
+  }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DotaPageContainer);

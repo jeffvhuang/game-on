@@ -38,11 +38,6 @@ class TennisPageContainer extends React.Component {
 
   componentDidMount() {
     const props = this.props;
-    // if (props.tennis.videos.length < 1) {
-    //   props.actions.getChampionsLeagueVideos();
-    //   props.actions.getEuropaLeagueVideos();
-    // } 
-    // if (props.tennis.teams.length < 1) props.actions.getTennisTeams();
     if (props.tennis.tournaments.length < 1) props.actions.getTennisTournaments();
   }
 

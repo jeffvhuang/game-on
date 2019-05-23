@@ -5,6 +5,9 @@ const initialState = {
   isFetching: false,
   data: [],
   tournaments: [],
+  ongoing: [],
+  upcoming: [],
+  completed: [],
   teams: [],
   videos: [],
   thumbnails: []
@@ -15,7 +18,14 @@ function dotaReducer(state = initialState, action) {
     case A.GET_DOTA_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_DOTA_TOURNAMENTS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, tournaments: action.payload });
+    return Object.assign({}, state,
+      { 
+        isFetching: false,
+        tournaments: action.schedule,
+        ongoing: action.payload.ongoing,
+        upcoming: action.payload.upcoming,
+        completed: action.payload.completed
+      });
     case A.GET_DOTA_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 

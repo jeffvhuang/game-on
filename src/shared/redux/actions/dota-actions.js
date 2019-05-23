@@ -2,7 +2,7 @@ import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
 import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
-import { sleep } from '../../../helpers/utils';
+import { sleep, sortESportsSchedule } from '../../../helpers/utils';
 
 // Temporary seed data
 import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
@@ -44,7 +44,7 @@ export const getDotaVideos = () => {
 // Data API
 // Get Tournaments
 export const getDotaTournamentsRequest = () => ({ type: A.GET_DOTA_TOURNAMENTS_REQUEST });
-export const getDotaTournamentsSuccess = (payload) => ({ type: A.GET_DOTA_TOURNAMENTS_SUCCESS, payload });
+export const getDotaTournamentsSuccess = (payload, schedule) => ({ type: A.GET_DOTA_TOURNAMENTS_SUCCESS, payload });
 export const getDotaTournamentsFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENTS_FAILURE, err });
 
 // export const getDotaTournaments = () => {
@@ -63,9 +63,19 @@ export const getDotaTournamentsFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENT
 
 // This uses mock data to reduce requests to api
 export const getDotaTournaments = () => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(getDotaTournamentsRequest());
-    return dispatch(getDotaTournamentsSuccess(TOURNAMENTS.tournaments));
+    await sleep(1000);
+    const today = new Date();
+    const thisYear = today.getFullYear();
+
+    // const tournaments = TOURNAMENTS.tournaments.filter(t => 
+    //   ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
+    //   t.currentSeason.year == thisYear);
+
+    const sortedSchedule = sortESportsSchedule(TOURNAMENTS.tournaments);
+
+    return dispatch(getDotaTournamentsSuccess(sortedSchedule, TOURNAMENTS.tournaments));
   };
 };
 
