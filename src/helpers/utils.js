@@ -55,7 +55,7 @@ export function sortNBASchedule(data) {
  * sort schedule to find today and upcoming
  * @param {array} data 
  */
-export function sortEplSchedule(data) {
+export function sortFootballSchedule(data) {
   const today = [];
   const upcomingGames = [];
   const before = [];
@@ -65,6 +65,8 @@ export function sortEplSchedule(data) {
   // Separate into games past, today and upcoming
   data.forEach(game => {
     const gamesDate = new Date(game.eventDate);
+
+    // Does not separate between those that are on today but completed
     if (isSameDate(dateToday, gamesDate)) {
       today.push(game);
     } else if (gamesDate.getTime() > now) {
