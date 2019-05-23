@@ -101,8 +101,8 @@ export function sortTennisSchedule(data) {
 
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
-    if (new Date(t.current_season.start_date) > now) upcomingTournaments.push(t);
-    else if (new Date(t.current_season.end_date) < now) completedTournaments.push(t);
+    if (new Date(t.currentSeason.startDate) > now) upcomingTournaments.push(t);
+    else if (new Date(t.currentSeason.endDate) < now) completedTournaments.push(t);
     else ongoingTournaments.push(t);
   });
 
@@ -116,8 +116,8 @@ export function sortTennisSchedule(data) {
 
 function sortTennisByDate(data) {
   return data.sort(function(a, b) {
-    const dateA = a.current_season.start_date;
-    const dateB = b.current_season.start_date;
+    const dateA = a.currentSeason.startDate;
+    const dateB = b.currentSeason.startDate;
     return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
   });
 }

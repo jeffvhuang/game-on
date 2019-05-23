@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 import { tennisActions as A } from './action-types';
-import { youtubeAPI, tennisAPI } from '../../../helpers/constants';
+import { youtubeAPI, gameonAPI } from '../../../helpers/constants';
 import { sleep, sortTennisSchedule } from '../../../helpers/utils';
 
 // Mock data
-import { SCHEDULE, MONTE_CARLO_SCHEDULE, TOURNAMENT_INFO } from '../../../mockApiData/tennisData';
+import TOURNAMENTS from '../../../mockApiData/tennisSchedule.json';
+import TOURNAMENT_INFO from '../../../mockApiData/tennisTournamentInfo.json';
+import TOURNAMENT_SCHEDULE from '../../../mockApiData/tennisTournamentSchedule.json';
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
 
 
@@ -43,19 +45,16 @@ export const getTennisVideosFailure = (err) => ({ type: A.GET_TENNIS_VIDEOS_FAIL
 // };
 
 // Get Schedule
-export const getTennisScheduleRequest = () => ({ type: A.GET_TENNIS_SCHEDULE_REQUEST });
-export const getTennisScheduleSuccess = (payload, schedule) => ({ type: A.GET_TENNIS_SCHEDULE_SUCCESS, payload, schedule });
-export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_FAILURE, err });
+export const getTennisTournamentsRequest = () => ({ type: A.GET_TENNIS_TOURNAMENTS_REQUEST });
+export const getTennisTournamentsSuccess = (payload, schedule) => ({ type: A.GET_TENNIS_TOURNAMENTS_SUCCESS, payload, schedule });
+export const getTennisTournamentsFailure = (err) => ({ type: A.GET_TENNIS_TOURNAMENTS_FAILURE, err });
 
-// export const getTennisSchedule = () => {
+// export const getTennisTournaments = () => {
 //   return (dispatch) => {
-//     dispatch(getTennisScheduleRequest());
+//     dispatch(getTennisTournamentsRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + tennisAPI.TOURNAMENTS,
-//       params: {
-//         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
-//       }
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS,
 //     }).then(response => {
 //       const today = new Date();
 //       const thisYear = today.getFullYear();
@@ -71,7 +70,7 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
       //   t.current_season.year == thisYear);
 
 //       const sortedSchedule = sortTennisSchedule(schedule);
-//       dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));
+//       dispatch(getTennisTournamentsSuccess(sortedSchedule, schedule));
 //     }).catch(err => {
 //       dispatch(getTennisScheduleFailure(err));
 //       throw(err);
@@ -80,19 +79,19 @@ export const getTennisScheduleFailure = (err) => ({ type: A.GET_TENNIS_SCHEDULE_
 // };
 
 // return mock data
-export const getTennisSchedule = () => {
+export const getTennisTournaments = () => {
   return async (dispatch) => {
-    dispatch(getTennisScheduleRequest());
+    dispatch(getTennisTournamentsRequest());
     await sleep(1000);
     const today = new Date();
     const thisYear = today.getFullYear();
 
-    const schedule = SCHEDULE.tournaments.filter(t => 
+    const schedule = TOURNAMENTS.filter(t => 
       ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
       t.current_season.year == thisYear);
 
     const sortedSchedule = sortTennisSchedule(schedule);
-    return dispatch(getTennisScheduleSuccess(sortedSchedule, schedule));
+    return dispatch(getTennisTournamentsSuccess(sortedSchedule, schedule));
   };
 };
 
@@ -106,10 +105,7 @@ export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS
 //     dispatch(getTennisTournamentScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + '/tournaments/' + tournamentId + tennisAPI.SCHEDULE,
-//       params: {
-//         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
-//       }
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId + gameonAPI.SCHEDULE,
 //     }).then(response => {
 //       dispatch(getTennisTournamentScheduleSuccess(response.data));
 //       return response.data;
@@ -124,8 +120,8 @@ export const getTennisTournamentSchedule = (tournamentId) => {
   return async (dispatch) => {
     dispatch(getTennisTournamentScheduleRequest());
     await sleep(1000);
-    dispatch(getTennisTournamentScheduleSuccess(MONTE_CARLO_SCHEDULE));
-    return MONTE_CARLO_SCHEDULE;
+    dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
+    return TOURNAMENT_SCHEDULE;
   };
 };
 
@@ -139,10 +135,7 @@ export const getTennisTournamentInfoFailure = (err) => ({ type: A.GET_TENNIS_TOU
 //     dispatch(getTennisTournamentInfoRequest());
 //     return axios({
 //       method: 'get',
-//       url: tennisAPI.HOST + '/tournaments/' + tournamentId + tennisAPI.INFO,
-//       params: {
-//         'api_key': 'xuyg3w9bj5gnj6dg5vt6tzkb'
-//       }
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId,
 //     }).then(response => {
 //       dispatch(getTennisTournamentInfoSuccess(response.data));
 //       return response.data;
