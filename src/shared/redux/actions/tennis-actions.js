@@ -5,7 +5,7 @@ import { youtubeAPI, gameonAPI } from '../../../helpers/constants';
 import { sleep, sortTennisSchedule } from '../../../helpers/utils';
 
 // Mock data
-import TOURNAMENTS from '../../../mockApiData/tennisSchedule.json';
+import TOURNAMENTS from '../../../mockApiData/tennisTournaments.json';
 import TOURNAMENT_INFO from '../../../mockApiData/tennisTournamentInfo.json';
 import TOURNAMENT_SCHEDULE from '../../../mockApiData/tennisTournamentSchedule.json';
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
@@ -67,7 +67,7 @@ export const getTennisTournamentsFailure = (err) => ({ type: A.GET_TENNIS_TOURNA
       //     || 
       //     t.type == 'mixed'
       //   ) &&
-      //   t.current_season.year == thisYear);
+      //   t.currentSeason.year == thisYear);
 
 //       const sortedSchedule = sortTennisSchedule(schedule);
 //       dispatch(getTennisTournamentsSuccess(sortedSchedule, schedule));
@@ -86,12 +86,12 @@ export const getTennisTournaments = () => {
     const today = new Date();
     const thisYear = today.getFullYear();
 
-    const schedule = TOURNAMENTS.filter(t => 
+    const tournaments = TOURNAMENTS.filter(t => 
       ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
-      t.current_season.year == thisYear);
+      t.currentSeason.year == thisYear);
 
-    const sortedSchedule = sortTennisSchedule(schedule);
-    return dispatch(getTennisTournamentsSuccess(sortedSchedule, schedule));
+    const sortedSchedule = sortTennisSchedule(tournaments);
+    return dispatch(getTennisTournamentsSuccess(sortedSchedule, tournaments));
   };
 };
 

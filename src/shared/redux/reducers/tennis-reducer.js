@@ -3,7 +3,7 @@ import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState = {
   isFetching: false,
-  schedule: [],
+  tournaments: [],
   ongoing: [],
   upcoming: [],
   completed: [],
@@ -15,18 +15,18 @@ const initialState = {
 
 function tennisReducer(state = initialState, action) {
   switch(action.type) {
-    case A.GET_TENNIS_SCHEDULE_REQUEST:
+    case A.GET_TENNIS_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_TENNIS_SCHEDULE_SUCCESS:
+    case A.GET_TENNIS_TOURNAMENTS_SUCCESS:
       return Object.assign({}, state,
         { 
           isFetching: false,
-          schedule: action.schedule,
+          tournaments: action.schedule,
           ongoing: action.payload.ongoing,
           upcoming: action.payload.upcoming,
           completed: action.payload.completed
         });
-    case A.GET_TENNIS_SCHEDULE_FAILURE:
+    case A.GET_TENNIS_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
     case A.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST:

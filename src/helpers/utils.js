@@ -87,8 +87,8 @@ export function sortFootballSchedule(data) {
 // Sort by date for epl api's data
 function sortEplByDate(data) {
   return data.sort(function(a, b) {
-    const dateA = a.event_timestamp;
-    const dateB = b.event_timestamp;
+    const dateA = a.eventTimestamp;
+    const dateB = b.eventTimestamp;
     return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
   });
 }

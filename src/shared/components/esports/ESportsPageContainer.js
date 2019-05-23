@@ -7,7 +7,7 @@ import HighlightsContainer from '../landing/HighlightsContainer';
 import EventSelectDropdown from '../common/EventSelectDropdown';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
-import { getDotaLeagues } from '../../redux/actions/dota-actions';
+// import { getDotaLeagues } from '../../redux/actions/dota-actions';
 
 const propTypes = {
   match: object,
@@ -162,7 +162,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getDotaLeagues }, dispatch)
+  actions: bindActionCreators({  }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ESportsPageContainer);

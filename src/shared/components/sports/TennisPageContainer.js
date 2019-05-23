@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getTennisSchedule } from '../../redux/actions/tennis-actions';
+import { getTennisTournaments } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
@@ -42,7 +42,7 @@ class TennisPageContainer extends React.Component {
     //   props.actions.getEuropaLeagueVideos();
     // } 
     // if (props.tennis.teams.length < 1) props.actions.getTennisTeams();
-    if (props.tennis.schedule.length < 1) props.actions.getTennisSchedule();
+    if (props.tennis.tournaments.length < 1) props.actions.getTennisTournaments();
   }
 
   handleChange = values => this.setState({ values });
@@ -87,7 +87,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({ 
-    getTennisSchedule, }, dispatch)
+    getTennisTournaments }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisPageContainer);
