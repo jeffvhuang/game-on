@@ -63,6 +63,10 @@ export const gameonAPI = {
   CHAMPIONS_LEAGUE: '/football/championsleague',
   EUROPA_LEAGUE: '/football/europaleague',
   TENNIS: '/tennis',
+  DOTA: '/dota',
+  LOL: '/lol',
+  OVERWATCH: '/overwatch',
+  CSGO: '/csgo',
   TOURNAMENTS: '/tournaments',
   SCHEDULE: '/schedule',
   TEAMS: '/teams'

@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { paths } from '../../../helpers/constants';
 import { getDOTASchedule } from '../../../helpers/utils';
-import { getDotaVideos, getDotaLeagues, getDotaProMatches, getDotaTeams } from '../../redux/actions/dota-actions';
+import { getDotaVideos, getDotaTournaments, getDotaTeams } from '../../redux/actions/dota-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import EventSelectDropdown from '../common/EventSelectDropdown';
@@ -41,9 +41,9 @@ class DotaPageContainer extends React.Component {
 
   }
 
-  getMatchesForLeague = (proMatches) => {
-    const leagueMatches = proMatches.filter(match => match.league_name == "DreamLeague Season 11");
-    return leagueMatches;
+  getMatchesForTournament = (tournaments) => {
+    const tournament = tournaments.find(t => t.slug == "starladder-imbatv-minor-2-2019-qualifier-southeast-asia");
+    return tournament.matches;
   }
 
   render() {
@@ -79,8 +79,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({ 
     getDotaVideos, 
-    getDotaLeagues, 
-    getDotaProMatches, 
+    getDotaTournaments, 
     getDotaTeams }, dispatch)
 });
 

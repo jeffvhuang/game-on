@@ -1,11 +1,11 @@
 import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
-import { dotaAPI, youtubeAPI } from '../../../helpers/constants';
+import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
 import { sleep } from '../../../helpers/utils';
 
 // Temporary seed data
-import { PRO_MATCHES, LEAGUES } from '../../../mockApiData/openDota';
+import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
 import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
 
 // Get highlights from youtube
@@ -41,59 +41,31 @@ export const getDotaVideos = () => {
   };
 };
 
+// Data API
+// Get Tournaments
+export const getDotaTournamentsRequest = () => ({ type: A.GET_DOTA_TOURNAMENTS_REQUEST });
+export const getDotaTournamentsSuccess = (payload) => ({ type: A.GET_DOTA_TOURNAMENTS_SUCCESS, payload });
+export const getDotaTournamentsFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENTS_FAILURE, err });
 
-// OpenDota API requests
-// Get Leagues
-export const getDotaLeaguesRequest = () => ({ type: A.GET_DOTA_LEAGUES_REQUEST });
-export const getDotaLeaguesSuccess = (payload) => ({ type: A.GET_DOTA_LEAGUES_SUCCESS, payload });
-export const getDotaLeaguesFailure = (err) => ({ type: A.GET_DOTA_LEAGUES_FAILURE, err });
-
-// export const getDotaLeagues = () => {
+// export const getDotaTournaments = () => {
 //   return (dispatch) => {
-//     dispatch(getDotaLeaguesRequest());
-//     return axios.get(dotaAPI.HOST + dotaAPI.LEAGUES)
+//     dispatch(getDotaTournamentsRequest());
+//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.dota + gameonAPI.TOURNAMENTS)
 //       .then(response => {
-//         dispatch(getDotaLeaguesSuccess(response.data));
+//         dispatch(getDotaTournamentsSuccess(response.data.tournaments));
 //       })
 //       .catch(err => {
-//         dispatch(getDotaLeaguesFailure(err));
-//         throw(err);
-//       });
-//   };
-// };
-
-// return mock data
-export const getDotaLeagues = () => {
-  return (dispatch) => {
-    dispatch(getDotaLeaguesRequest());
-    return dispatch(getDotaLeaguesSuccess(LEAGUES));
-  };
-};
-
-// Get Pro Matches
-export const getDotaProMatchesRequest = () => ({ type: A.GET_DOTA_PRO_MATCHES_REQUEST });
-export const getDotaProMatchesSuccess = (payload) => ({ type: A.GET_DOTA_PRO_MATCHES_SUCCESS, payload });
-export const getDotaProMatchesFailure = (err) => ({ type: A.GET_DOTA_PRO_MATCHES_FAILURE, err });
-
-// export const getDotaProMatches = () => {
-//   return (dispatch) => {
-//     dispatch(getDotaProMatchesRequest());
-//     return axios.get(dotaAPI.HOST + dotaAPI.PRO_MATCHES)
-//       .then(response => {
-//         dispatch(getDotaProMatchesSuccess(response.data));
-//       })
-//       .catch(err => {
-//         dispatch(getDotaProMatchesFailure(err));
+//         dispatch(getDotaTournamentsFailure(err));
 //         throw(err);
 //       });
 //   };
 // };
 
 // This uses mock data to reduce requests to api
-export const getDotaProMatches = () => {
+export const getDotaTournaments = () => {
   return (dispatch) => {
-    dispatch(getDotaProMatchesRequest());
-    return dispatch(getDotaProMatchesSuccess(PRO_MATCHES));
+    dispatch(getDotaTournamentsRequest());
+    return dispatch(getDotaTournamentsSuccess(TOURNAMENTS.tournaments));
   };
 };
 
@@ -105,7 +77,7 @@ export const getDotaTeamsFailure = (err) => ({ type: A.GET_DOTA_TEAMS_FAILURE, e
 export const getDotaTeams = () => {
   return (dispatch) => {
     dispatch(getDotaTeamsRequest());
-    return axios.get(dotaAPI.HOST + dotaAPI.TEAMS)
+    return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.dota + gameonAPI.TEAMS)
       .then(response => {
         dispatch(getDotaTeamsSuccess(response.data));
       })

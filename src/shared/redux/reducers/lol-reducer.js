@@ -12,28 +12,28 @@ const initialState = {
 
 function dotaReducer(state = initialState, action) {
   switch(action.type) {
-    case A.GET_DOTA_TOURNAMENTS_REQUEST:
+    case A.GET_LOL_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_DOTA_TOURNAMENTS_SUCCESS:
+    case A.GET_LOL_TOURNAMENTS_SUCCESS:
       return Object.assign({}, state, { isFetching: false, tournaments: action.payload });
-    case A.GET_DOTA_TOURNAMENTS_FAILURE:
+    case A.GET_LOL_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
-    case A.GET_DOTA_TEAMS_REQUEST:
+    case A.GET_LOL_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_DOTA_TEAMS_SUCCESS:
+    case A.GET_LOL_TEAMS_SUCCESS:
       return Object.assign({}, state, { isFetching: false, teams: action.payload });
-    case A.GET_DOTA_TEAMS_FAILURE:
+    case A.GET_LOL_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
-    case A.GET_DOTA_VIDEOS_REQUEST:
+    case A.GET_LOL_VIDEOS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_DOTA_VIDEOS_SUCCESS:
+    case A.GET_LOL_VIDEOS_SUCCESS:
       return Object.assign({}, state, { 
         isFetching: false,
         videos: action.payload,
         thumbnails: createYoutubeThumnailObjects(action.payload) });
-    case A.GET_DOTA_VIDEOS_FAILURE:
+    case A.GET_LOL_VIDEOS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
 
