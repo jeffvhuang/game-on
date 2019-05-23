@@ -49,11 +49,6 @@ class DotaPageContainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="section">
-          <div className="mid-flex">
-            <video controls width="600" height="400" />
-          </div>
-        </div>
         <h1>Dota 2</h1>
         {/* <EventSelectDropdown handleChange={this.handleChange}
           events={this.getTournamentNames()} /> */}

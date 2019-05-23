@@ -10,6 +10,7 @@ import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/n
 import VideoThumbnails from '../common/VideoThumbnails';
 import NbaSelectDropdown from './NbaSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
+import VideoHeader from '../common/VideoHeader';
 
 const propTypes = {
   nba: object.isRequired,
@@ -37,11 +38,7 @@ class BasketballPageContainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="section">
-          <div className="mid-flex">
-            <video controls width="600" height="400" />
-          </div>
-        </div>
+        {/* <VideoHeader /> */}
         <h1>Basketball</h1>
         <NbaSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />

@@ -10,6 +10,7 @@ import { getTennisTournaments } from '../../redux/actions/tennis-actions';
 import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
 import TennisTournaments from './TennisTournaments';
+import VideoHeader from '../common/VideoHeader';
 
 const propTypes = {
   tennis: object.isRequired,
@@ -50,11 +51,7 @@ class TennisPageContainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="section">
-          <div className="mid-flex">
-            <video controls width="600" height="400" />
-          </div>
-        </div>
+        {/* <VideoHeader /> */}
         <h1>Tennis</h1>
         <SelectDropdown handleChange={this.handleChange} options={tournamentTypes} />
         {/* <VideoThumbnails heading="Tennis"

@@ -13,6 +13,7 @@ import { getEplTeams,
 import VideoThumbnails from '../common/VideoThumbnails';
 import EplSelectDropdown from './EplSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
+import VideoHeader from '../common/VideoHeader';
 
 const propTypes = {
   epl: object.isRequired,
@@ -52,11 +53,7 @@ class FootballPageContainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="section">
-          <div className="mid-flex">
-            <video controls width="600" height="400" />
-          </div>
-        </div>
+        {/* <VideoHeader /> */}
         <h1>Football: English Premier League</h1>
         <EplSelectDropdown handleChange={this.handleChange}
           teams={this.sortTeamsForDropdown(this.props.epl.teams)} />
