@@ -44,7 +44,7 @@ export const getDotaVideos = () => {
 // Data API
 // Get Tournaments
 export const getDotaTournamentsRequest = () => ({ type: A.GET_DOTA_TOURNAMENTS_REQUEST });
-export const getDotaTournamentsSuccess = (payload, schedule) => ({ type: A.GET_DOTA_TOURNAMENTS_SUCCESS, payload });
+export const getDotaTournamentsSuccess = (payload, schedule) => ({ type: A.GET_DOTA_TOURNAMENTS_SUCCESS, payload, schedule });
 export const getDotaTournamentsFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENTS_FAILURE, err });
 
 // export const getDotaTournaments = () => {
@@ -73,9 +73,9 @@ export const getDotaTournaments = () => {
     //   ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
     //   t.currentSeason.year == thisYear);
 
-    const sortedSchedule = sortESportsSchedule(TOURNAMENTS.tournaments);
+    const sortedSchedule = sortESportsSchedule(TOURNAMENTS);
 
-    return dispatch(getDotaTournamentsSuccess(sortedSchedule, TOURNAMENTS.tournaments));
+    return dispatch(getDotaTournamentsSuccess(sortedSchedule, TOURNAMENTS));
   };
 };
 
