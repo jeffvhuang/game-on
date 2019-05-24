@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { string, array } from 'prop-types';
 
-import EplMatchSchedule from './EplMatchSchedule';
+import FootballMatchSchedule from './FootballMatchSchedule';
 
 FootballScheduleSection.propTypes = {
   header: string,
@@ -21,11 +21,11 @@ function FootballScheduleSection({ header, games, values }) {
         <Col span={8} />
       </Row>
       {values.length < 1 ? (
-        games.map((g, i) => <EplMatchSchedule key={i} game={g} />)
+        games.map((g, i) => <FootballMatchSchedule key={i} game={g} />)
       ) : (
         games.map((g, i) => {
           if (values.some(x => x == g.homeTeam.teamName || x == g.awayTeam.teamName)) {
-            return <EplMatchSchedule key={i} game={g} />;
+            return <FootballMatchSchedule key={i} game={g} />;
           }
         })
       )}

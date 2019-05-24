@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/actions/nba-actions';
-import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/epl-actions';
+import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/football-actions';
 // import { getTennisVideos } from '../../redux/actions/tennis-actions';
 import { getDotaVideos } from '../../redux/actions/dota-actions';
 

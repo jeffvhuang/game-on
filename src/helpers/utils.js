@@ -60,12 +60,13 @@ export function sortFootballSchedule(data) {
   const upcomingGames = [];
   const before = [];
   const dateToday = new Date();
-  const now = Date.now();
+  // const now = Date.now();
+  const now = new Date(2019, 1, 1); // temp for dev env
 
   // Separate into games past, today and upcoming
   data.forEach(game => {
     const gamesDate = new Date(game.eventDate);
-
+    
     // Does not separate between those that are on today but completed
     if (isSameDate(dateToday, gamesDate)) {
       today.push(game);
@@ -128,7 +129,7 @@ export function sortESportsSchedule(data) {
   const completedTournaments = [];
   const now = Date.now();
 
-  // Separate tournamentsinto past, ongoing and upcoming
+  // Separate tournaments into past, ongoing and upcoming
   data.forEach(t => {
     if (new Date(t.beginAt) > now) upcomingTournaments.push(t);
     else if (new Date(t.endAt) < now) completedTournaments.push(t);

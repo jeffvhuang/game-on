@@ -4,21 +4,22 @@ import { object } from 'prop-types';
 
 import { getFormattedTime } from '../../../helpers/utils';
 
-EplMatchSchedule.propTypes = {
+FootballMatchSchedule.propTypes = {
   game: object.isRequired
 };
 
-function EplMatchSchedule({ game }) {
-  const startDate = new Date(game.event_date);
+function FootballMatchSchedule({ game }) {
+  const startDate = new Date(game.eventDate);
+
   return (
     <Row>
-      <Col span={7}>{game.awayTeam}</Col>
+      <Col span={7}>{game.awayTeam.teamName}</Col>
       <Col span={2}>vs</Col>
-      <Col span={7}>{game.homeTeam}</Col>
+      <Col span={7}>{game.homeTeam.teamName}</Col>
       <Col span={5}>{startDate.toDateString()}</Col>
       <Col span={3}>{getFormattedTime(startDate)}</Col>
     </Row>
   );
 }
 
-export default EplMatchSchedule;
+export default FootballMatchSchedule;

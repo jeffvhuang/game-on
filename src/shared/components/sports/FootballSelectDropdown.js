@@ -9,7 +9,7 @@ const propTypes = {
 
 const { Option } = Select;
 
-function EplSelectDropdown({ handleChange, teams }) {
+function FootballSelectDropdown({ handleChange, teams }) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -26,6 +26,6 @@ function EplSelectDropdown({ handleChange, teams }) {
   );
 }
 
-EplSelectDropdown.propTypes = propTypes;
+FootballSelectDropdown.propTypes = propTypes;
 
-export default EplSelectDropdown;
+export default FootballSelectDropdown;

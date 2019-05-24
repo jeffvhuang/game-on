@@ -265,9 +265,9 @@ export const getEuropaLeagueSchedule = () => {
 };
 
 // Get Teams
-export const getEuropaLeagueTeamsRequest = () => ({ type: E.GET_CHAMPIONS_LEAGUE_TEAMS_REQUEST });
-export const getEuropaLeagueTeamsSuccess = (payload) => ({ type: E.GET_CHAMPIONS_LEAGUE_TEAMS_SUCCESS, payload });
-export const getEuropaLeagueTeamsFailure = (err) => ({ type: E.GET_CHAMPIONS_LEAGUE_TEAMS_FAILURE, err });
+export const getEuropaLeagueTeamsRequest = () => ({ type: E.GET_EUROPA_LEAGUE_TEAMS_REQUEST });
+export const getEuropaLeagueTeamsSuccess = (payload) => ({ type: E.GET_EUROPA_LEAGUE_TEAMS_SUCCESS, payload });
+export const getEuropaLeagueTeamsFailure = (err) => ({ type: E.GET_EUROPA_LEAGUE_TEAMS_FAILURE, err });
 
 // export const getEuropaLeagueTeams = () => {
 //   return (dispatch) => {
