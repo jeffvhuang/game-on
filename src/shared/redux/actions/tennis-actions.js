@@ -59,20 +59,14 @@ export const getTennisTournamentsFailure = (err) => ({ type: A.GET_TENNIS_TOURNA
 //       const today = new Date();
 //       const thisYear = today.getFullYear();
 
-      // const schedule = response.data.tournaments.filter(t => 
-      //   (
-      //     (t.type == 'singles' && 
-      //     (t.category.level == 'grand_slam' || t.category.level == 'atp_1000' || 
-      //     t.category.level == 'atp_500' || t.category.level == 'wta_championships' || t.category.level == 'wta_premier' ))
-      //     || 
-      //     t.type == 'mixed'
-      //   ) &&
-      //   t.currentSeason.year == thisYear);
+//       const tournaments = response.data.filter(t => 
+//         ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
+//         t.currentSeason.year == thisYear);
 
-//       const sortedSchedule = sortTennisSchedule(schedule);
-//       dispatch(getTennisTournamentsSuccess(sortedSchedule, schedule));
+//       const sortedSchedule = sortTennisSchedule(tournaments);
+//       dispatch(getTennisTournamentsSuccess(sortedSchedule, tournaments));
 //     }).catch(err => {
-//       dispatch(getTennisScheduleFailure(err));
+//       dispatch(getTennisTournamentsFailure(err));
 //       throw(err);
 //     });
 //   };
@@ -99,6 +93,7 @@ export const getTennisTournaments = () => {
 export const getTennisTournamentScheduleRequest = () => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST });
 export const getTennisTournamentScheduleSuccess = (payload) => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS, payload });
 export const getTennisTournamentScheduleFailure = (err) => ({ type: A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE, err });
+export const clearTennisTournamentScheduleSuccess = () => ({ type: A.CLEAR_TENNIS_TOURNAMENT_SCHEDULE });
 
 // export const getTennisTournamentSchedule = (tournamentId) => {
 //   return (dispatch) => {
@@ -125,10 +120,17 @@ export const getTennisTournamentSchedule = (tournamentId) => {
   };
 };
 
+export const clearTennisTournamentSchedule = () => {
+  return (dispatch) => {
+    dispatch(clearTennisTournamentScheduleSuccess());
+  };
+};
+
 // Get Teams
 export const getTennisTournamentInfoRequest = () => ({ type: A.GET_TENNIS_TOURNAMENT_INFO_REQUEST });
 export const getTennisTournamentInfoSuccess = (payload) => ({ type: A.GET_TENNIS_TOURNAMENT_INFO_SUCCESS, payload });
 export const getTennisTournamentInfoFailure = (err) => ({ type: A.GET_TENNIS_TOURNAMENT_INFO_FAILURE, err });
+export const clearTennisTournamentInfoSuccess = () => ({ type: A.CLEAR_TENNIS_TOURNAMENT_INFO });
 
 // export const getTennisTournamentInfo = (tournamentId) => {
 //   return (dispatch) => {
@@ -152,5 +154,11 @@ export const getTennisTournamentInfo = (tournamentId) => {
     await sleep(1000);
     dispatch(getTennisTournamentInfoSuccess(TOURNAMENT_INFO));
     return TOURNAMENT_INFO;
+  };
+};
+
+export const clearTennisTournamentInfo = () => {
+  return (dispatch) => {
+    dispatch(clearTennisTournamentInfoSuccess());
   };
 };

@@ -14,11 +14,11 @@ function TennisMatchup({ match }) {
 
   return (
     <Row>
-      <Col span={3} className="capitalise">{match.tournament_round.name.replace(/_/g, ' ')}</Col>
-      <Col span={1}>{player1.country_code}</Col>
+      <Col span={3} className="capitalise">{match.tournamentRound.name.replace(/_/g, ' ')}</Col>
+      <Col span={1}>{player1.countryCode}</Col>
       <Col span={6}>{player1.name} {(player1.seed) && '[' + player1.seed + ']'}</Col>
       <Col span={1}>vs</Col>
-      <Col span={1}>{player2.country_code}</Col>
+      <Col span={1}>{player2.countryCode}</Col>
       <Col span={6}>{player2.name} {(player2.seed) && '[' + player2.seed + ']'}</Col>
       <Col span={3}>{getDayMonthDate(match.scheduled)}</Col>
       <Col span={3} className="capitalise">{match.status.replace(/_/g, ' ')}</Col>

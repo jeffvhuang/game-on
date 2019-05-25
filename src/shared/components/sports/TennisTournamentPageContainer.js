@@ -5,7 +5,10 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getTennisTournamentSchedule, getTennisTournamentInfo } from '../../redux/actions/tennis-actions';
+import { getTennisTournamentSchedule,
+  getTennisTournamentInfo,
+  clearTennisTournamentSchedule,
+  clearTennisTournamentInfo } from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
@@ -22,35 +25,39 @@ class TennisTournamentPageContainer extends React.Component {
     super(props);
 
     const tournamentId = "sr:tournament:" + props.match.params.tournamentNumber;
-    const tournament = props.tennis.tournamentSchedules.find(t => t.tournament.id == tournamentId);
-    const tournamentInfo = props.tennis.tournamentInfo.find(t => t.tournament.id == tournamentId);
+    const tournamentInfo = props.tennis.tournamentInfo;
+    const tournamentSchedule = props.tennis.tournamentSchedule;
+    let isSameTournamentInfo = true;
+
+    if (!tournamentInfo.tournament || tournamentInfo.tournament.id !== tournamentId) {
+      isSameTournamentInfo = false;
+      props.actions.clearTennisTournamentInfo();
+    }
+
+    if (tournamentSchedule.length > 0 && tournamentSchedule[0].tournament.id !== tournamentId) {
+      props.actions.clearTennisTournamentSchedule();
+    }
 
     this.state = {
       tournamentId: tournamentId,
       values: [],
-      matches: (tournament) ? tournament.sport_events : [],
-      tournamentName: (tournament) ? tournament.tournament.name : '',
-      competitors: (tournamentInfo) ? tournamentInfo.competitors : []
+      tournamentName: (isSameTournamentInfo) ? tournamentInfo.tournament.name : '',
     };
   }
 
   componentDidMount() {
     const props = this.props;
     const tournamentId = this.state.tournamentId;
-    // if (props.tennis.videos.length < 1) {
-    //   props.actions.getChampionsLeagueVideos();
-    //   props.actions.getEuropaLeagueVideos();
-    // } 
-    if (!props.tennis.tournamentSchedules.some(t => t.tournament.id == tournamentId)) 
-      props.actions.getTennisTournamentSchedule(tournamentId)
-        .then(data => this.setState({ 
-          matches: data.sport_events,
-          tournamentName: data.tournament.name
-        }));
+    const tournamentInfo = props.tennis.tournamentInfo;
+    const tournamentSchedule = props.tennis.tournamentSchedule;
+
+    if (tournamentSchedule.length < 1 || 
+      (tournamentSchedule.length > 0 && tournamentSchedule[0].tournament.id !== tournamentId)) 
+      props.actions.getTennisTournamentSchedule(tournamentId);
     
-    if (!props.tennis.tournamentInfo.some(t => t.tournament.id == tournamentId)) 
-      props.actions.getTennisTournamentInfo(tournamentId)
-        .then(data => this.setState({ competitors: data.competitors }));
+    if (!tournamentInfo.tournament || tournamentInfo.tournament.id !== tournamentId) 
+      props.actions.getTennisTournamentInfo(tournamentId).then(data => 
+        this.setState({ tournamentName: data.tournament.currentSeason.name }));
   }
 
   handleChange = values => this.setState({ values });
@@ -58,20 +65,16 @@ class TennisTournamentPageContainer extends React.Component {
   render() {
     return (
       <div>
-        <div className="section">
-          <div className="mid-flex">
-            <video controls width="600" height="400" />
-          </div>
-        </div>
         <h1>{this.state.tournamentName}</h1>
-        <SelectDropdown handleChange={this.handleChange} options={this.state.competitors} />
+        <SelectDropdown handleChange={this.handleChange}
+          options={this.props.tennis.tournamentInfo.competitors || []} />
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
           showCount={4}
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/Tennis/tennis'} /> */}
         <div className="section">
-          <TennisMatches games={this.state.matches}
+          <TennisMatches games={this.props.tennis.tournamentSchedule}
             header="Matches"
             values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
@@ -90,7 +93,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({ 
     getTennisTournamentSchedule,
-    getTennisTournamentInfo }, dispatch)
+    getTennisTournamentInfo,
+    clearTennisTournamentSchedule,
+    clearTennisTournamentInfo }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);

@@ -36,7 +36,6 @@ class BasketballPageContainer extends React.Component {
   handleChange = values => this.setState({ values });
 
   render() {
-    console.log('values', this.state.values);
     return (
       <div>
         {/* <VideoHeader /> */}
