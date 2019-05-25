@@ -12,7 +12,7 @@ DotaTournamentDate.propTypes = {
 
 function DotaTournamentDate({ tournament }) {
   return (
-    <Link to={paths.ESPORTS + '/dota/' + tournament.seriesId}>
+    <Link to={paths.ESPORTS + '/dota/' + tournament.id}>
       <Row>
         <Col span={14}>
           {(tournament.league) && tournament.league.name} {(tournament.series) && tournament.series.name} {tournament.name}

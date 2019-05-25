@@ -10,7 +10,7 @@ import { getDotaVideos, getDotaTournaments, getDotaTeams } from '../../redux/act
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
-import DotaTournaments from './DotaTournaments';
+import DotaMatches from './DotaMatches';
 
 const propTypes = {
   match: object,
@@ -18,20 +18,30 @@ const propTypes = {
   actions: object.isRequired
 };
 
-class DotaPageContainer extends React.Component {
+class DotaTournamentPageContainer extends React.Component {
   constructor(props) {
     super(props);
 
+    const tournamentId = props.match.params.tournamentNumber;
+    const tournaments = props.dota.tournaments;
+    let tournament;
+    if (tournaments > 0) tournament = tournaments.find(t => t.id == tournamentId);
+
     this.state = {
-      values: []
+      values: [],
+      tournamentId: tournamentId,
+      tournament: (tournament) ? tournament : { matches: [] }
     };
   }
 
   componentDidMount() {
     const props = this.props;
-    // if (props.dota.videos.length < 1) props.actions.getDotaVideos();
     // if (props.dota.teams.length < 1) props.actions.getDotaTeams();
-    if (props.dota.tournaments.length < 1) props.actions.getDotaTournaments();
+    if (props.dota.tournaments.length < 1)
+      props.actions.getDotaTournaments().then(data => {
+        const tournament = data.find(t => t.id == this.state.tournamentId);
+        if (tournament) this.setState({ tournament });
+      });
   }
 
   handleChange = values => this.setState({ values });
@@ -45,22 +55,11 @@ class DotaPageContainer extends React.Component {
     return (
       <div>
         <h1>Dota 2</h1>
-        {/* <SelectDropdown handleChange={this.handleChange}
-          options={this.props.dota.teams} /> */}
-        {/* <VideoThumbnails heading="Dota 2 Videos"
-          thumbnails={this.props.dota.thumbnails}
-          showCount={4}
-          showMore
-          showMoreLink={paths.HIGHLIGHTS + '/dota'} /> */}
+        <SelectDropdown handleChange={this.handleChange}
+          options={this.props.dota.teams} />
         <div className="section">
-          <DotaTournaments header="Ongoing"
-            games={this.props.dota.ongoing}
-            values={this.state.values} />
-          <DotaTournaments header="Upcoming"
-            games={this.props.dota.upcoming}
-            values={this.state.values} />
-          <DotaTournaments header="Completed"
-            games={this.props.dota.completed}
+          <DotaMatches header="Matches"
+            games={this.state.tournament.matches}
             values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
@@ -69,7 +68,7 @@ class DotaPageContainer extends React.Component {
   }
 }
 
-DotaPageContainer.propTypes = propTypes;
+DotaTournamentPageContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
   dota: state.dota
@@ -77,11 +76,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    getDotaVideos,
-    getDotaTournaments,
-    getDotaTeams
+    getDotaTournaments
   }, dispatch)
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DotaPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(DotaTournamentPageContainer);
 
