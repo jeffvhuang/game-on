@@ -10,6 +10,7 @@ NbaMatchSchedule.propTypes = {
 
 function NbaMatchSchedule({ game }) {
   const startDate = new Date(game.startTimeUTC);
+  
   return (
     <Row>
       <Col span={7}>{game.vTeam.fullName}</Col>

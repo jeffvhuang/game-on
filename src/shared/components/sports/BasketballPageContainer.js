@@ -28,7 +28,7 @@ class BasketballPageContainer extends React.Component {
 
   componentDidMount() {
     const props = this.props;
-    if (props.nba.videos.length < 1) props.actions.getNbaVideos();
+    // if (props.nba.videos.length < 1) props.actions.getNbaVideos();
     if (props.nba.teams.length < 1) props.actions.getNbaTeams();
     if (props.nba.schedule.length < 1) props.actions.getNbaSchedule();
   }
@@ -36,17 +36,18 @@ class BasketballPageContainer extends React.Component {
   handleChange = values => this.setState({ values });
 
   render() {
+    console.log('values', this.state.values);
     return (
       <div>
         {/* <VideoHeader /> */}
         <h1>Basketball</h1>
         <NbaSelectDropdown handleChange={this.handleChange} 
           teams={this.props.nba.teams} />
-        <VideoThumbnails heading="NBA Videos"
+        {/* <VideoThumbnails heading="NBA Videos"
           thumbnails={this.props.nba.thumbnails}
           showCount={4}
           showMore
-          showMoreLink={paths.HIGHLIGHTS + '/basketball/nba'} />
+          showMoreLink={paths.HIGHLIGHTS + '/basketball/nba'} /> */}
         <div className="section">
           <BasketballScheduleSection header="Today's Games"
             games={this.props.nba.gamesToday}

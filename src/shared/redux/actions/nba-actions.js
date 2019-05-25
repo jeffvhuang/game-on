@@ -84,9 +84,9 @@ export const getNbaTeamsFailure = (err) => ({ type: A.GET_NBA_TEAMS_FAILURE, err
 //     dispatch(getNbaTeamsRequest());
 //     return axios({
 //       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.SCHEDULE
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.TEAMS
 //     }).then(response => {
-//       const nbaTeams = response.data.api.teams.filter(team => team.nbaFranchise == '1');
+//       const nbaTeams = response.data.filter(team => team.nbaFranchise == '1');
 //       dispatch(getNbaTeamsSuccess(nbaTeams));
 //     }).catch(err => {
 //       dispatch(getNbaTeamsFailure(err));

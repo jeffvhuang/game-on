@@ -35,10 +35,10 @@ export function sortNBASchedule(data) {
   const upcoming = [];
   const beforeToday = [];
   const dateToday = new Date();
-  // const now = Date.now();
 
   data.forEach(game => {
     const gamesDate = new Date(game.startTimeUTC);
+
     if (isSameDate(dateToday, gamesDate)) {
       gamesToday.push(game);
     } else if (gamesDate.getTime() > dateToday) {
@@ -59,8 +59,7 @@ export function sortFootballSchedule(data) {
   const today = [];
   const upcomingGames = [];
   const before = [];
-  // const dateToday = new Date();
-  const dateToday = new Date(2019, 2, 2); // temp for dev env
+  const dateToday = new Date();
 
   // Separate into games past, today and upcoming
   data.forEach(game => {
