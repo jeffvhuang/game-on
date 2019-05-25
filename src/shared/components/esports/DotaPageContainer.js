@@ -60,7 +60,7 @@ class DotaPageContainer extends React.Component {
             values={this.state.values} />
           <DotaTournaments header="Completed"
             games={this.props.dota.completed}
-            alues={this.state.values} />
+            values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>

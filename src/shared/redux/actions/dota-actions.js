@@ -50,9 +50,10 @@ export const getDotaTournamentsFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENT
 // export const getDotaTournaments = () => {
 //   return (dispatch) => {
 //     dispatch(getDotaTournamentsRequest());
-//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.dota + gameonAPI.TOURNAMENTS)
+//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.TOURNAMENTS)
 //       .then(response => {
-//         dispatch(getDotaTournamentsSuccess(response.data.tournaments));
+//         const sortedSchedule = sortESportsSchedule(response.data);
+//         dispatch(getDotaTournamentsSuccess(sortedSchedule, response.data));
 //       })
 //       .catch(err => {
 //         dispatch(getDotaTournamentsFailure(err));
@@ -66,15 +67,7 @@ export const getDotaTournaments = () => {
   return async (dispatch) => {
     dispatch(getDotaTournamentsRequest());
     await sleep(1000);
-    const today = new Date();
-    const thisYear = today.getFullYear();
-
-    // const tournaments = TOURNAMENTS.tournaments.filter(t => 
-    //   ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
-    //   t.currentSeason.year == thisYear);
-
     const sortedSchedule = sortESportsSchedule(TOURNAMENTS);
-
     return dispatch(getDotaTournamentsSuccess(sortedSchedule, TOURNAMENTS));
   };
 };

@@ -14,7 +14,9 @@ function DotaTournamentDate({ tournament }) {
   return (
     <Link to={paths.ESPORTS + '/dota/' + tournament.seriesId}>
       <Row>
-        <Col span={14}>{tournament.league.name} {tournament.series.name} {tournament.name}</Col>
+        <Col span={14}>
+          {(tournament.league) && tournament.league.name} {(tournament.series) && tournament.series.name} {tournament.name}
+        </Col>
         <Col span={4}>{getDayMonthDate(tournament.beginAt)}</Col>
         <Col span={2}>-</Col>
         <Col span={4}>{getDayMonthDate(tournament.endAt)}</Col>
