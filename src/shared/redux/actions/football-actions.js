@@ -125,7 +125,7 @@ export const getEplScheduleFailure = (err) => ({ type: A.GET_EPL_SCHEDULE_FAILUR
 //       method: 'get',
 //       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.SCHEDULE,
 //     }).then(response => {
-//       const sortedSchedule = sortEplSchedule(response.data);
+//       const sortedSchedule = sortFootballSchedule(response.data);
 //       dispatch(getEplScheduleSuccess(sortedSchedule, response.data));
 //     }).catch(err => {
 //       dispatch(getEplScheduleFailure(err));
@@ -183,9 +183,9 @@ export const getChampionsLeagueScheduleFailure = (err) => ({ type: C.GET_CHAMPIO
 //     dispatch(getChampionsLeagueScheduleRequest());
 //     return axios({
 //       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.SCHEDULE,
+//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CHAMPIONS_LEAGUE + gameonAPI.SCHEDULE,
 //     }).then(response => {
-//       const sortedSchedule = sortChampionsLeagueSchedule(response.data);
+//       const sortedSchedule = sortFootballSchedule(response.data);
 //       dispatch(getChampionsLeagueScheduleSuccess(sortedSchedule, response.data));
 //     }).catch(err => {
 //       dispatch(getChampionsLeagueScheduleFailure(err));
@@ -245,7 +245,7 @@ export const getEuropaLeagueScheduleFailure = (err) => ({ type: E.GET_EUROPA_LEA
 //       method: 'get',
 //       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.SCHEDULE,
 //     }).then(response => {
-//       const sortedSchedule = sortEuropaLeagueSchedule(response.data);
+//       const sortedSchedule = sortFootballSchedule(response.data);
 //       dispatch(getEuropaLeagueScheduleSuccess(sortedSchedule, response.data));
 //     }).catch(err => {
 //       dispatch(getEuropaLeagueScheduleFailure(err));

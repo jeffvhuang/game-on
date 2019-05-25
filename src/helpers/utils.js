@@ -35,13 +35,13 @@ export function sortNBASchedule(data) {
   const upcoming = [];
   const beforeToday = [];
   const dateToday = new Date();
-  const now = Date.now();
+  // const now = Date.now();
 
   data.forEach(game => {
     const gamesDate = new Date(game.startTimeUTC);
     if (isSameDate(dateToday, gamesDate)) {
       gamesToday.push(game);
-    } else if (gamesDate.getTime() > now) {
+    } else if (gamesDate.getTime() > dateToday) {
       upcoming.push(game);
     } else {
       beforeToday.push(game);
@@ -59,9 +59,8 @@ export function sortFootballSchedule(data) {
   const today = [];
   const upcomingGames = [];
   const before = [];
-  const dateToday = new Date();
-  // const now = Date.now();
-  const now = new Date(2019, 1, 1); // temp for dev env
+  // const dateToday = new Date();
+  const dateToday = new Date(2019, 2, 2); // temp for dev env
 
   // Separate into games past, today and upcoming
   data.forEach(game => {
@@ -70,7 +69,7 @@ export function sortFootballSchedule(data) {
     // Does not separate between those that are on today but completed
     if (isSameDate(dateToday, gamesDate)) {
       today.push(game);
-    } else if (gamesDate.getTime() > now) {
+    } else if (gamesDate.getTime() > dateToday) {
       upcomingGames.push(game);
     } else {
       before.push(game);
@@ -78,15 +77,15 @@ export function sortFootballSchedule(data) {
   });
 
   // Sort each one by date
-  const gamesToday = sortEplByDate(today);
-  const upcoming = sortEplByDate(upcomingGames);
-  const beforeToday = sortEplByDate(before);
+  const gamesToday = sortFootballByDate(today);
+  const upcoming = sortFootballByDate(upcomingGames);
+  const beforeToday = sortFootballByDate(before);
 
   return { gamesToday, upcoming, beforeToday };
 }
 
 // Sort by date for epl api's data
-function sortEplByDate(data) {
+function sortFootballByDate(data) {
   return data.sort(function(a, b) {
     const dateA = a.eventTimestamp;
     const dateB = b.eventTimestamp;
