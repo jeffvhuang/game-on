@@ -122,24 +122,25 @@ function sortTennisByDate(data) {
 }
 
 export function sortESportsSchedule(data) {
-  const ongoingTournaments = [];
-  const upcomingTournaments = [];
-  const completedTournaments = [];
-  const now = Date.now();
+  const matchesToday = [];
+  const upcoming = [];
+  const beforeToday = [];
+  const dateToday = new Date();
 
-  // Separate tournaments into past, ongoing and upcoming
-  data.forEach(t => {
-    if (new Date(t.beginAt) > now) upcomingTournaments.push(t);
-    else if (new Date(t.endAt) < now) completedTournaments.push(t);
-    else ongoingTournaments.push(t);
+  // Separate matches into today, upcoming and beforeToday
+  data.forEach(match => {
+    const matchDate = new Date(match.beginAt);
+
+    if (isSameDate(dateToday, matchDate)) {
+      matchesToday.push(match);
+    } else if (matchDate.getTime() > dateToday) {
+      upcoming.push(match);
+    } else {
+      beforeToday.push(match);
+    }
   });
 
-  // Sort each one by date
-  const ongoing = sortESportByDate(ongoingTournaments);
-  const upcoming = sortESportByDate(upcomingTournaments);
-  const completed = sortESportByDate(completedTournaments);
-
-  return { ongoing, upcoming, completed };
+  return { matchesToday, upcoming, beforeToday };
 }
 
 function sortESportByDate(data) {

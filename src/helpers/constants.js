@@ -69,7 +69,9 @@ export const gameonAPI = {
   CSGO: '/csgo',
   TOURNAMENTS: '/tournaments',
   SCHEDULE: '/schedule',
-  TEAMS: '/teams'
+  TEAMS: '/teams',
+  SERIES: '/series',
+  MATCHES: '/matches'
 };
 
 // Third party APIs
