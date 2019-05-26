@@ -2,7 +2,7 @@ import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
 import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
-import { sleep, sortESportsSchedule } from '../../../helpers/utils';
+import { sleep, sortESportsMatches } from '../../../helpers/utils';
 
 // Temporary seed data
 import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
@@ -127,7 +127,7 @@ export const getDotaMatches = () => {
   return async (dispatch) => {
     dispatch(getDotaMatchesRequest());
     await sleep(1000);
-    const sortedSchedule = sortESportsSchedule(MATCHES);
+    const sortedSchedule = sortESportsMatches(MATCHES);
     dispatch(getDotaMatchesSuccess(sortedSchedule, MATCHES));
     return MATCHES;
   };

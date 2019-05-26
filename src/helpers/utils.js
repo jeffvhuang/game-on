@@ -56,9 +56,9 @@ export function sortNBASchedule(data) {
  * @param {array} data 
  */
 export function sortFootballSchedule(data) {
-  const today = [];
-  const upcomingGames = [];
-  const before = [];
+  const gamesToday = [];
+  const upcoming = [];
+  const beforeToday = [];
   const dateToday = new Date();
 
   // Separate into games past, today and upcoming
@@ -67,18 +67,18 @@ export function sortFootballSchedule(data) {
     
     // Does not separate between those that are on today but completed
     if (isSameDate(dateToday, gamesDate)) {
-      today.push(game);
+      gamesToday.push(game);
     } else if (gamesDate.getTime() > dateToday) {
-      upcomingGames.push(game);
+      upcoming.push(game);
     } else {
-      before.push(game);
+      beforeToday.push(game);
     }
   });
 
   // Sort each one by date
-  const gamesToday = sortFootballByDate(today);
-  const upcoming = sortFootballByDate(upcomingGames);
-  const beforeToday = sortFootballByDate(before);
+  sortFootballByDate(gamesToday);
+  sortFootballByDate(upcoming);
+  sortFootballByDate(beforeToday);
 
   return { gamesToday, upcoming, beforeToday };
 }
@@ -93,22 +93,22 @@ function sortFootballByDate(data) {
 }
 
 export function sortTennisSchedule(data) {
-  const ongoingTournaments = [];
-  const upcomingTournaments = [];
-  const completedTournaments = [];
+  const ongoing = [];
+  const upcoming = [];
+  const completed = [];
   const now = Date.now();
 
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
-    if (new Date(t.currentSeason.startDate) > now) upcomingTournaments.push(t);
-    else if (new Date(t.currentSeason.endDate) < now) completedTournaments.push(t);
-    else ongoingTournaments.push(t);
+    if (new Date(t.currentSeason.startDate) > now) upcoming.push(t);
+    else if (new Date(t.currentSeason.endDate) < now) completed.push(t);
+    else ongoing.push(t);
   });
 
   // Sort each one by date
-  const ongoing = sortTennisByDate(ongoingTournaments);
-  const upcoming = sortTennisByDate(upcomingTournaments);
-  const completed = sortTennisByDate(completedTournaments);
+  sortTennisByDate(ongoing);
+  sortTennisByDate(upcoming);
+  sortTennisByDate(completed);
 
   return { ongoing, upcoming, completed };
 }
@@ -121,10 +121,36 @@ function sortTennisByDate(data) {
   });
 }
 
-export function sortESportsSchedule(data) {
-  const gamesToday = [];
-  const upcomingGames = [];
-  const pastGames = [];
+export function sortESportsTournaments(data) {
+  const ongoing = [];
+  const upcoming = [];
+  const completed = [];
+  const dateToday = new Date();
+
+  // Separate matches into today followed by upcoming and past
+  data.forEach(tournament => {
+    const matchDate = new Date(tournament.beginAt);
+
+    if (isSameDate(dateToday, matchDate)) {
+      ongoing.push(tournament);
+    } else if (matchDate.getTime() > dateToday) {
+      upcoming.push(tournament);
+    } else {
+      completed.push(tournament);
+    }
+  });
+
+  sortESportByDate(ongoing);
+  sortESportByDate(upcoming);
+  sortESportByDate(completed);
+
+  return { ongoing, upcoming, completed };
+}
+
+export function sortESportsMatches(data) {
+  const today = [];
+  const upcoming = [];
+  const past = [];
   const dateToday = new Date();
 
   // Separate matches into today followed by upcoming and past
@@ -132,17 +158,17 @@ export function sortESportsSchedule(data) {
     const matchDate = new Date(match.beginAt);
 
     if (isSameDate(dateToday, matchDate)) {
-      gamesToday.push(match);
+      today.push(match);
     } else if (matchDate.getTime() > dateToday) {
-      upcomingGames.push(match);
+      upcoming.push(match);
     } else {
-      pastGames.push(match);
+      past.push(match);
     }
   });
 
-  const today = sortESportByDate(gamesToday);
-  const upcoming = sortESportByDate(upcomingGames);
-  const past = sortESportByDate(pastGames);
+  sortESportByDate(today);
+  sortESportByDate(upcoming);
+  sortESportByDate(past);
 
   return { today, upcoming, past };
 }
