@@ -8,7 +8,7 @@ import { paths } from '../../../helpers/constants';
 import { getDotaVideos, getDotaMatches, getDotaSeries } from '../../redux/actions/dota-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
-import SelectDropdown from '../common/SelectDropdown';
+import DotaMatchesSelectDropdown from './DotaMatchesSelectDropdown';
 import DotaMatches from './DotaMatches';
 
 const propTypes = {
@@ -28,7 +28,7 @@ class DotaPageContainer extends React.Component {
 
   componentDidMount() {
     const props = this.props;
-    // if (props.dota.series.length < 1) props.actions.getDotaSeries();
+    if (props.dota.series.length < 1) props.actions.getDotaSeries();
     if (props.dota.matches.length < 1) props.actions.getDotaMatches();
   }
 
@@ -38,7 +38,7 @@ class DotaPageContainer extends React.Component {
     return (
       <div>
         <h1>Dota 2</h1>
-        <SelectDropdown handleChange={this.handleChange}
+        <DotaMatchesSelectDropdown handleChange={this.handleChange}
           options={this.props.dota.series} />
         <div className="section">
           <DotaMatches header="Today"

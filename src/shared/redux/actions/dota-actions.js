@@ -113,7 +113,8 @@ export const getDotaMatchesFailure = (err) => ({ type: A.GET_DOTA_MATCHES_FAILUR
 //     dispatch(getDotaMatchesRequest());
 //     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.MATCHES)
 //       .then(response => {
-//         dispatch(getDotaMatchesSuccess(response.data));
+//         const sortedSchedule = sortESportsSchedule(response.data);
+//         dispatch(getDotaMatchesSuccess(sortedSchedule, response.data));
 //       })
 //       .catch(err => {
 //         dispatch(getDotaMatchesFailure(err));
@@ -128,7 +129,7 @@ export const getDotaMatches = () => {
     await sleep(1000);
     const sortedSchedule = sortESportsSchedule(MATCHES);
     dispatch(getDotaMatchesSuccess(sortedSchedule, MATCHES));
-    return TOURNAMENTS;
+    return MATCHES;
   };
 };
 

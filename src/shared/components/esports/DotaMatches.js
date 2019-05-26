@@ -17,7 +17,7 @@ function DotaMatches({ header, matches, values }) {
         matches.map((m, i) => <DotaMatch key={i} match={m} />)
       ) : (
         matches.map((m, i) => {
-          if (values.some(v => v == m.seriesId)) {
+          if (values.some(v => v == m.seriesId || v == m.leagueId)) {
             return <DotaMatch key={i} match={m} />;
           }
         })
