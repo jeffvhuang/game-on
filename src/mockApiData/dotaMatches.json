@@ -1,0 +1,6394 @@
+[
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-adrenaline-cyber-league-2019-lan-finals",
+          "name": "Lan finals",
+          "modifiedAt": "2019-05-25T11:59:32Z",
+          "leagueId": 4224,
+          "id": 2351,
+          "endAt": "2019-05-27T18:00:00Z",
+          "beginAt": "2019-05-24T22:00:00Z",
+          "seriesId": 1779
+      },
+      "winner": null,
+      "seriesId": 1779,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-adrenaline-cyber-league-2019",
+          "season": null,
+          "prizepool": null,
+          "name": null,
+          "leagueId": 4224,
+          "id": 1779,
+          "fullName": "2019",
+          "endAt": "2019-05-27T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-04-17T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1669,
+              "score": 0
+          },
+          {
+              "teamId": 1651,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "virtus-pro",
+                  "name": "Virtus.pro",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1651/Virtus_pro_logo.png",
+                  "id": 1651,
+                  "acronym": "VP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-spirit",
+                  "name": "Team Spirit",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1669/Team_Spirit.png",
+                  "id": 1669,
+                  "acronym": "TSpirit"
+              }
+          }
+      ],
+      "leagueId": 4224,
+      "league": {
+          "url": null,
+          "slug": "dota-2-adrenaline-cyber-league",
+          "name": "Adrenaline Cyber League",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4224/Adrenaline_Cyber_League.png",
+          "id": 4224
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545080,
+              "length": null,
+              "id": 652779,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545080,
+              "length": null,
+              "id": 652780,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545080,
+              "length": null,
+              "id": 652781,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 4,
+              "matchId": 545080,
+              "length": null,
+              "id": 652782,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 5,
+              "matchId": 545080,
+              "length": null,
+              "id": 652783,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2351,
+      "status": "not_started",
+      "slug": "2019-05-26-224819d6-1813-46f0-84ad-fc01af6209a6",
+      "numberOfGames": 5,
+      "name": "Final",
+      "matchType": "best_of",
+      "live": {
+          "url": null,
+          "supported": false,
+          "opensAt": null
+      },
+      "id": 545080,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-05-26T12:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-adrenaline-cyber-league-2019-lan-finals",
+          "name": "Lan finals",
+          "modifiedAt": "2019-05-25T11:59:32Z",
+          "leagueId": 4224,
+          "id": 2351,
+          "endAt": "2019-05-27T18:00:00Z",
+          "beginAt": "2019-05-24T22:00:00Z",
+          "seriesId": 1779
+      },
+      "winner": {
+          "slug": "virtus-pro",
+          "name": "Virtus.pro",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1651/Virtus_pro_logo.png",
+          "id": 1651,
+          "acronym": "VP"
+      },
+      "seriesId": 1779,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-adrenaline-cyber-league-2019",
+          "season": null,
+          "prizepool": null,
+          "name": null,
+          "leagueId": 4224,
+          "id": 1779,
+          "fullName": "2019",
+          "endAt": "2019-05-27T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-04-17T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1651,
+              "score": 2
+          },
+          {
+              "teamId": 1699,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "natus-vincere",
+                  "name": "Natus Vincere",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+                  "id": 1699,
+                  "acronym": "Na`Vi"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "virtus-pro",
+                  "name": "Virtus.pro",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1651/Virtus_pro_logo.png",
+                  "id": 1651,
+                  "acronym": "VP"
+              }
+          }
+      ],
+      "leagueId": 4224,
+      "league": {
+          "url": null,
+          "slug": "dota-2-adrenaline-cyber-league",
+          "name": "Adrenaline Cyber League",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4224/Adrenaline_Cyber_League.png",
+          "id": 4224
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1651
+              },
+              "position": 1,
+              "matchId": 545079,
+              "length": 1543,
+              "id": 652776,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T16:06:56Z",
+              "beginAt": "2019-05-25T15:41:13Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 2,
+              "matchId": 545079,
+              "length": 3672,
+              "id": 652777,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T17:35:52Z",
+              "beginAt": "2019-05-25T16:34:40Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1651
+              },
+              "position": 3,
+              "matchId": 545079,
+              "length": 2492,
+              "id": 652778,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T18:44:16Z",
+              "beginAt": "2019-05-25T18:02:44Z"
+          }
+      ],
+      "winnerId": 1651,
+      "tournamentId": 2351,
+      "status": "finished",
+      "slug": "natus-vincere-vs-virtus-pro-2019-05-25",
+      "numberOfGames": 3,
+      "name": "Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": null,
+          "supported": false,
+          "opensAt": null
+      },
+      "id": 545079,
+      "forfeit": false,
+      "endAt": "2019-05-25T18:44:16Z",
+      "draw": false,
+      "beginAt": "2019-05-25T15:41:13Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-adrenaline-cyber-league-2019-lan-finals",
+          "name": "Lan finals",
+          "modifiedAt": "2019-05-25T11:59:32Z",
+          "leagueId": 4224,
+          "id": 2351,
+          "endAt": "2019-05-27T18:00:00Z",
+          "beginAt": "2019-05-24T22:00:00Z",
+          "seriesId": 1779
+      },
+      "winner": {
+          "slug": "team-spirit",
+          "name": "Team Spirit",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1669/Team_Spirit.png",
+          "id": 1669,
+          "acronym": "TSpirit"
+      },
+      "seriesId": 1779,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-adrenaline-cyber-league-2019",
+          "season": null,
+          "prizepool": null,
+          "name": null,
+          "leagueId": 4224,
+          "id": 1779,
+          "fullName": "2019",
+          "endAt": "2019-05-27T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-04-17T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1669,
+              "score": 2
+          },
+          {
+              "teamId": 1653,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "evil-geniuses-dota-2",
+                  "name": "Evil Geniuses",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1653/Evil_Geniuses.png",
+                  "id": 1653,
+                  "acronym": "EG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-spirit",
+                  "name": "Team Spirit",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1669/Team_Spirit.png",
+                  "id": 1669,
+                  "acronym": "TSpirit"
+              }
+          }
+      ],
+      "leagueId": 4224,
+      "league": {
+          "url": null,
+          "slug": "dota-2-adrenaline-cyber-league",
+          "name": "Adrenaline Cyber League",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4224/Adrenaline_Cyber_League.png",
+          "id": 4224
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1669
+              },
+              "position": 1,
+              "matchId": 545078,
+              "length": 2595,
+              "id": 652773,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T13:06:01Z",
+              "beginAt": "2019-05-25T12:22:46Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1669
+              },
+              "position": 2,
+              "matchId": 545078,
+              "length": 2037,
+              "id": 652774,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T14:21:56Z",
+              "beginAt": "2019-05-25T13:47:59Z"
+          }
+      ],
+      "winnerId": 1669,
+      "tournamentId": 2351,
+      "status": "finished",
+      "slug": "evil-geniuses-vs-team-spirit-2019-05-25",
+      "numberOfGames": 3,
+      "name": "Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": null,
+          "supported": false,
+          "opensAt": null
+      },
+      "id": 545078,
+      "forfeit": false,
+      "endAt": "2019-05-25T14:21:56Z",
+      "draw": false,
+      "beginAt": "2019-05-25T12:22:46Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "team-colizeum-ru",
+          "name": "Team Colizeum RU",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126052/147px-Colizeum.png",
+          "id": 126052,
+          "acronym": "CZM RU"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126052,
+              "score": 1
+          },
+          {
+              "teamId": 125858,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-colizeum-ru",
+                  "name": "Team Colizeum RU",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126052/147px-Colizeum.png",
+                  "id": 126052,
+                  "acronym": "CZM RU"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "black-hornets-gaming",
+                  "name": "Black Hornets Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125858/black_hroent_gaming.png",
+                  "id": 125858,
+                  "acronym": "Hornets"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126052
+              },
+              "position": 1,
+              "matchId": 545077,
+              "length": 3147,
+              "id": 652768,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T18:59:29Z",
+              "beginAt": "2019-05-21T18:07:02Z"
+          }
+      ],
+      "winnerId": 126052,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "team-colizeum-ru-vs-black-hornets-gaming-2019-05-21",
+      "numberOfGames": 1,
+      "name": "Group A Tiebreaker: CZM RU vs Hornets",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545077",
+          "supported": true,
+          "opensAt": "2019-05-21T17:07:02Z"
+      },
+      "id": 545077,
+      "forfeit": false,
+      "endAt": "2019-05-21T18:59:29Z",
+      "draw": false,
+      "beginAt": "2019-05-21T18:07:02Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "keen-gaming",
+          "name": "KEEN GAMING",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+          "id": 1673,
+          "acronym": "KG"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1673,
+              "score": 1
+          },
+          {
+              "teamId": 126050,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rtphoon-e-sports-club",
+                  "name": "Typhoon E-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+                  "id": 126050,
+                  "acronym": "Typhoon"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 1,
+              "matchId": 544984,
+              "length": 1914,
+              "id": 652765,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T14:10:58Z",
+              "beginAt": "2019-05-21T13:39:04Z"
+          }
+      ],
+      "winnerId": 1673,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "keen-gaming-vs-typhoon-e-sports-club-2019-05-21-7fedb394-07bc-45ff-8fa8-12385863e214",
+      "numberOfGames": 1,
+      "name": "Group B Tiebreaker: KG vs Typhoon",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544984",
+          "supported": true,
+          "opensAt": "2019-05-21T12:39:04Z"
+      },
+      "id": 544984,
+      "forfeit": false,
+      "endAt": "2019-05-21T14:10:58Z",
+      "draw": false,
+      "beginAt": "2019-05-21T13:39:04Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "rtphoon-e-sports-club",
+          "name": "Typhoon E-Sports Club",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+          "id": 126050,
+          "acronym": "Typhoon"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126050,
+              "score": 1
+          },
+          {
+              "teamId": 3360,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-aster",
+                  "name": "Team Aster",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3360/Team_Aster_logo.png",
+                  "id": 3360,
+                  "acronym": "Aster"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rtphoon-e-sports-club",
+                  "name": "Typhoon E-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+                  "id": 126050,
+                  "acronym": "Typhoon"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126050
+              },
+              "position": 1,
+              "matchId": 544983,
+              "length": 2366,
+              "id": 652764,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T13:12:38Z",
+              "beginAt": "2019-05-21T12:33:12Z"
+          }
+      ],
+      "winnerId": 126050,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "team-aster-vs-typhoon-e-sports-club-2019-05-21-1ef9de4e-fc92-4be9-95ec-c946fd3cddd1",
+      "numberOfGames": 1,
+      "name": "Group B Tiebreaker: Aster vs Typhoon",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544983",
+          "supported": true,
+          "opensAt": "2019-05-21T11:33:12Z"
+      },
+      "id": 544983,
+      "forfeit": false,
+      "endAt": "2019-05-21T13:12:38Z",
+      "draw": false,
+      "beginAt": "2019-05-21T12:33:12Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "keen-gaming",
+          "name": "KEEN GAMING",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+          "id": 1673,
+          "acronym": "KG"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1673,
+              "score": 1
+          },
+          {
+              "teamId": 3360,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-aster",
+                  "name": "Team Aster",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3360/Team_Aster_logo.png",
+                  "id": 3360,
+                  "acronym": "Aster"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 1,
+              "matchId": 544982,
+              "length": 1651,
+              "id": 652763,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T12:02:56Z",
+              "beginAt": "2019-05-21T11:35:25Z"
+          }
+      ],
+      "winnerId": 1673,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "team-aster-vs-keen-gaming-2019-05-21-7ec25680-b2bd-4667-abf0-0a713c493baf",
+      "numberOfGames": 1,
+      "name": "Group B Tiebreaker: Aster vs KG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544982",
+          "supported": true,
+          "opensAt": "2019-05-21T10:35:25Z"
+      },
+      "id": 544982,
+      "forfeit": false,
+      "endAt": "2019-05-21T12:02:56Z",
+      "draw": false,
+      "beginAt": "2019-05-21T11:35:25Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+          "name": "Qualifier southeast asia",
+          "modifiedAt": "2019-05-21T14:38:26Z",
+          "leagueId": 4120,
+          "id": 2375,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "mineski-dota-2",
+          "name": "Mineski",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+          "id": 1677,
+          "acronym": "Mski"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1677,
+              "score": 2
+          },
+          {
+              "teamId": 126030,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mineski-dota-2",
+                  "name": "Mineski",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+                  "id": 1677,
+                  "acronym": "Mski"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "power-of-mysg",
+                  "name": "Power of MYSG",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                  "id": 126030,
+                  "acronym": "MYSG"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1677
+              },
+              "position": 1,
+              "matchId": 544934,
+              "length": 2354,
+              "id": 652706,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T09:20:26Z",
+              "beginAt": "2019-05-24T08:41:12Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1677
+              },
+              "position": 2,
+              "matchId": 544934,
+              "length": 2262,
+              "id": 652707,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T10:21:49Z",
+              "beginAt": "2019-05-24T09:44:07Z"
+          }
+      ],
+      "winnerId": 1677,
+      "tournamentId": 2375,
+      "status": "finished",
+      "slug": "2019-05-24-ccae8c9e-afef-4027-9a2e-eff4b090d05a",
+      "numberOfGames": 3,
+      "name": "Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544934",
+          "supported": true,
+          "opensAt": "2019-05-24T07:41:12Z"
+      },
+      "id": 544934,
+      "forfeit": false,
+      "endAt": "2019-05-24T10:21:49Z",
+      "draw": false,
+      "beginAt": "2019-05-24T08:41:12Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+          "name": "Qualifier southeast asia",
+          "modifiedAt": "2019-05-21T14:38:26Z",
+          "leagueId": 4120,
+          "id": 2375,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "power-of-mysg",
+          "name": "Power of MYSG",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+          "id": 126030,
+          "acronym": "MYSG"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126030,
+              "score": 2
+          },
+          {
+              "teamId": 126035,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "adroit",
+                  "name": "Adroit",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+                  "id": 126035,
+                  "acronym": "Adroit"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "power-of-mysg",
+                  "name": "Power of MYSG",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                  "id": 126030,
+                  "acronym": "MYSG"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126030
+              },
+              "position": 1,
+              "matchId": 544933,
+              "length": 1857,
+              "id": 652703,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T06:32:24Z",
+              "beginAt": "2019-05-24T06:01:27Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126030
+              },
+              "position": 2,
+              "matchId": 544933,
+              "length": 1896,
+              "id": 652704,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T07:31:26Z",
+              "beginAt": "2019-05-24T06:59:50Z"
+          }
+      ],
+      "winnerId": 126030,
+      "tournamentId": 2375,
+      "status": "finished",
+      "slug": "2019-05-24-392d7e6b-2b26-4b5d-8470-721b37bde952",
+      "numberOfGames": 3,
+      "name": "Lower Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544933",
+          "supported": true,
+          "opensAt": "2019-05-24T05:01:27Z"
+      },
+      "id": 544933,
+      "forfeit": false,
+      "endAt": "2019-05-24T07:31:26Z",
+      "draw": false,
+      "beginAt": "2019-05-24T06:01:27Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+          "name": "Qualifier southeast asia",
+          "modifiedAt": "2019-05-21T14:38:26Z",
+          "leagueId": 4120,
+          "id": 2375,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "adroit",
+          "name": "Adroit",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+          "id": 126035,
+          "acronym": "Adroit"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126035,
+              "score": 2
+          },
+          {
+              "teamId": 1825,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "adroit",
+                  "name": "Adroit",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+                  "id": 126035,
+                  "acronym": "Adroit"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "boom-id",
+                  "name": "BOOM ID",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1825/600px-Boom_id.png",
+                  "id": 1825,
+                  "acronym": "BOOM"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1825
+              },
+              "position": 1,
+              "matchId": 544932,
+              "length": 1220,
+              "id": 652700,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T06:53:31Z",
+              "beginAt": "2019-05-23T06:33:11Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126035
+              },
+              "position": 2,
+              "matchId": 544932,
+              "length": 2165,
+              "id": 652701,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T07:52:52Z",
+              "beginAt": "2019-05-23T07:16:47Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126035
+              },
+              "position": 3,
+              "matchId": 544932,
+              "length": 1795,
+              "id": 652702,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T08:47:39Z",
+              "beginAt": "2019-05-23T08:17:44Z"
+          }
+      ],
+      "winnerId": 126035,
+      "tournamentId": 2375,
+      "status": "finished",
+      "slug": "2019-05-23-cf4ed438-3fb9-4cb8-9081-8f7989fe1ecb",
+      "numberOfGames": 3,
+      "name": "Lower Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544932",
+          "supported": true,
+          "opensAt": "2019-05-23T05:33:11Z"
+      },
+      "id": 544932,
+      "forfeit": false,
+      "endAt": "2019-05-23T08:47:39Z",
+      "draw": false,
+      "beginAt": "2019-05-23T06:33:11Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+          "name": "Qualifier southeast asia",
+          "modifiedAt": "2019-05-21T14:38:26Z",
+          "leagueId": 4120,
+          "id": 2375,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "mineski-dota-2",
+          "name": "Mineski",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+          "id": 1677,
+          "acronym": "Mski"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1677,
+              "score": 2
+          },
+          {
+              "teamId": 126030,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "power-of-mysg",
+                  "name": "Power of MYSG",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                  "id": 126030,
+                  "acronym": "MYSG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mineski-dota-2",
+                  "name": "Mineski",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+                  "id": 1677,
+                  "acronym": "Mski"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1677
+              },
+              "position": 1,
+              "matchId": 544931,
+              "length": 1419,
+              "id": 652697,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T06:50:23Z",
+              "beginAt": "2019-05-23T06:26:44Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1677
+              },
+              "position": 2,
+              "matchId": 544931,
+              "length": 1543,
+              "id": 652698,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T07:49:48Z",
+              "beginAt": "2019-05-23T07:24:05Z"
+          }
+      ],
+      "winnerId": 1677,
+      "tournamentId": 2375,
+      "status": "finished",
+      "slug": "2019-05-23-f0490a26-df92-41d4-a450-6e3b7df6b09d",
+      "numberOfGames": 3,
+      "name": "Upper Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544931",
+          "supported": true,
+          "opensAt": "2019-05-23T05:26:44Z"
+      },
+      "id": 544931,
+      "forfeit": false,
+      "endAt": "2019-05-23T07:49:48Z",
+      "draw": false,
+      "beginAt": "2019-05-23T06:26:44Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+          "name": "Qualifier southeast asia",
+          "modifiedAt": "2019-05-21T14:38:26Z",
+          "leagueId": 4120,
+          "id": 2375,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "mineski-dota-2",
+          "name": "Mineski",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+          "id": 1677,
+          "acronym": "Mski"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1677,
+              "score": 2
+          },
+          {
+              "teamId": 1825,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "boom-id",
+                  "name": "BOOM ID",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1825/600px-Boom_id.png",
+                  "id": 1825,
+                  "acronym": "BOOM"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mineski-dota-2",
+                  "name": "Mineski",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+                  "id": 1677,
+                  "acronym": "Mski"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1677
+              },
+              "position": 1,
+              "matchId": 544930,
+              "length": 1556,
+              "id": 652694,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T04:30:17Z",
+              "beginAt": "2019-05-23T04:04:21Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1677
+              },
+              "position": 2,
+              "matchId": 544930,
+              "length": 1464,
+              "id": 652695,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T05:21:31Z",
+              "beginAt": "2019-05-23T04:57:07Z"
+          }
+      ],
+      "winnerId": 1677,
+      "tournamentId": 2375,
+      "status": "finished",
+      "slug": "2019-05-23-15b9d6ca-0c30-4836-b957-b74af81219f2",
+      "numberOfGames": 3,
+      "name": "Upper Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544930",
+          "supported": true,
+          "opensAt": "2019-05-23T03:04:21Z"
+      },
+      "id": 544930,
+      "forfeit": false,
+      "endAt": "2019-05-23T05:21:31Z",
+      "draw": false,
+      "beginAt": "2019-05-23T04:04:21Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+          "name": "Qualifier southeast asia",
+          "modifiedAt": "2019-05-21T14:38:26Z",
+          "leagueId": 4120,
+          "id": 2375,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "power-of-mysg",
+          "name": "Power of MYSG",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+          "id": 126030,
+          "acronym": "MYSG"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126030,
+              "score": 2
+          },
+          {
+              "teamId": 126035,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "power-of-mysg",
+                  "name": "Power of MYSG",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                  "id": 126030,
+                  "acronym": "MYSG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "adroit",
+                  "name": "Adroit",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+                  "id": 126035,
+                  "acronym": "Adroit"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126030
+              },
+              "position": 1,
+              "matchId": 544928,
+              "length": 1203,
+              "id": 652691,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T04:21:32Z",
+              "beginAt": "2019-05-23T04:01:29Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126030
+              },
+              "position": 2,
+              "matchId": 544928,
+              "length": 2752,
+              "id": 652692,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T05:37:07Z",
+              "beginAt": "2019-05-23T04:51:15Z"
+          }
+      ],
+      "winnerId": 126030,
+      "tournamentId": 2375,
+      "status": "finished",
+      "slug": "2019-05-23-77f40505-b9dc-405e-92c1-e328f5c22187",
+      "numberOfGames": 3,
+      "name": "Upper Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544928",
+          "supported": true,
+          "opensAt": "2019-05-23T03:01:29Z"
+      },
+      "id": 544928,
+      "forfeit": false,
+      "endAt": "2019-05-23T05:37:07Z",
+      "draw": false,
+      "beginAt": "2019-05-23T04:01:29Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "team-sirius",
+          "name": "Team Sirius",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+          "id": 126029,
+          "acronym": "Sirius"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126029,
+              "score": 2
+          },
+          {
+              "teamId": 1673,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-sirius",
+                  "name": "Team Sirius",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+                  "id": 126029,
+                  "acronym": "Sirius"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 1,
+              "matchId": 544927,
+              "length": 1654,
+              "id": 652688,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T09:48:52Z",
+              "beginAt": "2019-05-22T09:21:18Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126029
+              },
+              "position": 2,
+              "matchId": 544927,
+              "length": 1918,
+              "id": 652689,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T10:51:16Z",
+              "beginAt": "2019-05-22T10:19:18Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126029
+              },
+              "position": 3,
+              "matchId": 544927,
+              "length": 1871,
+              "id": 652690,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T11:50:38Z",
+              "beginAt": "2019-05-22T11:19:27Z"
+          }
+      ],
+      "winnerId": 126029,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "2019-05-22-37291156-5122-4423-9060-8a322ac77431",
+      "numberOfGames": 3,
+      "name": "Playoffs: Lower Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544927",
+          "supported": true,
+          "opensAt": "2019-05-22T08:21:18Z"
+      },
+      "id": 544927,
+      "forfeit": false,
+      "endAt": "2019-05-22T11:50:38Z",
+      "draw": false,
+      "beginAt": "2019-05-22T09:21:18Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "keen-gaming",
+          "name": "KEEN GAMING",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+          "id": 1673,
+          "acronym": "KG"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1673,
+              "score": 2
+          },
+          {
+              "teamId": 126050,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rtphoon-e-sports-club",
+                  "name": "Typhoon E-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+                  "id": 126050,
+                  "acronym": "Typhoon"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126050
+              },
+              "position": 1,
+              "matchId": 544926,
+              "length": 2244,
+              "id": 652772,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T07:17:16Z",
+              "beginAt": "2019-05-22T06:39:52Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 2,
+              "matchId": 544926,
+              "length": 1980,
+              "id": 652686,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T08:14:21Z",
+              "beginAt": "2019-05-22T07:41:21Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 3,
+              "matchId": 544926,
+              "length": 1328,
+              "id": 652687,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T08:56:21Z",
+              "beginAt": "2019-05-22T08:34:13Z"
+          }
+      ],
+      "winnerId": 1673,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "2019-05-22-96b93dce-3fc2-4ba9-bdf7-7760e15f0f1f",
+      "numberOfGames": 3,
+      "name": "Playoffs: Lower Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544926",
+          "supported": true,
+          "opensAt": "2019-05-22T05:39:52Z"
+      },
+      "id": 544926,
+      "forfeit": false,
+      "endAt": "2019-05-22T08:56:21Z",
+      "draw": false,
+      "beginAt": "2019-05-22T06:39:52Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ehome",
+          "name": "EHOME",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+          "id": 1687,
+          "acronym": "EHOME"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1687,
+              "score": 2
+          },
+          {
+              "teamId": 126029,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ehome",
+                  "name": "EHOME",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+                  "id": 1687,
+                  "acronym": "EHOME"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-sirius",
+                  "name": "Team Sirius",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+                  "id": 126029,
+                  "acronym": "Sirius"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 1,
+              "matchId": 544925,
+              "length": 2330,
+              "id": 652771,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T07:23:33Z",
+              "beginAt": "2019-05-22T06:44:43Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 2,
+              "matchId": 544925,
+              "length": 1999,
+              "id": 652683,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T08:23:31Z",
+              "beginAt": "2019-05-22T07:50:12Z"
+          }
+      ],
+      "winnerId": 1687,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "ehome-vs-team-sirius-2019-05-22",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544925",
+          "supported": true,
+          "opensAt": "2019-05-22T05:44:43Z"
+      },
+      "id": 544925,
+      "forfeit": false,
+      "endAt": "2019-05-22T08:23:31Z",
+      "draw": false,
+      "beginAt": "2019-05-22T06:44:43Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "team-sirius",
+          "name": "Team Sirius",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+          "id": 126029,
+          "acronym": "Sirius"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126029,
+              "score": 2
+          },
+          {
+              "teamId": 1673,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-sirius",
+                  "name": "Team Sirius",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+                  "id": 126029,
+                  "acronym": "Sirius"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 1,
+              "matchId": 544924,
+              "length": 1367,
+              "id": 652679,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T04:22:40Z",
+              "beginAt": "2019-05-22T03:59:53Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126029
+              },
+              "position": 2,
+              "matchId": 544924,
+              "length": 1675,
+              "id": 652769,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T05:17:16Z",
+              "beginAt": "2019-05-22T04:49:21Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126029
+              },
+              "position": 3,
+              "matchId": 544924,
+              "length": 1860,
+              "id": 652770,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T06:14:16Z",
+              "beginAt": "2019-05-22T05:43:16Z"
+          }
+      ],
+      "winnerId": 126029,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "2019-05-22-8d4b0edc-b5a2-48e2-bb2b-10922390cb7c",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544924",
+          "supported": true,
+          "opensAt": "2019-05-22T02:59:53Z"
+      },
+      "id": 544924,
+      "forfeit": false,
+      "endAt": "2019-05-22T06:14:16Z",
+      "draw": false,
+      "beginAt": "2019-05-22T03:59:53Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ehome",
+          "name": "EHOME",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+          "id": 1687,
+          "acronym": "EHOME"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1687,
+              "score": 2
+          },
+          {
+              "teamId": 126050,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ehome",
+                  "name": "EHOME",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+                  "id": 1687,
+                  "acronym": "EHOME"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rtphoon-e-sports-club",
+                  "name": "Typhoon E-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+                  "id": 126050,
+                  "acronym": "Typhoon"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 1,
+              "matchId": 544923,
+              "length": 1977,
+              "id": 652676,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T04:34:47Z",
+              "beginAt": "2019-05-22T04:01:50Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 2,
+              "matchId": 544923,
+              "length": 1973,
+              "id": 652677,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T05:28:07Z",
+              "beginAt": "2019-05-22T04:55:14Z"
+          }
+      ],
+      "winnerId": 1687,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "2019-05-22-7f9c7eca-843c-4ad7-a388-cc35edc46082",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544923",
+          "supported": true,
+          "opensAt": "2019-05-22T03:01:50Z"
+      },
+      "id": 544923,
+      "forfeit": false,
+      "endAt": "2019-05-22T05:28:07Z",
+      "draw": false,
+      "beginAt": "2019-05-22T04:01:50Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126050,
+              "score": 1
+          },
+          {
+              "teamId": 1673,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rtphoon-e-sports-club",
+                  "name": "Typhoon E-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+                  "id": 126050,
+                  "acronym": "Typhoon"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 1,
+              "matchId": 544922,
+              "length": 2949,
+              "id": 652674,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T10:18:26Z",
+              "beginAt": "2019-05-21T09:29:17Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126050
+              },
+              "position": 2,
+              "matchId": 544922,
+              "length": 1739,
+              "id": 652675,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T11:10:11Z",
+              "beginAt": "2019-05-21T10:41:12Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "keen-gaming-vs-typhoon-e-sports-club-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group B: KG vs Typhoon",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544922",
+          "supported": true,
+          "opensAt": "2019-05-21T08:29:17Z"
+      },
+      "id": 544922,
+      "forfeit": false,
+      "endAt": "2019-05-21T11:10:11Z",
+      "draw": true,
+      "beginAt": "2019-05-21T09:29:17Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126050,
+              "score": 1
+          },
+          {
+              "teamId": 3360,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-aster",
+                  "name": "Team Aster",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3360/Team_Aster_logo.png",
+                  "id": 3360,
+                  "acronym": "Aster"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rtphoon-e-sports-club",
+                  "name": "Typhoon E-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+                  "id": 126050,
+                  "acronym": "Typhoon"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3360
+              },
+              "position": 1,
+              "matchId": 544921,
+              "length": 2043,
+              "id": 652672,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T07:26:21Z",
+              "beginAt": "2019-05-21T06:52:18Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126050
+              },
+              "position": 2,
+              "matchId": 544921,
+              "length": 3359,
+              "id": 652673,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T08:49:49Z",
+              "beginAt": "2019-05-21T07:53:50Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "team-aster-vs-typhoon-e-sports-club-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group B: Aster vs Typhoon",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544921",
+          "supported": true,
+          "opensAt": "2019-05-21T05:52:18Z"
+      },
+      "id": 544921,
+      "forfeit": false,
+      "endAt": "2019-05-21T08:49:49Z",
+      "draw": true,
+      "beginAt": "2019-05-21T06:52:18Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 3360,
+              "score": 1
+          },
+          {
+              "teamId": 1673,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-aster",
+                  "name": "Team Aster",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3360/Team_Aster_logo.png",
+                  "id": 3360,
+                  "acronym": "Aster"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "keen-gaming",
+                  "name": "KEEN GAMING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+                  "id": 1673,
+                  "acronym": "KG"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1673
+              },
+              "position": 1,
+              "matchId": 544920,
+              "length": 2870,
+              "id": 652670,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T04:48:31Z",
+              "beginAt": "2019-05-21T04:00:41Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3360
+              },
+              "position": 2,
+              "matchId": 544920,
+              "length": 2236,
+              "id": 652671,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T06:13:54Z",
+              "beginAt": "2019-05-21T05:36:38Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "team-aster-vs-keen-gaming-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group B: Aster vs KG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544920",
+          "supported": true,
+          "opensAt": "2019-05-21T03:00:41Z"
+      },
+      "id": 544920,
+      "forfeit": false,
+      "endAt": "2019-05-21T06:13:54Z",
+      "draw": true,
+      "beginAt": "2019-05-21T04:00:41Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ehome",
+          "name": "EHOME",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+          "id": 1687,
+          "acronym": "EHOME"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1687,
+              "score": 2
+          },
+          {
+              "teamId": 126029,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-sirius",
+                  "name": "Team Sirius",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+                  "id": 126029,
+                  "acronym": "Sirius"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ehome",
+                  "name": "EHOME",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+                  "id": 1687,
+                  "acronym": "EHOME"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 1,
+              "matchId": 544919,
+              "length": 1920,
+              "id": 652668,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T09:08:13Z",
+              "beginAt": "2019-05-21T08:36:13Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 2,
+              "matchId": 544919,
+              "length": 2418,
+              "id": 652669,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T10:05:10Z",
+              "beginAt": "2019-05-21T09:24:52Z"
+          }
+      ],
+      "winnerId": 1687,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "team-sirius-vs-ehome-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group A: Sirius vs EHOME",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544919",
+          "supported": true,
+          "opensAt": "2019-05-21T07:36:13Z"
+      },
+      "id": 544919,
+      "forfeit": false,
+      "endAt": "2019-05-21T10:05:10Z",
+      "draw": false,
+      "beginAt": "2019-05-21T08:36:13Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ehome",
+          "name": "EHOME",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+          "id": 1687,
+          "acronym": "EHOME"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1687,
+              "score": 2
+          },
+          {
+              "teamId": 1652,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "newbee",
+                  "name": "Newbee",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1652/Newbee_logo.png",
+                  "id": 1652,
+                  "acronym": "Newbee"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ehome",
+                  "name": "EHOME",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+                  "id": 1687,
+                  "acronym": "EHOME"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 1,
+              "matchId": 544918,
+              "length": 1637,
+              "id": 652666,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T06:47:27Z",
+              "beginAt": "2019-05-21T06:20:10Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1687
+              },
+              "position": 2,
+              "matchId": 544918,
+              "length": 1549,
+              "id": 652667,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T07:36:16Z",
+              "beginAt": "2019-05-21T07:10:27Z"
+          }
+      ],
+      "winnerId": 1687,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "newbee-vs-ehome-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group A: Newbee vs EHOME",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544918",
+          "supported": true,
+          "opensAt": "2019-05-21T05:20:10Z"
+      },
+      "id": 544918,
+      "forfeit": false,
+      "endAt": "2019-05-21T07:36:16Z",
+      "draw": false,
+      "beginAt": "2019-05-21T06:20:10Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-china",
+          "name": "Qualifier china",
+          "modifiedAt": "2019-05-21T09:16:56Z",
+          "leagueId": 4120,
+          "id": 2374,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "team-sirius",
+          "name": "Team Sirius",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+          "id": 126029,
+          "acronym": "Sirius"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126029,
+              "score": 2
+          },
+          {
+              "teamId": 1652,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "newbee",
+                  "name": "Newbee",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1652/Newbee_logo.png",
+                  "id": 1652,
+                  "acronym": "Newbee"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-sirius",
+                  "name": "Team Sirius",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126029/147px-Team_Sirius_logo.png",
+                  "id": 126029,
+                  "acronym": "Sirius"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126029
+              },
+              "position": 1,
+              "matchId": 544916,
+              "length": 2588,
+              "id": 652664,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T04:43:49Z",
+              "beginAt": "2019-05-21T04:00:41Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126029
+              },
+              "position": 2,
+              "matchId": 544916,
+              "length": 1885,
+              "id": 652665,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T05:47:00Z",
+              "beginAt": "2019-05-21T05:15:35Z"
+          }
+      ],
+      "winnerId": 126029,
+      "tournamentId": 2374,
+      "status": "finished",
+      "slug": "newbee-vs-team-sirius-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group A: Newbee vs Sirius",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544916",
+          "supported": true,
+          "opensAt": "2019-05-21T03:00:41Z"
+      },
+      "id": 544916,
+      "forfeit": false,
+      "endAt": "2019-05-21T05:47:00Z",
+      "draw": false,
+      "beginAt": "2019-05-21T04:00:41Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "flytomoon",
+          "name": "Winstrike Team",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+          "id": 2576,
+          "acronym": "WStrike"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2576,
+              "score": 2
+          },
+          {
+              "teamId": 1699,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "flytomoon",
+                  "name": "Winstrike Team",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+                  "id": 2576,
+                  "acronym": "WStrike"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "natus-vincere",
+                  "name": "Natus Vincere",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+                  "id": 1699,
+                  "acronym": "Na`Vi"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 1,
+              "matchId": 544915,
+              "length": 2209,
+              "id": 652661,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T16:57:12Z",
+              "beginAt": "2019-05-22T16:20:23Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 2,
+              "matchId": 544915,
+              "length": 1716,
+              "id": 652662,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T17:49:54Z",
+              "beginAt": "2019-05-22T17:21:18Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 3,
+              "matchId": 544915,
+              "length": 2192,
+              "id": 652663,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T18:50:49Z",
+              "beginAt": "2019-05-22T18:14:17Z"
+          }
+      ],
+      "winnerId": 2576,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "2019-05-22-e523fe93-35f6-42d1-8826-a988dd0e3456",
+      "numberOfGames": 3,
+      "name": "Playoffs: Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544915",
+          "supported": true,
+          "opensAt": "2019-05-22T15:20:23Z"
+      },
+      "id": 544915,
+      "forfeit": false,
+      "endAt": "2019-05-22T18:50:49Z",
+      "draw": false,
+      "beginAt": "2019-05-22T16:20:23Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "flytomoon",
+          "name": "Winstrike Team",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+          "id": 2576,
+          "acronym": "WStrike"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2576,
+              "score": 2
+          },
+          {
+              "teamId": 126052,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "flytomoon",
+                  "name": "Winstrike Team",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+                  "id": 2576,
+                  "acronym": "WStrike"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-colizeum-ru",
+                  "name": "Team Colizeum RU",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126052/147px-Colizeum.png",
+                  "id": 126052,
+                  "acronym": "CZM RU"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 1,
+              "matchId": 544914,
+              "length": 3221,
+              "id": 652658,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T14:29:06Z",
+              "beginAt": "2019-05-22T13:35:25Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 2,
+              "matchId": 544914,
+              "length": 1893,
+              "id": 652659,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T15:29:21Z",
+              "beginAt": "2019-05-22T14:57:48Z"
+          }
+      ],
+      "winnerId": 2576,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "2019-05-22-f87ef9aa-9de5-43c1-9b49-8abd085ef010",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544914",
+          "supported": true,
+          "opensAt": "2019-05-22T12:35:25Z"
+      },
+      "id": 544914,
+      "forfeit": false,
+      "endAt": "2019-05-22T15:29:21Z",
+      "draw": false,
+      "beginAt": "2019-05-22T13:35:25Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "natus-vincere",
+          "name": "Natus Vincere",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+          "id": 1699,
+          "acronym": "Na`Vi"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1699,
+              "score": 2
+          },
+          {
+              "teamId": 1649,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "natus-vincere",
+                  "name": "Natus Vincere",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+                  "id": 1699,
+                  "acronym": "Na`Vi"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-empire",
+                  "name": "Team Empire",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1649/Team_Empire.png",
+                  "id": 1649,
+                  "acronym": "Empire"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 1,
+              "matchId": 544913,
+              "length": 1161,
+              "id": 652655,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T13:50:28Z",
+              "beginAt": "2019-05-22T13:31:07Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 2,
+              "matchId": 544913,
+              "length": 1667,
+              "id": 652656,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-22T14:42:05Z",
+              "beginAt": "2019-05-22T14:14:18Z"
+          }
+      ],
+      "winnerId": 1699,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "2019-05-22-34f1f90f-bc00-486f-8b44-263dfc509e52",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544913",
+          "supported": true,
+          "opensAt": "2019-05-22T12:31:07Z"
+      },
+      "id": 544913,
+      "forfeit": false,
+      "endAt": "2019-05-22T14:42:05Z",
+      "draw": false,
+      "beginAt": "2019-05-22T13:31:07Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2576,
+              "score": 1
+          },
+          {
+              "teamId": 1649,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "flytomoon",
+                  "name": "Winstrike Team",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+                  "id": 2576,
+                  "acronym": "WStrike"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-empire",
+                  "name": "Team Empire",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1649/Team_Empire.png",
+                  "id": 1649,
+                  "acronym": "Empire"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 1,
+              "matchId": 544912,
+              "length": 1942,
+              "id": 652653,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T16:31:06Z",
+              "beginAt": "2019-05-21T15:58:44Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1649
+              },
+              "position": 2,
+              "matchId": 544912,
+              "length": 1942,
+              "id": 652654,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T17:26:11Z",
+              "beginAt": "2019-05-21T16:53:49Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "winstrike-team-vs-team-empire-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group B: WStrike vs Empire",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544912",
+          "supported": true,
+          "opensAt": "2019-05-21T14:58:44Z"
+      },
+      "id": 544912,
+      "forfeit": false,
+      "endAt": "2019-05-21T17:26:11Z",
+      "draw": true,
+      "beginAt": "2019-05-21T15:58:44Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "flytomoon",
+          "name": "Winstrike Team",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+          "id": 2576,
+          "acronym": "WStrike"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2576,
+              "score": 2
+          },
+          {
+              "teamId": 126051,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "flytomoon",
+                  "name": "Winstrike Team",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2576/Winstrike.png",
+                  "id": 2576,
+                  "acronym": "WStrike"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "magic-hands",
+                  "name": "Magic Hands",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126051/99px-Magic_Hands_logo.png",
+                  "id": 126051,
+                  "acronym": null
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 1,
+              "matchId": 544911,
+              "length": 2509,
+              "id": 652651,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T14:31:54Z",
+              "beginAt": "2019-05-21T13:50:05Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2576
+              },
+              "position": 2,
+              "matchId": 544911,
+              "length": 1009,
+              "id": 652652,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T15:18:58Z",
+              "beginAt": "2019-05-21T15:02:09Z"
+          }
+      ],
+      "winnerId": 2576,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "winstrike-team-vs-magic-hands-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group B: WStrike vs Magic Hands",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544911",
+          "supported": true,
+          "opensAt": "2019-05-21T12:50:05Z"
+      },
+      "id": 544911,
+      "forfeit": false,
+      "endAt": "2019-05-21T15:18:58Z",
+      "draw": false,
+      "beginAt": "2019-05-21T13:50:05Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126051,
+              "score": 1
+          },
+          {
+              "teamId": 1649,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-empire",
+                  "name": "Team Empire",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1649/Team_Empire.png",
+                  "id": 1649,
+                  "acronym": "Empire"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "magic-hands",
+                  "name": "Magic Hands",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126051/99px-Magic_Hands_logo.png",
+                  "id": 126051,
+                  "acronym": null
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1649
+              },
+              "position": 1,
+              "matchId": 544910,
+              "length": 2169,
+              "id": 652649,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T11:38:35Z",
+              "beginAt": "2019-05-21T11:02:26Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126051
+              },
+              "position": 2,
+              "matchId": 544910,
+              "length": 2354,
+              "id": 652650,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T12:39:55Z",
+              "beginAt": "2019-05-21T12:00:41Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "team-empire-vs-magic-hands-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group B: Empire vs Magic Hands",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544910",
+          "supported": true,
+          "opensAt": "2019-05-21T10:02:26Z"
+      },
+      "id": 544910,
+      "forfeit": false,
+      "endAt": "2019-05-21T12:39:55Z",
+      "draw": true,
+      "beginAt": "2019-05-21T11:02:26Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126052,
+              "score": 1
+          },
+          {
+              "teamId": 125858,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "black-hornets-gaming",
+                  "name": "Black Hornets Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125858/black_hroent_gaming.png",
+                  "id": 125858,
+                  "acronym": "Hornets"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-colizeum-ru",
+                  "name": "Team Colizeum RU",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126052/147px-Colizeum.png",
+                  "id": 126052,
+                  "acronym": "CZM RU"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126052
+              },
+              "position": 1,
+              "matchId": 544909,
+              "length": 3370,
+              "id": 652647,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T16:48:07Z",
+              "beginAt": "2019-05-21T15:51:57Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 125858
+              },
+              "position": 2,
+              "matchId": 544909,
+              "length": 1326,
+              "id": 652648,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T17:38:01Z",
+              "beginAt": "2019-05-21T17:15:55Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "black-hornets-gaming-vs-team-colizeum-ru-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group A: Hornets vs CZM RU",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544909",
+          "supported": true,
+          "opensAt": "2019-05-21T14:51:57Z"
+      },
+      "id": 544909,
+      "forfeit": false,
+      "endAt": "2019-05-21T17:38:01Z",
+      "draw": true,
+      "beginAt": "2019-05-21T15:51:57Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "natus-vincere",
+          "name": "Natus Vincere",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+          "id": 1699,
+          "acronym": "Na`Vi"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1699,
+              "score": 2
+          },
+          {
+              "teamId": 126052,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "natus-vincere",
+                  "name": "Natus Vincere",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+                  "id": 1699,
+                  "acronym": "Na`Vi"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-colizeum-ru",
+                  "name": "Team Colizeum RU",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126052/147px-Colizeum.png",
+                  "id": 126052,
+                  "acronym": "CZM RU"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 1,
+              "matchId": 544908,
+              "length": 1853,
+              "id": 652645,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T14:08:48Z",
+              "beginAt": "2019-05-21T13:37:55Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 2,
+              "matchId": 544908,
+              "length": 1607,
+              "id": 652646,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T15:00:09Z",
+              "beginAt": "2019-05-21T14:33:22Z"
+          }
+      ],
+      "winnerId": 1699,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "natus-vincere-vs-team-colizeum-ru-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group A: Na`Vi vs CZM RU",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544908",
+          "supported": true,
+          "opensAt": "2019-05-21T12:37:55Z"
+      },
+      "id": 544908,
+      "forfeit": false,
+      "endAt": "2019-05-21T15:00:09Z",
+      "draw": false,
+      "beginAt": "2019-05-21T13:37:55Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-cis",
+          "name": "Qualifier cis",
+          "modifiedAt": "2019-05-21T09:51:11Z",
+          "leagueId": 4120,
+          "id": 2373,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "natus-vincere",
+          "name": "Natus Vincere",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+          "id": 1699,
+          "acronym": "Na`Vi"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1699,
+              "score": 2
+          },
+          {
+              "teamId": 125858,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "natus-vincere",
+                  "name": "Natus Vincere",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1699/Na_vi_logo.png",
+                  "id": 1699,
+                  "acronym": "Na`Vi"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "black-hornets-gaming",
+                  "name": "Black Hornets Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125858/black_hroent_gaming.png",
+                  "id": 125858,
+                  "acronym": "Hornets"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 1,
+              "matchId": 544907,
+              "length": 1459,
+              "id": 652643,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T11:31:21Z",
+              "beginAt": "2019-05-21T11:07:02Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1699
+              },
+              "position": 2,
+              "matchId": 544907,
+              "length": 1897,
+              "id": 652644,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-21T12:28:20Z",
+              "beginAt": "2019-05-21T11:56:43Z"
+          }
+      ],
+      "winnerId": 1699,
+      "tournamentId": 2373,
+      "status": "finished",
+      "slug": "natus-vincere-vs-black-hornets-gaming-2019-05-21",
+      "numberOfGames": 2,
+      "name": "Group A: Na`Vi vs Hornets",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544907",
+          "supported": true,
+          "opensAt": "2019-05-21T10:07:02Z"
+      },
+      "id": 544907,
+      "forfeit": false,
+      "endAt": "2019-05-21T12:28:20Z",
+      "draw": false,
+      "beginAt": "2019-05-21T11:07:02Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "alliance-dota-2",
+          "name": "Alliance",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+          "id": 1706,
+          "acronym": "[A]"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1706,
+              "score": 2
+          },
+          {
+              "teamId": 1814,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "the-final-tribe",
+                  "name": "The Final Tribe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+                  "id": 1814,
+                  "acronym": "TFT"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "alliance-dota-2",
+                  "name": "Alliance",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+                  "id": 1706,
+                  "acronym": "[A]"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 1,
+              "matchId": 544906,
+              "length": 1512,
+              "id": 652640,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T17:29:59Z",
+              "beginAt": "2019-05-24T17:04:47Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 2,
+              "matchId": 544906,
+              "length": 2563,
+              "id": 652641,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T18:35:21Z",
+              "beginAt": "2019-05-24T17:52:38Z"
+          }
+      ],
+      "winnerId": 1706,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "2019-05-24-15448036-8485-4295-ae16-e3ae61f00a78",
+      "numberOfGames": 3,
+      "name": "Playoffs: Lower Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544906",
+          "supported": true,
+          "opensAt": "2019-05-24T16:04:47Z"
+      },
+      "id": 544906,
+      "forfeit": false,
+      "endAt": "2019-05-24T18:35:21Z",
+      "draw": false,
+      "beginAt": "2019-05-24T17:04:47Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "the-final-tribe",
+          "name": "The Final Tribe",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+          "id": 1814,
+          "acronym": "TFT"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1814,
+              "score": 2
+          },
+          {
+              "teamId": 125663,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "aachen-city-esports",
+                  "name": "Aachen City Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125663/147px-Aachen_City_Esports_logo.png",
+                  "id": 125663,
+                  "acronym": "Aachen"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "the-final-tribe",
+                  "name": "The Final Tribe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+                  "id": 1814,
+                  "acronym": "TFT"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1814
+              },
+              "position": 1,
+              "matchId": 544905,
+              "length": 2780,
+              "id": 652637,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T14:37:30Z",
+              "beginAt": "2019-05-24T13:51:10Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1814
+              },
+              "position": 2,
+              "matchId": 544905,
+              "length": 1294,
+              "id": 652638,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T15:27:32Z",
+              "beginAt": "2019-05-24T15:05:58Z"
+          }
+      ],
+      "winnerId": 1814,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "2019-05-24-4862d1e3-f53b-4fef-8f01-3d47671fa40f",
+      "numberOfGames": 3,
+      "name": "Playoffs: Lower Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544905",
+          "supported": true,
+          "opensAt": "2019-05-24T12:51:10Z"
+      },
+      "id": 544905,
+      "forfeit": false,
+      "endAt": "2019-05-24T15:27:32Z",
+      "draw": false,
+      "beginAt": "2019-05-24T13:51:10Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+          "name": "Ninjas in Pyjamas",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+          "id": 3356,
+          "acronym": "NiP"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 3356,
+              "score": 2
+          },
+          {
+              "teamId": 1706,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "alliance-dota-2",
+                  "name": "Alliance",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+                  "id": 1706,
+                  "acronym": "[A]"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+                  "name": "Ninjas in Pyjamas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+                  "id": 3356,
+                  "acronym": "NiP"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 1,
+              "matchId": 544904,
+              "length": 1794,
+              "id": 652634,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T14:18:30Z",
+              "beginAt": "2019-05-24T13:48:36Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 2,
+              "matchId": 544904,
+              "length": 3864,
+              "id": 652635,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T15:59:42Z",
+              "beginAt": "2019-05-24T14:55:18Z"
+          }
+      ],
+      "winnerId": 3356,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "2019-05-24-5f05d75d-3d56-4acc-9cce-cfcecd93265e",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544904",
+          "supported": true,
+          "opensAt": "2019-05-24T12:48:36Z"
+      },
+      "id": 544904,
+      "forfeit": false,
+      "endAt": "2019-05-24T15:59:42Z",
+      "draw": false,
+      "beginAt": "2019-05-24T13:48:36Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+          "name": "Ninjas in Pyjamas",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+          "id": 3356,
+          "acronym": "NiP"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 3356,
+              "score": 2
+          },
+          {
+              "teamId": 1814,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+                  "name": "Ninjas in Pyjamas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+                  "id": 3356,
+                  "acronym": "NiP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "the-final-tribe",
+                  "name": "The Final Tribe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+                  "id": 1814,
+                  "acronym": "TFT"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 1,
+              "matchId": 544903,
+              "length": 2109,
+              "id": 652631,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T11:38:30Z",
+              "beginAt": "2019-05-24T11:03:21Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 2,
+              "matchId": 544903,
+              "length": 3146,
+              "id": 652632,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T12:56:00Z",
+              "beginAt": "2019-05-24T12:03:34Z"
+          }
+      ],
+      "winnerId": 3356,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "2019-05-24-35c73d25-f42a-4aca-895e-38fff108f375",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544903",
+          "supported": true,
+          "opensAt": "2019-05-24T10:03:21Z"
+      },
+      "id": 544903,
+      "forfeit": false,
+      "endAt": "2019-05-24T12:56:00Z",
+      "draw": false,
+      "beginAt": "2019-05-24T11:03:21Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "alliance-dota-2",
+          "name": "Alliance",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+          "id": 1706,
+          "acronym": "[A]"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1706,
+              "score": 2
+          },
+          {
+              "teamId": 125663,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "alliance-dota-2",
+                  "name": "Alliance",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+                  "id": 1706,
+                  "acronym": "[A]"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "aachen-city-esports",
+                  "name": "Aachen City Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125663/147px-Aachen_City_Esports_logo.png",
+                  "id": 125663,
+                  "acronym": "Aachen"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 1,
+              "matchId": 544902,
+              "length": 1838,
+              "id": 652628,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T11:31:10Z",
+              "beginAt": "2019-05-24T11:00:32Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 2,
+              "matchId": 544902,
+              "length": 2568,
+              "id": 652629,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T12:39:44Z",
+              "beginAt": "2019-05-24T11:56:56Z"
+          }
+      ],
+      "winnerId": 1706,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "2019-05-24-970dac58-ecee-4c7e-a830-48c79b2c9a16",
+      "numberOfGames": 3,
+      "name": "Playoffs: Upper Semifinal",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544902",
+          "supported": true,
+          "opensAt": "2019-05-24T10:00:32Z"
+      },
+      "id": 544902,
+      "forfeit": false,
+      "endAt": "2019-05-24T12:39:44Z",
+      "draw": false,
+      "beginAt": "2019-05-24T11:00:32Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": null,
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125663,
+              "score": 1
+          },
+          {
+              "teamId": 3356,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+                  "name": "Ninjas in Pyjamas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+                  "id": 3356,
+                  "acronym": "NiP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "aachen-city-esports",
+                  "name": "Aachen City Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125663/147px-Aachen_City_Esports_logo.png",
+                  "id": 125663,
+                  "acronym": "Aachen"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 1,
+              "matchId": 544901,
+              "length": 3135,
+              "id": 652626,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T16:40:42Z",
+              "beginAt": "2019-05-23T15:48:27Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 125663
+              },
+              "position": 2,
+              "matchId": 544901,
+              "length": 2205,
+              "id": 652627,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T17:40:12Z",
+              "beginAt": "2019-05-23T17:03:27Z"
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "ninjas-in-pyjamas-vs-aachen-city-esports-2019-05-23",
+      "numberOfGames": 2,
+      "name": "Group B: NiP vs Aachen",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544901",
+          "supported": true,
+          "opensAt": "2019-05-23T14:48:27Z"
+      },
+      "id": 544901,
+      "forfeit": false,
+      "endAt": "2019-05-23T17:40:12Z",
+      "draw": true,
+      "beginAt": "2019-05-23T15:48:27Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+          "name": "Ninjas in Pyjamas",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+          "id": 3356,
+          "acronym": "NiP"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 3356,
+              "score": 2
+          },
+          {
+              "teamId": 2914,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "ninjas-in-pyjamas-35f2e134-7b7c-4353-a591-effcdd5a8595",
+                  "name": "Ninjas in Pyjamas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3356/600px-Ninjas_in_Pyjamas_2017.png",
+                  "id": 3356,
+                  "acronym": "NiP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "wind-and-rain-dota-2",
+                  "name": "Wind and Rain",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2914/Wind_and_Rain_std.png",
+                  "id": 2914,
+                  "acronym": "WaR"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 1,
+              "matchId": 544900,
+              "length": 1409,
+              "id": 652624,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T13:59:46Z",
+              "beginAt": "2019-05-23T13:36:17Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 3356
+              },
+              "position": 2,
+              "matchId": 544900,
+              "length": 2194,
+              "id": 652625,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T15:02:44Z",
+              "beginAt": "2019-05-23T14:26:10Z"
+          }
+      ],
+      "winnerId": 3356,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "ninjas-in-pyjamas-vs-wind-and-rain-2019-05-23",
+      "numberOfGames": 2,
+      "name": "Group B: NiP vs WaR",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544900",
+          "supported": true,
+          "opensAt": "2019-05-23T12:36:17Z"
+      },
+      "id": 544900,
+      "forfeit": false,
+      "endAt": "2019-05-23T15:02:44Z",
+      "draw": false,
+      "beginAt": "2019-05-23T13:36:17Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "aachen-city-esports",
+          "name": "Aachen City Esports",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/125663/147px-Aachen_City_Esports_logo.png",
+          "id": 125663,
+          "acronym": "Aachen"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125663,
+              "score": 2
+          },
+          {
+              "teamId": 2914,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "aachen-city-esports",
+                  "name": "Aachen City Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125663/147px-Aachen_City_Esports_logo.png",
+                  "id": 125663,
+                  "acronym": "Aachen"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "wind-and-rain-dota-2",
+                  "name": "Wind and Rain",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2914/Wind_and_Rain_std.png",
+                  "id": 2914,
+                  "acronym": "WaR"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 125663
+              },
+              "position": 1,
+              "matchId": 544899,
+              "length": 2277,
+              "id": 652622,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T11:39:09Z",
+              "beginAt": "2019-05-23T11:01:12Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 125663
+              },
+              "position": 2,
+              "matchId": 544899,
+              "length": 2097,
+              "id": 652623,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T12:38:22Z",
+              "beginAt": "2019-05-23T12:03:25Z"
+          }
+      ],
+      "winnerId": 125663,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "aachen-city-esports-vs-wind-and-rain-2019-05-23",
+      "numberOfGames": 2,
+      "name": "Group B: Aachen vs WaR",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544899",
+          "supported": true,
+          "opensAt": "2019-05-23T10:01:12Z"
+      },
+      "id": 544899,
+      "forfeit": false,
+      "endAt": "2019-05-23T12:38:22Z",
+      "draw": false,
+      "beginAt": "2019-05-23T11:01:12Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "the-final-tribe",
+          "name": "The Final Tribe",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+          "id": 1814,
+          "acronym": "TFT"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1814,
+              "score": 2
+          },
+          {
+              "teamId": 3472,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "the-final-tribe",
+                  "name": "The Final Tribe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+                  "id": 1814,
+                  "acronym": "TFT"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "hippomaniacs",
+                  "name": "Hippomaniacs",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3472/190px-Hippomaniacs.png",
+                  "id": 3472,
+                  "acronym": "HpM"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1814
+              },
+              "position": 1,
+              "matchId": 544898,
+              "length": 2572,
+              "id": 652620,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T17:25:50Z",
+              "beginAt": "2019-05-23T16:42:58Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1814
+              },
+              "position": 2,
+              "matchId": 544898,
+              "length": 2187,
+              "id": 652621,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T18:30:05Z",
+              "beginAt": "2019-05-23T17:53:38Z"
+          }
+      ],
+      "winnerId": 1814,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "the-final-tribe-vs-hippomaniacs-2019-05-23",
+      "numberOfGames": 2,
+      "name": "Group A: TFT vs HpM",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544898",
+          "supported": true,
+          "opensAt": "2019-05-23T15:42:58Z"
+      },
+      "id": 544898,
+      "forfeit": false,
+      "endAt": "2019-05-23T18:30:05Z",
+      "draw": false,
+      "beginAt": "2019-05-23T16:42:58Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "alliance-dota-2",
+          "name": "Alliance",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+          "id": 1706,
+          "acronym": "[A]"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1706,
+              "score": 2
+          },
+          {
+              "teamId": 3472,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "alliance-dota-2",
+                  "name": "Alliance",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+                  "id": 1706,
+                  "acronym": "[A]"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "hippomaniacs",
+                  "name": "Hippomaniacs",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/3472/190px-Hippomaniacs.png",
+                  "id": 3472,
+                  "acronym": "HpM"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 1,
+              "matchId": 544897,
+              "length": 1669,
+              "id": 652618,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T14:23:18Z",
+              "beginAt": "2019-05-23T13:55:29Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 2,
+              "matchId": 544897,
+              "length": 1813,
+              "id": 652619,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T15:14:49Z",
+              "beginAt": "2019-05-23T14:44:36Z"
+          }
+      ],
+      "winnerId": 1706,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "alliance-vs-hippomaniacs-2019-05-23",
+      "numberOfGames": 2,
+      "name": "Group A: [A] vs HpM",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544897",
+          "supported": true,
+          "opensAt": "2019-05-23T12:55:29Z"
+      },
+      "id": 544897,
+      "forfeit": false,
+      "endAt": "2019-05-23T15:14:49Z",
+      "draw": false,
+      "beginAt": "2019-05-23T13:55:29Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-europe",
+          "name": "Qualifier europe",
+          "modifiedAt": "2019-05-21T09:57:54Z",
+          "leagueId": 4120,
+          "id": 2372,
+          "endAt": "2019-05-25T18:00:00Z",
+          "beginAt": "2019-05-22T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "alliance-dota-2",
+          "name": "Alliance",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+          "id": 1706,
+          "acronym": "[A]"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1706,
+              "score": 2
+          },
+          {
+              "teamId": 1814,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "alliance-dota-2",
+                  "name": "Alliance",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
+                  "id": 1706,
+                  "acronym": "[A]"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "the-final-tribe",
+                  "name": "The Final Tribe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1814/The_Final_Tribe.png",
+                  "id": 1814,
+                  "acronym": "TFT"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 1,
+              "matchId": 544896,
+              "length": 2547,
+              "id": 652616,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T12:16:49Z",
+              "beginAt": "2019-05-23T11:34:22Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 1706
+              },
+              "position": 2,
+              "matchId": 544896,
+              "length": 1977,
+              "id": 652617,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T16:21:51Z",
+              "beginAt": "2019-05-23T15:48:54Z"
+          }
+      ],
+      "winnerId": 1706,
+      "tournamentId": 2372,
+      "status": "finished",
+      "slug": "alliance-vs-the-final-tribe-2019-05-23",
+      "numberOfGames": 2,
+      "name": "Group A: [A] vs TFT",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544896",
+          "supported": true,
+          "opensAt": "2019-05-23T10:34:22Z"
+      },
+      "id": 544896,
+      "forfeit": false,
+      "endAt": "2019-05-23T16:21:51Z",
+      "draw": false,
+      "beginAt": "2019-05-23T11:34:22Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-south-america",
+          "name": "Qualifier south america",
+          "modifiedAt": "2019-05-21T09:13:07Z",
+          "leagueId": 4120,
+          "id": 2371,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "anvorguesa",
+          "name": "Anvorguesa",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+          "id": 126053,
+          "acronym": "Anvorguesa"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126053,
+              "score": 2
+          },
+          {
+              "teamId": 2671,
+              "score": 1
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "thunder-predator",
+                  "name": "Thunder Predator",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2671/87033C79D6D1A70A66941BC8649EA5988D74582C.png",
+                  "id": 2671,
+                  "acronym": "ThunderP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "anvorguesa",
+                  "name": "Anvorguesa",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+                  "id": 126053,
+                  "acronym": "Anvorguesa"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2671
+              },
+              "position": 1,
+              "matchId": 544895,
+              "length": 2250,
+              "id": 652613,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T20:43:46Z",
+              "beginAt": "2019-05-24T20:06:16Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126053
+              },
+              "position": 2,
+              "matchId": 544895,
+              "length": 1860,
+              "id": 652614,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T22:16:32Z",
+              "beginAt": "2019-05-24T21:45:32Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126053
+              },
+              "position": 3,
+              "matchId": 544895,
+              "length": 1739,
+              "id": 652615,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T23:16:05Z",
+              "beginAt": "2019-05-24T22:47:06Z"
+          }
+      ],
+      "winnerId": 126053,
+      "tournamentId": 2371,
+      "status": "finished",
+      "slug": "2019-05-22-61814506-4aec-45d2-a4ca-b61e3ad62a5e",
+      "numberOfGames": 3,
+      "name": "Lower Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544895",
+          "supported": true,
+          "opensAt": "2019-05-24T19:06:16Z"
+      },
+      "id": 544895,
+      "forfeit": false,
+      "endAt": "2019-05-24T23:16:05Z",
+      "draw": false,
+      "beginAt": "2019-05-24T20:06:16Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-south-america",
+          "name": "Qualifier south america",
+          "modifiedAt": "2019-05-21T09:13:07Z",
+          "leagueId": 4120,
+          "id": 2371,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "anvorguesa",
+          "name": "Anvorguesa",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+          "id": 126053,
+          "acronym": "Anvorguesa"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126053,
+              "score": 2
+          },
+          {
+              "teamId": 126027,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "egoboys",
+                  "name": "EgoBoys",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126027/147px-Dota2_logo.png",
+                  "id": 126027,
+                  "acronym": "EgoBoys"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "anvorguesa",
+                  "name": "Anvorguesa",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+                  "id": 126053,
+                  "acronym": "Anvorguesa"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126053
+              },
+              "position": 1,
+              "matchId": 544894,
+              "length": 1274,
+              "id": 652610,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T00:31:52Z",
+              "beginAt": "2019-05-24T00:10:38Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126053
+              },
+              "position": 2,
+              "matchId": 544894,
+              "length": 2476,
+              "id": 652611,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T01:41:47Z",
+              "beginAt": "2019-05-24T01:00:31Z"
+          }
+      ],
+      "winnerId": 126053,
+      "tournamentId": 2371,
+      "status": "finished",
+      "slug": "2019-05-22-2ad8ae23-c937-4bdc-8e47-8b92aea92bcc",
+      "numberOfGames": 3,
+      "name": "Lower Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544894",
+          "supported": true,
+          "opensAt": "2019-05-23T23:10:38Z"
+      },
+      "id": 544894,
+      "forfeit": false,
+      "endAt": "2019-05-24T01:41:47Z",
+      "draw": false,
+      "beginAt": "2019-05-24T00:10:38Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-south-america",
+          "name": "Qualifier south america",
+          "modifiedAt": "2019-05-21T09:13:07Z",
+          "leagueId": 4120,
+          "id": 2371,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "anvorguesa",
+          "name": "Anvorguesa",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+          "id": 126053,
+          "acronym": "Anvorguesa"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126053,
+              "score": 2
+          },
+          {
+              "teamId": 2018,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "gorillaz-pride",
+                  "name": "Gorillaz-Pride",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2018/Gorillaz_pride_logo.png",
+                  "id": 2018,
+                  "acronym": "G-pride"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "anvorguesa",
+                  "name": "Anvorguesa",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+                  "id": 126053,
+                  "acronym": "Anvorguesa"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126053
+              },
+              "position": 1,
+              "matchId": 544893,
+              "length": 1889,
+              "id": 652607,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T00:23:47Z",
+              "beginAt": "2019-05-24T23:52:18Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 126053
+              },
+              "position": 2,
+              "matchId": 544893,
+              "length": 2828,
+              "id": 652608,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-25T01:40:38Z",
+              "beginAt": "2019-05-25T00:53:30Z"
+          }
+      ],
+      "winnerId": 126053,
+      "tournamentId": 2371,
+      "status": "finished",
+      "slug": "2019-05-23-19e51e8c-3639-49f5-9d59-9979e82b47b9",
+      "numberOfGames": 3,
+      "name": "Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544893",
+          "supported": true,
+          "opensAt": "2019-05-24T22:52:18Z"
+      },
+      "id": 544893,
+      "forfeit": false,
+      "endAt": "2019-05-25T01:40:38Z",
+      "draw": false,
+      "beginAt": "2019-05-24T23:52:18Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-south-america",
+          "name": "Qualifier south america",
+          "modifiedAt": "2019-05-21T09:13:07Z",
+          "leagueId": 4120,
+          "id": 2371,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "gorillaz-pride",
+          "name": "Gorillaz-Pride",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/2018/Gorillaz_pride_logo.png",
+          "id": 2018,
+          "acronym": "G-pride"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2018,
+              "score": 2
+          },
+          {
+              "teamId": 2671,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "thunder-predator",
+                  "name": "Thunder Predator",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2671/87033C79D6D1A70A66941BC8649EA5988D74582C.png",
+                  "id": 2671,
+                  "acronym": "ThunderP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "gorillaz-pride",
+                  "name": "Gorillaz-Pride",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2018/Gorillaz_pride_logo.png",
+                  "id": 2018,
+                  "acronym": "G-pride"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2018
+              },
+              "position": 1,
+              "matchId": 544892,
+              "length": 2024,
+              "id": 652604,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T00:27:06Z",
+              "beginAt": "2019-05-23T23:53:22Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2018
+              },
+              "position": 2,
+              "matchId": 544892,
+              "length": 1251,
+              "id": 652605,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-24T01:16:27Z",
+              "beginAt": "2019-05-24T00:55:36Z"
+          }
+      ],
+      "winnerId": 2018,
+      "tournamentId": 2371,
+      "status": "finished",
+      "slug": "2019-05-22-63c92991-542f-4f4b-9bd5-f845416b7249",
+      "numberOfGames": 3,
+      "name": "Upper Final",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544892",
+          "supported": true,
+          "opensAt": "2019-05-23T22:53:22Z"
+      },
+      "id": 544892,
+      "forfeit": false,
+      "endAt": "2019-05-24T01:16:27Z",
+      "draw": false,
+      "beginAt": "2019-05-23T23:53:22Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-south-america",
+          "name": "Qualifier south america",
+          "modifiedAt": "2019-05-21T09:13:07Z",
+          "leagueId": 4120,
+          "id": 2371,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "gorillaz-pride",
+          "name": "Gorillaz-Pride",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/2018/Gorillaz_pride_logo.png",
+          "id": 2018,
+          "acronym": "G-pride"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2018,
+              "score": 2
+          },
+          {
+              "teamId": 126053,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "gorillaz-pride",
+                  "name": "Gorillaz-Pride",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2018/Gorillaz_pride_logo.png",
+                  "id": 2018,
+                  "acronym": "G-pride"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "anvorguesa",
+                  "name": "Anvorguesa",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126053/147px-Dota2_logo.png",
+                  "id": 126053,
+                  "acronym": "Anvorguesa"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2018
+              },
+              "position": 1,
+              "matchId": 544891,
+              "length": 2956,
+              "id": 652601,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T21:18:17Z",
+              "beginAt": "2019-05-23T20:29:01Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2018
+              },
+              "position": 2,
+              "matchId": 544891,
+              "length": 1524,
+              "id": 652602,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T22:54:25Z",
+              "beginAt": "2019-05-23T22:29:01Z"
+          }
+      ],
+      "winnerId": 2018,
+      "tournamentId": 2371,
+      "status": "finished",
+      "slug": "2019-05-21-91ad6eae-eda7-467a-a06e-a491ffc6054a",
+      "numberOfGames": 3,
+      "name": "Upper Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544891",
+          "supported": true,
+          "opensAt": "2019-05-23T19:29:01Z"
+      },
+      "id": 544891,
+      "forfeit": false,
+      "endAt": "2019-05-23T22:54:25Z",
+      "draw": false,
+      "beginAt": "2019-05-23T20:29:01Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019-qualifier-south-america",
+          "name": "Qualifier south america",
+          "modifiedAt": "2019-05-21T09:13:07Z",
+          "leagueId": 4120,
+          "id": 2371,
+          "endAt": "2019-05-23T18:00:00Z",
+          "beginAt": "2019-05-20T22:00:00Z",
+          "seriesId": 1793
+      },
+      "winner": {
+          "slug": "thunder-predator",
+          "name": "Thunder Predator",
+          "imageUrl": "https://cdn.pandascore.co/images/team/image/2671/87033C79D6D1A70A66941BC8649EA5988D74582C.png",
+          "id": 2671,
+          "acronym": "ThunderP"
+      },
+      "seriesId": 1793,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "starladder-imbatv-minor-2-2019",
+          "season": "2",
+          "prizepool": "300000 United States Dollar",
+          "name": "ImbaTV Minor",
+          "leagueId": 4120,
+          "id": 1793,
+          "fullName": "Imbatv minor season 2 2019",
+          "endAt": "2019-05-17T18:00:00Z",
+          "description": null,
+          "beginAt": "2019-05-11T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2671,
+              "score": 2
+          },
+          {
+              "teamId": 126027,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "egoboys",
+                  "name": "EgoBoys",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126027/147px-Dota2_logo.png",
+                  "id": 126027,
+                  "acronym": "EgoBoys"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "thunder-predator",
+                  "name": "Thunder Predator",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2671/87033C79D6D1A70A66941BC8649EA5988D74582C.png",
+                  "id": 2671,
+                  "acronym": "ThunderP"
+              }
+          }
+      ],
+      "leagueId": 4120,
+      "league": {
+          "url": null,
+          "slug": "starladder",
+          "name": "StarLadder",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+          "id": 4120
+      },
+      "games": [
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2671
+              },
+              "position": 1,
+              "matchId": 544890,
+              "length": 2514,
+              "id": 652598,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T20:37:36Z",
+              "beginAt": "2019-05-23T19:55:42Z"
+          },
+          {
+              "winnerType": "Team",
+              "winner": {
+                  "type": "Team",
+                  "id": 2671
+              },
+              "position": 2,
+              "matchId": 544890,
+              "length": 2021,
+              "id": 652599,
+              "forfeit": false,
+              "finished": true,
+              "endAt": "2019-05-23T21:41:25Z",
+              "beginAt": "2019-05-23T21:07:44Z"
+          }
+      ],
+      "winnerId": 2671,
+      "tournamentId": 2371,
+      "status": "finished",
+      "slug": "2019-05-21-7bc8be73-ed1c-4a58-99ac-bb1de3fe7207",
+      "numberOfGames": 3,
+      "name": "Upper Round 1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/544890",
+          "supported": true,
+          "opensAt": "2019-05-23T18:55:42Z"
+      },
+      "id": 544890,
+      "forfeit": false,
+      "endAt": "2019-05-23T21:41:25Z",
+      "draw": false,
+      "beginAt": "2019-05-23T19:55:42Z"
+  }
+]
