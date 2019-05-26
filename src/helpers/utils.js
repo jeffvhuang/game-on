@@ -142,7 +142,7 @@ export function sortESportsTournaments(data) {
 
   sortESportByDate(ongoing);
   sortESportByDate(upcoming);
-  sortESportByDate(completed);
+  sortESportByEndDate(completed);
 
   return { ongoing, upcoming, completed };
 }
@@ -173,9 +173,18 @@ export function sortESportsMatches(data) {
   return { today, upcoming, past };
 }
 
-function sortESportByDate(data) {
+// Sort by descending (most recent dates first)
+export function sortESportByDate(data) {
   return data.sort(function(a, b) {
     const dateA = a.beginAt;
+    const dateB = b.beginAt;
+    return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
+  });
+}
+
+export function sortESportByEndDate(data) {
+  return data.sort(function(a, b) {
+    const dateA = a.endAt;
     const dateB = b.endAt;
     return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
   });

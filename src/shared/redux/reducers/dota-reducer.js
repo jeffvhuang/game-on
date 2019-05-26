@@ -5,11 +5,11 @@ const initialState = {
   isFetching: false,
   data: [],
   tournaments: [],
+  ongoing: [],
+  upcoming: [],
+  completed: [],
   series: [],
   matches: [],
-  today: [],
-  upcoming: [],
-  past: [],
   teams: [],
   videos: [],
   thumbnails: []
@@ -20,7 +20,14 @@ function dotaReducer(state = initialState, action) {
     case A.GET_DOTA_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_DOTA_TOURNAMENTS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, tournaments: action.payload });
+      return Object.assign({}, state,
+        { 
+          isFetching: false,
+          tournaments: action.payload,
+          ongoing: action.sortedTournaments.ongoing,
+          upcoming: action.sortedTournaments.upcoming,
+          completed: action.sortedTournaments.completed
+        });    
     case A.GET_DOTA_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
   
@@ -34,14 +41,7 @@ function dotaReducer(state = initialState, action) {
     case A.GET_DOTA_MATCHES_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_DOTA_MATCHES_SUCCESS:
-      return Object.assign({}, state,
-        { 
-          isFetching: false,
-          matches: action.matches,
-          matchesToday: action.payload.today,
-          upcoming: action.payload.upcoming,
-          past: action.payload.past
-        });
+      return Object.assign({}, state, { isFetching: false, matches: action.payload });
     case A.GET_DOTA_MATCHES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 

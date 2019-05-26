@@ -16,7 +16,7 @@ const propTypes = {
   actions: object.isRequired
 };
 
-class DotaTournamentsPageContainer extends React.Component {
+class DotaTournamentsContainer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,36 +26,35 @@ class DotaTournamentsPageContainer extends React.Component {
   }
 
   componentDidMount() {
-    const props = this.props;
-    if (props.dota.tournaments.length < 1) props.actions.getDotaTournaments();
+    const { dota, actions } = this.props;
+    if (dota.tournaments.length < 1) actions.getDotaTournaments();
   }
 
   handleChange = values => this.setState({ values });
 
   render() {
+    const { dota } = this.props;
+
     return (
-      <div>
-        <h1>Dota 2</h1>
+      <div className="section">
         {/* <SelectDropdown handleChange={this.handleChange}
           options={this.props.dota.teams} /> */}
-        <div className="section">
-          <DotaTournaments header="Ongoing"
-            games={this.props.dota.ongoing}
-            values={this.state.values} />
-          <DotaTournaments header="Upcoming"
-            games={this.props.dota.upcoming}
-            values={this.state.values} />
-          <DotaTournaments header="Completed"
-            games={this.props.dota.completed}
-            values={this.state.values} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
-        </div>
+        <DotaTournaments header="Ongoing"
+          games={dota.ongoing}
+          values={this.state.values} />
+        <DotaTournaments header="Upcoming"
+          games={dota.upcoming}
+          values={this.state.values} />
+        <DotaTournaments header="Completed"
+          games={dota.completed}
+          values={this.state.values} />
+        <Link to={paths.EVENTS} className="right">More ></Link>
       </div>
     );
   }
 }
 
-DotaTournamentsPageContainer.propTypes = propTypes;
+DotaTournamentsContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
   dota: state.dota
@@ -67,5 +66,4 @@ const mapDispatchToProps = (dispatch) => ({
   }, dispatch)
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DotaTournamentsPageContainer);
-
+export default connect(mapStateToProps, mapDispatchToProps)(DotaTournamentsContainer);
