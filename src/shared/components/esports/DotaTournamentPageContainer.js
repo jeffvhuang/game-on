@@ -10,7 +10,7 @@ import { getDotaVideos, getDotaTournaments, getDotaTeams } from '../../redux/act
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
-import DotaMatches from './DotaMatches';
+import DotaTournamentMatches from './DotaTournamentMatches';
 
 const propTypes = {
   match: object,
@@ -58,8 +58,8 @@ class DotaTournamentPageContainer extends React.Component {
         <SelectDropdown handleChange={this.handleChange}
           options={this.props.dota.teams} />
         <div className="section">
-          <DotaMatches header="Matches"
-            games={this.state.tournament.matches}
+          <DotaTournamentMatches header="Matches"
+            matches={this.state.tournament.matches}
             values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>

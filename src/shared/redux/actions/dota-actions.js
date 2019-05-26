@@ -124,10 +124,10 @@ export const getDotaMatchesFailure = (err) => ({ type: A.GET_DOTA_MATCHES_FAILUR
 
 export const getDotaMatches = () => {
   return async (dispatch) => {
-    dispatch(getDotaTournamentsRequest());
+    dispatch(getDotaMatchesRequest());
     await sleep(1000);
     const sortedSchedule = sortESportsSchedule(MATCHES);
-    dispatch(getDotaTournamentsSuccess(sortedSchedule, MATCHES));
+    dispatch(getDotaMatchesSuccess(sortedSchedule, MATCHES));
     return TOURNAMENTS;
   };
 };

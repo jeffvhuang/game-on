@@ -5,21 +5,21 @@ import DotaMatch from './DotaMatch';
 
 DotaMatches.propTypes = {
   header: string,
-  games: array.isRequired,
+  matches: array.isRequired,
   values: array.isRequired
 };
 
-function DotaMatches({ header, games, values }) {
+function DotaMatches({ header, matches, values }) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
       {values.length < 1 ? (
-        games.map((g, i) => <DotaMatch key={i} game={g} />)
+        matches.map((m, i) => <DotaMatch key={i} match={m} />)
       ) : (
-        games.map((g, i) => {
-          // if (values.some(v => v == g.seriesId || v == g.leagueId)) {
-            return <DotaMatch key={i} game={g} />;
-          // }
+        matches.map((m, i) => {
+          if (values.some(v => v == m.seriesId)) {
+            return <DotaMatch key={i} match={m} />;
+          }
         })
       )}
     </div>
