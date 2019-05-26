@@ -122,9 +122,9 @@ function sortTennisByDate(data) {
 }
 
 export function sortESportsSchedule(data) {
-  const today = [];
-  const upcoming = [];
-  const past = [];
+  const gamesToday = [];
+  const upcomingGames = [];
+  const pastGames = [];
   const dateToday = new Date();
 
   // Separate matches into today followed by upcoming and past
@@ -132,13 +132,17 @@ export function sortESportsSchedule(data) {
     const matchDate = new Date(match.beginAt);
 
     if (isSameDate(dateToday, matchDate)) {
-      today.push(match);
+      gamesToday.push(match);
     } else if (matchDate.getTime() > dateToday) {
-      upcoming.push(match);
+      upcomingGames.push(match);
     } else {
-      past.push(match);
+      pastGames.push(match);
     }
   });
+
+  const today = sortESportByDate(gamesToday);
+  const upcoming = sortESportByDate(upcomingGames);
+  const past = sortESportByDate(pastGames);
 
   return { today, upcoming, past };
 }
@@ -147,7 +151,7 @@ function sortESportByDate(data) {
   return data.sort(function(a, b) {
     const dateA = a.beginAt;
     const dateB = b.endAt;
-    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+    return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
   });
 }
 
