@@ -27,7 +27,8 @@ function dotaReducer(state = initialState, action) {
           tournaments: action.payload,
           ongoing: action.sortedTournaments.ongoing,
           upcoming: action.sortedTournaments.upcoming,
-          completed: action.sortedTournaments.completed
+          completed: action.sortedTournaments.completed,
+          teams: action.sortedTournaments.teams
         });    
     case A.GET_DOTA_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });

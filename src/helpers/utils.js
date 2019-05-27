@@ -126,9 +126,11 @@ export function sortESportsTournaments(data) {
   const upcoming = [];
   const completed = [];
   const dateToday = new Date();
+  const teams = [];
 
   // Separate matches into today followed by upcoming and past
-  data.forEach(tournament => {
+  for (let i = 0; i < data.length; i++) {
+    const tournament = data[i];
     const matchDate = new Date(tournament.beginAt);
 
     if (isSameDate(dateToday, matchDate)) {
@@ -138,13 +140,20 @@ export function sortESportsTournaments(data) {
     } else {
       completed.push(tournament);
     }
-  });
+
+    // This part collects all teams from the tournaments to be displayed in dropdown
+    tournament.teams.forEach(team => {
+      // Only add team into teams array if not already in it
+      if (!teams.some(t => t.id == team.id)) teams.push(team);
+    });
+  }
 
   sortESportByDate(ongoing);
   sortESportByDate(upcoming);
   sortESportByEndDate(completed);
+  sortESportTeams(teams);
 
-  return { ongoing, upcoming, completed };
+  return { ongoing, upcoming, completed, teams };
 }
 
 export function sortESportsMatches(data) {
@@ -187,6 +196,14 @@ export function sortESportByEndDate(data) {
     const dateA = a.endAt;
     const dateB = b.endAt;
     return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
+  });
+}
+
+function sortESportTeams(data) {
+  return data.sort(function(a, b) {
+    const dateA = a.name;
+    const dateB = b.name;
+    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
   });
 }
 

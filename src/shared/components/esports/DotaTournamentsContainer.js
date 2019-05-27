@@ -37,16 +37,16 @@ class DotaTournamentsContainer extends React.Component {
 
     return (
       <div className="section">
-        {/* <SelectDropdown handleChange={this.handleChange}
-          options={this.props.dota.teams} /> */}
+        <SelectDropdown handleChange={this.handleChange}
+          options={this.props.dota.teams} />
         <DotaTournaments header="Ongoing"
-          games={dota.ongoing}
+          tournaments={dota.ongoing}
           values={this.state.values} />
         <DotaTournaments header="Upcoming"
-          games={dota.upcoming}
+          tournaments={dota.upcoming}
           values={this.state.values} />
         <DotaTournaments header="Completed"
-          games={dota.completed}
+          tournaments={dota.completed}
           values={this.state.values} />
         <Link to={paths.EVENTS} className="right">More ></Link>
       </div>

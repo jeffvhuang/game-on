@@ -5,21 +5,23 @@ import DotaTournamentDate from './DotaTournamentDate';
 
 DotaTournaments.propTypes = {
   header: string,
-  games: array.isRequired,
+  tournaments: array.isRequired,
   values: array.isRequired
 };
 
-function DotaTournaments({ header, games, values }) {
+function DotaTournaments({ header, tournaments, values }) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
       {values.length < 1 ? (
-        games.map((g, i) => <DotaTournamentDate key={i} tournament={g} />)
+        tournaments.map((t, i) => <DotaTournamentDate key={i} tournament={t} />)
       ) : (
-        games.map((g, i) => {
-          if (values.some(v => v == g.seriesId || v == g.leagueId)) {
-            return <DotaTournamentDate key={i} tournament={g} />;
-          }
+        // For each tournament, check if any of the selected teams (values) are playing
+        tournaments.map((t, index) => {
+          for (let i = 0; i < t.teams.length; i++) {
+            if (values.some(v => v == t.teams[i].id))
+              return <DotaTournamentDate key={index} tournament={t} />;
+          }          
         })
       )}
     </div>
