@@ -4,12 +4,13 @@ import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 const initialState = {
   isFetching: false,
   data: [],
+  series: [],
   tournaments: [],
   ongoing: [],
   upcoming: [],
   completed: [],
-  series: [],
   matches: [],
+  tournamentMatches: [],
   teams: [],
   videos: [],
   thumbnails: []
@@ -45,6 +46,15 @@ function dotaReducer(state = initialState, action) {
     case A.GET_DOTA_MATCHES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
+    case A.GET_DOTA_TOURNAMENT_MATCHES_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case A.GET_DOTA_TOURNAMENT_MATCHES_SUCCESS:
+      return Object.assign({}, state, { isFetching: false, tournamentMatches: action.payload });
+    case A.GET_DOTA_TOURNAMENT_MATCHES_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+    case A.CLEAR_DOTA_TOURNAMENT_MATCHES:
+      return Object.assign({}, state, { tournamentMatches: [] });
+    
     case A.GET_DOTA_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_DOTA_TEAMS_SUCCESS:

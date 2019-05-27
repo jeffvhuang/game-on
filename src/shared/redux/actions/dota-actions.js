@@ -8,6 +8,7 @@ import { sleep, sortESportsTournaments, sortESportByDate } from '../../../helper
 import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
 import SERIES from '../../../mockApiData/dotaSeries.json';
 import MATCHES from '../../../mockApiData/dotaMatches.json';
+import TOURNAMENT_MATCHES from '../../../mockApiData/dotaTournamentMatches.json';
 // import TEAMS from '../../../mockApiData/dotaTeams.json';
 import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
 
@@ -51,7 +52,7 @@ export const getDotaTournamentsSuccess = (payload, sortedTournaments) => ({ type
 export const getDotaTournamentsFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENTS_FAILURE, err });
 
 // export const getDotaTournaments = () => {
-//   return (dispatch) => {
+//   return async (dispatch) => {
 //     dispatch(getDotaTournamentsRequest());
 //     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.TOURNAMENTS)
 //       .then(response => {
@@ -83,7 +84,7 @@ export const getDotaSeriesSuccess = (payload) => ({ type: A.GET_DOTA_SERIES_SUCC
 export const getDotaSeriesFailure = (err) => ({ type: A.GET_DOTA_SERIES_FAILURE, err });
 
 // export const getDotaSeries = () => {
-//   return (dispatch) => {
+//   return async (dispatch) => {
 //     dispatch(getDotaSeriesRequest());
 //     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.SERIES)
 //       .then(response => {
@@ -110,7 +111,7 @@ export const getDotaMatchesSuccess = (payload) => ({ type: A.GET_DOTA_MATCHES_SU
 export const getDotaMatchesFailure = (err) => ({ type: A.GET_DOTA_MATCHES_FAILURE, err });
 
 // export const getDotaMatches = () => {
-//   return (dispatch) => {
+//   return async (dispatch) => {
 //     dispatch(getDotaMatchesRequest());
 //     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.MATCHES)
 //       .then(response => {
@@ -132,13 +133,45 @@ export const getDotaMatches = () => {
   };
 };
 
+// Get A Tournament's Matches
+export const getDotaTournamentMatchesRequest = () => ({ type: A.GET_DOTA_TOURNAMENT_MATCHES_REQUEST });
+export const getDotaTournamentMatchesSuccess = (payload) => ({ type: A.GET_DOTA_TOURNAMENT_MATCHES_SUCCESS, payload });
+export const getDotaTournamentMatchesFailure = (err) => ({ type: A.GET_DOTA_TOURNAMENT_MATCHES_FAILURE, err });
+export const clearDotaTournamentMatchesSuccess = () => ({ type: A.CLEAR_DOTA_TOURNAMENT_MATCHES });
+
+// export const getDotaTournamentMatches = (tournamentId) => {
+//   return async (dispatch) => {
+//     dispatch(getDotaTournamentMatchesRequest());
+//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.MATCHES, {
+//       params: { 'tournamentId': tournamentId }
+//     }).then(response => {
+//       dispatch(getDotaTournamentMatchesSuccess(response.data));
+//     }).catch(err => {
+//       dispatch(getDotaTournamentMatchesFailure(err));
+//       throw (err);
+//     });
+//   };
+// };
+
+export const getDotaTournamentMatches = (tournamentId) => {
+  return async (dispatch) => {
+    dispatch(getDotaTournamentMatchesRequest());
+    await sleep(1000);
+    dispatch(getDotaTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+  };
+};
+
+export const clearDotaTournamentMatches = () => {
+  return (dispatch) => dispatch(clearDotaTournamentMatchesSuccess());
+};
+
 // Get Teams
 export const getDotaTeamsRequest = () => ({ type: A.GET_DOTA_TEAMS_REQUEST });
 export const getDotaTeamsSuccess = (payload) => ({ type: A.GET_DOTA_TEAMS_SUCCESS, payload });
 export const getDotaTeamsFailure = (err) => ({ type: A.GET_DOTA_TEAMS_FAILURE, err });
 
 // export const getDotaTeams = () => {
-//   return (dispatch) => {
+//   return async (dispatch) => {
 //     dispatch(getDotaTeamsRequest());
 //     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.TEAMS)
 //       .then(response => {

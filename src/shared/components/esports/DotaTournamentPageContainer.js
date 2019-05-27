@@ -5,10 +5,10 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getDOTASchedule } from '../../../helpers/utils';
-import { getDotaVideos, getDotaTournaments, getDotaTeams } from '../../redux/actions/dota-actions';
+import { getDotaTournaments,
+  getDotaTournamentMatches,
+  clearDotaTournamentMatches } from '../../redux/actions/dota-actions';
 
-import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
 import DotaTournamentMatches from './DotaTournamentMatches';
 
@@ -21,45 +21,72 @@ const propTypes = {
 class DotaTournamentPageContainer extends React.Component {
   constructor(props) {
     super(props);
+    const { match, dota, actions } = props;
+    const tournamentId = match.params.tournamentNumber;
 
-    const tournamentId = props.match.params.tournamentNumber;
-    const tournaments = props.dota.tournaments;
+    // If different tournament selected, clear tournamentMatches in global state
+    // to replace in componentDidMount
+    if (dota.tournamentMatches.length > 0 && dota.tournamentMatches[0].tournamentId != tournamentId)
+      actions.clearDotaTournamentMatches();
+    
+    // Find tournament from list to populate with teams for dropdown
     let tournament;
-    if (tournaments > 0) tournament = tournaments.find(t => t.id == tournamentId);
+    let tournamentName;
+    if (dota.tournaments.length > 0) {
+      tournament = dota.tournaments.find(t => t.id == tournamentId);
+      tournamentName = this.getTournamentName(tournament);
+    } 
 
     this.state = {
       values: [],
       tournamentId: tournamentId,
-      tournament: (tournament) ? tournament : { matches: [] }
+      tournamentName: tournamentName,
+      teams: (tournament) ? tournament.teams : []
     };
   }
 
   componentDidMount() {
-    const props = this.props;
-    // if (props.dota.teams.length < 1) props.actions.getDotaTeams();
-    if (props.dota.tournaments.length < 1)
-      props.actions.getDotaTournaments().then(data => {
+    const { dota, actions } = this.props;
+
+    // If no tournaments in global state, GET request and then populate dropdown
+    if (dota.tournaments.length < 1) {
+      actions.getDotaTournaments().then(data => {
         const tournament = data.find(t => t.id == this.state.tournamentId);
-        if (tournament) this.setState({ tournament });
+        this.setState({
+          teams: tournament.teams,
+          tournamentName: this.getTournamentName(tournament)
+        });
       });
+    }
+
+    // GET tournament's matches
+    if (dota.tournamentMatches.length < 1 ||
+      (dota.tournamentMatches.length > 0 && dota.tournamentMatches[0].tournamentId != this.state.tournamentId) ) 
+      actions.getDotaTournamentMatches(this.state.tournamentId);
+  }
+
+  getTournamentName = tournament => {
+    let tournamentName = '';
+    if (tournament) {
+      if (tournament.league) tournamentName += tournament.league.name + ' ';
+      if (tournament.series) tournamentName += tournament.series.name + ' ';
+      tournamentName += tournament.name;
+    }
+    
+    return tournamentName;
   }
 
   handleChange = values => this.setState({ values });
 
-  getMatchesForTournament = (tournaments) => {
-    const tournament = tournaments.find(t => t.slug == "starladder-imbatv-minor-2-2019-qualifier-southeast-asia");
-    return tournament.matches;
-  }
-
   render() {
     return (
       <div>
-        <h1>Dota 2</h1>
+        <h1>Dota 2: {this.state.tournamentName}</h1>
         <SelectDropdown handleChange={this.handleChange}
-          options={this.props.dota.teams} />
+          options={this.state.teams} />
         <div className="section">
           <DotaTournamentMatches header="Matches"
-            matches={this.state.tournament.matches}
+            matches={this.props.dota.tournamentMatches}
             values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
@@ -76,7 +103,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    getDotaTournaments
+    getDotaTournaments,
+    getDotaTournamentMatches,
+    clearDotaTournamentMatches
   }, dispatch)
 });
 
