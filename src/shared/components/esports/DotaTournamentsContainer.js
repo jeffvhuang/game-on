@@ -21,7 +21,8 @@ class DotaTournamentsContainer extends React.Component {
     super(props);
 
     this.state = {
-      values: []
+      values: [],
+      showTournamentsMatches: false
     };
   }
 
@@ -32,6 +33,12 @@ class DotaTournamentsContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
+  selectTournament = (id) => {
+    return () => {
+      this.setState({ showTournamentsMatches: true });
+    };
+  }
+
   render() {
     const { dota } = this.props;
 
@@ -41,13 +48,19 @@ class DotaTournamentsContainer extends React.Component {
           options={this.props.dota.teams} />
         <DotaTournaments header="Ongoing"
           tournaments={dota.ongoing}
-          values={this.state.values} />
+          values={this.state.values}
+          showTournamentsMatches={this.state.showTournamentsMatches}
+          selectTournament={this.selectTournament} />
         <DotaTournaments header="Upcoming"
           tournaments={dota.upcoming}
-          values={this.state.values} />
+          values={this.state.values}
+          showTournamentsMatches={this.state.showTournamentsMatches}
+          selectTournament={this.selectTournament} />
         <DotaTournaments header="Completed"
           tournaments={dota.completed}
-          values={this.state.values} />
+          values={this.state.values}
+          showTournamentsMatches={this.state.showTournamentsMatches}
+          selectTournament={this.selectTournament} />
         <Link to={paths.EVENTS} className="right">More ></Link>
       </div>
     );
