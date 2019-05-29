@@ -64,7 +64,7 @@ export function sortFootballSchedule(data) {
   // Separate into games past, today and upcoming
   data.forEach(game => {
     const gamesDate = new Date(game.eventDate);
-    
+
     // Does not separate between those that are on today but completed
     if (isSameDate(dateToday, gamesDate)) {
       gamesToday.push(game);
@@ -85,7 +85,7 @@ export function sortFootballSchedule(data) {
 
 // Sort by date for epl api's data
 function sortFootballByDate(data) {
-  return data.sort(function(a, b) {
+  return data.sort(function (a, b) {
     const dateA = a.eventTimestamp;
     const dateB = b.eventTimestamp;
     return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
@@ -114,7 +114,7 @@ export function sortTennisSchedule(data) {
 }
 
 function sortTennisByDate(data) {
-  return data.sort(function(a, b) {
+  return data.sort(function (a, b) {
     const dateA = a.currentSeason.startDate;
     const dateB = b.currentSeason.startDate;
     return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
@@ -184,7 +184,7 @@ export function sortESportsMatches(data) {
 
 // Sort by descending (most recent dates first)
 export function sortESportByDate(data) {
-  return data.sort(function(a, b) {
+  return data.sort(function (a, b) {
     const dateA = a.beginAt;
     const dateB = b.beginAt;
     return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
@@ -192,7 +192,7 @@ export function sortESportByDate(data) {
 }
 
 export function sortESportByEndDate(data) {
-  return data.sort(function(a, b) {
+  return data.sort(function (a, b) {
     const dateA = a.endAt;
     const dateB = b.endAt;
     return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
@@ -200,11 +200,27 @@ export function sortESportByEndDate(data) {
 }
 
 function sortESportTeams(data) {
-  return data.sort(function(a, b) {
+  return data.sort(function (a, b) {
     const dateA = a.name;
     const dateB = b.name;
     return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
   });
+}
+
+// data = matches
+export function getESportsTeamsFromMatches(data) {
+  const teams = [];
+  // loop through all matches
+  for (let i = 0; i < data.length; i++) {
+    // compare both opponents see whether need to add to array or not
+    data[i].opponents.forEach(competitor => {
+      // Only add team into teams array if not already in it
+      if (!teams.some(t => t.id == competitor.opponent.id))
+        teams.push(competitor.opponent);
+    });
+  }
+
+  return teams;
 }
 
 /**
@@ -229,7 +245,7 @@ export function createYoutubeThumnailObjects(videos) {
   videos.forEach(video => {
     const imgSrc = (video.snippet.thumbnails)
       ? video.snippet.thumbnails.medium.url
-      : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341450.jpg"; 
+      : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341450.jpg";
     thumbnails.push({
       videoId: video.snippet.resourceId.videoId,
       imgSrc: imgSrc,
@@ -256,8 +272,8 @@ export function isSameDate(dateTestedAgainst, dateToTest) {
 
 // Given a Date object, give the time formatted in 00:00
 export function getFormattedTime(date) {
-  const h = (date.getHours()<10?'0':'') + date.getHours(),
-    m = (date.getMinutes()<10?'0':'') + date.getMinutes();
+  const h = (date.getHours() < 10 ? '0' : '') + date.getHours(),
+    m = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
   return h + ':' + m;
 }
 

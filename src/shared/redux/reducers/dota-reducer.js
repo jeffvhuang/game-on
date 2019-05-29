@@ -12,6 +12,7 @@ const initialState = {
   matches: [],
   tournamentMatches: [],
   teams: [],
+  matchesTeams: [],
   videos: [],
   thumbnails: []
 };
@@ -43,7 +44,7 @@ function dotaReducer(state = initialState, action) {
     case A.GET_DOTA_MATCHES_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_DOTA_MATCHES_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, matches: action.payload });
+      return Object.assign({}, state, { isFetching: false, matches: action.payload, matchesTeams: action.matchesTeams });
     case A.GET_DOTA_MATCHES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 

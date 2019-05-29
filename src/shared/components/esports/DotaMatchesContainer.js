@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { paths } from '../../../helpers/constants';
 import { getDotaMatches, getDotaSeries } from '../../redux/actions/dota-actions';
 
-import DotaMatchesSelectDropdown from './DotaMatchesSelectDropdown';
+import SelectDropdown from '../common/SelectDropdown';
 import DotaMatches from './DotaMatches';
 
 const propTypes = {
@@ -36,8 +36,8 @@ class DotaPageContainer extends React.Component {
   render() {
     return (
       <div className="section">
-        <DotaMatchesSelectDropdown handleChange={this.handleChange}
-          options={this.props.dota.series} />
+        <SelectDropdown handleChange={this.handleChange}
+          options={this.props.dota.matchesTeams} />
         <DotaMatches header="Most Recent"
           matches={this.props.dota.matches}
           values={this.state.values} />

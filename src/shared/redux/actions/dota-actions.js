@@ -2,7 +2,7 @@ import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
 import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
-import { sleep, sortESportsTournaments, sortESportByDate } from '../../../helpers/utils';
+import { sleep, sortESportsTournaments, sortESportByDate, getESportsTeamsFromMatches } from '../../../helpers/utils';
 
 // Temporary seed data
 import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
@@ -107,7 +107,7 @@ export const getDotaSeries = () => {
 
 // Get Matches
 export const getDotaMatchesRequest = () => ({ type: A.GET_DOTA_MATCHES_REQUEST });
-export const getDotaMatchesSuccess = (payload) => ({ type: A.GET_DOTA_MATCHES_SUCCESS, payload });
+export const getDotaMatchesSuccess = (payload, matchesTeams) => ({ type: A.GET_DOTA_MATCHES_SUCCESS, payload, matchesTeams });
 export const getDotaMatchesFailure = (err) => ({ type: A.GET_DOTA_MATCHES_FAILURE, err });
 
 // export const getDotaMatches = () => {
@@ -128,7 +128,8 @@ export const getDotaMatches = () => {
   return async (dispatch) => {
     dispatch(getDotaMatchesRequest());
     await sleep(1000);
-    dispatch(getDotaMatchesSuccess(sortESportByDate(MATCHES)));
+    const matchesTeams = getESportsTeamsFromMatches(MATCHES);
+    dispatch(getDotaMatchesSuccess(sortESportByDate(MATCHES), matchesTeams));
     return MATCHES;
   };
 };
