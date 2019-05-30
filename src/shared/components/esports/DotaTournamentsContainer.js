@@ -5,10 +5,11 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getDotaTournaments } from '../../redux/actions/dota-actions';
+import { getDotaTournaments, getDotaTournamentMatches } from '../../redux/actions/dota-actions';
 
 import SelectDropdown from '../common/SelectDropdown';
 import DotaTournaments from './DotaTournaments';
+import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
 
 const propTypes = {
   match: object,
@@ -22,7 +23,8 @@ class DotaTournamentsContainer extends React.Component {
 
     this.state = {
       values: [],
-      showTournamentsMatches: false
+      showTournamentsMatches: false,
+      tournament: {},
     };
   }
 
@@ -35,33 +37,44 @@ class DotaTournamentsContainer extends React.Component {
 
   selectTournament = (id) => {
     return () => {
-      this.setState({ showTournamentsMatches: true });
+      this.props.actions.getDotaTournamentMatches(id);
+      const tournament = this.props.dota.tournaments.find(t => t.id == id);
+      this.setState({
+        showTournamentsMatches: true,
+        tournament
+      });
     };
   }
 
   render() {
     const { dota } = this.props;
+    let mainClass = (this.state.showTournamentsMatches) ? "reduced-side-width" : "full-width";
 
     return (
-      <div className="section">
-        <SelectDropdown handleChange={this.handleChange}
-          options={this.props.dota.teams} />
-        <DotaTournaments header="Ongoing"
-          tournaments={dota.ongoing}
-          values={this.state.values}
-          showTournamentsMatches={this.state.showTournamentsMatches}
-          selectTournament={this.selectTournament} />
-        <DotaTournaments header="Upcoming"
-          tournaments={dota.upcoming}
-          values={this.state.values}
-          showTournamentsMatches={this.state.showTournamentsMatches}
-          selectTournament={this.selectTournament} />
-        <DotaTournaments header="Completed"
-          tournaments={dota.completed}
-          values={this.state.values}
-          showTournamentsMatches={this.state.showTournamentsMatches}
-          selectTournament={this.selectTournament} />
-        <Link to={paths.EVENTS} className="right">More ></Link>
+      <div className="section flex">
+        <div className={mainClass}>
+          <SelectDropdown handleChange={this.handleChange}
+            options={this.props.dota.teams} />
+          <DotaTournaments header="Ongoing"
+            tournaments={dota.ongoing}
+            values={this.state.values}
+            showTournamentsMatches={this.state.showTournamentsMatches}
+            selectTournament={this.selectTournament} />
+          <DotaTournaments header="Upcoming"
+            tournaments={dota.upcoming}
+            values={this.state.values}
+            showTournamentsMatches={this.state.showTournamentsMatches}
+            selectTournament={this.selectTournament} />
+          <DotaTournaments header="Completed"
+            tournaments={dota.completed}
+            values={this.state.values}
+            showTournamentsMatches={this.state.showTournamentsMatches}
+            selectTournament={this.selectTournament} />
+          <Link to={paths.EVENTS} className="right">More ></Link>
+        </div>
+        {this.state.showTournamentsMatches &&
+          <DotaTournamentMatchesContainer tournament={this.state.tournament}
+            matches={dota.tournamentMatches} />}
       </div>
     );
   }
@@ -75,7 +88,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    getDotaTournaments
+    getDotaTournaments,
+    getDotaTournamentMatches
   }, dispatch)
 });
 
