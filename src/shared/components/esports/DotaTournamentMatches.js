@@ -11,7 +11,7 @@ DotaTournamentMatches.propTypes = {
 
 function DotaTournamentMatches({ header, matches, values }) {
   return (
-    <div className="margin-bot">
+    <div className="list">
       <h2>{header}</h2>
       {values.length < 1 ? (
         matches.map((m, i) => <DotaTournamentMatch key={i} match={m} />)

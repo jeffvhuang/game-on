@@ -36,7 +36,7 @@ class DotaTournamentMatchesContainer extends React.Component {
 
   render() {
     return (
-      <div className="">
+      <div>
         <h2>{this.state.tournamentName}</h2>
         <SelectDropdown handleChange={this.handleChange}
           options={this.props.tournament.teams} />
