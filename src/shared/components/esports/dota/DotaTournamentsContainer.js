@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
-import { getDotaTournaments, getDotaTournamentMatches } from '../../redux/actions/dota-actions';
+import { paths } from '../../../../helpers/constants';
+import { getDotaTournaments, getDotaTournamentMatches } from '../../../redux/actions/dota-actions';
 
-import SelectDropdown from '../common/SelectDropdown';
+import SelectDropdown from '../../common/SelectDropdown';
 import DotaTournaments from './DotaTournaments';
 import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
 

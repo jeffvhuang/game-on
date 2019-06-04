@@ -2,9 +2,9 @@ import React from 'react';
 import { object, array } from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
+import { paths } from '../../../../helpers/constants';
 
-import SelectDropdown from '../common/SelectDropdown';
+import SelectDropdown from '../../common/SelectDropdown';
 import DotaTournamentMatches from './DotaTournamentMatches';
 
 const propTypes = {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { object, bool, func } from 'prop-types';
 
-import { getDayMonthDate } from '../../../helpers/utils';
+import { getDayMonthDate } from '../../../../helpers/utils';
 
 DotaTournamentDate.propTypes = {
   tournament: object.isRequired,
