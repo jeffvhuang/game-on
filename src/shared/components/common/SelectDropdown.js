@@ -11,18 +11,16 @@ const { Option } = Select;
 
 function SelectDropdown({ handleChange, options }) {
   return (
-    <div className="select-dd">
-      <Select onChange={handleChange}
-        placeholder="Select teams to filter"
-        mode="multiple"
-        size="large"
-        style={{ width: '80%' }}
-        allowClear >
-        {options.map((option, i) => {
-          return <Option key={i} value={option.id}>{option.name}</Option>;
-        })}
-      </Select>
-    </div>
+    <Select onChange={handleChange}
+      placeholder="Select teams to filter"
+      mode="multiple"
+      size="large"
+      style={{ width: '80%' }}
+      allowClear >
+      {options.map((option, i) => {
+        return <Option key={i} value={option.id}>{option.name}</Option>;
+      })}
+    </Select>
   );
 }
 

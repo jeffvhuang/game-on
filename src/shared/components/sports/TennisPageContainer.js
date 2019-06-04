@@ -48,7 +48,9 @@ class TennisPageContainer extends React.Component {
       <div>
         {/* <VideoHeader /> */}
         <h1>Tennis</h1>
-        <SelectDropdown handleChange={this.handleChange} options={tournamentTypes} />
+        <div className="select-dd">
+          <SelectDropdown handleChange={this.handleChange} options={tournamentTypes} />
+        </div>
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
           showCount={4}
@@ -78,8 +80,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ 
-    getTennisTournaments }, dispatch)
+  actions: bindActionCreators({
+    getTennisTournaments
+  }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisPageContainer);

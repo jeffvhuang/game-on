@@ -14,7 +14,7 @@ function DotaTournamentDate({ tournament, showTournamentsMatches, selectTourname
   return (
     showTournamentsMatches ? (
       <Row onClick={selectTournament(tournament.id)}>
-        <Col span={14}>
+        <Col>
           {(tournament.league) && tournament.league.name} {(tournament.series) && tournament.series.name} {tournament.name}
         </Col>
       </Row>

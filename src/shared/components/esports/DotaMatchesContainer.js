@@ -36,8 +36,10 @@ class DotaPageContainer extends React.Component {
   render() {
     return (
       <div className="section">
-        <SelectDropdown handleChange={this.handleChange}
+        <div className="select-dd">
+          <SelectDropdown handleChange={this.handleChange}
           options={this.props.dota.matchesTeams} />
+        </div>
         <DotaMatches header="Most Recent"
           matches={this.props.dota.matches}
           values={this.state.values} />

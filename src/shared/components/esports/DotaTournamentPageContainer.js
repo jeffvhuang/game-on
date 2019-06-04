@@ -82,8 +82,10 @@ class DotaTournamentPageContainer extends React.Component {
     return (
       <div>
         <h1>Dota 2: {this.state.tournamentName}</h1>
-        <SelectDropdown handleChange={this.handleChange}
+        <div className="select-dd">
+          <SelectDropdown handleChange={this.handleChange}
           options={this.state.teams} />
+        </div>
         <div className="section">
           <DotaTournamentMatches header="Matches"
             matches={this.props.dota.tournamentMatches}

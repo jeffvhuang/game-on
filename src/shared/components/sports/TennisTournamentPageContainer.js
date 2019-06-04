@@ -5,10 +5,12 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
-import { getTennisTournamentSchedule,
+import {
+  getTennisTournamentSchedule,
   getTennisTournamentInfo,
   clearTennisTournamentSchedule,
-  clearTennisTournamentInfo } from '../../redux/actions/tennis-actions';
+  clearTennisTournamentInfo
+} from '../../redux/actions/tennis-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SelectDropdown from '../common/SelectDropdown';
@@ -51,12 +53,12 @@ class TennisTournamentPageContainer extends React.Component {
     const tournamentInfo = props.tennis.tournamentInfo;
     const tournamentSchedule = props.tennis.tournamentSchedule;
 
-    if (tournamentSchedule.length < 1 || 
-      (tournamentSchedule.length > 0 && tournamentSchedule[0].tournament.id !== tournamentId)) 
+    if (tournamentSchedule.length < 1 ||
+      (tournamentSchedule.length > 0 && tournamentSchedule[0].tournament.id !== tournamentId))
       props.actions.getTennisTournamentSchedule(tournamentId);
-    
-    if (!tournamentInfo.tournament || tournamentInfo.tournament.id !== tournamentId) 
-      props.actions.getTennisTournamentInfo(tournamentId).then(data => 
+
+    if (!tournamentInfo.tournament || tournamentInfo.tournament.id !== tournamentId)
+      props.actions.getTennisTournamentInfo(tournamentId).then(data =>
         this.setState({ tournamentName: data.tournament.currentSeason.name }));
   }
 
@@ -66,8 +68,10 @@ class TennisTournamentPageContainer extends React.Component {
     return (
       <div>
         <h1>{this.state.tournamentName}</h1>
-        <SelectDropdown handleChange={this.handleChange}
-          options={this.props.tennis.tournamentInfo.competitors || []} />
+        <div className="select-dd">
+          <SelectDropdown handleChange={this.handleChange}
+            options={this.props.tennis.tournamentInfo.competitors || []} />
+        </div>
         {/* <VideoThumbnails heading="Tennis"
           thumbnails={this.props.tennis.thumbnails}
           showCount={4}
@@ -91,11 +95,12 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ 
+  actions: bindActionCreators({
     getTennisTournamentSchedule,
     getTennisTournamentInfo,
     clearTennisTournamentSchedule,
-    clearTennisTournamentInfo }, dispatch)
+    clearTennisTournamentInfo
+  }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);

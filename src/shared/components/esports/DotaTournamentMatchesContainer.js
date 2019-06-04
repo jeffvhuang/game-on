@@ -36,11 +36,13 @@ class DotaTournamentMatchesContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="page-main-section">
         <h2>{this.state.tournamentName}</h2>
-        <SelectDropdown handleChange={this.handleChange}
-          options={this.props.tournament.teams} />
-        <div className="section">
+        <div className="select-dd">
+          <SelectDropdown handleChange={this.handleChange}
+            options={this.props.tournament.teams} />
+        </div>
+        <div className="section-left">
           <DotaTournamentMatches header="Matches"
             matches={this.props.matches}
             values={this.state.values} />

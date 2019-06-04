@@ -48,13 +48,16 @@ class DotaTournamentsContainer extends React.Component {
 
   render() {
     const { dota } = this.props;
-    let mainClass = (this.state.showTournamentsMatches) ? "reduced-side-width" : "full-width";
+    const mainClass = (this.state.showTournamentsMatches) ? "reduced-side-width" : "full-width";
+    const ddClass = (this.state.showTournamentsMatches) ? "select-dd-left" : "select-dd";
 
     return (
       <div className="section flex">
         <div className={mainClass}>
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.dota.teams} />
+          <div className={ddClass}>
+            <SelectDropdown handleChange={this.handleChange}
+              options={this.props.dota.teams} />
+          </div>
           <DotaTournaments header="Ongoing"
             tournaments={dota.ongoing}
             values={this.state.values}
