@@ -3,8 +3,8 @@ import { Row, Col } from 'antd';
 import { object } from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
-import { getDayMonthDate } from '../../../helpers/utils';
+import { paths } from '../../../../helpers/constants';
+import { getDayMonthDate } from '../../../../helpers/utils';
 
 TennisTournamentDate.propTypes = {
   tournament: object.isRequired

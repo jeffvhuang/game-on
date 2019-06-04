@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
+import { paths } from '../../../../helpers/constants';
 import {
   getEplTeams,
   getEplSchedule,
@@ -14,12 +14,12 @@ import {
   getEuropaLeagueSchedule,
   getChampionsLeagueVideos,
   getEuropaLeagueVideos
-} from '../../redux/actions/football-actions';
+} from '../../../redux/actions/football-actions';
 
-import VideoThumbnails from '../common/VideoThumbnails';
+import VideoThumbnails from '../../common/VideoThumbnails';
 import FootballSelectDropdown from './FootballSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
-import VideoHeader from '../common/VideoHeader';
+import VideoHeader from '../../common/VideoHeader';
 
 const propTypes = {
   epl: object.isRequired,

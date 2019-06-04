@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
-import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../redux/actions/nba-actions';
+import { paths } from '../../../../helpers/constants';
+import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../../redux/actions/nba-actions';
 
-import VideoThumbnails from '../common/VideoThumbnails';
+import VideoThumbnails from '../../common/VideoThumbnails';
 import NbaSelectDropdown from './NbaSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
-import VideoHeader from '../common/VideoHeader';
+import VideoHeader from '../../common/VideoHeader';
 
 const propTypes = {
   nba: object.isRequired,

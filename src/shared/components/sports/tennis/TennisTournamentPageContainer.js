@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
+import { paths } from '../../../../helpers/constants';
 import {
   getTennisTournamentSchedule,
   getTennisTournamentInfo,
   clearTennisTournamentSchedule,
   clearTennisTournamentInfo
-} from '../../redux/actions/tennis-actions';
+} from '../../../redux/actions/tennis-actions';
 
-import VideoThumbnails from '../common/VideoThumbnails';
-import SelectDropdown from '../common/SelectDropdown';
+import VideoThumbnails from '../../common/VideoThumbnails';
+import SelectDropdown from '../../common/SelectDropdown';
 import TennisMatches from './TennisMatches';
 
 const propTypes = {

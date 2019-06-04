@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { object } from 'prop-types';
 
-import { getDayMonthDate } from '../../../helpers/utils';
+import { getDayMonthDate } from '../../../../helpers/utils';
 
 TennisMatchup.propTypes = {
   match: object.isRequired

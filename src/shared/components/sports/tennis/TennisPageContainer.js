@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
-import { paths } from '../../../helpers/constants';
-import { getTennisTournaments } from '../../redux/actions/tennis-actions';
+import { paths } from '../../../../helpers/constants';
+import { getTennisTournaments } from '../../../redux/actions/tennis-actions';
 
-import VideoThumbnails from '../common/VideoThumbnails';
-import SelectDropdown from '../common/SelectDropdown';
+import VideoThumbnails from '../../common/VideoThumbnails';
+import SelectDropdown from '../../common/SelectDropdown';
 import TennisTournaments from './TennisTournaments';
-import VideoHeader from '../common/VideoHeader';
+import VideoHeader from '../../common/VideoHeader';
 
 const propTypes = {
   tennis: object.isRequired,

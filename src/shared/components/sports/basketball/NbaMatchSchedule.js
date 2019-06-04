@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { object } from 'prop-types';
 
-import { getFormattedTime } from '../../../helpers/utils';
+import { getFormattedTime } from '../../../../helpers/utils';
 
 NbaMatchSchedule.propTypes = {
   game: object.isRequired
