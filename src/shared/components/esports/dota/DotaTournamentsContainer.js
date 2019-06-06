@@ -77,7 +77,7 @@ class DotaTournamentsContainer extends React.Component {
         </div>
         {this.state.showTournamentsMatches &&
           <DotaTournamentMatchesContainer tournament={this.state.tournament}
-            matches={dota.tournamentMatches} />}
+            matches={dota.tournamentMatches} teams={this.state.tournament.teams} />}
       </div>
     );
   }

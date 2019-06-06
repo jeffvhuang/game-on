@@ -9,6 +9,7 @@ import DotaTournamentMatches from './DotaTournamentMatches';
 
 const propTypes = {
   tournament: object.isRequired,
+  teams: array,
   matches: array.isRequired
 };
 
@@ -40,7 +41,7 @@ class DotaTournamentMatchesContainer extends React.Component {
         <h2>{this.state.tournamentName}</h2>
         <div className="select-dd">
           <SelectDropdown handleChange={this.handleChange}
-            options={this.props.tournament.teams} />
+            options={this.props.teams} />
         </div>
         <div className="section-left">
           <DotaTournamentMatches header="Matches"
