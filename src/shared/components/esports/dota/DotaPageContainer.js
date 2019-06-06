@@ -3,6 +3,7 @@ import { Tabs } from 'antd';
 
 import DotaMatchesContainer from './DotaMatchesContainer';
 import DotaTournamentsContainer from './DotaTournamentsContainer';
+import DotaSeriesContainer from './DotaSeriesContainer';
 
 const TabPane = Tabs.TabPane;
 
@@ -12,10 +13,13 @@ class DotaPageContainer extends React.Component {
       <div>
         <h1>Dota 2</h1>
         <Tabs defaultActiveKey="1" size="large">
-          <TabPane tab="Tournaments" key="1">
+          <TabPane tab="Series" key="1">
+            <DotaSeriesContainer />
+          </TabPane>
+          <TabPane tab="Tournaments" key="2">
             <DotaTournamentsContainer />
           </TabPane>
-          <TabPane tab="Matches" key="2">
+          <TabPane tab="Matches" key="3">
             <DotaMatchesContainer />
           </TabPane>
         </Tabs>

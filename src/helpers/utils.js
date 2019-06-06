@@ -156,6 +156,33 @@ export function sortESportsTournaments(data) {
   return { ongoing, upcoming, completed, teams };
 }
 
+export function sortESportsSeries(data) {
+  const ongoingSeries = [];
+  const upcomingSeries = [];
+  const completedSeries = [];
+  const dateToday = new Date();
+
+  // Separate matches into today followed by upcoming and past
+  for (let i = 0; i < data.length; i++) {
+    const series = data[i];
+    const seriesDate = new Date(series.beginAt);
+
+    if (isSameDate(dateToday, seriesDate)) {
+      ongoingSeries.push(series);
+    } else if (seriesDate.getTime() > dateToday) {
+      upcomingSeries.push(series);
+    } else {
+      completedSeries.push(series);
+    }
+  }
+
+  sortESportByDate(ongoingSeries);
+  sortESportByDate(upcomingSeries);
+  sortESportByEndDate(completedSeries);
+
+  return { ongoingSeries, upcomingSeries, completedSeries };
+}
+
 export function sortESportsMatches(data) {
   const today = [];
   const upcoming = [];

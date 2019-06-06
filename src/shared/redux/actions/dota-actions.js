@@ -2,7 +2,11 @@ import { dotaActions as A } from './action-types';
 import axios from 'axios';
 
 import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
-import { sleep, sortESportsTournaments, sortESportByDate, getESportsTeamsFromMatches } from '../../../helpers/utils';
+import { sleep, 
+  sortESportsTournaments, 
+  sortESportByDate,
+  getESportsTeamsFromMatches,
+  sortESportsSeries } from '../../../helpers/utils';
 
 // Temporary seed data
 import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
@@ -80,7 +84,7 @@ export const getDotaTournaments = () => {
 
 // Get Series
 export const getDotaSeriesRequest = () => ({ type: A.GET_DOTA_SERIES_REQUEST });
-export const getDotaSeriesSuccess = (payload) => ({ type: A.GET_DOTA_SERIES_SUCCESS, payload });
+export const getDotaSeriesSuccess = (payload, sortedSeries) => ({ type: A.GET_DOTA_SERIES_SUCCESS, payload, sortedSeries });
 export const getDotaSeriesFailure = (err) => ({ type: A.GET_DOTA_SERIES_FAILURE, err });
 
 // export const getDotaSeries = () => {
@@ -101,7 +105,8 @@ export const getDotaSeries = () => {
   return async (dispatch) => {
     dispatch(getDotaSeriesRequest());
     await sleep(1000);
-    return dispatch(getDotaSeriesSuccess(SERIES));
+    const sortedSeries = sortESportsSeries(SERIES);
+    return dispatch(getDotaSeriesSuccess(SERIES, sortedSeries));
   };
 };
 
