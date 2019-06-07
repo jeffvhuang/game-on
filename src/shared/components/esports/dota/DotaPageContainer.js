@@ -11,7 +11,9 @@ class DotaPageContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Dota 2</h1>
+        <div className="page-header">
+          <h1>Dota 2</h1>
+        </div>
         <Tabs defaultActiveKey="1" size="large">
           <TabPane tab="Series" key="1">
             <DotaSeriesContainer />

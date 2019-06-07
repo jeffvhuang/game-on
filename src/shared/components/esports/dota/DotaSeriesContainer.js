@@ -29,7 +29,7 @@ class DotaSeriesContainer extends React.Component {
 
   componentDidMount() {
     const { dota, actions } = this.props;
-    if (dota.series.length < 1) actions.getDotaSeries();
+    if (!dota.series.length) actions.getDotaSeries();
   }
 
   getTeams = (tournaments) => {
