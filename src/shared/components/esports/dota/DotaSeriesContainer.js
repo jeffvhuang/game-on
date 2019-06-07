@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getDotaSeries, getDotaTournamentMatches } from '../../../redux/actions/dota-actions';
+import { getDotaSeries, getDotaTournamentMatches, getDotaTournaments } from '../../../redux/actions/dota-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaSeries from './DotaSeries';
@@ -32,13 +32,21 @@ class DotaSeriesContainer extends React.Component {
     if (dota.series.length < 1) actions.getDotaSeries();
   }
 
+  getTeams = (tournaments) => {
+    const tournament = tournaments.find(t => t.id == this.state.tournamentId);
+    return (tournament) ? tournament.teams : [];
+  }
+
   handleChange = values => this.setState({ values });
 
   selectTournament = (id) => {
     return () => {
-      this.props.actions.getDotaTournamentMatches(id);
+      const { dota, actions } = this.props;
+      if (!dota.tournaments.length) actions.getDotaTournaments();
+      actions.getDotaTournamentMatches(id);
       this.setState({
-        showTournamentsMatches: true
+        showTournamentsMatches: true,
+        tournamentId: id
       });
     };
   }
@@ -76,7 +84,7 @@ class DotaSeriesContainer extends React.Component {
         </div>
         {showMatches &&
           <DotaTournamentMatchesContainer tournament={dota.tournamentMatches[0].tournament}
-            matches={dota.tournamentMatches} teams={[]} />}
+            matches={dota.tournamentMatches} teams={this.getTeams(dota.tournaments)} />}
       </div>
     );
   }
@@ -91,7 +99,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
     getDotaSeries,
-    getDotaTournamentMatches
+    getDotaTournamentMatches,
+    getDotaTournaments
   }, dispatch)
 });
 
