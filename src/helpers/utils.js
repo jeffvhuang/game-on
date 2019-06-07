@@ -160,20 +160,17 @@ export function sortESportsSeries(data) {
   const ongoingSeries = [];
   const upcomingSeries = [];
   const completedSeries = [];
-  const dateToday = new Date();
 
   // Separate matches into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
     const series = data[i];
-    const seriesDate = new Date(series.beginAt);
+    const now = Date.now();
+    const beginDate = new Date(series.beginAt);
+    const endDate = new Date(series.endAt);
 
-    if (isSameDate(dateToday, seriesDate)) {
-      ongoingSeries.push(series);
-    } else if (seriesDate.getTime() > dateToday) {
-      upcomingSeries.push(series);
-    } else {
-      completedSeries.push(series);
-    }
+    if (beginDate > now) upcomingSeries.push(series);
+    else if (endDate < now) completedSeries.push(series);
+    else ongoingSeries.push(series);
   }
 
   sortESportByDate(ongoingSeries);
