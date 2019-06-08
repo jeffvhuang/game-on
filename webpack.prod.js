@@ -94,7 +94,7 @@ module.exports = merge(common, {
               // fallback to style-loader in development
               process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
               "css-loader",
-              "sass-loader"
+              AntdScssThemePlugin.themify("sass-loader")
             ]
           },
           {
@@ -103,8 +103,12 @@ module.exports = merge(common, {
               MiniCssExtractPlugin.loader,
               "css-loader",
               "postcss-loader",
-              'less-loader'
-              // AntdScssThemePlugin.themify('less-loader')
+              AntdScssThemePlugin.themify({
+                loader: 'less-loader',
+                options: {
+                  javascriptEnabled: true
+                }
+              })
             ]
           },
           {

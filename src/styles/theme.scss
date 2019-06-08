@@ -1,5 +1,4 @@
-@import 'partials/variables';
-
+// Don't use imported variables in this file
 // Used to configure antd theme variables
-$primary-color: $red;
-$secondary-color: $blue;
+$primary-color: red;
+$secondary-color: blue;

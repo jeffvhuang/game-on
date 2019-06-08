@@ -5,8 +5,6 @@ const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const fs = require('fs');
 const path = require('path');
-const lessToJs = require('less-vars-to-js');
-const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/styles/ant-theme-vars.less'), 'utf8'));
 
 module.exports = merge(common, {
   mode: 'development',
@@ -20,7 +18,8 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
-    new AntdScssThemePlugin('./theme.scss')
+    new AntdScssThemePlugin('./src/styles/theme.scss')
+    // new AntdScssThemePlugin('./theme.scss')
   ],
   output: {
     filename: '[name].bundle.js',
@@ -69,14 +68,12 @@ module.exports = merge(common, {
               'style-loader',
               'css-loader',
               'postcss-loader',
-              {
+              AntdScssThemePlugin.themify({
                 loader: 'less-loader',
-                // loader: AntdScssThemePlugin.themify('less-loader'),
                 options: {
-                  javascriptEnabled: true,
-                  modifyVars: themeVariables
+                  javascriptEnabled: true
                 }
-              }
+              })
             ]
           },
           {
@@ -84,7 +81,7 @@ module.exports = merge(common, {
             use: [
               "style-loader", // creates style nodes from JS strings
               "css-loader", // translates CSS into CommonJS
-              "sass-loader" // compiles Sass to CSS, using Node Sass by default
+              AntdScssThemePlugin.themify("sass-loader") // compiles Sass to CSS, using Node Sass by default
             ]
           },
           {

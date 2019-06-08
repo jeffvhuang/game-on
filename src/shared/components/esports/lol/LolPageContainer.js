@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import { Switch } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
 import { getLolTournaments } from '../../../redux/actions/lol-actions';
@@ -43,6 +44,7 @@ class LolPageContainer extends React.Component {
           <SelectDropdown handleChange={this.handleChange}
             options={this.props.lol.teams} />
         </div>
+        <Switch defaultChecked onChange={this.handleChange} />
         <div className="calendar">
           <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
         </div>
