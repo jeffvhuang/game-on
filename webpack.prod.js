@@ -1,3 +1,4 @@
+const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -45,7 +46,8 @@ module.exports = merge(common, {
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
-    new ManifestPlugin()
+    new ManifestPlugin(),
+    new AntdScssThemePlugin('./theme.scss')
   ],
   output: {
     filename: '[name].[chunkhash:8].bundle.js',
@@ -87,13 +89,27 @@ module.exports = merge(common, {
             // to allow webpack tree shaking
           },
           {
-            test: /\.(le|c)ss$/,
+            test: /\.scss$/,
+            use: [
+              // fallback to style-loader in development
+              process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+              "css-loader",
+              "sass-loader"
+            ]
+          },
+          {
+            test: /\.less$/,
             use: [
               MiniCssExtractPlugin.loader,
               "css-loader",
               "postcss-loader",
-              "less-loader"
+              'less-loader'
+              // AntdScssThemePlugin.themify('less-loader')
             ]
+          },
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
           },
           // "file" loader makes sure assets end up in the `build` folder.
           {

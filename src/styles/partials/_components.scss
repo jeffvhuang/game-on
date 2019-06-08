@@ -26,7 +26,7 @@
 }
 
 .select-dd {
-  .mid-flex();
+  @extend .mid-flex;
   margin: 1em 0;
 }
 
@@ -39,5 +39,25 @@
 
   .ant-row {
     cursor: pointer;
+  }
+}
+
+.thumbnail {
+  width: 120px;
+  height: 90px;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+  .thumbnail {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .thumbnail {
+    width: 180px;
+    height: 120px;
   }
 }

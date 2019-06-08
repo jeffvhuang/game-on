@@ -6,7 +6,6 @@
 
 .mid-container {
   margin: 0 auto;
-  // .bordered();
 }
 
 .right {
@@ -21,17 +20,21 @@
   margin-bottom: 1em;
 }
 
+%margin-bot-med {
+  margin-bottom: 2em;
+}
+
 .pad-sides {
   padding: 0 2em;
 }
 
 .section {
-  .pad-sides();
-  margin-bottom: 2em;
+  @extend .pad-sides;
+  @extend %margin-bot-med;
 }
 
 .section-left {
-  margin-bottom: 2em;
+  @extend %margin-bot-med;
 }
 
 .flex {
@@ -58,4 +61,8 @@
 .page-main-section {
   width: 100%;
   margin-left: 1em;
+}
+
+.bordered {
+  border: 2px solid $red;
 }

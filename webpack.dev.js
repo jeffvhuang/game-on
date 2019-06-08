@@ -1,8 +1,9 @@
+const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.config');
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const fs  = require('fs');
+const fs = require('fs');
 const path = require('path');
 const lessToJs = require('less-vars-to-js');
 const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/styles/ant-theme-vars.less'), 'utf8'));
@@ -18,7 +19,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CaseSensitivePathsPlugin()
+    new CaseSensitivePathsPlugin(),
+    new AntdScssThemePlugin('./theme.scss')
   ],
   output: {
     filename: '[name].bundle.js',
@@ -69,11 +71,20 @@ module.exports = merge(common, {
               'postcss-loader',
               {
                 loader: 'less-loader',
+                // loader: AntdScssThemePlugin.themify('less-loader'),
                 options: {
                   javascriptEnabled: true,
                   modifyVars: themeVariables
                 }
               }
+            ]
+          },
+          {
+            test: /\.scss$/,
+            use: [
+              "style-loader", // creates style nodes from JS strings
+              "css-loader", // translates CSS into CommonJS
+              "sass-loader" // compiles Sass to CSS, using Node Sass by default
             ]
           },
           {

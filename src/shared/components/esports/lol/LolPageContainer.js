@@ -3,6 +3,8 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 import { paths } from '../../../../helpers/constants';
 import { getLolTournaments } from '../../../redux/actions/lol-actions';
@@ -42,7 +44,7 @@ class LolPageContainer extends React.Component {
             options={this.props.lol.teams} />
         </div>
         <div className="calendar">
-          Calendar
+          <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
         </div>
       </div>
     );
