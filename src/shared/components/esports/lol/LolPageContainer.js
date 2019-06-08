@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import { Switch } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
 import { getLolTournaments } from '../../../redux/actions/lol-actions';
@@ -34,6 +33,19 @@ class LolPageContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
+  getTournaments = () => {
+    const events = [
+      { title: 'Tournament 1', date: '2019-06-08' },
+      { title: 'Tournament 2 Qualifiers', start: '2019-06-07', end: '2019-06-10' }
+    ];
+    return events;
+  }
+
+  selectTournament = (info) => {
+    console.log(info);
+    console.log('event title', info.event.title);
+  }
+
   render() {
     return (
       <div>
@@ -44,9 +56,11 @@ class LolPageContainer extends React.Component {
           <SelectDropdown handleChange={this.handleChange}
             options={this.props.lol.teams} />
         </div>
-        <Switch defaultChecked onChange={this.handleChange} />
         <div className="calendar">
-          <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
+          <FullCalendar defaultView="dayGridMonth"
+            plugins={[dayGridPlugin]}
+            events={this.getTournaments()}
+            eventClick={this.selectTournament} />
         </div>
       </div>
     );

@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
 import store from './shared/redux/configureStore';
 import 'antd/dist/antd.less';
-import './styles/web.scss';
+import './styles/main.scss';
 import App from "./shared/App.js";
 import { BrowserRouter } from 'react-router-dom';
 

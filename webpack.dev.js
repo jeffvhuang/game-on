@@ -68,12 +68,18 @@ module.exports = merge(common, {
               'style-loader',
               'css-loader',
               'postcss-loader',
-              AntdScssThemePlugin.themify({
+              // AntdScssThemePlugin.themify({
+              //   loader: 'less-loader',
+              //   options: {
+              //     javascriptEnabled: true
+              //   }
+              // }),
+              {
                 loader: 'less-loader',
                 options: {
                   javascriptEnabled: true
                 }
-              })
+              }
             ]
           },
           {
@@ -81,7 +87,8 @@ module.exports = merge(common, {
             use: [
               "style-loader", // creates style nodes from JS strings
               "css-loader", // translates CSS into CommonJS
-              AntdScssThemePlugin.themify("sass-loader") // compiles Sass to CSS, using Node Sass by default
+              // AntdScssThemePlugin.themify("sass-loader"), // compiles Sass to CSS, using Node Sass by default
+              "sass-loader"
             ]
           },
           {
