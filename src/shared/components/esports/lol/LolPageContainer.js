@@ -22,16 +22,36 @@ class LolPageContainer extends React.Component {
     super(props);
 
     this.state = {
-      values: []
+      values: [],
+      tournaments: [],
+
     };
   }
 
   componentDidMount() {
     const { lol, actions } = this.props;
-    if (!lol.tournaments.length) actions.getLolTournaments();
+    if (!lol.tournaments.length) actions.getLolTournaments()
+      .then(data => {
+        this.setState({ tournaments: data });
+      });
   }
 
-  handleChange = values => this.setState({ values });
+  handleChange = values => {
+    // Either get all tournaments when nothing selected in dropdown or
+    // get tournaments that include any team that has been selected
+    console.log(values);
+    const tournaments = (!values.length)
+      ? this.props.lol.tournaments
+      : this.props.lol.tournaments.filter(tournament => {
+        for (let i = 0; i < tournament.teams.length; i++) {
+          const team = tournament.teams[i];
+          if (values.some(value => value == team.id)) return tournament;
+        }
+      });
+
+    this.setState({ tournaments });
+    console.log(tournaments);
+  }
 
   getTournaments = (tournaments) => {
     const events = [];
@@ -51,9 +71,7 @@ class LolPageContainer extends React.Component {
   }
 
   selectTournament = (info) => {
-    console.log(info);
-    console.log('event title', info.event.title);
-    console.log('event id', info.event.id);
+    console.log(info.event.title);
   }
 
   render() {
@@ -69,7 +87,7 @@ class LolPageContainer extends React.Component {
         <div className="calendar">
           <FullCalendar defaultView="dayGridMonth"
             plugins={[dayGridPlugin]}
-            events={this.getTournaments(this.props.lol.tournaments)}
+            events={this.getTournaments(this.state.tournaments)}
             eventClick={this.selectTournament} />
         </div>
       </div>

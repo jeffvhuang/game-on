@@ -49,7 +49,7 @@ export const getLolTournamentsSuccess = (payload, sortedTournaments) => ({ type:
 export const getLolTournamentsFailure = (err) => ({ type: A.GET_LOL_TOURNAMENTS_FAILURE, err });
 
 // export const getLolTournaments = () => {
-//   return (dispatch) => {
+//   return async (dispatch) => {
 //     dispatch(getLolTournamentsRequest());
 //     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.TOURNAMENTS)
 //       .then(response => {
@@ -65,10 +65,11 @@ export const getLolTournamentsFailure = (err) => ({ type: A.GET_LOL_TOURNAMENTS_
 
 // This uses mock data to reduce requests to api
 export const getLolTournaments = () => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(getLolTournamentsRequest());
     const sortedTournaments = sortESportsTournaments(TOURNAMENTS);
-    return dispatch(getLolTournamentsSuccess(TOURNAMENTS, sortedTournaments));
+    dispatch(getLolTournamentsSuccess(TOURNAMENTS, sortedTournaments));
+    return TOURNAMENTS;
   };
 };
 

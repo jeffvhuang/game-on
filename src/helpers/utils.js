@@ -248,9 +248,17 @@ export function getTournamentName(tournament) {
   let tournamentName = '';
   if (tournament) {
     if (tournament.league) tournamentName += tournament.league.name + ' ';
-    if (tournament.series) tournamentName += tournament.series.name + ' ';
+    if (tournament.series) {
+      if (tournament.series.name != null) {
+        tournamentName += tournament.series.name + ' ';
+      } else if (tournament.series.fullName != null) {
+        tournamentName += tournament.series.fullName + ' ';
+      }
+    }
+      
     tournamentName += tournament.name;
   }
+  
   return tournamentName;
 }
 
