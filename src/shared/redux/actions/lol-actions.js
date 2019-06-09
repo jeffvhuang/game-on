@@ -82,7 +82,7 @@ export const clearLolTournamentMatchesSuccess = () => ({ type: A.CLEAR_LOL_TOURN
 // export const getLolTournamentMatches = (tournamentId) => {
 //   return async (dispatch) => {
 //     dispatch(getLolTournamentMatchesRequest());
-//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.DOTA + gameonAPI.MATCHES, {
+//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES, {
 //       params: { 'tournamentId': tournamentId }
 //     }).then(response => {
 //       dispatch(getLolTournamentMatchesSuccess(response.data));

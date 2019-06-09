@@ -1,27 +1,24 @@
 import React from 'react';
 import { string, array } from 'prop-types';
+import { Table, Divider } from 'antd';
 
-import DotaTournamentMatch from '../dota/DotaTournamentMatch';
-
+const { Column } = Table;
 LolTournamentMatches.propTypes = {
   header: string,
-  matches: array.isRequired,
-  values: array.isRequired
+  matches: array.isRequired
 };
 
-function LolTournamentMatches({ header, matches, values }) {
+function LolTournamentMatches({ header, matches }) {
   return (
     <div className="list">
       <h2>{header}</h2>
-      {values.length < 1 ? (
-        matches.map((m, i) => <DotaTournamentMatch key={i} match={m} />)
-      ) : (
-        matches.map((m, i) => {
-          if (values.some(v => v == m.opponents[0].opponent.name || v == m.opponents[1].opponent.name)) {
-            return <DotaTournamentMatch key={i} match={m} />;
-          }
-        })
-      )}
+      <Table dataSource={matches}>
+        <Column title="Name" dataIndex="name" key="name" />
+        <Column title="Team 1" dataIndex="team1" key="team1" />
+        <Column title="Team 2" dataIndex="team2" key="team2" />
+        <Column title="Date" dataIndex="date" key="date" />
+        <Column title="Time" dataIndex="time" key="time" />
+      </Table>
     </div>
   );
 }

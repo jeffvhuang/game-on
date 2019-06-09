@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
+import { getFormattedTime } from '../../../../helpers/utils';
 // import { getLolMatches } from '../../../redux/actions/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
@@ -38,6 +39,37 @@ class LolPageContainer extends React.Component {
     return (tournament) ? tournament.teams : [];
   }
 
+  getMatchesForTable = (data, values) => {
+    const matches = [];
+    // Create objects for every match or filter matches that include one of the selected teams
+    if (!values.length) {
+      for (let i = 0; i < data.length; i++) {
+        const match = data[i];
+        matches.push(this.getMatchTableObject(match));
+      }
+    } else {
+      for (let i = 0; i < data.length; i++) {
+        const match = data[i];
+        if (values.some(v => v == match.opponents[0].opponent.name 
+          || v == match.opponents[1].opponent.name))
+          matches.push(this.getMatchTableObject(match));
+      }
+    }
+    return matches;
+  }
+
+  getMatchTableObject = match => {
+    const startDate = new Date(match.beginAt);
+    return {
+      key: match.id,
+      name: match.name,
+      team1: match.opponents[0].opponent.name,
+      team2: match.opponents[1].opponent.name,
+      date: startDate.toDateString().slice(0, -5),
+      time: getFormattedTime(startDate)
+    };
+  }
+
   render() {
     return (
       <div className="section">
@@ -48,8 +80,7 @@ class LolPageContainer extends React.Component {
         </div>
         <div className="">
           <LolTournamentMatches header="Matches"
-            matches={this.props.lol.tournamentMatches}
-            values={this.state.values} />
+            matches={this.getMatchesForTable(this.props.lol.tournamentMatches, this.state.values)} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
