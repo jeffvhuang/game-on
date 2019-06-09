@@ -125,21 +125,18 @@ export function sortESportsTournaments(data) {
   const ongoing = [];
   const upcoming = [];
   const completed = [];
-  const dateToday = new Date();
+  const now = Date.now();
   const teams = [];
 
-  // Separate matches into today followed by upcoming and past
+  // Separate tournaments into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
     const tournament = data[i];
-    const matchDate = new Date(tournament.beginAt);
+    const beginDate = new Date(tournament.beginAt);
+    const endDate = new Date(tournament.endAt);
 
-    if (isSameDate(dateToday, matchDate)) {
-      ongoing.push(tournament);
-    } else if (matchDate.getTime() > dateToday) {
-      upcoming.push(tournament);
-    } else {
-      completed.push(tournament);
-    }
+    if (beginDate > now) upcoming.push(tournament);
+    else if (endDate < now) completed.push(tournament);
+    else ongoing.push(tournament);
 
     // This part collects all teams from the tournaments to be displayed in dropdown
     tournament.teams.forEach(team => {
@@ -160,11 +157,11 @@ export function sortESportsSeries(data) {
   const ongoingSeries = [];
   const upcomingSeries = [];
   const completedSeries = [];
+  const now = Date.now();
 
-  // Separate matches into today followed by upcoming and past
+  // Separate series into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
     const series = data[i];
-    const now = Date.now();
     const beginDate = new Date(series.beginAt);
     const endDate = new Date(series.endAt);
 
@@ -245,6 +242,16 @@ export function getESportsTeamsFromMatches(data) {
   }
 
   return teams;
+}
+
+export function getTournamentName(tournament) {
+  let tournamentName = '';
+  if (tournament) {
+    if (tournament.league) tournamentName += tournament.league.name + ' ';
+    if (tournament.series) tournamentName += tournament.series.name + ' ';
+    tournamentName += tournament.name;
+  }
+  return tournamentName;
 }
 
 /**

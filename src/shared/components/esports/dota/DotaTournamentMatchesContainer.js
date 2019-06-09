@@ -3,6 +3,7 @@ import { object, array } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
+import { getTournamentName } from '../../../../helpers/utils';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaTournamentMatches from './DotaTournamentMatches';
@@ -21,16 +22,6 @@ class DotaTournamentMatchesContainer extends React.Component {
       values: [],
       tournamentName: this.getTournamentName(props.tournament)
     };
-  }
-
-  getTournamentName = tournament => {
-    let tournamentName = '';
-    if (tournament) {
-      if (tournament.league) tournamentName += tournament.league.name + ' ';
-      if (tournament.series) tournamentName += tournament.series.name + ' ';
-      tournamentName += tournament.name;
-    }
-    return tournamentName;
   }
 
   handleChange = values => this.setState({ values });

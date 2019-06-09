@@ -7,12 +7,12 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 import { paths } from '../../../../helpers/constants';
+import { getTournamentName } from '../../../../helpers/utils';
 import { getLolTournaments } from '../../../redux/actions/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 
 const propTypes = {
-  match: object,
   lol: object.isRequired,
   actions: object.isRequired
 };
@@ -33,17 +33,27 @@ class LolPageContainer extends React.Component {
 
   handleChange = values => this.setState({ values });
 
-  getTournaments = () => {
-    const events = [
-      { title: 'Tournament 1', date: '2019-06-08' },
-      { title: 'Tournament 2 Qualifiers', start: '2019-06-07', end: '2019-06-10' }
-    ];
+  getTournaments = (tournaments) => {
+    const events = [];
+
+    for (let i = 0; i < tournaments.length; i++) {
+      const tournament = tournaments[i];
+
+      events.push({
+        id: tournament.id,
+        title: getTournamentName(tournament),
+        start: tournament.beginAt,
+        end: tournament.endAt
+      });
+    }
+
     return events;
   }
 
   selectTournament = (info) => {
     console.log(info);
     console.log('event title', info.event.title);
+    console.log('event id', info.event.id);
   }
 
   render() {
@@ -59,7 +69,7 @@ class LolPageContainer extends React.Component {
         <div className="calendar">
           <FullCalendar defaultView="dayGridMonth"
             plugins={[dayGridPlugin]}
-            events={this.getTournaments()}
+            events={this.getTournaments(this.props.lol.tournaments)}
             eventClick={this.selectTournament} />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { dotaActions as A } from '../actions/action-types';
+import { lolActions as A } from '../actions/action-types';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState = {
@@ -14,7 +14,7 @@ const initialState = {
   thumbnails: []
 };
 
-function dotaReducer(state = initialState, action) {
+function lolReducer(state = initialState, action) {
   switch (action.type) {
     case A.GET_LOL_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
@@ -31,13 +31,13 @@ function dotaReducer(state = initialState, action) {
     case A.GET_LOL_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
-    case A.GET_DOTA_TOURNAMENT_MATCHES_REQUEST:
+    case A.GET_LOL_TOURNAMENT_MATCHES_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_DOTA_TOURNAMENT_MATCHES_SUCCESS:
+    case A.GET_LOL_TOURNAMENT_MATCHES_SUCCESS:
       return Object.assign({}, state, { isFetching: false, tournamentMatches: action.payload });
-    case A.GET_DOTA_TOURNAMENT_MATCHES_FAILURE:
+    case A.GET_LOL_TOURNAMENT_MATCHES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    case A.CLEAR_DOTA_TOURNAMENT_MATCHES:
+    case A.CLEAR_LOL_TOURNAMENT_MATCHES:
       return Object.assign({}, state, { tournamentMatches: [] });
 
     case A.GET_LOL_TEAMS_REQUEST:
@@ -64,4 +64,4 @@ function dotaReducer(state = initialState, action) {
   }
 }
 
-export default dotaReducer;
+export default lolReducer;

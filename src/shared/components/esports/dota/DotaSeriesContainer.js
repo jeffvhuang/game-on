@@ -12,7 +12,6 @@ import DotaSeries from './DotaSeries';
 import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
 
 const propTypes = {
-  match: object,
   dota: object.isRequired,
   actions: object.isRequired
 };
