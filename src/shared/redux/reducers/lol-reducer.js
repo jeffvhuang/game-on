@@ -5,19 +5,40 @@ const initialState = {
   isFetching: false,
   data: [],
   tournaments: [],
+  ongoing: [],
+  upcoming: [],
+  completed: [],
+  tournamentMatches: [],
   teams: [],
   videos: [],
   thumbnails: []
 };
 
 function dotaReducer(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case A.GET_LOL_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_LOL_TOURNAMENTS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, tournaments: action.payload });
+      return Object.assign({}, state,
+        {
+          isFetching: false,
+          tournaments: action.payload,
+          ongoing: action.sortedTournaments.ongoing,
+          upcoming: action.sortedTournaments.upcoming,
+          completed: action.sortedTournaments.completed,
+          teams: action.sortedTournaments.teams
+        });
     case A.GET_LOL_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
+
+    case A.GET_DOTA_TOURNAMENT_MATCHES_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case A.GET_DOTA_TOURNAMENT_MATCHES_SUCCESS:
+      return Object.assign({}, state, { isFetching: false, tournamentMatches: action.payload });
+    case A.GET_DOTA_TOURNAMENT_MATCHES_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+    case A.CLEAR_DOTA_TOURNAMENT_MATCHES:
+      return Object.assign({}, state, { tournamentMatches: [] });
 
     case A.GET_LOL_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
@@ -25,14 +46,15 @@ function dotaReducer(state = initialState, action) {
       return Object.assign({}, state, { isFetching: false, teams: action.payload });
     case A.GET_LOL_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    
+
     case A.GET_LOL_VIDEOS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case A.GET_LOL_VIDEOS_SUCCESS:
-      return Object.assign({}, state, { 
+      return Object.assign({}, state, {
         isFetching: false,
         videos: action.payload,
-        thumbnails: createYoutubeThumnailObjects(action.payload) });
+        thumbnails: createYoutubeThumnailObjects(action.payload)
+      });
     case A.GET_LOL_VIDEOS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
