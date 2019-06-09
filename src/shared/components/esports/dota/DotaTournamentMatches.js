@@ -17,7 +17,7 @@ function DotaTournamentMatches({ header, matches, values }) {
         matches.map((m, i) => <DotaTournamentMatch key={i} match={m} />)
       ) : (
         matches.map((m, i) => {
-          if (values.some(v => v == m.opponents[0].opponent.id || v == m.opponents[1].opponent.id)) {
+          if (values.some(v => v == m.opponents[0].opponent.name || v == m.opponents[1].opponent.name)) {
             return <DotaTournamentMatch key={i} match={m} />;
           }
         })

@@ -39,18 +39,16 @@ class LolPageContainer extends React.Component {
   handleChange = values => {
     // Either get all tournaments when nothing selected in dropdown or
     // get tournaments that include any team that has been selected
-    console.log(values);
     const tournaments = (!values.length)
       ? this.props.lol.tournaments
       : this.props.lol.tournaments.filter(tournament => {
         for (let i = 0; i < tournament.teams.length; i++) {
           const team = tournament.teams[i];
-          if (values.some(value => value == team.id)) return tournament;
+          if (values.some(value => value == team.name)) return tournament;
         }
       });
 
     this.setState({ tournaments });
-    console.log(tournaments);
   }
 
   getTournaments = (tournaments) => {

@@ -18,7 +18,7 @@ function SelectDropdown({ handleChange, options }) {
       style={{ width: '80%' }}
       allowClear >
       {options.map((option, i) => {
-        return <Option key={i} value={option.id}>{option.name}</Option>;
+        return <Option key={i} value={option.name}>{option.name}</Option>;
       })}
     </Select>
   );

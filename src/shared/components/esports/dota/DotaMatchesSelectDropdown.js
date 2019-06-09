@@ -19,7 +19,7 @@ function DotaMatchesSelectDropdown({ handleChange, options }) {
         style={{ width: '80%' }}
         allowClear >
         {options.map((option, i) => {
-          return <Option key={i} value={option.id}>{option.league.name}</Option>;
+          return <Option key={i} value={option.name}>{option.league.name}</Option>;
         })}
       </Select>
     </div>

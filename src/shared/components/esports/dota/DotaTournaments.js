@@ -22,7 +22,7 @@ function DotaTournaments({ header, tournaments, values, showTournamentsMatches, 
         // For each tournament, check if any of the selected teams (values) are playing
         tournaments.map((t, index) => {
           for (let i = 0; i < t.teams.length; i++) {
-            if (values.some(v => v == t.teams[i].id))
+            if (values.some(v => v == t.teams[i].name))
               return <DotaTournamentDate key={index} tournament={t}
                 showTournamentsMatches={showTournamentsMatches} selectTournament={selectTournament} />;
           }          
