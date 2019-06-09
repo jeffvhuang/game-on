@@ -20,7 +20,7 @@ class DotaTournamentMatchesContainer extends React.Component {
 
     this.state = {
       values: [],
-      tournamentName: this.getTournamentName(props.tournament)
+      tournamentName: getTournamentName(props.tournament)
     };
   }
 

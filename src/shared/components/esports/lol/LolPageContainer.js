@@ -3,15 +3,15 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import { Tabs } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
-import { getTournamentName } from '../../../../helpers/utils';
-import { getLolTournaments } from '../../../redux/actions/lol-actions';
-
+import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actions/lol-actions';
 import SelectDropdown from '../../common/SelectDropdown';
+import LolTournamentsContainer from './LolTournamentsContainer';
+import LolMatchesContainer from './LolMatchesContainer';
 
+const TabPane = Tabs.TabPane;
 const propTypes = {
   lol: object.isRequired,
   actions: object.isRequired
@@ -22,54 +22,20 @@ class LolPageContainer extends React.Component {
     super(props);
 
     this.state = {
-      values: [],
-      tournaments: [],
-
+      activeTab: "1",
+      tournamentId: '',
+      tournamentName: ''
     };
   }
 
-  componentDidMount() {
-    const { lol, actions } = this.props;
-    if (!lol.tournaments.length) actions.getLolTournaments()
-      .then(data => {
-        this.setState({ tournaments: data });
-      });
-  }
-
-  handleChange = values => {
-    // Either get all tournaments when nothing selected in dropdown or
-    // get tournaments that include any team that has been selected
-    const tournaments = (!values.length)
-      ? this.props.lol.tournaments
-      : this.props.lol.tournaments.filter(tournament => {
-        for (let i = 0; i < tournament.teams.length; i++) {
-          const team = tournament.teams[i];
-          if (values.some(value => value == team.name)) return tournament;
-        }
-      });
-
-    this.setState({ tournaments });
-  }
-
-  getTournaments = (tournaments) => {
-    const events = [];
-
-    for (let i = 0; i < tournaments.length; i++) {
-      const tournament = tournaments[i];
-
-      events.push({
-        id: tournament.id,
-        title: getTournamentName(tournament),
-        start: tournament.beginAt,
-        end: tournament.endAt
-      });
-    }
-
-    return events;
-  }
-
   selectTournament = (info) => {
-    console.log(info.event.title);
+    const id = info.event.id;
+    this.props.actions.getLolTournamentMatches(id);
+    this.setState({
+      tournamentId: id,
+      activeTab: "2",
+      tournamentName: info.event.title
+    });
   }
 
   render() {
@@ -78,16 +44,15 @@ class LolPageContainer extends React.Component {
         <div className="page-header">
           <h1>League of Legends</h1>
         </div>
-        <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.lol.teams} />
-        </div>
-        <div className="calendar">
-          <FullCalendar defaultView="dayGridMonth"
-            plugins={[dayGridPlugin]}
-            events={this.getTournaments(this.state.tournaments)}
-            eventClick={this.selectTournament} />
-        </div>
+        <Tabs activeKey={this.state.activeTab} size="large">
+          <TabPane tab="Tournaments" key="1">
+            <LolTournamentsContainer selectTournament={this.selectTournament} />
+          </TabPane>
+          <TabPane tab="Matches" key="2">
+            <LolMatchesContainer tournamentId={this.state.tournamentId}
+              tournamentName={this.state.tournamentName} />
+          </TabPane>
+        </Tabs>
       </div>
     );
   }
@@ -101,7 +66,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    getLolTournaments
+    getLolTournaments,
+    getLolTournamentMatches
   }, dispatch)
 });
 
