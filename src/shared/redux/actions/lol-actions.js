@@ -2,11 +2,14 @@ import { lolActions as A } from './action-types';
 import axios from 'axios';
 
 import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
-import { sleep, sortESportsTournaments } from '../../../helpers/utils';
+import { sleep,
+  sortESportsTournaments, 
+  getESportsTeamsFromMatches } from '../../../helpers/utils';
 
 // Temporary seed data
 import TOURNAMENTS from '../../../mockApiData/lolTournaments.json';
 import TOURNAMENT_MATCHES from '../../../mockApiData/lolTournamentMatches.json';
+import MATCHES from '../../../mockApiData/lolMatches.json';
 // import { PLAYLIST } from '../../../mockApiData/lolYoutube';
 
 // Get highlights from youtube
@@ -103,6 +106,35 @@ export const getLolTournamentMatches = (tournamentId) => {
 
 export const clearLolTournamentMatches = () => {
   return (dispatch) => dispatch(clearLolTournamentMatchesSuccess());
+};
+
+// Get Matches
+export const getLolMatchesRequest = () => ({ type: A.GET_LOL_MATCHES_REQUEST });
+export const getLolMatchesSuccess = (payload, matchesTeams) => ({ type: A.GET_LOL_MATCHES_SUCCESS, payload, matchesTeams });
+export const getLolMatchesFailure = (err) => ({ type: A.GET_LOL_MATCHES_FAILURE, err });
+
+// export const getLolMatches = () => {
+//   return async (dispatch) => {
+//     dispatch(getLolMatchesRequest());
+//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES)
+//       .then(response => {
+//         dispatch(getLolMatchesSuccess(response.data));
+//       })
+//       .catch(err => {
+//         dispatch(getLolMatchesFailure(err));
+//         throw(err);
+//       });
+//   };
+// };
+
+export const getLolMatches = () => {
+  return async (dispatch) => {
+    dispatch(getLolMatchesRequest());
+    await sleep(1000);
+    const matchesTeams = getESportsTeamsFromMatches(MATCHES);
+    dispatch(getLolMatchesSuccess(MATCHES, matchesTeams));
+    return MATCHES;
+  };
 };
 
 // Get Teams

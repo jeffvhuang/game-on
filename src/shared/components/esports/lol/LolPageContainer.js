@@ -23,7 +23,7 @@ class LolPageContainer extends React.Component {
 
     this.state = {
       activeTab: "1",
-      tournamentId: '',
+      tournament: null,
       tournamentName: ''
     };
   }
@@ -34,9 +34,9 @@ class LolPageContainer extends React.Component {
     const id = info.event.id;
     this.props.actions.getLolTournamentMatches(id);
     this.setState({
-      tournamentId: id,
       activeTab: "2",
-      tournamentName: info.event.title
+      tournamentName: info.event.title,
+      tournament: info.event.tournament
     });
   }
 
@@ -51,7 +51,7 @@ class LolPageContainer extends React.Component {
             <LolTournamentsContainer selectTournament={this.selectTournament} />
           </TabPane>
           <TabPane tab="Matches" key="2">
-            <LolMatchesContainer tournamentId={this.state.tournamentId}
+            <LolMatchesContainer tournament={this.state.tournament}
               tournamentName={this.state.tournamentName} />
           </TabPane>
         </Tabs>

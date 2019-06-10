@@ -1,0 +1,6142 @@
+[
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 649,
+              "score": 0
+          },
+          {
+              "teamId": 89,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "detonation-focusme",
+                  "name": "DetonatioN FocusMe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/89/detonation-focusme-fpnjh4v7.png",
+                  "id": 89,
+                  "acronym": "DFM"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "burning-core",
+                  "name": "Burning Core",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/649/Burning_Corelogo_square.png",
+                  "id": 649,
+                  "acronym": "BC"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545773,
+              "length": null,
+              "id": 207144,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "detonation-focusme-vs-burning-core-2019-08-18",
+      "numberOfGames": 1,
+      "name": "DFM vs BC",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545773",
+          "supported": true,
+          "opensAt": "2019-08-18T19:30:00Z"
+      },
+      "id": 545773,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T19:45:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125063,
+              "score": 0
+          },
+          {
+              "teamId": 649,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sengoku-gaming",
+                  "name": "Sengoku Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125063/sengoku-gaming-gnat0l9c.png",
+                  "id": 125063,
+                  "acronym": "SG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "burning-core",
+                  "name": "Burning Core",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/649/Burning_Corelogo_square.png",
+                  "id": 649,
+                  "acronym": "BC"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545772,
+              "length": null,
+              "id": 207143,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "sengoku-gaming-vs-burning-core-2019-08-18",
+      "numberOfGames": 1,
+      "name": "SG vs BC",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545772",
+          "supported": true,
+          "opensAt": "2019-08-18T18:15:00Z"
+      },
+      "id": 545772,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T18:30:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125063,
+              "score": 0
+          },
+          {
+              "teamId": 648,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sengoku-gaming",
+                  "name": "Sengoku Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125063/sengoku-gaming-gnat0l9c.png",
+                  "id": 125063,
+                  "acronym": "SG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "unsold-stuff-gaming",
+                  "name": "Unsold Stuff Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/648/unsold-stuff-gaming-9qmlyqpb.png",
+                  "id": 648,
+                  "acronym": "USG"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545771,
+              "length": null,
+              "id": 207142,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "sengoku-gaming-vs-unsold-stuff-gaming-2019-08-18",
+      "numberOfGames": 1,
+      "name": "SG vs USG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545771",
+          "supported": true,
+          "opensAt": "2019-08-18T17:00:00Z"
+      },
+      "id": 545771,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T17:15:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2577,
+              "score": 0
+          },
+          {
+              "teamId": 89,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "detonation-focusme",
+                  "name": "DetonatioN FocusMe",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/89/detonation-focusme-fpnjh4v7.png",
+                  "id": 89,
+                  "acronym": "DFM"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "crest-gaming-act",
+                  "name": "Crest Gaming Act",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2577/crest-gaming-act-hbovk2pk.png",
+                  "id": 2577,
+                  "acronym": "CGA"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545770,
+              "length": null,
+              "id": 207141,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "detonation-focusme-vs-crest-gaming-act-2019-08-18",
+      "numberOfGames": 1,
+      "name": "DFM vs CGA",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545770",
+          "supported": true,
+          "opensAt": "2019-08-18T15:45:00Z"
+      },
+      "id": 545770,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T16:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125064,
+              "score": 0
+          },
+          {
+              "teamId": 2577,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "axiz",
+                  "name": "AXIZ",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125064/axiz-fpemv4d2.png",
+                  "id": 125064,
+                  "acronym": "AXZ"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "crest-gaming-act",
+                  "name": "Crest Gaming Act",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2577/crest-gaming-act-hbovk2pk.png",
+                  "id": 2577,
+                  "acronym": "CGA"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545769,
+              "length": null,
+              "id": 207140,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "axiz-vs-crest-gaming-act-2019-08-18",
+      "numberOfGames": 1,
+      "name": "AXZ vs CGA",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545769",
+          "supported": true,
+          "opensAt": "2019-08-18T14:30:00Z"
+      },
+      "id": 545769,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T14:45:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 651,
+              "score": 0
+          },
+          {
+              "teamId": 648,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rascal-jester",
+                  "name": "Rascal Jester",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/651/rascal-jester-g32ay08v.png",
+                  "id": 651,
+                  "acronym": "RJ"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "unsold-stuff-gaming",
+                  "name": "Unsold Stuff Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/648/unsold-stuff-gaming-9qmlyqpb.png",
+                  "id": 648,
+                  "acronym": "USG"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545768,
+              "length": null,
+              "id": 207139,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "rascal-jester-vs-unsold-stuff-gaming-2019-08-18",
+      "numberOfGames": 1,
+      "name": "RJ vs USG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545768",
+          "supported": true,
+          "opensAt": "2019-08-18T13:15:00Z"
+      },
+      "id": 545768,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T13:30:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1356,
+              "score": 0
+          },
+          {
+              "teamId": 651,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rascal-jester",
+                  "name": "Rascal Jester",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/651/rascal-jester-g32ay08v.png",
+                  "id": 651,
+                  "acronym": "RJ"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "v3-esports",
+                  "name": "V3 Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1356/v3-esports-4j9hu4jm.png",
+                  "id": 1356,
+                  "acronym": "V3"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545767,
+              "length": null,
+              "id": 207138,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "rascal-jester-vs-v3-esports-2019-08-18",
+      "numberOfGames": 1,
+      "name": "RJ vs V3",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545767",
+          "supported": true,
+          "opensAt": "2019-08-18T12:00:00Z"
+      },
+      "id": 545767,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T12:15:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T09:44:58Z",
+          "leagueId": 2092,
+          "id": 2402,
+          "endAt": "2019-08-19T18:00:00Z",
+          "beginAt": "2019-06-14T22:00:00Z",
+          "seriesId": 1810
+      },
+      "winner": null,
+      "seriesId": 1810,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-ljl-japan-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 2092,
+          "id": 1810,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-06-14T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125064,
+              "score": 0
+          },
+          {
+              "teamId": 1356,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "axiz",
+                  "name": "AXIZ",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125064/axiz-fpemv4d2.png",
+                  "id": 125064,
+                  "acronym": "AXZ"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "v3-esports",
+                  "name": "V3 Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1356/v3-esports-4j9hu4jm.png",
+                  "id": 1356,
+                  "acronym": "V3"
+              }
+          }
+      ],
+      "leagueId": 2092,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545766,
+              "length": null,
+              "id": 207137,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2402,
+      "status": "not_started",
+      "slug": "axiz-vs-v3-esports-2019-08-18",
+      "numberOfGames": 1,
+      "name": "AXZ vs V3",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545766",
+          "supported": true,
+          "opensAt": "2019-08-18T10:45:00Z"
+      },
+      "id": 545766,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2883,
+              "score": 0
+          },
+          {
+              "teamId": 1452,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "hanwha-life-esports",
+                  "name": "Hanwha Life Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2883/hanwha-life-esports-1s04vbu0.png",
+                  "id": 2883,
+                  "acronym": "HLE"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "griffin",
+                  "name": "Griffin",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1452/Griffinlogo_square.png",
+                  "id": 1452,
+                  "acronym": "GRF"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545676,
+              "length": null,
+              "id": 207058,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545676,
+              "length": null,
+              "id": 207059,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545676,
+              "length": null,
+              "id": 207060,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "hanwha-life-esports-vs-griffin-2019-08-18",
+      "numberOfGames": 3,
+      "name": "HLE vs GRF",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545676",
+          "supported": true,
+          "opensAt": "2019-08-18T10:45:00Z"
+      },
+      "id": 545676,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126059,
+              "score": 0
+          },
+          {
+              "teamId": 1568,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "top-esports",
+                  "name": "Top Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126059/_.png",
+                  "id": 126059,
+                  "acronym": "TES"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "funplus-phoenix",
+                  "name": "FunPlus Phoenix",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1568/funplus-phoenix-bbozlifa.png",
+                  "id": 1568,
+                  "acronym": "FPX"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545453,
+              "length": null,
+              "id": 206698,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545453,
+              "length": null,
+              "id": 206699,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545453,
+              "length": null,
+              "id": 206700,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "top-esports-vs-funplus-phoenix-2019-08-18",
+      "numberOfGames": 3,
+      "name": "TES vs FPX",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545453",
+          "supported": true,
+          "opensAt": "2019-08-18T10:45:00Z"
+      },
+      "id": 545453,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126058,
+              "score": 0
+          },
+          {
+              "teamId": 652,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "lng-esports",
+                  "name": "LNG Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126058/_.png",
+                  "id": 126058,
+                  "acronym": "LNG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sn-gaming",
+                  "name": "SUNING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/652/_.png",
+                  "id": 652,
+                  "acronym": "SN"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545452,
+              "length": null,
+              "id": 206695,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545452,
+              "length": null,
+              "id": 206696,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545452,
+              "length": null,
+              "id": 206697,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "lng-esports-vs-suning-2019-08-18",
+      "numberOfGames": 3,
+      "name": "LNG vs SN",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545452",
+          "supported": true,
+          "opensAt": "2019-08-18T08:45:00Z"
+      },
+      "id": 545452,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2882,
+              "score": 0
+          },
+          {
+              "teamId": 1453,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "damwon-gaming",
+                  "name": "DAMWON Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1453/_.png",
+                  "id": 1453,
+                  "acronym": "DWG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "geng",
+                  "name": "Gen.G Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2882/geng-hooir6i9.png",
+                  "id": 2882,
+                  "acronym": "GEN"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545675,
+              "length": null,
+              "id": 207055,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545675,
+              "length": null,
+              "id": 207056,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545675,
+              "length": null,
+              "id": 207057,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "damwon-gaming-vs-gen-g-esports-2019-08-18",
+      "numberOfGames": 3,
+      "name": "DWG vs GEN",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545675",
+          "supported": true,
+          "opensAt": "2019-08-18T07:45:00Z"
+      },
+      "id": 545675,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 410,
+              "score": 0
+          },
+          {
+              "teamId": 408,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "lgd-gaming",
+                  "name": "LGD Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/408/_.png",
+                  "id": 408,
+                  "acronym": "LGD"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "vici-gaming",
+                  "name": "Vici Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/410/vici-gaming-hzibc6u0.png",
+                  "id": 410,
+                  "acronym": "VG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545451,
+              "length": null,
+              "id": 206692,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545451,
+              "length": null,
+              "id": 206693,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545451,
+              "length": null,
+              "id": 206694,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "lgd-gaming-vs-vici-gaming-2019-08-18",
+      "numberOfGames": 3,
+      "name": "LGD vs VG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545451",
+          "supported": true,
+          "opensAt": "2019-08-18T05:45:00Z"
+      },
+      "id": 545451,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-18T06:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126061,
+              "score": 0
+          },
+          {
+              "teamId": 75013,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sandbox-gaming",
+                  "name": "SANDBOX Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/75013/SANDBOX_Gaminglogo_square.png",
+                  "id": 75013,
+                  "acronym": "SB"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "t1",
+                  "name": "T1",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126061/_.png",
+                  "id": 126061,
+                  "acronym": "T1"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545674,
+              "length": null,
+              "id": 207052,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545674,
+              "length": null,
+              "id": 207053,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545674,
+              "length": null,
+              "id": 207054,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "sandbox-gaming-vs-t1-2019-08-17",
+      "numberOfGames": 3,
+      "name": "SB vs T1",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545674",
+          "supported": true,
+          "opensAt": "2019-08-17T10:45:00Z"
+      },
+      "id": 545674,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1569,
+              "score": 0
+          },
+          {
+              "teamId": 411,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rogue-warriors",
+                  "name": "Rogue Warriors",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1569/rogue-warriors-1kvtwjow.png",
+                  "id": 1569,
+                  "acronym": "RW"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "invictus-gaming",
+                  "name": "Invictus Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/411/600px-Invictus_Gaminglogo_square.png",
+                  "id": 411,
+                  "acronym": "IG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545450,
+              "length": null,
+              "id": 206689,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545450,
+              "length": null,
+              "id": 206690,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545450,
+              "length": null,
+              "id": 206691,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "rogue-warriors-vs-invictus-gaming-2019-08-17",
+      "numberOfGames": 3,
+      "name": "RW vs IG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545450",
+          "supported": true,
+          "opensAt": "2019-08-17T10:45:00Z"
+      },
+      "id": 545450,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1519,
+              "score": 0
+          },
+          {
+              "teamId": 92,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "bombers",
+                  "name": "Bombers",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1519/Bomberslogo_square.png",
+                  "id": 1519,
+                  "acronym": "BMR"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "chiefs",
+                  "name": "The Chiefs Esports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/92/chiefs-86mnaoxw.png",
+                  "id": 92,
+                  "acronym": "CHF"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545249,
+              "length": null,
+              "id": 206256,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "bombers-vs-the-chiefs-esports-club-2019-08-17",
+      "numberOfGames": 1,
+      "name": "BMR vs CHF",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545249",
+          "supported": true,
+          "opensAt": "2019-08-17T10:45:00Z"
+      },
+      "id": 545249,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2796,
+              "score": 0
+          },
+          {
+              "teamId": 181,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "legacy",
+                  "name": "Legacy Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/181/image.png",
+                  "id": 181,
+                  "acronym": "LGC"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mammoth",
+                  "name": "MAMMOTH",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2796/image.png",
+                  "id": 2796,
+                  "acronym": "MMM"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545248,
+              "length": null,
+              "id": 206255,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "legacy-esports-vs-mammoth-2019-08-17",
+      "numberOfGames": 1,
+      "name": "LGC vs MMM",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545248",
+          "supported": true,
+          "opensAt": "2019-08-17T09:45:00Z"
+      },
+      "id": 545248,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T10:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 120567,
+              "score": 0
+          },
+          {
+              "teamId": 2574,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "victory-five",
+                  "name": "Victory Five",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120567/Victory_Fivelogo_square.png",
+                  "id": 120567,
+                  "acronym": "V5"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "we",
+                  "name": "Team WE",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2574/300px-Team_WElogo_square.png",
+                  "id": 2574,
+                  "acronym": "WE"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545449,
+              "length": null,
+              "id": 206686,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545449,
+              "length": null,
+              "id": 206687,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545449,
+              "length": null,
+              "id": 206688,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "victory-five-vs-team-we-2019-08-17",
+      "numberOfGames": 3,
+      "name": "V5 vs WE",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545449",
+          "supported": true,
+          "opensAt": "2019-08-17T08:45:00Z"
+      },
+      "id": 545449,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1521,
+              "score": 0
+          },
+          {
+              "teamId": 179,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "order",
+                  "name": "Order",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1521/300px-ORDERlogo_square.png",
+                  "id": 1521,
+                  "acronym": "ORD"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "avant-garde",
+                  "name": "Avant Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/179/AVGD_2.png",
+                  "id": 179,
+                  "acronym": "AV"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545247,
+              "length": null,
+              "id": 206254,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "order-vs-avant-gaming-2019-08-17",
+      "numberOfGames": 1,
+      "name": "ORD vs AV",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545247",
+          "supported": true,
+          "opensAt": "2019-08-17T08:45:00Z"
+      },
+      "id": 545247,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1589,
+              "score": 0
+          },
+          {
+              "teamId": 63,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "kingzone-dragonx",
+                  "name": "Kingzone DragonX",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1589/300px-Kingzone_DragonXlogo_square.png",
+                  "id": 1589,
+                  "acronym": "KZ"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "kt-rolster",
+                  "name": "KT Rolster",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/63/kt-rolster-8rh5ukll.png",
+                  "id": 63,
+                  "acronym": "KT"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545673,
+              "length": null,
+              "id": 207049,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545673,
+              "length": null,
+              "id": 207050,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545673,
+              "length": null,
+              "id": 207051,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "kingzone-dragonx-vs-kt-rolster-2019-08-17",
+      "numberOfGames": 3,
+      "name": "KZ vs KT",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545673",
+          "supported": true,
+          "opensAt": "2019-08-17T07:45:00Z"
+      },
+      "id": 545673,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1519,
+              "score": 0
+          },
+          {
+              "teamId": 180,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "bombers",
+                  "name": "Bombers",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1519/Bomberslogo_square.png",
+                  "id": 1519,
+                  "acronym": "BMR"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "dire-wolves",
+                  "name": "Dire Wolves",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/180/dire-wolves-7ka5aby3.png",
+                  "id": 180,
+                  "acronym": "DW"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545246,
+              "length": null,
+              "id": 206253,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "bombers-vs-dire-wolves-2019-08-17",
+      "numberOfGames": 1,
+      "name": "BMR vs DW",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545246",
+          "supported": true,
+          "opensAt": "2019-08-17T07:45:00Z"
+      },
+      "id": 545246,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2796,
+              "score": 0
+          },
+          {
+              "teamId": 179,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "avant-garde",
+                  "name": "Avant Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/179/AVGD_2.png",
+                  "id": 179,
+                  "acronym": "AV"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mammoth",
+                  "name": "MAMMOTH",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2796/image.png",
+                  "id": 2796,
+                  "acronym": "MMM"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545245,
+              "length": null,
+              "id": 206252,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "avant-gaming-vs-mammoth-2019-08-17",
+      "numberOfGames": 1,
+      "name": "AV vs MMM",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545245",
+          "supported": true,
+          "opensAt": "2019-08-17T06:45:00Z"
+      },
+      "id": 545245,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T07:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 318,
+              "score": 0
+          },
+          {
+              "teamId": 74,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "qg-reapers",
+                  "name": "JD Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/318/qg-reapers-110064co.png",
+                  "id": 318,
+                  "acronym": "JDG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "royal-never-give-up",
+                  "name": "Royal Never Give Up",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/74/royal-never-give-up-cyacqft1.png",
+                  "id": 74,
+                  "acronym": "RNG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545448,
+              "length": null,
+              "id": 206683,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545448,
+              "length": null,
+              "id": 206684,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545448,
+              "length": null,
+              "id": 206685,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "jd-gaming-vs-royal-never-give-up-2019-08-17",
+      "numberOfGames": 3,
+      "name": "JDG vs RNG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545448",
+          "supported": true,
+          "opensAt": "2019-08-17T05:45:00Z"
+      },
+      "id": 545448,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T06:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 120673,
+              "score": 0
+          },
+          {
+              "teamId": 180,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "gravitas",
+                  "name": "Gravitas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120673/gravitas-4um4kp7k.png",
+                  "id": 120673,
+                  "acronym": "GRV"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "dire-wolves",
+                  "name": "Dire Wolves",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/180/dire-wolves-7ka5aby3.png",
+                  "id": 180,
+                  "acronym": "DW"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545244,
+              "length": null,
+              "id": 206251,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "gravitas-vs-dire-wolves-2019-08-17",
+      "numberOfGames": 1,
+      "name": "GRV vs DW",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545244",
+          "supported": true,
+          "opensAt": "2019-08-17T05:45:00Z"
+      },
+      "id": 545244,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-17T06:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2883,
+              "score": 0
+          },
+          {
+              "teamId": 120,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "afreeca-freecs",
+                  "name": "Afreeca Freecs",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120/afreeca-freecs-4melt1cj.png",
+                  "id": 120,
+                  "acronym": "AF"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "hanwha-life-esports",
+                  "name": "Hanwha Life Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2883/hanwha-life-esports-1s04vbu0.png",
+                  "id": 2883,
+                  "acronym": "HLE"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545672,
+              "length": null,
+              "id": 207046,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545672,
+              "length": null,
+              "id": 207047,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545672,
+              "length": null,
+              "id": 207048,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "afreeca-freecs-vs-hanwha-life-esports-2019-08-16",
+      "numberOfGames": 3,
+      "name": "AF vs HLE",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545672",
+          "supported": true,
+          "opensAt": "2019-08-16T10:45:00Z"
+      },
+      "id": 545672,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126059,
+              "score": 0
+          },
+          {
+              "teamId": 404,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "top-esports",
+                  "name": "Top Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126059/_.png",
+                  "id": 126059,
+                  "acronym": "TES"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "omg",
+                  "name": "Oh My God",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/404/omg-7tst61zj.png",
+                  "id": 404,
+                  "acronym": "OMG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545447,
+              "length": null,
+              "id": 206680,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545447,
+              "length": null,
+              "id": 206681,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545447,
+              "length": null,
+              "id": 206682,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "top-esports-vs-oh-my-god-2019-08-16",
+      "numberOfGames": 3,
+      "name": "TES vs OMG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545447",
+          "supported": true,
+          "opensAt": "2019-08-16T10:45:00Z"
+      },
+      "id": 545447,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 120673,
+              "score": 0
+          },
+          {
+              "teamId": 181,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "legacy",
+                  "name": "Legacy Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/181/image.png",
+                  "id": 181,
+                  "acronym": "LGC"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "gravitas",
+                  "name": "Gravitas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120673/gravitas-4um4kp7k.png",
+                  "id": 120673,
+                  "acronym": "GRV"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545243,
+              "length": null,
+              "id": 206250,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "legacy-esports-vs-gravitas-2019-08-16",
+      "numberOfGames": 1,
+      "name": "LGC vs GRV",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545243",
+          "supported": true,
+          "opensAt": "2019-08-16T10:45:00Z"
+      },
+      "id": 545243,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1521,
+              "score": 0
+          },
+          {
+              "teamId": 92,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "order",
+                  "name": "Order",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1521/300px-ORDERlogo_square.png",
+                  "id": 1521,
+                  "acronym": "ORD"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "chiefs",
+                  "name": "The Chiefs Esports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/92/chiefs-86mnaoxw.png",
+                  "id": 92,
+                  "acronym": "CHF"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545242,
+              "length": null,
+              "id": 206249,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "order-vs-the-chiefs-esports-club-2019-08-16",
+      "numberOfGames": 1,
+      "name": "ORD vs CHF",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545242",
+          "supported": true,
+          "opensAt": "2019-08-16T09:45:00Z"
+      },
+      "id": 545242,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T10:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126056,
+              "score": 0
+          },
+          {
+              "teamId": 1568,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "dominus-esports",
+                  "name": "Dominus Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126056/_.png",
+                  "id": 126056,
+                  "acronym": "DMO"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "funplus-phoenix",
+                  "name": "FunPlus Phoenix",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1568/funplus-phoenix-bbozlifa.png",
+                  "id": 1568,
+                  "acronym": "FPX"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545446,
+              "length": null,
+              "id": 206677,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545446,
+              "length": null,
+              "id": 206678,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545446,
+              "length": null,
+              "id": 206679,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "dominus-esports-vs-funplus-phoenix-2019-08-16",
+      "numberOfGames": 3,
+      "name": "DMO vs FPX",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545446",
+          "supported": true,
+          "opensAt": "2019-08-16T08:45:00Z"
+      },
+      "id": 545446,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 120673,
+              "score": 0
+          },
+          {
+              "teamId": 1519,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "gravitas",
+                  "name": "Gravitas",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120673/gravitas-4um4kp7k.png",
+                  "id": 120673,
+                  "acronym": "GRV"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "bombers",
+                  "name": "Bombers",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1519/Bomberslogo_square.png",
+                  "id": 1519,
+                  "acronym": "BMR"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545241,
+              "length": null,
+              "id": 206248,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "gravitas-vs-bombers-2019-08-16",
+      "numberOfGames": 1,
+      "name": "GRV vs BMR",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545241",
+          "supported": true,
+          "opensAt": "2019-08-16T08:45:00Z"
+      },
+      "id": 545241,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1452,
+              "score": 0
+          },
+          {
+              "teamId": 64,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "griffin",
+                  "name": "Griffin",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1452/Griffinlogo_square.png",
+                  "id": 1452,
+                  "acronym": "GRF"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "jin-air-green-wings",
+                  "name": "Jin Air Green Wings",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/64/jin-air-green-wings-2m0c2a5n.png",
+                  "id": 64,
+                  "acronym": "JAG"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545671,
+              "length": null,
+              "id": 207043,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545671,
+              "length": null,
+              "id": 207044,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545671,
+              "length": null,
+              "id": 207045,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "griffin-vs-jin-air-green-wings-2019-08-16",
+      "numberOfGames": 3,
+      "name": "GRF vs JAG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545671",
+          "supported": true,
+          "opensAt": "2019-08-16T07:45:00Z"
+      },
+      "id": 545671,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 181,
+              "score": 0
+          },
+          {
+              "teamId": 92,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "chiefs",
+                  "name": "The Chiefs Esports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/92/chiefs-86mnaoxw.png",
+                  "id": 92,
+                  "acronym": "CHF"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "legacy",
+                  "name": "Legacy Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/181/image.png",
+                  "id": 181,
+                  "acronym": "LGC"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545240,
+              "length": null,
+              "id": 206247,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "the-chiefs-esports-club-vs-legacy-esports-2019-08-16",
+      "numberOfGames": 1,
+      "name": "CHF vs LGC",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545240",
+          "supported": true,
+          "opensAt": "2019-08-16T07:45:00Z"
+      },
+      "id": 545240,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2796,
+              "score": 0
+          },
+          {
+              "teamId": 1521,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mammoth",
+                  "name": "MAMMOTH",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2796/image.png",
+                  "id": 2796,
+                  "acronym": "MMM"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "order",
+                  "name": "Order",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1521/300px-ORDERlogo_square.png",
+                  "id": 1521,
+                  "acronym": "ORD"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545239,
+              "length": null,
+              "id": 206246,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "mammoth-vs-order-2019-08-16",
+      "numberOfGames": 1,
+      "name": "MMM vs ORD",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545239",
+          "supported": true,
+          "opensAt": "2019-08-16T06:45:00Z"
+      },
+      "id": 545239,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T07:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T08:23:28Z",
+          "leagueId": 301,
+          "id": 2390,
+          "endAt": "2019-08-16T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1802
+      },
+      "winner": null,
+      "seriesId": 1802,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-opl-split-2-2019",
+          "season": "Split 2",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 301,
+          "id": 1802,
+          "fullName": "Split 2 2019",
+          "endAt": "2019-08-16T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 180,
+              "score": 0
+          },
+          {
+              "teamId": 179,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "dire-wolves",
+                  "name": "Dire Wolves",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/180/dire-wolves-7ka5aby3.png",
+                  "id": 180,
+                  "acronym": "DW"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "avant-garde",
+                  "name": "Avant Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/179/AVGD_2.png",
+                  "id": 179,
+                  "acronym": "AV"
+              }
+          }
+      ],
+      "leagueId": 301,
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545236,
+              "length": null,
+              "id": 206243,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2390,
+      "status": "not_started",
+      "slug": "dire-wolves-vs-avant-gaming-2019-08-16",
+      "numberOfGames": 1,
+      "name": "DW vs AV",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545236",
+          "supported": true,
+          "opensAt": "2019-08-16T05:45:00Z"
+      },
+      "id": 545236,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-16T06:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 75013,
+              "score": 0
+          },
+          {
+              "teamId": 63,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "kt-rolster",
+                  "name": "KT Rolster",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/63/kt-rolster-8rh5ukll.png",
+                  "id": 63,
+                  "acronym": "KT"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sandbox-gaming",
+                  "name": "SANDBOX Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/75013/SANDBOX_Gaminglogo_square.png",
+                  "id": 75013,
+                  "acronym": "SB"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545670,
+              "length": null,
+              "id": 207040,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545670,
+              "length": null,
+              "id": 207041,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545670,
+              "length": null,
+              "id": 207042,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "kt-rolster-vs-sandbox-gaming-2019-08-15",
+      "numberOfGames": 3,
+      "name": "KT vs SB",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545670",
+          "supported": true,
+          "opensAt": "2019-08-15T10:45:00Z"
+      },
+      "id": 545670,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-15T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126061,
+              "score": 0
+          },
+          {
+              "teamId": 1453,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "t1",
+                  "name": "T1",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126061/_.png",
+                  "id": 126061,
+                  "acronym": "T1"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "damwon-gaming",
+                  "name": "DAMWON Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1453/_.png",
+                  "id": 1453,
+                  "acronym": "DWG"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545669,
+              "length": null,
+              "id": 207037,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545669,
+              "length": null,
+              "id": 207038,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545669,
+              "length": null,
+              "id": 207039,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "t1-vs-damwon-gaming-2019-08-15",
+      "numberOfGames": 3,
+      "name": "T1 vs DWG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545669",
+          "supported": true,
+          "opensAt": "2019-08-15T07:45:00Z"
+      },
+      "id": 545669,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-15T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1566,
+              "score": 0
+          },
+          {
+              "teamId": 74,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "royal-never-give-up",
+                  "name": "Royal Never Give Up",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/74/royal-never-give-up-cyacqft1.png",
+                  "id": 74,
+                  "acronym": "RNG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "bilibili-gaming",
+                  "name": "Bilibili Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1566/bilibili-gaming-1092q4q0.png",
+                  "id": 1566,
+                  "acronym": "BLG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545445,
+              "length": null,
+              "id": 206674,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545445,
+              "length": null,
+              "id": 206675,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545445,
+              "length": null,
+              "id": 206676,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "royal-never-give-up-vs-bilibili-gaming-2019-08-14",
+      "numberOfGames": 3,
+      "name": "RNG vs BLG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545445",
+          "supported": true,
+          "opensAt": "2019-08-14T10:45:00Z"
+      },
+      "id": 545445,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-14T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 652,
+              "score": 0
+          },
+          {
+              "teamId": 405,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "edward-gaming",
+                  "name": "Edward Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/405/edward-gaming-52bsed1a.png",
+                  "id": 405,
+                  "acronym": "EDG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sn-gaming",
+                  "name": "SUNING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/652/_.png",
+                  "id": 652,
+                  "acronym": "SN"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545444,
+              "length": null,
+              "id": 206671,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545444,
+              "length": null,
+              "id": 206672,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545444,
+              "length": null,
+              "id": 206673,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "edward-gaming-vs-suning-2019-08-14",
+      "numberOfGames": 3,
+      "name": "EDG vs SN",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545444",
+          "supported": true,
+          "opensAt": "2019-08-14T08:45:00Z"
+      },
+      "id": 545444,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-14T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 411,
+              "score": 0
+          },
+          {
+              "teamId": 408,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "lgd-gaming",
+                  "name": "LGD Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/408/_.png",
+                  "id": 408,
+                  "acronym": "LGD"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "invictus-gaming",
+                  "name": "Invictus Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/411/600px-Invictus_Gaminglogo_square.png",
+                  "id": 411,
+                  "acronym": "IG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545443,
+              "length": null,
+              "id": 206668,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545443,
+              "length": null,
+              "id": 206669,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545443,
+              "length": null,
+              "id": 206670,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "lgd-gaming-vs-invictus-gaming-2019-08-13",
+      "numberOfGames": 3,
+      "name": "LGD vs IG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545443",
+          "supported": true,
+          "opensAt": "2019-08-13T10:45:00Z"
+      },
+      "id": 545443,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-13T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1569,
+              "score": 0
+          },
+          {
+              "teamId": 410,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "rogue-warriors",
+                  "name": "Rogue Warriors",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1569/rogue-warriors-1kvtwjow.png",
+                  "id": 1569,
+                  "acronym": "RW"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "vici-gaming",
+                  "name": "Vici Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/410/vici-gaming-hzibc6u0.png",
+                  "id": 410,
+                  "acronym": "VG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545442,
+              "length": null,
+              "id": 206665,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545442,
+              "length": null,
+              "id": 206666,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545442,
+              "length": null,
+              "id": 206667,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "rogue-warriors-vs-vici-gaming-2019-08-13",
+      "numberOfGames": 3,
+      "name": "RW vs VG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545442",
+          "supported": true,
+          "opensAt": "2019-08-13T08:45:00Z"
+      },
+      "id": 545442,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-13T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-challenger-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T10:33:33Z",
+          "leagueId": 4142,
+          "id": 2399,
+          "endAt": "2019-08-11T22:00:00Z",
+          "beginAt": "2019-06-05T22:00:00Z",
+          "seriesId": 1807
+      },
+      "winner": null,
+      "seriesId": 1807,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-challenger-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": "60000000 South Korean Won",
+          "name": "",
+          "leagueId": 4142,
+          "id": 1807,
+          "fullName": "Summer 2019",
+          "endAt": "2019-08-11T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-05T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 125505,
+              "score": 0
+          },
+          {
+              "teamId": 1455,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "apk",
+                  "name": "APK Prince",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1455/_.png",
+                  "id": 1455,
+                  "acronym": "APK"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "asura",
+                  "name": "Asura",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/125505/Asura__Korean_Team_logo_square.png",
+                  "id": 125505,
+                  "acronym": "ASR"
+              }
+          }
+      ],
+      "leagueId": 4142,
+      "league": {
+          "url": "https://lol.gamepedia.com/Challengers_Korea/2018_Season/Summer_Season#Schedule",
+          "slug": "league-of-legends-challenger-korea",
+          "name": "Challenger Korea",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4142/_.png",
+          "id": 4142
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545959,
+              "length": null,
+              "id": 207440,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545959,
+              "length": null,
+              "id": 207441,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545959,
+              "length": null,
+              "id": 207442,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2399,
+      "status": "not_started",
+      "slug": "apk-prince-vs-asura-2019-08-12",
+      "numberOfGames": 3,
+      "name": "APK vs ASR",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545959",
+          "supported": true,
+          "opensAt": "2019-08-12T10:45:00Z"
+      },
+      "id": 545959,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-12T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126056,
+              "score": 0
+          },
+          {
+              "teamId": 120567,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "dominus-esports",
+                  "name": "Dominus Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126056/_.png",
+                  "id": 126056,
+                  "acronym": "DMO"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "victory-five",
+                  "name": "Victory Five",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120567/Victory_Fivelogo_square.png",
+                  "id": 120567,
+                  "acronym": "V5"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545441,
+              "length": null,
+              "id": 206662,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545441,
+              "length": null,
+              "id": 206663,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545441,
+              "length": null,
+              "id": 206664,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "dominus-esports-vs-victory-five-2019-08-12",
+      "numberOfGames": 3,
+      "name": "DMO vs V5",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545441",
+          "supported": true,
+          "opensAt": "2019-08-12T10:45:00Z"
+      },
+      "id": 545441,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-12T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 404,
+              "score": 0
+          },
+          {
+              "teamId": 318,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "qg-reapers",
+                  "name": "JD Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/318/qg-reapers-110064co.png",
+                  "id": 318,
+                  "acronym": "JDG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "omg",
+                  "name": "Oh My God",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/404/omg-7tst61zj.png",
+                  "id": 404,
+                  "acronym": "OMG"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545440,
+              "length": null,
+              "id": 206659,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545440,
+              "length": null,
+              "id": 206660,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545440,
+              "length": null,
+              "id": 206661,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "jd-gaming-vs-oh-my-god-2019-08-12",
+      "numberOfGames": 3,
+      "name": "JDG vs OMG",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545440",
+          "supported": true,
+          "opensAt": "2019-08-12T08:45:00Z"
+      },
+      "id": 545440,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-12T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-challenger-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-10T10:33:33Z",
+          "leagueId": 4142,
+          "id": 2399,
+          "endAt": "2019-08-11T22:00:00Z",
+          "beginAt": "2019-06-05T22:00:00Z",
+          "seriesId": 1807
+      },
+      "winner": null,
+      "seriesId": 1807,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-challenger-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": "60000000 South Korean Won",
+          "name": "",
+          "leagueId": 4142,
+          "id": 1807,
+          "fullName": "Summer 2019",
+          "endAt": "2019-08-11T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-05T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126068,
+              "score": 0
+          },
+          {
+              "teamId": 198,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "mvp",
+                  "name": "MVP",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/198/mvp-4fmk2hp2.png",
+                  "id": 198,
+                  "acronym": "MVP"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "team-dynamics",
+                  "name": "Team Dynamics",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126068/_.png",
+                  "id": 126068,
+                  "acronym": "TD"
+              }
+          }
+      ],
+      "leagueId": 4142,
+      "league": {
+          "url": "https://lol.gamepedia.com/Challengers_Korea/2018_Season/Summer_Season#Schedule",
+          "slug": "league-of-legends-challenger-korea",
+          "name": "Challenger Korea",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4142/_.png",
+          "id": 4142
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545958,
+              "length": null,
+              "id": 207437,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545958,
+              "length": null,
+              "id": 207438,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545958,
+              "length": null,
+              "id": 207439,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2399,
+      "status": "not_started",
+      "slug": "mvp-vs-team-dynamics-2019-08-12",
+      "numberOfGames": 3,
+      "name": "MVP vs TD",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545958",
+          "supported": true,
+          "opensAt": "2019-08-12T07:45:00Z"
+      },
+      "id": 545958,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-12T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 2882,
+              "score": 0
+          },
+          {
+              "teamId": 120,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "geng",
+                  "name": "Gen.G Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/2882/geng-hooir6i9.png",
+                  "id": 2882,
+                  "acronym": "GEN"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "afreeca-freecs",
+                  "name": "Afreeca Freecs",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/120/afreeca-freecs-4melt1cj.png",
+                  "id": 120,
+                  "acronym": "AF"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545668,
+              "length": null,
+              "id": 207034,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545668,
+              "length": null,
+              "id": 207035,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545668,
+              "length": null,
+              "id": 207036,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "gen-g-esports-vs-afreeca-freecs-2019-08-11",
+      "numberOfGames": 3,
+      "name": "GEN vs AF",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545668",
+          "supported": true,
+          "opensAt": "2019-08-11T10:45:00Z"
+      },
+      "id": 545668,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-11T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 126059,
+              "score": 0
+          },
+          {
+              "teamId": 405,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "edward-gaming",
+                  "name": "Edward Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/405/edward-gaming-52bsed1a.png",
+                  "id": 405,
+                  "acronym": "EDG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "top-esports",
+                  "name": "Top Esports",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/126059/_.png",
+                  "id": 126059,
+                  "acronym": "TES"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545439,
+              "length": null,
+              "id": 206656,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545439,
+              "length": null,
+              "id": 206657,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545439,
+              "length": null,
+              "id": 206658,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "edward-gaming-vs-top-esports-2019-08-11",
+      "numberOfGames": 3,
+      "name": "EDG vs TES",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545439",
+          "supported": true,
+          "opensAt": "2019-08-11T10:45:00Z"
+      },
+      "id": 545439,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-11T11:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-05T11:18:32Z",
+          "leagueId": 294,
+          "id": 2379,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1796
+      },
+      "winner": null,
+      "seriesId": 1796,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lpl-china-summer-2019",
+          "season": "Summer ",
+          "prizepool": "3500000 Chinese Yuan",
+          "name": null,
+          "leagueId": 294,
+          "id": 1796,
+          "fullName": "Summer  2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-05-31T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1568,
+              "score": 0
+          },
+          {
+              "teamId": 652,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sn-gaming",
+                  "name": "SUNING",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/652/_.png",
+                  "id": 652,
+                  "acronym": "SN"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "funplus-phoenix",
+                  "name": "FunPlus Phoenix",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1568/funplus-phoenix-bbozlifa.png",
+                  "id": 1568,
+                  "acronym": "FPX"
+              }
+          }
+      ],
+      "leagueId": 294,
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545438,
+              "length": null,
+              "id": 206653,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545438,
+              "length": null,
+              "id": 206654,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545438,
+              "length": null,
+              "id": 206655,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2379,
+      "status": "not_started",
+      "slug": "suning-vs-funplus-phoenix-2019-08-11",
+      "numberOfGames": 3,
+      "name": "SN vs FPX",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545438",
+          "supported": true,
+          "opensAt": "2019-08-11T08:45:00Z"
+      },
+      "id": 545438,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-11T09:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-05-29T13:56:04Z",
+          "leagueId": 293,
+          "id": 2392,
+          "endAt": "2019-08-17T22:00:00Z",
+          "beginAt": "2019-06-04T22:00:00Z",
+          "seriesId": 1775
+      },
+      "winner": null,
+      "seriesId": 1775,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lck-champions-korea-summer-2019",
+          "season": "Summer",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 293,
+          "id": 1775,
+          "fullName": "Summer 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-16T07:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 1589,
+              "score": 0
+          },
+          {
+              "teamId": 1452,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "griffin",
+                  "name": "Griffin",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1452/Griffinlogo_square.png",
+                  "id": 1452,
+                  "acronym": "GRF"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "kingzone-dragonx",
+                  "name": "Kingzone DragonX",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/1589/300px-Kingzone_DragonXlogo_square.png",
+                  "id": 1589,
+                  "acronym": "KZ"
+              }
+          }
+      ],
+      "leagueId": 293,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545667,
+              "length": null,
+              "id": 207031,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 2,
+              "matchId": 545667,
+              "length": null,
+              "id": 207032,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          },
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 3,
+              "matchId": 545667,
+              "length": null,
+              "id": 207033,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2392,
+      "status": "not_started",
+      "slug": "griffin-vs-kingzone-dragonx-2019-08-11",
+      "numberOfGames": 3,
+      "name": "GRF vs KZ",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545667",
+          "supported": true,
+          "opensAt": "2019-08-11T07:45:00Z"
+      },
+      "id": 545667,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-11T08:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lec-summer-2019-regular-season",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-07T18:10:03Z",
+          "leagueId": 4197,
+          "id": 2395,
+          "endAt": "2019-08-09T22:00:00Z",
+          "beginAt": "2019-06-06T22:00:00Z",
+          "seriesId": 1805
+      },
+      "winner": null,
+      "seriesId": 1805,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-lec-summer-2019",
+          "season": "Summer ",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 4197,
+          "id": 1805,
+          "fullName": "Summer  2019",
+          "endAt": "2019-08-09T22:00:00Z",
+          "description": null,
+          "beginAt": "2019-06-06T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 395,
+              "score": 0
+          },
+          {
+              "teamId": 20,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "origen",
+                  "name": "Origen",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/20/Origenlogo-square.png",
+                  "id": 20,
+                  "acronym": "OG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "sk-gaming",
+                  "name": "SK Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/395/600px-SK_Gaminglogo_square.png",
+                  "id": 395,
+                  "acronym": "SK"
+              }
+          }
+      ],
+      "leagueId": 4197,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lec",
+          "name": "LEC",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4197/LEC-2019.png",
+          "id": 4197
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545863,
+              "length": null,
+              "id": 207234,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2395,
+      "status": "not_started",
+      "slug": "origen-vs-sk-gaming-2019-08-10",
+      "numberOfGames": 1,
+      "name": "OG vs SK",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545863",
+          "supported": true,
+          "opensAt": "2019-08-10T18:45:00Z"
+      },
+      "id": 545863,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-10T19:00:00Z"
+  },
+  {
+      "tournament": {
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-cblol-brazil-winter-2019-regular",
+          "name": "Regular season",
+          "modifiedAt": "2019-06-09T17:22:04Z",
+          "leagueId": 302,
+          "id": 2380,
+          "endAt": "2019-08-11T18:00:00Z",
+          "beginAt": "2019-05-31T22:00:00Z",
+          "seriesId": 1776
+      },
+      "winner": null,
+      "seriesId": 1776,
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "league-of-legends-cblol-brazil-winter-2019",
+          "season": "Winter",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 302,
+          "id": 1776,
+          "fullName": "Winter 2019",
+          "endAt": null,
+          "description": null,
+          "beginAt": "2019-04-26T22:00:00Z"
+      },
+      "results": [
+          {
+              "teamId": 158,
+              "score": 0
+          },
+          {
+              "teamId": 94,
+              "score": 0
+          }
+      ],
+      "opponents": [
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "pain-gaming",
+                  "name": "paiN Gaming",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/94/pain-gaming-farnhu45.png",
+                  "id": 94,
+                  "acronym": "PNG"
+              }
+          },
+          {
+              "type": "Team",
+              "opponent": {
+                  "slug": "intz",
+                  "name": "INTZ e-Sports Club",
+                  "imageUrl": "https://cdn.pandascore.co/images/team/image/158/intz-ijdoekud.png",
+                  "id": 158,
+                  "acronym": "INTZ"
+              }
+          }
+      ],
+      "leagueId": 302,
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-cblol-brazil",
+          "name": "CBLOL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/302/cblol-brazil-dba70xuw.png",
+          "id": 302
+      },
+      "games": [
+          {
+              "winnerType": null,
+              "winner": {
+                  "type": null,
+                  "id": null
+              },
+              "position": 1,
+              "matchId": 545238,
+              "length": null,
+              "id": 206245,
+              "forfeit": false,
+              "finished": false,
+              "endAt": null,
+              "beginAt": null
+          }
+      ],
+      "winnerId": null,
+      "tournamentId": 2380,
+      "status": "not_started",
+      "slug": "pain-gaming-vs-intz-e-sports-club-2019-08-10",
+      "numberOfGames": 1,
+      "name": "PNG vs INTZ",
+      "matchType": "best_of",
+      "live": {
+          "url": "wss://live.pandascore.co/matches/545238",
+          "supported": true,
+          "opensAt": "2019-08-10T18:45:00Z"
+      },
+      "id": 545238,
+      "forfeit": false,
+      "endAt": null,
+      "draw": false,
+      "beginAt": "2019-08-10T19:00:00Z"
+  }
+]

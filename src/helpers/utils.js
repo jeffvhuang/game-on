@@ -262,6 +262,24 @@ export function getTournamentName(tournament) {
   return tournamentName;
 }
 
+export function getTournamentNameFromMatch(match) {
+  let tournamentName = '';
+  if (match) {
+    if (match.league) tournamentName += match.league.name + ' ';
+    if (match.series) {
+      if (match.series.name != null) {
+        tournamentName += match.series.name + ' ';
+      } else if (match.series.fullName != null) {
+        tournamentName += match.series.fullName + ' ';
+      }
+    }
+      
+    tournamentName += match.tournament.name;
+  }
+  
+  return tournamentName;
+}
+
 /**
  * convert to objects to be used in common dropdown function used across all apis
  * @param {array} teams 

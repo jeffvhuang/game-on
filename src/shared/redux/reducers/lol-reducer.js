@@ -9,6 +9,8 @@ const initialState = {
   upcoming: [],
   completed: [],
   tournamentMatches: [],
+  matches: [],
+  matchesTeams: [],
   teams: [],
   videos: [],
   thumbnails: []
@@ -39,6 +41,13 @@ function lolReducer(state = initialState, action) {
       return Object.assign({}, state, { isFetching: false, error: action.err });
     case A.CLEAR_LOL_TOURNAMENT_MATCHES:
       return Object.assign({}, state, { tournamentMatches: [] });
+
+    case A.GET_DOTA_MATCHES_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case A.GET_DOTA_MATCHES_SUCCESS:
+      return Object.assign({}, state, { isFetching: false, matches: action.payload, matchesTeams: action.matchesTeams });
+    case A.GET_DOTA_MATCHES_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
 
     case A.GET_LOL_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });

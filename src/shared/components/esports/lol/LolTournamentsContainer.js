@@ -59,7 +59,8 @@ class LolTournamentsContainer extends React.Component {
         id: tournament.id,
         title: getTournamentName(tournament),
         start: tournament.beginAt,
-        end: tournament.endAt
+        end: tournament.endAt,
+        tournament: tournament
       });
     }
 
