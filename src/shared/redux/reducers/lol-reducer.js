@@ -42,11 +42,11 @@ function lolReducer(state = initialState, action) {
     case A.CLEAR_LOL_TOURNAMENT_MATCHES:
       return Object.assign({}, state, { tournamentMatches: [] });
 
-    case A.GET_DOTA_MATCHES_REQUEST:
+    case A.GET_LOL_MATCHES_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_DOTA_MATCHES_SUCCESS:
+    case A.GET_LOL_MATCHES_SUCCESS:
       return Object.assign({}, state, { isFetching: false, matches: action.payload, matchesTeams: action.matchesTeams });
-    case A.GET_DOTA_MATCHES_FAILURE:
+    case A.GET_LOL_MATCHES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
     case A.GET_LOL_TEAMS_REQUEST:

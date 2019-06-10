@@ -38,9 +38,9 @@ class LolPageContainer extends React.Component {
   handleChange = values => this.setState({ values });
   handleTournamentChange = values => this.setState({ tournamentValues: values });
 
-  getTeams = (tournament) => {
-    return (tournament != null) ? tournament.teams : [];
-  }
+  // getTeams = (tournament) => {
+  //   return (tournament != null) ? tournament.teams : [];
+  // }
 
   getMatchesForTable = (data, values, tournamentValues) => {
     const matches = [];
@@ -81,7 +81,7 @@ class LolPageContainer extends React.Component {
         <h2>{this.props.tournamentName}</h2>
         <div className="select-dd">
           <SelectDropdown handleChange={this.handleChange}
-            options={this.getTeams(this.props.tournament)} />
+            options={this.props.lol.matchesTeams} />
         </div>
         <div className="select-dd">
           <TournamentSelectDropdown handleChange={this.handleTournamentChange}

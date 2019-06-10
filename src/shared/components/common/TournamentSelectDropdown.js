@@ -4,12 +4,11 @@ import { Select } from 'antd';
 
 import { getTournamentName } from '../../../helpers/utils';
 
+const { Option } = Select;
 const propTypes = {
   handleChange: func.isRequired,
   options: array.isRequired
 };
-
-const { Option } = Select;
 
 function TournamentSelectDropdown({ handleChange, options }) {
   return (
@@ -20,7 +19,7 @@ function TournamentSelectDropdown({ handleChange, options }) {
       style={{ width: '80%' }}
       allowClear >
       {options.map((option, i) => {
-        return <Option key={i} value={getTournamentName(option.name)}>{getTournamentName(option.name)}</Option>;
+        return <Option key={i} value={getTournamentName(option)}>{getTournamentName(option)}</Option>;
       })}
     </Select>
   );
