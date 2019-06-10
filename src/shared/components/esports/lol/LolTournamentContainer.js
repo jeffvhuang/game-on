@@ -5,41 +5,44 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getFormattedTime, getTournamentNameFromMatch } from '../../../../helpers/utils';
-import { getLolMatches, getLolTournaments } from '../../../redux/actions/lol-actions';
+import { getFormattedTime } from '../../../../helpers/utils';
+import { getLolTournaments } from '../../../redux/actions/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
-import TournamentSelectDropdown from '../../common/TournamentSelectDropdown';
 
 const propTypes = {
   lol: object.isRequired,
-  actions: object.isRequired
+  actions: object.isRequired,
+  tournamentId: string,
+  tournamentName: string
 };
 
-class LolMatchesContainer extends React.Component {
+class LolTournamentContainer extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      values: [],
-      tournamentValues: [],
+      values: []
     };
   }
 
   componentDidMount() {
     const props = this.props;
-    if (!props.lol.matches.length) props.actions.getLolMatches();
     if (!props.lol.tournaments.length) props.actions.getLolTournaments();
   }
 
   handleChange = values => this.setState({ values });
-  handleTournamentChange = tournamentValues => this.setState({ tournamentValues });
 
-  getMatchesForTable = (data, values, tournamentValues) => {
+  getTeams = (tournamentId) => {
+    const tournament = this.props.lol.tournaments.find(x => x.id == tournamentId);
+    return (tournament != null) ? tournament.teams : [];
+  }
+
+  getMatchesForTable = (data, values) => {
     const matches = [];
     // Create objects for every match or filter matches that include one of the selected teams
-    if (!values.length && !tournamentValues.length) {
+    if (!values.length) {
       for (let i = 0; i < data.length; i++) {
         const match = data[i];
         matches.push(this.getMatchTableObject(match));
@@ -47,10 +50,8 @@ class LolMatchesContainer extends React.Component {
     } else {
       for (let i = 0; i < data.length; i++) {
         const match = data[i];
-        const tournamentNameFromMatch = getTournamentNameFromMatch(match);
         if (values.some(v => v == match.opponents[0].opponent.name 
-          || v == match.opponents[1].opponent.name)
-          || tournamentValues.some(t => t == tournamentNameFromMatch))
+          || v == match.opponents[1].opponent.name))
           matches.push(this.getMatchTableObject(match));
       }
     }
@@ -72,21 +73,16 @@ class LolMatchesContainer extends React.Component {
   render() {
     return (
       <div className="section">
-        <h2>Matches</h2>
+        <h2>{this.props.tournamentName}</h2>
         <div className="select-dd">
           <SelectDropdown handleChange={this.handleChange}
-            options={this.props.lol.matchesTeams} />
-        </div>
-        <div className="select-dd">
-          <TournamentSelectDropdown handleChange={this.handleTournamentChange}
-            options={this.props.lol.tournaments} />
+            options={this.getTeams(this.props.tournamentId)} />
         </div>
         <div className="">
           <LolTournamentMatches header="Matches"
             matches={this.getMatchesForTable(
-              this.props.lol.matches, 
-              this.state.values,
-              this.state.tournamentValues)} />
+              this.props.lol.tournamentMatches, 
+              this.state.values)} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
@@ -94,7 +90,7 @@ class LolMatchesContainer extends React.Component {
   }
 }
 
-LolMatchesContainer.propTypes = propTypes;
+LolTournamentContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
   lol: state.lol
@@ -102,10 +98,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    getLolMatches,
     getLolTournaments
   }, dispatch)
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LolMatchesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LolTournamentContainer);
 

@@ -7,8 +7,8 @@ import { Tabs } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
 import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actions/lol-actions';
-import SelectDropdown from '../../common/SelectDropdown';
 import LolTournamentsContainer from './LolTournamentsContainer';
+import LolTournamentContainer from './LolTournamentContainer';
 import LolMatchesContainer from './LolMatchesContainer';
 
 const TabPane = Tabs.TabPane;
@@ -36,7 +36,7 @@ class LolPageContainer extends React.Component {
     this.setState({
       activeTab: "2",
       tournamentName: info.event.title,
-      tournament: info.event.tournament
+      tournamentId: id
     });
   }
 
@@ -50,9 +50,13 @@ class LolPageContainer extends React.Component {
           <TabPane tab="Tournaments" key="1">
             <LolTournamentsContainer selectTournament={this.selectTournament} />
           </TabPane>
-          <TabPane tab="Matches" key="2">
-            <LolMatchesContainer tournament={this.state.tournament}
+          <TabPane tab="Tournament" key="2">
+            <LolTournamentContainer selectTournament={this.selectTournament}
+              tournamentId={this.state.tournamentId}
               tournamentName={this.state.tournamentName} />
+          </TabPane>
+          <TabPane tab="Matches" key="3">
+            <LolMatchesContainer />
           </TabPane>
         </Tabs>
       </div>
