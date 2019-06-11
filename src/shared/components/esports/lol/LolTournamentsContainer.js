@@ -22,7 +22,7 @@ class LolTournamentsContainer extends React.Component {
 
     this.state = {
       values: [],
-      tournaments: []
+      tournaments: props.lol.tournaments
     };
   }
 
