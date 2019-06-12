@@ -82,27 +82,27 @@ export const getLolTournamentMatchesSuccess = (payload) => ({ type: A.GET_LOL_TO
 export const getLolTournamentMatchesFailure = (err) => ({ type: A.GET_LOL_TOURNAMENT_MATCHES_FAILURE, err });
 export const clearLolTournamentMatchesSuccess = () => ({ type: A.CLEAR_LOL_TOURNAMENT_MATCHES });
 
-// export const getLolTournamentMatches = (tournamentId) => {
-//   return async (dispatch) => {
-//     dispatch(getLolTournamentMatchesRequest());
-//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES, {
-//       params: { 'tournamentId': tournamentId }
-//     }).then(response => {
-//       dispatch(getLolTournamentMatchesSuccess(response.data));
-//     }).catch(err => {
-//       dispatch(getLolTournamentMatchesFailure(err));
-//       throw (err);
-//     });
-//   };
-// };
-
 export const getLolTournamentMatches = (tournamentId) => {
   return async (dispatch) => {
     dispatch(getLolTournamentMatchesRequest());
-    await sleep(1000);
-    dispatch(getLolTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+    return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES, {
+      params: { 'tournamentId': tournamentId }
+    }).then(response => {
+      dispatch(getLolTournamentMatchesSuccess(response.data));
+    }).catch(err => {
+      dispatch(getLolTournamentMatchesFailure(err));
+      throw (err);
+    });
   };
 };
+
+// export const getLolTournamentMatches = (tournamentId) => {
+//   return async (dispatch) => {
+//     dispatch(getLolTournamentMatchesRequest());
+//     await sleep(1000);
+//     dispatch(getLolTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+//   };
+// };
 
 export const clearLolTournamentMatches = () => {
   return (dispatch) => dispatch(clearLolTournamentMatchesSuccess());

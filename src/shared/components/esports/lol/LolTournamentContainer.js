@@ -5,17 +5,16 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getFormattedTime } from '../../../../helpers/utils';
-import { getLolTournaments } from '../../../redux/actions/lol-actions';
+import { getFormattedTime, getTournamentNameFromMatch } from '../../../../helpers/utils';
+import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actions/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
+import SingleTournamentSelectDropdown from '../../common/SingleTournamentSelectDropdown';
 
 const propTypes = {
   lol: object.isRequired,
-  actions: object.isRequired,
-  tournamentId: string,
-  tournamentName: string
+  actions: object.isRequired
 };
 
 class LolTournamentContainer extends React.Component {
@@ -28,29 +27,42 @@ class LolTournamentContainer extends React.Component {
   }
 
   componentDidMount() {
-    const props = this.props;
-    if (!props.lol.tournaments.length) props.actions.getLolTournaments();
+    const { lol, actions } = this.props;
+    if (!lol.tournaments.length) actions.getLolTournaments();
   }
 
   handleChange = values => this.setState({ values });
-
-  getTeams = (tournamentId) => {
-    const tournament = this.props.lol.tournaments.find(x => x.id == tournamentId);
-    return (tournament != null) ? tournament.teams : [];
+  handleTournamentChange = tournamentId => {
+    const { lol, actions } = this.props;
+    if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != tournamentId)
+      actions.getLolTournamentMatches(tournamentId);
   }
 
-  getMatchesForTable = (data, values) => {
+  getTournamentName = (tournamentMatches) => {
+    return (tournamentMatches.length) ? getTournamentNameFromMatch(tournamentMatches[0]) : '';
+  }
+
+  getTeams = (tournamentMatches) => {
+    if (tournamentMatches.length) {
+      const id = tournamentMatches[0].tournament.id;
+      const tournament = this.props.lol.tournaments.find(x => x.id == id);
+      return (tournament != null) ? tournament.teams : [];
+    }
+    return [];
+  }
+
+  getMatchesForTable = (tournamentMatches, values) => {
     const matches = [];
     // Create objects for every match or filter matches that include one of the selected teams
     if (!values.length) {
-      for (let i = 0; i < data.length; i++) {
-        const match = data[i];
+      for (let i = 0; i < tournamentMatches.length; i++) {
+        const match = tournamentMatches[i];
         matches.push(this.getMatchTableObject(match));
       }
     } else {
-      for (let i = 0; i < data.length; i++) {
-        const match = data[i];
-        if (values.some(v => v == match.opponents[0].opponent.name 
+      for (let i = 0; i < tournamentMatches.length; i++) {
+        const match = tournamentMatches[i];
+        if (values.some(v => v == match.opponents[0].opponent.name
           || v == match.opponents[1].opponent.name))
           matches.push(this.getMatchTableObject(match));
       }
@@ -73,16 +85,19 @@ class LolTournamentContainer extends React.Component {
   render() {
     return (
       <div className="section">
-        <h2>{this.props.tournamentName}</h2>
+        <div className="select-dd">
+          <SingleTournamentSelectDropdown handleChange={this.handleTournamentChange}
+            options={this.props.lol.tournaments} />
+        </div>
+        <h2>{this.getTournamentName(this.props.lol.tournamentMatches)}</h2>
         <div className="select-dd">
           <SelectDropdown handleChange={this.handleChange}
-            options={this.getTeams(this.props.tournamentId)} />
+            options={this.getTeams(this.props.lol.tournamentMatches)} />
         </div>
-        <div className="">
-          <LolTournamentMatches header="Matches"
-            matches={this.getMatchesForTable(
-              this.props.lol.tournamentMatches, 
-              this.state.values)} />
+        <div>
+          <LolTournamentMatches matches={this.getMatchesForTable(
+            this.props.lol.tournamentMatches,
+            this.state.values)} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
@@ -98,7 +113,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
-    getLolTournaments
+    getLolTournaments,
+    getLolTournamentMatches
   }, dispatch)
 });
 
