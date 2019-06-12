@@ -8,7 +8,7 @@ import { paths } from '../../../../helpers/constants';
 import { getFormattedTime, getTournamentNameFromMatch } from '../../../../helpers/utils';
 import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actions/lol-actions';
 
-import SelectDropdown from '../../common/SelectDropdown';
+import ManualSelectDropdown from '../../common/ManualSelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
 import SingleTournamentSelectDropdown from '../../common/SingleTournamentSelectDropdown';
 
@@ -23,7 +23,7 @@ class LolTournamentContainer extends React.Component {
 
     this.state = {
       values: [],
-      tournamentId: 0
+      tournamentId: null
     };
   }
 
@@ -37,7 +37,7 @@ class LolTournamentContainer extends React.Component {
     const { lol, actions } = this.props;
     if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != tournamentId)
       actions.getLolTournamentMatches(tournamentId);
-    this.setState({ tournamentId });
+    this.setState({ tournamentId, values: [] });
   }
 
   getTournamentId = (id, tournamentMatches) => {
@@ -99,8 +99,9 @@ class LolTournamentContainer extends React.Component {
         </div>
         <h2>{this.getTournamentName(this.props.lol.tournamentMatches)}</h2>
         <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.getTeams(this.props.lol.tournamentMatches)} />
+          <ManualSelectDropdown handleChange={this.handleChange}
+            options={this.getTeams(this.props.lol.tournamentMatches)}
+            values={this.state.values} />
         </div>
         <div>
           <LolTournamentMatches matches={this.getMatchesForTable(
