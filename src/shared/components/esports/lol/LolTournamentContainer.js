@@ -22,7 +22,8 @@ class LolTournamentContainer extends React.Component {
     super(props);
 
     this.state = {
-      values: []
+      values: [],
+      tournamentId: 0
     };
   }
 
@@ -36,6 +37,12 @@ class LolTournamentContainer extends React.Component {
     const { lol, actions } = this.props;
     if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != tournamentId)
       actions.getLolTournamentMatches(tournamentId);
+    this.setState({ tournamentId });
+  }
+
+  getTournamentId = (id, tournamentMatches) => {
+    if (tournamentMatches.length) return tournamentMatches[0].tournament.id;
+    return id;
   }
 
   getTournamentName = (tournamentMatches) => {
@@ -87,7 +94,8 @@ class LolTournamentContainer extends React.Component {
       <div className="section">
         <div className="select-dd">
           <SingleTournamentSelectDropdown handleChange={this.handleTournamentChange}
-            options={this.props.lol.tournaments} />
+            options={this.props.lol.tournaments}
+            value={this.getTournamentId(this.state.tournamentId, this.props.lol.tournamentMatches)} />
         </div>
         <h2>{this.getTournamentName(this.props.lol.tournamentMatches)}</h2>
         <div className="select-dd">

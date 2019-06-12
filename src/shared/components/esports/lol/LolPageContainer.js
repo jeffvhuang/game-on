@@ -31,8 +31,10 @@ class LolPageContainer extends React.Component {
   selectTab = (key) => { this.setState({ activeTab: key }); }
 
   selectTournament = (info) => {
+    const { lol, actions } = this.props;
     const id = info.event.id;
-    this.props.actions.getLolTournamentMatches(id);
+    if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != id) 
+      actions.getLolTournamentMatches(id);
     this.setState({
       activeTab: "2",
       tournamentName: info.event.title,
