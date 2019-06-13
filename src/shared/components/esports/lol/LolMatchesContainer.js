@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, string } from 'prop-types';
+import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
@@ -72,16 +72,15 @@ class LolMatchesContainer extends React.Component {
   render() {
     return (
       <div className="section">
-        <h2>Matches</h2>
-        <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.lol.matchesTeams} />
-        </div>
         <div className="select-dd">
           <TournamentSelectDropdown handleChange={this.handleTournamentChange}
             options={this.props.lol.tournaments} />
         </div>
-        <div className="">
+        <div className="select-dd">
+          <SelectDropdown handleChange={this.handleChange}
+            options={this.props.lol.matchesTeams} />
+        </div>
+        <div>
           <LolTournamentMatches header="Matches"
             matches={this.getMatchesForTable(
               this.props.lol.matches, 

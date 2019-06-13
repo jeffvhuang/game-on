@@ -11,6 +11,7 @@ import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actio
 import ManualSelectDropdown from '../../common/ManualSelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
 import SingleTournamentSelectDropdown from '../../common/SingleTournamentSelectDropdown';
+import MatchData from './MatchData';
 
 const propTypes = {
   lol: object.isRequired,
@@ -85,8 +86,15 @@ class LolTournamentContainer extends React.Component {
       team1: match.opponents[0].opponent.name,
       team2: match.opponents[1].opponent.name,
       date: startDate.toDateString().slice(0, -5),
-      time: getFormattedTime(startDate)
+      time: getFormattedTime(startDate),
+      games: match.games,
+      beginAt: match.beginAt,
+      endAt: match.endAt
     };
+  }
+
+  getExpandedRow = () => {
+    return match => <MatchData match={match} />;
   }
 
   render() {
@@ -106,7 +114,8 @@ class LolTournamentContainer extends React.Component {
         <div>
           <LolTournamentMatches matches={this.getMatchesForTable(
             this.props.lol.tournamentMatches,
-            this.state.values)} />
+            this.state.values)}
+            getRow={this.getExpandedRow} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>
