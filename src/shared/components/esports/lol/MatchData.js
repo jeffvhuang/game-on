@@ -1,29 +1,30 @@
 import React from 'react';
-import { object } from 'prop-types';
+import { object, func } from 'prop-types';
 
 MatchData.propTypes = {
-  match: object
+  match: object.isRequired,
+  getWinnerName: func.isRequired,
+  getWinnerLogo: func.isRequired
 };
 
-function MatchData({ match }) {
+function MatchData({ match, getWinnerName, getWinnerLogo }) {
   const now = new Date();
   return (
     <div className="expanded-row">
       {now < new Date(match.beginAt) ? (
-        <div>Match has not begun</div>
+        <div className="game-row">Match has not begun</div>
       ) : (
-        <div>
-        {match.games.map(game => {
+        match.games.map(game => {
           return (game.finished) ? (
-            <div key={game.id}>
-              <div>Winner: {game.winner.id}</div>
+            <div key={game.id} className="game-row">
+              <div><img className="team-logo-small" src={getWinnerLogo(game.winner.id, match.opponents)} /></div>
+              <div>Winner: {getWinnerName(game.winner.id, match.opponents)}</div>
               <div>Duration: {Math.floor(game.length/60) + '.' + game.length%60}</div>
             </div>
           ) : (
-            <div key={game.id}>Game has not finished</div>
+            <div key={game.id} className="game-row">Game has not finished</div>
           );
-        })}
-        </div>
+        })
       )}
       
     </div>

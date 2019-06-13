@@ -89,12 +89,26 @@ class LolTournamentContainer extends React.Component {
       time: getFormattedTime(startDate),
       games: match.games,
       beginAt: match.beginAt,
-      endAt: match.endAt
+      endAt: match.endAt,
+      opponents: match.opponents
     };
   }
 
   getExpandedRow = () => {
-    return match => <MatchData match={match} />;
+    return match => <MatchData match={match} 
+      getWinnerName={this.getWinnerName}
+      getWinnerLogo={this.getWinnerLogo} />;
+  }
+
+  getWinnerName = (winnerId, opponents) => {
+    const winner = opponents.find(x => x.opponent.id == winnerId);
+    return winner.opponent.name;
+  }
+
+  getWinnerLogo = (winnerId, opponents) => {
+    console.log(opponents);
+    const winner = opponents.find(x => x.opponent.id == winnerId);
+    return winner.opponent.imageUrl;
   }
 
   render() {

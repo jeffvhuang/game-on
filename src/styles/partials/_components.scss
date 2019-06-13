@@ -48,6 +48,38 @@
   display: inline-block;
 }
 
+.expanded-row {
+  width: 100%;
+
+  .game-row {
+    display: flex;
+    width: 100%;
+    padding: .5em 0;
+    border-bottom: 1px solid $light-grey;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    >div:first-child {
+      width: 30%;
+    }
+
+    >div:not(:first-child) {
+      width: percentage(70/2);
+    }
+  }
+}
+
+.team-logo-small {
+  height: 2em;
+}
+
 .calendar {
   @extend .pad-sides;
 }
