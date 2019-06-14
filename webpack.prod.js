@@ -81,12 +81,9 @@ module.exports = merge(common, {
             },
           },
           {
-            test: /\.(js|jsx|mjs)$/,
-            loader: require.resolve('babel-loader'),
-            exclude: /node_modules/
-            // options kept empty so that when babel is called it will use .babelrc
-            // in babelrc, modules: false for @babel/preset-env to leave modules alone
-            // to allow webpack tree shaking
+            test: /\.(tsx|jsx|mjs)$/,
+            exclude: /node_modules/,
+            use: { loader: 'awesome-typescript-loader' },
           },
           {
             test: /\.scss$/,
