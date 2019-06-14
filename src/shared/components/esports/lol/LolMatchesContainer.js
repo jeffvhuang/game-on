@@ -11,6 +11,7 @@ import { getLolMatches, getLolTournaments } from '../../../redux/actions/lol-act
 import SelectDropdown from '../../common/SelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
 import TournamentSelectDropdown from '../../common/TournamentSelectDropdown';
+import MatchData from './MatchData';
 
 const propTypes = {
   lol: object.isRequired,
@@ -65,8 +66,28 @@ class LolMatchesContainer extends React.Component {
       team1: match.opponents[0].opponent.name,
       team2: match.opponents[1].opponent.name,
       date: startDate.toDateString().slice(0, -5),
-      time: getFormattedTime(startDate)
+      time: getFormattedTime(startDate),
+      games: match.games,
+      beginAt: match.beginAt,
+      endAt: match.endAt,
+      opponents: match.opponents
     };
+  }
+
+  getExpandedRow = () => {
+    return match => <MatchData match={match} 
+      getWinnerName={this.getWinnerName}
+      getWinnerLogo={this.getWinnerLogo} />;
+  }
+
+  getWinnerName = (winnerId, opponents) => {
+    const winner = opponents.find(x => x.opponent.id == winnerId);
+    return winner.opponent.name;
+  }
+
+  getWinnerLogo = (winnerId, opponents) => {
+    const winner = opponents.find(x => x.opponent.id == winnerId);
+    return winner.opponent.imageUrl;
   }
 
   render() {
@@ -85,7 +106,8 @@ class LolMatchesContainer extends React.Component {
             matches={this.getMatchesForTable(
               this.props.lol.matches, 
               this.state.values,
-              this.state.tournamentValues)} />
+              this.state.tournamentValues)}
+            getRow={this.getExpandedRow} />
           <Link to={paths.EVENTS} className="right">More ></Link>
         </div>
       </div>

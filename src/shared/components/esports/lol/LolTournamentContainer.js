@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, string } from 'prop-types';
+import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
@@ -106,7 +106,6 @@ class LolTournamentContainer extends React.Component {
   }
 
   getWinnerLogo = (winnerId, opponents) => {
-    console.log(opponents);
     const winner = opponents.find(x => x.opponent.id == winnerId);
     return winner.opponent.imageUrl;
   }
