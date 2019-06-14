@@ -1,6 +1,6 @@
 const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const merge = require('webpack-merge');
-const common = require('./webpack.common.config');
+const common = require('./webpack.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -47,7 +47,7 @@ module.exports = merge(common, {
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
     new ManifestPlugin(),
-    new AntdScssThemePlugin('./theme.scss')
+    new AntdScssThemePlugin('./src/styles/theme.scss')
   ],
   output: {
     filename: '[name].[chunkhash:8].bundle.js',
