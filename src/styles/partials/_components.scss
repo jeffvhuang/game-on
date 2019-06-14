@@ -1,3 +1,5 @@
+$winner-header-col-width: 10%;
+
 .header {
   padding: 0;
   height: auto;
@@ -66,12 +68,13 @@
       padding-bottom: 0;
     }
 
-    >div:first-child {
-      width: 30%;
+    >div:first-child,
+    >div:nth-child(2) {
+      width: $winner-header-col-width;
     }
 
-    >div:not(:first-child) {
-      width: percentage(70/2);
+    >div {
+      width: (100% - ($winner-header-col-width*2))/2;
     }
   }
 }

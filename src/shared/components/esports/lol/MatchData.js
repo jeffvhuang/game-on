@@ -17,8 +17,12 @@ function MatchData({ match, getWinnerName, getWinnerLogo }) {
         match.games.map(game => {
           return (game.finished) ? (
             <div key={game.id} className="game-row">
-              <div><img className="team-logo-small" src={getWinnerLogo(game.winner.id, match.opponents)} /></div>
-              <div>Winner: {getWinnerName(game.winner.id, match.opponents)}</div>
+              <div>Game {game.position}</div>
+              <div>Winner:</div>
+              <div>
+                <img className="team-logo-small" src={getWinnerLogo(game.winner.id, match.opponents)} />
+                {getWinnerName(game.winner.id, match.opponents)}
+              </div>
               <div>Duration: {Math.floor(game.length/60) + '.' + game.length%60}</div>
             </div>
           ) : (
