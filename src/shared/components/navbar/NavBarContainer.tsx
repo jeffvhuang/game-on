@@ -1,12 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import { Menu, Icon } from 'antd';
 import { appName, paths, sports, esportsTitles } from '../../../helpers/constants';
 import { Link } from 'react-router-dom';
 
 const Item = Menu.Item;
 const SubMenu = Menu.SubMenu;
+interface State {
+  current: string
+}
 
-class NavBarContainer extends React.Component {
+class NavBarContainer extends React.Component<{}, State> {
   state = {
     current: 'app'
   }

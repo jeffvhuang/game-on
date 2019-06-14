@@ -1,5 +1,4 @@
-import React from 'react';
-import { object } from 'prop-types';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
@@ -20,15 +19,22 @@ import VideoThumbnails from '../../common/VideoThumbnails';
 import FootballSelectDropdown from './FootballSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
 import VideoHeader from '../../common/VideoHeader';
+import { FootballTeam } from '../../../../types/football-team.model';
+import { EplStoreState } from '../../../../types/redux-models/epl-store-state.model';
 
-const propTypes = {
-  epl: object.isRequired,
-  championsLeague: object.isRequired,
-  europaLeague: object.isRequired,
-  actions: object.isRequired
-};
+interface Props {
+  epl: EplStoreState;
+  championsLeague: EplStoreState;
+  europaLeague: EplStoreState;
+  actions: ;
+}
+interface State {
+  values: string[];
+  championsValues: string[];
+  europaValues: string[];
+}
 
-class FootballPageContainer extends React.Component {
+class FootballPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 

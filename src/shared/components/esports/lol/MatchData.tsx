@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { object, func } from 'prop-types';
 
 MatchData.propTypes = {

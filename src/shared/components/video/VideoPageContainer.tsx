@@ -1,12 +1,18 @@
-import React from 'react';
-import { object } from 'prop-types';
+import * as React from 'react';
+import { RouteComponentProps } from 'react-router';
 
-const propTypes = {
-  match: object
-};
+interface MatchParams {
+  vidId: string;
+}
 
-class VideoPageContainer extends React.Component {
-  constructor(props) {
+interface Props extends RouteComponentProps<MatchParams> { }
+
+interface State {
+  vidId: string;
+}
+
+class VideoPageContainer extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -33,7 +39,5 @@ class VideoPageContainer extends React.Component {
     );
   }
 }
-
-VideoPageContainer.propTypes = propTypes;
 
 export default VideoPageContainer;

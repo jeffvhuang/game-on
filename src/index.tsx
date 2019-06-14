@@ -1,12 +1,11 @@
-import '@babel/polyfill';
 import '../web.config';
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react"
+import * as ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
 import store from './shared/redux/configureStore';
 import 'antd/dist/antd.less';
 import './styles/main.scss';
-import App from "./shared/App.js";
+import App from "./shared/App";
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render((

@@ -1,15 +1,14 @@
-import React from 'react';
-import { func, array } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
-
-const propTypes = {
-  handleChange: func.isRequired,
-  teams: array.isRequired
-};
+import { FootballTeam } from '../../../../types/football-team.model';
 
 const { Option } = Select;
+interface Props {
+  handleChange: (values: string[]) => void;
+  teams: FootballTeam[];
+};
 
-function FootballSelectDropdown({ handleChange, teams }) {
+function FootballSelectDropdown({ handleChange, teams } : Props) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -25,7 +24,5 @@ function FootballSelectDropdown({ handleChange, teams }) {
     </div>
   );
 }
-
-FootballSelectDropdown.propTypes = propTypes;
 
 export default FootballSelectDropdown;
