@@ -1,5 +1,5 @@
-import { FootballSchedule } from "../football-schedule.model";
-import { FootballTeam } from "../football-team.model";
+import { FootballSchedule } from "../football-api/football-schedule.model";
+import { FootballTeam } from "../football-api/football-team.model";
 
 export interface EplStoreState {
   isFetching: boolean;
