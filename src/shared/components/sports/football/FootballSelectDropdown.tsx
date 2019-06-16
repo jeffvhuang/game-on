@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Select } from 'antd';
-import { FootballTeam } from '../../../../types/football-team.model';
+import { FootballTeam } from '../../../../types/football-api/football-team.model';
 
 const { Option } = Select;
 interface Props {

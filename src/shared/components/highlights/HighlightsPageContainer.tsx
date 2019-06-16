@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { paths, allSportsList } from '../../../helpers/constants';
-import { getNbaVideos } from '../../redux/actions/nba-actions';
-import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/actions/football-actions';
+import { getNbaVideos } from '../../redux/nba/nba-actions';
+import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/football-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SportSelectDropdown from '../common/SportSelectDropdown';

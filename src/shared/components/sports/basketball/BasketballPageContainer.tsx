@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../../redux/actions/nba-actions';
+import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../../redux/nba/nba-actions';
 
 import VideoThumbnails from '../../common/VideoThumbnails';
 import NbaSelectDropdown from './NbaSelectDropdown';

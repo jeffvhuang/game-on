@@ -1,4 +1,4 @@
-import { tennisActions as A } from '../actions/action-types';
+import { tennisActions as A } from '../types/redux-types';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState = {
@@ -11,7 +11,8 @@ const initialState = {
   thumbnails: [],
   // Following 2 always replaced with the recently selected tournament
   tournamentSchedule: [],
-  tournamentInfo: {}
+  tournamentInfo: {},
+  error: {}
 };
 
 function tennisReducer(state = initialState, action) {

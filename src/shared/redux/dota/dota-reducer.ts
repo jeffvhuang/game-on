@@ -1,4 +1,4 @@
-import { dotaActions as A } from '../actions/action-types';
+import { dotaActions as A } from '../types/redux-types';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState = {
@@ -17,7 +17,8 @@ const initialState = {
   teams: [],
   matchesTeams: [],
   videos: [],
-  thumbnails: []
+  thumbnails: [],
+  error: {}
 };
 
 function dotaReducer(state = initialState, action) {
