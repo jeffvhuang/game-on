@@ -1,9 +1,9 @@
-import { dotaActions as A } from '../types/redux-types';
+import * as A from './dota-constants';
+import { DotaState, DotaActionTypes } from './dota-types';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
-const initialState = {
+const initialState: DotaState = {
   isFetching: false,
-  data: [],
   series: [],
   ongoingSeries: [],
   upcomingSeries: [],
@@ -21,7 +21,7 @@ const initialState = {
   error: {}
 };
 
-function dotaReducer(state = initialState, action) {
+function dotaReducer(state = initialState, action: DotaActionTypes): DotaState {
   switch(action.type) {
     case A.GET_DOTA_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });

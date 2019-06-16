@@ -1,6 +1,6 @@
-import { ESportsTeam } from "./esports-team.model";
+import { ESportsTeamBase } from "./esports-team-base.model";
 
 export interface ESportsOpponent {
   type: string;
-  opponent: ESportsTeam;
+  opponent: ESportsTeamBase;
 }

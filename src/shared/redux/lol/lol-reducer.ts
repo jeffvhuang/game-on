@@ -1,9 +1,9 @@
-import { lolActions as A } from '../actions/action-types';
+import * as A from './lol-constants';
+import { LolState, LolActionTypes } from './lol-types';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
-const initialState = {
+const initialState: LolState = {
   isFetching: false,
-  data: [],
   tournaments: [],
   ongoing: [],
   upcoming: [],
@@ -13,10 +13,11 @@ const initialState = {
   matchesTeams: [],
   teams: [],
   videos: [],
-  thumbnails: []
+  thumbnails: [],
+  error: {}
 };
 
-function lolReducer(state = initialState, action) {
+function lolReducer(state = initialState, action: LolActionTypes): LolState {
   switch (action.type) {
     case A.GET_LOL_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });

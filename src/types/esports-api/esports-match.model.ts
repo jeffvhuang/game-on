@@ -1,5 +1,5 @@
 import { ESportsTournamentBase } from "./esports-tournament-base.model";
-import { ESportsTeam } from "./esports-team.model";
+import { ESportsTeamBase } from "./esports-team-base.model";
 import { ESportsSeriesBase } from "./esports-series-base.model";
 import { ESportsLeagueBase } from "./esports-league-base.model";
 import { ESportsLive } from "./esports-live.model";
@@ -9,7 +9,7 @@ import { ESportsResult } from "./esports-result.model";
 
 export interface ESportsMatch {
   tournament: ESportsTournamentBase;
-  winner: ESportsTeam;
+  winner: ESportsTeamBase;
   seriesId: number;
   series: ESportsSeriesBase;
   results: ESportsResult[];
