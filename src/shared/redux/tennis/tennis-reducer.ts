@@ -1,7 +1,8 @@
-import { tennisActions as A } from '../types/redux-types';
+import { TennisState, TennisActionTypes } from './tennis-types';
+import * as C from './tennis-constants';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
-const initialState = {
+const initialState: TennisState = {
   isFetching: false,
   tournaments: [],
   ongoing: [],
@@ -15,50 +16,50 @@ const initialState = {
   error: {}
 };
 
-function tennisReducer(state = initialState, action) {
+function tennisReducer(state = initialState, action: TennisActionTypes): TennisState {
   switch(action.type) {
-    case A.GET_TENNIS_TOURNAMENTS_REQUEST:
+    case C.GET_TENNIS_TOURNAMENTS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_TENNIS_TOURNAMENTS_SUCCESS:
+    case C.GET_TENNIS_TOURNAMENTS_SUCCESS:
       return Object.assign({}, state,
         { 
           isFetching: false,
-          tournaments: action.schedule,
-          ongoing: action.payload.ongoing,
-          upcoming: action.payload.upcoming,
-          completed: action.payload.completed
+          tournaments: action.payload,
+          ongoing: action.sortedTournaments.ongoing,
+          upcoming: action.sortedTournaments.upcoming,
+          completed: action.sortedTournaments.completed
         });
-    case A.GET_TENNIS_TOURNAMENTS_FAILURE:
+    case C.GET_TENNIS_TOURNAMENTS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
-    case A.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST:
+    case C.GET_TENNIS_TOURNAMENT_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS:
+    case C.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS:
       return Object.assign({}, state, 
         { isFetching: false, tournamentSchedule: action.payload });
-    case A.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE:
+    case C.GET_TENNIS_TOURNAMENT_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    case A.CLEAR_TENNIS_TOURNAMENT_SCHEDULE:
+    case C.CLEAR_TENNIS_TOURNAMENT_SCHEDULE:
       return Object.assign({}, state, {  tournamentSchedule: [] });
 
-    case A.GET_TENNIS_TOURNAMENT_INFO_REQUEST:
+    case C.GET_TENNIS_TOURNAMENT_INFO_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case A.GET_TENNIS_TOURNAMENT_INFO_SUCCESS:
+    case C.GET_TENNIS_TOURNAMENT_INFO_SUCCESS:
       return Object.assign({}, state,
         { isFetching: false, tournamentInfo: action.payload });
-    case A.GET_TENNIS_TOURNAMENT_INFO_FAILURE:
+    case C.GET_TENNIS_TOURNAMENT_INFO_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    case A.CLEAR_TENNIS_TOURNAMENT_INFO:
+    case C.CLEAR_TENNIS_TOURNAMENT_INFO:
       return Object.assign({}, state, { tournamentInfo: {} });
     
-    // case A.GET_NBA_VIDEOS_REQUEST:
+    // case C.GET_NBA_VIDEOS_REQUEST:
     //   return Object.assign({}, state, { isFetching: true });
-    // case A.GET_NBA_VIDEOS_SUCCESS:
+    // case C.GET_NBA_VIDEOS_SUCCESS:
     //   return Object.assign({}, state, { 
     //     isFetching: false,
     //     videos: action.payload,
     //     thumbnails: createYoutubeThumnailObjects(action.payload) });
-    // case A.GET_NBA_VIDEOS_FAILURE:
+    // case C.GET_NBA_VIDEOS_FAILURE:
     //   return Object.assign({}, state, { isFetching: false, error: action.err });
 
     default:

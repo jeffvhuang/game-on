@@ -19,28 +19,28 @@ export interface NbaState {
 
 // Get NBA Schedule
 export interface GetNbaScheduleRequest {
-  type: typeof C.GET_NBA_SCHEDULE_REQUEST
+  type: typeof C.GET_NBA_SCHEDULE_REQUEST;
 }
 
 export interface GetNbaScheduleSuccess {
-  type: typeof C.GET_NBA_SCHEDULE_SUCCESS
-  payload: NbaSchedule[]
-  sortedSchedule: NbaSortedSchedule
+  type: typeof C.GET_NBA_SCHEDULE_SUCCESS;
+  payload: NbaSchedule[];
+  sortedSchedule: NbaSortedSchedule;
 }
 
 export interface GetNbaScheduleFailure {
-  type: typeof C.GET_NBA_SCHEDULE_FAILURE,
-  err: any 
+  type: typeof C.GET_NBA_SCHEDULE_FAILURE;
+  err: any;
 }
 
 // Get NBA Teams
 export interface GetNbaTeamsRequest {
-  type: typeof C.GET_NBA_TEAMS_REQUEST
+  type: typeof C.GET_NBA_TEAMS_REQUEST;
 }
 
 export interface GetNbaTeamsSuccess {
-  type: typeof C.GET_NBA_TEAMS_SUCCESS
-  payload: NbaTeam[]
+  type: typeof C.GET_NBA_TEAMS_SUCCESS;
+  payload: NbaTeam[];
 }
 
 export interface GetNbaTeamsFailure {
@@ -50,16 +50,16 @@ export interface GetNbaTeamsFailure {
 
 // Get NBA Videos
 export interface GetNbaVideosRequest {
-  type: typeof C.GET_NBA_VIDEOS_REQUEST
+  type: typeof C.GET_NBA_VIDEOS_REQUEST;
 }
 
 export interface GetNbaVideosSuccess {
-  type: typeof C.GET_NBA_VIDEOS_SUCCESS
-  payload: YoutubePlaylistItem[]
+  type: typeof C.GET_NBA_VIDEOS_SUCCESS;
+  payload: YoutubePlaylistItem[];
 }
 export interface GetNbaVideosFailure {
-  type: typeof C.GET_NBA_VIDEOS_FAILURE,
-  err: any
+  type: typeof C.GET_NBA_VIDEOS_FAILURE;
+  err: any;
 }
 
 export type NbaActionTypes = 

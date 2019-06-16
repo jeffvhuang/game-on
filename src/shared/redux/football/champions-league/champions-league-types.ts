@@ -19,48 +19,48 @@ export interface ChampionsLeagueState {
 
 // Get CHAMPIONS LEAGUE Schedule
 export interface GetChampionsLeagueScheduleRequest {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_REQUEST
+  type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_REQUEST;
 }
 
 export interface GetChampionsLeagueScheduleSuccess {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_SUCCESS
-  payload: FootballSchedule
-  sortedSchedule: FootballSortedSchedule
+  type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_SUCCESS;
+  payload: FootballSchedule;
+  sortedSchedule: FootballSortedSchedule;
 }
 
 export interface GetChampionsLeagueScheduleFailure {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE,
-  err: any
+  type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE;
+  err: any;
 }
 
 // Get CHAMPIONS LEAGUE Teams
 export interface GetChampionsLeagueTeamsRequest {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_TEAMS_REQUEST
+  type: typeof C.GET_CHAMPIONS_LEAGUE_TEAMS_REQUEST;
 }
 
 export interface GetChampionsLeagueTeamsSuccess {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_TEAMS_SUCCESS
-  payload: FootballTeam
+  type: typeof C.GET_CHAMPIONS_LEAGUE_TEAMS_SUCCESS;
+  payload: FootballTeam;
 }
 
 export interface GetChampionsLeagueTeamsFailure {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_TEAMS_FAILURE,
-  err: any
+  type: typeof C.GET_CHAMPIONS_LEAGUE_TEAMS_FAILURE;
+  err: any;
 }
 
 // Get Videos
 export interface GetChampionsLeagueVideosRequest {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST
+  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST;
 }
 
 export interface GetChampionsLeagueVideosSuccess {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS,
-  payload: YoutubePlaylistItem[]
+  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS;
+  payload: YoutubePlaylistItem[];
 }
 
 export interface GetChampionsLeagueVideosFailure {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE,
-  err: any
+  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE;
+  err: any;
 }
 
 export type ChampionsLeagueActionTypes =
