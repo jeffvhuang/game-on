@@ -1,7 +1,9 @@
-import * as C from './nba-constants';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
-const initialState = {
+import * as C from './epl-constants';
+import { EplState, EplActionTypes } from './epl-types';
+import { createYoutubeThumnailObjects } from '../../../../helpers/utils';
+
+const initialState: EplState = {
   isFetching: false,
   schedule: [],
   teams: [],
@@ -13,11 +15,11 @@ const initialState = {
   error: {}
 };
 
-function nbaReducer(state = initialState, action) {
+function eplReducer(state = initialState, action: EplActionTypes): EplState {
   switch(action.type) {
-    case C.GET_NBA_SCHEDULE_REQUEST:
+    case C.GET_EPL_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case C.GET_NBA_SCHEDULE_SUCCESS:
+    case C.GET_EPL_SCHEDULE_SUCCESS:
       return Object.assign({}, state,
         { 
           isFetching: false,
@@ -26,29 +28,26 @@ function nbaReducer(state = initialState, action) {
           upcoming: action.sortedSchedule.upcoming,
           completed: action.sortedSchedule.beforeToday
         });
-    case C.GET_NBA_SCHEDULE_FAILURE:
+    case C.GET_EPL_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
-    case C.GET_NBA_TEAMS_REQUEST:
+    case C.GET_EPL_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
-    case C.GET_NBA_TEAMS_SUCCESS:
+    case C.GET_EPL_TEAMS_SUCCESS:
       return Object.assign({}, state, { isFetching: false, teams: action.payload });
-    case C.GET_NBA_TEAMS_FAILURE:
+    case C.GET_EPL_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    
-    case C.GET_NBA_VIDEOS_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
-    case C.GET_NBA_VIDEOS_SUCCESS:
-      return Object.assign({}, state, { 
-        isFetching: false,
-        videos: action.payload,
-        thumbnails: createYoutubeThumnailObjects(action.payload) });
-    case C.GET_NBA_VIDEOS_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+ 
+    // case A.GET_EPL_VIDEOS_REQUEST:
+    //   return Object.assign({}, state, { isFetching: true });
+    // case A.GET_EPL_VIDEOS_SUCCESS:
+    //   return Object.assign({}, state, { isFetching: false, videos: action.payload });
+    // case A.GET_EPL_VIDEOS_FAILURE:
+    //   return Object.assign({}, state, { isFetching: false, error: action.err });
 
     default:
       return state;
   }
 }
 
-export default nbaReducer;
+export default eplReducer;

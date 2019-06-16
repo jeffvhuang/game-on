@@ -334,12 +334,6 @@ export function getFormattedTime(date) {
   return h + ':' + m;
 }
 
-export function createActionStringObjects(actions) {
-  const actionObj = {};
-  actions.forEach(action => actionObj[action] = action);
-  return actionObj;
-}
-
 // Date = Date object
 export function getDayMonthDate(date) {
   // return if it is not a valid date string or object

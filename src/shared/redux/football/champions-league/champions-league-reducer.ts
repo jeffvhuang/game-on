@@ -1,8 +1,9 @@
 
-import { championsLeagueActions as C } from '../actions/action-types';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
+import * as C from './champions-league-constants';
+import { createYoutubeThumnailObjects } from '../../../../helpers/utils';
+import { ChampionsLeagueState, ChampionsLeagueActionTypes } from './champions-league-types';
 
-const initialState = {
+const initialState: ChampionsLeagueState = {
   isFetching: false,
   schedule: [],
   teams: [],
@@ -10,10 +11,11 @@ const initialState = {
   upcoming: [],
   completed: [],
   videos: [],
-  thumbnails: []
+  thumbnails: [],
+  error: {}
 };
 
-function championsLeagueReducer(state = initialState, action) {
+function championsLeagueReducer(state = initialState, action: ChampionsLeagueActionTypes): ChampionsLeagueState {
   switch(action.type) {
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });
@@ -21,10 +23,10 @@ function championsLeagueReducer(state = initialState, action) {
       return Object.assign({}, state,
         { 
           isFetching: false,
-          schedule: action.schedule,
-          gamesToday: action.payload.gamesToday,
-          upcoming: action.payload.upcoming,
-          completed: action.payload.beforeToday
+          schedule: action.payload,
+          gamesToday: action.sortedSchedule.gamesToday,
+          upcoming: action.sortedSchedule.upcoming,
+          completed: action.sortedSchedule.beforeToday
         });
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
