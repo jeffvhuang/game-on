@@ -14,8 +14,8 @@ export interface TennisState {
   completed: TennisTournament[],
   videos: YoutubePlaylistItem[],
   thumbnails: ThumbnailObject[],
-  tournamentSchedule: [],
-  tournamentInfo: {},
+  tournamentSchedule: TennisTournamentSchedule[],
+  tournamentInfo: TennisTournamentInfo,
   error: any
 }
 
@@ -86,6 +86,26 @@ export interface GetTennisVideosFailure {
   type: typeof C.GET_TENNIS_VIDEOS_FAILURE;
   err: any;
 }
+
+// export type GetTennisTournamentsTypes =
+//   GetTennisTournamentsRequest |
+//   GetTennisTournamentsSuccess |
+//   GetTennisTournamentsFailure;
+
+// export type GetTennisTournamentScheduleTypes =
+//   GetTennisTournamentScheduleRequest |
+//   GetTennisTournamentScheduleSuccess |
+//   GetTennisTournamentScheduleFailure;
+
+// export type GetTennisTournamentInfoTypes =
+//   GetTennisTournamentInfoRequest |
+//   GetTennisTournamentInfoSuccess |
+//   GetTennisTournamentInfoFailure;
+
+// export type GetTennisVideosTypes =
+//   GetTennisVideosRequest |
+//   GetTennisVideosSuccess |
+//   GetTennisVideosFailure;
 
 export type TennisActionTypes =
   GetTennisTournamentsRequest |

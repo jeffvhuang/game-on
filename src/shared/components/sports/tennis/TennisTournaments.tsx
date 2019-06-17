@@ -1,24 +1,24 @@
-import React from 'react';
-import { string, array } from 'prop-types';
+import * as React from 'react';
 
 import TennisTournamentDate from './TennisTournamentDate';
+import { TennisTournament } from '../../../../types/tennis-api/tennis-tournament.model';
 
-TennisTournaments.propTypes = {
-  header: string,
-  games: array.isRequired,
-  values: array.isRequired
+interface Props {
+  header: string;
+  tournaments: TennisTournament[];
+  values: string[];
 };
 
-function TennisTournaments({ header, games, values }) {
+function TennisTournaments({ header, tournaments, values }: Props) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
       {values.length < 1 ? (
-        games.map((g, i) => <TennisTournamentDate key={i} tournament={g} />)
+        tournaments.map((t, i) => <TennisTournamentDate key={i} tournament={t} />)
       ) : (
-        games.map((g, i) => {
-          if (values.some(v => v == g.category.level || v == g.type)) {
-            return <TennisTournamentDate key={i} tournament={g} />;
+        tournaments.map((t, i) => {
+          if (values.some(v => v == t.category.level || v == t.type)) {
+            return <TennisTournamentDate key={i} tournament={t} />;
           }
         })
       )}

@@ -1,7 +1,6 @@
-import React from 'react';
-import { object } from 'prop-types';
+import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, Dispatch } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -10,19 +9,29 @@ import {
   getTennisTournamentInfo,
   clearTennisTournamentSchedule,
   clearTennisTournamentInfo
-} from '../../../redux/actions/tennis-actions';
+} from '../../../redux/tennis/tennis-actions';
 
 import VideoThumbnails from '../../common/VideoThumbnails';
 import SelectDropdown from '../../common/SelectDropdown';
 import TennisMatches from './TennisMatches';
+import { RouteComponentProps } from 'react-router';
+import { TennisState, TennisActionTypes } from '../../../redux/tennis/tennis-types';
+import { AppState } from '../../../redux/root-reducer';
 
-const propTypes = {
-  tennis: object.isRequired,
-  actions: object.isRequired,
-  match: object.isRequired
-};
+interface MatchParams { tournamentNumber: string; }
 
-class TennisTournamentPageContainer extends React.Component {
+interface Props extends RouteComponentProps<MatchParams> {
+  tennis: TennisState;
+  actions: TennisActionTypes;
+}
+
+interface State {
+  tournamentId: string;
+  values: string[];
+  tournamentName: string;
+}
+
+class TennisTournamentPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -88,19 +97,18 @@ class TennisTournamentPageContainer extends React.Component {
   }
 }
 
-TennisTournamentPageContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppState) => ({
   tennis: state.tennis
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch<TennisActionTypes>) => ({
   actions: bindActionCreators({
     getTennisTournamentSchedule,
     getTennisTournamentInfo,
     clearTennisTournamentSchedule,
     clearTennisTournamentInfo
   }, dispatch)
-});
+})
+  
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);
