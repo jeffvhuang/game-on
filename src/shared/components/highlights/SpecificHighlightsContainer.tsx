@@ -5,9 +5,9 @@ import { bindActionCreators } from 'redux';
 
 import { allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';
-import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/football-actions';
+import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/europa-league/europa-league-actions';
 // import { getTennisVideos } from '../../redux/actions/tennis-actions';
-import { getDotaVideos } from '../../redux/actions/dota-actions';
+import { getDotaVideos } from '../../redux/dota/dota-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import WrongUrl from '../errors/WrongUrl';

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
 import * as T from './tennis-types';
 import * as C from './tennis-constants';
@@ -96,14 +97,30 @@ export function clearTennisTournamentScheduleSuccess(): T.ClearTennisTournamentS
 //   };
 // };
 
-export function getTennisTournamentSchedule(tournamentId) {
-  return async function (dispatch) {
-    dispatch(getTennisTournamentScheduleRequest());
-    await sleep(1000);
-    dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
-    return TOURNAMENT_SCHEDULE;
-  };
+export function getTennisTournamentSchedule(tournamentId): T.GetTennisScheduleAction {
+  return {
+    async function (dispatch) {
+      dispatch(getTennisTournamentScheduleRequest());
+      await sleep(1000);
+      dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
+      return TOURNAMENT_SCHEDULE;
+    }
+  }
 };
+
+// export function getTennisTournamentSchedule(tournamentId: string): 
+// ThunkAction<Promise<TennisTournamentSchedule>, {}, {}, AnyAction> {
+//   return async function (dispatch: ThunkDispatch<{}, {}, AnyAction>):
+//   Promise<TennisTournamentSchedule> {
+//     return new Promise<TennisTournamentSchedule>(async (resolve) => {
+//       dispatch(getTennisTournamentScheduleRequest());
+//       await sleep(1000);
+//       dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
+//       return TOURNAMENT_SCHEDULE;
+//     })
+    
+//   };
+// };
 
 export function clearTennisTournamentSchedule() {
   return function (dispatch) {

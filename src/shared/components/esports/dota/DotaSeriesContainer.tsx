@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getDotaSeries, getDotaTournamentMatches, getDotaTournaments } from '../../../redux/actions/dota-actions';
+import { getDotaSeries, getDotaTournamentMatches, getDotaTournaments } from '../../../redux/dota/dota-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaSeries from './DotaSeries';

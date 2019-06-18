@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
 import { getFormattedTime, getTournamentNameFromMatch } from '../../../../helpers/utils';
-import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actions/lol-actions';
+import { getLolTournaments, getLolTournamentMatches } from '../../../redux/lol/lol-actions';
 
 import ManualSelectDropdown from '../../common/ManualSelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';

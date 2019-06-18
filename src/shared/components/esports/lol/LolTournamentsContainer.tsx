@@ -6,7 +6,7 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 import { getTournamentName } from '../../../../helpers/utils';
-import { getLolTournaments } from '../../../redux/actions/lol-actions';
+import { getLolTournaments } from '../../../redux/lol/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 

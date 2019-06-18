@@ -12,7 +12,7 @@ const initialState: TennisState = {
   thumbnails: [],
   // Following 2 always replaced with the recently selected tournament
   tournamentSchedule: [],
-  tournamentInfo: {},
+  tournamentInfo: null,
   error: {}
 };
 

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Tabs } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
-import { getLolTournaments, getLolTournamentMatches } from '../../../redux/actions/lol-actions';
+import { getLolTournaments, getLolTournamentMatches } from '../../../redux/lol/lol-actions';
 import LolTournamentsContainer from './LolTournamentsContainer';
 import LolTournamentContainer from './LolTournamentContainer';
 import LolMatchesContainer from './LolMatchesContainer';

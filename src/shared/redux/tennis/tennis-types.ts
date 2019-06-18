@@ -86,6 +86,10 @@ export interface GetTennisVideosFailure {
   type: typeof C.GET_TENNIS_VIDEOS_FAILURE;
   err: any;
 }
+type ThunkFunction = (tournamentId: string) => TennisTournamentSchedule;
+export interface GetTennisScheduleAction {
+  thunk: ThunkFunction;
+}
 
 // export type GetTennisTournamentsTypes =
 //   GetTennisTournamentsRequest |

@@ -13,14 +13,14 @@ import {
   getEuropaLeagueSchedule,
   getChampionsLeagueVideos,
   getEuropaLeagueVideos
-} from '../../../redux/actions/football-actions';
+} from '../../../redux/football/europa-league/europa-league-actions';
 
 import VideoThumbnails from '../../common/VideoThumbnails';
 import FootballSelectDropdown from './FootballSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
 import VideoHeader from '../../common/VideoHeader';
-import { FootballTeam } from '../../../../types/football-team.model';
-import { EplStoreState } from '../../../../types/redux-models/epl-store-state.model';
+import { FootballTeam } from '../../../../types/football-api/football-team.model';
+import { EplStoreState } from '../../../../types/redux/epl-store-state.model';
 
 interface Props {
   epl: EplStoreState;
@@ -122,8 +122,6 @@ class FootballPageContainer extends React.Component<Props, State> {
     );
   }
 }
-
-FootballPageContainer.propTypes = propTypes;
 
 const mapStateToProps = (state) => ({
   epl: state.epl,

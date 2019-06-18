@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getTennisTournaments } from '../../../redux/actions/tennis-actions';
+import { getTennisTournaments } from '../../../redux/tennis/tennis-actions';
 
 import VideoThumbnails from '../../common/VideoThumbnails';
 import SelectDropdown from '../../common/SelectDropdown';
@@ -57,13 +57,13 @@ class TennisPageContainer extends React.Component {
           showMore
           showMoreLink={paths.HIGHLIGHTS + '/Tennis/tennis'} /> */}
         <div className="section">
-          <TennisTournaments games={this.props.tennis.ongoing}
+          <TennisTournaments tournaments={this.props.tennis.ongoing}
             header="Ongoing"
             values={this.state.values} />
-          <TennisTournaments games={this.props.tennis.upcoming}
+          <TennisTournaments tournaments={this.props.tennis.upcoming}
             header="Upcoming"
             values={this.state.values} />
-          <TennisTournaments games={this.props.tennis.completed}
+          <TennisTournaments tournaments={this.props.tennis.completed}
             header="Completed"
             values={this.state.values} />
           <Link to={paths.EVENTS} className="right">More ></Link>

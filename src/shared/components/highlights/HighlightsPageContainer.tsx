@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { paths, allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';
-import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/football-actions';
+import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/europa-league/europa-league-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SportSelectDropdown from '../common/SportSelectDropdown';

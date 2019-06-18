@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
-import { getDotaTournaments, getDotaTournamentMatches } from '../../../redux/actions/dota-actions';
+import { getDotaTournaments, getDotaTournamentMatches } from '../../../redux/dota/dota-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaTournaments from './DotaTournaments';
