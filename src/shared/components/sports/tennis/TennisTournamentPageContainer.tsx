@@ -33,9 +33,10 @@ interface StateProps {
 
 interface DispatchProps {
   getTennisTournamentSchedule: (tournamentId: string) => Promise<TennisTournamentSchedule[]>;
+  // getTennisTournamentSchedule: (tournamentId: string) => void;
   getTennisTournamentInfo: (tournamentId: string) => Promise<TennisTournamentInfo>;
-  clearTennisTournamentSchedule: () => void;
-  clearTennisTournamentInfo: () => void;
+  clearTennisTournamentSchedule: () => Promise<void>;
+  clearTennisTournamentInfo: () => Promise<void>;
 }
 
 interface State {

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
+import { ActionCreator, Dispatch } from 'redux';
 
 import * as T from './tennis-types';
 import * as C from './tennis-constants';
@@ -10,6 +11,9 @@ import { sleep, sortTennisSchedule } from '../../../helpers/utils';
 import TOURNAMENTS from '../../../mockApiData/tennisTournaments.json';
 import TOURNAMENT_INFO from '../../../mockApiData/tennisTournamentInfo.json';
 import TOURNAMENT_SCHEDULE from '../../../mockApiData/tennisTournamentSchedule.json';
+import { TennisTournamentSchedule } from '../../../types/tennis-api/tennis-tournament-schedule.model';
+import { TennisTournamentInfo } from '../../../types/tennis-api/tennis-tournament-info.model';
+
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
 
 // Get Tournaments
@@ -97,30 +101,32 @@ export function clearTennisTournamentScheduleSuccess(): T.ClearTennisTournamentS
 //   };
 // };
 
-export function getTennisTournamentSchedule(tournamentId): T.GetTennisScheduleAction {
-  return {
-    async function (dispatch) {
-      dispatch(getTennisTournamentScheduleRequest());
-      await sleep(1000);
-      dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
-      return TOURNAMENT_SCHEDULE;
-    }
-  }
-};
-
-// export function getTennisTournamentSchedule(tournamentId: string): 
-// ThunkAction<Promise<TennisTournamentSchedule>, {}, {}, AnyAction> {
-//   return async function (dispatch: ThunkDispatch<{}, {}, AnyAction>):
-//   Promise<TennisTournamentSchedule> {
-//     return new Promise<TennisTournamentSchedule>(async (resolve) => {
+// export function getTennisTournamentSchedule(tournamentId): T.GetTennisScheduleAction {
+//   return {
+//     async function (dispatch) {
 //       dispatch(getTennisTournamentScheduleRequest());
 //       await sleep(1000);
 //       dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
 //       return TOURNAMENT_SCHEDULE;
-//     })
-    
-//   };
+//     }
+//   }
 // };
+
+export const getTennisTournamentSchedule: ActionCreator<
+  ThunkAction<
+    Promise<T.TennisActionTypes>, // The type of the last action to be dispatched - will always be promise<T> for async actions
+    TennisTournamentSchedule[], // The type for the data within the last action
+    string, // The type of the parameter for the nested function 
+    T.TennisActionTypes // The type of the last action to be dispatched
+  >
+> = (tournamentId: string) => {
+  return async function (dispatch: Dispatch) {
+    dispatch(getTennisTournamentScheduleRequest());
+    await sleep(1000);
+    return dispatch(getTennisTournamentScheduleSuccess(TOURNAMENT_SCHEDULE));
+    // return TOURNAMENT_SCHEDULE;
+  }
+};
 
 export function clearTennisTournamentSchedule() {
   return function (dispatch) {
@@ -158,18 +164,26 @@ export function clearTennisTournamentInfoSuccess(): T.ClearTennisTournamentInfoS
 //   };
 // };
 
-export function getTennisTournamentInfo(tournamentId) {
+
+export const getTennisTournamentInfo: ActionCreator<
+  ThunkAction<
+    Promise<T.TennisActionTypes>, // The type of the last action to be dispatched - will always be promise<T> for async actions
+    TennisTournamentInfo, // The type for the data within the last action
+    string, // The type of the parameter for the nested function 
+    T.TennisActionTypes // The type of the last action to be dispatched
+  >
+> = (tournamentId: string) =>  {
   return async function (dispatch) {
     dispatch(getTennisTournamentInfoRequest());
     await sleep(1000);
-    dispatch(getTennisTournamentInfoSuccess(TOURNAMENT_INFO));
-    return TOURNAMENT_INFO;
+    return dispatch(getTennisTournamentInfoSuccess(TOURNAMENT_INFO));
+    // return TOURNAMENT_INFO;
   };
 };
 
-export function clearTennisTournamentInfo() {
+export const clearTennisTournamentInfo = () => {
   return function (dispatch) {
-    dispatch(clearTennisTournamentInfoSuccess());
+    return dispatch(clearTennisTournamentInfoSuccess());
   };
 };
 
