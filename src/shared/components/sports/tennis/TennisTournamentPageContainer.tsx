@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators, Dispatch } from 'redux';
+import { bindActionCreators, Dispatch, AnyAction } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -19,6 +19,7 @@ import { TennisState, TennisActionTypes } from '../../../redux/tennis/tennis-typ
 import { AppState } from '../../../redux/root-reducer';
 import { TennisTournamentSchedule } from '../../../../types/tennis-api/tennis-tournament-schedule.model';
 import { TennisTournamentInfo } from '../../../../types/tennis-api/tennis-tournament-info.model';
+import { ThunkDispatch } from 'redux-thunk';
 
 interface MatchParams { tournamentNumber: string; }
 
@@ -31,12 +32,19 @@ interface StateProps {
   tennis: TennisState;
 }
 
+// interface DispatchProps {
+//   getTennisTournamentSchedule: (tournamentId: string) => Promise<TennisTournamentSchedule[]>;
+//   // getTennisTournamentSchedule: (tournamentId: string) => void;
+//   getTennisTournamentInfo: (tournamentId: string) => Promise<TennisTournamentInfo>;
+//   clearTennisTournamentSchedule: () => Promise<void>;
+//   clearTennisTournamentInfo: () => Promise<void>;
+// }
+
 interface DispatchProps {
-  getTennisTournamentSchedule: (tournamentId: string) => Promise<TennisTournamentSchedule[]>;
-  // getTennisTournamentSchedule: (tournamentId: string) => void;
-  getTennisTournamentInfo: (tournamentId: string) => Promise<TennisTournamentInfo>;
-  clearTennisTournamentSchedule: () => Promise<void>;
-  clearTennisTournamentInfo: () => Promise<void>;
+  getTennisTournamentSchedule,
+  getTennisTournamentInfo,
+  clearTennisTournamentSchedule,
+  clearTennisTournamentInfo,
 }
 
 interface State {
@@ -117,12 +125,30 @@ const mapStateToProps = (state: AppState) => ({
   tennis: state.tennis
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<TennisActionTypes>) =>
-  bindActionCreators({
+// const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, AnyAction>) => {
+//   return {
+//     getTennisTournamentSchedule: dispatch((tournamentId: string) => Promise<TennisTournamentSchedule[]>);
+//     // getTennisTournamentSchedule: (tournamentId: string) => void;
+//     getTennisTournamentInfo: (tournamentId: string) => Promise<TennisTournamentInfo>;
+//     clearTennisTournamentSchedule: () => Promise<void>;
+//     clearTennisTournamentInfo: () => Promise<void>;
+//   }
+// }
+
+const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, AnyAction>) => {
+  return {
     getTennisTournamentSchedule,
     getTennisTournamentInfo,
     clearTennisTournamentSchedule,
     clearTennisTournamentInfo
-  }, dispatch);
+  }
+}
+  
+  // bindActionCreators({
+  //   getTennisTournamentSchedule,
+  //   getTennisTournamentInfo,
+  //   clearTennisTournamentSchedule,
+  //   clearTennisTournamentInfo
+  // }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);
