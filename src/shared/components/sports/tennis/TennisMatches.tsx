@@ -1,15 +1,16 @@
-import React from 'react';
-import { string, array } from 'prop-types';
+import * as React from 'react';
 
 import TennisMatchup from './TennisMatchup';
+import { TennisTournamentSchedule } from '../../../../types/tennis-api/tennis-tournament-schedule.model';
 
-TennisMatches.propTypes = {
+interface Props {
   header: string,
-  games: array.isRequired,
-  values: array.isRequired
+  // games: TennisTournamentSchedule[],
+  games: any[],
+  values: string[]
 };
 
-function TennisMatches({ header, games, values }) {
+function TennisMatches({ header, games, values }: Props) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>

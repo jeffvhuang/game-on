@@ -115,7 +115,7 @@ const mapDispatchToProps = {
   clearTennisTournamentInfo
 }
 
-// londhand form
+// longhand form
 // const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, AnyAction>) => {
 //   return {
 //     getTennisTournamentSchedule,

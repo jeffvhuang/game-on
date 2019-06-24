@@ -1,14 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { object } from 'prop-types';
 
 import { getDayMonthDate } from '../../../../helpers/utils';
 
-TennisMatchup.propTypes = {
-  match: object.isRequired
-};
+interface Props {
+  match: any;
+}
 
-function TennisMatchup({ match }) {
+function TennisMatchup({ match }: Props) {
   const player1 = match.competitors[0];
   const player2 = match.competitors[1];
 
