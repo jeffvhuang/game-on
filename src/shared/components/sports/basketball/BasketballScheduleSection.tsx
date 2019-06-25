@@ -1,16 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { string, array } from 'prop-types';
 
 import NbaMatchSchedule from './NbaMatchSchedule';
 
-BasketballScheduleSection.propTypes = {
+interface Props {
   header: string,
-  games: array.isRequired,
-  values: array.isRequired
+  games:any[],
+  values: string[]
 };
 
-function BasketballScheduleSection({ header, games, values }) {
+function BasketballScheduleSection({ header, games, values }: Props) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>

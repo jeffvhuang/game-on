@@ -9,6 +9,8 @@ import { sleep, sortNBASchedule } from '../../../helpers/utils';
 import TEAMS from '../../../mockApiData/nbaTeams.json';
 import SCHEDULE from '../../../mockApiData/nbaSchedule.json';
 import { PLAYLIST } from '../../../mockApiData/nbaYoutube';
+import { ReduxState } from '../root-reducer';
+import { ThunkAction } from 'redux-thunk';
 
 // Get video from youtube playlist of nba highlights
 export function getNbaVideosRequest(): T.GetNbaVideosRequest {
@@ -41,7 +43,9 @@ export function getNbaVideosFailure(err): T.GetNbaVideosFailure {
 // };
 
 // mock data
-export function getNbaVideos() {
+export function getNbaVideos(): ThunkAction<
+  Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
+> {
   return async function (dispatch) {
     dispatch(getNbaVideosRequest());
     await sleep(1500);
@@ -77,7 +81,9 @@ export function getNbaScheduleFailure(err): T.GetNbaScheduleFailure {
 // };
 
 // return mock data
-export function getNbaSchedule() {
+export function getNbaSchedule(): ThunkAction<
+  Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
+> {
   return async function (dispatch) {
     dispatch(getNbaScheduleRequest());
     await sleep(1500);
@@ -114,7 +120,9 @@ export function getNbaTeamsFailure(err): T.GetNbaTeamsFailure {
 // };
 
 // return mock data
-export function getNbaTeams() {
+export function getNbaTeams(): ThunkAction<
+  Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
+> {
   return async function (dispatch) {
     dispatch(getNbaTeamsRequest());
     await sleep(1500);

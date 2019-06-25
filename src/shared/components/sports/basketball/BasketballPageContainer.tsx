@@ -11,13 +11,24 @@ import VideoThumbnails from '../../common/VideoThumbnails';
 import NbaSelectDropdown from './NbaSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
 import VideoHeader from '../../common/VideoHeader';
+import { NbaState } from '../../../redux/nba/nba-types';
+import { ReduxState } from '../../../redux/root-reducer';
 
-const propTypes = {
-  nba: object.isRequired,
-  actions: object.isRequired
-};
+interface StateProps {
+  nba: NbaState;
+}
 
-class BasketballPageContainer extends React.Component {
+interface DispatchProps {
+  getNbaSchedule; getNbaTeams; getNbaVideos;
+}
+
+interface State {
+  values: string[];
+}
+
+type Props = StateProps & DispatchProps;
+
+class BasketballPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -29,8 +40,8 @@ class BasketballPageContainer extends React.Component {
   componentDidMount() {
     const props = this.props;
     // if (props.nba.videos.length < 1) props.actions.getNbaVideos();
-    if (props.nba.teams.length < 1) props.actions.getNbaTeams();
-    if (props.nba.schedule.length < 1) props.actions.getNbaSchedule();
+    if (props.nba.teams.length < 1) props.getNbaTeams();
+    if (props.nba.schedule.length < 1) props.getNbaSchedule();
   }
 
   handleChange = values => this.setState({ values });
@@ -61,14 +72,12 @@ class BasketballPageContainer extends React.Component {
   }
 }
 
-BasketballPageContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   nba: state.nba
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getNbaSchedule, getNbaTeams, getNbaVideos }, dispatch)
-});
+const mapDispatchToProps = {
+  getNbaSchedule, getNbaTeams, getNbaVideos
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketballPageContainer);

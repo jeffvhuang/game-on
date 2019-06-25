@@ -1,15 +1,14 @@
-import React from 'react';
-import { func, array } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
 
-const propTypes = {
-  handleChange: func.isRequired,
-  teams: array.isRequired
+interface Props {
+  handleChange: (values: string[]) => void,
+  teams: any[]
 };
 
 const { Option } = Select;
 
-function NbaSelectDropdown({ handleChange, teams }) {
+function NbaSelectDropdown({ handleChange, teams }: Props) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -25,7 +24,5 @@ function NbaSelectDropdown({ handleChange, teams }) {
     </div>
   );
 }
-
-NbaSelectDropdown.propTypes = propTypes;
 
 export default NbaSelectDropdown;
