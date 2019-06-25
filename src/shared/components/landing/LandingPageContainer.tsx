@@ -1,11 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import Posters from './Posters';
 import HighlightsContainer from './HighlightsContainer';
 import EventsContainer from './EventsContainer';
 
-export default class LandingPageContainer extends React.Component {
-  constructor() {
-    super();
+interface State {
+  videos: any[];
+}
+
+class LandingPageContainer extends React.Component<{}, State> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       videos: [
@@ -27,3 +31,5 @@ export default class LandingPageContainer extends React.Component {
     );
   }
 }
+
+export default  LandingPageContainer;

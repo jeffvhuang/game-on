@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -7,15 +7,30 @@ import HighlightsContainer from '../landing/HighlightsContainer';
 import EventSelectDropdown from '../common/EventSelectDropdown';
 import { getDOTASchedule } from '../../../helpers/utils';
 import EventDatesSection from '../common/EventDatesSection';
+import { RouteComponentProps } from 'react-router';
+import { DotaState } from '../../redux/dota/dota-types';
+import { ReduxState } from '../../redux/root-reducer';
 // import { getDotaLeagues } from '../../redux/actions/dota-actions';
 
-const propTypes = {
-  match: object,
-  dota: object.isRequired,
-  actions: object.isRequired
+interface MatchParams { esport: string; }
+interface StateProps extends RouteComponentProps<MatchParams> {
+  dota: DotaState;
 };
+interface DispatchProps {
 
-class ESportsPageContainer extends React.Component {
+}
+type Props = StateProps & DispatchProps;
+
+interface State {
+  videos: string[];
+  schedule: any;
+  selected: any[];
+  ongoing: any[];
+  upcoming: any[];
+  completed: any[];
+}
+
+class ESportsPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -150,15 +165,13 @@ class ESportsPageContainer extends React.Component {
   }
 }
 
-ESportsPageContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   dota: state.dota
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({  }, dispatch)
-});
+const mapDispatchToProps = {
+  
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ESportsPageContainer);
 

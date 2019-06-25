@@ -1,27 +1,43 @@
 import * as React from 'react';
-import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';
-import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/europa-league/europa-league-actions';
+import { getChampionsLeagueVideos } from '../../redux/football/champions-league/champions-league-actions';
 // import { getTennisVideos } from '../../redux/actions/tennis-actions';
 import { getDotaVideos } from '../../redux/dota/dota-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import WrongUrl from '../errors/WrongUrl';
+import { NbaState } from '../../redux/nba/nba-types';
+import { EplState } from '../../redux/football/epl/epl-types';
+import { TennisState } from '../../redux/tennis/tennis-types';
+import { DotaState } from '../../redux/dota/dota-types';
+import { RouteComponentProps } from 'react-router';
+import { ReduxState } from '../../redux/root-reducer';
 
-const propTypes = {
-  match: object.isRequired,
-  actions: object.isRequired,
-  nba: object,
-  epl: object,
-  tennis: object,
-  dota: object
+interface MatchParams { sport: string; }
+interface StateProps extends RouteComponentProps<MatchParams> {
+  nba: NbaState;
+  epl: EplState;
+  tennis: TennisState;
+  dota: DotaState;
 };
 
-class SpecificHighlightsContainer extends React.Component {
+interface DispatchProps {
+  getNbaVideos;
+  getChampionsLeagueVideos;
+  getDotaVideos;
+}
+
+type Props = StateProps & DispatchProps;
+
+interface State {
+  sport: string;
+}
+
+class SpecificHighlightsContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -41,20 +57,19 @@ class SpecificHighlightsContainer extends React.Component {
   }
 
   getVideosForSport = (sport) => {
-    const { actions } = this.props;
     switch (sport.toLowerCase()) {
       case 'basketball':
-        actions.getNbaVideos();
+        getNbaVideos();
         break;
       case 'football':
-        actions.getChampionsLeagueVideos();
-        actions.getEuropaLeagueVideos();
+        getChampionsLeagueVideos();
+        // getEuropaLeagueVideos();
         break;
       case 'tennis':
-        actions.getTennisVideos();
+        // getTennisVideos();
         break;
       case 'dota':
-        actions.getDotaVideos();
+        getDotaVideos();
         break;
       default:
         break;
@@ -77,7 +92,7 @@ class SpecificHighlightsContainer extends React.Component {
   }
 
   render() {
-    if (!allSportsList.some(s => s.toLowerCase() == this.state.sport.toLowerCase())) 
+    if (!allSportsList.some(s => s.toLowerCase() == this.state.sport.toLowerCase()))
       return <WrongUrl />;
 
     const obj = this.getReduxObjectForSport(this.state.sport);
@@ -92,21 +107,17 @@ class SpecificHighlightsContainer extends React.Component {
   }
 }
 
-SpecificHighlightsContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   nba: state.nba,
   epl: state.epl,
   tennis: state.tennis,
   dota: state.dota
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getNbaVideos,
-    getChampionsLeagueVideos,
-    getEuropaLeagueVideos,
-    getDotaVideos }, dispatch)
-});
+const mapDispatchToProps = {
+  getNbaVideos,
+  getChampionsLeagueVideos,
+  getDotaVideos
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpecificHighlightsContainer);

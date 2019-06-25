@@ -19,7 +19,7 @@ import { ReduxState } from '../../../redux/root-reducer';
 
 interface MatchParams { tournamentNumber: string; }
 
-interface StateProps extends RouteComponentProps<MatchParams>  {
+interface StateProps extends RouteComponentProps<MatchParams> {
   tennis: TennisState;
 }
 

@@ -5,18 +5,32 @@ import { bindActionCreators } from 'redux';
 
 import { paths, allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';
-import { getChampionsLeagueVideos, getEuropaLeagueVideos } from '../../redux/football/europa-league/europa-league-actions';
+import { getChampionsLeagueVideos } from '../../redux/football/champions-league/champions-league-actions';
 
 import VideoThumbnails from '../common/VideoThumbnails';
 import SportSelectDropdown from '../common/SportSelectDropdown';
+import { EplState } from '../../redux/football/epl/epl-types';
+import { NbaState } from '../../redux/nba/nba-types';
+import { isPropsEqual } from '@fullcalendar/core';
+import { ReduxState } from '../../redux/root-reducer';
 
-const propTypes = {
-  actions: object.isRequired,
-  nba: object.isRequired,
-  epl: object.isRequired
+interface StateProps {
+  nba: NbaState;
+  epl: EplState;
 };
 
-class HighlightsPageContainer extends React.Component {
+interface DispatchProps {
+  getNbaVideos;
+  getChampionsLeagueVideos;
+}
+
+type Props = StateProps & DispatchProps;
+
+interface State {
+  show: string[];
+}
+
+class HighlightsPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -28,14 +42,14 @@ class HighlightsPageContainer extends React.Component {
   componentDidMount() {
     const props = this.props;
     if (props.nba.videos.length < 1) {
-      props.actions.getNbaVideos();
-    } 
+      props.getNbaVideos();
+    }
     if (props.epl.videos.length < 1) {
-      props.actions.getChampionsLeagueVideos();
-      props.actions.getEuropaLeagueVideos();
-    } 
+      props.getChampionsLeagueVideos();
+      // props.getEuropaLeagueVideos();
+    }
   }
-  
+
   getCompleteList = () => {
     return ['Basketball', 'Football'];
     // return ["Popular", ...allSportsList];
@@ -72,18 +86,14 @@ class HighlightsPageContainer extends React.Component {
   }
 }
 
-HighlightsPageContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   nba: state.nba,
   epl: state.epl
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getNbaVideos,
-    getChampionsLeagueVideos,
-    getEuropaLeagueVideos }, dispatch)
-});
+const mapDispatchToProps = {
+  getNbaVideos,
+  getChampionsLeagueVideos
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(HighlightsPageContainer);

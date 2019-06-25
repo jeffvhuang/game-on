@@ -1,17 +1,16 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { array } from 'prop-types';
 
 import { paths } from '../../../helpers/constants';
 import EventDatesSubSection from './EventDatesSubSection';
 
-const propTypes = {
-  ongoing: array,
-  upcoming: array,
-  completed: array
+interface Props {
+  ongoing: any[],
+  upcoming: any[],
+  completed: any[]
 };
 
-class EventDatesSection extends React.PureComponent {
+class EventDatesSection extends React.PureComponent<Props> {
   render() {
     return (
       <div className="section">
@@ -23,7 +22,5 @@ class EventDatesSection extends React.PureComponent {
     );
   }
 }
-
-EventDatesSection.propTypes = propTypes;
 
 export default EventDatesSection;

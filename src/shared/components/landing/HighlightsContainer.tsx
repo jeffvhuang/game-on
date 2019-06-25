@@ -1,15 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
-import { array } from 'prop-types';
 
 import { paths } from '../../../helpers/constants';
 
-const propTypes = {
-  videos: array.isRequired
+interface Props {
+  videos: any[];
 };
 
-export default class HighlightsContainer extends React.Component {
+class HighlightsContainer extends React.Component<Props> {
   constructor(props) {
     super(props);
   }
@@ -33,4 +32,4 @@ export default class HighlightsContainer extends React.Component {
   }
 }
 
-HighlightsContainer.propTypes = propTypes;
+export default HighlightsContainer;

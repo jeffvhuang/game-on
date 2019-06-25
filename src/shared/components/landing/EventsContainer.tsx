@@ -1,12 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 
 import { paths, sports, esportsTitles } from '../../../helpers/constants';
 
-export default class EventsContainer extends React.Component {
-  constructor() {
-    super();
+interface State {
+  upcoming: any[];
+  completed: any[];
+}
+
+class EventsContainer extends React.Component<{}, State> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       upcoming: [
@@ -53,3 +58,5 @@ export default class EventsContainer extends React.Component {
     );
   }
 }
+
+export default EventsContainer;

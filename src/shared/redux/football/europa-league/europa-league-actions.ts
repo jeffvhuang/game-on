@@ -10,7 +10,7 @@ import EUROPA_LEAGUE_TEAMS from '../../../mockApiData/eplTeams.json';
 import EUROPA_LEAGUE_SCHEDULE from '../../../mockApiData/eplSchedule.json';
 import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../../root-reducer';
-// import { PLAYLIST } from '../../../mockApiData/EuropaLeagueYoutube';
+// import { PLAYLIST } from '../../../mockApiData/europaLeagueYoutube.js';
 
 // Get Schedule
 export function getEuropaLeagueScheduleRequest(): T.GetEuropaLeagueScheduleRequest {
@@ -85,15 +85,15 @@ export const getEuropaLeagueTeams = (): ThunkAction<
 };
 
 // Get video from youtube playlist of EuropaLeague highlights
-// export function getEuropaLeagueVideosRequest(): T.GetEuropaLeagueVideosRequest {
-//   return { type: C.GET_EUROPA_LEAGUE_VIDEOS_REQUEST }
-// }
-// export function getEuropaLeagueVideosSuccess(payload): T.GetEuropaLeagueVideosSuccess {
-//   return { type: C.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS, payload }
-// }
-// export function getEuropaLeagueVideosFailure(err): T.GetEuropaLeagueVideosFailure {
-//   return { type: C.GET_EUROPA_LEAGUE_VIDEOS_FAILURE, err }
-// }
+export function getEuropaLeagueVideosRequest(): T.GetEuropaLeagueVideosRequest {
+  return { type: C.GET_EUROPA_LEAGUE_VIDEOS_REQUEST }
+}
+export function getEuropaLeagueVideosSuccess(payload): T.GetEuropaLeagueVideosSuccess {
+  return { type: C.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS, payload }
+}
+export function getEuropaLeagueVideosFailure(err): T.GetEuropaLeagueVideosFailure {
+  return { type: C.GET_EUROPA_LEAGUE_VIDEOS_FAILURE, err }
+}
 
 // export function getEuropaLeagueVideos() {
 //   return async function (dispatch) {
