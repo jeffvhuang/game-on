@@ -8,13 +8,15 @@ import { sleep, sortFootballSchedule } from '../../../../helpers/utils';
 import CL_TEAMS from '../../../mockApiData/championsLeagueTeams.json';
 import CL_SCHEDULE from '../../../mockApiData/championsLeagueSchedule.json';
 import { CL_PLAYLIST } from '../../../../mockApiData/champsLeagueYoutube';
+import { ThunkAction } from 'redux-thunk';
+import { ReduxState } from '../../root-reducer';
 
 // Get Schedule
-export function getChampionsLeagueScheduleRequest(): T.GetChampionsLeagueScheduleRequest{
+export function getChampionsLeagueScheduleRequest(): T.GetChampionsLeagueScheduleRequest {
   return { type: C.GET_CHAMPIONS_LEAGUE_SCHEDULE_REQUEST }
 }
 export function getChampionsLeagueScheduleSuccess(payload, sortedSchedule): T.GetChampionsLeagueScheduleSuccess {
-  return { 
+  return {
     type: C.GET_CHAMPIONS_LEAGUE_SCHEDULE_SUCCESS,
     payload,
     sortedSchedule
@@ -41,13 +43,13 @@ export function getChampionsLeagueScheduleFailure(err): T.GetChampionsLeagueSche
 // };
 
 // return mock data
-export function getChampionsLeagueSchedule() {
-  return async function (dispatch) {
-    dispatch(getChampionsLeagueScheduleRequest());
-    await sleep(1000);
-    const sortedSchedule = sortFootballSchedule(CL_SCHEDULE);
-    return dispatch(getChampionsLeagueScheduleSuccess(CL_SCHEDULE, sortedSchedule));
-  };
+export const getChampionsLeagueSchedule = (): ThunkAction<
+  Promise<T.ChampionsLeagueActionTypes>, ReduxState, null, T.ChampionsLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getChampionsLeagueScheduleRequest());
+  await sleep(1000);
+  const sortedSchedule = sortFootballSchedule(CL_SCHEDULE);
+  return dispatch(getChampionsLeagueScheduleSuccess(CL_SCHEDULE, sortedSchedule));
 };
 
 // Get Teams
@@ -77,12 +79,12 @@ export function getChampionsLeagueTeamsFailure(err): T.GetChampionsLeagueTeamsFa
 // };
 
 // return mock data
-export function getChampionsLeagueTeams() {
-  return async function (dispatch) {
-    dispatch(getChampionsLeagueTeamsRequest());
-    await sleep(1000);
-    return dispatch(getChampionsLeagueTeamsSuccess(CL_TEAMS));
-  };
+export const getChampionsLeagueTeams = (): ThunkAction<
+  Promise<T.ChampionsLeagueActionTypes>, ReduxState, null, T.ChampionsLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getChampionsLeagueTeamsRequest());
+  await sleep(1000);
+  return dispatch(getChampionsLeagueTeamsSuccess(CL_TEAMS));
 };
 
 // Get Videos
@@ -116,10 +118,10 @@ export function getChampionsLeagueVideosFailure(err): T.GetChampionsLeagueVideos
 // };
 
 // mock data
-export function getChampionsLeagueVideos() {
-  return async function (dispatch) {
-    dispatch(getChampionsLeagueVideosRequest());
-    await sleep(1500);
-    return dispatch(getChampionsLeagueVideosSuccess(CL_PLAYLIST.items));
-  };
+export const getChampionsLeagueVideos = (): ThunkAction<
+  Promise<T.ChampionsLeagueActionTypes>, ReduxState, null, T.ChampionsLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getChampionsLeagueVideosRequest());
+  await sleep(1500);
+  return dispatch(getChampionsLeagueVideosSuccess(CL_PLAYLIST.items));
 };

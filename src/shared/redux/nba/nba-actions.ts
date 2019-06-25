@@ -43,14 +43,12 @@ export function getNbaVideosFailure(err): T.GetNbaVideosFailure {
 // };
 
 // mock data
-export function getNbaVideos(): ThunkAction<
+export const getNbaVideos = (): ThunkAction<
   Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
-> {
-  return async function (dispatch) {
-    dispatch(getNbaVideosRequest());
-    await sleep(1500);
-    return dispatch(getNbaVideosSuccess(PLAYLIST.items));
-  };
+> => async (dispatch) => {
+  dispatch(getNbaVideosRequest());
+  await sleep(1500);
+  return dispatch(getNbaVideosSuccess(PLAYLIST.items));
 };
 
 // Get Schedule
@@ -81,15 +79,13 @@ export function getNbaScheduleFailure(err): T.GetNbaScheduleFailure {
 // };
 
 // return mock data
-export function getNbaSchedule(): ThunkAction<
+export const getNbaSchedule = (): ThunkAction<
   Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
-> {
-  return async function (dispatch) {
-    dispatch(getNbaScheduleRequest());
-    await sleep(1500);
-    const sortedSchedule = sortNBASchedule(SCHEDULE);
-    return dispatch(getNbaScheduleSuccess(SCHEDULE, sortedSchedule));
-  };
+> => async (dispatch) => {
+  dispatch(getNbaScheduleRequest());
+  await sleep(1500);
+  const sortedSchedule = sortNBASchedule(SCHEDULE);
+  return dispatch(getNbaScheduleSuccess(SCHEDULE, sortedSchedule));
 };
 
 // Get Teams
@@ -120,13 +116,11 @@ export function getNbaTeamsFailure(err): T.GetNbaTeamsFailure {
 // };
 
 // return mock data
-export function getNbaTeams(): ThunkAction<
+export const getNbaTeams = (): ThunkAction<
   Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
-> {
-  return async function (dispatch) {
-    dispatch(getNbaTeamsRequest());
-    await sleep(1500);
-    const nbaTeams = TEAMS.filter(team => team.nbaFranchise == '1');
-    return dispatch(getNbaTeamsSuccess(nbaTeams));
-  };
+> => async (dispatch) => {
+  dispatch(getNbaTeamsRequest());
+  await sleep(1500);
+  const nbaTeams = TEAMS.filter(team => team.nbaFranchise == '1');
+  return dispatch(getNbaTeamsSuccess(nbaTeams));
 };

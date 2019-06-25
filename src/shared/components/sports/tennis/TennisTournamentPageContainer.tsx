@@ -24,10 +24,10 @@ interface StateProps extends RouteComponentProps<MatchParams>  {
 }
 
 interface DispatchProps {
-  getTennisTournamentSchedule,
-  getTennisTournamentInfo,
-  clearTennisTournamentSchedule,
-  clearTennisTournamentInfo,
+  getTennisTournamentSchedule;
+  getTennisTournamentInfo;
+  clearTennisTournamentSchedule;
+  clearTennisTournamentInfo;
 }
 
 interface State {

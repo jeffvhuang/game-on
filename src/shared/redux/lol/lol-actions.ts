@@ -3,11 +3,13 @@ import axios from 'axios';
 import * as T from './lol-types';
 import * as C from './lol-constants';
 import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
-import { sleep, 
-  sortESportsTournaments, 
+import {
+  sleep,
+  sortESportsTournaments,
   sortESportByDate,
   getESportsTeamsFromMatches,
-  sortESportsSeries } from '../../../helpers/utils';
+  sortESportsSeries
+} from '../../../helpers/utils';
 
 // Temporary seed data
 import TOURNAMENTS from '../../../mockApiData/dotaTournaments.json';
@@ -16,6 +18,8 @@ import MATCHES from '../../../mockApiData/dotaMatches.json';
 import TOURNAMENT_MATCHES from '../../../mockApiData/dotaTournamentMatches.json';
 // import TEAMS from '../../../mockApiData/dotaTeams.json';
 import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
+import { ReduxState } from '../root-reducer';
+import { ThunkAction } from 'redux-thunk';
 
 
 // Data API
@@ -24,8 +28,9 @@ export function getLolTournamentsRequest(): T.GetLolTournamentsRequest {
   return { type: C.GET_LOL_TOURNAMENTS_REQUEST }
 }
 export function getLolTournamentsSuccess(payload, sortedTournaments): T.GetLolTournamentsSuccess {
-  return { type:
-    C.GET_LOL_TOURNAMENTS_SUCCESS,
+  return {
+    type:
+      C.GET_LOL_TOURNAMENTS_SUCCESS,
     payload,
     sortedTournaments
   }
@@ -51,16 +56,15 @@ export function getLolTournamentsFailure(err): T.GetLolTournamentsFailure {
 // };
 
 // This uses mock data to reduce requests to api
-export function getLolTournaments() {
-  return async function (dispatch) {
-    dispatch(getLolTournamentsRequest());
-    await sleep(1000);
-    const sortedTournaments = sortESportsTournaments(TOURNAMENTS);
-    dispatch(getLolTournamentsSuccess(TOURNAMENTS, sortedTournaments));
-    return TOURNAMENTS;
-  };
+export const getLolTournaments = (): ThunkAction<
+  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolTournamentsRequest());
+  await sleep(1000);
+  const sortedTournaments = sortESportsTournaments(TOURNAMENTS);
+  dispatch(getLolTournamentsSuccess(TOURNAMENTS, sortedTournaments));
+  return TOURNAMENTS;
 };
-
 // Get Series
 // export function getLolSeriesRequest(): T.GetLolSeriesRequest {
 //   return { type: C.GET_LOL_SERIES_REQUEST }
@@ -104,8 +108,9 @@ export function getLolMatchesRequest(): T.GetLolMatchesRequest {
   return { type: C.GET_LOL_MATCHES_REQUEST }
 }
 export function getLolMatchesSuccess(payload, matchesTeams): T.GetLolMatchesSuccess {
-  return { type:
-    C.GET_LOL_MATCHES_SUCCESS,
+  return {
+    type:
+      C.GET_LOL_MATCHES_SUCCESS,
     payload,
     matchesTeams
   }
@@ -128,14 +133,14 @@ export function getLolMatchesFailure(err): T.GetLolMatchesFailure {
 //   };
 // };
 
-export function getLolMatches() {
-  return async function (dispatch) {
-    dispatch(getLolMatchesRequest());
-    await sleep(1000);
-    const matchesTeams = getESportsTeamsFromMatches(MATCHES);
-    dispatch(getLolMatchesSuccess(sortESportByDate(MATCHES), matchesTeams));
-    return MATCHES;
-  };
+export const getLolMatches = (): ThunkAction<
+  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolMatchesRequest());
+  await sleep(1000);
+  const matchesTeams = getESportsTeamsFromMatches(MATCHES);
+  dispatch(getLolMatchesSuccess(sortESportByDate(MATCHES), matchesTeams));
+  return MATCHES;
 };
 
 // Get A Tournament's Matches
@@ -166,19 +171,19 @@ export function clearLolTournamentMatchesSuccess(): T.ClearLolTournamentMatchesS
 //   };
 // };
 
-export function getLolTournamentMatches(tournamentId) {
-  return async function (dispatch) {
-    dispatch(getLolTournamentMatchesRequest());
-    await sleep(1000);
-    dispatch(getLolTournamentMatchesSuccess(TOURNAMENT_MATCHES));
-  };
+export const getLolTournamentMatches = (tournamentId: string): ThunkAction<
+  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolTournamentMatchesRequest());
+  await sleep(1000);
+  return dispatch(getLolTournamentMatchesSuccess(TOURNAMENT_MATCHES));
 };
 
-export function clearLolTournamentMatches() {
-  return function (dispatch) {
-    dispatch(clearLolTournamentMatchesSuccess());
-  }
-};
+export const clearLolTournamentMatches = (): ThunkAction<
+  T.LolActionTypes, ReduxState, null, T.LolActionTypes
+> => (dispatch) => {
+  return dispatch(clearLolTournamentMatchesSuccess());
+}
 
 // Get Teams
 export function getLolTeamsRequest(): T.GetLolTeamsRequest {
@@ -205,12 +210,12 @@ export function getLolTeamsFailure(err): T.GetLolTeamsFailure {
 //   };
 // };
 
-export function getLolTeams() {
-  return async function (dispatch) {
-    dispatch(getLolTeamsRequest());
-    await sleep(1000);
-    return dispatch(getLolTeamsSuccess([]));
-  };
+export const getLolTeams = (): ThunkAction<
+  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolTeamsRequest());
+  await sleep(1000);
+  return dispatch(getLolTeamsSuccess([]));
 };
 
 
@@ -245,10 +250,10 @@ export function getLolVideosFailure(err): T.GetLolVideosFailure {
 // };
 
 // mock data
-export function getLolVideos() {
-  return async function (dispatch) {
-    dispatch(getLolVideosRequest());
-    await sleep(1000);
-    return dispatch(getLolVideosSuccess(PLAYLIST.items));
-  };
+export const getLolVideos = (): ThunkAction<
+  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolVideosRequest());
+  await sleep(1000);
+  return dispatch(getLolVideosSuccess(PLAYLIST.items));
 };

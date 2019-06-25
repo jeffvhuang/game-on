@@ -8,6 +8,8 @@ import { sleep, sortFootballSchedule } from '../../../../helpers/utils';
 // Mock data
 import EUROPA_LEAGUE_TEAMS from '../../../mockApiData/eplTeams.json';
 import EUROPA_LEAGUE_SCHEDULE from '../../../mockApiData/eplSchedule.json';
+import { ThunkAction } from 'redux-thunk';
+import { ReduxState } from '../../root-reducer';
 // import { PLAYLIST } from '../../../mockApiData/EuropaLeagueYoutube';
 
 // Get Schedule
@@ -38,13 +40,13 @@ export function getEuropaLeagueScheduleFailure(err): T.GetEuropaLeagueScheduleFa
 // };
 
 // return mock data
-export function getEuropaLeagueSchedule() {
-  return async function (dispatch) {
-    dispatch(getEuropaLeagueScheduleRequest());
-    await sleep(1000);
-    const sortedSchedule = sortFootballSchedule(EUROPA_LEAGUE_SCHEDULE);
-    return dispatch(getEuropaLeagueScheduleSuccess(EUROPA_LEAGUE_SCHEDULE, sortedSchedule));
-  };
+export const getEuropaLeagueSchedule = (): ThunkAction<
+  Promise<T.EuropaLeagueActionTypes>, ReduxState, null, T.EuropaLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getEuropaLeagueScheduleRequest());
+  await sleep(1000);
+  const sortedSchedule = sortFootballSchedule(EUROPA_LEAGUE_SCHEDULE);
+  return dispatch(getEuropaLeagueScheduleSuccess(EUROPA_LEAGUE_SCHEDULE, sortedSchedule));
 };
 
 // Get Teams
@@ -74,12 +76,12 @@ export function getEuropaLeagueTeamsFailure(err): T.GetEuropaLeagueTeamsFailure 
 // };
 
 // return mock data
-export function getEuropaLeagueTeams() {
-  return async function (dispatch) {
-    dispatch(getEuropaLeagueTeamsRequest());
-    await sleep(1000);
-    return dispatch(getEuropaLeagueTeamsSuccess(EUROPA_LEAGUE_TEAMS));
-  };
+export const getEuropaLeagueTeams = (): ThunkAction<
+  Promise<T.EuropaLeagueActionTypes>, ReduxState, null, T.EuropaLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getEuropaLeagueTeamsRequest());
+  await sleep(1000);
+  return dispatch(getEuropaLeagueTeamsSuccess(EUROPA_LEAGUE_TEAMS));
 };
 
 // Get video from youtube playlist of EuropaLeague highlights
@@ -113,10 +115,10 @@ export function getEuropaLeagueTeams() {
 // };
 
 // mock data
-// export function getEuropaLeagueVideos() {
-//   return async function (dispatch) {
-//     dispatch(getEuropaLeagueVideosRequest());
-//     await sleep(1500);
-//     return dispatch(getEuropaLeagueVideosSuccess(PLAYLIST.items));
-//   };
+// export const getEuropaLeagueVideos = (): ThunkAction<
+//   Promise<T.EuropaLeagueActionTypes>, ReduxState, null, T.EuropaLeagueActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEuropaLeagueVideosRequest());
+//   await sleep(1500);
+//   return dispatch(getEuropaLeagueVideosSuccess(PLAYLIST.items));
 // };
