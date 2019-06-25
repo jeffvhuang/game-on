@@ -1,14 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { object } from 'prop-types';
 
 import { getFormattedTime } from '../../../../helpers/utils';
 
-FootballMatchSchedule.propTypes = {
-  game: object.isRequired
+interface Props {
+  game: any
 };
 
-function FootballMatchSchedule({ game }) {
+function FootballMatchSchedule({ game }: Props) {
   const startDate = new Date(game.eventDate);
 
   return (

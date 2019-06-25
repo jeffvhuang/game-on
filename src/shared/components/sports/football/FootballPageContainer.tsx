@@ -1,38 +1,50 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
+import { getEplTeams, getEplSchedule } from '../../../redux/football/epl/epl-actions';
+import { getChampionsLeagueTeams, 
+  getChampionsLeagueSchedule, 
+  getChampionsLeagueVideos } from '../../../redux/football/champions-league/champions-league-actions';
 import {
-  getEplTeams,
-  getEplSchedule,
-  getChampionsLeagueTeams,
-  getChampionsLeagueSchedule,
   getEuropaLeagueTeams,
-  getEuropaLeagueSchedule,
-  getChampionsLeagueVideos,
-  getEuropaLeagueVideos
+  getEuropaLeagueSchedule
 } from '../../../redux/football/europa-league/europa-league-actions';
 
 import VideoThumbnails from '../../common/VideoThumbnails';
 import FootballSelectDropdown from './FootballSelectDropdown';
 import FootballScheduleSection from './FootballScheduleSection';
 import VideoHeader from '../../common/VideoHeader';
-import { FootballTeam } from '../../../../types/football-api/football-team.model';
-import { EplStoreState } from '../../../../types/redux/epl-store-state.model';
+import { EplState } from '../../../redux/football/epl/epl-types';
+import { ChampionsLeagueState } from '../../../redux/football/champions-league/champions-league-types';
+import { EuropaLeagueState } from '../../../redux/football/europa-league/europa-league-types';
+import { ReduxState } from '../../../redux/root-reducer';
 
-interface Props {
-  epl: EplStoreState;
-  championsLeague: EplStoreState;
-  europaLeague: EplStoreState;
-  actions: ;
+interface StateProps {
+  epl: EplState;
+  championsLeague: ChampionsLeagueState;
+  europaLeague: EuropaLeagueState;
 }
+
+interface DispatchProps {
+  getEplSchedule;
+  getEplTeams;
+  getChampionsLeagueTeams;
+  getChampionsLeagueSchedule;
+  getEuropaLeagueTeams;
+  getEuropaLeagueSchedule;
+  getChampionsLeagueVideos;
+  getEuropaLeagueVideos;
+}
+
 interface State {
   values: string[];
   championsValues: string[];
   europaValues: string[];
 }
+
+type Props = StateProps & DispatchProps;
 
 class FootballPageContainer extends React.Component<Props, State> {
   constructor(props) {
@@ -51,12 +63,12 @@ class FootballPageContainer extends React.Component<Props, State> {
     //   props.actions.getChampionsLeagueVideos();
     //   props.actions.getEuropaLeagueVideos();
     // } 
-    if (props.epl.teams.length < 1) props.actions.getEplTeams();
-    if (props.epl.schedule.length < 1) props.actions.getEplSchedule();
-    if (props.championsLeague.teams.length < 1) props.actions.getChampionsLeagueTeams();
-    if (props.championsLeague.schedule.length < 1) props.actions.getChampionsLeagueSchedule();
-    if (props.europaLeague.teams.length < 1) props.actions.getEuropaLeagueTeams();
-    if (props.europaLeague.schedule.length < 1) props.actions.getEuropaLeagueSchedule();
+    if (props.epl.teams.length < 1) props.getEplTeams();
+    if (props.epl.schedule.length < 1) props.getEplSchedule();
+    if (props.championsLeague.teams.length < 1) props.getChampionsLeagueTeams();
+    if (props.championsLeague.schedule.length < 1) props.getChampionsLeagueSchedule();
+    if (props.europaLeague.teams.length < 1) props.getEuropaLeagueTeams();
+    if (props.europaLeague.schedule.length < 1) props.getEuropaLeagueSchedule();
   }
 
   handleChange = values => this.setState({ values });
@@ -123,23 +135,20 @@ class FootballPageContainer extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   epl: state.epl,
   championsLeague: state.championsLeague,
   europaLeague: state.europaLeague
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getEplSchedule,
-    getEplTeams,
-    getChampionsLeagueTeams,
-    getChampionsLeagueSchedule,
-    getEuropaLeagueTeams,
-    getEuropaLeagueSchedule,
-    getChampionsLeagueVideos,
-    getEuropaLeagueVideos
-  }, dispatch)
-});
+const mapDispatchToProps = {
+  getEplSchedule,
+  getEplTeams,
+  getChampionsLeagueTeams,
+  getChampionsLeagueSchedule,
+  getEuropaLeagueTeams,
+  getEuropaLeagueSchedule,
+  getChampionsLeagueVideos
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(FootballPageContainer);
