@@ -1,15 +1,16 @@
-import React from 'react';
-import { string, array, func } from 'prop-types';
+import * as React from 'react';
 import { Table } from 'antd';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
+import { ReactNode } from 'react';
 
 const { Column } = Table;
-LolTournamentMatches.propTypes = {
-  header: string,
-  matches: array.isRequired,
-  getRow: func
+interface Props {
+  header?: string,
+  matches: ESportsMatch[],
+  getRow: () => ((record: ESportsMatch, index: number, indent: number, expanded: boolean) => ReactNode) | undefined;
 };
 
-function LolTournamentMatches({ header, matches, getRow }) {
+function LolTournamentMatches({ header, matches, getRow }: Props) {
   return (
     <div className="list">
       <h2>{header}</h2>

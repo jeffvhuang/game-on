@@ -29,5 +29,5 @@ export interface ESportsMatch {
   forfeit: boolean;
   endAt: string;
   draw: boolean;
-  beingAt: string;
+  beginAt: string;
 }

@@ -1,8 +1,5 @@
-import React from 'react';
-import { object } from 'prop-types';
+import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { Link } from 'react-router-dom';
 import { Tabs } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
@@ -10,20 +7,33 @@ import { getLolTournaments, getLolTournamentMatches } from '../../../redux/lol/l
 import LolTournamentsContainer from './LolTournamentsContainer';
 import LolTournamentContainer from './LolTournamentContainer';
 import LolMatchesContainer from './LolMatchesContainer';
+import { LolState } from '../../../redux/lol/lol-types';
+import { ReduxState } from '../../../redux/root-reducer';
 
 const TabPane = Tabs.TabPane;
-const propTypes = {
-  lol: object.isRequired,
-  actions: object.isRequired
+interface StateProps {
+  lol: LolState
 };
 
-class LolPageContainer extends React.Component {
+interface DispatchProps {
+  getLolTournaments; getLolTournamentMatches;
+};
+
+type Props = StateProps & DispatchProps;
+
+interface State {
+  activeTab: string;
+  tournamentId?: number;
+  tournamentName: string;
+}
+
+class LolPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
     this.state = {
       activeTab: "1",
-      tournament: null,
+      tournamentId: undefined,
       tournamentName: ''
     };
   }
@@ -31,10 +41,10 @@ class LolPageContainer extends React.Component {
   selectTab = (key) => { this.setState({ activeTab: key }); }
 
   selectTournament = (info) => {
-    const { lol, actions } = this.props;
+    const { lol } = this.props;
     const id = info.event.id;
     if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != id) 
-      actions.getLolTournamentMatches(id);
+      this.props.getLolTournamentMatches(id);
     this.setState({
       activeTab: "2",
       tournamentName: info.event.title,
@@ -66,17 +76,13 @@ class LolPageContainer extends React.Component {
   }
 }
 
-LolPageContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   lol: state.lol
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getLolTournaments,
-    getLolTournamentMatches
-  }, dispatch)
-});
+const mapDispatchToProps = {
+  getLolTournaments,
+  getLolTournamentMatches
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LolPageContainer);

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -12,32 +12,45 @@ import ManualSelectDropdown from '../../common/ManualSelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
 import SingleTournamentSelectDropdown from '../../common/SingleTournamentSelectDropdown';
 import MatchData from './MatchData';
+import { LolState } from '../../../redux/lol/lol-types';
+import { ReduxState } from '../../../redux/root-reducer';
+import { ESportsOpponent } from '../../../../types/esports-api/esports-opponent.model';
 
-const propTypes = {
-  lol: object.isRequired,
-  actions: object.isRequired
+interface StateProps {
+  lol: LolState;
 };
 
-class LolTournamentContainer extends React.Component {
+interface DispatchProps {
+  getLolTournaments; getLolTournamentMatches;
+};
+
+type Props = StateProps & DispatchProps;
+
+interface State {
+  values: string[];
+  tournamentId?: number;
+}
+
+class LolTournamentContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
     this.state = {
       values: [],
-      tournamentId: null
+      tournamentId: undefined
     };
   }
 
   componentDidMount() {
-    const { lol, actions } = this.props;
-    if (!lol.tournaments.length) actions.getLolTournaments();
+    const { lol } = this.props;
+    if (!lol.tournaments.length) this.props.getLolTournaments();
   }
 
   handleChange = values => this.setState({ values });
   handleTournamentChange = tournamentId => {
-    const { lol, actions } = this.props;
+    const { lol } = this.props;
     if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != tournamentId)
-      actions.getLolTournamentMatches(tournamentId);
+      this.props.getLolTournamentMatches(tournamentId);
     this.setState({ tournamentId, values: [] });
   }
 
@@ -60,7 +73,7 @@ class LolTournamentContainer extends React.Component {
   }
 
   getMatchesForTable = (tournamentMatches, values) => {
-    const matches = [];
+    const matches = [] as any[];
     // Create objects for every match or filter matches that include one of the selected teams
     if (!values.length) {
       for (let i = 0; i < tournamentMatches.length; i++) {
@@ -100,14 +113,14 @@ class LolTournamentContainer extends React.Component {
       getWinnerLogo={this.getWinnerLogo} />;
   }
 
-  getWinnerName = (winnerId, opponents) => {
+  getWinnerName = (winnerId: number, opponents: ESportsOpponent[]) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return winner.opponent.name;
+    return (winner) ? winner.opponent.name : null;
   }
 
-  getWinnerLogo = (winnerId, opponents) => {
+  getWinnerLogo = (winnerId: number, opponents: ESportsOpponent[]) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return winner.opponent.imageUrl;
+    return (winner) ? winner.opponent.imageUrl : null;
   }
 
   render() {
@@ -136,18 +149,14 @@ class LolTournamentContainer extends React.Component {
   }
 }
 
-LolTournamentContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   lol: state.lol
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getLolTournaments,
-    getLolTournamentMatches
-  }, dispatch)
-});
+const mapDispatchToProps = {
+  getLolTournaments,
+  getLolTournamentMatches
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LolTournamentContainer);
 

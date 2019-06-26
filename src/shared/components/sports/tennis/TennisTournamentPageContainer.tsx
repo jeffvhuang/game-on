@@ -18,7 +18,6 @@ import { TennisState } from '../../../redux/tennis/tennis-types';
 import { ReduxState } from '../../../redux/root-reducer';
 
 interface MatchParams { tournamentNumber: string; }
-
 interface StateProps extends RouteComponentProps<MatchParams> {
   tennis: TennisState;
 }

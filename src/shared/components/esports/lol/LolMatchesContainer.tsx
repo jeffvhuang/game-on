@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -12,13 +12,23 @@ import SelectDropdown from '../../common/SelectDropdown';
 import LolTournamentMatches from './LolTournamentMatches';
 import TournamentSelectDropdown from '../../common/TournamentSelectDropdown';
 import MatchData from './MatchData';
+import { LolState } from '../../../redux/lol/lol-types';
+import { ReduxState } from '../../../redux/root-reducer';
 
-const propTypes = {
-  lol: object.isRequired,
-  actions: object.isRequired
+interface StateProps {
+  lol: LolState
 };
+interface DispatchProps {
+  getLolMatches; getLolTournaments;
+}
+type Props = StateProps & DispatchProps;
 
-class LolMatchesContainer extends React.Component {
+interface State {
+  values: string[];
+  tournamentValues: string[];
+}
+
+class LolMatchesContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -30,8 +40,8 @@ class LolMatchesContainer extends React.Component {
 
   componentDidMount() {
     const props = this.props;
-    if (!props.lol.matches.length) props.actions.getLolMatches();
-    if (!props.lol.tournaments.length) props.actions.getLolTournaments();
+    if (!props.lol.matches.length) props.getLolMatches();
+    if (!props.lol.tournaments.length) props.getLolTournaments();
   }
 
   handleChange = values => this.setState({ values });
@@ -115,18 +125,14 @@ class LolMatchesContainer extends React.Component {
   }
 }
 
-LolMatchesContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   lol: state.lol
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getLolMatches,
-    getLolTournaments
-  }, dispatch)
-});
+const mapDispatchToProps = {
+  getLolMatches,
+  getLolTournaments
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LolMatchesContainer);
 

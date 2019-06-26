@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { object, func } from 'prop-types';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
+import { ESportsOpponent } from '../../../../types/esports-api/esports-opponent.model';
 
-MatchData.propTypes = {
-  match: object.isRequired,
-  getWinnerName: func.isRequired,
-  getWinnerLogo: func.isRequired
+interface Props  {
+  match: ESportsMatch,
+  getWinnerName: (winnerId: number, opponents: ESportsOpponent[]) => string,
+  getWinnerLogo: (winnerId: number, opponents: ESportsOpponent[]) => string
 };
 
-function MatchData({ match, getWinnerName, getWinnerLogo }) {
+function MatchData({ match, getWinnerName, getWinnerLogo }: Props) {
   const now = new Date();
   return (
     <div className="expanded-row">

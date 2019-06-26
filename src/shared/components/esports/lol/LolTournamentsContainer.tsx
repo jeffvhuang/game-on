@@ -1,7 +1,5 @@
-import React from 'react';
-import { object, func } from 'prop-types';
+import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
@@ -9,14 +7,27 @@ import { getTournamentName } from '../../../../helpers/utils';
 import { getLolTournaments } from '../../../redux/lol/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
+import { LolState } from '../../../redux/lol/lol-types';
+import { ReduxState } from '../../../redux/root-reducer';
+import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
 
-const propTypes = {
-  lol: object.isRequired,
-  actions: object.isRequired,
-  selectTournament: func.isRequired
+interface StateProps {
+  lol: LolState;
+  selectTournament: (any) => void;
 };
 
-class LolTournamentsContainer extends React.Component {
+interface DispatchProps {
+  getLolTournaments;
+};
+
+type Props = StateProps & DispatchProps;
+
+interface State {
+  values: string[];
+  tournaments: ESportsTournament[];
+}
+
+class LolTournamentsContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -27,8 +38,8 @@ class LolTournamentsContainer extends React.Component {
   }
 
   componentDidMount() {
-    const { lol, actions } = this.props;
-    if (!lol.tournaments.length) actions.getLolTournaments()
+    const { lol } = this.props;
+    if (!lol.tournaments.length) this.props.getLolTournaments()
       .then(data => {
         this.setState({ tournaments: data });
       });
@@ -50,7 +61,7 @@ class LolTournamentsContainer extends React.Component {
   }
   
   getTournamentsForCalendar = (tournaments) => {
-    const events = [];
+    const events = [] as any[];
 
     for (let i = 0; i < tournaments.length; i++) {
       const tournament = tournaments[i];
@@ -84,14 +95,12 @@ class LolTournamentsContainer extends React.Component {
   }
 }
 
-LolTournamentsContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   lol: state.lol
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ getLolTournaments }, dispatch)
-});
+const mapDispatchToProps = {
+  getLolTournaments
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LolTournamentsContainer);
