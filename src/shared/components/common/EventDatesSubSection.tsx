@@ -1,10 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { string, array } from 'prop-types';
 
-EventDatesSubSection.propTypes = {
+interface Props {
   header: string,
-  events: array
+  events: any[]
 };
 
 function EventDatesSubSection({ header, events }) {

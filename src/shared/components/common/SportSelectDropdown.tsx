@@ -1,12 +1,15 @@
-import React from 'react';
-import { func, bool } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
 
 import { sports, esportsTitles } from '../../../helpers/constants';
 
 const { Option, OptGroup } = Select;
+interface Props {
+  handleChange: (value: string) => void;
+  showGeneral: boolean;
+};
 
-const SportSelectDropdown = ({ handleChange, showGeneral=false }) => {
+const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -33,11 +36,6 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }) => {
       </Select>
     </div>
   );
-};
-
-SportSelectDropdown.propTypes = {
-  handleChange: func.isRequired,
-  showGeneral: bool
 };
 
 export default SportSelectDropdown;

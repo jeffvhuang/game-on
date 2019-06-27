@@ -115,12 +115,12 @@ class LolTournamentContainer extends React.Component<Props, State> {
 
   getWinnerName = (winnerId: number, opponents: ESportsOpponent[]) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return (winner) ? winner.opponent.name : null;
+    return (winner) ? winner.opponent.name : undefined;
   }
 
   getWinnerLogo = (winnerId: number, opponents: ESportsOpponent[]) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return (winner) ? winner.opponent.imageUrl : null;
+    return (winner) ? winner.opponent.imageUrl : undefined;
   }
 
   render() {

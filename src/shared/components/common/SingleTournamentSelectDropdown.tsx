@@ -1,23 +1,23 @@
-import React from 'react';
-import { func, array, number } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
 
 import { getTournamentName } from '../../../helpers/utils';
+import { ESportsTournament } from '../../../types/esports-api/esports-tournament.model';
 
 const { Option } = Select;
-const propTypes = {
-  handleChange: func.isRequired,
-  options: array.isRequired,
+interface Props {
+  handleChange: (value: string) => void,
+  options: ESportsTournament[],
   value: number
 };
 
-function SingleTournamentSelectDropdown({ handleChange, options, value }) {
+function SingleTournamentSelectDropdown({ handleChange, options, value }: Props) {
   return (
     <Select onChange={handleChange}
       placeholder="Select tournament"
       size="large"
       style={{ width: '80%' }}
-      value={value} >
+      value={value.toString()} >
       {options.map((option, i) => {
         return <Option key={i} value={option.id}>{getTournamentName(option)}</Option>;
       })}
@@ -25,5 +25,4 @@ function SingleTournamentSelectDropdown({ handleChange, options, value }) {
   );
 }
 
-SingleTournamentSelectDropdown.propTypes = propTypes;
 export default SingleTournamentSelectDropdown;

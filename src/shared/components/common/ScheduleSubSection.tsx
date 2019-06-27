@@ -1,15 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { string, array } from 'prop-types';
 
 import { getFormattedTime } from '../../../helpers/utils';
 
-ScheduleSubSection.propTypes = {
-  header: string,
-  games: array
+interface Props {
+  header: string;
+  games: any[];
 };
 
-function ScheduleSubSection({ header, games }) {
+function ScheduleSubSection({ header, games }: Props) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>

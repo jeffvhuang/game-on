@@ -1,23 +1,21 @@
-import React from 'react';
-import { func, array } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
 
-const propTypes = {
-  handleChange: func.isRequired,
-  options: array.isRequired,
-  values: array
+const { Option } = Select;
+interface Props {
+  handleChange: (value: string) => void;
+  options: any[];
+  values: string[];
 };
 
-const { Option } = Select;
-
-function ManualSelectDropdown({ handleChange, options, values }) {
+function ManualSelectDropdown({ handleChange, options, values }: Props) {
   return (
     <Select onChange={handleChange}
       placeholder="Select teams to filter"
       mode="multiple"
       size="large"
       style={{ width: '80%' }}
-      value={values}
+      value={values.toString()}
       allowClear >
       {options.map((option, i) => {
         return <Option key={i} value={option.name}>{option.name}</Option>;
@@ -26,5 +24,4 @@ function ManualSelectDropdown({ handleChange, options, values }) {
   );
 }
 
-ManualSelectDropdown.propTypes = propTypes;
 export default ManualSelectDropdown;

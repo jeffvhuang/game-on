@@ -4,8 +4,8 @@ import { ESportsOpponent } from '../../../../types/esports-api/esports-opponent.
 
 interface Props  {
   match: ESportsMatch,
-  getWinnerName: (winnerId: number, opponents: ESportsOpponent[]) => string,
-  getWinnerLogo: (winnerId: number, opponents: ESportsOpponent[]) => string
+  getWinnerName: (winnerId: number, opponents: ESportsOpponent[]) => string | undefined;
+  getWinnerLogo: (winnerId: number, opponents: ESportsOpponent[]) => string | undefined;
 };
 
 function MatchData({ match, getWinnerName, getWinnerLogo }: Props) {

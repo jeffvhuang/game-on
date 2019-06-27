@@ -1,19 +1,18 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { string, array, number, bool } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 
-VideoThumbnails.propTypes = {
-  heading: string.isRequired,
-  thumbnails: array.isRequired,
+interface Props {
+  heading: string,
+  thumbnails: any[],
   showCount: number,
-  showMore: bool,
+  showMore: boolean,
   showMoreLink: string
 };
 
-function VideoThumbnails({ heading, thumbnails, showCount, showMore = false, showMoreLink }) {
+function VideoThumbnails({ heading, thumbnails, showCount, showMore = false, showMoreLink }: Props) {
   let shownThumbnails;
   if (showCount && showCount < thumbnails.length) shownThumbnails = thumbnails.slice(0, showCount);
   else shownThumbnails = thumbnails;

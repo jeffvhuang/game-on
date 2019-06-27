@@ -1,15 +1,13 @@
-import React from 'react';
-import { func, array } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
 
 const { Option, OptGroup } = Select;
-
-EventSelectDropdown.propTypes = {
-  handleChange: func.isRequired,
-  events: array
+interface Props {
+  handleChange: (value: string) => void;
+  events: string[];
 };
 
-function EventSelectDropdown({ handleChange, events }) {
+function EventSelectDropdown({ handleChange, events }: Props) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
