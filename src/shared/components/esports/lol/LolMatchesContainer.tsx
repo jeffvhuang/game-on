@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { object } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -48,7 +46,7 @@ class LolMatchesContainer extends React.Component<Props, State> {
   handleTournamentChange = tournamentValues => this.setState({ tournamentValues });
 
   getMatchesForTable = (data, values, tournamentValues) => {
-    const matches = [];
+    const matches = [] as any[];
     // Create objects for every match or filter matches that include one of the selected teams
     if (!values.length && !tournamentValues.length) {
       for (let i = 0; i < data.length; i++) {

@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { object } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -10,25 +8,37 @@ import { getDotaSeries, getDotaTournamentMatches, getDotaTournaments } from '../
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaSeries from './DotaSeries';
 import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
+import { DotaState } from '../../../redux/dota/dota-types';
+import { ReduxState } from '../../../redux/root-reducer';
 
-const propTypes = {
-  dota: object.isRequired,
-  actions: object.isRequired
+interface StateProps {
+  dota: DotaState;
 };
+interface DispatchProps {
+  getDotaSeries;
+  getDotaTournamentMatches;
+  getDotaTournaments;
+}
+type Props = StateProps & DispatchProps;
+interface State {
+  values: string[];
+  showTournamentsMatches: boolean;
+  tournamentId?: number;
+}
 
-class DotaSeriesContainer extends React.Component {
+class DotaSeriesContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
     this.state = {
       values: [],
       showTournamentsMatches: false,
+      tournamentId: undefined
     };
   }
 
   componentDidMount() {
-    const { dota, actions } = this.props;
-    if (!dota.series.length) actions.getDotaSeries();
+    if (!this.props.dota.series.length) this.props.getDotaSeries();
   }
 
   getTeams = (tournaments) => {
@@ -40,9 +50,9 @@ class DotaSeriesContainer extends React.Component {
 
   selectTournament = (id) => {
     return () => {
-      const { dota, actions } = this.props;
-      if (!dota.tournaments.length) actions.getDotaTournaments();
-      actions.getDotaTournamentMatches(id);
+      const { dota } = this.props;
+      if (!dota.tournaments.length) this.props.getDotaTournaments();
+      this.props.getDotaTournamentMatches(id);
       this.setState({
         showTournamentsMatches: true,
         tournamentId: id
@@ -89,18 +99,14 @@ class DotaSeriesContainer extends React.Component {
   }
 }
 
-DotaSeriesContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   dota: state.dota
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
-    getDotaSeries,
-    getDotaTournamentMatches,
-    getDotaTournaments
-  }, dispatch)
-});
+const mapDispatchToProps = {
+  getDotaSeries,
+  getDotaTournamentMatches,
+  getDotaTournaments
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(DotaSeriesContainer);

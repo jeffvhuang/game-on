@@ -1,15 +1,15 @@
-import React from 'react';
-import { string, array } from 'prop-types';
+import * as React from 'react';
 
 import DotaTournamentMatch from './DotaTournamentMatch';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
 
-DotaTournamentMatches.propTypes = {
-  header: string,
-  matches: array.isRequired,
-  values: array.isRequired
+interface Props {
+  header: string;
+  matches: ESportsMatch[];
+  values: string[];
 };
 
-function DotaTournamentMatches({ header, matches, values }) {
+function DotaTournamentMatches({ header, matches, values }: Props) {
   return (
     <div className="list">
       <h2>{header}</h2>

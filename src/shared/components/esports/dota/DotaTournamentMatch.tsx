@@ -1,14 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { object } from 'prop-types';
 
 import { getFormattedTime } from '../../../../helpers/utils';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
 
-DotaTournamentMatch.propTypes = {
-  match: object.isRequired
+interface Props {
+  match: ESportsMatch;
 };
 
-function DotaTournamentMatch({ match }) {
+function DotaTournamentMatch({ match }: Props) {
   const startDate = new Date(match.beginAt);
 
   return (

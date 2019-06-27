@@ -1,15 +1,13 @@
-import React from 'react';
-import { func, array } from 'prop-types';
+import * as React from 'react';
 import { Select } from 'antd';
 
-const propTypes = {
-  handleChange: func.isRequired,
-  options: array.isRequired
+const { Option } = Select;
+interface Props {
+  handleChange: (value: string) => void,
+  options: any[]
 };
 
-const { Option } = Select;
-
-function DotaMatchesSelectDropdown({ handleChange, options }) {
+function DotaMatchesSelectDropdown({ handleChange, options }: Props) {
   return (
     <div className="select-dd">
       <Select onChange={handleChange}
@@ -25,7 +23,5 @@ function DotaMatchesSelectDropdown({ handleChange, options }) {
     </div>
   );
 }
-
-DotaMatchesSelectDropdown.propTypes = propTypes;
 
 export default DotaMatchesSelectDropdown;

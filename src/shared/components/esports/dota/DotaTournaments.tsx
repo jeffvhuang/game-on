@@ -1,17 +1,17 @@
-import React from 'react';
-import { string, array, bool, func } from 'prop-types';
+import * as React from 'react';
 
 import DotaTournamentDate from './DotaTournamentDate';
+import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
 
-DotaTournaments.propTypes = {
+interface Props {
   header: string,
-  tournaments: array.isRequired,
-  values: array.isRequired,
-  showTournamentsMatches: bool.isRequired,
-  selectTournament: func.isRequired
+  tournaments: ESportsTournament[],
+  values: string[],
+  showTournamentsMatches: boolean,
+  selectTournament: (id: number) => () => void;
 };
 
-function DotaTournaments({ header, tournaments, values, showTournamentsMatches, selectTournament }) {
+function DotaTournaments({ header, tournaments, values, showTournamentsMatches, selectTournament }: Props) {
   return (
     <div className="list">
       <h2>{header}</h2>

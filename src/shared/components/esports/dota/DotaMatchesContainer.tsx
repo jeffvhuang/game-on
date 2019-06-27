@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -9,14 +9,24 @@ import { getDotaMatches, getDotaSeries } from '../../../redux/dota/dota-actions'
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaMatches from './DotaMatches';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
+import { DotaState } from '../../../redux/dota/dota-types';
+import { ReduxState } from '../../../redux/root-reducer';
 
-const propTypes = {
-  match: object,
-  dota: object.isRequired,
-  actions: object.isRequired
+interface StateProps {
+  match: ESportsMatch;
+  dota: DotaState;
 };
+interface DispatchProps {
+  getDotaMatches;
+  getDotaSeries;
+}
+type Props = StateProps & DispatchProps;
+interface State {
+  values: string[];
+}
 
-class DotaPageContainer extends React.Component {
+class DotaPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -27,8 +37,8 @@ class DotaPageContainer extends React.Component {
 
   componentDidMount() {
     const props = this.props;
-    if (props.dota.series.length < 1) props.actions.getDotaSeries();
-    if (props.dota.matches.length < 1) props.actions.getDotaMatches();
+    if (props.dota.series.length < 1) props.getDotaSeries();
+    if (props.dota.matches.length < 1) props.getDotaMatches();
   }
 
   handleChange = values => this.setState({ values });
@@ -49,18 +59,14 @@ class DotaPageContainer extends React.Component {
   }
 }
 
-DotaPageContainer.propTypes = propTypes;
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: ReduxState) => ({
   dota: state.dota
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({
+const mapDispatchToProps = {
     getDotaMatches,
     getDotaSeries
-  }, dispatch)
-});
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(DotaPageContainer);
 

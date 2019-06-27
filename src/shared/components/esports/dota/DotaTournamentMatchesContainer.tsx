@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { object, array } from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -7,14 +7,21 @@ import { getTournamentName } from '../../../../helpers/utils';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaTournamentMatches from './DotaTournamentMatches';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
+import { ESportsTournamentBase } from '../../../../types/esports-api/esports-tournament-base.model';
+import { ESportsTeamBase } from '../../../../types/esports-api/esports-team-base.model';
 
-const propTypes = {
-  tournament: object.isRequired,
-  teams: array,
-  matches: array.isRequired
+interface StateProps {
+  tournament?: ESportsTournamentBase;
+  teams: ESportsTeamBase[];
+  matches: ESportsMatch[];
 };
+interface State {
+  values: string[];
+  tournamentName: string;
+}
 
-class DotaTournamentMatchesContainer extends React.Component {
+class DotaTournamentMatchesContainer extends React.Component<StateProps, State> {
   constructor(props) {
     super(props);
 
@@ -45,5 +52,4 @@ class DotaTournamentMatchesContainer extends React.Component {
   }
 }
 
-DotaTournamentMatchesContainer.propTypes = propTypes;
 export default DotaTournamentMatchesContainer;

@@ -1,16 +1,16 @@
-import React from 'react';
+import * as React from 'react';
 import { Row, Col } from 'antd';
-import { object, bool, func } from 'prop-types';
 
 import { getDayMonthDate } from '../../../../helpers/utils';
+import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
 
-DotaTournamentDate.propTypes = {
-  tournament: object.isRequired,
-  showTournamentsMatches: bool.isRequired,
-  selectTournament: func.isRequired
+interface Props {
+  tournament: ESportsTournament;
+  showTournamentsMatches: boolean;
+  selectTournament: (id: number) => () => void;
 };
 
-function DotaTournamentDate({ tournament, showTournamentsMatches, selectTournament }) {
+function DotaTournamentDate({ tournament, showTournamentsMatches, selectTournament }: Props) {
   return (
     showTournamentsMatches ? (
       <Row onClick={selectTournament(tournament.id)}>
