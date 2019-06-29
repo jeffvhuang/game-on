@@ -9,7 +9,7 @@ const path = require('path');
 module.exports = merge(common, {
   mode: 'development',
   // devtool specifies how info is shown in CLI
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
   devServer: {
     contentBase: './dist',
     historyApiFallback: true,
@@ -19,7 +19,6 @@ module.exports = merge(common, {
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
     new AntdScssThemePlugin('./src/styles/theme.scss')
-    // new AntdScssThemePlugin('./theme.scss')
   ],
   output: {
     filename: '[name].bundle.js',
@@ -39,15 +38,9 @@ module.exports = merge(common, {
             },
           },
           {
-            test: /\.(js|jsx|mjs)$/,
+            test: /\.(ts|tsx|jsx|mjs)$/,
             exclude: /node_modules/,
-            loader: require.resolve('babel-loader'),
-            options: {
-              // This is a feature of `babel-loader` for webpack (not Babel itself).
-              // It enables caching results in ./node_modules/.cache/babel-loader/
-              // directory for faster rebuilds.
-              cacheDirectory: true
-            },
+            use: { loader: 'awesome-typescript-loader' },
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
