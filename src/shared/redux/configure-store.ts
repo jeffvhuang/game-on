@@ -1,13 +1,9 @@
 import { createStore, compose, applyMiddleware, Store } from 'redux';
-import thunk from 'redux-thunk';
-import logger from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
+import loggerMiddleware from 'redux-logger';
 
 import rootReducer from './root-reducer';
 import { ReduxState } from './redux-state';
-
-const composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] as typeof compose || compose;
-
-const initialState = {};
 
 // const store = createStore<ReduxState, any, any, any>(
 //   rootReducer,
@@ -21,8 +17,13 @@ const initialState = {};
 
 // Create a configure store function of type `IAppState`
 export default function configureStore(): Store<ReduxState> {
-  const store = createStore(rootReducer, undefined, composeEnhancers(
-    applyMiddleware(thunk, logger)
-  ));
+  const middlewareEnhancer = applyMiddleware(loggerMiddleware, thunkMiddleware);
+  // const composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] as typeof compose || compose;
+  const composeEnhancers = compose(middlewareEnhancer);
+  // const initialState = {};
+  const initialState = undefined;
+
+  const store = createStore(rootReducer, initialState, composeEnhancers);
+
   return store;
 }
