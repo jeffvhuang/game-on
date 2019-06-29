@@ -7,9 +7,9 @@ import { paths } from '../../../helpers/constants';
 interface Props {
   heading: string,
   thumbnails: any[],
-  showCount: number,
-  showMore: boolean,
-  showMoreLink: string
+  showCount?: number,
+  showMore?: boolean,
+  showMoreLink?: string
 };
 
 function VideoThumbnails({ heading, thumbnails, showCount, showMore = false, showMoreLink }: Props) {

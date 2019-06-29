@@ -74,7 +74,7 @@ class HighlightsPageContainer extends React.Component<Props, State> {
   render() {
     return (
       <div className="mid-container">
-        <SportSelectDropdown handleChange={this.handleChange} />
+        <SportSelectDropdown handleChange={this.handleChange} showGeneral={false} />
         {this.state.show.map(sport => {
           const obj = this.getReduxObjectForSport(sport.toLowerCase());
           const thumbnails = (obj) ? this.props[obj].thumbnails : [];

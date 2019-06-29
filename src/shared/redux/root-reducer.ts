@@ -6,8 +6,25 @@ import championsLeagueReducer from './football/champions-league/champions-league
 import europaLeagueReducer from './football/europa-league/europa-league-reducer';
 import tennisReducer from './tennis/tennis-reducer';
 import lolReducer from './lol/lol-reducer';
+import { DotaState } from './dota/dota-types';
+import { NbaState } from './nba/nba-types';
+import { EplState } from './football/epl/epl-types';
+import { TennisState } from './tennis/tennis-types';
+import { LolState } from './lol/lol-types';
+import { ChampionsLeagueState } from './football/champions-league/champions-league-types';
+import { EuropaLeagueState } from './football/europa-league/europa-league-types';
 
-const rootReducer = combineReducers({
+export interface ReduxState {
+  dota: DotaState,
+  nba: NbaState,
+  epl: EplState,
+  tennis: TennisState,
+  lol: LolState,
+  championsLeague: ChampionsLeagueState,
+  europaLeague: EuropaLeagueState
+}
+
+const rootReducer = combineReducers<ReduxState>({
   dota: dotaReducer,
   nba: nbaReducer,
   epl: eplReducer,
@@ -18,4 +35,4 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
-export type ReduxState = ReturnType<typeof rootReducer>
+// export type ReduxState = ReturnType<typeof rootReducer>

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import { allSportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';

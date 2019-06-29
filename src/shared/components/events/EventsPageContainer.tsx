@@ -1,11 +1,19 @@
-import React from 'react';
+import * as React from 'react';
 
 import SportSelectDropdown from '../common/SportSelectDropdown';
 import EventDatesSection from '../common/EventDatesSection';
 
-class EventsPageContainer extends React.Component {
-  constructor() {
-    super();
+interface Props {
+
+}
+
+interface State {
+  selected: string[];
+}
+
+class EventsPageContainer extends React.Component<{}, State> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       selected: []
@@ -34,9 +42,9 @@ class EventsPageContainer extends React.Component {
     return (
       <div className="mid-container">
         <SportSelectDropdown handleChange={this.handleChange} showGeneral={false} />
-        <EventDatesSection ongoing={this.state.ongoing}
+        {/* <EventDatesSection ongoing={this.state.ongoing}
           upcoming={this.state.upcoming}
-          completed={this.state.completed} />
+          completed={this.state.completed} /> */}
       </div>
     );
   }
