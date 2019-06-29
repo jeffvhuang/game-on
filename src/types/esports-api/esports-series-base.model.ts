@@ -11,5 +11,5 @@ export interface ESportsSeriesBase {
   fullName: string;
   endAt: string;
   description: string;
-  beingAt: string;
+  beginAt: string;
 }

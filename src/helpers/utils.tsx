@@ -1,39 +1,31 @@
 import { paths, days, months } from './constants';
-import { youtubeLogo } from '../../public/assets/Youtube-logo-2017-640x480.png';
+declare function require(path: string);
+import * as youtubeLogo from '../../public/assets/Youtube-logo-2017-640x480.png';
+import { NbaSchedule } from '../types/nba-api/nba-schedule.model';
+import { FootballSchedule } from '../types/football-api/football-schedule.model';
+import { TennisTournament } from '../types/tennis-api/tennis-tournament.model';
+import { ESportsTournament } from '../types/esports-api/esports-tournament.model';
+import { ESportsTeamBase } from '../types/esports-api/esports-team-base.model';
+import { ESportsSeries } from '../types/esports-api/espots-series.model';
+import { ESportsMatch } from '../types/esports-api/esports-match.model';
+import { ESportsTeam } from '../types/esports-api/esports-team.model';
 
 // Sleep function to delay tasks to mock delayed api response
 export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Sorting functions
-export function getDOTASchedule(data) {
-  const ongoing = [];
-  const upcoming = [];
-  const completed = [];
-  const now = Date.now();
-
-  // Sort each team for games not yet completed
-  data.forEach(tournament => {
-    if (new Date(tournament.startDate).getTime() > now) {
-      upcoming.push(tournament);
-    } else if (new Date(tournament.endDate).getTime() < now) {
-      completed.push(tournament);
-    } else {
-      ongoing.push(tournament);
-    }
-  });
-
-  return { ongoing, upcoming, completed };
-}
+/** 
+ * Sorting functions
+ */
 
 // Functions to sort dates from API data
 // Sort each team for games not yet completed (today or in future)
 // data: array of game objects
-export function sortNBASchedule(data) {
-  const gamesToday = [];
-  const upcoming = [];
-  const beforeToday = [];
+export function sortNBASchedule(data: NbaSchedule[]) {
+  const gamesToday: NbaSchedule[] = [];
+  const upcoming: NbaSchedule[] = [];
+  const beforeToday: NbaSchedule[] = [];
   const dateToday = new Date();
 
   data.forEach(game => {
@@ -41,7 +33,7 @@ export function sortNBASchedule(data) {
 
     if (isSameDate(dateToday, gamesDate)) {
       gamesToday.push(game);
-    } else if (gamesDate.getTime() > dateToday) {
+    } else if (gamesDate > dateToday) {
       upcoming.push(game);
     } else {
       beforeToday.push(game);
@@ -55,10 +47,10 @@ export function sortNBASchedule(data) {
  * sort schedule to find today and upcoming
  * @param {array} data 
  */
-export function sortFootballSchedule(data) {
-  const gamesToday = [];
-  const upcoming = [];
-  const beforeToday = [];
+export function sortFootballSchedule(data: FootballSchedule[]) {
+  const gamesToday: FootballSchedule[] = [];
+  const upcoming: FootballSchedule[] = [];
+  const beforeToday: FootballSchedule[] = [];
   const dateToday = new Date();
 
   // Separate into games past, today and upcoming
@@ -68,7 +60,7 @@ export function sortFootballSchedule(data) {
     // Does not separate between those that are on today but completed
     if (isSameDate(dateToday, gamesDate)) {
       gamesToday.push(game);
-    } else if (gamesDate.getTime() > dateToday) {
+    } else if (gamesDate > dateToday) {
       upcoming.push(game);
     } else {
       beforeToday.push(game);
@@ -84,7 +76,7 @@ export function sortFootballSchedule(data) {
 }
 
 // Sort by date for epl api's data
-function sortFootballByDate(data) {
+function sortFootballByDate(data: FootballSchedule[]) {
   return data.sort(function (a, b) {
     const dateA = a.eventTimestamp;
     const dateB = b.eventTimestamp;
@@ -92,16 +84,16 @@ function sortFootballByDate(data) {
   });
 }
 
-export function sortTennisSchedule(data) {
-  const ongoing = [];
-  const upcoming = [];
-  const completed = [];
+export function sortTennisSchedule(data: TennisTournament[]) {
+  const ongoing: TennisTournament[] = [];
+  const upcoming: TennisTournament[] = [];
+  const completed: TennisTournament[] = [];
   const now = Date.now();
 
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
-    if (new Date(t.currentSeason.startDate) > now) upcoming.push(t);
-    else if (new Date(t.currentSeason.endDate) < now) completed.push(t);
+    if (new Date(t.currentSeason.startDate).getTime() > now) upcoming.push(t);
+    else if (new Date(t.currentSeason.endDate).getTime() < now) completed.push(t);
     else ongoing.push(t);
   });
 
@@ -113,7 +105,7 @@ export function sortTennisSchedule(data) {
   return { ongoing, upcoming, completed };
 }
 
-function sortTennisByDate(data) {
+function sortTennisByDate(data: TennisTournament[]) {
   return data.sort(function (a, b) {
     const dateA = a.currentSeason.startDate;
     const dateB = b.currentSeason.startDate;
@@ -121,12 +113,12 @@ function sortTennisByDate(data) {
   });
 }
 
-export function sortESportsTournaments(data) {
-  const ongoing = [];
-  const upcoming = [];
-  const completed = [];
+export function sortESportsTournaments(data: ESportsTournament[]) {
+  const ongoing: ESportsTournament[] = [];
+  const upcoming: ESportsTournament[] = [];
+  const completed: ESportsTournament[] = [];
   const now = Date.now();
-  const teams = [];
+  const teams: ESportsTeamBase[] = [];
 
   // Separate tournaments into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
@@ -134,8 +126,8 @@ export function sortESportsTournaments(data) {
     const beginDate = new Date(tournament.beginAt);
     const endDate = new Date(tournament.endAt);
 
-    if (beginDate > now) upcoming.push(tournament);
-    else if (endDate < now) completed.push(tournament);
+    if (beginDate.getTime() > now) upcoming.push(tournament);
+    else if (endDate.getTime() < now) completed.push(tournament);
     else ongoing.push(tournament);
 
     // This part collects all teams from the tournaments to be displayed in dropdown
@@ -153,10 +145,10 @@ export function sortESportsTournaments(data) {
   return { ongoing, upcoming, completed, teams };
 }
 
-export function sortESportsSeries(data) {
-  const ongoingSeries = [];
-  const upcomingSeries = [];
-  const completedSeries = [];
+export function sortESportsSeries(data: ESportsSeries[]) {
+  const ongoingSeries: ESportsSeries[] = [];
+  const upcomingSeries: ESportsSeries[] = [];
+  const completedSeries: ESportsSeries[] = [];
   const now = Date.now();
 
   // Separate series into today followed by upcoming and past
@@ -165,8 +157,8 @@ export function sortESportsSeries(data) {
     const beginDate = new Date(series.beginAt);
     const endDate = new Date(series.endAt);
 
-    if (beginDate > now) upcomingSeries.push(series);
-    else if (endDate < now) completedSeries.push(series);
+    if (beginDate.getTime() > now) upcomingSeries.push(series);
+    else if (endDate.getTime() < now) completedSeries.push(series);
     else ongoingSeries.push(series);
   }
 
@@ -177,10 +169,10 @@ export function sortESportsSeries(data) {
   return { ongoingSeries, upcomingSeries, completedSeries };
 }
 
-export function sortESportsMatches(data) {
-  const today = [];
-  const upcoming = [];
-  const past = [];
+export function sortESportsMatches(data: ESportsMatch[]) {
+  const today: ESportsMatch[] = [];
+  const upcoming: ESportsMatch[] = [];
+  const past: ESportsMatch[] = [];
   const dateToday = new Date();
 
   // Separate matches into today followed by upcoming and past
@@ -189,7 +181,7 @@ export function sortESportsMatches(data) {
 
     if (isSameDate(dateToday, matchDate)) {
       today.push(match);
-    } else if (matchDate.getTime() > dateToday) {
+    } else if (matchDate > dateToday) {
       upcoming.push(match);
     } else {
       past.push(match);
@@ -204,7 +196,8 @@ export function sortESportsMatches(data) {
 }
 
 // Sort by descending (most recent dates first)
-export function sortESportByDate(data) {
+export function sortESportByDate(
+  data: ESportsTournament[] | ESportsSeries[] | ESportsMatch[]) {
   return data.sort(function (a, b) {
     const dateA = a.beginAt;
     const dateB = b.beginAt;
@@ -212,7 +205,8 @@ export function sortESportByDate(data) {
   });
 }
 
-export function sortESportByEndDate(data) {
+export function sortESportByEndDate(
+  data: ESportsTournament[] | ESportsSeries[] | ESportsMatch[]) {
   return data.sort(function (a, b) {
     const dateA = a.endAt;
     const dateB = b.endAt;
@@ -220,7 +214,7 @@ export function sortESportByEndDate(data) {
   });
 }
 
-function sortESportTeams(data) {
+function sortESportTeams(data: ESportsTeamBase[]) {
   return data.sort(function (a, b) {
     const dateA = a.name;
     const dateB = b.name;
@@ -229,8 +223,8 @@ function sortESportTeams(data) {
 }
 
 // data = matches
-export function getESportsTeamsFromMatches(data) {
-  const teams = [];
+export function getESportsTeamsFromMatches(data: ESportsMatch[]) {
+  const teams: ESportsTeamBase[] = [];
   // loop through all matches
   for (let i = 0; i < data.length; i++) {
     // compare both opponents see whether need to add to array or not
@@ -285,7 +279,7 @@ export function getTournamentNameFromMatch(match) {
  * @param {array} teams 
  */
 export function convertEplTeamsToArray(teams) {
-  const ddTeams = [];
+  const ddTeams: any[] = [];
   teams.forEach(t => ddTeams.push({
     fullName: t.name,
     shortName: t.code,
@@ -297,7 +291,7 @@ export function convertEplTeamsToArray(teams) {
 
 // Methods to create objects from APIs to show in common thumbnails functions
 export function createYoutubeThumnailObjects(videos) {
-  const thumbnails = [];
+  const thumbnails: any[] = [];
 
   videos.forEach(video => {
     const imgSrc = (video.snippet.thumbnails)
