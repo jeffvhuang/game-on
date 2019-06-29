@@ -15,7 +15,7 @@ import VideoThumbnails from '../../common/VideoThumbnails';
 import SelectDropdown from '../../common/SelectDropdown';
 import TennisMatches from './TennisMatches';
 import { TennisState } from '../../../redux/tennis/tennis-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface MatchParams { tournamentNumber: string; }
 interface StateProps extends RouteComponentProps<MatchParams> {

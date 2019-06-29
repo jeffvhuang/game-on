@@ -10,7 +10,7 @@ import SelectDropdown from '../../common/SelectDropdown';
 import TennisTournaments from './TennisTournaments';
 import VideoHeader from '../../common/VideoHeader';
 import { TennisState } from '../../../redux/tennis/tennis-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
   tennis: TennisState;

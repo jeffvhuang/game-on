@@ -13,7 +13,7 @@ import LolTournamentMatches from './LolTournamentMatches';
 import SingleTournamentSelectDropdown from '../../common/SingleTournamentSelectDropdown';
 import MatchData from './MatchData';
 import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 import { ESportsOpponent } from '../../../../types/esports-api/esports-opponent.model';
 
 interface StateProps {

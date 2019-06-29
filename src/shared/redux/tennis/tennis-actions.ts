@@ -13,7 +13,7 @@ import TOURNAMENT_INFO from '../../../mockApiData/tennisTournamentInfo.json';
 import TOURNAMENT_SCHEDULE from '../../../mockApiData/tennisTournamentSchedule.json';
 import { TennisTournamentSchedule } from '../../../types/tennis-api/tennis-tournament-schedule.model';
 import { TennisTournamentInfo } from '../../../types/tennis-api/tennis-tournament-info.model';
-import { ReduxState } from '../root-reducer';
+import { ReduxState } from '../redux-state';
 
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
 

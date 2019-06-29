@@ -11,7 +11,7 @@ import SelectDropdown from '../../common/SelectDropdown';
 import DotaMatches from './DotaMatches';
 import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
 import { DotaState } from '../../../redux/dota/dota-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
   match: ESportsMatch;

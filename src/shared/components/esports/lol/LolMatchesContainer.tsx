@@ -11,7 +11,7 @@ import LolTournamentMatches from './LolTournamentMatches';
 import TournamentSelectDropdown from '../../common/TournamentSelectDropdown';
 import MatchData from './MatchData';
 import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
   lol: LolState

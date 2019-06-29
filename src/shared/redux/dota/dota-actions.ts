@@ -19,7 +19,7 @@ import TOURNAMENT_MATCHES from '../../../mockApiData/dotaTournamentMatches.json'
 // import TEAMS from '../../../mockApiData/dotaTeams.json';
 import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
 import { ThunkAction } from 'redux-thunk';
-import { ReduxState } from '../root-reducer';
+import { ReduxState } from '../redux-state';
 
 
 // Data API

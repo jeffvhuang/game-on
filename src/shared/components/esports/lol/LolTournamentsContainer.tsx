@@ -8,7 +8,7 @@ import { getLolTournaments } from '../../../redux/lol/lol-actions';
 
 import SelectDropdown from '../../common/SelectDropdown';
 import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
 
 interface StateProps {

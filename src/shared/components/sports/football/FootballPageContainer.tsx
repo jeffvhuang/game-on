@@ -19,7 +19,7 @@ import VideoHeader from '../../common/VideoHeader';
 import { EplState } from '../../../redux/football/epl/epl-types';
 import { ChampionsLeagueState } from '../../../redux/football/champions-league/champions-league-types';
 import { EuropaLeagueState } from '../../../redux/football/europa-league/europa-league-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
   epl: EplState;

@@ -9,7 +9,7 @@ import SelectDropdown from '../../common/SelectDropdown';
 import DotaSeries from './DotaSeries';
 import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
 import { DotaState } from '../../../redux/dota/dota-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
   dota: DotaState;

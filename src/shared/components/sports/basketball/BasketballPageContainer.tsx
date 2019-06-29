@@ -12,7 +12,7 @@ import NbaSelectDropdown from './NbaSelectDropdown';
 import BasketballScheduleSection from './BasketballScheduleSection';
 import VideoHeader from '../../common/VideoHeader';
 import { NbaState } from '../../../redux/nba/nba-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
   nba: NbaState;

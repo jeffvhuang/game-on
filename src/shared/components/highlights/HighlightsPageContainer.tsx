@@ -12,7 +12,7 @@ import SportSelectDropdown from '../common/SportSelectDropdown';
 import { EplState } from '../../redux/football/epl/epl-types';
 import { NbaState } from '../../redux/nba/nba-types';
 import { isPropsEqual } from '@fullcalendar/core';
-import { ReduxState } from '../../redux/root-reducer';
+import { ReduxState } from '../../redux/redux-state';
 
 interface StateProps {
   nba: NbaState;

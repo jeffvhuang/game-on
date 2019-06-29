@@ -9,7 +9,7 @@ import { sleep, sortNBASchedule } from '../../../helpers/utils';
 import TEAMS from '../../../mockApiData/nbaTeams.json';
 import SCHEDULE from '../../../mockApiData/nbaSchedule.json';
 import { PLAYLIST } from '../../../mockApiData/nbaYoutube';
-import { ReduxState } from '../root-reducer';
+import { ReduxState } from '../redux-state';
 import { ThunkAction } from 'redux-thunk';
 
 // Get video from youtube playlist of nba highlights

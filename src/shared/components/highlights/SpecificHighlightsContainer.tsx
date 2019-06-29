@@ -14,7 +14,7 @@ import { EplState } from '../../redux/football/epl/epl-types';
 import { TennisState } from '../../redux/tennis/tennis-types';
 import { DotaState } from '../../redux/dota/dota-types';
 import { RouteComponentProps } from 'react-router';
-import { ReduxState } from '../../redux/root-reducer';
+import { ReduxState } from '../../redux/redux-state';
 
 interface MatchParams { sport: string; }
 interface StateProps extends RouteComponentProps<MatchParams> {

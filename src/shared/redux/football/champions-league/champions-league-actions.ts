@@ -9,7 +9,7 @@ import CL_TEAMS from '../../../mockApiData/championsLeagueTeams.json';
 import CL_SCHEDULE from '../../../mockApiData/championsLeagueSchedule.json';
 import { CL_PLAYLIST } from '../../../../mockApiData/champsLeagueYoutube';
 import { ThunkAction } from 'redux-thunk';
-import { ReduxState } from '../../root-reducer';
+import { ReduxState } from '../../redux-state';
 
 // Get Schedule
 export function getChampionsLeagueScheduleRequest(): T.GetChampionsLeagueScheduleRequest {

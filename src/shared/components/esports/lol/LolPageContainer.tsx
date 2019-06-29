@@ -8,7 +8,7 @@ import LolTournamentsContainer from './LolTournamentsContainer';
 import LolTournamentContainer from './LolTournamentContainer';
 import LolMatchesContainer from './LolMatchesContainer';
 import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/root-reducer';
+import { ReduxState } from '../../../redux/redux-state';
 
 const TabPane = Tabs.TabPane;
 interface StateProps {

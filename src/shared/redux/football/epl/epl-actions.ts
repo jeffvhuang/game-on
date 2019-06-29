@@ -9,7 +9,7 @@ import { sleep, sortFootballSchedule } from '../../../../helpers/utils';
 import EPL_TEAMS from '../../../mockApiData/eplTeams.json';
 import EPL_SCHEDULE from '../../../mockApiData/eplSchedule.json';
 import { ThunkAction } from 'redux-thunk';
-import { ReduxState } from '../../root-reducer';
+import { ReduxState } from '../../redux-state';
 // import { PLAYLIST } from '../../../mockApiData/EplYoutube';
 
 // Get Schedule
