@@ -1,4 +1,4 @@
-export const CL_PLAYLIST = {
+{
   "kind": "youtube#playlistItemListResponse",
   "etag": "\"XpPGQXPnxQJhLgs6enD_n8JR4Qk/ZFun6N-EC048F9wuB5YtwJA2gkI\"",
   "nextPageToken": "CDIQAA",
@@ -2258,5 +2258,4 @@ export const CL_PLAYLIST = {
     }
    }
   ]
- };
- 
+ }

@@ -6,8 +6,8 @@ import { youtubeAPI, gameonAPI } from '../../../../helpers/constants';
 import { sleep, sortFootballSchedule } from '../../../../helpers/utils';
 
 // Mock data
-import EUROPA_LEAGUE_TEAMS from '../../../mockApiData/eplTeams.json';
-import EUROPA_LEAGUE_SCHEDULE from '../../../mockApiData/eplSchedule.json';
+import EUROPA_LEAGUE_TEAMS from '../../../../mockApiData/eplTeams.json';
+import EUROPA_LEAGUE_SCHEDULE from '../../../../mockApiData/eplSchedule.json';
 import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../../redux-state';
 // import { PLAYLIST } from '../../../mockApiData/europaLeagueYoutube.js';

@@ -5,9 +5,9 @@ import * as T from './champions-league-types';
 import { youtubeAPI, gameonAPI } from '../../../../helpers/constants';
 import { sleep, sortFootballSchedule } from '../../../../helpers/utils';
 
-import CL_TEAMS from '../../../mockApiData/championsLeagueTeams.json';
-import CL_SCHEDULE from '../../../mockApiData/championsLeagueSchedule.json';
-import { CL_PLAYLIST } from '../../../../mockApiData/champsLeagueYoutube';
+import CL_TEAMS from '../../../../mockApiData/championsLeagueTeams.json';
+import CL_SCHEDULE from '../../../../mockApiData/championsLeagueSchedule.json';
+import CL_PLAYLIST from '../../../../mockApiData/champsLeagueYoutube.json';
 import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../../redux-state';
 
