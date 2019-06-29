@@ -9,12 +9,10 @@ import SelectDropdown from '../../common/SelectDropdown';
 import DotaTournaments from './DotaTournaments';
 import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
 import { ReduxState } from '../../../redux/redux-state';
-import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
 import { DotaState } from '../../../redux/dota/dota-types';
 import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
 
 interface StateProps {
-  match: ESportsMatch;
   dota: DotaState;
 };
 interface DispatchProps {

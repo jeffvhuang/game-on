@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { object } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -9,12 +7,10 @@ import { getDotaMatches, getDotaSeries } from '../../../redux/dota/dota-actions'
 
 import SelectDropdown from '../../common/SelectDropdown';
 import DotaMatches from './DotaMatches';
-import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
 import { DotaState } from '../../../redux/dota/dota-types';
 import { ReduxState } from '../../../redux/redux-state';
 
 interface StateProps {
-  match: ESportsMatch;
   dota: DotaState;
 };
 interface DispatchProps {

@@ -8,7 +8,7 @@ import './styles/main.scss';
 import App from "./shared/App";
 import { BrowserRouter } from 'react-router-dom';
 
-const store = configureStore(undefined);
+export const store = configureStore(undefined);
 
 ReactDOM.render((
   <BrowserRouter>

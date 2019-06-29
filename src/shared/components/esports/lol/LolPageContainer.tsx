@@ -63,9 +63,10 @@ class LolPageContainer extends React.Component<Props, State> {
             <LolTournamentsContainer selectTournament={this.selectTournament} />
           </TabPane>
           <TabPane tab="Tournament" key="2">
-            <LolTournamentContainer selectTournament={this.selectTournament}
+            {/* <LolTournamentContainer selectTournament={this.selectTournament}
               tournamentId={this.state.tournamentId}
-              tournamentName={this.state.tournamentName} />
+              tournamentName={this.state.tournamentName} /> */}
+            <LolTournamentContainer />
           </TabPane>
           <TabPane tab="Matches" key="3">
             <LolMatchesContainer />

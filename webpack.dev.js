@@ -38,7 +38,7 @@ module.exports = merge(common, {
             },
           },
           {
-            test: /\.(tsx|jsx|mjs)$/,
+            test: /\.(ts|tsx|jsx|mjs)$/,
             exclude: /node_modules/,
             use: { loader: 'awesome-typescript-loader' },
           },

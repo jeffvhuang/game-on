@@ -25,7 +25,7 @@
     "@fullcalendar/react": "^4.2.0",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
-    "@types/react-redux": "^7.1.0",
+    "@types/react-redux": "^7.1.1",
     "@types/react-router": "^5.0.2",
     "antd": "^3.19.3",
     "axios": "^0.18.1",
