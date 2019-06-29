@@ -15,6 +15,8 @@ import MatchData from './MatchData';
 import { LolState } from '../../../redux/lol/lol-types';
 import { ReduxState } from '../../../redux/redux-state';
 import { ESportsOpponent } from '../../../../types/esports-api/esports-opponent.model';
+import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
+import { Select } from 'antd';
 
 interface StateProps {
   lol: LolState;
@@ -54,12 +56,12 @@ class LolTournamentContainer extends React.Component<Props, State> {
     this.setState({ tournamentId, values: [] });
   }
 
-  getTournamentId = (id, tournamentMatches) => {
-    if (tournamentMatches.length) return tournamentMatches[0].tournament.id;
-    return id;
+  getTournamentId = (tournamentMatches: ESportsMatch[], id?: number): string => {
+    if (tournamentMatches.length) return tournamentMatches[0].tournament.id.toString();
+    return (id) ? id.toString() : '';
   }
 
-  getTournamentName = (tournamentMatches) => {
+  getTournamentName = (tournamentMatches: ESportsMatch[]): string => {
     return (tournamentMatches.length) ? getTournamentNameFromMatch(tournamentMatches[0]) : '';
   }
 
@@ -129,7 +131,7 @@ class LolTournamentContainer extends React.Component<Props, State> {
         <div className="select-dd">
           <SingleTournamentSelectDropdown handleChange={this.handleTournamentChange}
             options={this.props.lol.tournaments}
-            value={this.getTournamentId(this.state.tournamentId, this.props.lol.tournamentMatches)} />
+            value={this.getTournamentId(this.props.lol.tournamentMatches, this.state.tournamentId)} />
         </div>
         <h2>{this.getTournamentName(this.props.lol.tournamentMatches)}</h2>
         <div className="select-dd">

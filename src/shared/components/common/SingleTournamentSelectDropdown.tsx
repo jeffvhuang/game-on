@@ -8,7 +8,7 @@ const { Option } = Select;
 interface Props {
   handleChange: (value: string) => void,
   options: ESportsTournament[],
-  value: number
+  value: string
 };
 
 function SingleTournamentSelectDropdown({ handleChange, options, value }: Props) {
@@ -17,9 +17,9 @@ function SingleTournamentSelectDropdown({ handleChange, options, value }: Props)
       placeholder="Select tournament"
       size="large"
       style={{ width: '80%' }}
-      value={value.toString()} >
+      value={value} >
       {options.map((option, i) => {
-        return <Option key={i} value={option.id}>{getTournamentName(option)}</Option>;
+        return <Option key={i} value={option.id.toString()}>{getTournamentName(option)}</Option>;
       })}
     </Select>
   );

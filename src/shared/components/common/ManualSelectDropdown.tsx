@@ -8,14 +8,14 @@ interface Props {
   values: string[];
 };
 
-function ManualSelectDropdown({ handleChange, options, values }: Props) {
+function ManualSelectDropdown({ handleChange, options, values }) {
   return (
     <Select onChange={handleChange}
       placeholder="Select teams to filter"
       mode="multiple"
       size="large"
       style={{ width: '80%' }}
-      value={values.toString()}
+      value={values}
       allowClear >
       {options.map((option, i) => {
         return <Option key={i} value={option.name}>{option.name}</Option>;
