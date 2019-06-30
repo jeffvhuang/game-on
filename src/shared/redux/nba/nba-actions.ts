@@ -24,23 +24,23 @@ export function getNbaVideosFailure(err): T.GetNbaVideosFailure {
   return { type: C.GET_NBA_VIDEOS_FAILURE, err }
 }
 
-// export function getNbaVideos = () => {
-//   return (dispatch) => {
-//     dispatch(getNbaVideosRequest());
-//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-//       params: {
-//         'part': 'snippet',
-//         'playlistId': youtubeAPI.NBA_ID,
-//         'maxResults': '25',
-//         'key': youtubeAPI.KEY
-//       }
-//     }).then(response => {
-//       dispatch(getNbaVideosSuccess(response.data.items));
-//     }).catch(err => {
-//       dispatch(getNbaVideosFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getNbaVideos = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.NbaActionTypes
+// > => async (dispatch) => {
+//   dispatch(getNbaVideosRequest());
+//   return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//     params: {
+//       'part': 'snippet',
+//       'playlistId': youtubeAPI.NBA_ID,
+//       'maxResults': '25',
+//       'key': youtubeAPI.KEY
+//     }
+//   }).then(response => {
+//     dispatch(getNbaVideosSuccess(response.data.items));
+//   }).catch(err => {
+//     dispatch(getNbaVideosFailure(err));
+//     throw (err);
+//   });
 // };
 
 // mock data
@@ -63,30 +63,30 @@ export function getNbaScheduleFailure(err): T.GetNbaScheduleFailure {
   return { type: C.GET_NBA_SCHEDULE_FAILURE, err }
 }
 
-// export function getNbaSchedule() {
-//   return async function (dispatch) {
-//     dispatch(getNbaScheduleRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.SCHEDULE
-//     }).then(response => {
-//       const sortedSchedule = sortNBASchedule(response.data);
-//       dispatch(getNbaScheduleSuccess(response.data, sortedSchedule));
-//     }).catch(err => {
-//       dispatch(getNbaScheduleFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getNbaSchedule = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.NbaActionTypes
+// > => async (dispatch) => {
+//   dispatch(getNbaScheduleRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.SCHEDULE
+//   }).then(response => {
+//     const sortedSchedule = sortNBASchedule(response.data);
+//     dispatch(getNbaScheduleSuccess(response.data, sortedSchedule));
+//   }).catch(err => {
+//     dispatch(getNbaScheduleFailure(err));
+//     throw (err);
+//   });
 // };
 
 // return mock data
 export const getNbaSchedule = (): ThunkAction<
-  Promise<T.NbaActionTypes>, ReduxState, null, T.NbaActionTypes
+  Promise<void>, ReduxState, null, T.NbaActionTypes
 > => async (dispatch) => {
   dispatch(getNbaScheduleRequest());
   await sleep(1500);
   const sortedSchedule = sortNBASchedule(SCHEDULE as NbaSchedule[]);
-  return dispatch(getNbaScheduleSuccess(SCHEDULE, sortedSchedule));
+  dispatch(getNbaScheduleSuccess(SCHEDULE, sortedSchedule));
 };
 
 // Get Teams
@@ -100,20 +100,20 @@ export function getNbaTeamsFailure(err): T.GetNbaTeamsFailure {
   return { type: C.GET_NBA_TEAMS_FAILURE, err }
 };
 
-// export function getNbaTeams() {
-//   return async function (dispatch) {
-//     dispatch(getNbaTeamsRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.TEAMS
-//     }).then(response => {
-//       const nbaTeams = response.data.filter(team => team.nbaFranchise == '1');
-//       dispatch(getNbaTeamsSuccess(nbaTeams));
-//     }).catch(err => {
-//       dispatch(getNbaTeamsFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getNbaTeams = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.NbaActionTypes
+// > => async (dispatch) => {
+//   dispatch(getNbaTeamsRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.TEAMS
+//   }).then(response => {
+//     const nbaTeams = response.data.filter(team => team.nbaFranchise == '1');
+//     dispatch(getNbaTeamsSuccess(nbaTeams));
+//   }).catch(err => {
+//     dispatch(getNbaTeamsFailure(err));
+//     // throw(err);
+//   });
 // };
 
 // return mock data

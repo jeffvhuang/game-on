@@ -11,16 +11,9 @@ import { LolState } from '../../../redux/lol/lol-types';
 import { ReduxState } from '../../../redux/redux-state';
 
 const TabPane = Tabs.TabPane;
-interface StateProps {
-  lol: LolState
-};
-
-interface DispatchProps {
-  getLolTournaments; getLolTournamentMatches;
-};
-
+interface StateProps { lol: LolState };
+interface DispatchProps { getLolTournaments; getLolTournamentMatches; };
 type Props = StateProps & DispatchProps;
-
 interface State {
   activeTab: string;
   tournamentId?: number;
