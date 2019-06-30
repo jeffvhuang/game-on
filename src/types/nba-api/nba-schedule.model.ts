@@ -5,7 +5,7 @@ export interface NbaSchedule {
   league: string;
   gameId: string;
   startTimeUTC: string;
-  endTimeUTC: string;
+  endTimeUTC: string | null;
   arena: string;
   city: string;
   country: string;

@@ -1,6 +1,6 @@
 export interface ESportsTournamentBase {
-  winnerType: string;
-  winnerId: number;
+  winnerType: string | null;
+  winnerId: number | null;
   slug: string;
   name: string;
   modifiedAt: string;

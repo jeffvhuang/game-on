@@ -1,8 +1,8 @@
 export interface ESportsLeagueBase {
-  url: string;
+  url: string | null;
   slug: string;
   name: string;
   liveSupported: boolean;
-  imageUrl: string;
+  imageUrl: string | null;
   id: number;
 }

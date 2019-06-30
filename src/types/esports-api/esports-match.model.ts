@@ -9,7 +9,7 @@ import { ESportsResult } from "./esports-result.model";
 
 export interface ESportsMatch {
   tournament: ESportsTournamentBase;
-  winner: ESportsTeamBase;
+  winner: ESportsTeamBase | null;
   seriesId: number;
   series: ESportsSeriesBase;
   results: ESportsResult[];
@@ -17,7 +17,7 @@ export interface ESportsMatch {
   leagueId: number;
   league: ESportsLeagueBase;
   games: ESportsGame[];
-  winnerId: number;
+  winnerId: number | null;
   tournamentId: number;
   status: string;
   slug: string;

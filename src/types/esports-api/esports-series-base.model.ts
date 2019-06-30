@@ -1,15 +1,15 @@
 export interface ESportsSeriesBase {
   year: number;
-  winnerType: string;
-  winnerId: number;
+  winnerType: string | null;
+  winnerId: number | null;
   slug: string;
-  season: string;
-  prizepool: string;
+  season: string | null;
+  prizepool: string | null;
   name: string;
   leagueId: number;
   id: number;
-  fullName: string;
-  endAt: string;
-  description: string;
-  beginAt: string;
+  fullName: string | null;
+  endAt: string | null;
+  description: string | null;
+  beginAt: string | null;
 }

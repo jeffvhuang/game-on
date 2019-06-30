@@ -1,5 +1,5 @@
 export interface ESportsLive {
-  url: string;
+  url: string | null;
   supported: boolean;
-  opensAt: string;
+  opensAt: string | null;
 }

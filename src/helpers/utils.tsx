@@ -155,8 +155,8 @@ export function sortESportsSeries(data: ESportsSeries[]) {
   // Separate series into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
     const series = data[i];
-    const beginDate = new Date(series.beginAt);
-    const endDate = new Date(series.endAt);
+    const beginDate = (series.beginAt) ? new Date(series.beginAt) : new Date("Sun Dec 31 2199");    
+    const endDate = (series.endAt) ? new Date(series.endAt) : new Date("Sun Dec 31 2199");
 
     if (beginDate.getTime() > now) upcomingSeries.push(series);
     else if (endDate.getTime() < now) completedSeries.push(series);

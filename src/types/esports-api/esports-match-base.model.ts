@@ -1,7 +1,7 @@
 import { ESportsLive } from "./esports-live.model";
 
 export interface ESportsMatchBase {
-  winnerId: number;
+  winnerId: number | null;
   tournamentId: number;
   status: string;
   slug: string;

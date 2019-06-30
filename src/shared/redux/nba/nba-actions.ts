@@ -11,6 +11,7 @@ import SCHEDULE from '../../../mockApiData/nbaSchedule.json';
 import { PLAYLIST } from '../../../mockApiData/nbaYoutube';
 import { ReduxState } from '../redux-state';
 import { ThunkAction } from 'redux-thunk';
+import { NbaSchedule } from '../../../types/nba-api/nba-schedule.model';
 
 // Get video from youtube playlist of nba highlights
 export function getNbaVideosRequest(): T.GetNbaVideosRequest {
@@ -84,7 +85,7 @@ export const getNbaSchedule = (): ThunkAction<
 > => async (dispatch) => {
   dispatch(getNbaScheduleRequest());
   await sleep(1500);
-  const sortedSchedule = sortNBASchedule(SCHEDULE);
+  const sortedSchedule = sortNBASchedule(SCHEDULE as NbaSchedule[]);
   return dispatch(getNbaScheduleSuccess(SCHEDULE, sortedSchedule));
 };
 

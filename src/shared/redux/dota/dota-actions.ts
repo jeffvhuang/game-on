@@ -20,7 +20,9 @@ import TOURNAMENT_MATCHES from '../../../mockApiData/dotaTournamentMatches.json'
 import { PLAYLIST } from '../../../mockApiData/dotaYoutube';
 import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../redux-state';
-
+import { ESportsTournament } from '../../../types/esports-api/esports-tournament.model';
+import { ESportsSeries } from '../../../types/esports-api/espots-series.model';
+import { ESportsMatch } from '../../../types/esports-api/esports-match.model';
 
 // Data API
 // Get Tournaments
@@ -29,8 +31,7 @@ export function getDotaTournamentsRequest(): T.GetDotaTournamentsRequest {
 }
 export function getDotaTournamentsSuccess(payload, sortedTournaments): T.GetDotaTournamentsSuccess {
   return {
-    type:
-      C.GET_DOTA_TOURNAMENTS_SUCCESS,
+    type: C.GET_DOTA_TOURNAMENTS_SUCCESS,
     payload,
     sortedTournaments
   }
@@ -57,13 +58,14 @@ export function getDotaTournamentsFailure(err): T.GetDotaTournamentsFailure {
 
 // This uses mock data to reduce requests to api
 export const getDotaTournaments = (): ThunkAction<
-  Promise<T.DotaActionTypes>, ReduxState, null, T.DotaActionTypes
+  Promise<ESportsTournament[]>, ReduxState, null, T.DotaActionTypes
 > => async (dispatch) => {
   dispatch(getDotaTournamentsRequest());
   await sleep(1000);
-  const sortedTournaments = sortESportsTournaments(TOURNAMENTS);
+  const tournaments = TOURNAMENTS as ESportsTournament[];
+  const sortedTournaments = sortESportsTournaments(tournaments);
   dispatch(getDotaTournamentsSuccess(TOURNAMENTS, sortedTournaments));
-  return TOURNAMENTS;
+  return tournaments;
 };
 
 // Get Series
@@ -101,8 +103,9 @@ export const getDotaSeries = (): ThunkAction<
 > => async (dispatch) => {
   dispatch(getDotaSeriesRequest());
   await sleep(1000);
-  const sortedSeries = sortESportsSeries(SERIES);
-  return dispatch(getDotaSeriesSuccess(SERIES, sortedSeries));
+  const series = SERIES as ESportsSeries[];
+  const sortedSeries = sortESportsSeries(series);
+  return dispatch(getDotaSeriesSuccess(series, sortedSeries));
 };
 
 // Get Matches
@@ -136,13 +139,14 @@ export function getDotaMatchesFailure(err): T.GetDotaMatchesFailure {
 // };
 
 export const getDotaMatches = (): ThunkAction<
-  Promise<T.DotaActionTypes>, ReduxState, null, T.DotaActionTypes
+  Promise<ESportsMatch[]>, ReduxState, null, T.DotaActionTypes
 > => async (dispatch) => {
   dispatch(getDotaMatchesRequest());
   await sleep(1000);
-  const matchesTeams = getESportsTeamsFromMatches(MATCHES);
+  const matches = MATCHES as ESportsMatch[];
+  const matchesTeams = getESportsTeamsFromMatches(matches);
   dispatch(getDotaMatchesSuccess(sortESportByDate(MATCHES), matchesTeams));
-  return MATCHES;
+  return matches;
 };
 
 // Get A Tournament's Matches
