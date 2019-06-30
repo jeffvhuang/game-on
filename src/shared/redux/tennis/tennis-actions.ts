@@ -31,46 +31,48 @@ export function getTennisTournamentsFailure(err): T.GetTennisTournamentsFailure 
   return { type: C.GET_TENNIS_TOURNAMENTS_FAILURE, err }
 }
 
-// export function getTennisTournaments() {
-//   return async function (dispatch) => {
-//     dispatch(getTennisTournamentsRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS,
-//     }).then(response => {
-//       const today = new Date();
-//       const thisYear = today.getFullYear();
-
-//       const tournaments = response.data.filter(t => 
-//         ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
-//         t.currentSeason.year == thisYear);
-
-//       const sortedTournaments = sortTennisSchedule(tournaments);
-//       dispatch(getTennisTournamentsSuccess(tournaments, sortedTournaments));
-//     }).catch(err => {
-//       dispatch(getTennisTournamentsFailure(err));
-//       throw(err);
-//     });
-//   };
-// };
-
-// return mock data
-
 export const getTennisTournaments = (): ThunkAction<
-  Promise<T.TennisActionTypes>, ReduxState, null, T.TennisActionTypes
+  Promise<void>, // The type of the last action to be dispatched - will always be promise<T> for async actions
+  ReduxState, // The type for the data within the last action
+  null, // The type of the parameter for the nested function 
+  T.TennisActionTypes // The type of the last action to be dispatched
 > => async (dispatch) => {
   dispatch(getTennisTournamentsRequest());
-  await sleep(1000);
-  const today = new Date();
-  const thisYear = today.getFullYear().toString();
+  return axios({
+    method: 'get',
+    url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS,
+  }).then(response => {
+    const today = new Date();
+    const thisYear = today.getFullYear();
 
-  const tournaments = TOURNAMENTS.filter(t =>
-    ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
-    t.currentSeason.year == thisYear);
+    const tournaments = response.data.filter(t =>
+      ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
+      t.currentSeason.year == thisYear);
 
-  const sortedTournaments = sortTennisSchedule(tournaments);
-  return dispatch(getTennisTournamentsSuccess(tournaments, sortedTournaments));
+    const sortedTournaments = sortTennisSchedule(tournaments);
+    dispatch(getTennisTournamentsSuccess(tournaments, sortedTournaments));
+  }).catch(err => {
+    dispatch(getTennisTournamentsFailure(err));
+    throw (err);
+  });
 };
+
+// return mock data
+// export const getTennisTournaments = (): ThunkAction<
+//   Promise<T.TennisActionTypes>, ReduxState, null, T.TennisActionTypes
+// > => async (dispatch) => {
+//   dispatch(getTennisTournamentsRequest());
+//   await sleep(1000);
+//   const today = new Date();
+//   const thisYear = today.getFullYear().toString();
+
+//   const tournaments = TOURNAMENTS.filter(t =>
+//     ((t.type == 'singles' && t.category.level) || t.type == 'mixed') &&
+//     t.currentSeason.year == thisYear);
+
+//   const sortedTournaments = sortTennisSchedule(tournaments);
+//   return dispatch(getTennisTournamentsSuccess(tournaments, sortedTournaments));
+// };
 
 // Get Tournament schedule
 export function getTennisTournamentScheduleRequest(): T.GetTennisTournamentScheduleRequest {
@@ -86,44 +88,37 @@ export function clearTennisTournamentScheduleSuccess(): T.ClearTennisTournamentS
   return { type: C.CLEAR_TENNIS_TOURNAMENT_SCHEDULE }
 }
 
-// export function getTennisTournamentSchedule(tournamentId) {
-//   return async function (dispatch) {
-//     dispatch(getTennisTournamentScheduleRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId + gameonAPI.SCHEDULE,
-//     }).then(response => {
-//       dispatch(getTennisTournamentScheduleSuccess(response.data));
-//       return response.data;
-//     }).catch(err => {
-//       dispatch(getTennisTournamentScheduleFailure(err));
-//       throw(err);
-//     });
-//   };
-// };
-
 export const getTennisTournamentSchedule = (tournamentId: string): ThunkAction<
-  Promise<TennisTournamentSchedule[]>, // The type of the last action to be dispatched - will always be promise<T> for async actions
-  ReduxState, // The type for the data within the last action
-  string, // The type of the parameter for the nested function 
-  T.TennisActionTypes // The type of the last action to be dispatched
+  Promise<TennisTournamentSchedule[]>, ReduxState, null, T.TennisActionTypes
 > => async (dispatch) => {
   dispatch(getTennisTournamentScheduleRequest());
-  await sleep(1000);
-  const schedule = TOURNAMENT_SCHEDULE as TennisTournamentSchedule[];
-  dispatch(getTennisTournamentScheduleSuccess(schedule));
-  return schedule;
+  return axios({
+    method: 'get',
+    url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId + gameonAPI.SCHEDULE,
+  }).then(response => {
+    dispatch(getTennisTournamentScheduleSuccess(response.data));
+    return response.data;
+  }).catch(err => {
+    dispatch(getTennisTournamentScheduleFailure(err));
+    throw (err);
+  });
 };
 
-export const clearTennisTournamentSchedule = ():
-  ThunkAction<
-    Promise<T.ClearTennisTournamentScheduleSuccess>,
-    ReduxState,
-    null,
-    T.ClearTennisTournamentScheduleSuccess
-  > => async (dispatch) => {
-    return dispatch(clearTennisTournamentScheduleSuccess());
-  };
+// export const getTennisTournamentSchedule = (tournamentId: string): ThunkAction<
+//   Promise<TennisTournamentSchedule[]>, ReduxState, string, T.TennisActionTypes
+// > => async (dispatch) => {
+//   dispatch(getTennisTournamentScheduleRequest());
+//   await sleep(1000);
+//   const schedule = TOURNAMENT_SCHEDULE as TennisTournamentSchedule[];
+//   dispatch(getTennisTournamentScheduleSuccess(schedule));
+//   return schedule;
+// };
+
+export const clearTennisTournamentSchedule = (): ThunkAction<
+  Promise<void>, ReduxState, null, T.ClearTennisTournamentScheduleSuccess
+> => async (dispatch) => {
+  dispatch(clearTennisTournamentScheduleSuccess());
+};
 
 // Get Teams
 export function getTennisTournamentInfoRequest(): T.GetTennisTournamentInfoRequest {
@@ -139,45 +134,36 @@ export function clearTennisTournamentInfoSuccess(): T.ClearTennisTournamentInfoS
   return { type: C.CLEAR_TENNIS_TOURNAMENT_INFO }
 }
 
-// export function getTennisTournamentInfo(tournamentId) {
-//   return async function (dispatch) {
-//     dispatch(getTennisTournamentInfoRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId,
-//     }).then(response => {
-//       dispatch(getTennisTournamentInfoSuccess(response.data));
-//       return response.data;
-//     }).catch(err => {
-//       dispatch(getTennisTournamentInfoFailure(err));
-//       throw(err);
-//     });
-//   };
-// };
-
-
 export const getTennisTournamentInfo = (tournamentId: string): ThunkAction<
-  Promise<TennisTournamentInfo>, // The type of the last action to be dispatched - will always be promise<T> for async actions
-  ReduxState, // The type for the data within the last action
-  null, // The type of the parameter for the nested function 
-  T.TennisActionTypes // The type of the last action to be dispatched
-> => {
-  return async function (dispatch) {
-    dispatch(getTennisTournamentInfoRequest());
-    await sleep(1000);
-    const info = TOURNAMENT_INFO as TennisTournamentInfo;
-    dispatch(getTennisTournamentInfoSuccess(info));
-    return info;
-  };
+  Promise<TennisTournamentInfo>, ReduxState, null, T.TennisActionTypes
+> => async (dispatch) => {
+  dispatch(getTennisTournamentInfoRequest());
+  return axios({
+    method: 'get',
+    url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId,
+  }).then(response => {
+    dispatch(getTennisTournamentInfoSuccess(response.data));
+    return response.data;
+  }).catch(err => {
+    dispatch(getTennisTournamentInfoFailure(err));
+    throw (err);
+  });
 };
 
+// export const getTennisTournamentInfo = (tournamentId: string): ThunkAction<
+//   Promise<TennisTournamentInfo>, ReduxState, null, T.TennisActionTypes
+// > => async (dispatch) => {
+//   dispatch(getTennisTournamentInfoRequest());
+//   await sleep(1000);
+//   const info = TOURNAMENT_INFO as TennisTournamentInfo;
+//   dispatch(getTennisTournamentInfoSuccess(info));
+//   return info;
+// };
+
 export const clearTennisTournamentInfo = (): ThunkAction<
-  Promise<T.ClearTennisTournamentInfoSuccess>,
-  ReduxState,
-  null,
-  T.ClearTennisTournamentInfoSuccess
+  Promise<void>, ReduxState, null, T.ClearTennisTournamentInfoSuccess
 > => async dispatch => {
-  return dispatch(clearTennisTournamentInfoSuccess());
+  dispatch(clearTennisTournamentInfoSuccess());
 };
 
 // Get video from youtube playlist of Tennis highlights

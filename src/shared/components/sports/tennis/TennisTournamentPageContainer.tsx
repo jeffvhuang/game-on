@@ -48,11 +48,11 @@ class TennisTournamentPageContainer extends React.Component<Props, State> {
 
     if (!tournamentInfo.tournament || tournamentInfo.tournament.id !== tournamentId) {
       isSameTournamentInfo = false;
-      props.actions.clearTennisTournamentInfo();
+      props.clearTennisTournamentInfo();
     }
 
     if (tournamentSchedule.length > 0 && tournamentSchedule[0].tournament.id !== tournamentId) {
-      props.actions.clearTennisTournamentSchedule();
+      props.clearTennisTournamentSchedule();
     }
 
     this.state = {
@@ -113,22 +113,5 @@ const mapDispatchToProps = {
   clearTennisTournamentSchedule,
   clearTennisTournamentInfo
 }
-
-// longhand form
-// const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, AnyAction>) => {
-//   return {
-//     getTennisTournamentSchedule,
-//     getTennisTournamentInfo,
-//     clearTennisTournamentSchedule,
-//     clearTennisTournamentInfo
-//   }
-// }
-
-// bindActionCreators({
-//   getTennisTournamentSchedule,
-//   getTennisTournamentInfo,
-//   clearTennisTournamentSchedule,
-//   clearTennisTournamentInfo
-// }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);

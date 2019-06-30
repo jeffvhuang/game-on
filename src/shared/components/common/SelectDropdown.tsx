@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Select } from 'antd';
 
 interface Props {
-  handleChange: (value: string) => void;
+  handleChange: (values: string[]) => void;
   options: any[]
 };
 

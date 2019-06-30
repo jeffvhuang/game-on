@@ -10,6 +10,11 @@ interface Props {
 };
 
 function TennisTournaments({ header, tournaments, values }: Props) {
+  // Antd Select dropdown uses name value rather than id to be able to search
+  const levelValues = values.map(function (value) {
+    return value.toLowerCase().replace(' ', '_');
+  });
+  
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
@@ -17,7 +22,7 @@ function TennisTournaments({ header, tournaments, values }: Props) {
         tournaments.map((t, i) => <TennisTournamentDate key={i} tournament={t} />)
       ) : (
         tournaments.map((t, i) => {
-          if (values.some(v => v == t.category.level || v == t.type)) {
+          if (levelValues.some(v => v == t.category.level || v == t.type)) {
             return <TennisTournamentDate key={i} tournament={t} />;
           }
         })
