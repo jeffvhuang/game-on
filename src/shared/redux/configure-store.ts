@@ -8,7 +8,7 @@ import { ReduxState } from './redux-state';
 
 // Create a configure store function of type `ReduxState`
 export default function configureStore(preloadedState?: ReduxState): Store<ReduxState> {
-  const middlewares = [loggerMiddleware, thunkMiddleware];
+  const middlewares = [thunkMiddleware, loggerMiddleware];
   const middlewareEnhancer = applyMiddleware(...middlewares);
   
   const enhancers = [middlewareEnhancer];
