@@ -1,7 +1,7 @@
 export interface TennisTournamentRound {
   type: string;
   number: number;
-  name: string;
-  cupRoundMatchNumber: number;
-  cupRoundMatches: number;
+  name: string | null;
+  cupRoundMatchNumber: number | null;
+  cupRoundMatches: number | null;
 }

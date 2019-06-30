@@ -1,8 +1,8 @@
 export interface TennisSeason {
-  startDate: string;
-  endDate: string;
+  startDate: string | null;
+  endDate: string | null;
   year: string;
-  tournamentId: string;
+  tournamentId: string | null;
   id: string;
   name: string;
 }

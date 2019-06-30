@@ -1,5 +1,5 @@
 export interface TennisCategory {
-  level: string;
+  level: string | null;
   id: string;
   name: string;
 }

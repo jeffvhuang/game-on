@@ -93,8 +93,13 @@ export function sortTennisSchedule(data: TennisTournament[]) {
 
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
-    if (new Date(t.currentSeason.startDate).getTime() > now) upcoming.push(t);
-    else if (new Date(t.currentSeason.endDate).getTime() < now) completed.push(t);
+    const startDate = (t.currentSeason && t.currentSeason.startDate) ? 
+      t.currentSeason.startDate : "Sun Dec 31 2199";
+    const endDate = (t.currentSeason && t.currentSeason.endDate) ? 
+      t.currentSeason.endDate : "Sun Dec 31 2199";
+
+    if (new Date(startDate).getTime() > now) upcoming.push(t);
+    else if (new Date(endDate).getTime() < now) completed.push(t);
     else ongoing.push(t);
   });
 
@@ -108,9 +113,15 @@ export function sortTennisSchedule(data: TennisTournament[]) {
 
 function sortTennisByDate(data: TennisTournament[]) {
   return data.sort(function (a, b) {
-    const dateA = a.currentSeason.startDate;
-    const dateB = b.currentSeason.startDate;
-    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+    if (a.currentSeason && a.currentSeason.startDate && b.currentSeason && b.currentSeason.startDate) {
+      const dateA = a.currentSeason.startDate;
+      const dateB = b.currentSeason.startDate;
+      return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+    } else if (b.currentSeason && b.currentSeason.startDate && (!a.currentSeason || !a.currentSeason.startDate)) 
+      return 1;
+    else if (a.currentSeason && a.currentSeason.startDate && (!b.currentSeason || !b.currentSeason.startDate))
+      return -1;
+    else return 0;
   });
 }
 
