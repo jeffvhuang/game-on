@@ -10,6 +10,8 @@ import { ESportsMatch } from '../types/esports-api/esports-match.model';
 
 // declare function require(path: string);
 const youtubeLogo = require('../../public/assets/Youtube-logo-2017-640x480.png');
+export const futureDateString = "Sun Dec 31 2199";
+export const futureDate = new Date(futureDateString);
 
 // Sleep function to delay tasks to mock delayed api response
 export function sleep(ms) {
@@ -94,9 +96,9 @@ export function sortTennisSchedule(data: TennisTournament[]) {
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
     const startDate = (t.currentSeason && t.currentSeason.startDate) ? 
-      t.currentSeason.startDate : "Sun Dec 31 2199";
+      t.currentSeason.startDate : futureDateString;
     const endDate = (t.currentSeason && t.currentSeason.endDate) ? 
-      t.currentSeason.endDate : "Sun Dec 31 2199";
+      t.currentSeason.endDate : futureDateString;
 
     if (new Date(startDate).getTime() > now) upcoming.push(t);
     else if (new Date(endDate).getTime() < now) completed.push(t);
@@ -166,8 +168,8 @@ export function sortESportsSeries(data: ESportsSeries[]) {
   // Separate series into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
     const series = data[i];
-    const beginDate = (series.beginAt) ? new Date(series.beginAt) : new Date("Sun Dec 31 2199");    
-    const endDate = (series.endAt) ? new Date(series.endAt) : new Date("Sun Dec 31 2199");
+    const beginDate = (series.beginAt) ? new Date(series.beginAt) : futureDate;    
+    const endDate = (series.endAt) ? new Date(series.endAt) : futureDate;
 
     if (beginDate.getTime() > now) upcomingSeries.push(series);
     else if (endDate.getTime() < now) completedSeries.push(series);
@@ -189,7 +191,7 @@ export function sortESportsMatches(data: ESportsMatch[]) {
 
   // Separate matches into today followed by upcoming and past
   data.forEach(match => {
-    const matchDate = new Date(match.beginAt);
+    const matchDate = (match.beginAt) ? new Date(match.beginAt) : futureDate;
 
     if (isSameDate(dateToday, matchDate)) {
       today.push(match);
@@ -334,7 +336,7 @@ export function isSameDate(dateTestedAgainst, dateToTest) {
 }
 
 // Given a Date object, give the time formatted in 00:00
-export function getFormattedTime(date) {
+export function getFormattedTime(date: Date): string {
   const h = (date.getHours() < 10 ? '0' : '') + date.getHours(),
     m = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
   return h + ':' + m;

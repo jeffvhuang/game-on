@@ -90,12 +90,12 @@ class LolMatchesContainer extends React.Component<Props, State> {
 
   getWinnerName = (winnerId, opponents) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return winner.opponent.name;
+    return (winner) ? winner.opponent.name : null;
   }
 
   getWinnerLogo = (winnerId, opponents) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return winner.opponent.imageUrl;
+    return (winner) ? winner.opponent.imageUrl : null;
   }
 
   render() {

@@ -5,7 +5,7 @@ export interface ESportsSeriesBase {
   slug: string;
   season: string | null;
   prizepool: string | null;
-  name: string;
+  name: string | null;
   leagueId: number;
   id: number;
   fullName: string | null;

@@ -1,4 +1,4 @@
 export interface ESportsWinner {
-  type: string;
-  id: number;
+  type: string | null;
+  id: number | null;
 }

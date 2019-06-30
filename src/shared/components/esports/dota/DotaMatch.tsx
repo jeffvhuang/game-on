@@ -9,8 +9,10 @@ interface Props {
 };
 
 function DotaMatch({ match }: Props) {
-  const startDate = new Date(match.beginAt);
-  
+  const startDate = (match.beginAt) ? new Date(match.beginAt) : null;
+  const dateString = (startDate) ? startDate.toDateString().slice(0, -5) : "No Date";
+  const time = (startDate) ? getFormattedTime(startDate) : null;
+
   return (
     <Row>
       <Col span={5}>{match.league.name}</Col>
@@ -21,9 +23,9 @@ function DotaMatch({ match }: Props) {
       <Col span={7}>
       {match.opponents[1].opponent.name} ({match.opponents[1].opponent.acronym})
       </Col>
-      <Col span={3}>{startDate.toDateString().slice(0, -5)}</Col>
+      <Col span={3}>{dateString}</Col>
       {/* <Col span={4}>{startDate.getDay()} {startDate.getMonth()} {startDate.getDate()}</Col> */}
-      <Col span={1}>{getFormattedTime(startDate)}</Col>
+      <Col span={1}>{time}</Col>
     </Row>
   );
 }

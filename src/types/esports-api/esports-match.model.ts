@@ -27,7 +27,7 @@ export interface ESportsMatch {
   live: ESportsLive;
   id: number;
   forfeit: boolean;
-  endAt: string;
+  endAt: string | null;
   draw: boolean;
-  beginAt: string;
+  beginAt: string | null;
 }
