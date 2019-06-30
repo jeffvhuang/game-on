@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { object } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -16,18 +14,10 @@ import { LolState } from '../../../redux/lol/lol-types';
 import { ReduxState } from '../../../redux/redux-state';
 import { ESportsOpponent } from '../../../../types/esports-api/esports-opponent.model';
 import { ESportsMatch } from '../../../../types/esports-api/esports-match.model';
-import { Select } from 'antd';
 
-interface StateProps {
-  lol: LolState;
-};
-
-interface DispatchProps {
-  getLolTournaments; getLolTournamentMatches;
-};
-
+interface StateProps { lol: LolState; };
+interface DispatchProps { getLolTournaments; getLolTournamentMatches; };
 type Props = StateProps & DispatchProps;
-
 interface State {
   values: string[];
   tournamentId?: number;
@@ -74,7 +64,7 @@ class LolTournamentContainer extends React.Component<Props, State> {
     return [];
   }
 
-  getMatchesForTable = (tournamentMatches, values) => {
+  getMatchesForTable = (tournamentMatches: ESportsMatch[], values: string[]) => {
     const matches = [] as any[];
     // Create objects for every match or filter matches that include one of the selected teams
     if (!values.length) {
@@ -93,15 +83,18 @@ class LolTournamentContainer extends React.Component<Props, State> {
     return matches;
   }
 
-  getMatchTableObject = match => {
-    const startDate = new Date(match.beginAt);
+  getMatchTableObject = (match: ESportsMatch) => {
+    const startDate = (match.beginAt) ? new Date(match.beginAt) : null;
+    const dateString = (startDate) ? startDate.toDateString().slice(0, -5) : null;
+    const time = (startDate) ? getFormattedTime(startDate) : null;
+
     return {
       key: match.id,
       name: match.name,
       team1: match.opponents[0].opponent.name,
       team2: match.opponents[1].opponent.name,
-      date: startDate.toDateString().slice(0, -5),
-      time: getFormattedTime(startDate),
+      date: dateString,
+      time: time,
       games: match.games,
       beginAt: match.beginAt,
       endAt: match.endAt,

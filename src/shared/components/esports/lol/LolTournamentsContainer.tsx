@@ -16,12 +16,8 @@ interface StateProps {
   selectTournament: (any) => void;
 };
 
-interface DispatchProps {
-  getLolTournaments;
-};
-
+interface DispatchProps { getLolTournaments; };
 type Props = StateProps & DispatchProps;
-
 interface State {
   values: string[];
   tournaments: ESportsTournament[];
@@ -60,7 +56,7 @@ class LolTournamentsContainer extends React.Component<Props, State> {
     this.setState({ tournaments });
   }
   
-  getTournamentsForCalendar = (tournaments) => {
+  getTournamentsForCalendar = (tournaments: ESportsTournament[]) => {
     const events = [] as any[];
 
     for (let i = 0; i < tournaments.length; i++) {

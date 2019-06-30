@@ -252,7 +252,7 @@ export function getESportsTeamsFromMatches(data: ESportsMatch[]) {
   return teams;
 }
 
-export function getTournamentName(tournament) {
+export function getTournamentName(tournament: ESportsTournament) {
   let tournamentName = '';
   if (tournament) {
     if (tournament.league) tournamentName += tournament.league.name + ' ';
