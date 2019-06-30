@@ -1,6 +1,5 @@
 import { paths, days, months } from './constants';
-declare function require(path: string);
-import * as youtubeLogo from '../../public/assets/Youtube-logo-2017-640x480.png';
+// import * as youtubeLogo from '../../public/assets/Youtube-logo-2017-640x480.png';
 import { NbaSchedule } from '../types/nba-api/nba-schedule.model';
 import { FootballSchedule } from '../types/football-api/football-schedule.model';
 import { TennisTournament } from '../types/tennis-api/tennis-tournament.model';
@@ -8,7 +7,9 @@ import { ESportsTournament } from '../types/esports-api/esports-tournament.model
 import { ESportsTeamBase } from '../types/esports-api/esports-team-base.model';
 import { ESportsSeries } from '../types/esports-api/espots-series.model';
 import { ESportsMatch } from '../types/esports-api/esports-match.model';
-import { ESportsTeam } from '../types/esports-api/esports-team.model';
+
+// declare function require(path: string);
+const youtubeLogo = require('../../public/assets/Youtube-logo-2017-640x480.png');
 
 // Sleep function to delay tasks to mock delayed api response
 export function sleep(ms) {
@@ -47,7 +48,7 @@ export function sortNBASchedule(data: NbaSchedule[]) {
  * sort schedule to find today and upcoming
  * @param {array} data 
  */
-export function sortFootballSchedule(data: FootballSchedule[]) {
+export function sortFootballSchedule(data: any[]) {
   const gamesToday: FootballSchedule[] = [];
   const upcoming: FootballSchedule[] = [];
   const beforeToday: FootballSchedule[] = [];

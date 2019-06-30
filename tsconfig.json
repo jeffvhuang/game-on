@@ -8,10 +8,11 @@
     "target": "es6", // specify ECMAScript target version
     "allowJs": true, // allow a partial TypeScript and JavaScript codebase
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
-    // "resolveJsonModule": true
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "removeComments": true
   },
   "include": [
-    "./src/"
+    "./src/**/*"
   ]
 }
