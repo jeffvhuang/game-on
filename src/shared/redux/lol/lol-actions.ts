@@ -160,27 +160,27 @@ export function clearLolTournamentMatchesSuccess(): T.ClearLolTournamentMatchesS
   return { type: C.CLEAR_LOL_TOURNAMENT_MATCHES }
 }
 
-export const getLolTournamentMatches = (tournamentId: string): ThunkAction<
-  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
-> => async (dispatch) => {
-  dispatch(getLolTournamentMatchesRequest());
-  return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES, {
-    params: { 'tournamentId': tournamentId }
-  }).then(response => {
-    return dispatch(getLolTournamentMatchesSuccess(response.data));
-  }).catch(err => {
-    return dispatch(getLolTournamentMatchesFailure(err));
-    // throw (err);
-  });
-};
-
 // export const getLolTournamentMatches = (tournamentId: string): ThunkAction<
 //   Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
 // > => async (dispatch) => {
 //   dispatch(getLolTournamentMatchesRequest());
-//   await sleep(1000);
-//   return dispatch(getLolTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES, {
+//     params: { 'tournamentId': tournamentId }
+//   }).then(response => {
+//     return dispatch(getLolTournamentMatchesSuccess(response.data));
+//   }).catch(err => {
+//     return dispatch(getLolTournamentMatchesFailure(err));
+//     // throw (err);
+//   });
 // };
+
+export const getLolTournamentMatches = (tournamentId: string): ThunkAction<
+  Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolTournamentMatchesRequest());
+  await sleep(1000);
+  return dispatch(getLolTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+};
 
 export const clearLolTournamentMatches = (): ThunkAction<
   T.LolActionTypes, ReduxState, null, T.LolActionTypes

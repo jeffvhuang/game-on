@@ -73,8 +73,9 @@ class TennisTournamentPageContainer extends React.Component<Props, State> {
       props.getTennisTournamentSchedule(tournamentId);
 
     if (!tournamentInfo.tournament || tournamentInfo.tournament.id !== tournamentId)
-      props.getTennisTournamentInfo(tournamentId).then(data =>
-        this.setState({ tournamentName: data.tournament.currentSeason.name }));
+      props.getTennisTournamentInfo(tournamentId).then(data => {
+        if (data) this.setState({ tournamentName: data.tournament.currentSeason.name });
+      });
   }
 
   handleChange = values => this.setState({ values });
