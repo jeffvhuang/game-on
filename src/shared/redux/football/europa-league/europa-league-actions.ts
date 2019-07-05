@@ -112,10 +112,10 @@ export function getEuropaLeagueVideosFailure(err): T.GetEuropaLeagueVideosFailur
 // };
 
 // mock data
-export const getEuropaLeagueVideos = (): ThunkAction<
-  Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
-> => async (dispatch) => {
-  dispatch(getEuropaLeagueVideosRequest());
-  await sleep(1500);
-  dispatch(getEuropaLeagueVideosSuccess(PLAYLIST.items));
-};
+// export const getEuropaLeagueVideos = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEuropaLeagueVideosRequest());
+//   await sleep(1500);
+//   dispatch(getEuropaLeagueVideosSuccess(PLAYLIST.items));
+// };

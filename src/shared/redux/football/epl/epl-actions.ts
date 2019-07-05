@@ -73,7 +73,7 @@ export function getEplTeamsFailure(err): T.GetEplTeamsFailure {
 //   });
 // };
 
-return mock data
+// return mock data
 export const getEplTeams = (): ThunkAction<
   Promise<T.EplActionTypes>, ReduxState, null, T.EplActionTypes
 > => async (dispatch) => {
