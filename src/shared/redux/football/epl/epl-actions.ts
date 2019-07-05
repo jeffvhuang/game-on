@@ -23,20 +23,19 @@ export function getEplScheduleFailure(err): T.GetEplScheduleFailure {
   return { type: C.GET_EPL_SCHEDULE_FAILURE, err }
 }
 
-// export function getEplSchedule() {
-//   return async function (dispatch) {
-//     dispatch(getEplScheduleRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.SCHEDULE,
-//     }).then(response => {
-//       const sortedSchedule = sortFootballSchedule(response.data);
-//       dispatch(getEplScheduleSuccess(response.data, sortedSchedule));
-//     }).catch(err => {
-//       dispatch(getEplScheduleFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getEplSchedule = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EplActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEplScheduleRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.SCHEDULE,
+//   }).then(response => {
+//     const sortedSchedule = sortFootballSchedule(response.data);
+//     dispatch(getEplScheduleSuccess(response.data, sortedSchedule));
+//   }).catch(err => {
+//     dispatch(getEplScheduleFailure(err));
+//   });
 // };
 
 // return mock data
@@ -60,22 +59,21 @@ export function getEplTeamsFailure(err): T.GetEplTeamsFailure {
   return { type: C.GET_EPL_TEAMS_FAILURE, err }
 }
 
-// export function getEplTeams() {
-//   return async function (dispatch) {
-//     dispatch(getEplTeamsRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.TEAMS
-//     }).then(response => {
-//       dispatch(getEplTeamsSuccess(response.data));
-//     }).catch(err => {
-//       dispatch(getEplTeamsFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getEplTeams = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EplActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEplTeamsRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.TEAMS
+//   }).then(response => {
+//     dispatch(getEplTeamsSuccess(response.data));
+//   }).catch(err => {
+//     dispatch(getEplTeamsFailure(err));
+//   });
 // };
 
-// return mock data
+return mock data
 export const getEplTeams = (): ThunkAction<
   Promise<T.EplActionTypes>, ReduxState, null, T.EplActionTypes
 > => async (dispatch) => {
@@ -95,30 +93,29 @@ export const getEplTeams = (): ThunkAction<
 //   return { type: C.GET_EPL_VIDEOS_FAILURE, err }
 // }
 
-// export function getEplVideos() {
-//   return async function (dispatch) {
-//     dispatch(getEplVideosRequest());
-//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-//       params: {
-//         'part': 'snippet',
-//         'playlistId': youtubeAPI.CHAMPIONS_LEAGUE_ID,
-//         'maxResults': '25',
-//         'key': youtubeAPI.KEY
-//       }
-//     }).then(response => {
-//       dispatch(getEplVideosSuccess(response.data.items));
-//     }).catch(err => {
-//       dispatch(getEplVideosFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getEplVideos = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EplActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEplVideosRequest());
+//   return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//     params: {
+//       'part': 'snippet',
+//       'playlistId': youtubeAPI.CHAMPIONS_LEAGUE_ID,
+//       'maxResults': '25',
+//       'key': youtubeAPI.KEY
+//     }
+//   }).then(response => {
+//     dispatch(getEplVideosSuccess(response.data.items));
+//   }).catch(err => {
+//     dispatch(getEplVideosFailure(err));
+//   });
 // };
 
 // mock data
 // export const getEplVideos = (): ThunkAction<
-//   Promise<T.EplActionTypes>, ReduxState, null, T.EplActionTypes
+//   Promise<void>, ReduxState, null, T.EplActionTypes
 // > => async (dispatch) => {
 //   dispatch(getEplVideosRequest());
 //   await sleep(1500);
-//   return dispatch(getEplVideosSuccess(PLAYLIST.items));
+//   dispatch(getEplVideosSuccess(PLAYLIST.items));
 // };

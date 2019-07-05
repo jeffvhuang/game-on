@@ -23,30 +23,29 @@ export function getEuropaLeagueScheduleFailure(err): T.GetEuropaLeagueScheduleFa
   return { type: C.GET_EUROPA_LEAGUE_SCHEDULE_FAILURE, err }
 }
 
-// export function getEuropaLeagueSchedule() {
-//   return async function (dispatch) {
-//     dispatch(getEuropaLeagueScheduleRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.SCHEDULE,
-//     }).then(response => {
-//       const sortedSchedule = sortFootballSchedule(response.data);
-//       dispatch(getEuropaLeagueScheduleSuccess(response.data, sortedSchedule));
-//     }).catch(err => {
-//       dispatch(getEuropaLeagueScheduleFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getEuropaLeagueSchedule = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEuropaLeagueScheduleRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.SCHEDULE,
+//   }).then(response => {
+//     const sortedSchedule = sortFootballSchedule(response.data);
+//     dispatch(getEuropaLeagueScheduleSuccess(response.data, sortedSchedule));
+//   }).catch(err => {
+//     dispatch(getEuropaLeagueScheduleFailure(err));
+//   });
 // };
 
 // return mock data
 export const getEuropaLeagueSchedule = (): ThunkAction<
-  Promise<T.EuropaLeagueActionTypes>, ReduxState, null, T.EuropaLeagueActionTypes
+  Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
 > => async (dispatch) => {
   dispatch(getEuropaLeagueScheduleRequest());
   await sleep(1000);
   const sortedSchedule = sortFootballSchedule(EUROPA_LEAGUE_SCHEDULE);
-  return dispatch(getEuropaLeagueScheduleSuccess(EUROPA_LEAGUE_SCHEDULE, sortedSchedule));
+  dispatch(getEuropaLeagueScheduleSuccess(EUROPA_LEAGUE_SCHEDULE, sortedSchedule));
 };
 
 // Get Teams
@@ -60,28 +59,27 @@ export function getEuropaLeagueTeamsFailure(err): T.GetEuropaLeagueTeamsFailure 
   return { type: C.GET_EUROPA_LEAGUE_TEAMS_FAILURE, err }
 }
 
-// export function getEuropaLeagueTeams() {
-//   return async function (dispatch) {
-//     dispatch(getEuropaLeagueTeamsRequest());
-//     return axios({
-//       method: 'get',
-//       url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.TEAMS
-//     }).then(response => {
-//       dispatch(getEuropaLeagueTeamsSuccess(response.data));
-//     }).catch(err => {
-//       dispatch(getEuropaLeagueTeamsFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getEuropaLeagueTeams = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEuropaLeagueTeamsRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.TEAMS
+//   }).then(response => {
+//     dispatch(getEuropaLeagueTeamsSuccess(response.data));
+//   }).catch(err => {
+//     dispatch(getEuropaLeagueTeamsFailure(err));
+//   });
 // };
 
 // return mock data
 export const getEuropaLeagueTeams = (): ThunkAction<
-  Promise<T.EuropaLeagueActionTypes>, ReduxState, null, T.EuropaLeagueActionTypes
+  Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
 > => async (dispatch) => {
   dispatch(getEuropaLeagueTeamsRequest());
   await sleep(1000);
-  return dispatch(getEuropaLeagueTeamsSuccess(EUROPA_LEAGUE_TEAMS));
+  dispatch(getEuropaLeagueTeamsSuccess(EUROPA_LEAGUE_TEAMS));
 };
 
 // Get video from youtube playlist of EuropaLeague highlights
@@ -95,30 +93,29 @@ export function getEuropaLeagueVideosFailure(err): T.GetEuropaLeagueVideosFailur
   return { type: C.GET_EUROPA_LEAGUE_VIDEOS_FAILURE, err }
 }
 
-// export function getEuropaLeagueVideos() {
-//   return async function (dispatch) {
-//     dispatch(getEuropaLeagueVideosRequest());
-//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-//       params: {
-//         'part': 'snippet',
-//         'playlistId': youtubeAPI.CHAMPIONS_LEAGUE_ID,
-//         'maxResults': '25',
-//         'key': youtubeAPI.KEY
-//       }
-//     }).then(response => {
-//       dispatch(getEuropaLeagueVideosSuccess(response.data.items));
-//     }).catch(err => {
-//       dispatch(getEuropaLeagueVideosFailure(err));
-//       throw(err);
-//     });
-//   };
+// export const getEuropaLeagueVideos = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
+// > => async (dispatch) => {
+//   dispatch(getEuropaLeagueVideosRequest());
+//   return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
+//     params: {
+//       'part': 'snippet',
+//       'playlistId': youtubeAPI.CHAMPIONS_LEAGUE_ID,
+//       'maxResults': '25',
+//       'key': youtubeAPI.KEY
+//     }
+//   }).then(response => {
+//     dispatch(getEuropaLeagueVideosSuccess(response.data.items));
+//   }).catch(err => {
+//     dispatch(getEuropaLeagueVideosFailure(err));
+//   });
 // };
 
 // mock data
-// export const getEuropaLeagueVideos = (): ThunkAction<
-//   Promise<T.EuropaLeagueActionTypes>, ReduxState, null, T.EuropaLeagueActionTypes
-// > => async (dispatch) => {
-//   dispatch(getEuropaLeagueVideosRequest());
-//   await sleep(1500);
-//   return dispatch(getEuropaLeagueVideosSuccess(PLAYLIST.items));
-// };
+export const getEuropaLeagueVideos = (): ThunkAction<
+  Promise<void>, ReduxState, null, T.EuropaLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getEuropaLeagueVideosRequest());
+  await sleep(1500);
+  dispatch(getEuropaLeagueVideosSuccess(PLAYLIST.items));
+};
