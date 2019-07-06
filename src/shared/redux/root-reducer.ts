@@ -8,6 +8,7 @@ import tennisReducer from './tennis/tennis-reducer';
 import lolReducer from './lol/lol-reducer';
 import { ReduxState } from './redux-state';
 import csgoReducer from './csgo/csgo-reducer';
+import overwatchReducer from './overwatch/overwatch-reducer';
 
 const rootReducer: Reducer<ReduxState> = combineReducers<ReduxState>({
   nba: nbaReducer,
@@ -17,7 +18,8 @@ const rootReducer: Reducer<ReduxState> = combineReducers<ReduxState>({
   tennis: tennisReducer,
   dota: dotaReducer,
   lol: lolReducer,
-  csgo: csgoReducer
+  csgo: csgoReducer,
+  overwatch: overwatchReducer
 });
 
 export default rootReducer;
