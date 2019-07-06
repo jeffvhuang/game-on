@@ -7,15 +7,17 @@ import europaLeagueReducer from './football/europa-league/europa-league-reducer'
 import tennisReducer from './tennis/tennis-reducer';
 import lolReducer from './lol/lol-reducer';
 import { ReduxState } from './redux-state';
+import csgoReducer from './csgo/csgo-reducer';
 
 const rootReducer: Reducer<ReduxState> = combineReducers<ReduxState>({
-  dota: dotaReducer,
   nba: nbaReducer,
   epl: eplReducer,
-  tennis: tennisReducer,
-  lol: lolReducer,
   championsLeague: championsLeagueReducer,
-  europaLeague: europaLeagueReducer
+  europaLeague: europaLeagueReducer,
+  tennis: tennisReducer,
+  dota: dotaReducer,
+  lol: lolReducer,
+  csgo: csgoReducer
 });
 
 export default rootReducer;

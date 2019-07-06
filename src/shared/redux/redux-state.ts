@@ -5,6 +5,7 @@ import { TennisState } from "./tennis/tennis-types";
 import { LolState } from "./lol/lol-types";
 import { ChampionsLeagueState } from "./football/champions-league/champions-league-types";
 import { EuropaLeagueState } from "./football/europa-league/europa-league-types";
+import { CsgoState } from "./csgo/csgo-types";
 
 export interface ReduxState {
   nba: NbaState,
@@ -14,4 +15,5 @@ export interface ReduxState {
   europaLeague: EuropaLeagueState,
   dota: DotaState,
   lol: LolState,
+  csgo: CsgoState
 }
