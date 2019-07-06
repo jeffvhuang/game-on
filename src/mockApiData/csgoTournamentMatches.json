@@ -1,0 +1,1604 @@
+[
+  {
+      "begin_at": "2019-07-04T12:45:00Z",
+      "draw": false,
+      "end_at": "2019-07-04T16:28:38Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-04T12:43:04Z",
+              "end_at": "2019-07-04T14:09:33Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7624,
+              "length": 5189,
+              "match_id": 546701,
+              "position": 1,
+              "winner": {
+                  "id": 3216,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-04T14:29:11Z",
+              "end_at": "2019-07-04T15:16:48Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7625,
+              "length": 2857,
+              "match_id": 546701,
+              "position": 2,
+              "winner": {
+                  "id": 3240,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-04T15:34:45Z",
+              "end_at": "2019-07-04T16:28:38Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7626,
+              "length": 3233,
+              "match_id": 546701,
+              "position": 3,
+              "winner": {
+                  "id": 3216,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546701,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-04T12:30:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546701"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-04T16:28:39Z",
+      "name": "Lower Bracket Final: mousesports vs Natus Vincere",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3240,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3240/MOUSE.png",
+                  "name": "mousesports",
+                  "slug": "mousesports-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3216,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+                  "name": "Natus Vincere",
+                  "slug": "natus-vincere-cs-go"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3216
+          },
+          {
+              "score": 1,
+              "team_id": 3240
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "mousesports-2019-07-04",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3216,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+          "name": "Natus Vincere",
+          "slug": "natus-vincere-cs-go"
+      },
+      "winner_id": 3216
+  },
+  {
+      "begin_at": "2019-07-04T12:55:09Z",
+      "draw": false,
+      "end_at": "2019-07-04T15:43:33Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-04T12:59:59Z",
+              "end_at": "2019-07-04T13:58:00Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7621,
+              "length": 3481,
+              "match_id": 546700,
+              "position": 1,
+              "winner": {
+                  "id": 3213,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-04T14:11:56Z",
+              "end_at": "2019-07-04T15:43:34Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7622,
+              "length": 5497,
+              "match_id": 546700,
+              "position": 2,
+              "winner": {
+                  "id": 3213,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546700,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-04T12:40:09Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546700"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-04T15:43:35Z",
+      "name": "Upper Bracket Final: Liquid vs NRG",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3213,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3213/LIQUID.png",
+                  "name": "Liquid",
+                  "slug": "liquid-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3256,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3256/NRG.png",
+                  "name": "NRG",
+                  "slug": "nrg"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3213
+          },
+          {
+              "score": 0,
+              "team_id": 3256
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "liquid-2019-07-04",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3213,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3213/LIQUID.png",
+          "name": "Liquid",
+          "slug": "liquid-cs-go"
+      },
+      "winner_id": 3213
+  },
+  {
+      "begin_at": "2019-07-03T16:15:00Z",
+      "draw": false,
+      "end_at": "2019-07-03T18:32:42Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-03T16:20:06Z",
+              "end_at": "2019-07-03T17:17:55Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7609,
+              "length": 3469,
+              "match_id": 546696,
+              "position": 1,
+              "winner": {
+                  "id": 3216,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-03T17:31:50Z",
+              "end_at": "2019-07-03T18:32:42Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7610,
+              "length": 3652,
+              "match_id": 546696,
+              "position": 2,
+              "winner": {
+                  "id": 3216,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546696,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-03T16:00:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546696"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-03T18:32:43Z",
+      "name": "Lower Bracket Semifinal 2: FURIA vs Natus Vincere",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": "",
+                  "id": 124530,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/124530/8297.png",
+                  "name": "FURIA",
+                  "slug": "furia"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3216,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+                  "name": "Natus Vincere",
+                  "slug": "natus-vincere-cs-go"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3216
+          },
+          {
+              "score": 0,
+              "team_id": 124530
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "furia-2019-07-03",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3216,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+          "name": "Natus Vincere",
+          "slug": "natus-vincere-cs-go"
+      },
+      "winner_id": 3216
+  },
+  {
+      "begin_at": "2019-07-03T13:45:08Z",
+      "draw": false,
+      "end_at": "2019-07-03T16:02:59Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-03T13:49:24Z",
+              "end_at": "2019-07-03T15:01:14Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7606,
+              "length": 4310,
+              "match_id": 546695,
+              "position": 1,
+              "winner": {
+                  "id": 3240,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-03T15:15:42Z",
+              "end_at": "2019-07-03T16:02:59Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7607,
+              "length": 2837,
+              "match_id": 546695,
+              "position": 2,
+              "winner": {
+                  "id": 3240,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546695,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-03T13:30:08Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546695"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-03T16:03:00Z",
+      "name": "Lower Bracket Semifinal 1: mousesports vs FaZe",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3240,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3240/MOUSE.png",
+                  "name": "mousesports",
+                  "slug": "mousesports-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3212,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png",
+                  "name": "FaZe",
+                  "slug": "faze"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3240
+          },
+          {
+              "score": 0,
+              "team_id": 3212
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "mousesports-2019-07-03",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3240,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3240/MOUSE.png",
+          "name": "mousesports",
+          "slug": "mousesports-cs-go"
+      },
+      "winner_id": 3240
+  },
+  {
+      "begin_at": "2019-07-02T16:44:55Z",
+      "draw": false,
+      "end_at": "2019-07-02T18:39:21Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T16:44:56Z",
+              "end_at": "2019-07-02T17:33:09Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7594,
+              "length": 2893,
+              "match_id": 546691,
+              "position": 1,
+              "winner": {
+                  "id": 124530,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-02T17:45:46Z",
+              "end_at": "2019-07-02T18:39:21Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7595,
+              "length": 3215,
+              "match_id": 546691,
+              "position": 2,
+              "winner": {
+                  "id": 124530,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546691,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T16:29:55Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546691"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T18:39:22Z",
+      "name": "Lower Bracket Round 1 Match 2: FURIA vs Renegades",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": "",
+                  "id": 124530,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/124530/8297.png",
+                  "name": "FURIA",
+                  "slug": "furia"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": "",
+                  "id": 3241,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3241/RENEGADES.png",
+                  "name": "Renegades",
+                  "slug": "renegades-cs-go"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 124530
+          },
+          {
+              "score": 0,
+              "team_id": 3241
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "furia-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": "",
+          "id": 124530,
+          "image_url": "https://cdn.pandascore.co/images/team/image/124530/8297.png",
+          "name": "FURIA",
+          "slug": "furia"
+      },
+      "winner_id": 124530
+  },
+  {
+      "begin_at": "2019-07-02T19:30:00Z",
+      "draw": false,
+      "end_at": "2019-07-02T21:43:33Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T19:34:10Z",
+              "end_at": "2019-07-02T20:28:16Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7591,
+              "length": 3246,
+              "match_id": 546690,
+              "position": 1,
+              "winner": {
+                  "id": 3256,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-02T20:43:39Z",
+              "end_at": "2019-07-02T21:43:34Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7592,
+              "length": 3594,
+              "match_id": 546690,
+              "position": 2,
+              "winner": {
+                  "id": 3256,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546690,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T19:15:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546690"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T21:43:35Z",
+      "name": "Upper Bracket Semifinal 2: NRG vs FaZe",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3256,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3256/NRG.png",
+                  "name": "NRG",
+                  "slug": "nrg"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3212,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png",
+                  "name": "FaZe",
+                  "slug": "faze"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3256
+          },
+          {
+              "score": 0,
+              "team_id": 3212
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "nrg-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3256,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3256/NRG.png",
+          "name": "NRG",
+          "slug": "nrg"
+      },
+      "winner_id": 3256
+  },
+  {
+      "begin_at": "2019-07-02T14:40:00Z",
+      "draw": false,
+      "end_at": "2019-07-02T16:28:35Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T14:40:31Z",
+              "end_at": "2019-07-02T15:30:18Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7588,
+              "length": 2986,
+              "match_id": 546689,
+              "position": 1,
+              "winner": {
+                  "id": 3240,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-02T15:44:24Z",
+              "end_at": "2019-07-02T16:28:36Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7589,
+              "length": 2651,
+              "match_id": 546689,
+              "position": 2,
+              "winner": {
+                  "id": 3240,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546689,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T14:25:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546689"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T16:28:37Z",
+      "name": "Lower Bracket Round 1 Match 1: mousesports vs MVP PK",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3240,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3240/MOUSE.png",
+                  "name": "mousesports",
+                  "slug": "mousesports-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3259,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3259/MVP.png",
+                  "name": "MVP PK",
+                  "slug": "mvp-pk"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3240
+          },
+          {
+              "score": 0,
+              "team_id": 3259
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "mousesports-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3240,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3240/MOUSE.png",
+          "name": "mousesports",
+          "slug": "mousesports-cs-go"
+      },
+      "winner_id": 3240
+  },
+  {
+      "begin_at": "2019-07-02T15:24:48Z",
+      "draw": false,
+      "end_at": "2019-07-02T19:16:15Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T15:24:48Z",
+              "end_at": "2019-07-02T16:49:19Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7585,
+              "length": 5070,
+              "match_id": 546688,
+              "position": 1,
+              "winner": {
+                  "id": 3213,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-02T17:05:56Z",
+              "end_at": "2019-07-02T18:10:35Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7586,
+              "length": 3879,
+              "match_id": 546688,
+              "position": 2,
+              "winner": {
+                  "id": 3216,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          },
+          {
+              "begin_at": "2019-07-02T18:26:46Z",
+              "end_at": "2019-07-02T19:16:15Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7587,
+              "length": 2969,
+              "match_id": 546688,
+              "position": 3,
+              "winner": {
+                  "id": 3213,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546688,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T15:09:48Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546688"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T19:16:16Z",
+      "name": "Upper Bracket Semifinal 1: Natus Vincere vs Liquid",
+      "number_of_games": 3,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3216,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+                  "name": "Natus Vincere",
+                  "slug": "natus-vincere-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3213,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3213/LIQUID.png",
+                  "name": "Liquid",
+                  "slug": "liquid-cs-go"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 2,
+              "team_id": 3213
+          },
+          {
+              "score": 1,
+              "team_id": 3216
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "natus-vincere-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3213,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3213/LIQUID.png",
+          "name": "Liquid",
+          "slug": "liquid-cs-go"
+      },
+      "winner_id": 3213
+  },
+  {
+      "begin_at": "2019-07-02T11:25:00Z",
+      "draw": false,
+      "end_at": "2019-07-02T12:09:19Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T11:25:45Z",
+              "end_at": "2019-07-02T12:09:20Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7580,
+              "length": 2614,
+              "match_id": 546683,
+              "position": 1,
+              "winner": {
+                  "id": 3256,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546683,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T11:10:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546683"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T12:09:20Z",
+      "name": "FURIA vs NRG",
+      "number_of_games": 1,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": "",
+                  "id": 124530,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/124530/8297.png",
+                  "name": "FURIA",
+                  "slug": "furia"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3256,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3256/NRG.png",
+                  "name": "NRG",
+                  "slug": "nrg"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 1,
+              "team_id": 3256
+          },
+          {
+              "score": 0,
+              "team_id": 124530
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "furia-vs-nrg-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3256,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3256/NRG.png",
+          "name": "NRG",
+          "slug": "nrg"
+      },
+      "winner_id": 3256
+  },
+  {
+      "begin_at": "2019-07-02T11:25:00Z",
+      "draw": false,
+      "end_at": "2019-07-02T12:33:40Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T11:28:09Z",
+              "end_at": "2019-07-02T12:33:41Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7579,
+              "length": 3931,
+              "match_id": 546682,
+              "position": 1,
+              "winner": {
+                  "id": 3212,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546682,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T11:10:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546682"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T12:33:41Z",
+      "name": "FaZe vs Renegades",
+      "number_of_games": 1,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3212,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png",
+                  "name": "FaZe",
+                  "slug": "faze"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": "",
+                  "id": 3241,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3241/RENEGADES.png",
+                  "name": "Renegades",
+                  "slug": "renegades-cs-go"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 1,
+              "team_id": 3212
+          },
+          {
+              "score": 0,
+              "team_id": 3241
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "faze-vs-renegades-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3212,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3212/FAZE_CLAN.png",
+          "name": "FaZe",
+          "slug": "faze"
+      },
+      "winner_id": 3212
+  },
+  {
+      "begin_at": "2019-07-02T10:05:00Z",
+      "draw": false,
+      "end_at": "2019-07-02T11:04:12Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T10:07:06Z",
+              "end_at": "2019-07-02T11:04:12Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7578,
+              "length": 3426,
+              "match_id": 546681,
+              "position": 1,
+              "winner": {
+                  "id": 3216,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546681,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T09:50:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546681"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T11:04:13Z",
+      "name": "Natus Vincere vs mousesports",
+      "number_of_games": 1,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3216,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+                  "name": "Natus Vincere",
+                  "slug": "natus-vincere-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3240,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3240/MOUSE.png",
+                  "name": "mousesports",
+                  "slug": "mousesports-cs-go"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 1,
+              "team_id": 3216
+          },
+          {
+              "score": 0,
+              "team_id": 3240
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "natus-vincere-vs-mousesports-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3216,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3216/NATUS_VINCERE.png",
+          "name": "Natus Vincere",
+          "slug": "natus-vincere-cs-go"
+      },
+      "winner_id": 3216
+  },
+  {
+      "begin_at": "2019-07-02T10:05:00Z",
+      "draw": false,
+      "end_at": "2019-07-02T11:08:16Z",
+      "forfeit": false,
+      "games": [
+          {
+              "begin_at": "2019-07-02T10:07:30Z",
+              "end_at": "2019-07-02T11:08:17Z",
+              "finished": true,
+              "forfeit": false,
+              "id": 7577,
+              "length": 3646,
+              "match_id": 546680,
+              "position": 1,
+              "winner": {
+                  "id": 3213,
+                  "type": "Team"
+              },
+              "winner_type": "Team"
+          }
+      ],
+      "id": 546680,
+      "league": {
+          "id": 4158,
+          "image_url": "https://cdn.pandascore.co/images/league/image/4158/800px-Esl_logo.png",
+          "live_supported": true,
+          "modified_at": "2019-02-25T17:17:32Z",
+          "name": "ESL",
+          "slug": "cs-go-esl",
+          "url": null
+      },
+      "league_id": 4158,
+      "live": {
+          "opens_at": "2019-07-02T09:50:00Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/546680"
+      },
+      "match_type": "best_of",
+      "modified_at": "2019-07-02T11:08:17Z",
+      "name": "Liquid vs MVP PK",
+      "number_of_games": 1,
+      "opponents": [
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3213,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3213/LIQUID.png",
+                  "name": "Liquid",
+                  "slug": "liquid-cs-go"
+              },
+              "type": "Team"
+          },
+          {
+              "opponent": {
+                  "acronym": null,
+                  "id": 3259,
+                  "image_url": "https://cdn.pandascore.co/images/team/image/3259/MVP.png",
+                  "name": "MVP PK",
+                  "slug": "mvp-pk"
+              },
+              "type": "Team"
+          }
+      ],
+      "results": [
+          {
+              "score": 1,
+              "team_id": 3213
+          },
+          {
+              "score": 0,
+              "team_id": 3259
+          }
+      ],
+      "serie": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "description": null,
+          "end_at": null,
+          "full_name": "One cologne 2019",
+          "id": 1741,
+          "league_id": 4158,
+          "modified_at": "2019-06-27T15:36:56Z",
+          "name": "One Cologne",
+          "prizepool": "300000 United States Dollar",
+          "season": null,
+          "slug": "cs-go-esl-one-cologne-2019",
+          "winner_id": null,
+          "winner_type": null,
+          "year": 2019
+      },
+      "serie_id": 1741,
+      "slug": "liquid-vs-mvp-pk-2019-07-02",
+      "status": "finished",
+      "tournament": {
+          "begin_at": "2019-07-02T10:00:00Z",
+          "end_at": "2019-07-07T10:00:00Z",
+          "id": 2442,
+          "league_id": 4158,
+          "modified_at": "2019-07-04T15:52:03Z",
+          "name": "Group a",
+          "serie_id": 1741,
+          "slug": "cs-go-esl-one-cologne-2019-group-a",
+          "winner_id": 3213,
+          "winner_type": "Team"
+      },
+      "tournament_id": 2442,
+      "videogame": {
+          "id": 3,
+          "name": "CS:GO",
+          "slug": "cs-go"
+      },
+      "videogame_version": null,
+      "winner": {
+          "acronym": null,
+          "id": 3213,
+          "image_url": "https://cdn.pandascore.co/images/team/image/3213/LIQUID.png",
+          "name": "Liquid",
+          "slug": "liquid-cs-go"
+      },
+      "winner_id": 3213
+  }
+]
