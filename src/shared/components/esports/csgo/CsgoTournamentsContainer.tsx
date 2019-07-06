@@ -73,9 +73,6 @@ class CsgoTournamentsContainer extends React.Component<Props, State> {
   }
 
   render() {
-
-    console.log(this.state);
-    console.log(this.getTournamentsForCalendar(this.state.tournaments));
     return (
       <div className="section">
         <div className="select-dd">

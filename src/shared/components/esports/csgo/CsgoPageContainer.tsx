@@ -5,8 +5,8 @@ import { Tabs } from 'antd';
 import { paths } from '../../../../helpers/constants';
 import { getCsgoTournaments, getCsgoTournamentMatches } from '../../../redux/csgo/csgo-actions';
 import CsgoTournamentsContainer from './CsgoTournamentsContainer';
-// import CsgoTournamentContainer from './CsgoTournamentContainer';
-// import CsgoMatchesContainer from './CsgoMatchesContainer';
+import CsgoTournamentContainer from './CsgoTournamentContainer';
+import CsgoMatchesContainer from './CsgoMatchesContainer';
 import { CsgoState } from '../../../redux/csgo/csgo-types';
 import { ReduxState } from '../../../redux/redux-state';
 
@@ -59,10 +59,10 @@ class CsgoPageContainer extends React.Component<Props, State> {
             {/* <CsgoTournamentContainer selectTournament={this.selectTournament}
               tournamentId={this.state.tournamentId}
               tournamentName={this.state.tournamentName} /> */}
-            {/* <CsgoTournamentContainer /> */}
+            <CsgoTournamentContainer />
           </TabPane>
           <TabPane tab="Matches" key="3">
-            {/* <CsgoMatchesContainer /> */}
+            <CsgoMatchesContainer />
           </TabPane>
         </Tabs>
       </div>
