@@ -12,6 +12,7 @@ import TennisTournamentPageContainer from './components/sports/tennis/TennisTour
 import DotaPageContainer from './components/esports/dota/DotaPageContainer';
 import LolPageContainer from './components/esports/lol/LolPageContainer';
 import CsgoPageContainer from './components/esports/csgo/CsgoPageContainer';
+import OverwatchPageContainer from './components/esports/overwatch/OverwatchPageContainer';
 import EventsPageContainer from './components/events/EventsPageContainer';
 import VideoPageContainer from './components/video/VideoPageContainer';
 
@@ -30,6 +31,7 @@ export default class Routes extends React.Component {
         <Route path={paths.ESPORTS + '/dota'} component={DotaPageContainer} />
         <Route path={paths.ESPORTS + '/lol'} component={LolPageContainer} />
         <Route path={paths.ESPORTS + '/csgo'} component={CsgoPageContainer} />
+        <Route path={paths.ESPORTS + '/overwatch'} component={OverwatchPageContainer} />
         <Route path={paths.EVENTS} component={EventsPageContainer} />
         <Route path={paths.VIDEO + '/:vidId'} component={VideoPageContainer} />
       </Switch>
