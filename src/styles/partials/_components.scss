@@ -18,12 +18,18 @@ $winner-header-col-width: 10%;
   }
 }
 
-.carousel-container {
+.posters-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
 
-  .carousel {
-    width: 50vw;
+  .poster {
+    width: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 

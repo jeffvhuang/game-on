@@ -22,8 +22,8 @@ export default class Routes extends React.Component {
       <Switch>
         <Route exact path={paths.LANDING} component={LandingPageContainer} />
         <Route path={paths.LOGIN} component={LoginPageContainer} />
-        <Route path={paths.HIGHLIGHTS + '/:sport'} component={SpecificHighlightsContainer} />
-        <Route path={paths.HIGHLIGHTS} component={HighlightsPageContainer} />
+        {/* <Route path={paths.HIGHLIGHTS + '/:sport'} component={SpecificHighlightsContainer} />
+        <Route path={paths.HIGHLIGHTS} component={HighlightsPageContainer} /> */}
         <Route path={paths.SPORTS + '/basketball'} component={BasketballPageContainer} />
         <Route path={paths.SPORTS + '/football'} component={FootballPageContainer} />
         <Route path={paths.SPORTS + '/tennis/:tournamentNumber'} component={TennisTournamentPageContainer} />

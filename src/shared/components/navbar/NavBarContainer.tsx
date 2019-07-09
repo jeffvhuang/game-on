@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Menu, Icon } from 'antd';
-import { appName, paths, sports, esportsTitles } from '../../../helpers/constants';
 import { Link } from 'react-router-dom';
+
+import { appName, paths, sports, esportsTitles } from '../../../helpers/constants';
 
 const Item = Menu.Item;
 const SubMenu = Menu.SubMenu;
@@ -26,9 +27,9 @@ class NavBarContainer extends React.Component<{}, State> {
             <Icon type="play-circle" />{appName}
           </Link>
         </Item>
-        <Item key="highlights">
+        {/* <Item key="highlights">
           <Link to={paths.HIGHLIGHTS}>Highlights</Link>
-        </Item>
+        </Item> */}
         <SubMenu title="Sports">
           <Item key="basketball">
             <Link to={paths.SPORTS + paths.BASKETBALL}>{sports.BASKETBALL}</Link>

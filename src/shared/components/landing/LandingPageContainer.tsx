@@ -4,7 +4,6 @@ import HighlightsContainer from './HighlightsContainer';
 import EventsContainer from './EventsContainer';
 
 interface State {
-  videos: any[];
 }
 
 class LandingPageContainer extends React.Component<{}, State> {
@@ -12,12 +11,6 @@ class LandingPageContainer extends React.Component<{}, State> {
     super(props);
 
     this.state = {
-      videos: [
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video2",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video3",
-        "https://dummyimage.com/200x160/000/fff.jpg&text=Video4"
-      ]
     };
   }
   
@@ -25,7 +18,7 @@ class LandingPageContainer extends React.Component<{}, State> {
     return (
       <div>
         <Posters />
-        <HighlightsContainer videos={this.state.videos} />
+        {/* <HighlightsContainer videos={this.state.videos} /> */}
         <EventsContainer />
       </div>
     );
