@@ -18,8 +18,8 @@ function TournamentSelectDropdown({ handleChange, options }: Props) {
       size="large"
       style={{ width: '80%' }}
       allowClear >
-      {options.map((option, i) => {
-        return <Option key={i} value={getTournamentName(option)}>{getTournamentName(option)}</Option>;
+      {options.map((option) => {
+        return <Option key={option.id} value={getTournamentName(option) + ' ' + option.id}>{getTournamentName(option)}</Option>;
       })}
     </Select>
   );

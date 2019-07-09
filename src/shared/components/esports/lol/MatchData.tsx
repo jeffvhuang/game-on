@@ -18,12 +18,12 @@ function MatchData({ match, getWinnerName, getWinnerLogo }: Props) {
       {now < beginDate ? (
         <div className="game-row">Match has not begun</div>
       ) : (
-        match.games.map(game => {
+        match.games.map((game, i) => {
           const winnerId = (game.winner) ? game.winner.id : null;
           const duration = (game.length) ? Math.floor(game.length/60) + '.' + game.length%60 : null;
 
           return (game.finished) ? (
-            <div key={game.id} className="game-row">
+            <div key={i} className="game-row">
               <div>Game {game.position}</div>
               <div>Winner:</div>
               <div>
@@ -33,7 +33,7 @@ function MatchData({ match, getWinnerName, getWinnerLogo }: Props) {
               <div>Duration: {duration}</div>
             </div>
           ) : (
-            <div key={game.id} className="game-row">Game has not finished</div>
+            <div key={i} className="game-row">Game has not finished</div>
           );
         })
       )}
