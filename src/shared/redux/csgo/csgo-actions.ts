@@ -43,7 +43,7 @@ export function getCsgoTournamentsFailure(err): T.GetCsgoTournamentsFailure {
 //   Promise<ESportsTournament[]>, ReduxState, null, T.CsgoActionTypes
 // > => async (dispatch) => {
 //   dispatch(getCsgoTournamentsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CSGO + gameonAPI.TOURNAMENTS)
+//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.TOURNAMENTS)
 //     .then(response => {
 //       const sortedTournaments = sortESportsTournaments(response.data);
 //       dispatch(getCsgoTournamentsSuccess(response.data, sortedTournaments));
@@ -85,7 +85,7 @@ export function getCsgoMatchesFailure(err): T.GetCsgoMatchesFailure {
 //   Promise<ESportsMatch[]>, ReduxState, null, T.CsgoActionTypes
 // > => async (dispatch) => {
 //   dispatch(getCsgoMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CSGO + gameonAPI.MATCHES)
+//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.MATCHES)
 //     .then(response => {
 //       const matchesTeams = getESportsTeamsFromMatches(response.data);
 //       const sortedMatches = sortESportByDate(response.data);
@@ -125,7 +125,7 @@ export function clearCsgoTournamentMatchesSuccess(): T.ClearCsgoTournamentMatche
 //   Promise<void>, ReduxState, null, T.CsgoActionTypes
 // > => async (dispatch) => {
 //   dispatch(getCsgoTournamentMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CSGO + gameonAPI.MATCHES, {
+//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.MATCHES, {
 //     params: { 'tournamentId': tournamentId }
 //   }).then(response => {
 //     dispatch(getCsgoTournamentMatchesSuccess(response.data));
@@ -166,7 +166,7 @@ export const clearCsgoTournamentMatches = (): ThunkAction<
 // export function getCsgoSeries() {
 //   return async function (dispatch) {
 //     dispatch(getCsgoSeriesRequest());
-//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CSGO + gameonAPI.SERIES)
+//     return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.SERIES)
 //       .then(response {
 //         dispatch(getCsgoSeriesSuccess(response.data));
 //       })
@@ -201,7 +201,7 @@ export const clearCsgoTournamentMatches = (): ThunkAction<
 //   Promise<T.CsgoActionTypes>, ReduxState, null, T.CsgoActionTypes
 // > => async (dispatch) => {
 //   dispatch(getCsgoTeamsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CSGO + gameonAPI.TEAMS)
+//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.TEAMS)
 //     .then(response => {
 //       return dispatch(getCsgoTeamsSuccess(response.data));
 //     })

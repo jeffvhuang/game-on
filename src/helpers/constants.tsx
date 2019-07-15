@@ -56,8 +56,7 @@ export const allSportsList = sportsList.concat(esportsList);
 
 // API from backend
 export const gameonAPI = {
-  HOST: 'https://localhost:44305',
-  COMMON: '/api',
+  HOST: 'https://localhost:44305/api',
   NBA: '/basketball/nba',
   EPL: '/football/epl',
   CHAMPIONS_LEAGUE: '/football/championsleague',
@@ -71,7 +70,9 @@ export const gameonAPI = {
   SCHEDULE: '/schedule',
   TEAMS: '/teams',
   SERIES: '/series',
-  MATCHES: '/matches'
+  MATCHES: '/matches',
+  GAMES: '/games',
+  LIVE: '/live'
 };
 
 // Third party APIs

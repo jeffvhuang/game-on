@@ -32,7 +32,7 @@ export function getChampionsLeagueScheduleFailure(err): T.GetChampionsLeagueSche
 //   dispatch(getChampionsLeagueScheduleRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CHAMPIONS_LEAGUE + gameonAPI.SCHEDULE,
+//     url: gameonAPI.HOST + gameonAPI.CHAMPIONS_LEAGUE + gameonAPI.SCHEDULE,
 //   }).then(response => {
 //     const sortedSchedule = sortFootballSchedule(response.data);
 //     dispatch(getChampionsLeagueScheduleSuccess(response.data, sortedSchedule));
@@ -51,6 +51,42 @@ export const getChampionsLeagueSchedule = (): ThunkAction<
   return dispatch(getChampionsLeagueScheduleSuccess(CL_SCHEDULE, sortedSchedule));
 };
 
+// Get Live Games
+export function getChampionsLeagueGamesLiveRequest(): T.GetChampionsLeagueGamesLiveRequest {
+  return { type: C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_REQUEST }
+}
+export function getChampionsLeagueGamesLiveSuccess(payload): T.GetChampionsLeagueGamesLiveSuccess {
+  return { type: C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_SUCCESS, payload }
+}
+export function getChampionsLeagueGamesLiveFailure(err): T.GetChampionsLeagueGamesLiveFailure {
+  return { type: C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_FAILURE, err }
+}
+
+export const getChampionsLeagueGamesLive = (): ThunkAction<
+  Promise<void>, ReduxState, null, T.ChampionsLeagueActionTypes
+> => async (dispatch) => {
+  dispatch(getChampionsLeagueGamesLiveRequest());
+  return axios({
+    method: 'get',
+    url: gameonAPI.HOST + gameonAPI.CHAMPIONS_LEAGUE + gameonAPI.GAMES + gameonAPI.LIVE,
+  }).then(response => {
+    const sortedSchedule = sortFootballSchedule(response.data);
+    dispatch(getChampionsLeagueScheduleSuccess(response.data, sortedSchedule));
+  }).catch(err => {
+    dispatch(getChampionsLeagueScheduleFailure(err));
+  });
+};
+
+// return mock data
+// export const getChampionsLeagueGamesLive = (): ThunkAction<
+//   Promise<T.ChampionsLeagueActionTypes>, ReduxState, null, T.ChampionsLeagueActionTypes
+// > => async (dispatch) => {
+//   dispatch(getChampionsLeagueScheduleRequest());
+//   await sleep(1000);
+//   const sortedSchedule = sortFootballSchedule(CL_SCHEDULE);
+//   return dispatch(getChampionsLeagueScheduleSuccess(CL_SCHEDULE, sortedSchedule));
+// };
+
 // Get Teams
 export function getChampionsLeagueTeamsRequest(): T.GetChampionsLeagueTeamsRequest {
   return { type: C.GET_CHAMPIONS_LEAGUE_TEAMS_REQUEST }
@@ -68,7 +104,7 @@ export function getChampionsLeagueTeamsFailure(err): T.GetChampionsLeagueTeamsFa
 //   dispatch(getChampionsLeagueTeamsRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.CHAMPIONS_LEAGUE + gameonAPI.TEAMS
+//     url: gameonAPI.HOST + gameonAPI.CHAMPIONS_LEAGUE + gameonAPI.TEAMS
 //   }).then(response => {
 //     dispatch(getChampionsLeagueTeamsSuccess(response.data));
 //   }).catch(err => {

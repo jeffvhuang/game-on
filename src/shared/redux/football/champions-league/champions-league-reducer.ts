@@ -7,6 +7,7 @@ const initialState: ChampionsLeagueState = {
   isFetching: false,
   schedule: [],
   teams: [],
+  live: [],
   gamesToday: [],
   upcoming: [],
   completed: [],
@@ -29,6 +30,13 @@ function championsLeagueReducer(state = initialState, action: ChampionsLeagueAct
           completed: action.sortedSchedule.beforeToday
         });
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+    
+    case C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_SUCCESS:
+      return Object.assign({}, state, { isFetching: false, live: action.payload });
+    case C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
     case C.GET_CHAMPIONS_LEAGUE_TEAMS_REQUEST:

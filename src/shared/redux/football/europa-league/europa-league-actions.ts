@@ -29,7 +29,7 @@ export function getEuropaLeagueScheduleFailure(err): T.GetEuropaLeagueScheduleFa
 //   dispatch(getEuropaLeagueScheduleRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.SCHEDULE,
+//     url: gameonAPI.HOST + gameonAPI.EUROPA_LEAGUE + gameonAPI.SCHEDULE,
 //   }).then(response => {
 //     const sortedSchedule = sortFootballSchedule(response.data);
 //     dispatch(getEuropaLeagueScheduleSuccess(response.data, sortedSchedule));
@@ -65,7 +65,7 @@ export function getEuropaLeagueTeamsFailure(err): T.GetEuropaLeagueTeamsFailure 
 //   dispatch(getEuropaLeagueTeamsRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EUROPA_LEAGUE + gameonAPI.TEAMS
+//     url: gameonAPI.HOST + gameonAPI.EUROPA_LEAGUE + gameonAPI.TEAMS
 //   }).then(response => {
 //     dispatch(getEuropaLeagueTeamsSuccess(response.data));
 //   }).catch(err => {

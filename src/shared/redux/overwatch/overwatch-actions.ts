@@ -39,7 +39,7 @@ export function getOverwatchTournamentsFailure(err): T.GetOverwatchTournamentsFa
 //   Promise<ESportsTournament[]>, ReduxState, null, T.OverwatchActionTypes
 // > => async (dispatch) => {
 //   dispatch(getOverwatchTournamentsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.OVERWATCH + gameonAPI.TOURNAMENTS)
+//   return axios.get(gameonAPI.HOST + gameonAPI.OVERWATCH + gameonAPI.TOURNAMENTS)
 //     .then(response => {
 //       const sortedTournaments = sortESportsTournaments(response.data);
 //       dispatch(getOverwatchTournamentsSuccess(response.data, sortedTournaments));
@@ -80,7 +80,7 @@ export function getOverwatchMatchesFailure(err): T.GetOverwatchMatchesFailure {
 //   Promise<ESportsMatch[]>, ReduxState, null, T.OverwatchActionTypes
 // > => async (dispatch) => {
 //   dispatch(getOverwatchMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.OVERWATCH + gameonAPI.MATCHES)
+//   return axios.get(gameonAPI.HOST + gameonAPI.OVERWATCH + gameonAPI.MATCHES)
 //     .then(response => {
 //       const matchesTeams = getESportsTeamsFromMatches(response.data);
 //       const sortedMatches = sortESportByDate(response.data);
@@ -120,7 +120,7 @@ export function clearOverwatchTournamentMatchesSuccess(): T.ClearOverwatchTourna
 //   Promise<void>, ReduxState, null, T.OverwatchActionTypes
 // > => async (dispatch) => {
 //   dispatch(getOverwatchTournamentMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.OVERWATCH + gameonAPI.MATCHES, {
+//   return axios.get(gameonAPI.HOST + gameonAPI.OVERWATCH + gameonAPI.MATCHES, {
 //     params: { 'tournamentId': tournamentId }
 //   }).then(response => {
 //     dispatch(getOverwatchTournamentMatchesSuccess(response.data));

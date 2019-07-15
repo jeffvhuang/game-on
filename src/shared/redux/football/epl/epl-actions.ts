@@ -29,7 +29,7 @@ export function getEplScheduleFailure(err): T.GetEplScheduleFailure {
 //   dispatch(getEplScheduleRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.SCHEDULE,
+//     url: gameonAPI.HOST + gameonAPI.EPL + gameonAPI.SCHEDULE,
 //   }).then(response => {
 //     const sortedSchedule = sortFootballSchedule(response.data);
 //     dispatch(getEplScheduleSuccess(response.data, sortedSchedule));
@@ -65,7 +65,7 @@ export function getEplTeamsFailure(err): T.GetEplTeamsFailure {
 //   dispatch(getEplTeamsRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.EPL + gameonAPI.TEAMS
+//     url: gameonAPI.HOST + gameonAPI.EPL + gameonAPI.TEAMS
 //   }).then(response => {
 //     dispatch(getEplTeamsSuccess(response.data));
 //   }).catch(err => {

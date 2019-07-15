@@ -7,8 +7,9 @@ import { ThumbnailObject } from '../../../../types/tennis-api/thumbnail-object.m
 
 export interface ChampionsLeagueState {
   isFetching: boolean,
-  schedule: FootballSchedule[],
   teams: FootballTeam[],
+  schedule: FootballSchedule[],
+  live: FootballSchedule[],
   gamesToday: FootballSchedule[],
   upcoming: FootballSchedule[],
   completed: FootballSchedule[],
@@ -30,6 +31,21 @@ export interface GetChampionsLeagueScheduleSuccess {
 
 export interface GetChampionsLeagueScheduleFailure {
   type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE;
+  err: any;
+}
+
+// Get CHAMPIONS LEAGUE games live
+export interface GetChampionsLeagueGamesLiveRequest {
+  type: typeof C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_REQUEST;
+}
+
+export interface GetChampionsLeagueGamesLiveSuccess {
+  type: typeof C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_SUCCESS;
+  payload: FootballSchedule;
+}
+
+export interface GetChampionsLeagueGamesLiveFailure {
+  type: typeof C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_FAILURE;
   err: any;
 }
 
@@ -67,6 +83,9 @@ export type ChampionsLeagueActionTypes =
   GetChampionsLeagueScheduleRequest |
   GetChampionsLeagueScheduleSuccess |
   GetChampionsLeagueScheduleFailure |
+  GetChampionsLeagueGamesLiveRequest |
+  GetChampionsLeagueGamesLiveSuccess |
+  GetChampionsLeagueGamesLiveFailure |
   GetChampionsLeagueTeamsRequest |
   GetChampionsLeagueTeamsSuccess |
   GetChampionsLeagueTeamsFailure |

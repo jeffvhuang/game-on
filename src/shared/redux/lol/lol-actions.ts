@@ -43,7 +43,7 @@ export function getLolTournamentsFailure(err): T.GetLolTournamentsFailure {
 //   Promise<ESportsTournament[]>, ReduxState, null, T.LolActionTypes
 // > => async (dispatch) => {
 //   dispatch(getLolTournamentsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.TOURNAMENTS)
+//   return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.TOURNAMENTS)
 //     .then(response => {
 //       const sortedTournaments = sortESportsTournaments(response.data);
 //       dispatch(getLolTournamentsSuccess(response.data, sortedTournaments));
@@ -84,7 +84,7 @@ export const getLolTournaments = (): ThunkAction<
 // export function getLolSeries() {
 //   return async function (dispatch) {
 //     dispatch(getLolSeriesRequest());
-//     return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.SERIES)
+//     return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES)
 //       .then(response {
 //         dispatch(getLolSeriesSuccess(response.data));
 //       })
@@ -123,7 +123,7 @@ export function getLolMatchesFailure(err): T.GetLolMatchesFailure {
 //   Promise<ESportsMatch[]>, ReduxState, null, T.LolActionTypes
 // > => async (dispatch) => {
 //   dispatch(getLolMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES)
+//   return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.MATCHES)
 //     .then(response => {
 //       const matchesTeams = getESportsTeamsFromMatches(response.data);
 //       const sortedMatches = sortESportByDate(response.data);
@@ -164,7 +164,7 @@ export function clearLolTournamentMatchesSuccess(): T.ClearLolTournamentMatchesS
 //   Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
 // > => async (dispatch) => {
 //   dispatch(getLolTournamentMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.MATCHES, {
+//   return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.MATCHES, {
 //     params: { 'tournamentId': tournamentId }
 //   }).then(response => {
 //     return dispatch(getLolTournamentMatchesSuccess(response.data));
@@ -203,7 +203,7 @@ export function getLolTeamsFailure(err): T.GetLolTeamsFailure {
 //   Promise<T.LolActionTypes>, ReduxState, null, T.LolActionTypes
 // > => async (dispatch) => {
 //   dispatch(getLolTeamsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.LOL + gameonAPI.TEAMS)
+//   return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.TEAMS)
 //     .then(response => {
 //       return dispatch(getLolTeamsSuccess(response.data));
 //     })

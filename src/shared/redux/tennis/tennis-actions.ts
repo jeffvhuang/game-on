@@ -40,7 +40,7 @@ export function getTennisTournamentsFailure(err): T.GetTennisTournamentsFailure 
 //   dispatch(getTennisTournamentsRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS,
+//     url: gameonAPI.HOST + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS,
 //   }).then(response => {
 //     const today = new Date();
 //     const thisYear = today.getFullYear();
@@ -94,7 +94,7 @@ export function clearTennisTournamentScheduleSuccess(): T.ClearTennisTournamentS
 //   dispatch(getTennisTournamentScheduleRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId + gameonAPI.SCHEDULE,
+//     url: gameonAPI.HOST + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId + gameonAPI.SCHEDULE,
 //   }).then(response => {
 //     dispatch(getTennisTournamentScheduleSuccess(response.data));
 //     return response.data;
@@ -141,7 +141,7 @@ export function clearTennisTournamentInfoSuccess(): T.ClearTennisTournamentInfoS
 //   dispatch(getTennisTournamentInfoRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId,
+//     url: gameonAPI.HOST + gameonAPI.TENNIS + gameonAPI.TOURNAMENTS + "/" + tournamentId,
 //   }).then(response => {
 //     dispatch(getTennisTournamentInfoSuccess(response.data));
 //     return response.data;

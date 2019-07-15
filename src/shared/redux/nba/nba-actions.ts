@@ -69,7 +69,7 @@ export function getNbaScheduleFailure(err): T.GetNbaScheduleFailure {
 //   dispatch(getNbaScheduleRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.SCHEDULE
+//     url: gameonAPI.HOST + gameonAPI.NBA + gameonAPI.SCHEDULE
 //   }).then(response => {
 //     const sortedSchedule = sortNBASchedule(response.data);
 //     dispatch(getNbaScheduleSuccess(response.data, sortedSchedule));
@@ -106,7 +106,7 @@ export function getNbaTeamsFailure(err): T.GetNbaTeamsFailure {
 //   dispatch(getNbaTeamsRequest());
 //   return axios({
 //     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.COMMON + gameonAPI.NBA + gameonAPI.TEAMS
+//     url: gameonAPI.HOST + gameonAPI.NBA + gameonAPI.TEAMS
 //   }).then(response => {
 //     const nbaTeams = response.data.filter(team => team.nbaFranchise == '1');
 //     dispatch(getNbaTeamsSuccess(nbaTeams));
