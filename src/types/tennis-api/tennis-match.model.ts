@@ -4,7 +4,7 @@ import { TennisTournament } from "./tennis-tournament.model";
 import { TennisCompetitor } from "./tennis-competitor.model";
 import { TennisVenue } from "./tennis-venue.model";
 
-export interface TennisTournamentSchedule {
+export interface TennisMatch {
   id: string;
   scheduled: string;
   startTimeTbd: boolean;

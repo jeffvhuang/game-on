@@ -9,6 +9,10 @@ const initialState: TennisState = {
   ongoing: [],
   upcoming: [],
   completed: [],
+  matches: [],
+  liveMatches: [],
+  upcomingMatches: [],
+  completedMatches: [],
   videos: [],
   thumbnails: [],
   // Following 2 always replaced with the recently selected tournament
@@ -52,6 +56,20 @@ function tennisReducer(state = initialState, action: TennisActionTypes): TennisS
       return Object.assign({}, state, { isFetching: false, error: action.err });
     case C.CLEAR_TENNIS_TOURNAMENT_INFO:
       return Object.assign({}, state, { tournamentInfo: {} });
+    
+    case C.GET_TENNIS_MATCHES_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case C.GET_TENNIS_MATCHES_SUCCESS:
+      return Object.assign({}, state,
+        { 
+          isFetching: false,
+          matches: action.payload,
+          liveMatches: action.sortedMatches.live,
+          upcomingMatches: action.sortedMatches.upcoming,
+          completedMatches: action.sortedMatches.completed
+        });
+    case C.GET_TENNIS_MATCHES_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
     
     // case C.GET_NBA_VIDEOS_REQUEST:
     //   return Object.assign({}, state, { isFetching: true });

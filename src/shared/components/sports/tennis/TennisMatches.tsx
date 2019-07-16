@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 import TennisMatchup from './TennisMatchup';
-import { TennisTournamentSchedule } from '../../../../types/tennis-api/tennis-tournament-schedule.model';
+import { TennisMatch } from '../../../../types/tennis-api/tennis-match.model';
 
 interface Props {
   header: string,
-  games: TennisTournamentSchedule[],
+  games: TennisMatch[],
   values: string[]
 };
 

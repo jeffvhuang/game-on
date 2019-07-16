@@ -7,6 +7,9 @@ import { ESportsTournament } from '../types/esports-api/esports-tournament.model
 import { ESportsTeamBase } from '../types/esports-api/esports-team-base.model';
 import { ESportsSeries } from '../types/esports-api/espots-series.model';
 import { ESportsMatch } from '../types/esports-api/esports-match.model';
+import { TennisMatch } from '../types/tennis-api/tennis-match.model';
+import { FootballSortedSchedule } from '../types/football-api/football-sorted-schedule.model';
+import { TennisSortedMatches } from '../types/tennis-api/tennis-sorted-matches.model';
 
 // declare function require(path: string);
 const youtubeLogo = require('../../public/assets/Youtube-logo-2017-640x480.png');
@@ -50,7 +53,7 @@ export function sortNBASchedule(data: NbaSchedule[]) {
  * sort schedule to find matches live, upcoming and recently completed
  * @param {array} data 
  */
-export function sortFootballSchedule(matches: FootballSchedule[]) {
+export function sortFootballSchedule(matches: FootballSchedule[]): FootballSortedSchedule {
   const live: FootballSchedule[] = [];
   const upcoming: FootballSchedule[] = [];
   const completed: FootballSchedule[] = [];
@@ -58,7 +61,6 @@ export function sortFootballSchedule(matches: FootballSchedule[]) {
   const dateIn24Hrs = new Date(60 * 60 * 24 * 1000 + now.getTime());
   const date12HrsAgo = new Date(now.getTime() - (60 * 60 * 12 * 1000));
 
-  // Separate into games past, today and upcoming
   for (let i = 0; i < matches.length; i++) {
     const match = matches[i];
 
@@ -91,6 +93,36 @@ function sortFootballByDate(data: FootballSchedule[]) {
     const dateB = b.eventTimestamp;
     return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
   });
+}
+
+// sort matches into recently completed, live and upcoming.
+export function sortTennisMatches(matches: TennisMatch[]): TennisSortedMatches {
+  const live: TennisMatch[] = [];
+  const upcoming: TennisMatch[] = [];
+  const completed: TennisMatch[] = [];
+  // const now = Date.now();
+  const now = new Date();
+  const dateIn24Hrs = new Date(60 * 60 * 24 * 1000 + now.getTime());
+  const date12HrsAgo = new Date(now.getTime() - (60 * 60 * 12 * 1000));
+
+  for (let i = 0; i < matches.length; i++) {
+    const match = matches[i];
+
+    const startDate = new Date(match.scheduled);
+    const isMatchFinished = (match.status == 'closed') ? true : false;
+
+    // Nested if to ensure matches completed and not started do not reach later if blocks
+    // last block should be live but ensure it is same date
+    if (isMatchFinished) {
+      if (startDate > date12HrsAgo) completed.push(match);
+    } else if (now < startDate) {
+      if (now > dateIn24Hrs) upcoming.push(match);
+    } else if (isSameDate(now, startDate)) {
+      live.push(match);
+    }
+  }
+
+  return { live, upcoming, completed };
 }
 
 export function sortTennisSchedule(data: TennisTournament[]) {

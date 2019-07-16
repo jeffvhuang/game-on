@@ -3,8 +3,9 @@ import { YoutubePlaylistItem } from "../../../types/youtube/youtube-playlist-ite
 import { ThumbnailObject } from "../../../types/tennis-api/thumbnail-object.model";
 import { TennisTournament } from "../../../types/tennis-api/tennis-tournament.model";
 import { TennisSortedTournaments } from "../../../types/tennis-api/tennis-sorted-tournaments.model";
-import { TennisTournamentSchedule } from "../../../types/tennis-api/tennis-tournament-schedule.model";
+import { TennisMatch } from "../../../types/tennis-api/tennis-match.model";
 import { TennisTournamentInfo } from "../../../types/tennis-api/tennis-tournament-info.model";
+import { TennisSortedMatches } from "../../../types/tennis-api/tennis-sorted-matches.model";
 
 export interface TennisState {
   isFetching: boolean,
@@ -12,9 +13,13 @@ export interface TennisState {
   ongoing: TennisTournament[],
   upcoming: TennisTournament[],
   completed: TennisTournament[],
+  matches: TennisMatch[],
+  liveMatches: TennisMatch[],
+  upcomingMatches: TennisMatch[],
+  completedMatches: TennisMatch[],
   videos: YoutubePlaylistItem[],
   thumbnails: ThumbnailObject[],
-  tournamentSchedule: TennisTournamentSchedule[],
+  tournamentSchedule: TennisMatch[],
   tournamentInfo: TennisTournamentInfo,
   error: any
 }
@@ -42,7 +47,7 @@ export interface GetTennisTournamentScheduleRequest {
 
 export interface GetTennisTournamentScheduleSuccess {
   type: typeof C.GET_TENNIS_TOURNAMENT_SCHEDULE_SUCCESS;
-  payload: TennisTournamentSchedule[];
+  payload: TennisMatch[];
 }
 
 export interface GetTennisTournamentScheduleFailure {
@@ -73,6 +78,22 @@ export interface ClearTennisTournamentInfoSuccess {
   type: typeof C.CLEAR_TENNIS_TOURNAMENT_INFO;
 }
 
+// Get Tennis Matches
+export interface GetTennisMatchesRequest {
+  type: typeof C.GET_TENNIS_MATCHES_REQUEST;
+}
+
+export interface GetTennisMatchesSuccess {
+  type: typeof C.GET_TENNIS_MATCHES_SUCCESS;
+  payload: TennisMatch[];
+  sortedMatches: TennisSortedMatches;
+}
+
+export interface GetTennisMatchesFailure {
+  type: typeof C.GET_TENNIS_MATCHES_FAILURE;
+  err: any;
+}
+
 // Get TENNIS Videos
 export interface GetTennisVideosRequest {
   type: typeof C.GET_TENNIS_VIDEOS_REQUEST;
@@ -99,6 +120,9 @@ export type TennisActionTypes =
   GetTennisTournamentInfoSuccess |
   GetTennisTournamentInfoFailure |
   ClearTennisTournamentInfoSuccess |
+  GetTennisMatchesRequest |
+  GetTennisMatchesSuccess |
+  GetTennisMatchesFailure |
   GetTennisVideosRequest |
   GetTennisVideosSuccess |
   GetTennisVideosFailure;

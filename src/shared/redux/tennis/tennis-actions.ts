@@ -4,17 +4,53 @@ import { ThunkAction } from 'redux-thunk';
 import * as T from './tennis-types';
 import * as C from './tennis-constants';
 import { youtubeAPI, gameonAPI } from '../../../helpers/constants';
-import { sleep, sortTennisSchedule } from '../../../helpers/utils';
+import { sleep, sortTennisSchedule, sortTennisMatches } from '../../../helpers/utils';
 
 // Mock data
 import TOURNAMENTS from '../../../mockApiData/tennisTournaments.json';
 import TOURNAMENT_INFO from '../../../mockApiData/tennisTournamentInfo.json';
 import TOURNAMENT_SCHEDULE from '../../../mockApiData/tennisTournamentSchedule.json';
+import MATCHES from '../../../mockApiData/tennisMatches.json';
 import { ReduxState } from '../redux-state';
 import { TennisTournamentInfo } from '../../../types/tennis-api/tennis-tournament-info.model';
-import { TennisTournamentSchedule } from '../../../types/tennis-api/tennis-tournament-schedule.model';
+import { TennisMatch } from '../../../types/tennis-api/tennis-match.model';
 
 // import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
+
+// Get matches
+export function getTennisMatchesRequest(): T.GetTennisMatchesRequest {
+  return { type: C.GET_TENNIS_MATCHES_REQUEST }
+}
+export function getTennisMatchesSuccess(payload, sortedMatches): T.GetTennisMatchesSuccess {
+  return { type: C.GET_TENNIS_MATCHES_SUCCESS, payload, sortedMatches }
+}
+export function getTennisMatchesFailure(err): T.GetTennisMatchesFailure {
+  return { type: C.GET_TENNIS_MATCHES_FAILURE, err }
+}
+
+// export const getTennisMatches = (): ThunkAction<
+//   Promise<void>, ReduxState, null, T.TennisActionTypes
+// > => async (dispatch) => {
+//   dispatch(getTennisMatchesRequest());
+//   return axios({
+//     method: 'get',
+//     url: gameonAPI.HOST + gameonAPI.TENNIS + gameonAPI.MATCHES,
+//   }).then(response => {
+//     const sortedMatches = sortTennisMatches(response.data)
+//     dispatch(getTennisMatchesSuccess(response.data, sortedMatches));
+//   }).catch(err => {
+//     dispatch(getTennisMatchesFailure(err));
+//   });
+// };
+
+export const getTennisMatches = (): ThunkAction<
+  Promise<void>, ReduxState, string, T.TennisActionTypes
+> => async (dispatch) => {
+  dispatch(getTennisMatchesRequest());
+  await sleep(1000);
+  const sortedMatches = sortTennisMatches(MATCHES as TennisMatch[]);
+  dispatch(getTennisMatchesSuccess(MATCHES, sortedMatches));
+};
 
 // Get Tournaments
 export function getTennisTournamentsRequest(): T.GetTennisTournamentsRequest {
@@ -106,11 +142,11 @@ export function clearTennisTournamentScheduleSuccess(): T.ClearTennisTournamentS
 // };
 
 export const getTennisTournamentSchedule = (tournamentId: string): ThunkAction<
-  Promise<TennisTournamentSchedule[]>, ReduxState, string, T.TennisActionTypes
+  Promise<TennisMatch[]>, ReduxState, string, T.TennisActionTypes
 > => async (dispatch) => {
   dispatch(getTennisTournamentScheduleRequest());
   await sleep(1000);
-  const schedule = TOURNAMENT_SCHEDULE as TennisTournamentSchedule[];
+  const schedule = TOURNAMENT_SCHEDULE as TennisMatch[];
   dispatch(getTennisTournamentScheduleSuccess(schedule));
   return schedule;
 };
