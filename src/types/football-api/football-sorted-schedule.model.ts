@@ -1,7 +1,7 @@
 import { FootballSchedule } from "./football-schedule.model";
 
 export interface FootballSortedSchedule {
-  gamesToday: FootballSchedule[];
+  live: FootballSchedule[];
   upcoming: FootballSchedule[];
-  beforeToday: FootballSchedule[];
+  completed: FootballSchedule[];
 }

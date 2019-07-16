@@ -3,9 +3,6 @@ import * as C from './tennis-constants';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 import { TennisTournamentInfo } from '../../../types/tennis-api/tennis-tournament-info.model';
 
-// declare const initialTournamentInfo: TennisTournamentInfo;
-// const initialTournamentInfo = <TennisTournamentInfo>{};
-
 const initialState: TennisState = {
   isFetching: false,
   tournaments: [],

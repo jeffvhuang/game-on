@@ -10,6 +10,7 @@ import CL_SCHEDULE from '../../../../mockApiData/championsLeagueSchedule.json';
 import CL_PLAYLIST from '../../../../mockApiData/champsLeagueYoutube.json';
 import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../../redux-state';
+import { FootballSchedule } from '../../../../types/football-api/football-schedule.model';
 
 // Get Schedule
 export function getChampionsLeagueScheduleRequest(): T.GetChampionsLeagueScheduleRequest {
@@ -47,7 +48,7 @@ export const getChampionsLeagueSchedule = (): ThunkAction<
 > => async (dispatch) => {
   dispatch(getChampionsLeagueScheduleRequest());
   await sleep(1000);
-  const sortedSchedule = sortFootballSchedule(CL_SCHEDULE);
+  const sortedSchedule = sortFootballSchedule(CL_SCHEDULE as FootballSchedule[]);
   return dispatch(getChampionsLeagueScheduleSuccess(CL_SCHEDULE, sortedSchedule));
 };
 

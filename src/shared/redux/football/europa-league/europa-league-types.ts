@@ -8,7 +8,7 @@ export interface EuropaLeagueState {
   isFetching: boolean;
   schedule: FootballSchedule[];
   teams: FootballTeam[];
-  gamesToday: FootballSchedule[];
+  live: FootballSchedule[];
   upcoming: FootballSchedule[];
   completed: FootballSchedule[];
   videos: any[];

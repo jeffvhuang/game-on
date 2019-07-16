@@ -10,6 +10,7 @@ import EUROPA_LEAGUE_TEAMS from '../../../../mockApiData/eplTeams.json';
 import EUROPA_LEAGUE_SCHEDULE from '../../../../mockApiData/eplSchedule.json';
 import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../../redux-state';
+import { FootballSchedule } from '../../../../types/football-api/football-schedule.model';
 // import { PLAYLIST } from '../../../mockApiData/europaLeagueYoutube.js';
 
 // Get Schedule
@@ -44,7 +45,7 @@ export const getEuropaLeagueSchedule = (): ThunkAction<
 > => async (dispatch) => {
   dispatch(getEuropaLeagueScheduleRequest());
   await sleep(1000);
-  const sortedSchedule = sortFootballSchedule(EUROPA_LEAGUE_SCHEDULE);
+  const sortedSchedule = sortFootballSchedule(EUROPA_LEAGUE_SCHEDULE as FootballSchedule[]);
   dispatch(getEuropaLeagueScheduleSuccess(EUROPA_LEAGUE_SCHEDULE, sortedSchedule));
 };
 

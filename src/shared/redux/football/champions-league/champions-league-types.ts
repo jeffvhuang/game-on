@@ -10,7 +10,6 @@ export interface ChampionsLeagueState {
   teams: FootballTeam[],
   schedule: FootballSchedule[],
   live: FootballSchedule[],
-  gamesToday: FootballSchedule[],
   upcoming: FootballSchedule[],
   completed: FootballSchedule[],
   videos: YoutubePlaylistItem[],

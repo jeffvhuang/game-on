@@ -47,35 +47,41 @@ export function sortNBASchedule(data: NbaSchedule[]) {
 }
 
 /**
- * sort schedule to find today and upcoming
+ * sort schedule to find matches live, upcoming and recently completed
  * @param {array} data 
  */
-export function sortFootballSchedule(data: any[]) {
-  const gamesToday: FootballSchedule[] = [];
+export function sortFootballSchedule(matches: FootballSchedule[]) {
+  const live: FootballSchedule[] = [];
   const upcoming: FootballSchedule[] = [];
-  const beforeToday: FootballSchedule[] = [];
-  const dateToday = new Date();
+  const completed: FootballSchedule[] = [];
+  const now = new Date();
+  const dateIn24Hrs = new Date(60 * 60 * 24 * 1000 + now.getTime());
+  const date12HrsAgo = new Date(now.getTime() - (60 * 60 * 12 * 1000));
 
   // Separate into games past, today and upcoming
-  data.forEach(game => {
-    const gamesDate = new Date(game.eventDate);
+  for (let i = 0; i < matches.length; i++) {
+    const match = matches[i];
 
-    // Does not separate between those that are on today but completed
-    if (isSameDate(dateToday, gamesDate)) {
-      gamesToday.push(game);
-    } else if (gamesDate > dateToday) {
-      upcoming.push(game);
-    } else {
-      beforeToday.push(game);
+    const startDate = new Date(match.eventDate);
+    const isMatchFinished = (match.status == 'Match Finished') ? true : false;
+
+    // Nested if to ensure matches completed and not started do not reach later if blocks
+    // last block should be live but ensure it is same date
+    if (isMatchFinished) {
+      if (startDate > date12HrsAgo) completed.push(match);
+    } else if (now < startDate) {
+      if (now > dateIn24Hrs) upcoming.push(match);
+    } else if (isSameDate(now, startDate)) {
+      live.push(match);
     }
-  });
+  }
 
   // Sort each one by date
-  sortFootballByDate(gamesToday);
+  sortFootballByDate(live);
   sortFootballByDate(upcoming);
-  sortFootballByDate(beforeToday);
+  sortFootballByDate(completed);
 
-  return { gamesToday, upcoming, beforeToday };
+  return { live, upcoming, completed };
 }
 
 // Sort by date for epl api's data
@@ -320,12 +326,7 @@ export function createYoutubeThumnailObjects(videos) {
   return thumbnails;
 }
 
-/**
- * Check 2 dates are the same
- * @param {Date} dateTestedAgainst 
- * @param {Date} dateToTest 
- */
-export function isSameDate(dateTestedAgainst, dateToTest) {
+export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
   const year = dateTestedAgainst.getFullYear();
   const month = dateTestedAgainst.getMonth();
   const monthDate = dateTestedAgainst.getDate();

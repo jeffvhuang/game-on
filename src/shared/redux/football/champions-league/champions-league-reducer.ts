@@ -8,7 +8,6 @@ const initialState: ChampionsLeagueState = {
   schedule: [],
   teams: [],
   live: [],
-  gamesToday: [],
   upcoming: [],
   completed: [],
   videos: [],
@@ -25,9 +24,9 @@ function championsLeagueReducer(state = initialState, action: ChampionsLeagueAct
         { 
           isFetching: false,
           schedule: action.payload,
-          gamesToday: action.sortedSchedule.gamesToday,
+          live: action.sortedSchedule.live,
           upcoming: action.sortedSchedule.upcoming,
-          completed: action.sortedSchedule.beforeToday
+          completed: action.sortedSchedule.completed
         });
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });

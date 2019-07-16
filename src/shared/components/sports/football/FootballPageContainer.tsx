@@ -98,7 +98,7 @@ class FootballPageContainer extends React.Component<Props, State> {
           showMoreLink={paths.HIGHLIGHTS + '/football/epl'} /> */}
         <div className="section">
           <h2>English Premier League</h2>
-          <FootballScheduleSection games={this.props.epl.gamesToday}
+          <FootballScheduleSection games={this.props.epl.live}
             header="Today's Games"
             values={this.state.values} />
           <FootballScheduleSection games={this.props.epl.upcoming}
@@ -110,8 +110,8 @@ class FootballPageContainer extends React.Component<Props, State> {
           teams={this.sortTeamsForDropdown(this.props.championsLeague.teams)} />
         <div className="section">
           <h2>Champion's League</h2>
-          <FootballScheduleSection games={this.props.championsLeague.gamesToday}
-            header="Today's Games"
+          <FootballScheduleSection games={this.props.championsLeague.live}
+            header="Live Games"
             values={this.state.championsValues} />
           <FootballScheduleSection games={this.props.championsLeague.upcoming}
             header="Upcoming"
@@ -122,7 +122,7 @@ class FootballPageContainer extends React.Component<Props, State> {
           teams={this.sortTeamsForDropdown(this.props.europaLeague.teams)} />
         <div className="section">
           <h2>Europa League</h2>
-          <FootballScheduleSection games={this.props.europaLeague.gamesToday}
+          <FootballScheduleSection games={this.props.europaLeague.live}
             header="Today's Games"
             values={this.state.europaValues} />
           <FootballScheduleSection games={this.props.europaLeague.upcoming}

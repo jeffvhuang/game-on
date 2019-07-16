@@ -7,7 +7,7 @@ const initialState: EplState = {
   isFetching: false,
   schedule: [],
   teams: [],
-  gamesToday: [],
+  live: [],
   upcoming: [],
   completed: [],
   videos: [],
@@ -24,9 +24,9 @@ function eplReducer(state = initialState, action: EplActionTypes): EplState {
         { 
           isFetching: false,
           schedule: action.payload,
-          gamesToday: action.sortedSchedule.gamesToday,
+          live: action.sortedSchedule.live,
           upcoming: action.sortedSchedule.upcoming,
-          completed: action.sortedSchedule.beforeToday
+          completed: action.sortedSchedule.completed
         });
     case C.GET_EPL_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
