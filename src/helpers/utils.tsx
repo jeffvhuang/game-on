@@ -116,7 +116,7 @@ export function sortTennisMatches(matches: TennisMatch[]): TennisSortedMatches {
     if (isMatchFinished) {
       if (startDate > date12HrsAgo) completed.push(match);
     } else if (now < startDate) {
-      if (now > dateIn24Hrs) upcoming.push(match);
+      if (startDate < dateIn24Hrs) upcoming.push(match);
     } else if (isSameDate(now, startDate)) {
       live.push(match);
     }

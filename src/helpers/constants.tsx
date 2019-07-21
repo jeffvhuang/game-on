@@ -72,7 +72,9 @@ export const gameonAPI = {
   SERIES: '/series',
   MATCHES: '/matches',
   GAMES: '/games',
-  LIVE: '/live'
+  LIVE: '/live',
+  GENERAL: '/general',
+  EVENTS: '/events'
 };
 
 // Third party APIs

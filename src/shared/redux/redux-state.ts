@@ -7,8 +7,10 @@ import { ChampionsLeagueState } from "./football/champions-league/champions-leag
 import { EuropaLeagueState } from "./football/europa-league/europa-league-types";
 import { CsgoState } from "./csgo/csgo-types";
 import { OverwatchState } from "./overwatch/overwatch-types";
+import { GeneralState } from "./general/general-types";
 
 export interface ReduxState {
+  general: GeneralState,
   nba: NbaState,
   tennis: TennisState,
   epl: EplState,
@@ -17,5 +19,5 @@ export interface ReduxState {
   dota: DotaState,
   lol: LolState,
   csgo: CsgoState,
-  overwatch: OverwatchState
+  overwatch: OverwatchState,
 }
