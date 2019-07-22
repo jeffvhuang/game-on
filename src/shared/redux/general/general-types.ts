@@ -10,7 +10,6 @@ export interface GeneralState {
   error: any
 }
 
-// Get NBA Schedule
 export interface GetEventsRequest {
   type: typeof C.GET_EVENTS_REQUEST;
 }
