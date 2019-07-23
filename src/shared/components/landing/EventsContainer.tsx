@@ -9,6 +9,8 @@ import { getEvents } from '../../redux/general/general-actions';
 import { ReduxState } from '../../redux/redux-state';
 import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
+import EventsSection from './EventsSection';
+import UpcomingEventsSection from './UpcomingEventsSection';
 
 interface StateProps {
   general: GeneralState;
@@ -44,58 +46,22 @@ class EventsContainer extends React.Component<Props, State> {
     return '';
   }
 
-  // getScoreResults(event: GameOnEvent): string {
-
-  // }
-
   render() {
     return (
       <div className="section">
         <h2>Events</h2>
         <div className="margin-bot">
           <h3>Live</h3>
-          {this.props.general.liveEvents.map((event, i) => {
-            return (
-              <Row key={event.id}>
-                <Col span={3}>{event.sport}</Col>
-                <Col span={3}>{event.leagueOrTournament}</Col>
-                <Col span={7}>{event.competitors[0].name}</Col>
-                <Col span={2}>{event.competitors[0].score}</Col>
-                <Col span={7}>{event.competitors[1].name}</Col>
-                <Col span={2}>{event.competitors[1].score}</Col>
-              </Row>
-            );
-          })}
+          <EventsSection events={this.props.general.liveEvents} />
         </div>
         <div className="margin-bot">
           <h3>Coming Up</h3>
-          {this.props.general.upcomingEvents.map((event, i) => {
-            return (
-              <Row key={event.id}>
-                <Col span={3}>{event.sport}</Col>
-                <Col span={3}>{event.leagueOrTournament}</Col>
-                <Col span={7}>{event.competitors[0].name}</Col>
-                <Col span={1}>vs</Col>
-                <Col span={7}>{event.competitors[1].name}</Col>
-                <Col span={3}>{this.getDateString(event)}</Col>
-              </Row>
-            );
-          })}
+          <UpcomingEventsSection events={this.props.general.upcomingEvents}
+            getDateString={this.getDateString} />
         </div>
         <div className="margin-bot">
           <h3>Recently Completed</h3>
-          {this.props.general.recentlyCompletedEvents.map((event, i) => {
-            return (
-              <Row key={event.id}>
-                <Col span={3}>{event.sport}</Col>
-                <Col span={3}>{event.leagueOrTournament}</Col>
-                <Col span={7}>{event.competitors[0].name}</Col>
-                <Col span={2}>{event.competitors[0].score}</Col>
-                <Col span={7}>{event.competitors[1].name}</Col>
-                <Col span={2}>{event.competitors[1].score}</Col>
-              </Row>
-            );
-          })}
+          <EventsSection events={this.props.general.recentlyCompletedEvents} />
         </div>
         <Link to={paths.EVENTS} className="right">More ></Link>
       </div>

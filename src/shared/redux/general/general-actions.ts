@@ -20,21 +20,21 @@ export function getEventsFailure(err): T.GetEventsFailure {
   return { type: C.GET_EVENTS_FAILURE, err }
 }
 
-export const getEvents = (): ThunkAction<
-  Promise<void>, ReduxState, null, T.GeneralActionTypes
-> => async (dispatch) => {
-  dispatch(getEventsRequest());
-  return axios.get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS)
-  .then(response => {
-    dispatch(getEventsSuccess(response.data));
-  }).catch(err => {
-    dispatch(getEventsFailure(err));
-  });
-};
-
-// mock data
 // export const getEvents = (): ThunkAction<
 //   Promise<void>, ReduxState, null, T.GeneralActionTypes
 // > => async (dispatch) => {
-//   dispatch(getEventsSuccess(SORTED_EVENTS));
+//   dispatch(getEventsRequest());
+//   return axios.get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS)
+//   .then(response => {
+//     dispatch(getEventsSuccess(response.data));
+//   }).catch(err => {
+//     dispatch(getEventsFailure(err));
+//   });
 // };
+
+// mock data
+export const getEvents = (): ThunkAction<
+  Promise<void>, ReduxState, null, T.GeneralActionTypes
+> => async (dispatch) => {
+  dispatch(getEventsSuccess(SORTED_EVENTS));
+};
