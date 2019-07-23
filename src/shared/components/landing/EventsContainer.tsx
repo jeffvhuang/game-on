@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { paths, sports, esportsTitles } from '../../../helpers/constants';
+import { paths } from '../../../helpers/constants';
 import { GeneralState } from '../../redux/general/general-types';
 import { getEvents } from '../../redux/general/general-actions';
 import { ReduxState } from '../../redux/redux-state';
@@ -39,8 +39,7 @@ class EventsContainer extends React.Component<Props, State> {
 
   getDateString(event: GameOnEvent): string | null {
     if (event.startTime) {
-      const date = new Date(event.startTime);
-      return getDayMonthDate(date);
+      return getDayMonthDate(event.startTime);
     }
     return '';
   }

@@ -375,17 +375,27 @@ export function getFormattedTime(date: Date): string {
   return h + ':' + m;
 }
 
-// Date = Date object
-export function getDayMonthDate(date) {
-  // return if it is not a valid date string or object
-  if (!isValidDate) return null;
+/**
+ * return in format "Wed Feb 1"
+ * @param dateString format: "2015-10-25"
+ */ 
+export function getDayMonthDateFromReverseFormat(dateString: string | null): string {
+  if (!dateString) return '';
+  const dateParts = dateString.split('-');
+  if (dateParts.length != 3) return '';
+  const year = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]);
+  const monthDate = parseInt(dateParts[2]);
+  const date = new Date(year, month - 1, monthDate);
+  return days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate();
+}
 
-  // Convert to date if it isn't a date object
-  if (date instanceof Date) return days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate();
-  else {
-    const dateObj = new Date(date);
-    return days[dateObj.getDay()] + ' ' + months[dateObj.getMonth()] + ' ' + dateObj.getDate();
-  }
+export function getDayMonthDate(date: string) {
+  // return if it is not a valid date string or object
+  if (!isValidDate(date)) return null;
+
+  const dateObj = new Date(date);
+  return days[dateObj.getDay()] + ' ' + months[dateObj.getMonth()] + ' ' + dateObj.getDate();
 }
 
 export function isValidDate(date) {
