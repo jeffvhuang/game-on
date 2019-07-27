@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Row, Col } from 'antd';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -21,6 +20,7 @@ interface DispatchProps {
 }
 
 interface State {
+  today: Date;
 }
 
 type Props = StateProps & DispatchProps;
@@ -29,7 +29,9 @@ class EventsContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
-    this.state = { };
+    this.state = {
+      today: new Date()
+    };
   }
 
   componentDidMount() {
@@ -46,22 +48,47 @@ class EventsContainer extends React.Component<Props, State> {
     return '';
   }
 
-  render() {
+  getDayFromToday(daysToAdd: number): string {
+    const day = new Date();
+    day.setDate(day.getDate() + daysToAdd);
+    var dayNum = day.getDay(); // Sun = 0 > Sat = 6
+
+    switch (dayNum) {
+      case 0:
+        return 'Sunday';
+      case 1:
+        return 'Monday';
+      case 2:
+        return 'Tuesday';
+      case 3:
+        return 'Wednesday';
+      case 4:
+        return 'Thursday';
+      case 5:
+        return 'Friday';
+      case 6:
+        return 'Saturday';
+      default:
+        return '';
+    }
+  }
+
+  render() {  
     return (
       <div className="section">
         <h2>Events</h2>
         <div className="margin-bot">
-          <h3>Live</h3>
-          <EventsSection events={this.props.general.liveEvents} />
+          <h3>Today</h3>
+          {/* <EventsSection events={this.props.general.liveEvents} /> */}
         </div>
         <div className="margin-bot">
-          <h3>Coming Up</h3>
-          <UpcomingEventsSection events={this.props.general.upcomingEvents}
-            getDateString={this.getDateString} />
+          <h3>Tomorrow</h3>
+          {/* <UpcomingEventsSection events={this.props.general.upcomingEvents}
+            getDateString={this.getDateString} /> */}
         </div>
         <div className="margin-bot">
-          <h3>Recently Completed</h3>
-          <EventsSection events={this.props.general.recentlyCompletedEvents} />
+          <h3>{this.getDayFromToday(2)}</h3>
+          {/* <EventsSection events={this.props.general.recentlyCompletedEvents} /> */}
         </div>
         <Link to={paths.EVENTS} className="right">More ></Link>
       </div>

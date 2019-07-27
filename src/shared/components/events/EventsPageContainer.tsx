@@ -1,53 +1,85 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
+import { paths } from '../../../helpers/constants';
+import { GeneralState } from '../../redux/general/general-types';
+import { getEvents } from '../../redux/general/general-actions';
+import { ReduxState } from '../../redux/redux-state';
+import { getDayMonthDate } from '../../../helpers/utils';
+import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
+import EventsSection from '../landing/EventsSection';
+import UpcomingEventsSection from '../landing/UpcomingEventsSection';
 import SportSelectDropdown from '../common/SportSelectDropdown';
-import EventDatesSection from '../common/EventDatesSection';
 
-interface Props {
+interface StateProps {
+  general: GeneralState;
+}
 
+interface DispatchProps {
+  getEvents;
 }
 
 interface State {
-  selected: string[];
 }
 
-class EventsPageContainer extends React.Component<{}, State> {
+type Props = StateProps & DispatchProps;
+
+class EventsPageContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
-    this.state = {
-      selected: []
-    };
+    this.state = { };
   }
 
-  handleChange = values => {
-    const length = values.length;
+  componentDidMount() {
+    const { general } = this.props;
+    if (!general.liveEvents.length && !general.recentlyCompletedEvents.length && !general.upcomingEvents.length) {
+      this.props.getEvents();
+    }
+  }
+
+  handleChange() {
     
-    // Set state arrays depending on whether value has been selected or removed
-    // if (length == 0) { // All removed
-    //   this.resetInitialState();
-    // } else {
-    //   this.setState(prevState => {
-    //     if (length > prevState.selected.length) {
-    //       return this.handleAddedSelect(values, prevState);
-    //     } else {
-    //       return this.handleRemovedSelect(values, prevState);
-    //     }
-    //   });
-    // } 
   }
 
+  getDateString(event: GameOnEvent): string | null {
+    if (event.startTime) {
+      return getDayMonthDate(event.startTime);
+    }
+    return '';
+  }
 
   render() {
     return (
-      <div className="mid-container">
+      <div className="section">
+        <h2>Events</h2>
         <SportSelectDropdown handleChange={this.handleChange} showGeneral={false} />
-        {/* <EventDatesSection ongoing={this.state.ongoing}
-          upcoming={this.state.upcoming}
-          completed={this.state.completed} /> */}
+        <div className="margin-bot">
+          <h3>Live</h3>
+          <EventsSection events={this.props.general.liveEvents} />
+        </div>
+        <div className="margin-bot">
+          <h3>Coming Up</h3>
+          <UpcomingEventsSection events={this.props.general.upcomingEvents}
+            getDateString={this.getDateString} />
+        </div>
+        <div className="margin-bot">
+          <h3>Recently Completed</h3>
+          <EventsSection events={this.props.general.recentlyCompletedEvents} />
+        </div>
+        <Link to={paths.EVENTS} className="right">More ></Link>
       </div>
     );
   }
 }
 
-export default EventsPageContainer;
+const mapStateToProps = (state: ReduxState) => ({
+  general: state.general
+});
+
+const mapDispatchToProps = {
+  getEvents
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EventsPageContainer);
