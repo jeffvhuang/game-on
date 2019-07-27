@@ -369,7 +369,9 @@ export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
 }
 
 // Given a Date object, give the time formatted in 00:00
-export function getFormattedTime(date: Date): string {
+export function getFormattedTime(date: Date | null): string {
+  if (!date) return "";
+
   const h = (date.getHours() < 10 ? '0' : '') + date.getHours(),
     m = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
   return h + ':' + m;

@@ -9,7 +9,7 @@ import { ReduxState } from '../../redux/redux-state';
 import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
 import EventsSection from '../landing/EventsSection';
-import UpcomingEventsSection from '../landing/UpcomingEventsSection';
+import UpcomingSection from './UpcomingSection';
 import SportSelectDropdown from '../common/SportSelectDropdown';
 
 interface StateProps {
@@ -61,7 +61,7 @@ class EventsPageContainer extends React.Component<Props, State> {
         </div>
         <div className="margin-bot">
           <h3>Coming Up</h3>
-          <UpcomingEventsSection events={this.props.general.upcomingEvents}
+          <UpcomingSection events={this.props.general.upcomingEvents}
             getDateString={this.getDateString} />
         </div>
         <div className="margin-bot">

@@ -2,9 +2,13 @@ import * as C from './general-constants';
 import { GeneralState, GeneralActionTypes } from './general-types';
 import { SortedWeekEvents } from '../../../types/game-on-general/sorted-week-events.model';
 
+const initialEventsForWeek = {
+  today: [], tomorrow: [], day3: [], day4: [], day5: [], day6: [], day7: []
+}
+
 const initialState: GeneralState = {
   isFetching: false,
-  eventsForWeek: {} as SortedWeekEvents,
+  eventsForWeek: initialEventsForWeek,
   recentlyCompletedEvents: [],
   liveEvents: [],
   upcomingEvents: [],

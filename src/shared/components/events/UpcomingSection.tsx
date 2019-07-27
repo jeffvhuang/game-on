@@ -7,7 +7,7 @@ interface Props {
   getDateString: (event: GameOnEvent) => string | null;
 };
 
-function UpcomingEventsSection({ events, getDateString }: Props) {
+function UpcomingSection({ events, getDateString }: Props) {
   return (
     <>
       {events.map((event, i) => {
@@ -31,4 +31,4 @@ function UpcomingEventsSection({ events, getDateString }: Props) {
   );
 }
 
-export default UpcomingEventsSection;
+export default UpcomingSection;

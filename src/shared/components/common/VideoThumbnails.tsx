@@ -32,11 +32,11 @@ function VideoThumbnails({ heading, thumbnails, showCount, showMore = false, sho
           );
         })}
       </Row>
-      {showMore && 
+      {/* {showMore && 
         <Link to={showMoreLink} className="right">
           More >
         </Link>
-      }
+      } */}
     </div>
   );
 }

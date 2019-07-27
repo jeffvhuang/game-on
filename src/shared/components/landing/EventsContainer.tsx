@@ -9,7 +9,7 @@ import { ReduxState } from '../../redux/redux-state';
 import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
 import EventsSection from './EventsSection';
-import UpcomingEventsSection from './UpcomingEventsSection';
+import UpcomingEvents from './UpcomingEvents';
 
 interface StateProps {
   general: GeneralState;
@@ -35,10 +35,7 @@ class EventsContainer extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    const { general } = this.props;
-    if (!general.eventsForWeek.hasOwnProperty('today')) {
-      this.props.getEventsForWeek();
-    }
+    this.props.getEventsForWeek();
   }
 
   getDateString(event: GameOnEvent): string | null {
@@ -48,7 +45,7 @@ class EventsContainer extends React.Component<Props, State> {
     return '';
   }
 
-  getDayFromToday(daysToAdd: number): string {
+  getDayStringFromToday(daysToAdd: number): string {
     const day = new Date();
     day.setDate(day.getDate() + daysToAdd);
     var dayNum = day.getDay(); // Sun = 0 > Sat = 6
@@ -73,22 +70,40 @@ class EventsContainer extends React.Component<Props, State> {
     }
   }
 
-  render() {  
+  render() {
+    const { eventsForWeek } = this.props.general;
+    console.log(eventsForWeek);
     return (
       <div className="section">
         <h2>Events</h2>
         <div className="margin-bot">
           <h3>Today</h3>
           {/* <EventsSection events={this.props.general.liveEvents} /> */}
+
         </div>
         <div className="margin-bot">
           <h3>Tomorrow</h3>
-          {/* <UpcomingEventsSection events={this.props.general.upcomingEvents}
-            getDateString={this.getDateString} /> */}
+          <UpcomingEvents events={eventsForWeek.tomorrow} />
         </div>
         <div className="margin-bot">
-          <h3>{this.getDayFromToday(2)}</h3>
-          {/* <EventsSection events={this.props.general.recentlyCompletedEvents} /> */}
+          <h3>{this.getDayStringFromToday(2)}</h3>
+          <UpcomingEvents events={eventsForWeek.day3} />
+        </div>
+        <div className="margin-bot">
+          <h3>{this.getDayStringFromToday(3)}</h3>
+          <UpcomingEvents events={eventsForWeek.day4} />
+        </div>
+        <div className="margin-bot">
+          <h3>{this.getDayStringFromToday(4)}</h3>
+          <UpcomingEvents events={eventsForWeek.day5} />
+        </div>
+        <div className="margin-bot">
+          <h3>{this.getDayStringFromToday(5)}</h3>
+          <UpcomingEvents events={eventsForWeek.day6} />
+        </div>
+        <div className="margin-bot">
+          <h3>{this.getDayStringFromToday(6)}</h3>
+          <UpcomingEvents events={eventsForWeek.day7} />
         </div>
         <Link to={paths.EVENTS} className="right">More ></Link>
       </div>
