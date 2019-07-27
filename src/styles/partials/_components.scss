@@ -89,6 +89,19 @@ $winner-header-col-width: 10%;
   height: 2em;
 }
 
+// Landing page
+.completed-event {
+  background-color: silver;
+}
+
+.live-event {
+  background-color: gold;
+}
+
+.upcoming-event {
+  background-color: white;
+}
+
 .calendar {
   @extend .pad-sides;
 }

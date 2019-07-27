@@ -10,6 +10,7 @@ import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
 import EventsSection from './EventsSection';
 import UpcomingEvents from './UpcomingEvents';
+import EventsToday from './EventsToday';
 
 interface StateProps {
   general: GeneralState;
@@ -72,14 +73,13 @@ class EventsContainer extends React.Component<Props, State> {
 
   render() {
     const { eventsForWeek } = this.props.general;
-    console.log(eventsForWeek);
+
     return (
       <div className="section">
         <h2>Events</h2>
         <div className="margin-bot">
           <h3>Today</h3>
-          {/* <EventsSection events={this.props.general.liveEvents} /> */}
-
+          <EventsToday events={eventsForWeek.today} />
         </div>
         <div className="margin-bot">
           <h3>Tomorrow</h3>
