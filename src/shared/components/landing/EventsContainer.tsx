@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { paths } from '../../../helpers/constants';
 import { GeneralState } from '../../redux/general/general-types';
-import { getEvents } from '../../redux/general/general-actions';
+import { getEventsForWeek } from '../../redux/general/general-actions';
 import { ReduxState } from '../../redux/redux-state';
 import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
@@ -16,7 +16,7 @@ interface StateProps {
 }
 
 interface DispatchProps {
-  getEvents;
+  getEventsForWeek;
 }
 
 interface State {
@@ -36,8 +36,8 @@ class EventsContainer extends React.Component<Props, State> {
 
   componentDidMount() {
     const { general } = this.props;
-    if (!general.liveEvents.length && !general.recentlyCompletedEvents.length && !general.upcomingEvents.length) {
-      this.props.getEvents();
+    if (!general.eventsForWeek.hasOwnProperty('today')) {
+      this.props.getEventsForWeek();
     }
   }
 
@@ -101,7 +101,7 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getEvents
+  getEventsForWeek
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventsContainer);

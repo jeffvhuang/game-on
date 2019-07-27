@@ -1,8 +1,10 @@
 import * as C from './general-constants';
 import { GeneralState, GeneralActionTypes } from './general-types';
+import { SortedWeekEvents } from '../../../types/game-on-general/sorted-week-events.model';
 
 const initialState: GeneralState = {
   isFetching: false,
+  eventsForWeek: {} as SortedWeekEvents,
   recentlyCompletedEvents: [],
   liveEvents: [],
   upcomingEvents: [],
@@ -22,6 +24,17 @@ function generalReducer(state = initialState, action: GeneralActionTypes): Gener
           upcomingEvents: action.payload.upcoming
         });
     case C.GET_EVENTS_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+    
+    case C.GET_EVENTS_FOR_WEEK_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case C.GET_EVENTS_FOR_WEEK_SUCCESS:
+      return Object.assign({}, state,
+        { 
+          isFetching: false,
+          eventsForWeek: action.payload
+        });
+    case C.GET_EVENTS_FOR_WEEK_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
     default:
