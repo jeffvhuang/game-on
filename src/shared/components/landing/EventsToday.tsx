@@ -12,12 +12,16 @@ function EventsToday({ events }: Props) {
     <>
       {events.map((event, i) => {
         // Set class for event depending on whether it is completed, live or upcoming
-        let eventClass = 'upcoming-event';
+        let eventClass = '';
         const startTime = (event.startTime) ? new Date(event.startTime) : null;
-        if (event.endTime && now > new Date(event.endTime)) { // event is finished
-          eventClass = 'completed-event';
-        } else if (startTime && now > startTime) { // event is live
-          eventClass = 'live-event';
+        const endTime = (event.endTime) ? new Date(event.endTime) : null;
+
+        if (endTime) {
+          if (now > endTime) {
+            eventClass = 'completed-event';
+          } else if (startTime && now > startTime && now < endTime) {
+            eventClass = 'live-event';
+          }
         }
 
         const numOfCompetitors = event.competitors.length;
