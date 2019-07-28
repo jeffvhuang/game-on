@@ -1,3 +1,5 @@
+@import 'components/_landing.scss';
+
 $winner-header-col-width: 10%;
 
 .header {
@@ -87,19 +89,6 @@ $winner-header-col-width: 10%;
 
 .team-logo-small {
   height: 2em;
-}
-
-// Landing page
-.completed-event {
-  background-color: silver;
-}
-
-.live-event {
-  background-color: gold;
-}
-
-.upcoming-event {
-  background-color: white;
 }
 
 .calendar {

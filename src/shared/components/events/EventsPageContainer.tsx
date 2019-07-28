@@ -8,7 +8,7 @@ import { getEvents } from '../../redux/general/general-actions';
 import { ReduxState } from '../../redux/redux-state';
 import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
-import EventsSection from '../landing/EventsSection';
+import EventsSection from './EventsSection';
 import UpcomingSection from './UpcomingSection';
 import SportSelectDropdown from '../common/SportSelectDropdown';
 

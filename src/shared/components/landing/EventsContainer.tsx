@@ -8,7 +8,6 @@ import { getEventsForWeek } from '../../redux/general/general-actions';
 import { ReduxState } from '../../redux/redux-state';
 import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
-import EventsSection from './EventsSection';
 import UpcomingEvents from './UpcomingEvents';
 import EventsToday from './EventsToday';
 
@@ -76,7 +75,7 @@ class EventsContainer extends React.Component<Props, State> {
 
     return (
       <div className="section">
-        <h2>Events</h2>
+        <h2 className="page-heading">Matches</h2>
         <div className="margin-bot">
           <h3>Today</h3>
           <EventsToday events={eventsForWeek.today} />

@@ -4,11 +4,12 @@ import { ThunkAction } from 'redux-thunk';
 import { ReduxState } from '../redux-state';
 import * as T from './general-types';
 import * as C from './general-constants';
-import { gameonAPI } from '../../../helpers/constants';
+import { gameonAPI, env } from '../../../helpers/constants';
 
 // Mock data
 import SORTED_EVENTS from '../../../mockApiData/events.json';
 import SORTED_WEEK_EVENTS from '../../../mockApiData/eventsForWeek.json';
+import SORTED_WEEK_EVENTS2 from '../../../mockApiData/eventsForWeek2.json';
 
 // Get events sorted into live, upcoming and recently completed
 export function getEventsRequest(): T.GetEventsRequest {
@@ -67,5 +68,5 @@ export function getEventsForWeekFailure(err): T.GetEventsForWeekFailure {
 export const getEventsForWeek = (): ThunkAction<
   Promise<void>, ReduxState, null, T.GeneralActionTypes
 > => async (dispatch) => {
-  dispatch(getEventsForWeekSuccess(SORTED_WEEK_EVENTS));
+  dispatch(getEventsForWeekSuccess(SORTED_WEEK_EVENTS2));
 };

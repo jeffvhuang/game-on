@@ -3,6 +3,8 @@
  * Specific app related constants section
  * 
  */
+export const env = 'dev';
+// export const env = 'prod';
 
 export const appName = 'Game On';
 

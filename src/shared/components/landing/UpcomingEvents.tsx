@@ -18,13 +18,13 @@ function UpcomingEvents({ events }: Props) {
         const startDate = (event.startTime) ? new Date(event.startTime) : null;
 
         return (
-          <Row key={event.id}>
+          <Row key={event.id} className="event-row upcoming-event">
             <Col span={3}>{event.sport}</Col>
-            <Col span={3}>{event.leagueOrTournament}</Col>
-            <Col span={7}>{competitor1}</Col>
-            <Col span={1}>vs</Col>
-            <Col span={7}>{competitor2}</Col>
-            <Col span={3}>{getFormattedTime(startDate)}</Col>
+            <Col span={8}>{event.leagueOrTournament}</Col>
+            <Col span={11}>
+              <span>{competitor1}</span> v <span>{competitor2}</span>
+            </Col>
+            <Col span={2}>{getFormattedTime(startDate)}</Col>
           </Row>
         );
       })}

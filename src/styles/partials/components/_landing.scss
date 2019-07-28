@@ -1,0 +1,26 @@
+.event-row {
+  border: 1px solid $very-transparent-black;
+  border-bottom: none;
+  padding: .5em 1em;
+
+  span {
+    font-weight: 400;
+  }
+}
+
+.event-row:last-child {
+  border-bottom:  1px solid $very-transparent-black;
+}
+
+.completed-event {
+  background: linear-gradient($silver, $darker-silver);
+}
+
+.live-event {
+  background: linear-gradient($lighter-yellow, $gold);
+}
+
+.upcoming-event {
+  background: linear-gradient($white-smoke, $light-grey);
+  // background: linear-gradient($lighter-yellow, $gold);
+}
