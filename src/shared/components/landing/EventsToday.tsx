@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { Row, Col } from 'antd';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
+import UpcomingEvent from './UpcomingEvent';
+import EventWithScore from './EventWithScore';
+import { getFormattedTime } from '../../../helpers/utils';
 
 interface Props {
   events: GameOnEvent[]
@@ -11,6 +13,10 @@ function EventsToday({ events }: Props) {
   return (
     <>
       {events.map((event, i) => {
+        const numOfCompetitors = event.competitors.length;
+        const competitor1 = (numOfCompetitors > 0) ? event.competitors[0].name : 'TBD';
+        const competitor2 = (numOfCompetitors > 1) ? event.competitors[1].name : 'TBD';
+
         // Set class for event depending on whether it is completed, live or upcoming
         let eventClass = 'event-row';
         const startTime = (event.startTime) ? new Date(event.startTime) : null;
@@ -22,26 +28,31 @@ function EventsToday({ events }: Props) {
           } else if (startTime && now > startTime && now < endTime) {
             eventClass += ' live-event';
           }
-        } else {
-          eventClass += ' upcoming-event';
-        }
-
-        const numOfCompetitors = event.competitors.length;
-        const competitor1 = (numOfCompetitors > 0) ? event.competitors[0].name : 'TBD';
-        const score1 = (numOfCompetitors > 0) ? event.competitors[0].score : '';
-        const competitor2 = (numOfCompetitors > 1) ? event.competitors[1].name : 'TBD';
-        const score2 = (numOfCompetitors > 1) ? event.competitors[1].score : '';
+     
+          const score1 = (numOfCompetitors > 0) ? event.competitors[0].score : '';
+          const score2 = (numOfCompetitors > 1) ? event.competitors[1].score : '';
         
-        return (
-          <Row key={event.id} className={eventClass}>
-            <Col span={3}>{event.sport}</Col>
-            <Col span={8}>{event.leagueOrTournament}</Col>
-            <Col span={11}>
-              <span>{competitor1}</span> v <span>{competitor2}</span>
-            </Col>
-            <Col span={2}>{score1} - {score2}</Col>
-          </Row>
-        );
+          return (
+            <EventWithScore id={event.id}
+              eventClass={eventClass}
+              sport={event.sport} 
+              leagueOrTournament={event.leagueOrTournament}
+              competitor1={competitor1}
+              competitor2={competitor2}
+              score1={score1}
+              score2={score2} />
+          )
+        } else {
+          const startDate = (event.startTime) ? new Date(event.startTime) : null;
+
+          return (
+            <UpcomingEvent id={event.id} sport={event.sport} 
+              leagueOrTournament={event.leagueOrTournament}
+              competitor1={competitor1}
+              competitor2={competitor2}
+              timeString={getFormattedTime(startDate)} />
+          )
+        }
       })}
     </>
   );
