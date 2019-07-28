@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Row, Col } from 'antd';
 
 interface Props {
-  id: string;
   eventClass: string;
   sport: string;
   leagueOrTournament: string;
@@ -12,9 +11,9 @@ interface Props {
   score2: string;
 };
 
-function EventWithScore({ id, eventClass, sport, leagueOrTournament, competitor1, competitor2, score1, score2 }: Props) {
+function EventWithScore({ eventClass, sport, leagueOrTournament, competitor1, competitor2, score1, score2 }: Props) {
   return (
-    <Row key={id} className={eventClass}>
+    <Row className={eventClass}>
       <Col span={3}>{sport}</Col>
       <Col span={8}>{leagueOrTournament}</Col>
       <Col span={11}>

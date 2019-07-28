@@ -31,9 +31,9 @@ function EventsToday({ events }: Props) {
      
           const score1 = (numOfCompetitors > 0) ? event.competitors[0].score : '';
           const score2 = (numOfCompetitors > 1) ? event.competitors[1].score : '';
-        
+          
           return (
-            <EventWithScore id={event.id}
+            <EventWithScore key={event.id}
               eventClass={eventClass}
               sport={event.sport} 
               leagueOrTournament={event.leagueOrTournament}
@@ -46,7 +46,8 @@ function EventsToday({ events }: Props) {
           const startDate = (event.startTime) ? new Date(event.startTime) : null;
 
           return (
-            <UpcomingEvent id={event.id} sport={event.sport} 
+            <UpcomingEvent key={event.id}
+              sport={event.sport} 
               leagueOrTournament={event.leagueOrTournament}
               competitor1={competitor1}
               competitor2={competitor2}

@@ -18,7 +18,8 @@ function UpcomingEvents({ events }: Props) {
         const startDate = (event.startTime) ? new Date(event.startTime) : null;
 
         return (
-          <UpcomingEvent id={event.id} sport={event.sport} 
+          <UpcomingEvent key={event.id}
+            sport={event.sport} 
             leagueOrTournament={event.leagueOrTournament}
             competitor1={competitor1}
             competitor2={competitor2}
