@@ -18,41 +18,42 @@ function EventsToday({ events }: Props) {
         const competitor2 = (numOfCompetitors > 1) ? event.competitors[1].name : 'TBD';
 
         // Set class for event depending on whether it is completed, live or upcoming
-        let eventClass = 'event-row';
+        
         const startTime = (event.startTime) ? new Date(event.startTime) : null;
         const endTime = (event.endTime) ? new Date(event.endTime) : null;
 
-        if (endTime) {
-          if (now > endTime) {
-            eventClass += ' completed-event';
-          } else if (startTime && now > startTime && now < endTime) {
-            eventClass += ' live-event';
-          }
-     
-          const score1 = (numOfCompetitors > 0) ? event.competitors[0].score : '';
-          const score2 = (numOfCompetitors > 1) ? event.competitors[1].score : '';
-          
-          return (
-            <EventWithScore key={event.id}
-              eventClass={eventClass}
-              sport={event.sport} 
-              leagueOrTournament={event.leagueOrTournament}
-              competitor1={competitor1}
-              competitor2={competitor2}
-              score1={score1}
-              score2={score2} />
-          )
-        } else {
-          const startDate = (event.startTime) ? new Date(event.startTime) : null;
+        if (startTime) {
+          if (now < startTime) {
+            return (
+              <UpcomingEvent key={event.id}
+                sport={event.sport} 
+                leagueOrTournament={event.leagueOrTournament}
+                competitor1={competitor1}
+                competitor2={competitor2}
+                timeString={getFormattedTime(startTime)} />
+            )
+          } else { // Either live or completed
+            let eventClass = 'event-row';
+            if (endTime && now >= endTime) {
+              eventClass += ' completed-event';
+            } else {
+              eventClass += ' live-event';
+            }
 
-          return (
-            <UpcomingEvent key={event.id}
-              sport={event.sport} 
-              leagueOrTournament={event.leagueOrTournament}
-              competitor1={competitor1}
-              competitor2={competitor2}
-              timeString={getFormattedTime(startDate)} />
-          )
+            const score1 = (numOfCompetitors > 0) ? event.competitors[0].score : '';
+            const score2 = (numOfCompetitors > 1) ? event.competitors[1].score : '';
+            
+            return (
+              <EventWithScore key={event.id}
+                eventClass={eventClass}
+                sport={event.sport} 
+                leagueOrTournament={event.leagueOrTournament}
+                competitor1={competitor1}
+                competitor2={competitor2}
+                score1={score1}
+                score2={score2} />
+            )
+          }
         }
       })}
     </>
