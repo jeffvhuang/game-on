@@ -23,3 +23,11 @@
 .upcoming-event {
   background: linear-gradient($white-smoke, $light-grey);
 }
+
+.postponed-event {
+  background: linear-gradient($gainsboro, $silver);
+}
+
+.canceled-event {
+  background: linear-gradient($grey, $darker-grey);
+}

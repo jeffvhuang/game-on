@@ -4,6 +4,8 @@ export interface GameOnEvent {
   id: string;
   startTime: string | null;
   endTime: string | null;
+  // "Completed", "Live" ("Ongoing" if isTournament), "Upcoming", "Postponed", "Canceled", ""
+  status: string;
   name: string;
   sport: string;
   leagueOrTournament: string;

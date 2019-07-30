@@ -6,19 +6,16 @@ interface Props {
   event: GameOnEvent
 };
 
-function EventWithScore({ event }: Props) {
+function EventWithMessage({ event }: Props) {
   const numOfCompetitors = event.competitors.length;
-  const score1 = (numOfCompetitors > 0) ? event.competitors[0].score : '';
-  const score2 = (numOfCompetitors > 1) ? event.competitors[1].score : '';
-  
   const competitor1 = (numOfCompetitors > 0) ? event.competitors[0].name : 'TBD';
   const competitor2 = (numOfCompetitors > 1) ? event.competitors[1].name : 'TBD';
 
   let eventClass = 'event-row';
-  if (event.status == 'Completed') {
-    eventClass += ' completed-event';
-  } else if (event.status == 'Live') {
-    eventClass += ' live-event';
+  if (event.status == 'Postponed') {
+    eventClass += ' postponed-event';
+  } else if (event.status == 'Canceled') {
+    eventClass += ' canceled-event';
   }
   
   return (
@@ -28,9 +25,9 @@ function EventWithScore({ event }: Props) {
       <Col span={11}>
         <span>{competitor1}</span> v <span>{competitor2}</span>
       </Col>
-      <Col span={2}>{score1} - {score2}</Col>
+      <Col span={2}>{event.status.toLowerCase()}</Col>
     </Row>
   );
 }
 
-export default EventWithScore;
+export default EventWithMessage;
