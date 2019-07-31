@@ -25,29 +25,80 @@ export const paths = {
   VIDEO: '/video'
 };
 
-export const sports = {
-  BASKETBALL: "Basketball",
-  TENNIS: "Tennis",
-  FOOTBALL: "Football"
-};
+export const sports = [
+  {
+    name: "Basketball",
+    abbreviation: "basketball",
+    leagues: [
+      {
+        name: "National Basketball Association",
+        abbreviation: "NBA",
+        teams: []
+      }
+    ]
+  },
+  {
+    name: "Football",
+    abbreviation: "football",
+    leagues: [
+      {
+        name: "English Premier League",
+        abbreviation: "EPL",
+        teams: []
+      },
+      {
+        name: "Europa League",
+        abbreviation: "europaLeague",
+        teams: []
+      },
+      {
+        name: "Champion's League",
+        abbreviation: "championsLeague",
+        teams: []
+      }
+    ]
+  },
+  {
+    name: "Tennis",
+    abbreviation: "tennis",
+    tournaments: []
+  }
+]
 
 export const sportsList = Object.keys(sports).map(key => {
   return sports[key];
 });
 
-export const esportsTitles = {
-  DOTA: "Dota 2",
-  LEAGUE: "League of Legends",
-  CSGO: "Counter Strike: GO",
-  OVERWATCH: "Overwatch"
-};
-
-export const esports = {
-  DOTA: "dota",
-  LEAGUE: "lol",
-  CSGO: "csgo",
-  OVERWATCH: "overwatch"
-};
+export const esports = [
+  {
+    name: "Dota 2",
+    abbreviation: "dota",
+    apiAbbreviation: "Dota 2"
+  },
+  {
+    name: "League of Legends",
+    abbreviation: "lol",
+    apiAbbreviation: "LoL"
+  },
+  {
+    name: "Counter Strike: Global Offensive",
+    abbreviation: "csgo",
+    apiAbbreviation: "CS:GO"
+  },
+  {
+    name: "Overwatch",
+    abbreviation: "ow",
+    apiAbbreviation: "Overwatch"
+  }
+  // {
+  //   name: "Fortnite",
+  //   abbreviation: "fortnite"
+  // },
+  // {
+  //   name: "PlayerUnknown's Battleground",
+  //   abbreviation: "pubg"
+  // }
+]
 
 export const esportsList = Object.keys(esports).map(key => {
   return esports[key];
