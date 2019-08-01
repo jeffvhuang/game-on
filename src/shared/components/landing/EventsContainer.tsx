@@ -10,6 +10,7 @@ import { getDayMonthDate } from '../../../helpers/utils';
 import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
 import UpcomingEvents from './UpcomingEvents';
 import EventsToday from './EventsToday';
+import SportSelectDropdown from '../common/SportSelectDropdown';
 
 interface StateProps {
   general: GeneralState;
@@ -21,6 +22,7 @@ interface DispatchProps {
 
 interface State {
   today: Date;
+  values: string[];
 }
 
 type Props = StateProps & DispatchProps;
@@ -30,13 +32,16 @@ class EventsContainer extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      today: new Date()
+      today: new Date(),
+      values: []
     };
   }
 
   componentDidMount() {
     this.props.getEventsForWeek();
   }
+
+  handleChange = values => this.setState({ values });
 
   getDateString(event: GameOnEvent): string | null {
     if (event.startTime) {
@@ -76,6 +81,7 @@ class EventsContainer extends React.Component<Props, State> {
     return (
       <div className="section">
         <h2 className="page-heading">Matches</h2>
+        <SportSelectDropdown handleChange={this.handleChange} />
         <div className="margin-bot">
           <h3>Today</h3>
           <EventsToday events={eventsForWeek.today} />

@@ -75,35 +75,35 @@ export const sports = [
 export const sportsLeagues = [
   {
     name: "National Basketball Association",
-    uiName: "NBA",
+    dropdownName: "NBA - National Basketball Association",
     abbreviation: "nba",
     sport: "Basketball",
     teams: []
   },
   {
     name: "English Premier League",
-    uiName: "EPL",
+    dropdownName: "EPL - English Premier League",
     abbreviation: "epl",
     sport: "football",
     teams: []
   },
   {
     name: "Europa League",
-    uiName: "Europa League",
+    dropdownName: "Europa League",
     abbreviation: "europaLeague",
     sport: "football",
     teams: []
   },
   {
     name: "Champions League",
-    uiName: "Champions League",
+    dropdownName: "Champions League",
     abbreviation: "championsLeague",
     sport: "football",
     teams: []
   },
   {
     name: "Tennis",
-    uiName: "Tennis",
+    dropdownName: "Tennis",
     abbreviation: "tennis",
     sport: "tennis",
     tournaments: []
@@ -113,18 +113,22 @@ export const sportsLeagues = [
 export const esports = [
   {
     name: "Dota 2",
+    dropdownName: "Dota 2 - Defense of the Ancients 2",
     abbreviation: "dota"
   },
   {
     name: "League of Legends",
+    dropdownName: "LoL - League of Legends",
     abbreviation: "lol"
   },
   {
     name: "Counter Strike: Global Offensive",
+    dropdownName: "CS:GO - Counter Strike: Global Offensive",
     abbreviation: "csgo"
   },
   {
     name: "Overwatch",
+    dropdownName: "Overwatch",
     abbreviation: "ow"
   }
   // {

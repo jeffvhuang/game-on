@@ -6,7 +6,7 @@ import { sportsLeagues, esports } from '../../../helpers/constants';
 const { Option, OptGroup } = Select;
 interface Props {
   handleChange: (value: string) => void;
-  showGeneral: boolean;
+  showGeneral?: boolean;
 };
 
 const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
@@ -27,8 +27,8 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
           {
             sportsLeagues.map(sport => {
               return (
-                <Option key={sport.abbreviation} value={sport.abbreviation}>
-                  {sport.uiName}
+                <Option key={sport.abbreviation} value={sport.dropdownName}>
+                  {sport.dropdownName}
                 </Option>
               ) 
             })
@@ -38,8 +38,8 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
         {
             esports.map(sport => {
               return (
-                <Option key={sport.abbreviation} value={sport.abbreviation}>
-                  {sport.name}
+                <Option key={sport.abbreviation} value={sport.dropdownName}>
+                  {sport.dropdownName}
                 </Option>
               ) 
             })
