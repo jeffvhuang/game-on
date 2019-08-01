@@ -3,7 +3,7 @@ import { object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { paths, allSportsList } from '../../../helpers/constants';
+import { paths } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';
 import { getChampionsLeagueVideos } from '../../redux/football/champions-league/champions-league-actions';
 

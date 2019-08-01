@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { allSportsList } from '../../../helpers/constants';
+import { sportsList } from '../../../helpers/constants';
 import { getNbaVideos } from '../../redux/nba/nba-actions';
 import { getChampionsLeagueVideos } from '../../redux/football/champions-league/champions-league-actions';
 // import { getTennisVideos } from '../../redux/actions/tennis-actions';
@@ -91,7 +91,7 @@ class SpecificHighlightsContainer extends React.Component<Props, State> {
   }
 
   render() {
-    if (!allSportsList.some(s => s.toLowerCase() == this.state.sport.toLowerCase()))
+    if (!sportsList.some(s => s.abbreviation.toLowerCase() == this.state.sport.toLowerCase()))
       return <WrongUrl />;
 
     const obj = this.getReduxObjectForSport(this.state.sport);

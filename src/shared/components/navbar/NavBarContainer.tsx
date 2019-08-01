@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 
-import { appName, paths, sports, esportsTitles } from '../../../helpers/constants';
+import { appName, paths } from '../../../helpers/constants';
 
 const Item = Menu.Item;
 const SubMenu = Menu.SubMenu;
@@ -32,27 +32,27 @@ class NavBarContainer extends React.Component<{}, State> {
         </Item> */}
         <SubMenu title="Sports">
           <Item key="basketball">
-            <Link to={paths.SPORTS + paths.BASKETBALL}>{sports.BASKETBALL}</Link>
+            <Link to={paths.SPORTS + paths.BASKETBALL}>Basketball</Link>
           </Item>
           <Item key="football">
-            <Link to={paths.SPORTS + paths.FOOTBALL}>{sports.FOOTBALL}</Link>
+            <Link to={paths.SPORTS + paths.FOOTBALL}>Football</Link>
           </Item>
           <Item key="tennis">
-            <Link to={paths.SPORTS + paths.TENNIS}>{sports.TENNIS}</Link>
+            <Link to={paths.SPORTS + paths.TENNIS}>Tennis</Link>
           </Item>
         </SubMenu>
-        <SubMenu title="E-Sports">
+        <SubMenu title="Esports">
           <Item key="dota">
-            <Link to={paths.ESPORTS + paths.DOTA}>{esportsTitles.DOTA}</Link>
+            <Link to={paths.ESPORTS + paths.DOTA}>DOTA 2</Link>
           </Item>
           <Item key="lol">
-            <Link to={paths.ESPORTS + paths.LOL}>{esportsTitles.LEAGUE}</Link>
+            <Link to={paths.ESPORTS + paths.LOL}>League of Legends</Link>
           </Item>
           <Item key="csgo">
-            <Link to={paths.ESPORTS + paths.CSGO}>{esportsTitles.CSGO}</Link>
+            <Link to={paths.ESPORTS + paths.CSGO}>Counter Strike: GO</Link>
           </Item>
           <Item key="overwatch">
-            <Link to={paths.ESPORTS + paths.OVERWATCH}>{esportsTitles.OVERWATCH}</Link>
+            <Link to={paths.ESPORTS + paths.OVERWATCH}>Overwatch</Link>
           </Item>
         </SubMenu>
         <Item key="events">

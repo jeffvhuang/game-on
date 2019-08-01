@@ -29,10 +29,12 @@ export const sports = [
   {
     name: "Basketball",
     abbreviation: "basketball",
+    apiAbbreviation: "Basketball",
     leagues: [
       {
         name: "National Basketball Association",
         abbreviation: "NBA",
+        apiAbbreviation: "NBA",
         teams: []
       }
     ]
@@ -40,20 +42,24 @@ export const sports = [
   {
     name: "Football",
     abbreviation: "football",
+    apiAbbreviation: "Football",
     leagues: [
       {
         name: "English Premier League",
         abbreviation: "EPL",
+        apiAbbreviation: "EPL",
         teams: []
       },
       {
         name: "Europa League",
         abbreviation: "europaLeague",
+        apiAbbreviation: "Europa League",
         teams: []
       },
       {
         name: "Champion's League",
         abbreviation: "championsLeague",
+        apiAbbreviation: "Champions League",
         teams: []
       }
     ]
@@ -61,34 +67,65 @@ export const sports = [
   {
     name: "Tennis",
     abbreviation: "tennis",
+    apiAbbreviation: "Tennis",
     tournaments: []
   }
 ]
 
-export const sportsList = Object.keys(sports).map(key => {
-  return sports[key];
-});
+export const sportsLeagues = [
+  {
+    name: "National Basketball Association",
+    uiName: "NBA",
+    abbreviation: "nba",
+    sport: "Basketball",
+    teams: []
+  },
+  {
+    name: "English Premier League",
+    uiName: "EPL",
+    abbreviation: "epl",
+    sport: "football",
+    teams: []
+  },
+  {
+    name: "Europa League",
+    uiName: "Europa League",
+    abbreviation: "europaLeague",
+    sport: "football",
+    teams: []
+  },
+  {
+    name: "Champions League",
+    uiName: "Champions League",
+    abbreviation: "championsLeague",
+    sport: "football",
+    teams: []
+  },
+  {
+    name: "Tennis",
+    uiName: "Tennis",
+    abbreviation: "tennis",
+    sport: "tennis",
+    tournaments: []
+  }
+]
 
 export const esports = [
   {
     name: "Dota 2",
-    abbreviation: "dota",
-    apiAbbreviation: "Dota 2"
+    abbreviation: "dota"
   },
   {
     name: "League of Legends",
-    abbreviation: "lol",
-    apiAbbreviation: "LoL"
+    abbreviation: "lol"
   },
   {
     name: "Counter Strike: Global Offensive",
-    abbreviation: "csgo",
-    apiAbbreviation: "CS:GO"
+    abbreviation: "csgo"
   },
   {
     name: "Overwatch",
-    abbreviation: "ow",
-    apiAbbreviation: "Overwatch"
+    abbreviation: "ow"
   }
   // {
   //   name: "Fortnite",
@@ -100,12 +137,7 @@ export const esports = [
   // }
 ]
 
-export const esportsList = Object.keys(esports).map(key => {
-  return esports[key];
-});
-
-export const allSportsList = sportsList.concat(esportsList);
-
+export const sportsList = [...sports, ...esports];
 
 // API from backend
 export const gameonAPI = {

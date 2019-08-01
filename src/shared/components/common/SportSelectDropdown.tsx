@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Select } from 'antd';
 
-import { sports, esportsTitles } from '../../../helpers/constants';
+import { sportsLeagues, esports } from '../../../helpers/constants';
 
 const { Option, OptGroup } = Select;
 interface Props {
@@ -18,20 +18,32 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
         size="large"
         style={{ width: '80%' }}
         allowClear >
-        {showGeneral && 
+        {/* {showGeneral && 
           <OptGroup label="General">
             <Option value="Popular">Popular</Option>
           </OptGroup>
-        }
+        } */}
         <OptGroup label="Sports">
-          {Object.keys(sports).map(key => {
-            return <Option key={key} value={sports[key]}>{sports[key]}</Option>;
-          })}
+          {
+            sportsLeagues.map(sport => {
+              return (
+                <Option key={sport.abbreviation} value={sport.abbreviation}>
+                  {sport.uiName}
+                </Option>
+              ) 
+            })
+          }
         </OptGroup>
-        <OptGroup label="E-Sports">
-          {Object.keys(esportsTitles).map(key => {
-            return <Option key={key} value={esportsTitles[key]}>{esportsTitles[key]}</Option>;
-          })}
+        <OptGroup label="Esports">
+        {
+            esports.map(sport => {
+              return (
+                <Option key={sport.abbreviation} value={sport.abbreviation}>
+                  {sport.name}
+                </Option>
+              ) 
+            })
+          }
         </OptGroup>
       </Select>
     </div>
