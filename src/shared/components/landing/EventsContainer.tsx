@@ -88,27 +88,27 @@ class EventsContainer extends React.Component<Props, State> {
         </div>
         <div className="margin-bot">
           <h3>Tomorrow</h3>
-          <UpcomingEvents events={eventsForWeek.tomorrow} />
+          <UpcomingEvents events={eventsForWeek.tomorrow} values={this.state.values} />
         </div>
         <div className="margin-bot">
           <h3>{this.getDayStringFromToday(2)}</h3>
-          <UpcomingEvents events={eventsForWeek.day3} />
+          <UpcomingEvents events={eventsForWeek.day3} values={this.state.values} />
         </div>
         <div className="margin-bot">
           <h3>{this.getDayStringFromToday(3)}</h3>
-          <UpcomingEvents events={eventsForWeek.day4} />
+          <UpcomingEvents events={eventsForWeek.day4} values={this.state.values} />
         </div>
         <div className="margin-bot">
           <h3>{this.getDayStringFromToday(4)}</h3>
-          <UpcomingEvents events={eventsForWeek.day5} />
+          <UpcomingEvents events={eventsForWeek.day5} values={this.state.values}/>
         </div>
         <div className="margin-bot">
           <h3>{this.getDayStringFromToday(5)}</h3>
-          <UpcomingEvents events={eventsForWeek.day6} />
+          <UpcomingEvents events={eventsForWeek.day6} values={this.state.values} />
         </div>
         <div className="margin-bot">
           <h3>{this.getDayStringFromToday(6)}</h3>
-          <UpcomingEvents events={eventsForWeek.day7} />
+          <UpcomingEvents events={eventsForWeek.day7} values={this.state.values} />
         </div>
         {/* <Link to={paths.EVENTS} className="right">More ></Link> */}
       </div>

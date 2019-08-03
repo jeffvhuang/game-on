@@ -4,13 +4,24 @@ import UpcomingEvent from './UpcomingEvent';
 
 interface Props {
   events: GameOnEvent[];
+  values: string[]
 };
 
-function UpcomingEvents({ events }: Props) {
+function UpcomingEvents({ events, values }: Props) {
   return (
     <>
       {events.map((event, i) => {
-        return  <UpcomingEvent key={event.id} event={event} />
+        let isInValues = false;
+        for (let i = 0; i < values.length; i++) {
+          const value = values[i];
+          if (value.includes(event.selector)) {
+            isInValues = true;
+            break;
+          } 
+        }
+
+        if (values.length == 0 || isInValues)
+          return <UpcomingEvent key={event.id} event={event} />;
       })}
     </>
   );

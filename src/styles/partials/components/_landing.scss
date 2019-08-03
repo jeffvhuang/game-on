@@ -3,25 +3,41 @@
   border-bottom: none;
   padding: .5em 1em;
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:last-child {
+    border-bottom:  1px solid $very-transparent-black;
+  }
+  
   span {
     font-weight: 700;
   }
 }
 
-.event-row:last-child {
-  border-bottom:  1px solid $very-transparent-black;
-}
-
 .completed-event {
   background: linear-gradient($silver, $darker-silver);
+
+  &:hover {
+    background: linear-gradient($light-grey, $darkish-silver);
+  }
 }
 
 .live-event {
   background: linear-gradient($lighter-yellow, $gold);
+
+  &:hover {
+    background: linear-gradient($lighter-yellow, $yellow);
+  }
 }
 
 .upcoming-event {
-  background: linear-gradient($white-smoke, $light-grey);
+  background: linear-gradient($white-silver, $light-grey);
+
+  &:hover {
+    background: linear-gradient($white, $gainsboro);
+  }
 }
 
 .postponed-event {
