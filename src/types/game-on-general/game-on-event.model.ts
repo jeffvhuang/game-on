@@ -9,5 +9,7 @@ export interface GameOnEvent {
   name: string;
   sport: string;
   leagueOrTournament: string;
+  selector: string;
+  isTournament: boolean;
   competitors: GameOnCompetitor[];
 }

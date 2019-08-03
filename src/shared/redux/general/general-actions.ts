@@ -52,21 +52,21 @@ export function getEventsForWeekFailure(err): T.GetEventsForWeekFailure {
   return { type: C.GET_EVENTS_FOR_WEEK_FAILURE, err }
 }
 
-export const getEventsForWeek = (): ThunkAction<
-  Promise<void>, ReduxState, null, T.GeneralActionTypes
-> => async (dispatch) => {
-  dispatch(getEventsForWeekRequest());
-  return axios.get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS + '/week')
-  .then(response => {
-    dispatch(getEventsForWeekSuccess(response.data));
-  }).catch(err => {
-    dispatch(getEventsForWeekFailure(err));
-  });
-};
-
-// mock data
 // export const getEventsForWeek = (): ThunkAction<
 //   Promise<void>, ReduxState, null, T.GeneralActionTypes
 // > => async (dispatch) => {
-//   dispatch(getEventsForWeekSuccess(SORTED_WEEK_EVENTS2));
+//   dispatch(getEventsForWeekRequest());
+//   return axios.get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS + '/week')
+//   .then(response => {
+//     dispatch(getEventsForWeekSuccess(response.data));
+//   }).catch(err => {
+//     dispatch(getEventsForWeekFailure(err));
+//   });
 // };
+
+// mock data
+export const getEventsForWeek = (): ThunkAction<
+  Promise<void>, ReduxState, null, T.GeneralActionTypes
+> => async (dispatch) => {
+  dispatch(getEventsForWeekSuccess(SORTED_WEEK_EVENTS2));
+};

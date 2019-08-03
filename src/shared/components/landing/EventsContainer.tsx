@@ -84,7 +84,7 @@ class EventsContainer extends React.Component<Props, State> {
         <SportSelectDropdown handleChange={this.handleChange} />
         <div className="margin-bot">
           <h3>Today</h3>
-          <EventsToday events={eventsForWeek.today} />
+          <EventsToday events={eventsForWeek.today} values={this.state.values} />
         </div>
         <div className="margin-bot">
           <h3>Tomorrow</h3>
@@ -110,7 +110,7 @@ class EventsContainer extends React.Component<Props, State> {
           <h3>{this.getDayStringFromToday(6)}</h3>
           <UpcomingEvents events={eventsForWeek.day7} />
         </div>
-        <Link to={paths.EVENTS} className="right">More ></Link>
+        {/* <Link to={paths.EVENTS} className="right">More ></Link> */}
       </div>
     );
   }

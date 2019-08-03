@@ -72,39 +72,48 @@ export const sports = [
   }
 ]
 
+/**
+ * @property selector: used by antd select dropdown to search by typing
+ * and match a sequence within the string
+ */
 export const sportsLeagues = [
   {
     name: "National Basketball Association",
-    dropdownName: "NBA - National Basketball Association",
+    uiName: "National Basketball Association (NBA)",
     abbreviation: "nba",
+    selectors: "nba national basketball association",
     sport: "Basketball",
     teams: []
   },
   {
     name: "English Premier League",
-    dropdownName: "EPL - English Premier League",
+    uiName: "English Premier League (EPL)",
     abbreviation: "epl",
+    selectors: "epl english premier league football",
     sport: "football",
     teams: []
   },
   {
     name: "Europa League",
-    dropdownName: "Europa League",
+    uiName: "Europa League",
     abbreviation: "europaLeague",
+    selectors: "europa league football",
     sport: "football",
     teams: []
   },
   {
     name: "Champions League",
-    dropdownName: "Champions League",
+    uiName: "Champions League",
     abbreviation: "championsLeague",
+    selectors: "champions league football",
     sport: "football",
     teams: []
   },
   {
     name: "Tennis",
-    dropdownName: "Tennis",
+    uiName: "Tennis",
     abbreviation: "tennis",
+    selectors: "tennis",
     sport: "tennis",
     tournaments: []
   }
@@ -113,23 +122,27 @@ export const sportsLeagues = [
 export const esports = [
   {
     name: "Dota 2",
-    dropdownName: "Dota 2 - Defense of the Ancients 2",
-    abbreviation: "dota"
+    uiName: "Dota 2",
+    abbreviation: "dota",
+    selectors: "dota 2 defense defence of the ancients",
   },
   {
     name: "League of Legends",
-    dropdownName: "LoL - League of Legends",
-    abbreviation: "lol"
+    uiName: "League of Legends",
+    abbreviation: "LoL",
+    selectors: "lol league of legends",
   },
   {
     name: "Counter Strike: Global Offensive",
-    dropdownName: "CS:GO - Counter Strike: Global Offensive",
-    abbreviation: "csgo"
+    uiName: "Counter Strike: Global Offensive",
+    abbreviation: "csgo",
+    selectors: "csgo cs:go counter strike global offensive",
   },
   {
     name: "Overwatch",
-    dropdownName: "Overwatch",
-    abbreviation: "ow"
+    uiName: "Overwatch",
+    abbreviation: "ow",
+    selectors: "overwatch ow",
   }
   // {
   //   name: "Fortnite",

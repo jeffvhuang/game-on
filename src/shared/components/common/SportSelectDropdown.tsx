@@ -9,6 +9,7 @@ interface Props {
   showGeneral?: boolean;
 };
 
+// Typing into the select will search by the value strings (not name/inner html)
 const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
   return (
     <div className="select-dd">
@@ -27,8 +28,8 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
           {
             sportsLeagues.map(sport => {
               return (
-                <Option key={sport.abbreviation} value={sport.dropdownName}>
-                  {sport.dropdownName}
+                <Option key={sport.abbreviation} value={sport.selectors}>
+                  {sport.uiName}
                 </Option>
               ) 
             })
@@ -38,8 +39,8 @@ const SportSelectDropdown = ({ handleChange, showGeneral=false }: Props) => {
         {
             esports.map(sport => {
               return (
-                <Option key={sport.abbreviation} value={sport.dropdownName}>
-                  {sport.dropdownName}
+                <Option key={sport.abbreviation} value={sport.selectors}>
+                  {sport.uiName}
                 </Option>
               ) 
             })
