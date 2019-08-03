@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Collapse } from 'antd';
 
 import { paths } from '../../../helpers/constants';
 import { GeneralState } from '../../redux/general/general-types';
@@ -12,6 +13,7 @@ import UpcomingEvents from './UpcomingEvents';
 import EventsToday from './EventsToday';
 import SportSelectDropdown from '../common/SportSelectDropdown';
 
+const { Panel } = Collapse;
 interface StateProps {
   general: GeneralState;
 }
@@ -82,34 +84,29 @@ class EventsContainer extends React.Component<Props, State> {
       <div className="section">
         <h2 className="page-heading">Matches</h2>
         <SportSelectDropdown handleChange={this.handleChange} />
-        <div className="margin-bot">
-          <h3>Today</h3>
-          <EventsToday events={eventsForWeek.today} values={this.state.values} />
-        </div>
-        <div className="margin-bot">
-          <h3>Tomorrow</h3>
-          <UpcomingEvents events={eventsForWeek.tomorrow} values={this.state.values} />
-        </div>
-        <div className="margin-bot">
-          <h3>{this.getDayStringFromToday(2)}</h3>
-          <UpcomingEvents events={eventsForWeek.day3} values={this.state.values} />
-        </div>
-        <div className="margin-bot">
-          <h3>{this.getDayStringFromToday(3)}</h3>
-          <UpcomingEvents events={eventsForWeek.day4} values={this.state.values} />
-        </div>
-        <div className="margin-bot">
-          <h3>{this.getDayStringFromToday(4)}</h3>
-          <UpcomingEvents events={eventsForWeek.day5} values={this.state.values}/>
-        </div>
-        <div className="margin-bot">
-          <h3>{this.getDayStringFromToday(5)}</h3>
-          <UpcomingEvents events={eventsForWeek.day6} values={this.state.values} />
-        </div>
-        <div className="margin-bot">
-          <h3>{this.getDayStringFromToday(6)}</h3>
-          <UpcomingEvents events={eventsForWeek.day7} values={this.state.values} />
-        </div>
+        <Collapse defaultActiveKey={['1']} className="events-accordion">
+          <Panel header="Today" key="1">
+            <EventsToday events={eventsForWeek.today} values={this.state.values} />
+          </Panel>
+          <Panel header="Tomorrow" key="2">
+            <UpcomingEvents events={eventsForWeek.tomorrow} values={this.state.values} />
+          </Panel>
+          <Panel header={this.getDayStringFromToday(2)} key="3">
+            <UpcomingEvents events={eventsForWeek.day3} values={this.state.values} />
+          </Panel>
+          <Panel header={this.getDayStringFromToday(3)} key="4">
+            <UpcomingEvents events={eventsForWeek.day4} values={this.state.values} />
+          </Panel>
+          <Panel header={this.getDayStringFromToday(4)} key="5">
+            <UpcomingEvents events={eventsForWeek.day5} values={this.state.values} />
+          </Panel>
+          <Panel header={this.getDayStringFromToday(5)} key="6">
+            <UpcomingEvents events={eventsForWeek.day6} values={this.state.values} />
+          </Panel>
+          <Panel header={this.getDayStringFromToday(6)} key="7">
+            <UpcomingEvents events={eventsForWeek.day7} values={this.state.values} />
+          </Panel>
+        </Collapse>
         {/* <Link to={paths.EVENTS} className="right">More ></Link> */}
       </div>
     );

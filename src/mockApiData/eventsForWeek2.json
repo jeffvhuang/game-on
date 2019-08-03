@@ -233,51 +233,6 @@
             ]
         },
         {
-            "id": "esports-3-tournament-2473",
-            "startTime": "2019-07-26T08:00:00Z",
-            "endTime": "2019-07-28T16:00:00Z",
-            "status": "Completed",
-            "name": "StarLadder Asia Minor - Berlin Playoffs",
-            "sport": "CS:GO",
-            "leagueOrTournament": "StarLadder Asia Minor - Berlin Playoffs",
-            "selector": "csgo",
-            "isTournament": true,
-            "competitors": [
-                {
-                    "name": "TYLOO",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3248/TYLOO.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Grayhound",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3258/GRAYHOUND.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "MVP PK",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3259/MVP.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "AVANT",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/125874/5293.png",
-                    "score": "",
-                    "rank": null
-                }
-            ]
-        },
-        {
             "id": "esports-1-match-546648",
             "startTime": "2019-07-26T08:00:00Z",
             "endTime": "2019-07-26T09:40:28Z",
@@ -563,51 +518,6 @@
                     "abbreviation": "HLE",
                     "thumbnail": "https://cdn.pandascore.co/images/team/image/2883/hanwha-life-esports-1s04vbu0.png",
                     "score": "1",
-                    "rank": null
-                }
-            ]
-        },
-        {
-            "id": "esports-3-tournament-2476",
-            "startTime": "2019-07-26T14:00:00Z",
-            "endTime": "2019-07-29T00:00:00Z",
-            "status": "Completed",
-            "name": "StarLadder CIS Minor - Berlin Playoffs",
-            "sport": "CS:GO",
-            "leagueOrTournament": "StarLadder CIS Minor - Berlin Playoffs",
-            "selector": "csgo",
-            "isTournament": true,
-            "competitors": [
-                {
-                    "name": "forZe",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/60201/FORZE.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Spirit",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/124523/spirit.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Syman",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/124524/syman.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "DreamEaters",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/126149/dreameaters.png",
-                    "score": "",
                     "rank": null
                 }
             ]
@@ -1043,67 +953,6 @@
                     "abbreviation": "coL",
                     "thumbnail": "https://cdn.pandascore.co/images/team/image/1681/155px-Complexity_Gaming_2019_teamcardimage.png",
                     "score": "1",
-                    "rank": null
-                }
-            ]
-        },
-        {
-            "id": "esports-4-tournament-2479",
-            "startTime": "2019-07-26T22:00:00Z",
-            "endTime": "2019-07-28T03:00:00Z",
-            "status": "Completed",
-            "name": "The Summit Playoffs",
-            "sport": "Dota 2",
-            "leagueOrTournament": "The Summit Playoffs",
-            "selector": "dota",
-            "isTournament": true,
-            "competitors": [
-                {
-                    "name": "compLexity Gaming",
-                    "shortName": null,
-                    "abbreviation": "coL",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1681/155px-Complexity_Gaming_2019_teamcardimage.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Alliance",
-                    "shortName": null,
-                    "abbreviation": "[A]",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1706/Alliance.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "paiN Gaming",
-                    "shortName": null,
-                    "abbreviation": "paiN",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1819/600px-PaiN_Gaming_2017_notext.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Team Serenity",
-                    "shortName": null,
-                    "abbreviation": "Serenity",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/2594/Team_Serenity.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "J.Storm",
-                    "shortName": null,
-                    "abbreviation": "JStorm",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3385/485px-J.Storm_logo_without_text.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "beastcoast",
-                    "shortName": null,
-                    "abbreviation": "BC",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/126002/147px-Beastcoast_no_text.png",
-                    "score": "",
                     "rank": null
                 }
             ]
@@ -4102,51 +3951,6 @@
     ],
     "day4": [
         {
-            "id": "esports-3-tournament-2480",
-            "startTime": "2019-07-29T08:00:00Z",
-            "endTime": "2019-07-29T18:45:00Z",
-            "status": "Completed",
-            "name": "StarLadder Minor Play-in - Berlin Playoffs",
-            "sport": "CS:GO",
-            "leagueOrTournament": "StarLadder Minor Play-in - Berlin Playoffs",
-            "selector": "csgo",
-            "isTournament": true,
-            "competitors": [
-                {
-                    "name": "North",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3211/NORTH.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "MVP PK",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3259/MVP.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "INTZ",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3391/INTZ.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "DreamEaters",
-                    "shortName": null,
-                    "abbreviation": null,
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/126149/dreameaters.png",
-                    "score": "",
-                    "rank": null
-                }
-            ]
-        },
-        {
             "id": "esports-1-match-545946",
             "startTime": "2019-07-29T08:08:18Z",
             "endTime": "2019-07-29T09:42:27Z",
@@ -5226,67 +5030,6 @@
             ]
         },
         {
-            "id": "esports-14-tournament-2382",
-            "startTime": "2019-08-01T18:00:00Z",
-            "endTime": null,
-            "status": "Ongoing",
-            "name": "Contenders Europe Playoffs",
-            "sport": "Overwatch",
-            "leagueOrTournament": "Contenders Europe Playoffs",
-            "selector": "overwatch",
-            "isTournament": true,
-            "competitors": [
-                {
-                    "name": "HSL Esports",
-                    "shortName": null,
-                    "abbreviation": "HSL",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3463/hsl-esports.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Team Gigantti",
-                    "shortName": null,
-                    "abbreviation": "GIG",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3464/Team_Gigantti_logo.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Samsung MorningStars",
-                    "shortName": null,
-                    "abbreviation": "SMS",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3465/samsung-morningstars.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Angry Titans",
-                    "shortName": null,
-                    "abbreviation": "AT",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3469/600px-Angry_titans_logo.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "British Hurricane",
-                    "shortName": null,
-                    "abbreviation": "BH",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/3471/600px-British_Hurricane.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Clockwork Vendetta",
-                    "shortName": null,
-                    "abbreviation": "CV",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/126055/clockwork-vendetta.png",
-                    "score": "",
-                    "rank": null
-                }
-            ]
-        },
-        {
             "id": "esports-14-match-547282",
             "startTime": "2019-08-01T18:06:17Z",
             "endTime": "2019-08-01T19:30:02Z",
@@ -5340,67 +5083,6 @@
                     "abbreviation": "AT",
                     "thumbnail": "https://cdn.pandascore.co/images/team/image/3469/600px-Angry_titans_logo.png",
                     "score": "1",
-                    "rank": null
-                }
-            ]
-        },
-        {
-            "id": "esports-1-tournament-2481",
-            "startTime": "2019-08-01T22:00:00Z",
-            "endTime": "2019-08-16T22:00:00Z",
-            "status": "Ongoing",
-            "name": "LCS Academy Playoffs",
-            "sport": "LoL",
-            "leagueOrTournament": "LCS Academy Playoffs",
-            "selector": "lol",
-            "isTournament": true,
-            "competitors": [
-                {
-                    "name": "TSM Academy",
-                    "shortName": null,
-                    "abbreviation": "TSMA",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1594/_.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "100 Thieves Academy",
-                    "shortName": null,
-                    "abbreviation": "100A",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1595/300px-100_Thieveslogo_square.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Golden Guardians Academy",
-                    "shortName": null,
-                    "abbreviation": "GGSA",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1596/_.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Cloud9 Academy",
-                    "shortName": null,
-                    "abbreviation": "C9A",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1597/cloud9-academy-a874mk5a.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Echo Fox Academy",
-                    "shortName": null,
-                    "abbreviation": "FOXA",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/1598/echo-fox-academy-bs7h53vi.png",
-                    "score": "",
-                    "rank": null
-                },
-                {
-                    "name": "Liquid Academy",
-                    "shortName": null,
-                    "abbreviation": "TLA",
-                    "thumbnail": "https://cdn.pandascore.co/images/team/image/2862/Team_Liquid_Academylogo_square.png",
-                    "score": "",
                     "rank": null
                 }
             ]

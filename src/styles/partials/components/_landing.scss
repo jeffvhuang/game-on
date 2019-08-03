@@ -1,3 +1,7 @@
+.events-accordion .ant-collapse-content-box {
+  padding: 0;
+}
+
 .event-row {
   border: 1px solid $very-transparent-black;
   border-bottom: none;
@@ -8,7 +12,7 @@
   }
 
   &:last-child {
-    border-bottom:  1px solid $very-transparent-black;
+    border-bottom: 1px solid $very-transparent-black;
   }
   
   span {
