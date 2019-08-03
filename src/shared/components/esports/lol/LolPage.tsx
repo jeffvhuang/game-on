@@ -3,16 +3,16 @@ import { connect } from 'react-redux';
 import { Tabs } from 'antd';
 
 import { paths } from '../../../../helpers/constants';
-import { getOverwatchTournaments, getOverwatchTournamentMatches } from '../../../redux/overwatch/overwatch-actions';
-import OverwatchTournamentsContainer from './OverwatchTournamentsContainer';
-import OverwatchTournamentContainer from './OverwatchTournamentContainer';
-import OverwatchMatchesContainer from './OverwatchMatchesContainer';
-import { OverwatchState } from '../../../redux/overwatch/overwatch-types';
+import { getLolTournaments, getLolTournamentMatches } from '../../../redux/lol/lol-actions';
+import LolTournamentsContainer from './LolTournamentsContainer';
+import LolTournamentContainer from './LolTournamentContainer';
+import LolMatchesContainer from './LolMatchesContainer';
+import { LolState } from '../../../redux/lol/lol-types';
 import { ReduxState } from '../../../redux/redux-state';
 
 const TabPane = Tabs.TabPane;
-interface StateProps { overwatch: OverwatchState };
-interface DispatchProps { getOverwatchTournaments; getOverwatchTournamentMatches; };
+interface StateProps { lol: LolState };
+interface DispatchProps { getLolTournaments; getLolTournamentMatches; };
 type Props = StateProps & DispatchProps;
 interface State {
   activeTab: string;
@@ -20,7 +20,7 @@ interface State {
   tournamentName: string;
 }
 
-class OverwatchPageContainer extends React.Component<Props, State> {
+class LolPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -34,10 +34,10 @@ class OverwatchPageContainer extends React.Component<Props, State> {
   selectTab = (key) => { this.setState({ activeTab: key }); }
 
   selectTournament = (info) => {
-    const { overwatch } = this.props;
+    const { lol } = this.props;
     const id = info.event.id;
-    if (!overwatch.tournamentMatches.length || overwatch.tournamentMatches[0].tournament.id != id) 
-      this.props.getOverwatchTournamentMatches(id);
+    if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != id) 
+      this.props.getLolTournamentMatches(id);
     this.setState({
       activeTab: "2",
       tournamentName: info.event.title,
@@ -49,17 +49,20 @@ class OverwatchPageContainer extends React.Component<Props, State> {
     return (
       <div>
         <div className="page-header">
-          <h1>Overwatch</h1>
+          <h1>League of Legends</h1>
         </div>
         <Tabs activeKey={this.state.activeTab} size="large" onTabClick={this.selectTab}>
           <TabPane tab="Tournaments" key="1">
-            <OverwatchTournamentsContainer selectTournament={this.selectTournament} />
+            <LolTournamentsContainer selectTournament={this.selectTournament} />
           </TabPane>
           <TabPane tab="Tournament" key="2">
-            <OverwatchTournamentContainer />
+            {/* <LolTournamentContainer selectTournament={this.selectTournament}
+              tournamentId={this.state.tournamentId}
+              tournamentName={this.state.tournamentName} /> */}
+            <LolTournamentContainer />
           </TabPane>
           <TabPane tab="Matches" key="3">
-            <OverwatchMatchesContainer />
+            <LolMatchesContainer />
           </TabPane>
         </Tabs>
       </div>
@@ -68,12 +71,12 @@ class OverwatchPageContainer extends React.Component<Props, State> {
 }
 
 const mapStateToProps = (state: ReduxState) => ({
-  overwatch: state.overwatch
+  lol: state.lol
 });
 
 const mapDispatchToProps = {
-  getOverwatchTournaments,
-  getOverwatchTournamentMatches
+  getLolTournaments,
+  getLolTournamentMatches
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OverwatchPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LolPage);

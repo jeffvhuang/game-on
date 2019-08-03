@@ -36,7 +36,7 @@ interface State {
   sport: string;
 }
 
-class SpecificHighlightsContainer extends React.Component<Props, State> {
+class SpecificHighlightsPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -119,4 +119,4 @@ const mapDispatchToProps = {
   getDotaVideos
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SpecificHighlightsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SpecificHighlightsPage);

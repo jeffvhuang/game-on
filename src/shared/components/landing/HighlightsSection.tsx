@@ -8,7 +8,7 @@ interface Props {
   videos: any[];
 };
 
-class HighlightsContainer extends React.Component<Props> {
+class HighlightsSection extends React.Component<Props> {
   constructor(props) {
     super(props);
   }
@@ -32,4 +32,4 @@ class HighlightsContainer extends React.Component<Props> {
   }
 }
 
-export default HighlightsContainer;
+export default HighlightsSection;

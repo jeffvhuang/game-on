@@ -30,7 +30,7 @@ interface State {
   show: string[];
 }
 
-class HighlightsPageContainer extends React.Component<Props, State> {
+class HighlightsPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -96,4 +96,4 @@ const mapDispatchToProps = {
   getChampionsLeagueVideos
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HighlightsPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(HighlightsPage);

@@ -36,7 +36,7 @@ const tournamentTypes = [
   { name: 'Mixed', id: 'mixed' }
 ];
 
-class TennisPageContainer extends React.Component<Props, State> {
+class TennisPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -90,4 +90,4 @@ const mapDispatchToProps = {
   getTennisTournaments
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TennisPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TennisPage);

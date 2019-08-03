@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { object } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 
 import { paths } from '../../../../helpers/constants';
@@ -28,7 +26,7 @@ interface State {
 
 type Props = StateProps & DispatchProps;
 
-class BasketballPageContainer extends React.Component<Props, State> {
+class BasketballPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -80,4 +78,4 @@ const mapDispatchToProps = {
   getNbaSchedule, getNbaTeams, getNbaVideos
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BasketballPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(BasketballPage);

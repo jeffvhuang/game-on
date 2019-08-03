@@ -10,7 +10,7 @@ interface State {
   current: string
 }
 
-class NavBarContainer extends React.Component<{}, State> {
+class NavBar extends React.Component<{}, State> {
   state = {
     current: 'app'
   }
@@ -66,4 +66,4 @@ class NavBarContainer extends React.Component<{}, State> {
   }
 }
 
-export default NavBarContainer;
+export default NavBar;

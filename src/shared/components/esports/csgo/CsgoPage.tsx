@@ -20,7 +20,7 @@ interface State {
   tournamentName: string;
 }
 
-class CsgoPageContainer extends React.Component<Props, State> {
+class CsgoPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -79,4 +79,4 @@ const mapDispatchToProps = {
   getCsgoTournamentMatches
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CsgoPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CsgoPage);

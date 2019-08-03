@@ -46,7 +46,7 @@ interface State {
 
 type Props = StateProps & DispatchProps;
 
-class FootballPageContainer extends React.Component<Props, State> {
+class FootballPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -151,4 +151,4 @@ const mapDispatchToProps = {
   getChampionsLeagueVideos
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FootballPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FootballPage);

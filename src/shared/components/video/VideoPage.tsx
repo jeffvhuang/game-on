@@ -11,7 +11,7 @@ interface State {
   vidId: string;
 }
 
-class VideoPageContainer extends React.Component<Props, State> {
+class VideoPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
 
@@ -40,4 +40,4 @@ class VideoPageContainer extends React.Component<Props, State> {
   }
 }
 
-export default VideoPageContainer;
+export default VideoPage;

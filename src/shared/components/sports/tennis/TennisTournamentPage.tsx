@@ -37,7 +37,7 @@ interface State {
 
 type Props = StateProps & DispatchProps;
 
-class TennisTournamentPageContainer extends React.Component<Props, State> {
+class TennisTournamentPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -115,4 +115,4 @@ const mapDispatchToProps = {
   clearTennisTournamentInfo
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TennisTournamentPage);

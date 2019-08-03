@@ -7,7 +7,7 @@ import DotaSeriesContainer from './DotaSeriesContainer';
 
 const TabPane = Tabs.TabPane;
 
-class DotaPageContainer extends React.Component {
+class DotaPage extends React.Component {
   render() {
     return (
       <div>
@@ -30,4 +30,4 @@ class DotaPageContainer extends React.Component {
   }
 }
 
-export default DotaPageContainer;
+export default DotaPage;

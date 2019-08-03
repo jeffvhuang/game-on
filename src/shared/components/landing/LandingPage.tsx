@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Posters from './Posters';
-import HighlightsContainer from './HighlightsContainer';
+import HighlightsSection from './HighlightsSection';
 import EventsContainer from './EventsContainer';
 
 interface State {
 }
 
-class LandingPageContainer extends React.Component<{}, State> {
+class LandingPage extends React.Component<{}, State> {
   constructor(props) {
     super(props);
 
@@ -18,11 +18,11 @@ class LandingPageContainer extends React.Component<{}, State> {
     return (
       <div>
         <Posters />
-        {/* <HighlightsContainer videos={this.state.videos} /> */}
+        {/* <HighlightsSection videos={this.state.videos} /> */}
         <EventsContainer />
       </div>
     );
   }
 }
 
-export default  LandingPageContainer;
+export default  LandingPage;

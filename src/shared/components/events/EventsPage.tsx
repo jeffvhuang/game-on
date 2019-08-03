@@ -25,7 +25,7 @@ interface State {
 
 type Props = StateProps & DispatchProps;
 
-class EventsPageContainer extends React.Component<Props, State> {
+class EventsPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -82,4 +82,4 @@ const mapDispatchToProps = {
   getEvents
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EventsPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(EventsPage);

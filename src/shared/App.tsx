@@ -1,6 +1,6 @@
 import * as React from "react";
 import Routes from './Routes';
-import NavBarContainer from './components/navbar/NavBarContainer';
+import NavBar from './components/navbar/NavBar';
 import { Layout } from 'antd';
 
 const { Header, Content, Footer } = Layout;
@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <Layout className="content-wrapper">
         <Header className="header">
-          <NavBarContainer />
+          <NavBar />
         </Header>
         <Content>
           <Routes />
