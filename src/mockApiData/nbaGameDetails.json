@@ -1,103 +1,113 @@
 {
-  "vTeam": {
-      "allStar": "0",
-      "nbaFranchise": "1",
-      "score": {
-          "win": "16",
-          "loss": "7",
-          "seriesWin": "0",
-          "seriesLoss": "0",
-          "lineScore": [
-              "27",
-              "32",
-              "27",
-              "20"
-          ],
-          "points": null
-      },
-      "leaders": [
-          {
-              "playerId": "279",
-              "name": "Nikola Jokic",
-              "stat": "Points",
-              "value": "23"
-          },
-          {
-              "playerId": "279",
-              "name": "Nikola Jokic",
-              "stat": "Rebounds",
-              "value": "11"
-          },
-          {
-              "playerId": "279",
-              "name": "Nikola Jokic",
-              "stat": "Assists",
-              "value": "15"
-          }
-      ],
-      "fullName": "Denver Nuggets",
-      "teamId": "9",
-      "nickName": "Nuggets",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png",
-      "shortName": "DEN"
-  },
-  "hTeam": {
-      "allStar": "0",
-      "nbaFranchise": "1",
-      "score": {
-          "win": "20",
-          "loss": "5",
-          "seriesWin": "0",
-          "seriesLoss": "0",
-          "lineScore": [
-              "24",
-              "23",
-              "31",
-              "25"
-          ],
-          "points": null
-      },
-      "leaders": [
-          {
-              "playerId": "314",
-              "name": "Kawhi Leonard",
-              "stat": "Points",
-              "value": "27"
-          },
-          {
-              "playerId": "525",
-              "name": "Jonas Valanciunas",
-              "stat": "Rebounds",
-              "value": "10"
-          },
-          {
-              "playerId": "327",
-              "name": "Kyle Lowry",
-              "stat": "Assists",
-              "value": "11"
-          }
-      ],
-      "fullName": "Toronto Raptors",
-      "teamId": "38",
-      "nickName": "Raptors",
-      "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png",
-      "shortName": "TOR"
-  },
-  "officials": null,
-  "seasonYear": "2018",
-  "league": "standard",
-  "gameId": "4733",
-  "startTimeUTC": "2018-12-04T00:30:00Z",
-  "endTimeUTC": "2018-12-04T02:59:00Z",
-  "arena": "Scotiabank Arena",
-  "city": "Toronto",
-  "country": "Canada",
-  "clock": "",
-  "gameDuration": "2:14",
-  "currentPeriod": "4/4",
-  "halftime": "0",
-  "endOfPeriod": "0",
-  "seasonStage": "2",
-  "statusShortGame": "3",
-  "statusGame": "Finished"
+    "vTeam": {
+        "allStar": "0",
+        "nbaFranchise": "1",
+        "score": {
+            "win": "16",
+            "loss": "7",
+            "seriesWin": "0",
+            "seriesLoss": "0",
+            "lineScore": [
+                "27",
+                "32",
+                "27",
+                "20"
+            ],
+            "points": "106"
+        },
+        "leaders": [
+            {
+                "playerId": "279",
+                "name": "Nikola Jokic",
+                "stat": "Points",
+                "value": "23"
+            },
+            {
+                "playerId": "279",
+                "name": "Nikola Jokic",
+                "stat": "Rebounds",
+                "value": "11"
+            },
+            {
+                "playerId": "279",
+                "name": "Nikola Jokic",
+                "stat": "Assists",
+                "value": "15"
+            }
+        ],
+        "fullName": "Denver Nuggets",
+        "teamId": "9",
+        "nickName": "Nuggets",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png",
+        "shortName": "DEN"
+    },
+    "hTeam": {
+        "allStar": "0",
+        "nbaFranchise": "1",
+        "score": {
+            "win": "20",
+            "loss": "5",
+            "seriesWin": "0",
+            "seriesLoss": "0",
+            "lineScore": [
+                "24",
+                "23",
+                "31",
+                "25"
+            ],
+            "points": "103"
+        },
+        "leaders": [
+            {
+                "playerId": "314",
+                "name": "Kawhi Leonard",
+                "stat": "Points",
+                "value": "27"
+            },
+            {
+                "playerId": "525",
+                "name": "Jonas Valanciunas",
+                "stat": "Rebounds",
+                "value": "10"
+            },
+            {
+                "playerId": "327",
+                "name": "Kyle Lowry",
+                "stat": "Assists",
+                "value": "11"
+            }
+        ],
+        "fullName": "Toronto Raptors",
+        "teamId": "38",
+        "nickName": "Raptors",
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png",
+        "shortName": "TOR"
+    },
+    "officials": [
+        {
+            "name": "Pat Fraher"
+        },
+        {
+            "name": "Karl Lane"
+        },
+        {
+            "name": "Natalie Sago"
+        }
+    ],
+    "seasonYear": "2018",
+    "league": "standard",
+    "gameId": "4733",
+    "startTimeUTC": "2018-12-04T00:30:00Z",
+    "endTimeUTC": "2018-12-04T02:59:00Z",
+    "arena": "Scotiabank Arena",
+    "city": "Toronto",
+    "country": "Canada",
+    "clock": "",
+    "gameDuration": "2:14",
+    "currentPeriod": "4/4",
+    "halftime": "0",
+    "endOfPeriod": "0",
+    "seasonStage": "2",
+    "statusShortGame": "3",
+    "statusGame": "Finished"
 }

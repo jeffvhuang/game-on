@@ -6,6 +6,8 @@ import { paths } from '../../../../../helpers/constants';
 import { getNbaGameDetails } from '../../../../redux/nba/nba-actions';
 import { NbaState } from '../../../../redux/nba/nba-types';
 import { ReduxState } from '../../../../redux/redux-state';
+import TeamsAndScoresSection from './TeamsAndScoresSection';
+import StatsLeadersSection from './StatsLeadersSection';
 
 interface MatchParams { matchId: string; }
 interface StateProps extends RouteComponentProps<MatchParams> {
@@ -41,54 +43,8 @@ class BasketballMatchPage extends React.Component<Props, State> {
       <>
         <h1>Match: {this.state.matchId}</h1>
         <div className="main-section">
-          <div>
-            <div className="team-display">
-              <div>{gameDetails.hTeam.fullName}</div>
-              <div><img src={gameDetails.hTeam.logo} /></div>
-            </div>
-            <div>
-              <div className="score-display">
-                <div>{gameDetails.hTeam.score.points}</div>
-                <div>-</div>
-                <div>{gameDetails.vTeam.score.points}</div>
-              </div>
-              <div className="period-display">
-                <div>Q{gameDetails.currentPeriod.charAt(0)}</div>
-                <div>{gameDetails.clock}</div>
-              </div>
-            </div>
-            <div className="team-display">
-              <div>{gameDetails.vTeam.fullName}</div>
-              <div><img src={gameDetails.vTeam.logo} /></div>
-            </div>
-          </div>
-          <div>
-            <h3>Stats Leaders</h3>
-            <div>
-              <div className="stats-leader-col">
-                {gameDetails.hTeam.leaders.map((leader, i) => {
-                  return (
-                    <div className="row" key={i}>
-                      <div>{leader.name}</div>
-                      <div>{leader.stat}</div>
-                      <div>{leader.value}</div>
-                    </div>
-                  )
-                })}
-              </div>
-              <div className="stats-leader-col">
-                {gameDetails.vTeam.leaders.map((leader, i) => {
-                  return (
-                    <div className="row" key={i}>
-                      <div>{leader.name}</div>
-                      <div>{leader.stat}</div>
-                      <div>{leader.value}</div>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
+          <TeamsAndScoresSection gameDetails={gameDetails} />
+          <StatsLeadersSection gameDetails={gameDetails} />
         </div>
       </>
     );
