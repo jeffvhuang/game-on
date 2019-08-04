@@ -1,7 +1,7 @@
 import * as C from './nba-constants';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 import { NbaState, NbaActionTypes } from './nba-types';
-import { NbaGameDetails } from '../../../types/nba-api/nba-game-details.model';
+import { initialGameDetails } from './nba-constants';
 
 const initialState: NbaState = {
   isFetching: false,
@@ -10,7 +10,7 @@ const initialState: NbaState = {
   gamesToday: [],
   upcoming: [],
   completed: [],
-  gameDetails: {} as NbaGameDetails,
+  gameDetails: initialGameDetails,
   videos: [],
   thumbnails: [],
   error: {}
