@@ -1,6 +1,6 @@
 import { NbaTeamBase } from "./nba-team-base.model";
-import { NbaScore } from "./nba-score.model";
+import { NbaScoreBase } from "./nba-score-base.model";
 
 export interface NbaCompetingTeam extends NbaTeamBase {
-  score: NbaScore;
+  score: NbaScoreBase;
 }

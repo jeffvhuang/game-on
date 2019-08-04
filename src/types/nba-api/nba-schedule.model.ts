@@ -1,22 +1,7 @@
 import { NbaCompetingTeam } from "./nba-competing-team.model";
+import { NbaGameBase } from "./nba-game-base.model";
 
-export interface NbaSchedule {
-  seasonYear: string;
-  league: string;
-  gameId: string;
-  startTimeUTC: string;
-  endTimeUTC: string | null;
-  arena: string;
-  city: string;
-  country: string;
-  clock: string;
-  gameDuration: string;
-  currentPeriod: string;
-  halftime: string;
-  endOfPeriod: string;
-  seasonStage: string;
-  statusShortGame: string;
-  statusGame: string;
+export interface NbaSchedule extends NbaGameBase {
   vTeam: NbaCompetingTeam;
   hTeam: NbaCompetingTeam;
 }

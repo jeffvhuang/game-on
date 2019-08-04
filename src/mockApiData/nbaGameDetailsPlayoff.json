@@ -1,0 +1,127 @@
+{
+  "vTeam": {
+      "allStar": "0",
+      "nbaFranchise": "1",
+      "score": {
+          "win": "49",
+          "loss": "33",
+          "seriesWin": "1",
+          "seriesLoss": "3",
+          "lineScore": [
+              "37",
+              "23",
+              "30",
+              "25"
+          ],
+          "points": null
+      },
+      "leaders": [
+          {
+              "playerId": "189",
+              "name": "Paul George",
+              "stat": "Points",
+              "value": "36"
+          },
+          {
+              "playerId": "189",
+              "name": "Paul George",
+              "stat": "Rebounds",
+              "value": "7"
+          },
+          {
+              "playerId": "544",
+              "name": "Russell Westbrook",
+              "stat": "Assists",
+              "value": "14"
+          },
+          {
+              "playerId": "544",
+              "name": "Russell Westbrook",
+              "stat": "Rebounds",
+              "value": "12"
+          }
+      ],
+      "fullName": "Oklahoma City Thunder",
+      "teamId": "25",
+      "nickName": "Thunder",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png",
+      "shortName": "OKC"
+  },
+  "hTeam": {
+      "allStar": "0",
+      "nbaFranchise": "1",
+      "score": {
+          "win": "53",
+          "loss": "29",
+          "seriesWin": "3",
+          "seriesLoss": "1",
+          "lineScore": [
+              "29",
+              "32",
+              "27",
+              "30"
+          ],
+          "points": null
+      },
+      "leaders": [
+          {
+              "playerId": "319",
+              "name": "Damian Lillard",
+              "stat": "Points",
+              "value": "50"
+          },
+          {
+              "playerId": "291",
+              "name": "Enes Kanter",
+              "stat": "Rebounds",
+              "value": "13"
+          },
+          {
+              "playerId": "12",
+              "name": "Al-Farouq Aminu",
+              "stat": "Assists",
+              "value": "2"
+          },
+          {
+              "playerId": "291",
+              "name": "Enes Kanter",
+              "stat": "Assists",
+              "value": "4"
+          },
+          {
+              "playerId": "521",
+              "name": "Evan Turner",
+              "stat": "Assists",
+              "value": "3"
+          },
+          {
+              "playerId": "319",
+              "name": "Damian Lillard",
+              "stat": "Assists",
+              "value": "6"
+          }
+      ],
+      "fullName": "Portland Trail Blazers",
+      "teamId": "29",
+      "nickName": "Trail Blazers",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png",
+      "shortName": "POR"
+  },
+  "officials": null,
+  "seasonYear": "2018",
+  "league": "standard",
+  "gameId": "5750",
+  "startTimeUTC": "2019-04-24T02:30:00Z",
+  "endTimeUTC": "2019-04-24T05:01:00Z",
+  "arena": "Moda Center",
+  "city": "Portland",
+  "country": "USA",
+  "clock": "",
+  "gameDuration": "2:20",
+  "currentPeriod": "4/4",
+  "halftime": "0",
+  "endOfPeriod": "0",
+  "seasonStage": "4",
+  "statusShortGame": "3",
+  "statusGame": "Finished"
+}

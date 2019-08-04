@@ -4,6 +4,7 @@ import * as C from "./nba-constants";
 import { NbaTeam } from "../../../types/nba-api/nba-team.model";
 import { YoutubePlaylistItem } from "../../../types/youtube/youtube-playlist-item.model";
 import { ThumbnailObject } from "../../../types/tennis-api/thumbnail-object.model";
+import { NbaGameDetails } from "../../../types/nba-api/nba-game-details.model";
 
 export interface NbaState {
   isFetching: boolean,
@@ -12,6 +13,7 @@ export interface NbaState {
   gamesToday: NbaSchedule[],
   upcoming: NbaSchedule[],
   completed: NbaSchedule[],
+  gameDetails: NbaGameDetails,
   videos: YoutubePlaylistItem[],
   thumbnails: ThumbnailObject[],
   error: any
@@ -30,6 +32,21 @@ export interface GetNbaScheduleSuccess {
 
 export interface GetNbaScheduleFailure {
   type: typeof C.GET_NBA_SCHEDULE_FAILURE;
+  err: any;
+}
+
+// Get NBA Game's details
+export interface GetNbaGameDetailsRequest {
+  type: typeof C.GET_NBA_GAME_DETAILS_REQUEST;
+}
+
+export interface GetNbaGameDetailsSuccess {
+  type: typeof C.GET_NBA_GAME_DETAILS_SUCCESS;
+  payload: NbaGameDetails;
+}
+
+export interface GetNbaGameDetailsFailure {
+  type: typeof C.GET_NBA_GAME_DETAILS_FAILURE;
   err: any;
 }
 
@@ -66,6 +83,9 @@ export type NbaActionTypes =
   GetNbaScheduleRequest | 
   GetNbaScheduleSuccess | 
   GetNbaScheduleFailure |
+  GetNbaGameDetailsRequest |
+  GetNbaGameDetailsSuccess |
+  GetNbaGameDetailsFailure |
   GetNbaTeamsRequest |
   GetNbaTeamsSuccess |
   GetNbaTeamsFailure |

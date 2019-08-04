@@ -1,6 +1,7 @@
 import * as C from './nba-constants';
 import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 import { NbaState, NbaActionTypes } from './nba-types';
+import { NbaGameDetails } from '../../../types/nba-api/nba-game-details.model';
 
 const initialState: NbaState = {
   isFetching: false,
@@ -9,6 +10,7 @@ const initialState: NbaState = {
   gamesToday: [],
   upcoming: [],
   completed: [],
+  gameDetails: {} as NbaGameDetails,
   videos: [],
   thumbnails: [],
   error: {}
@@ -28,6 +30,13 @@ function nbaReducer(state = initialState, action: NbaActionTypes): NbaState {
           completed: action.sortedSchedule.beforeToday
         });
     case C.GET_NBA_SCHEDULE_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
+  
+    case C.GET_NBA_GAME_DETAILS_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case C.GET_NBA_GAME_DETAILS_SUCCESS:
+      return Object.assign({}, state, { isFetching: false, gameDetails: action.payload });
+    case C.GET_NBA_GAME_DETAILS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
     
     case C.GET_NBA_TEAMS_REQUEST:
