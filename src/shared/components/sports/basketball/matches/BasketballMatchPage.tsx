@@ -39,14 +39,19 @@ class BasketballMatchPage extends React.Component<Props, State> {
 
   render() {
     const { gameDetails } = this.props.nba;
+
     return (
-      <>
-        <h1>Match: {this.state.matchId}</h1>
-        <div className="main-section">
+      <div className="page-main">
+        {gameDetails.seasonStage == "4" && (
+          <div className="center-flex">
+            <h2 className="page-heading">Playoffs</h2>
+          </div>
+        )}
+        <div className="section">
           <TeamsAndScoresSection gameDetails={gameDetails} />
           <StatsLeadersSection gameDetails={gameDetails} />
         </div>
-      </>
+      </div>
     );
   }
 }

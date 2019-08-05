@@ -50,6 +50,11 @@
   justify-content: space-around;
 }
 
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
+
 .hide {
   display: none;
 }
@@ -69,4 +74,10 @@
 
 .bordered {
   border: 2px solid $red;
+}
+
+.page-main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }

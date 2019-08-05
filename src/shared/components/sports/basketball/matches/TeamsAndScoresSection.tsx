@@ -8,49 +8,47 @@ interface Props {
 
 function TeamsAndScoresSection({ gameDetails }: Props) {
   return (
-    <Row>
+    <Row className="team-and-scores">
       <Col span={8} className="team-display">
-        <Row>{gameDetails.hTeam.fullName}</Row>
-        <Row><img src={gameDetails.hTeam.logo} /></Row>
-      </Col>
-      <Col span={8}>
-        <Row className="score-display">
-          <Col span={8}>{gameDetails.hTeam.score.points}</Col>
-          <Col span={8}>-</Col>
-          <Col span={8}>{gameDetails.vTeam.score.points}</Col>
+        <Row className="team-name-row">
+          <h2>{gameDetails.hTeam.fullName}</h2>
         </Row>
+        <Row className="image-row">
+          <img src={gameDetails.hTeam.logo} />
+        </Row>
+      </Col>
+      <Col span={8} className="score-display">
+        {/* <Row className="team-name-row">&nbsp;</Row> */}
+        <Row className="points-row">
+          <div className="scores-container">
+            <Col span={8}>
+              <h2>{gameDetails.hTeam.score.points}</h2>
+            </Col>
+            <Col span={8}><h2>-</h2></Col>
+            <Col span={8}>
+              <h2>{gameDetails.vTeam.score.points}</h2>
+            </Col>
+          </div>
+        </Row>
+        {/* {gameDetails} */}
         <Row className="period-display">
-          <Col span={6}>Q{gameDetails.currentPeriod.charAt(0)}</Col>
-          <Col span={18}>{gameDetails.clock}</Col>
+          <Col span={6} offset={2}>
+            <h2>Q{gameDetails.currentPeriod.charAt(0)}</h2>
+          </Col>
+          <Col span={12}>
+            <h2>{gameDetails.clock}</h2>
+          </Col>
         </Row>
       </Col>
       <Col span={8} className="team-display">
-        <Row>{gameDetails.vTeam.fullName}</Row>
-        <Row><img src={gameDetails.vTeam.logo} /></Row>
+        <Row className="team-name-row">
+          <h2>{gameDetails.vTeam.fullName}</h2>
+        </Row>
+        <Row className="image-row">
+          <img src={gameDetails.vTeam.logo} />
+        </Row>
       </Col>
     </Row>
-
-//  <div>
-//       <div className="team-display">
-//         <div>{gameDetails.hTeam.fullName}</div>
-//         <div><img src={gameDetails.hTeam.logo} /></div>
-//       </div>
-//       <div>
-//         <div className="score-display">
-//           <div>{gameDetails.hTeam.score.points}</div>
-//           <div>-</div>
-//           <div>{gameDetails.vTeam.score.points}</div>
-//         </div>
-//         <div className="period-display">
-//           <div>Q{gameDetails.currentPeriod.charAt(0)}</div>
-//           <div>{gameDetails.clock}</div>
-//         </div>
-//       </div>
-//       <div className="team-display">
-//         <div>{gameDetails.vTeam.fullName}</div>
-//         <div><img src={gameDetails.vTeam.logo} /></div>
-//       </div>
-//     </div> 
   );
 }
 
