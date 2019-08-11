@@ -1,0 +1,4542 @@
+[
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125749,
+                "score": 0
+            },
+            {
+                "teamId": 125748,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546225,
+                "length": null,
+                "id": 4831,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546225,
+                "length": null,
+                "id": 4832,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546225,
+                "length": null,
+                "id": 4833,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546225,
+                "length": null,
+                "id": 4834,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546225,
+                "length": null,
+                "id": 4835,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "square-one-vs-bermuda-2019-08-01",
+        "numberOfGames": 5,
+        "name": "S1 vs Bermuda",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546225",
+            "supported": true,
+            "opensAt": "2019-08-01T02:15:00Z"
+        },
+        "id": 546225,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-08-01T02:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19100,
+                "score": 0
+            },
+            {
+                "teamId": 19098,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546224,
+                "length": null,
+                "id": 4826,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546224,
+                "length": null,
+                "id": 4827,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546224,
+                "length": null,
+                "id": 4828,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546224,
+                "length": null,
+                "id": 4829,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546224,
+                "length": null,
+                "id": 4830,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "uprising-academy-vs-gladiators-legions-2019-08-01",
+        "numberOfGames": 5,
+        "name": "UA vs GLL",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546224",
+            "supported": true,
+            "opensAt": "2019-08-01T00:45:00Z"
+        },
+        "id": 546224,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-08-01T01:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19103,
+                "score": 0
+            },
+            {
+                "teamId": 19099,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546223,
+                "length": null,
+                "id": 4821,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546223,
+                "length": null,
+                "id": 4822,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546223,
+                "length": null,
+                "id": 4823,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546223,
+                "length": null,
+                "id": 4824,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546223,
+                "length": null,
+                "id": 4825,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "atl-academy-vs-meta-skyfoxes-2019-08-01",
+        "numberOfGames": 5,
+        "name": "ATLA vs Meta.S",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546223",
+            "supported": true,
+            "opensAt": "2019-07-31T23:15:00Z"
+        },
+        "id": 546223,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-31T23:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 0
+            },
+            {
+                "teamId": 125750,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546222,
+                "length": null,
+                "id": 4816,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546222,
+                "length": null,
+                "id": 4817,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546222,
+                "length": null,
+                "id": 4818,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546222,
+                "length": null,
+                "id": 4819,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546222,
+                "length": null,
+                "id": 4820,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "phase-2-vs-grunto-esports-2019-08-01",
+        "numberOfGames": 5,
+        "name": "P2 vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546222",
+            "supported": true,
+            "opensAt": "2019-07-31T21:45:00Z"
+        },
+        "id": 546222,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-31T22:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125750,
+                "score": 0
+            },
+            {
+                "teamId": 19098,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546221,
+                "length": null,
+                "id": 4811,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546221,
+                "length": null,
+                "id": 4812,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546221,
+                "length": null,
+                "id": 4813,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546221,
+                "length": null,
+                "id": 4814,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546221,
+                "length": null,
+                "id": 4815,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "gladiators-legions-vs-phase-2-2019-07-25",
+        "numberOfGames": 5,
+        "name": "GLL vs P2",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546221",
+            "supported": true,
+            "opensAt": "2019-07-25T02:15:00Z"
+        },
+        "id": 546221,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-25T02:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 0
+            },
+            {
+                "teamId": 19103,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546220,
+                "length": null,
+                "id": 4806,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546220,
+                "length": null,
+                "id": 4807,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546220,
+                "length": null,
+                "id": 4808,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546220,
+                "length": null,
+                "id": 4809,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546220,
+                "length": null,
+                "id": 4810,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "meta-skyfoxes-vs-grunto-esports-2019-07-25",
+        "numberOfGames": 5,
+        "name": "Meta.S vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546220",
+            "supported": true,
+            "opensAt": "2019-07-25T00:45:00Z"
+        },
+        "id": 546220,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-25T01:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125748,
+                "score": 0
+            },
+            {
+                "teamId": 19099,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546219,
+                "length": null,
+                "id": 4801,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546219,
+                "length": null,
+                "id": 4802,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546219,
+                "length": null,
+                "id": 4803,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546219,
+                "length": null,
+                "id": 4804,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546219,
+                "length": null,
+                "id": 4805,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "bermuda-vs-atl-academy-2019-07-25",
+        "numberOfGames": 5,
+        "name": "Bermuda vs ATLA",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546219",
+            "supported": true,
+            "opensAt": "2019-07-24T23:15:00Z"
+        },
+        "id": 546219,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-24T23:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125749,
+                "score": 0
+            },
+            {
+                "teamId": 19100,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546218,
+                "length": null,
+                "id": 4796,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546218,
+                "length": null,
+                "id": 4797,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546218,
+                "length": null,
+                "id": 4798,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546218,
+                "length": null,
+                "id": 4799,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546218,
+                "length": null,
+                "id": 4800,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "square-one-vs-uprising-academy-2019-07-24",
+        "numberOfGames": 5,
+        "name": "S1 vs UA",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546218",
+            "supported": true,
+            "opensAt": "2019-07-23T21:45:00Z"
+        },
+        "id": 546218,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-23T22:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19103,
+                "score": 0
+            },
+            {
+                "teamId": 19098,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546217,
+                "length": null,
+                "id": 4791,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546217,
+                "length": null,
+                "id": 4792,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546217,
+                "length": null,
+                "id": 4793,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546217,
+                "length": null,
+                "id": 4794,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546217,
+                "length": null,
+                "id": 4795,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "gladiators-legions-vs-meta-skyfoxes-2019-07-18",
+        "numberOfGames": 5,
+        "name": "GLL vs Meta.S",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546217",
+            "supported": true,
+            "opensAt": "2019-07-18T02:15:00Z"
+        },
+        "id": 546217,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-18T02:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125750,
+                "score": 0
+            },
+            {
+                "teamId": 125749,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546216,
+                "length": null,
+                "id": 4786,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546216,
+                "length": null,
+                "id": 4787,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546216,
+                "length": null,
+                "id": 4788,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546216,
+                "length": null,
+                "id": 4789,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546216,
+                "length": null,
+                "id": 4790,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "square-one-vs-phase-2-2019-07-18",
+        "numberOfGames": 5,
+        "name": "S1 vs P2",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546216",
+            "supported": true,
+            "opensAt": "2019-07-18T00:45:00Z"
+        },
+        "id": 546216,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-18T01:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 0
+            },
+            {
+                "teamId": 19099,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546215,
+                "length": null,
+                "id": 4781,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546215,
+                "length": null,
+                "id": 4782,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546215,
+                "length": null,
+                "id": 4783,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546215,
+                "length": null,
+                "id": 4784,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546215,
+                "length": null,
+                "id": 4785,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "atl-academy-vs-grunto-esports-2019-07-18",
+        "numberOfGames": 5,
+        "name": "ATLA vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546215",
+            "supported": true,
+            "opensAt": "2019-07-17T23:15:00Z"
+        },
+        "id": 546215,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-17T23:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125748,
+                "score": 0
+            },
+            {
+                "teamId": 19100,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546214,
+                "length": null,
+                "id": 4776,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546214,
+                "length": null,
+                "id": 4777,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546214,
+                "length": null,
+                "id": 4778,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546214,
+                "length": null,
+                "id": 4779,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546214,
+                "length": null,
+                "id": 4780,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "bermuda-vs-uprising-academy-2019-07-18",
+        "numberOfGames": 5,
+        "name": "Bermuda vs UA",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546214",
+            "supported": true,
+            "opensAt": "2019-07-17T21:45:00Z"
+        },
+        "id": 546214,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-17T22:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125749,
+                "score": 0
+            },
+            {
+                "teamId": 19103,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546213,
+                "length": null,
+                "id": 4771,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546213,
+                "length": null,
+                "id": 4772,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546213,
+                "length": null,
+                "id": 4773,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546213,
+                "length": null,
+                "id": 4774,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546213,
+                "length": null,
+                "id": 4775,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "meta-skyfoxes-vs-square-one-2019-07-11",
+        "numberOfGames": 5,
+        "name": "Meta.S vs S1",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546213",
+            "supported": true,
+            "opensAt": "2019-07-11T02:15:00Z"
+        },
+        "id": 546213,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-11T02:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 0
+            },
+            {
+                "teamId": 125748,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546212,
+                "length": null,
+                "id": 4766,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546212,
+                "length": null,
+                "id": 4767,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546212,
+                "length": null,
+                "id": 4768,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546212,
+                "length": null,
+                "id": 4769,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546212,
+                "length": null,
+                "id": 4770,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "bermuda-vs-grunto-esports-2019-07-11",
+        "numberOfGames": 5,
+        "name": "Bermuda vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546212",
+            "supported": true,
+            "opensAt": "2019-07-11T00:45:00Z"
+        },
+        "id": 546212,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-11T01:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125750,
+                "score": 0
+            },
+            {
+                "teamId": 19100,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546211,
+                "length": null,
+                "id": 4761,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546211,
+                "length": null,
+                "id": 4762,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546211,
+                "length": null,
+                "id": 4763,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546211,
+                "length": null,
+                "id": 4764,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546211,
+                "length": null,
+                "id": 4765,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "phase-2-vs-uprising-academy-2019-07-11",
+        "numberOfGames": 5,
+        "name": "P2 vs UA",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546211",
+            "supported": true,
+            "opensAt": "2019-07-10T23:15:00Z"
+        },
+        "id": 546211,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-10T23:30:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": null,
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19099,
+                "score": 0
+            },
+            {
+                "teamId": 19098,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 1,
+                "matchId": 546210,
+                "length": null,
+                "id": 4756,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 2,
+                "matchId": 546210,
+                "length": null,
+                "id": 4757,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 3,
+                "matchId": 546210,
+                "length": null,
+                "id": 4758,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 4,
+                "matchId": 546210,
+                "length": null,
+                "id": 4759,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            },
+            {
+                "winnerType": null,
+                "winner": {
+                    "type": null,
+                    "id": null
+                },
+                "position": 5,
+                "matchId": 546210,
+                "length": null,
+                "id": 4760,
+                "forfeit": false,
+                "finished": false,
+                "endAt": null,
+                "beginAt": null
+            }
+        ],
+        "winnerId": null,
+        "tournamentId": 2387,
+        "status": "not_started",
+        "slug": "atl-academy-vs-gladiators-legions-2019-07-11",
+        "numberOfGames": 5,
+        "name": "ATLA vs GLL",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546210",
+            "supported": true,
+            "opensAt": "2019-07-10T21:45:00Z"
+        },
+        "id": 546210,
+        "forfeit": false,
+        "endAt": null,
+        "draw": false,
+        "beginAt": "2019-07-10T22:00:00Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "atl-academy",
+            "name": "ATL Academy",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+            "id": 19099,
+            "acronym": "ATLA"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19099,
+                "score": 4
+            },
+            {
+                "teamId": 125749,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 1,
+                "matchId": 546209,
+                "length": 356,
+                "id": 4751,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T03:15:34Z",
+                "beginAt": "2019-07-04T03:08:36Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 2,
+                "matchId": 546209,
+                "length": 336,
+                "id": 4752,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T03:26:36Z",
+                "beginAt": "2019-07-04T03:18:43Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 3,
+                "matchId": 546209,
+                "length": 304,
+                "id": 4753,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T03:45:24Z",
+                "beginAt": "2019-07-04T03:37:43Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 4,
+                "matchId": 546209,
+                "length": 238,
+                "id": 4754,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T03:55:24Z",
+                "beginAt": "2019-07-04T03:49:04Z"
+            }
+        ],
+        "winnerId": 19099,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "atl-academy-vs-square-one-2019-07-04",
+        "numberOfGames": 5,
+        "name": "ATLA vs S1",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546209",
+            "supported": true,
+            "opensAt": "2019-07-04T02:53:36Z"
+        },
+        "id": 546209,
+        "forfeit": false,
+        "endAt": "2019-07-04T03:55:23Z",
+        "draw": false,
+        "beginAt": "2019-07-04T03:08:36Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "ex-toronto-esports",
+            "name": "Uprising Academy",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+            "id": 19100,
+            "acronym": "UA"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19100,
+                "score": 3
+            },
+            {
+                "teamId": 19103,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19100
+                },
+                "position": 1,
+                "matchId": 546208,
+                "length": 650,
+                "id": 4746,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T01:34:22Z",
+                "beginAt": "2019-07-04T01:21:43Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19100
+                },
+                "position": 2,
+                "matchId": 546208,
+                "length": 946,
+                "id": 4747,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T01:57:46Z",
+                "beginAt": "2019-07-04T01:38:16Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19100
+                },
+                "position": 3,
+                "matchId": 546208,
+                "length": 676,
+                "id": 4748,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T02:21:55Z",
+                "beginAt": "2019-07-04T02:08:23Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 4,
+                "matchId": 546208,
+                "length": 952,
+                "id": 4749,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T02:43:06Z",
+                "beginAt": "2019-07-04T02:24:28Z"
+            }
+        ],
+        "winnerId": 19100,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "meta-skyfoxes-vs-uprising-academy-2019-07-04",
+        "numberOfGames": 5,
+        "name": "Meta.S vs UA",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546208",
+            "supported": true,
+            "opensAt": "2019-07-04T01:06:43Z"
+        },
+        "id": 546208,
+        "forfeit": false,
+        "endAt": "2019-07-04T02:43:05Z",
+        "draw": false,
+        "beginAt": "2019-07-04T01:21:43Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "grunto-esports",
+            "name": "GRUNTo Esports",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+            "id": 126084,
+            "acronym": "GRUNTo"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 3
+            },
+            {
+                "teamId": 19098,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 1,
+                "matchId": 546207,
+                "length": 344,
+                "id": 4741,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-03T23:57:57Z",
+                "beginAt": "2019-07-03T23:51:00Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 2,
+                "matchId": 546207,
+                "length": 942,
+                "id": 4742,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T00:21:46Z",
+                "beginAt": "2019-07-04T00:00:52Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 3,
+                "matchId": 546207,
+                "length": 978,
+                "id": 4743,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T00:51:18Z",
+                "beginAt": "2019-07-04T00:32:48Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 4,
+                "matchId": 546207,
+                "length": 872,
+                "id": 4744,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-04T01:11:05Z",
+                "beginAt": "2019-07-04T00:54:16Z"
+            }
+        ],
+        "winnerId": 126084,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "gladiators-legions-vs-grunto-esports-2019-07-04",
+        "numberOfGames": 5,
+        "name": "GLL vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546207",
+            "supported": true,
+            "opensAt": "2019-07-03T23:35:59Z"
+        },
+        "id": 546207,
+        "forfeit": false,
+        "endAt": "2019-07-04T01:11:04Z",
+        "draw": false,
+        "beginAt": "2019-07-03T23:50:59Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "phase-2",
+            "name": "Phase 2",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+            "id": 125750,
+            "acronym": "P2"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 125750,
+                "score": 3
+            },
+            {
+                "teamId": 125748,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125750
+                },
+                "position": 1,
+                "matchId": 546206,
+                "length": 868,
+                "id": 4736,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-03T22:20:39Z",
+                "beginAt": "2019-07-03T22:04:32Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125748
+                },
+                "position": 2,
+                "matchId": 546206,
+                "length": 838,
+                "id": 4737,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-03T22:43:38Z",
+                "beginAt": "2019-07-03T22:24:28Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125750
+                },
+                "position": 3,
+                "matchId": 546206,
+                "length": 1028,
+                "id": 4738,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-03T23:16:58Z",
+                "beginAt": "2019-07-03T22:54:39Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125750
+                },
+                "position": 4,
+                "matchId": 546206,
+                "length": 884,
+                "id": 4739,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-07-03T23:38:41Z",
+                "beginAt": "2019-07-03T23:21:49Z"
+            }
+        ],
+        "winnerId": 125750,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "phase-2-vs-bermuda-2019-07-04",
+        "numberOfGames": 5,
+        "name": "P2 vs Bermuda",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546206",
+            "supported": true,
+            "opensAt": "2019-07-03T21:49:32Z"
+        },
+        "id": 546206,
+        "forfeit": false,
+        "endAt": "2019-07-03T23:38:41Z",
+        "draw": false,
+        "beginAt": "2019-07-03T22:04:32Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "atl-academy",
+            "name": "ATL Academy",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+            "id": 19099,
+            "acronym": "ATLA"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19099,
+                "score": 4
+            },
+            {
+                "teamId": 19100,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 1,
+                "matchId": 546205,
+                "length": 438,
+                "id": 4731,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T03:24:10Z",
+                "beginAt": "2019-06-27T03:15:45Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 2,
+                "matchId": 546205,
+                "length": 570,
+                "id": 4732,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T03:39:15Z",
+                "beginAt": "2019-06-27T03:27:18Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 3,
+                "matchId": 546205,
+                "length": 306,
+                "id": 4733,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T03:57:22Z",
+                "beginAt": "2019-06-27T03:49:52Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 4,
+                "matchId": 546205,
+                "length": 530,
+                "id": 4734,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T04:11:07Z",
+                "beginAt": "2019-06-27T03:59:59Z"
+            }
+        ],
+        "winnerId": 19099,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "atl-academy-vs-uprising-academy-2019-06-27",
+        "numberOfGames": 5,
+        "name": "ATLA vs UA",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546205",
+            "supported": true,
+            "opensAt": "2019-06-27T03:00:44Z"
+        },
+        "id": 546205,
+        "forfeit": false,
+        "endAt": "2019-06-27T04:11:06Z",
+        "draw": false,
+        "beginAt": "2019-06-27T03:15:44Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "skyfoxes",
+            "name": "Skyfoxes",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+            "id": 19103,
+            "acronym": "SKY"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19103,
+                "score": 3
+            },
+            {
+                "teamId": 125750,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 1,
+                "matchId": 546204,
+                "length": 334,
+                "id": 4726,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-26T22:13:34Z",
+                "beginAt": "2019-06-26T22:07:41Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125750
+                },
+                "position": 2,
+                "matchId": 546204,
+                "length": 860,
+                "id": 4727,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-26T22:39:29Z",
+                "beginAt": "2019-06-26T22:16:31Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 3,
+                "matchId": 546204,
+                "length": 986,
+                "id": 4728,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-26T23:08:35Z",
+                "beginAt": "2019-06-26T22:49:56Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 4,
+                "matchId": 546204,
+                "length": 1272,
+                "id": 4729,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-26T23:40:31Z",
+                "beginAt": "2019-06-26T23:13:54Z"
+            }
+        ],
+        "winnerId": 19103,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "meta-skyfoxes-vs-phase-2-2019-06-27",
+        "numberOfGames": 5,
+        "name": "Meta.S vs P2",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546204",
+            "supported": true,
+            "opensAt": "2019-06-26T21:52:41Z"
+        },
+        "id": 546204,
+        "forfeit": false,
+        "endAt": "2019-06-26T23:40:30Z",
+        "draw": false,
+        "beginAt": "2019-06-26T22:07:41Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "gladiators-legions",
+            "name": "Gladiators Legions",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+            "id": 19098,
+            "acronym": "GLL"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19098,
+                "score": 3
+            },
+            {
+                "teamId": 125748,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 1,
+                "matchId": 546203,
+                "length": 448,
+                "id": 4721,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T00:00:43Z",
+                "beginAt": "2019-06-26T23:52:05Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125748
+                },
+                "position": 2,
+                "matchId": 546203,
+                "length": 1040,
+                "id": 4722,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T00:26:46Z",
+                "beginAt": "2019-06-27T00:04:11Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 3,
+                "matchId": 546203,
+                "length": 1240,
+                "id": 4723,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T01:04:41Z",
+                "beginAt": "2019-06-27T00:38:16Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 4,
+                "matchId": 546203,
+                "length": 1110,
+                "id": 4724,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T01:43:15Z",
+                "beginAt": "2019-06-27T01:20:46Z"
+            }
+        ],
+        "winnerId": 19098,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "bermuda-vs-gladiators-legions-2019-06-27",
+        "numberOfGames": 5,
+        "name": "Bermuda vs GLL",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546203",
+            "supported": true,
+            "opensAt": "2019-06-26T23:37:04Z"
+        },
+        "id": 546203,
+        "forfeit": false,
+        "endAt": "2019-06-27T01:43:14Z",
+        "draw": false,
+        "beginAt": "2019-06-26T23:52:04Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "grunto-esports",
+            "name": "GRUNTo Esports",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+            "id": 126084,
+            "acronym": "GRUNTo"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 4
+            },
+            {
+                "teamId": 125749,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 1,
+                "matchId": 546202,
+                "length": 424,
+                "id": 4716,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T02:02:01Z",
+                "beginAt": "2019-06-27T01:53:43Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 2,
+                "matchId": 546202,
+                "length": 914,
+                "id": 4717,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T02:25:36Z",
+                "beginAt": "2019-06-27T02:05:08Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 3,
+                "matchId": 546202,
+                "length": 792,
+                "id": 4718,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T02:51:10Z",
+                "beginAt": "2019-06-27T02:35:39Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 4,
+                "matchId": 546202,
+                "length": 292,
+                "id": 4719,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-27T03:02:01Z",
+                "beginAt": "2019-06-27T02:55:00Z"
+            }
+        ],
+        "winnerId": 126084,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "square-one-vs-grunto-esports-2019-06-27",
+        "numberOfGames": 5,
+        "name": "S1 vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546202",
+            "supported": true,
+            "opensAt": "2019-06-27T01:38:43Z"
+        },
+        "id": 546202,
+        "forfeit": false,
+        "endAt": "2019-06-27T03:02:01Z",
+        "draw": false,
+        "beginAt": "2019-06-27T01:53:43Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "grunto-esports",
+            "name": "GRUNTo Esports",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+            "id": 126084,
+            "acronym": "GRUNTo"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126084,
+                "score": 3
+            },
+            {
+                "teamId": 19100,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "ex-toronto-esports",
+                    "name": "Uprising Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19100/VCVJUXJ3B2711553641550038.png",
+                    "id": 19100,
+                    "acronym": "UA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "grunto-esports",
+                    "name": "GRUNTo Esports",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126084/grunto-esports.png",
+                    "id": 126084,
+                    "acronym": "GRUNTo"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19100
+                },
+                "position": 1,
+                "matchId": 546201,
+                "length": 850,
+                "id": 4711,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T02:59:00Z",
+                "beginAt": "2019-06-20T02:43:08Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 2,
+                "matchId": 546201,
+                "length": 1024,
+                "id": 4712,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T03:27:17Z",
+                "beginAt": "2019-06-20T03:02:02Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 3,
+                "matchId": 546201,
+                "length": 600,
+                "id": 4713,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T03:51:32Z",
+                "beginAt": "2019-06-20T03:37:05Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126084
+                },
+                "position": 4,
+                "matchId": 546201,
+                "length": 380,
+                "id": 4714,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T04:03:22Z",
+                "beginAt": "2019-06-20T03:55:02Z"
+            }
+        ],
+        "winnerId": 126084,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "uprising-academy-vs-grunto-esports-2019-06-20",
+        "numberOfGames": 5,
+        "name": "UA vs GRUNTo",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546201",
+            "supported": true,
+            "opensAt": "2019-06-20T02:28:07Z"
+        },
+        "id": 546201,
+        "forfeit": false,
+        "endAt": "2019-06-20T04:03:22Z",
+        "draw": false,
+        "beginAt": "2019-06-20T02:43:07Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "atl-academy",
+            "name": "ATL Academy",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+            "id": 19099,
+            "acronym": "ATLA"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19099,
+                "score": 4
+            },
+            {
+                "teamId": 125750,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "atl-academy",
+                    "name": "ATL Academy",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19099/3EM17TPHAT881553641393601.png",
+                    "id": 19099,
+                    "acronym": "ATLA"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "phase-2",
+                    "name": "Phase 2",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125750/phase-2.png",
+                    "id": 125750,
+                    "acronym": "P2"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 1,
+                "matchId": 546200,
+                "length": 438,
+                "id": 4706,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T01:26:42Z",
+                "beginAt": "2019-06-20T01:18:30Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 2,
+                "matchId": 546200,
+                "length": 1082,
+                "id": 4707,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T01:52:38Z",
+                "beginAt": "2019-06-20T01:29:30Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 3,
+                "matchId": 546200,
+                "length": 298,
+                "id": 4708,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T02:15:04Z",
+                "beginAt": "2019-06-20T02:07:01Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19099
+                },
+                "position": 4,
+                "matchId": 546200,
+                "length": 770,
+                "id": 4709,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T02:32:50Z",
+                "beginAt": "2019-06-20T02:17:50Z"
+            }
+        ],
+        "winnerId": 19099,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "atl-academy-vs-phase-2-2019-06-20",
+        "numberOfGames": 5,
+        "name": "ATLA vs P2",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546200",
+            "supported": true,
+            "opensAt": "2019-06-20T01:03:30Z"
+        },
+        "id": 546200,
+        "forfeit": false,
+        "endAt": "2019-06-20T02:32:49Z",
+        "draw": false,
+        "beginAt": "2019-06-20T01:18:30Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "gladiators-legions",
+            "name": "Gladiators Legions",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+            "id": 19098,
+            "acronym": "GLL"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19098,
+                "score": 3
+            },
+            {
+                "teamId": 125749,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "square-one",
+                    "name": "Square One",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125749/7WT05N05AVK91549139073547.png",
+                    "id": 125749,
+                    "acronym": "S1"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "gladiators-legions",
+                    "name": "Gladiators Legions",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19098/0URWY00PNBW51520275792318.png",
+                    "id": 19098,
+                    "acronym": "GLL"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 1,
+                "matchId": 546199,
+                "length": 520,
+                "id": 4701,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-19T23:31:25Z",
+                "beginAt": "2019-06-19T23:21:51Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125749
+                },
+                "position": 2,
+                "matchId": 546199,
+                "length": 1194,
+                "id": 4702,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T00:02:41Z",
+                "beginAt": "2019-06-19T23:34:36Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 3,
+                "matchId": 546199,
+                "length": 996,
+                "id": 4703,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T00:31:32Z",
+                "beginAt": "2019-06-20T00:12:54Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19098
+                },
+                "position": 4,
+                "matchId": 546199,
+                "length": 1662,
+                "id": 4704,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-20T01:08:57Z",
+                "beginAt": "2019-06-20T00:36:08Z"
+            }
+        ],
+        "winnerId": 19098,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "square-one-vs-gladiators-legions-2019-06-20",
+        "numberOfGames": 5,
+        "name": "S1 vs GLL",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546199",
+            "supported": true,
+            "opensAt": "2019-06-19T23:06:50Z"
+        },
+        "id": 546199,
+        "forfeit": false,
+        "endAt": "2019-06-20T01:08:57Z",
+        "draw": false,
+        "beginAt": "2019-06-19T23:21:50Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019-group-stage",
+            "name": "Group stage",
+            "modifiedAt": "2019-07-05T20:24:28Z",
+            "leagueId": 4184,
+            "id": 2387,
+            "endAt": "2019-08-02T18:00:00Z",
+            "beginAt": "2019-06-19T22:00:00Z",
+            "seriesId": 1800
+        },
+        "winner": {
+            "slug": "skyfoxes",
+            "name": "Skyfoxes",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+            "id": 19103,
+            "acronym": "SKY"
+        },
+        "seriesId": 1800,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "ow-contenders-north-america-east-2-2019",
+            "season": "2",
+            "prizepool": null,
+            "name": "East",
+            "leagueId": 4184,
+            "id": 1800,
+            "fullName": "East season 2 2019",
+            "endAt": null,
+            "description": null,
+            "beginAt": "2019-06-19T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 19103,
+                "score": 3
+            },
+            {
+                "teamId": 125748,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "bermuda",
+                    "name": "Bermuda",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/125748/bermuda.png",
+                    "id": 125748,
+                    "acronym": "Bermuda"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "skyfoxes",
+                    "name": "Skyfoxes",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/19103/skyfoxes.png",
+                    "id": 19103,
+                    "acronym": "SKY"
+                }
+            }
+        ],
+        "leagueId": 4184,
+        "league": {
+            "url": "https://overwatchcontenders.com/fr-fr/",
+            "slug": "ow-contenders-north-america",
+            "name": "Contenders North America",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4184/600px-Overwatch_Contenders_logo_2018.png",
+            "id": 4184
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 1,
+                "matchId": 546198,
+                "length": 462,
+                "id": 4696,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-19T22:12:32Z",
+                "beginAt": "2019-06-19T22:03:56Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 2,
+                "matchId": 546198,
+                "length": 924,
+                "id": 4697,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-19T22:33:10Z",
+                "beginAt": "2019-06-19T22:15:44Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 19103
+                },
+                "position": 3,
+                "matchId": 546198,
+                "length": 402,
+                "id": 4698,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-19T22:52:05Z",
+                "beginAt": "2019-06-19T22:43:19Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 125748
+                },
+                "position": 4,
+                "matchId": 546198,
+                "length": 790,
+                "id": 4699,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-06-19T23:10:29Z",
+                "beginAt": "2019-06-19T22:55:12Z"
+            }
+        ],
+        "winnerId": 19103,
+        "tournamentId": 2387,
+        "status": "finished",
+        "slug": "bermuda-vs-meta-skyfoxes-2019-06-20",
+        "numberOfGames": 5,
+        "name": "Bermuda vs Meta.S",
+        "matchType": "ow_best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/546198",
+            "supported": true,
+            "opensAt": "2019-06-19T21:48:56Z"
+        },
+        "id": 546198,
+        "forfeit": false,
+        "endAt": "2019-06-19T23:10:28Z",
+        "draw": false,
+        "beginAt": "2019-06-19T22:03:56Z"
+    }
+]

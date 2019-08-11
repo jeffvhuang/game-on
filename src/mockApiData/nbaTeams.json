@@ -1,0 +1,482 @@
+[
+  {
+      "city": "Atlanta",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Southeast"
+          }
+      },
+      "fullName": "Atlanta Hawks",
+      "teamId": "1",
+      "nickName": "Hawks",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/e/ee/Hawks_2016.png",
+      "shortName": "ATL"
+  },
+  {
+      "city": "Boston",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Atlantic"
+          }
+      },
+      "fullName": "Boston Celtics",
+      "teamId": "2",
+      "nickName": "Celtics",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/65/Celtics_de_Boston_logo.svg/1024px-Celtics_de_Boston_logo.svg.png",
+      "shortName": "BOS"
+  },
+  {
+      "city": "Brooklyn",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Atlantic"
+          }
+      },
+      "fullName": "Brooklyn Nets",
+      "teamId": "4",
+      "nickName": "Nets",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/130px-Brooklyn_Nets_newlogo.svg.png",
+      "shortName": "BKN"
+  },
+  {
+      "city": "Charlotte",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Southeast"
+          }
+      },
+      "fullName": "Charlotte Hornets",
+      "teamId": "5",
+      "nickName": "Hornets",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f3/Hornets_de_Charlotte_logo.svg/1200px-Hornets_de_Charlotte_logo.svg.png",
+      "shortName": "CHA"
+  },
+  {
+      "city": "Chicago",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Central"
+          }
+      },
+      "fullName": "Chicago Bulls",
+      "teamId": "6",
+      "nickName": "Bulls",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Bulls_de_Chicago_logo.svg/1200px-Bulls_de_Chicago_logo.svg.png",
+      "shortName": "CHI"
+  },
+  {
+      "city": "Cleveland",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Central"
+          }
+      },
+      "fullName": "Cleveland Cavaliers",
+      "teamId": "7",
+      "nickName": "Cavaliers",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/06/Cavs_de_Cleveland_logo_2017.png/150px-Cavs_de_Cleveland_logo_2017.png",
+      "shortName": "CLE"
+  },
+  {
+      "city": "Dallas",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Southwest"
+          }
+      },
+      "fullName": "Dallas Mavericks",
+      "teamId": "8",
+      "nickName": "Mavericks",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Mavericks_de_Dallas_logo.svg/150px-Mavericks_de_Dallas_logo.svg.png",
+      "shortName": "DAL"
+  },
+  {
+      "city": "Denver",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Northwest"
+          }
+      },
+      "fullName": "Denver Nuggets",
+      "teamId": "9",
+      "nickName": "Nuggets",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Nuggets_de_Denver_2018.png/180px-Nuggets_de_Denver_2018.png",
+      "shortName": "DEN"
+  },
+  {
+      "city": "Detroit",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Central"
+          }
+      },
+      "fullName": "Detroit Pistons",
+      "teamId": "10",
+      "nickName": "Pistons",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Detroit_Pistons_logo.svg/1200px-Detroit_Pistons_logo.svg.png",
+      "shortName": "DET"
+  },
+  {
+      "city": "Golden State",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Pacific"
+          }
+      },
+      "fullName": "Golden State Warriors",
+      "teamId": "11",
+      "nickName": "Warriors",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Warriors_de_Golden_State_logo.svg/1200px-Warriors_de_Golden_State_logo.svg.png",
+      "shortName": "GSW"
+  },
+  {
+      "city": "Houston",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Southwest"
+          }
+      },
+      "fullName": "Houston Rockets",
+      "teamId": "14",
+      "nickName": "Rockets",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/de/Houston_Rockets_logo_2003.png/330px-Houston_Rockets_logo_2003.png",
+      "shortName": "HOU"
+  },
+  {
+      "city": "Indiana",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Central"
+          }
+      },
+      "fullName": "Indiana Pacers",
+      "teamId": "15",
+      "nickName": "Pacers",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/cf/Pacers_de_l%27Indiana_logo.svg/1180px-Pacers_de_l%27Indiana_logo.svg.png",
+      "shortName": "IND"
+  },
+  {
+      "city": "LA",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Pacific"
+          }
+      },
+      "fullName": "LA Clippers",
+      "teamId": "16",
+      "nickName": "Clippers",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/d/d6/Los_Angeles_Clippers_logo_2010.png",
+      "shortName": "LAC"
+  },
+  {
+      "city": "Los Angeles",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Pacific"
+          }
+      },
+      "fullName": "Los Angeles Lakers",
+      "teamId": "17",
+      "nickName": "Lakers",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/220px-Los_Angeles_Lakers_logo.svg.png",
+      "shortName": "LAL"
+  },
+  {
+      "city": "Memphis",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Southwest"
+          }
+      },
+      "fullName": "Memphis Grizzlies",
+      "teamId": "19",
+      "nickName": "Grizzlies",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/1200px-Memphis_Grizzlies.svg.png",
+      "shortName": "MEM"
+  },
+  {
+      "city": "Miami",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Southeast"
+          }
+      },
+      "fullName": "Miami Heat",
+      "teamId": "20",
+      "nickName": "Heat",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1c/Miami_Heat_-_Logo.svg/1200px-Miami_Heat_-_Logo.svg.png",
+      "shortName": "MIA"
+  },
+  {
+      "city": "Milwaukee",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Central"
+          }
+      },
+      "fullName": "Milwaukee Bucks",
+      "teamId": "21",
+      "nickName": "Bucks",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/3/34/Bucks2015.png",
+      "shortName": "MIL"
+  },
+  {
+      "city": "Minnesota",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Northwest"
+          }
+      },
+      "fullName": "Minnesota Timberwolves",
+      "teamId": "22",
+      "nickName": "Timberwolves",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d9/Timberwolves_du_Minnesota_logo_2017.png/200px-Timberwolves_du_Minnesota_logo_2017.png",
+      "shortName": "MIN"
+  },
+  {
+      "city": "New Orleans",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Southwest"
+          }
+      },
+      "fullName": "New Orleans Pelicans",
+      "teamId": "23",
+      "nickName": "Pelicans",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/New_Orleans_Pelicans.png/200px-New_Orleans_Pelicans.png",
+      "shortName": "NOP"
+  },
+  {
+      "city": "New York",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Atlantic"
+          }
+      },
+      "fullName": "New York Knicks",
+      "teamId": "24",
+      "nickName": "Knicks",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/d/dc/NY_Knicks_Logo_2011.png",
+      "shortName": "NYK"
+  },
+  {
+      "city": "Oklahoma City",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Northwest"
+          }
+      },
+      "fullName": "Oklahoma City Thunder",
+      "teamId": "25",
+      "nickName": "Thunder",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Thunder_d%27Oklahoma_City_logo.svg/1200px-Thunder_d%27Oklahoma_City_logo.svg.png",
+      "shortName": "OKC"
+  },
+  {
+      "city": "Orlando",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Southeast"
+          }
+      },
+      "fullName": "Orlando Magic",
+      "teamId": "26",
+      "nickName": "Magic",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/b/bd/Orlando_Magic_logo_2010.png",
+      "shortName": "ORL"
+  },
+  {
+      "city": "Philadelphia",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Atlantic"
+          }
+      },
+      "fullName": "Philadelphia 76ers",
+      "teamId": "27",
+      "nickName": "76ers",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/4/48/76ers_2016.png",
+      "shortName": "PHI"
+  },
+  {
+      "city": "Phoenix",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Pacific"
+          }
+      },
+      "fullName": "Phoenix Suns",
+      "teamId": "28",
+      "nickName": "Suns",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/5/56/Phoenix_Suns_2013.png",
+      "shortName": "PHX"
+  },
+  {
+      "city": "Portland",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Northwest"
+          }
+      },
+      "fullName": "Portland Trail Blazers",
+      "teamId": "29",
+      "nickName": "Trail Blazers",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/1200px-Portland_Trail_Blazers_logo.svg.png",
+      "shortName": "POR"
+  },
+  {
+      "city": "Sacramento",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Pacific"
+          }
+      },
+      "fullName": "Sacramento Kings",
+      "teamId": "30",
+      "nickName": "Kings",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/9/95/Kings_de_Sacramento_logo.svg/1200px-Kings_de_Sacramento_logo.svg.png",
+      "shortName": "SAC"
+  },
+  {
+      "city": "San Antonio",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Southwest"
+          }
+      },
+      "fullName": "San Antonio Spurs",
+      "teamId": "31",
+      "nickName": "Spurs",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/0/0e/San_Antonio_Spurs_2018.png",
+      "shortName": "SAS"
+  },
+  {
+      "city": "Toronto",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Atlantic"
+          }
+      },
+      "fullName": "Toronto Raptors",
+      "teamId": "38",
+      "nickName": "Raptors",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/8/89/Raptors2015.png",
+      "shortName": "TOR"
+  },
+  {
+      "city": "Utah",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "West",
+              "divName": "Northwest"
+          }
+      },
+      "fullName": "Utah Jazz",
+      "teamId": "40",
+      "nickName": "Jazz",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/3/3b/Jazz_de_l%27Utah_logo.png",
+      "shortName": "UTA"
+  },
+  {
+      "city": "Washington",
+      "nbaFranchise": "1",
+      "allStar": "0",
+      "leagues": {
+          "standard": {
+              "confName": "East",
+              "divName": "Southeast"
+          }
+      },
+      "fullName": "Washington Wizards",
+      "teamId": "41",
+      "nickName": "Wizards",
+      "logo": "https://upload.wikimedia.org/wikipedia/fr/archive/d/d6/20161212034849%21Wizards2015.png",
+      "shortName": "WAS"
+  }
+]

@@ -1,0 +1,779 @@
+[
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+            "name": "Qualifier southeast asia",
+            "modifiedAt": "2019-05-27T13:54:29Z",
+            "leagueId": 4120,
+            "id": 2375,
+            "endAt": "2019-05-25T18:00:00Z",
+            "beginAt": "2019-05-22T22:00:00Z",
+            "seriesId": 1793
+        },
+        "winner": {
+            "slug": "mineski-dota-2",
+            "name": "Mineski",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+            "id": 1677,
+            "acronym": "Mski"
+        },
+        "seriesId": 1793,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019",
+            "season": "2",
+            "prizepool": "300000 United States Dollar",
+            "name": "ImbaTV Minor",
+            "leagueId": 4120,
+            "id": 1793,
+            "fullName": "Imbatv minor season 2 2019",
+            "endAt": "2019-05-17T18:00:00Z",
+            "description": null,
+            "beginAt": "2019-05-11T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 1677,
+                "score": 2
+            },
+            {
+                "teamId": 126030,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "mineski-dota-2",
+                    "name": "Mineski",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+                    "id": 1677,
+                    "acronym": "Mski"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "power-of-mysg",
+                    "name": "Power of MYSG",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                    "id": 126030,
+                    "acronym": "MYSG"
+                }
+            }
+        ],
+        "leagueId": 4120,
+        "league": {
+            "url": null,
+            "slug": "starladder",
+            "name": "StarLadder",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+            "id": 4120
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1677
+                },
+                "position": 1,
+                "matchId": 544934,
+                "length": 2354,
+                "id": 652706,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-24T09:20:26Z",
+                "beginAt": "2019-05-24T08:41:12Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1677
+                },
+                "position": 2,
+                "matchId": 544934,
+                "length": 2262,
+                "id": 652707,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-24T10:21:49Z",
+                "beginAt": "2019-05-24T09:44:07Z"
+            }
+        ],
+        "winnerId": 1677,
+        "tournamentId": 2375,
+        "status": "finished",
+        "slug": "2019-05-24-ccae8c9e-afef-4027-9a2e-eff4b090d05a",
+        "numberOfGames": 3,
+        "name": "Final",
+        "matchType": "best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/544934",
+            "supported": true,
+            "opensAt": "2019-05-24T07:41:12Z"
+        },
+        "id": 544934,
+        "forfeit": false,
+        "endAt": "2019-05-24T10:21:49Z",
+        "draw": false,
+        "beginAt": "2019-05-24T08:41:12Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+            "name": "Qualifier southeast asia",
+            "modifiedAt": "2019-05-27T13:54:29Z",
+            "leagueId": 4120,
+            "id": 2375,
+            "endAt": "2019-05-25T18:00:00Z",
+            "beginAt": "2019-05-22T22:00:00Z",
+            "seriesId": 1793
+        },
+        "winner": {
+            "slug": "power-of-mysg",
+            "name": "Power of MYSG",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+            "id": 126030,
+            "acronym": "MYSG"
+        },
+        "seriesId": 1793,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019",
+            "season": "2",
+            "prizepool": "300000 United States Dollar",
+            "name": "ImbaTV Minor",
+            "leagueId": 4120,
+            "id": 1793,
+            "fullName": "Imbatv minor season 2 2019",
+            "endAt": "2019-05-17T18:00:00Z",
+            "description": null,
+            "beginAt": "2019-05-11T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126030,
+                "score": 2
+            },
+            {
+                "teamId": 126035,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "adroit",
+                    "name": "Adroit",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+                    "id": 126035,
+                    "acronym": "Adroit"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "power-of-mysg",
+                    "name": "Power of MYSG",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                    "id": 126030,
+                    "acronym": "MYSG"
+                }
+            }
+        ],
+        "leagueId": 4120,
+        "league": {
+            "url": null,
+            "slug": "starladder",
+            "name": "StarLadder",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+            "id": 4120
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126030
+                },
+                "position": 1,
+                "matchId": 544933,
+                "length": 1857,
+                "id": 652703,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-24T06:32:24Z",
+                "beginAt": "2019-05-24T06:01:27Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126030
+                },
+                "position": 2,
+                "matchId": 544933,
+                "length": 1896,
+                "id": 652704,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-24T07:31:26Z",
+                "beginAt": "2019-05-24T06:59:50Z"
+            }
+        ],
+        "winnerId": 126030,
+        "tournamentId": 2375,
+        "status": "finished",
+        "slug": "2019-05-24-392d7e6b-2b26-4b5d-8470-721b37bde952",
+        "numberOfGames": 3,
+        "name": "Lower Final",
+        "matchType": "best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/544933",
+            "supported": true,
+            "opensAt": "2019-05-24T05:01:27Z"
+        },
+        "id": 544933,
+        "forfeit": false,
+        "endAt": "2019-05-24T07:31:26Z",
+        "draw": false,
+        "beginAt": "2019-05-24T06:01:27Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+            "name": "Qualifier southeast asia",
+            "modifiedAt": "2019-05-27T13:54:29Z",
+            "leagueId": 4120,
+            "id": 2375,
+            "endAt": "2019-05-25T18:00:00Z",
+            "beginAt": "2019-05-22T22:00:00Z",
+            "seriesId": 1793
+        },
+        "winner": {
+            "slug": "adroit",
+            "name": "Adroit",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+            "id": 126035,
+            "acronym": "Adroit"
+        },
+        "seriesId": 1793,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019",
+            "season": "2",
+            "prizepool": "300000 United States Dollar",
+            "name": "ImbaTV Minor",
+            "leagueId": 4120,
+            "id": 1793,
+            "fullName": "Imbatv minor season 2 2019",
+            "endAt": "2019-05-17T18:00:00Z",
+            "description": null,
+            "beginAt": "2019-05-11T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126035,
+                "score": 2
+            },
+            {
+                "teamId": 1825,
+                "score": 1
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "adroit",
+                    "name": "Adroit",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+                    "id": 126035,
+                    "acronym": "Adroit"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "boom-id",
+                    "name": "BOOM ID",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/1825/600px-Boom_id.png",
+                    "id": 1825,
+                    "acronym": "BOOM"
+                }
+            }
+        ],
+        "leagueId": 4120,
+        "league": {
+            "url": null,
+            "slug": "starladder",
+            "name": "StarLadder",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+            "id": 4120
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1825
+                },
+                "position": 1,
+                "matchId": 544932,
+                "length": 1220,
+                "id": 652700,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T06:53:31Z",
+                "beginAt": "2019-05-23T06:33:11Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126035
+                },
+                "position": 2,
+                "matchId": 544932,
+                "length": 2165,
+                "id": 652701,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T07:52:52Z",
+                "beginAt": "2019-05-23T07:16:47Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126035
+                },
+                "position": 3,
+                "matchId": 544932,
+                "length": 1795,
+                "id": 652702,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T08:47:39Z",
+                "beginAt": "2019-05-23T08:17:44Z"
+            }
+        ],
+        "winnerId": 126035,
+        "tournamentId": 2375,
+        "status": "finished",
+        "slug": "2019-05-23-cf4ed438-3fb9-4cb8-9081-8f7989fe1ecb",
+        "numberOfGames": 3,
+        "name": "Lower Round 1",
+        "matchType": "best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/544932",
+            "supported": true,
+            "opensAt": "2019-05-23T05:33:11Z"
+        },
+        "id": 544932,
+        "forfeit": false,
+        "endAt": "2019-05-23T08:47:39Z",
+        "draw": false,
+        "beginAt": "2019-05-23T06:33:11Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+            "name": "Qualifier southeast asia",
+            "modifiedAt": "2019-05-27T13:54:29Z",
+            "leagueId": 4120,
+            "id": 2375,
+            "endAt": "2019-05-25T18:00:00Z",
+            "beginAt": "2019-05-22T22:00:00Z",
+            "seriesId": 1793
+        },
+        "winner": {
+            "slug": "mineski-dota-2",
+            "name": "Mineski",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+            "id": 1677,
+            "acronym": "Mski"
+        },
+        "seriesId": 1793,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019",
+            "season": "2",
+            "prizepool": "300000 United States Dollar",
+            "name": "ImbaTV Minor",
+            "leagueId": 4120,
+            "id": 1793,
+            "fullName": "Imbatv minor season 2 2019",
+            "endAt": "2019-05-17T18:00:00Z",
+            "description": null,
+            "beginAt": "2019-05-11T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 1677,
+                "score": 2
+            },
+            {
+                "teamId": 126030,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "power-of-mysg",
+                    "name": "Power of MYSG",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                    "id": 126030,
+                    "acronym": "MYSG"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "mineski-dota-2",
+                    "name": "Mineski",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+                    "id": 1677,
+                    "acronym": "Mski"
+                }
+            }
+        ],
+        "leagueId": 4120,
+        "league": {
+            "url": null,
+            "slug": "starladder",
+            "name": "StarLadder",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+            "id": 4120
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1677
+                },
+                "position": 1,
+                "matchId": 544931,
+                "length": 1419,
+                "id": 652697,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T06:50:23Z",
+                "beginAt": "2019-05-23T06:26:44Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1677
+                },
+                "position": 2,
+                "matchId": 544931,
+                "length": 1543,
+                "id": 652698,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T07:49:48Z",
+                "beginAt": "2019-05-23T07:24:05Z"
+            }
+        ],
+        "winnerId": 1677,
+        "tournamentId": 2375,
+        "status": "finished",
+        "slug": "2019-05-23-f0490a26-df92-41d4-a450-6e3b7df6b09d",
+        "numberOfGames": 3,
+        "name": "Upper Final",
+        "matchType": "best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/544931",
+            "supported": true,
+            "opensAt": "2019-05-23T05:26:44Z"
+        },
+        "id": 544931,
+        "forfeit": false,
+        "endAt": "2019-05-23T07:49:48Z",
+        "draw": false,
+        "beginAt": "2019-05-23T06:26:44Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+            "name": "Qualifier southeast asia",
+            "modifiedAt": "2019-05-27T13:54:29Z",
+            "leagueId": 4120,
+            "id": 2375,
+            "endAt": "2019-05-25T18:00:00Z",
+            "beginAt": "2019-05-22T22:00:00Z",
+            "seriesId": 1793
+        },
+        "winner": {
+            "slug": "mineski-dota-2",
+            "name": "Mineski",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+            "id": 1677,
+            "acronym": "Mski"
+        },
+        "seriesId": 1793,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019",
+            "season": "2",
+            "prizepool": "300000 United States Dollar",
+            "name": "ImbaTV Minor",
+            "leagueId": 4120,
+            "id": 1793,
+            "fullName": "Imbatv minor season 2 2019",
+            "endAt": "2019-05-17T18:00:00Z",
+            "description": null,
+            "beginAt": "2019-05-11T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 1677,
+                "score": 2
+            },
+            {
+                "teamId": 1825,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "boom-id",
+                    "name": "BOOM ID",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/1825/600px-Boom_id.png",
+                    "id": 1825,
+                    "acronym": "BOOM"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "mineski-dota-2",
+                    "name": "Mineski",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/1677/Mineski.png",
+                    "id": 1677,
+                    "acronym": "Mski"
+                }
+            }
+        ],
+        "leagueId": 4120,
+        "league": {
+            "url": null,
+            "slug": "starladder",
+            "name": "StarLadder",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+            "id": 4120
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1677
+                },
+                "position": 1,
+                "matchId": 544930,
+                "length": 1556,
+                "id": 652694,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T04:30:17Z",
+                "beginAt": "2019-05-23T04:04:21Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 1677
+                },
+                "position": 2,
+                "matchId": 544930,
+                "length": 1464,
+                "id": 652695,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T05:21:31Z",
+                "beginAt": "2019-05-23T04:57:07Z"
+            }
+        ],
+        "winnerId": 1677,
+        "tournamentId": 2375,
+        "status": "finished",
+        "slug": "2019-05-23-15b9d6ca-0c30-4836-b957-b74af81219f2",
+        "numberOfGames": 3,
+        "name": "Upper Round 1",
+        "matchType": "best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/544930",
+            "supported": true,
+            "opensAt": "2019-05-23T03:04:21Z"
+        },
+        "id": 544930,
+        "forfeit": false,
+        "endAt": "2019-05-23T05:21:31Z",
+        "draw": false,
+        "beginAt": "2019-05-23T04:04:21Z"
+    },
+    {
+        "tournament": {
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019-qualifier-southeast-asia",
+            "name": "Qualifier southeast asia",
+            "modifiedAt": "2019-05-27T13:54:29Z",
+            "leagueId": 4120,
+            "id": 2375,
+            "endAt": "2019-05-25T18:00:00Z",
+            "beginAt": "2019-05-22T22:00:00Z",
+            "seriesId": 1793
+        },
+        "winner": {
+            "slug": "power-of-mysg",
+            "name": "Power of MYSG",
+            "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+            "id": 126030,
+            "acronym": "MYSG"
+        },
+        "seriesId": 1793,
+        "series": {
+            "year": 2019,
+            "winnerType": null,
+            "winnerId": null,
+            "slug": "starladder-imbatv-minor-2-2019",
+            "season": "2",
+            "prizepool": "300000 United States Dollar",
+            "name": "ImbaTV Minor",
+            "leagueId": 4120,
+            "id": 1793,
+            "fullName": "Imbatv minor season 2 2019",
+            "endAt": "2019-05-17T18:00:00Z",
+            "description": null,
+            "beginAt": "2019-05-11T22:00:00Z"
+        },
+        "results": [
+            {
+                "teamId": 126030,
+                "score": 2
+            },
+            {
+                "teamId": 126035,
+                "score": 0
+            }
+        ],
+        "opponents": [
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "power-of-mysg",
+                    "name": "Power of MYSG",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126030/147px-Dota2_logo.png",
+                    "id": 126030,
+                    "acronym": "MYSG"
+                }
+            },
+            {
+                "type": "Team",
+                "opponent": {
+                    "slug": "adroit",
+                    "name": "Adroit",
+                    "imageUrl": "https://cdn.pandascore.co/images/team/image/126035/159px-Team_Adroit_logo.png",
+                    "id": 126035,
+                    "acronym": "Adroit"
+                }
+            }
+        ],
+        "leagueId": 4120,
+        "league": {
+            "url": null,
+            "slug": "starladder",
+            "name": "StarLadder",
+            "liveSupported": true,
+            "imageUrl": "https://cdn.pandascore.co/images/league/image/4120/SL_logo.jpg",
+            "id": 4120
+        },
+        "games": [
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126030
+                },
+                "position": 1,
+                "matchId": 544928,
+                "length": 1203,
+                "id": 652691,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T04:21:32Z",
+                "beginAt": "2019-05-23T04:01:29Z"
+            },
+            {
+                "winnerType": "Team",
+                "winner": {
+                    "type": "Team",
+                    "id": 126030
+                },
+                "position": 2,
+                "matchId": 544928,
+                "length": 2752,
+                "id": 652692,
+                "forfeit": false,
+                "finished": true,
+                "endAt": "2019-05-23T05:37:07Z",
+                "beginAt": "2019-05-23T04:51:15Z"
+            }
+        ],
+        "winnerId": 126030,
+        "tournamentId": 2375,
+        "status": "finished",
+        "slug": "2019-05-23-77f40505-b9dc-405e-92c1-e328f5c22187",
+        "numberOfGames": 3,
+        "name": "Upper Round 1",
+        "matchType": "best_of",
+        "live": {
+            "url": "wss://live.pandascore.co/matches/544928",
+            "supported": true,
+            "opensAt": "2019-05-23T03:01:29Z"
+        },
+        "id": 544928,
+        "forfeit": false,
+        "endAt": "2019-05-23T05:37:07Z",
+        "draw": false,
+        "beginAt": "2019-05-23T04:01:29Z"
+    }
+]

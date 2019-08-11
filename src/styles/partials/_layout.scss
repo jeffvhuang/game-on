@@ -1,0 +1,83 @@
+//  margins, display, box-sizing, etc.
+
+.content-wrapper {
+  min-height: 100%;
+}
+
+.mid-container {
+  margin: 0 auto;
+}
+
+.right {
+  float: right;
+}
+
+.page-heading {
+  margin-top: 1em;
+}
+
+.no-margin {
+  margin: 10;
+}
+
+.margin-bot {
+  margin-bottom: 1em;
+}
+
+%margin-bot-med {
+  margin-bottom: 2em;
+}
+
+.pad-sides {
+  padding: 0 2em;
+}
+
+.section {
+  @extend .pad-sides;
+  @extend %margin-bot-med;
+}
+
+.section-left {
+  @extend %margin-bot-med;
+}
+
+.flex {
+  display: flex;
+}
+
+.mid-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.reduced-side-width {
+  width: 40%;
+}
+
+.page-main-section {
+  width: 100%;
+  margin-left: 1em;
+}
+
+.bordered {
+  border: 2px solid $red;
+}
+
+.page-main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}

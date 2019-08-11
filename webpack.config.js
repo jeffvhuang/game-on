@@ -5,27 +5,30 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   entry: {
     // NB: The entry points will help optimization.splitChunks decide how to chunk the bundles
-    app: './src/index.js'
+    app: './src/index.tsx'
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   plugins: [
-    new CleanWebpackPlugin(['build']),
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html",
       inject: true
     })
   ],
+  resolve: {
+    extensions: [".ts", ".tsx", '.js', '.jsx', '.json', '.less']
+  },
   module: {
     rules: [
       {
         enforce: "pre",
-        test: /\.(js|jsx|mjs)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
+        loader: "source-map-loader",
       }
     ]
   }

@@ -1,5 +1,6 @@
+const AntdScssThemePlugin = require('antd-scss-theme-plugin');
 const merge = require('webpack-merge');
-const common = require('./webpack.common.config');
+const common = require('./webpack.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -45,7 +46,8 @@ module.exports = merge(common, {
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
-    new ManifestPlugin()
+    new ManifestPlugin(),
+    new AntdScssThemePlugin('./src/styles/theme.scss')
   ],
   output: {
     filename: '[name].[chunkhash:8].bundle.js',
@@ -79,20 +81,36 @@ module.exports = merge(common, {
             },
           },
           {
-            test: /\.(js|jsx|mjs)$/,
-            loader: require.resolve('babel-loader'),
-            exclude: /node_modules/
-            // options kept empty so that when babel is called it will use .babelrc
-            // in babelrc, modules: false for @babel/preset-env to leave modules alone
-            // to allow webpack tree shaking
+            test: /\.(ts|tsx|jsx|mjs)$/,
+            exclude: /node_modules/,
+            use: { loader: 'awesome-typescript-loader' },
           },
           {
-            test: /\.(sa|sc|c)ss$/,
+            test: /\.scss$/,
+            use: [
+              // fallback to style-loader in development
+              process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+              "css-loader",
+              AntdScssThemePlugin.themify("sass-loader")
+            ]
+          },
+          {
+            test: /\.less$/,
             use: [
               MiniCssExtractPlugin.loader,
               "css-loader",
-              "postcss-loader"
+              "postcss-loader",
+              AntdScssThemePlugin.themify({
+                loader: 'less-loader',
+                options: {
+                  javascriptEnabled: true
+                }
+              })
             ]
+          },
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
           },
           // "file" loader makes sure assets end up in the `build` folder.
           {
