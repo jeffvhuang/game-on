@@ -182,7 +182,7 @@ export const gameonAPI = {
 // Third party APIs
 export const youtubeAPI = {
   HOST: 'https://www.googleapis.com/youtube/v3',
-  KEY: 'AIzaSyDCn1lgLIzn3dZBl4n3b55VK1wwrLV3ako',
+  KEY: '{your-youtube-api-key}',
   PLAYLIST: '/playlists',
   PLAYLIST_ITEMS: '/playlistItems',
   // playlistId
