@@ -57,24 +57,9 @@ class EventsContainer extends React.Component<Props, State> {
     day.setDate(day.getDate() + daysToAdd);
     var dayNum = day.getDay(); // Sun = 0 > Sat = 6
 
-    switch (dayNum) {
-      case 0:
-        return 'Sunday';
-      case 1:
-        return 'Monday';
-      case 2:
-        return 'Tuesday';
-      case 3:
-        return 'Wednesday';
-      case 4:
-        return 'Thursday';
-      case 5:
-        return 'Friday';
-      case 6:
-        return 'Saturday';
-      default:
-        return '';
-    }
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    return days[dayNum];
   }
 
   render() {

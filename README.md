@@ -1,4 +1,4 @@
-# Introduction
+# Game On
 
 This web app front end allows people to find and see what major tournaments and games are occurring in the sports and/or e-sports worlds.
 
