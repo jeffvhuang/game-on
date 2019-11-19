@@ -1,6 +1,6 @@
 export interface FootballScore {
-  halftime: string;
-  fulltime: string;
+  halftime: string | null;
+  fulltime: string | null;
   extratime: string | null;
   penalty: any;
 }

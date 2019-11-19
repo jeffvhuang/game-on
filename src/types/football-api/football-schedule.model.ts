@@ -6,17 +6,17 @@ export interface FootballSchedule {
   leagueId: number;
   eventDate: string;
   eventTimestamp: number;
-  firstHalfStart: number;
-  secondHalfStart: number;
+  firstHalfStart: number | null;
+  secondHalfStart: number | null;
   round: string;
   status: string;
   statusShort: string;
-  elapsed: number,
-  venue: string;
-  referee: any;
+  elapsed: number;
+  venue: string | null;
+  referee: string | null;
   homeTeam: FootballCompetingTeam;
   awayTeam: FootballCompetingTeam;
-  goalsHomeTeam: number;
-  goalsAwayTeam: number;
+  goalsHomeTeam: number | null;
+  goalsAwayTeam: number | null;
   score: FootballScore;
 }
