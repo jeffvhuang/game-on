@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import { Button } from "antd";
 import { Link } from "react-router-dom";
 
 import { paths } from "../../../../helpers/constants";
@@ -22,6 +23,7 @@ interface DispatchProps {
 
 interface State {
   values: string[];
+  numToShow: number;
 }
 
 type Props = StateProps & DispatchProps;
@@ -31,7 +33,8 @@ class BasketballPage extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      values: []
+      values: [],
+      numToShow: 10
     };
   }
 
@@ -43,10 +46,15 @@ class BasketballPage extends React.Component<Props, State> {
 
   handleChange = values => this.setState({ values });
 
+  showMore = () =>
+    this.setState(prevState => {
+      return { numToShow: prevState.numToShow + 10 };
+    });
+
   render() {
     return (
       <div className="section content">
-        <h2 className="page-heading">Basketball</h2>
+        <h2 className="page-heading">NBA</h2>
         <NbaSelectDropdown
           handleChange={this.handleChange}
           teams={this.props.nba.teams}
@@ -60,10 +68,11 @@ class BasketballPage extends React.Component<Props, State> {
           header="Upcoming"
           games={this.props.nba.upcoming}
           values={this.state.values}
+          numToShow={this.state.numToShow}
         />
-        <Link to={paths.EVENTS} className="right">
+        <Button onClick={this.showMore} className="right">
           More >
-        </Link>
+        </Button>
       </div>
     );
   }

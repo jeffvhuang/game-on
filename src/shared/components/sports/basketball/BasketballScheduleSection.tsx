@@ -7,9 +7,28 @@ interface Props {
   header: string;
   games: any[];
   values: string[];
+  numToShow?: number;
 }
 
-function BasketballScheduleSection({ header, games, values }: Props) {
+function BasketballScheduleSection({
+  header,
+  games,
+  values,
+  numToShow
+}: Props) {
+  let gamesToShow: any[];
+
+  if (values.length > 0)
+    gamesToShow = games.filter(g =>
+      values.some(
+        selected =>
+          selected === g.hTeam.shortName || selected === g.vTeam.shortName
+      )
+    );
+  else gamesToShow = games.slice();
+
+  if (header === "Upcoming") gamesToShow = gamesToShow.slice(0, numToShow);
+
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
@@ -22,15 +41,9 @@ function BasketballScheduleSection({ header, games, values }: Props) {
         </Col>
         <Col span={8} />
       </Row>
-      {values.length < 1
-        ? games.map((g, i) => <NbaMatchSchedule key={i} game={g} />)
-        : games.map((g, i) => {
-            if (
-              values.some(x => x == g.hTeam.shortName || x == g.vTeam.shortName)
-            ) {
-              return <NbaMatchSchedule key={i} game={g} />;
-            }
-          })}
+      {gamesToShow.map((g, i) => (
+        <NbaMatchSchedule key={i} game={g} />
+      ))}
     </div>
   );
 }
