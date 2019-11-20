@@ -1,23 +1,23 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
-import { paths } from '../../../../helpers/constants';
-import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../../redux/nba/nba-actions';
+import { paths } from "../../../../helpers/constants";
+import { getNbaSchedule, getNbaTeams } from "../../../redux/nba/nba-actions";
 
-import VideoThumbnails from '../../common/VideoThumbnails';
-import NbaSelectDropdown from './NbaSelectDropdown';
-import BasketballScheduleSection from './BasketballScheduleSection';
-import VideoHeader from '../../common/VideoHeader';
-import { NbaState } from '../../../redux/nba/nba-types';
-import { ReduxState } from '../../../redux/redux-state';
+import NbaSelectDropdown from "./NbaSelectDropdown";
+import BasketballScheduleSection from "./BasketballScheduleSection";
+import { NbaState } from "../../../redux/nba/nba-types";
+import { ReduxState } from "../../../redux/redux-state";
 
 interface StateProps {
   nba: NbaState;
 }
 
 interface DispatchProps {
-  getNbaSchedule; getNbaTeams; getNbaVideos;
+  getNbaSchedule;
+  getNbaTeams;
+  getNbaVideos;
 }
 
 interface State {
@@ -37,7 +37,6 @@ class BasketballPage extends React.Component<Props, State> {
 
   componentDidMount() {
     const props = this.props;
-    // if (props.nba.videos.length < 1) props.actions.getNbaVideos();
     if (props.nba.teams.length < 1) props.getNbaTeams();
     if (props.nba.schedule.length < 1) props.getNbaSchedule();
   }
@@ -46,25 +45,25 @@ class BasketballPage extends React.Component<Props, State> {
 
   render() {
     return (
-      <div>
-        {/* <VideoHeader /> */}
-        <h1>Basketball</h1>
-        <NbaSelectDropdown handleChange={this.handleChange} 
-          teams={this.props.nba.teams} />
-        {/* <VideoThumbnails heading="NBA Videos"
-          thumbnails={this.props.nba.thumbnails}
-          showCount={4}
-          showMore
-          showMoreLink={paths.HIGHLIGHTS + '/basketball/nba'} /> */}
-        <div className="section">
-          <BasketballScheduleSection header="Today's Games"
-            games={this.props.nba.gamesToday}
-            values={this.state.values} />
-          <BasketballScheduleSection header="Upcoming"
-            games={this.props.nba.upcoming}
-            values={this.state.values} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
-        </div>
+      <div className="section">
+        <h2 className="page-heading">Basketball</h2>
+        <NbaSelectDropdown
+          handleChange={this.handleChange}
+          teams={this.props.nba.teams}
+        />
+        <BasketballScheduleSection
+          header="Today"
+          games={this.props.nba.gamesToday}
+          values={this.state.values}
+        />
+        <BasketballScheduleSection
+          header="Upcoming"
+          games={this.props.nba.upcoming}
+          values={this.state.values}
+        />
+        <Link to={paths.EVENTS} className="right">
+          More >
+        </Link>
       </div>
     );
   }
@@ -75,7 +74,11 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getNbaSchedule, getNbaTeams, getNbaVideos
-}
+  getNbaSchedule,
+  getNbaTeams
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(BasketballPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BasketballPage);

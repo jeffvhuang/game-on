@@ -1,18 +1,18 @@
-import { paths, days, months } from './constants';
+import { paths, days, months } from "./constants";
 // import * as youtubeLogo from '../../public/assets/Youtube-logo-2017-640x480.png';
-import { NbaSchedule } from '../types/nba-api/nba-schedule.model';
-import { FootballSchedule } from '../types/football-api/football-schedule.model';
-import { TennisTournament } from '../types/tennis-api/tennis-tournament.model';
-import { ESportsTournament } from '../types/esports-api/esports-tournament.model';
-import { ESportsTeamBase } from '../types/esports-api/esports-team-base.model';
-import { ESportsSeries } from '../types/esports-api/espots-series.model';
-import { ESportsMatch } from '../types/esports-api/esports-match.model';
-import { TennisMatch } from '../types/tennis-api/tennis-match.model';
-import { FootballSortedSchedule } from '../types/football-api/football-sorted-schedule.model';
-import { TennisSortedMatches } from '../types/tennis-api/tennis-sorted-matches.model';
+import { NbaSchedule } from "../types/nba-api/nba-schedule.model";
+import { FootballSchedule } from "../types/football-api/football-schedule.model";
+import { TennisTournament } from "../types/tennis-api/tennis-tournament.model";
+import { ESportsTournament } from "../types/esports-api/esports-tournament.model";
+import { ESportsTeamBase } from "../types/esports-api/esports-team-base.model";
+import { ESportsSeries } from "../types/esports-api/espots-series.model";
+import { ESportsMatch } from "../types/esports-api/esports-match.model";
+import { TennisMatch } from "../types/tennis-api/tennis-match.model";
+import { FootballSortedSchedule } from "../types/football-api/football-sorted-schedule.model";
+import { TennisSortedMatches } from "../types/tennis-api/tennis-sorted-matches.model";
 
 // declare function require(path: string);
-const youtubeLogo = require('../../public/assets/Youtube-logo-2017-640x480.png');
+const youtubeLogo = require("../../public/assets/Youtube-logo-2017-640x480.png");
 export const futureDateString = "Sun Dec 31 2199";
 export const futureDate = new Date(futureDateString);
 
@@ -21,7 +21,7 @@ export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/** 
+/**
  * Sorting functions
  */
 
@@ -51,21 +51,23 @@ export function sortNBASchedule(data: NbaSchedule[]) {
 
 /**
  * sort schedule to find matches live, upcoming and recently completed
- * @param {array} data 
+ * @param {array} data
  */
-export function sortFootballSchedule(matches: FootballSchedule[]): FootballSortedSchedule {
+export function sortFootballSchedule(
+  matches: FootballSchedule[]
+): FootballSortedSchedule {
   const live: FootballSchedule[] = [];
   const upcoming: FootballSchedule[] = [];
   const completed: FootballSchedule[] = [];
   const now = new Date();
   const dateIn24Hrs = new Date(60 * 60 * 24 * 1000 + now.getTime());
-  const date12HrsAgo = new Date(now.getTime() - (60 * 60 * 12 * 1000));
+  const date12HrsAgo = new Date(now.getTime() - 60 * 60 * 12 * 1000);
 
   for (let i = 0; i < matches.length; i++) {
     const match = matches[i];
 
     const startDate = new Date(match.eventDate);
-    const isMatchFinished = (match.status == 'Match Finished') ? true : false;
+    const isMatchFinished = match.status == "Match Finished" ? true : false;
 
     // Nested if to ensure matches completed and not started do not reach later if blocks
     // last block should be live but ensure it is same date
@@ -88,10 +90,10 @@ export function sortFootballSchedule(matches: FootballSchedule[]): FootballSorte
 
 // Sort by date for epl api's data
 function sortFootballByDate(data: FootballSchedule[]) {
-  return data.sort(function (a, b) {
+  return data.sort(function(a, b) {
     const dateA = a.eventTimestamp;
     const dateB = b.eventTimestamp;
-    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+    return dateA < dateB ? -1 : dateA > dateB ? 1 : 0;
   });
 }
 
@@ -103,13 +105,13 @@ export function sortTennisMatches(matches: TennisMatch[]): TennisSortedMatches {
   // const now = Date.now();
   const now = new Date();
   const dateIn24Hrs = new Date(60 * 60 * 24 * 1000 + now.getTime());
-  const date12HrsAgo = new Date(now.getTime() - (60 * 60 * 12 * 1000));
+  const date12HrsAgo = new Date(now.getTime() - 60 * 60 * 12 * 1000);
 
   for (let i = 0; i < matches.length; i++) {
     const match = matches[i];
 
     const startDate = new Date(match.scheduled);
-    const isMatchFinished = (match.status == 'closed') ? true : false;
+    const isMatchFinished = match.status == "closed" ? true : false;
 
     // Nested if to ensure matches completed and not started do not reach later if blocks
     // last block should be live but ensure it is same date
@@ -133,10 +135,14 @@ export function sortTennisSchedule(data: TennisTournament[]) {
 
   // Separate tournamentsinto past, ongoing and upcoming
   data.forEach(t => {
-    const startDate = (t.currentSeason && t.currentSeason.startDate) ? 
-      t.currentSeason.startDate : futureDateString;
-    const endDate = (t.currentSeason && t.currentSeason.endDate) ? 
-      t.currentSeason.endDate : futureDateString;
+    const startDate =
+      t.currentSeason && t.currentSeason.startDate
+        ? t.currentSeason.startDate
+        : futureDateString;
+    const endDate =
+      t.currentSeason && t.currentSeason.endDate
+        ? t.currentSeason.endDate
+        : futureDateString;
 
     if (new Date(startDate).getTime() > now) upcoming.push(t);
     else if (new Date(endDate).getTime() < now) completed.push(t);
@@ -152,14 +158,27 @@ export function sortTennisSchedule(data: TennisTournament[]) {
 }
 
 function sortTennisByDate(data: TennisTournament[]) {
-  return data.sort(function (a, b) {
-    if (a.currentSeason && a.currentSeason.startDate && b.currentSeason && b.currentSeason.startDate) {
+  return data.sort(function(a, b) {
+    if (
+      a.currentSeason &&
+      a.currentSeason.startDate &&
+      b.currentSeason &&
+      b.currentSeason.startDate
+    ) {
       const dateA = a.currentSeason.startDate;
       const dateB = b.currentSeason.startDate;
-      return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
-    } else if (b.currentSeason && b.currentSeason.startDate && (!a.currentSeason || !a.currentSeason.startDate)) 
+      return dateA < dateB ? -1 : dateA > dateB ? 1 : 0;
+    } else if (
+      b.currentSeason &&
+      b.currentSeason.startDate &&
+      (!a.currentSeason || !a.currentSeason.startDate)
+    )
       return 1;
-    else if (a.currentSeason && a.currentSeason.startDate && (!b.currentSeason || !b.currentSeason.startDate))
+    else if (
+      a.currentSeason &&
+      a.currentSeason.startDate &&
+      (!b.currentSeason || !b.currentSeason.startDate)
+    )
       return -1;
     else return 0;
   });
@@ -206,8 +225,8 @@ export function sortESportsSeries(data: ESportsSeries[]) {
   // Separate series into today followed by upcoming and past
   for (let i = 0; i < data.length; i++) {
     const series = data[i];
-    const beginDate = (series.beginAt) ? new Date(series.beginAt) : futureDate;    
-    const endDate = (series.endAt) ? new Date(series.endAt) : futureDate;
+    const beginDate = series.beginAt ? new Date(series.beginAt) : futureDate;
+    const endDate = series.endAt ? new Date(series.endAt) : futureDate;
 
     if (beginDate.getTime() > now) upcomingSeries.push(series);
     else if (endDate.getTime() < now) completedSeries.push(series);
@@ -229,7 +248,7 @@ export function sortESportsMatches(data: ESportsMatch[]) {
 
   // Separate matches into today followed by upcoming and past
   data.forEach(match => {
-    const matchDate = (match.beginAt) ? new Date(match.beginAt) : futureDate;
+    const matchDate = match.beginAt ? new Date(match.beginAt) : futureDate;
 
     if (isSameDate(dateToday, matchDate)) {
       today.push(match);
@@ -249,28 +268,30 @@ export function sortESportsMatches(data: ESportsMatch[]) {
 
 // Sort by descending (most recent dates first)
 export function sortESportByDate(
-  data: ESportsTournament[] | ESportsSeries[] | ESportsMatch[]) {
-  return data.sort(function (a, b) {
+  data: ESportsTournament[] | ESportsSeries[] | ESportsMatch[]
+) {
+  return data.sort(function(a, b) {
     const dateA = a.beginAt;
     const dateB = b.beginAt;
-    return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
+    return dateA > dateB ? -1 : dateA < dateB ? 1 : 0;
   });
 }
 
 export function sortESportByEndDate(
-  data: ESportsTournament[] | ESportsSeries[] | ESportsMatch[]) {
-  return data.sort(function (a, b) {
+  data: ESportsTournament[] | ESportsSeries[] | ESportsMatch[]
+) {
+  return data.sort(function(a, b) {
     const dateA = a.endAt;
     const dateB = b.endAt;
-    return (dateA > dateB) ? -1 : (dateA < dateB) ? 1 : 0;
+    return dateA > dateB ? -1 : dateA < dateB ? 1 : 0;
   });
 }
 
 function sortESportTeams(data: ESportsTeamBase[]) {
-  return data.sort(function (a, b) {
+  return data.sort(function(a, b) {
     const dateA = a.name;
     const dateB = b.name;
-    return (dateA < dateB) ? -1 : (dateA > dateB) ? 1 : 0;
+    return dateA < dateB ? -1 : dateA > dateB ? 1 : 0;
   });
 }
 
@@ -291,53 +312,55 @@ export function getESportsTeamsFromMatches(data: ESportsMatch[]) {
 }
 
 export function getTournamentName(tournament: ESportsTournament) {
-  let tournamentName = '';
+  let tournamentName = "";
   if (tournament) {
-    if (tournament.league) tournamentName += tournament.league.name + ' ';
+    if (tournament.league) tournamentName += tournament.league.name + " ";
     if (tournament.series) {
       if (tournament.series.name != null) {
-        tournamentName += tournament.series.name + ' ';
+        tournamentName += tournament.series.name + " ";
       } else if (tournament.series.fullName != null) {
-        tournamentName += tournament.series.fullName + ' ';
+        tournamentName += tournament.series.fullName + " ";
       }
     }
-      
+
     tournamentName += tournament.name;
   }
-  
+
   return tournamentName;
 }
 
 export function getTournamentNameFromMatch(match) {
-  let tournamentName = '';
+  let tournamentName = "";
   if (match) {
-    if (match.league) tournamentName += match.league.name + ' ';
+    if (match.league) tournamentName += match.league.name + " ";
     if (match.series) {
       if (match.series.name != null) {
-        tournamentName += match.series.name + ' ';
+        tournamentName += match.series.name + " ";
       } else if (match.series.fullName != null) {
-        tournamentName += match.series.fullName + ' ';
+        tournamentName += match.series.fullName + " ";
       }
     }
-      
+
     tournamentName += match.tournament.name;
   }
-  
+
   return tournamentName;
 }
 
 /**
  * convert to objects to be used in common dropdown function used across all apis
- * @param {array} teams 
+ * @param {array} teams
  */
 export function convertEplTeamsToArray(teams) {
   const ddTeams: any[] = [];
-  teams.forEach(t => ddTeams.push({
-    fullName: t.name,
-    shortName: t.code,
-    teamId: t.team_id,
-    logo: t.logo
-  }));
+  teams.forEach(t =>
+    ddTeams.push({
+      fullName: t.name,
+      shortName: t.code,
+      teamId: t.team_id,
+      logo: t.logo
+    })
+  );
   return ddTeams;
 }
 
@@ -346,7 +369,7 @@ export function createYoutubeThumnailObjects(videos) {
   const thumbnails: any[] = [];
 
   videos.forEach(video => {
-    const imgSrc = (video.snippet.thumbnails)
+    const imgSrc = video.snippet.thumbnails
       ? video.snippet.thumbnails.medium.url
       : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341450.jpg";
     thumbnails.push({
@@ -363,33 +386,41 @@ export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
   const month = dateTestedAgainst.getMonth();
   const monthDate = dateTestedAgainst.getDate();
 
-  return (dateToTest.getFullYear() == year) &&
-    (dateToTest.getMonth() == month) &&
-    (dateToTest.getDate() == monthDate);
+  return (
+    dateToTest.getFullYear() == year &&
+    dateToTest.getMonth() == month &&
+    dateToTest.getDate() == monthDate
+  );
 }
 
 // Given a Date object, give the time formatted in 00:00
 export function getFormattedTime(date: Date | null): string {
   if (!date) return "";
 
-  const h = (date.getHours() < 10 ? '0' : '') + date.getHours(),
-    m = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
-  return h + ':' + m;
+  const h = date.getHours(),
+    m = (date.getMinutes() < 10 ? "0" : "") + date.getMinutes(),
+    meridiem = date.getHours() < 12 ? "am" : "pm";
+  return `${h}:${m} ${meridiem}`;
 }
 
 /**
  * return in format "Wed Feb 1"
  * @param dateString format: "2015-10-25"
- */ 
-export function getDayMonthDateFromReverseFormat(dateString: string | null): string {
-  if (!dateString) return '';
-  const dateParts = dateString.split('-');
-  if (dateParts.length != 3) return '';
+ */
+
+export function getDayMonthDateFromReverseFormat(
+  dateString: string | null
+): string {
+  if (!dateString) return "";
+  const dateParts = dateString.split("-");
+  if (dateParts.length != 3) return "";
   const year = parseInt(dateParts[0]);
   const month = parseInt(dateParts[1]);
   const monthDate = parseInt(dateParts[2]);
   const date = new Date(year, month - 1, monthDate);
-  return days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate();
+  return (
+    days[date.getDay()] + " " + months[date.getMonth()] + " " + date.getDate()
+  );
 }
 
 export function getDayMonthDate(date: string) {
@@ -397,16 +428,33 @@ export function getDayMonthDate(date: string) {
   if (!isValidDate(date)) return null;
 
   const dateObj = new Date(date);
-  return days[dateObj.getDay()] + ' ' + months[dateObj.getMonth()] + ' ' + dateObj.getDate();
+  return (
+    days[dateObj.getDay()] +
+    " " +
+    months[dateObj.getMonth()] +
+    " " +
+    dateObj.getDate()
+  );
 }
 
 export function isValidDate(date) {
-  return date && Object.prototype.toString.call(date) === "[object Date]" && !isNaN(date);
+  return (
+    date &&
+    Object.prototype.toString.call(date) === "[object Date]" &&
+    !isNaN(date)
+  );
 }
 
 export function uuidv4() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+    var r = (Math.random() * 16) | 0,
+      v = c == "x" ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
+}
+
+export function getNumberWithOrdinal(n) {
+  var s = ["th", "st", "nd", "rd"],
+    v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
