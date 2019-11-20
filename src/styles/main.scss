@@ -1,12 +1,12 @@
 // base
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-@import 'partials/_variables.scss';
-@import 'partials/_functions.scss';
-@import 'partials/_mixins.scss';
-@import 'partials/_layout.scss';
-@import 'partials/_typography.scss';
-@import 'partials/_components.scss';
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/daygrid/main.css";
+@import "partials/_variables.scss";
+@import "partials/_functions.scss";
+@import "partials/_mixins.scss";
+@import "partials/_layout.scss";
+@import "partials/_typography.scss";
+@import "partials/_components.scss";
 
 html,
 body {
@@ -25,4 +25,10 @@ body {
 
 #root {
   height: 100%;
+}
+
+.main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
 }

@@ -45,7 +45,7 @@ class BasketballPage extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className="section">
+      <div className="section content">
         <h2 className="page-heading">Basketball</h2>
         <NbaSelectDropdown
           handleChange={this.handleChange}

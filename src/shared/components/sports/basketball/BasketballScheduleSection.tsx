@@ -14,11 +14,10 @@ function BasketballScheduleSection({ header, games, values }: Props) {
     <div className="margin-bot">
       <h2>{header}</h2>
       <Row>
-        <Col span={7}>
+        <Col span={8}>
           <h3>Away</h3>
         </Col>
-        <Col span={2} />
-        <Col span={7}>
+        <Col span={8}>
           <h3>Home</h3>
         </Col>
         <Col span={8} />

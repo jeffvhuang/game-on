@@ -397,7 +397,7 @@ export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
 export function getFormattedTime(date: Date | null): string {
   if (!date) return "";
 
-  const h = date.getHours(),
+  const h = date.getHours() < 13 ? date.getHours() : date.getHours() - 12,
     m = (date.getMinutes() < 10 ? "0" : "") + date.getMinutes(),
     meridiem = date.getHours() < 12 ? "am" : "pm";
   return `${h}:${m} ${meridiem}`;
