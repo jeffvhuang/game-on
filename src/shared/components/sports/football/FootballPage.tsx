@@ -1,47 +1,39 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Button } from "antd";
+import { RouteComponentProps } from "react-router";
 
-import { paths } from '../../../../helpers/constants';
-import { getEplTeams, getEplSchedule } from '../../../redux/football/epl/epl-actions';
-import { getChampionsLeagueTeams, 
-  getChampionsLeagueSchedule, 
-  getChampionsLeagueVideos } from '../../../redux/football/champions-league/champions-league-actions';
 import {
-  getEuropaLeagueTeams,
-  getEuropaLeagueSchedule
-} from '../../../redux/football/europa-league/europa-league-actions';
+  getFootballLeaguesTeams,
+  getFootballLeaguesSchedule
+} from "../../../redux/football/football-actions";
 
-import VideoThumbnails from '../../common/VideoThumbnails';
-import FootballSelectDropdown from './FootballSelectDropdown';
-import FootballScheduleSection from './FootballScheduleSection';
-import VideoHeader from '../../common/VideoHeader';
-import { EplState } from '../../../redux/football/epl/epl-types';
-import { ChampionsLeagueState } from '../../../redux/football/champions-league/champions-league-types';
-import { EuropaLeagueState } from '../../../redux/football/europa-league/europa-league-types';
-import { ReduxState } from '../../../redux/redux-state';
+import FootballSelectDropdown from "./FootballSelectDropdown";
+import FootballScheduleSection from "./FootballScheduleSection";
+import { EplState } from "../../../redux/football/epl/epl-types";
+import { ChampionsLeagueState } from "../../../redux/football/champions-league/champions-league-types";
+import { EuropaLeagueState } from "../../../redux/football/europa-league/europa-league-types";
+import { ReduxState } from "../../../redux/redux-state";
 
-interface StateProps {
+interface MatchParams {
+  league: string;
+}
+interface StateProps extends RouteComponentProps<MatchParams> {
   epl: EplState;
   championsLeague: ChampionsLeagueState;
   europaLeague: EuropaLeagueState;
 }
 
 interface DispatchProps {
-  getEplSchedule;
-  getEplTeams;
-  getChampionsLeagueTeams;
-  getChampionsLeagueSchedule;
-  getEuropaLeagueTeams;
-  getEuropaLeagueSchedule;
-  getChampionsLeagueVideos;
-  getEuropaLeagueVideos;
+  getFootballLeaguesTeams;
+  getFootballLeaguesSchedule;
 }
 
 interface State {
+  league: string;
+  leagueKey: string;
   values: string[];
-  championsValues: string[];
-  europaValues: string[];
+  numToShow: number;
 }
 
 type Props = StateProps & DispatchProps;
@@ -51,85 +43,98 @@ class FootballPage extends React.Component<Props, State> {
     super(props);
 
     this.state = {
+      league: this.getLeagueDisplayName(props.match.params.league),
+      leagueKey: this.getFootballLeagueKey(props.match.params.league),
       values: [],
-      championsValues: [],
-      europaValues: []
+      numToShow: 10
     };
   }
 
   componentDidMount() {
     const props = this.props;
-    // if (props.epl.videos.length < 1) {
-    //   props.actions.getChampionsLeagueVideos();
-    //   props.actions.getEuropaLeagueVideos();
-    // } 
-    if (props.epl.teams.length < 1) props.getEplTeams();
-    if (props.epl.schedule.length < 1) props.getEplSchedule();
-    if (props.championsLeague.teams.length < 1) props.getChampionsLeagueTeams();
-    if (props.championsLeague.schedule.length < 1) props.getChampionsLeagueSchedule();
-    if (props.europaLeague.teams.length < 1) props.getEuropaLeagueTeams();
-    if (props.europaLeague.schedule.length < 1) props.getEuropaLeagueSchedule();
+    const { leagueKey } = this.state;
+    if (props[leagueKey].teams.length < 1)
+      props.getFootballLeaguesTeams(leagueKey);
+    if (props[leagueKey].schedule.length < 1)
+      props.getFootballLeaguesSchedule(leagueKey);
+  }
+
+  getLeagueDisplayName(league: string): string {
+    let name: string;
+    switch (league.toLowerCase()) {
+      case "epl":
+        name = "English Premier League";
+        break;
+      case "europaleague":
+        name = "Europa League";
+        break;
+      case "championsleague":
+        name = "Champions League";
+        break;
+      default:
+        name = "";
+        break;
+    }
+    return name;
+  }
+
+  getFootballLeagueKey(league: string): string {
+    let key: string;
+    switch (league.toLowerCase()) {
+      case "epl":
+        key = "epl";
+        break;
+      case "europaleague":
+        key = "europaLeague";
+        break;
+      case "championsleague":
+        key = "championsLeague";
+        break;
+      default:
+        key = "";
+        break;
+    }
+    return key;
   }
 
   handleChange = values => this.setState({ values });
-  handleChampionsChange = values => this.setState({ championsValues: values });
-  handleEuropaChange = values => this.setState({ europaValues: values });
 
   // Teams will be an object array
-  sortTeamsForDropdown = (teams) => {
-    return teams.sort(function (a, b) {
+  sortTeamsForDropdown = teams => {
+    return teams.sort(function(a, b) {
       const textA = a.name.toUpperCase();
       const textB = b.name.toUpperCase();
-      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      return textA < textB ? -1 : textA > textB ? 1 : 0;
     });
-  }
+  };
+
+  showMore = () =>
+    this.setState(prevState => {
+      return { numToShow: prevState.numToShow + 10 };
+    });
 
   render() {
+    const { league, leagueKey, values } = this.state;
     return (
-      <div>
-        {/* <VideoHeader /> */}
-        <h1>Football</h1>
-        <FootballSelectDropdown handleChange={this.handleChange}
-          teams={this.sortTeamsForDropdown(this.props.epl.teams)} />
-        {/* <VideoThumbnails heading="Football"
-          thumbnails={this.props.epl.thumbnails}
-          showCount={4}
-          showMore
-          showMoreLink={paths.HIGHLIGHTS + '/football/epl'} /> */}
-        <div className="section">
-          <h2>English Premier League</h2>
-          <FootballScheduleSection games={this.props.epl.live}
-            header="Today's Games"
-            values={this.state.values} />
-          <FootballScheduleSection games={this.props.epl.upcoming}
-            header="Upcoming"
-            values={this.state.values} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
-        </div>
-        <FootballSelectDropdown handleChange={this.handleChampionsChange}
-          teams={this.sortTeamsForDropdown(this.props.championsLeague.teams)} />
-        <div className="section">
-          <h2>Champion's League</h2>
-          <FootballScheduleSection games={this.props.championsLeague.live}
-            header="Live Games"
-            values={this.state.championsValues} />
-          <FootballScheduleSection games={this.props.championsLeague.upcoming}
-            header="Upcoming"
-            values={this.state.championsValues} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
-        </div>
-        <FootballSelectDropdown handleChange={this.handleEuropaChange}
-          teams={this.sortTeamsForDropdown(this.props.europaLeague.teams)} />
-        <div className="section">
-          <h2>Europa League</h2>
-          <FootballScheduleSection games={this.props.europaLeague.live}
-            header="Today's Games"
-            values={this.state.europaValues} />
-          <FootballScheduleSection games={this.props.europaLeague.upcoming}
-            header="Upcoming"
-            values={this.state.europaValues} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
-        </div>
+      <div className="section content">
+        <h2 className="page-heading">{league}</h2>
+        <FootballSelectDropdown
+          handleChange={this.handleChange}
+          teams={this.sortTeamsForDropdown(this.props[leagueKey].teams)}
+        />
+        <FootballScheduleSection
+          games={this.props[leagueKey].live}
+          header="Live"
+          values={values}
+        />
+        <FootballScheduleSection
+          games={this.props[leagueKey].upcoming}
+          header="Upcoming"
+          values={values}
+        />
+        <Button onClick={this.showMore} className="right">
+          More >
+        </Button>
       </div>
     );
   }
@@ -142,13 +147,11 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getEplSchedule,
-  getEplTeams,
-  getChampionsLeagueTeams,
-  getChampionsLeagueSchedule,
-  getEuropaLeagueTeams,
-  getEuropaLeagueSchedule,
-  getChampionsLeagueVideos
-}
+  getFootballLeaguesTeams,
+  getFootballLeaguesSchedule
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(FootballPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FootballPage);

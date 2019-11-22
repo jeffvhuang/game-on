@@ -458,3 +458,7 @@ export function getNumberWithOrdinal(n) {
     v = n % 100;
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
+
+export function capitaliseFirstLetter(word: string) {
+  return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
+}
