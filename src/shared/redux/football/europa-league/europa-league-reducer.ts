@@ -1,11 +1,8 @@
 import * as C from "./europa-league-constants";
-import {
-  EuropaLeagueState,
-  EuropaLeagueActionTypes
-} from "./europa-league-types";
-import { createYoutubeThumnailObjects } from "../../../../helpers/utils";
+import { EuropaLeagueActionTypes } from "./europa-league-types";
+import { FootballState } from "../football-types";
 
-const initialState: EuropaLeagueState = {
+const initialState: FootballState = {
   isFetching: false,
   schedule: [],
   teams: [],
@@ -20,7 +17,7 @@ const initialState: EuropaLeagueState = {
 function eplReducer(
   state = initialState,
   action: EuropaLeagueActionTypes
-): EuropaLeagueState {
+): FootballState {
   switch (action.type) {
     case C.GET_EUROPA_LEAGUE_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });

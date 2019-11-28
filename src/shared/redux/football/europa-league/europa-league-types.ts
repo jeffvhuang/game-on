@@ -4,18 +4,6 @@ import { FootballTeam } from "../../../../types/football-api/football-team.model
 import { FootballSortedSchedule } from "../../../../types/football-api/football-sorted-schedule.model";
 import { YoutubePlaylistItem } from "../../../../types/youtube/youtube-playlist-item.model";
 
-export interface EuropaLeagueState {
-  isFetching: boolean;
-  schedule: FootballSchedule[];
-  teams: FootballTeam[];
-  today: FootballSchedule[];
-  upcoming: FootballSchedule[];
-  completed: FootballSchedule[];
-  videos: any[];
-  thumbnails: any[];
-  error: any;
-}
-
 // Get EUROPA_LEAGUE Schedule
 export interface GetEuropaLeagueScheduleRequest {
   type: typeof C.GET_EUROPA_LEAGUE_SCHEDULE_REQUEST;

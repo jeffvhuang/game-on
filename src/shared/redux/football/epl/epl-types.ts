@@ -4,18 +4,6 @@ import { FootballTeam } from "../../../../types/football-api/football-team.model
 import { FootballSortedSchedule } from "../../../../types/football-api/football-sorted-schedule.model";
 import { YoutubePlaylistItem } from "../../../../types/youtube/youtube-playlist-item.model";
 
-export interface EplState {
-  isFetching: boolean;
-  schedule: FootballSchedule[];
-  teams: FootballTeam[];
-  today: FootballSchedule[];
-  upcoming: FootballSchedule[];
-  completed: FootballSchedule[];
-  videos: any[];
-  thumbnails: any[];
-  error: any;
-}
-
 // Get EPL Schedule
 export interface GetEplScheduleRequest {
   type: typeof C.GET_EPL_SCHEDULE_REQUEST;

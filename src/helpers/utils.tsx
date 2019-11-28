@@ -82,7 +82,7 @@ export function sortFootballSchedule(
   return { today, upcoming, completed };
 }
 
-// Sort by date for epl api's data
+// Sort in ascending order
 function sortFootballByDate(data: FootballSchedule[]) {
   return data.sort(function(a, b) {
     const dateA = a.eventTimestamp;

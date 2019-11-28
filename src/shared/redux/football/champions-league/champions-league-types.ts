@@ -5,18 +5,6 @@ import { FootballSortedSchedule } from "../../../../types/football-api/football-
 import { FootballTeam } from "../../../../types/football-api/football-team.model";
 import { ThumbnailObject } from "../../../../types/tennis-api/thumbnail-object.model";
 
-export interface ChampionsLeagueState {
-  isFetching: boolean;
-  teams: FootballTeam[];
-  schedule: FootballSchedule[];
-  today: FootballSchedule[];
-  upcoming: FootballSchedule[];
-  completed: FootballSchedule[];
-  videos: YoutubePlaylistItem[];
-  thumbnails: ThumbnailObject[];
-  error: any;
-}
-
 // Get CHAMPIONS LEAGUE Schedule
 export interface GetChampionsLeagueScheduleRequest {
   type: typeof C.GET_CHAMPIONS_LEAGUE_SCHEDULE_REQUEST;

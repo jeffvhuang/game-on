@@ -1,8 +1,9 @@
 import * as C from "./epl-constants";
-import { EplState, EplActionTypes } from "./epl-types";
+import { FootballState } from "../football-types";
+import { EplActionTypes } from "./epl-types";
 import { createYoutubeThumnailObjects } from "../../../../helpers/utils";
 
-const initialState: EplState = {
+const initialState: FootballState = {
   isFetching: false,
   schedule: [],
   teams: [],
@@ -14,7 +15,10 @@ const initialState: EplState = {
   error: {}
 };
 
-function eplReducer(state = initialState, action: EplActionTypes): EplState {
+function eplReducer(
+  state = initialState,
+  action: EplActionTypes
+): FootballState {
   switch (action.type) {
     case C.GET_EPL_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });

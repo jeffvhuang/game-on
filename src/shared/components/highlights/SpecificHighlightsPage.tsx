@@ -1,28 +1,30 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
+import * as React from "react";
+import { connect } from "react-redux";
 
-import { sportsList } from '../../../helpers/constants';
-import { getNbaVideos } from '../../redux/nba/nba-actions';
-import { getChampionsLeagueVideos } from '../../redux/football/champions-league/champions-league-actions';
+import { sportsList } from "../../../helpers/constants";
+import { getNbaVideos } from "../../redux/nba/nba-actions";
+import { getChampionsLeagueVideos } from "../../redux/football/champions-league/champions-league-actions";
 // import { getTennisVideos } from '../../redux/actions/tennis-actions';
-import { getDotaVideos } from '../../redux/dota/dota-actions';
+import { getDotaVideos } from "../../redux/dota/dota-actions";
 
-import VideoThumbnails from '../common/VideoThumbnails';
-import WrongUrl from '../errors/WrongUrl';
-import { NbaState } from '../../redux/nba/nba-types';
-import { EplState } from '../../redux/football/epl/epl-types';
-import { TennisState } from '../../redux/tennis/tennis-types';
-import { DotaState } from '../../redux/dota/dota-types';
-import { RouteComponentProps } from 'react-router';
-import { ReduxState } from '../../redux/redux-state';
+import VideoThumbnails from "../common/VideoThumbnails";
+import WrongUrl from "../errors/WrongUrl";
+import { NbaState } from "../../redux/nba/nba-types";
+import { FootballState } from "../../redux/football/football-types";
+import { TennisState } from "../../redux/tennis/tennis-types";
+import { DotaState } from "../../redux/dota/dota-types";
+import { RouteComponentProps } from "react-router";
+import { ReduxState } from "../../redux/redux-state";
 
-interface MatchParams { sport: string; }
+interface MatchParams {
+  sport: string;
+}
 interface StateProps extends RouteComponentProps<MatchParams> {
   nba: NbaState;
-  epl: EplState;
+  epl: FootballState;
   tennis: TennisState;
   dota: DotaState;
-};
+}
 
 interface DispatchProps {
   getNbaVideos;
@@ -50,57 +52,64 @@ class SpecificHighlightsPage extends React.Component<Props, State> {
     if (videos.length < 1) this.getVideosForSport(this.state.sport);
   }
 
-  getVideosArray = (sport) => {
+  getVideosArray = sport => {
     const obj = this.getReduxObjectForSport(sport);
-    return (obj) ? this.props[obj].videos : [];
-  }
+    return obj ? this.props[obj].videos : [];
+  };
 
-  getVideosForSport = (sport) => {
+  getVideosForSport = sport => {
     switch (sport.toLowerCase()) {
-      case 'basketball':
+      case "basketball":
         getNbaVideos();
         break;
-      case 'football':
+      case "football":
         getChampionsLeagueVideos();
         // getEuropaLeagueVideos();
         break;
-      case 'tennis':
+      case "tennis":
         // getTennisVideos();
         break;
-      case 'dota':
+      case "dota":
         getDotaVideos();
         break;
       default:
         break;
     }
-  }
+  };
 
-  getReduxObjectForSport = (sport) => {
+  getReduxObjectForSport = sport => {
     switch (sport.toLowerCase()) {
-      case 'basketball':
-        return 'nba';
-      case 'football':
-        return 'epl';
-      case 'tennis':
-        return 'tennis';
-      case 'dota':
-        return 'dota';
+      case "basketball":
+        return "nba";
+      case "football":
+        return "epl";
+      case "tennis":
+        return "tennis";
+      case "dota":
+        return "dota";
       default:
-        return '';
+        return "";
     }
-  }
+  };
 
   render() {
-    if (!sportsList.some(s => s.abbreviation.toLowerCase() == this.state.sport.toLowerCase()))
+    if (
+      !sportsList.some(
+        s => s.abbreviation.toLowerCase() == this.state.sport.toLowerCase()
+      )
+    )
       return <WrongUrl />;
 
     const obj = this.getReduxObjectForSport(this.state.sport);
-    const thumbnails = (obj) ? this.props[obj].thumbnails : [];
+    const thumbnails = obj ? this.props[obj].thumbnails : [];
 
     return (
       <div className="mid-container">
-        <VideoThumbnails heading={this.state.sport.toUpperCase()}
-          thumbnails={thumbnails} />;
+        <VideoThumbnails
+          heading={this.state.sport.toUpperCase()}
+          thumbnails={thumbnails}
+        />
+        ;
       </div>
     );
   }
@@ -119,4 +128,7 @@ const mapDispatchToProps = {
   getDotaVideos
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SpecificHighlightsPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SpecificHighlightsPage);

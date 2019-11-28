@@ -10,18 +10,16 @@ import {
 
 import FootballSelectDropdown from "./FootballSelectDropdown";
 import FootballScheduleSection from "./FootballScheduleSection";
-import { EplState } from "../../../redux/football/epl/epl-types";
-import { ChampionsLeagueState } from "../../../redux/football/champions-league/champions-league-types";
-import { EuropaLeagueState } from "../../../redux/football/europa-league/europa-league-types";
+import { FootballState } from "../../../redux/football/football-types";
 import { ReduxState } from "../../../redux/redux-state";
 
 interface MatchParams {
   league: string;
 }
 interface StateProps extends RouteComponentProps<MatchParams> {
-  epl: EplState;
-  championsLeague: ChampionsLeagueState;
-  europaLeague: EuropaLeagueState;
+  epl: FootballState;
+  championsLeague: FootballState;
+  europaLeague: FootballState;
 }
 
 interface DispatchProps {
@@ -133,7 +131,7 @@ class FootballPage extends React.Component<Props, State> {
           values={values}
         />
         <FootballScheduleSection
-          games={this.props[leagueKey].upcoming}
+          games={this.props[leagueKey].completed}
           header="Past"
           values={values}
         />

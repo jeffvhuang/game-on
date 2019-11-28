@@ -1,23 +1,23 @@
-import * as React from 'react';
-import { object } from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import * as React from "react";
+import { object } from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-import { paths } from '../../../helpers/constants';
-import { getNbaVideos } from '../../redux/nba/nba-actions';
-import { getChampionsLeagueVideos } from '../../redux/football/champions-league/champions-league-actions';
+import { paths } from "../../../helpers/constants";
+import { getNbaVideos } from "../../redux/nba/nba-actions";
+import { getChampionsLeagueVideos } from "../../redux/football/champions-league/champions-league-actions";
 
-import VideoThumbnails from '../common/VideoThumbnails';
-import SportSelectDropdown from '../common/SportSelectDropdown';
-import { EplState } from '../../redux/football/epl/epl-types';
-import { NbaState } from '../../redux/nba/nba-types';
-import { isPropsEqual } from '@fullcalendar/core';
-import { ReduxState } from '../../redux/redux-state';
+import VideoThumbnails from "../common/VideoThumbnails";
+import SportSelectDropdown from "../common/SportSelectDropdown";
+import { FootballState } from "../../redux/football/football-types";
+import { NbaState } from "../../redux/nba/nba-types";
+import { isPropsEqual } from "@fullcalendar/core";
+import { ReduxState } from "../../redux/redux-state";
 
 interface StateProps {
   nba: NbaState;
-  epl: EplState;
-};
+  epl: FootballState;
+}
 
 interface DispatchProps {
   getNbaVideos;
@@ -51,35 +51,46 @@ class HighlightsPage extends React.Component<Props, State> {
   }
 
   getCompleteList = () => {
-    return ['Basketball', 'Football'];
+    return ["Basketball", "Football"];
     // return ["Popular", ...allSportsList];
-  }
+  };
 
   handleChange = value => {
     if (value.length > 0) this.setState({ show: value });
     else this.setState({ show: this.getCompleteList() });
-  }
+  };
 
-  getReduxObjectForSport = (sport) => {
+  getReduxObjectForSport = sport => {
     switch (sport.toLowerCase()) {
-      case 'basketball':
-        return 'nba';
-      case 'football':
-        return 'epl';
+      case "basketball":
+        return "nba";
+      case "football":
+        return "epl";
       default:
-        return '';
+        return "";
     }
-  }
+  };
 
   render() {
     return (
       <div className="mid-container">
-        <SportSelectDropdown handleChange={this.handleChange} showGeneral={false} />
+        <SportSelectDropdown
+          handleChange={this.handleChange}
+          showGeneral={false}
+        />
         {this.state.show.map(sport => {
           const obj = this.getReduxObjectForSport(sport.toLowerCase());
-          const thumbnails = (obj) ? this.props[obj].thumbnails : [];
-          return <VideoThumbnails key={sport} heading={sport} thumbnails={thumbnails}
-            showCount={4} showMore showMoreLink={paths.HIGHLIGHTS + '/' + sport.toLowerCase()} />;
+          const thumbnails = obj ? this.props[obj].thumbnails : [];
+          return (
+            <VideoThumbnails
+              key={sport}
+              heading={sport}
+              thumbnails={thumbnails}
+              showCount={4}
+              showMore
+              showMoreLink={paths.HIGHLIGHTS + "/" + sport.toLowerCase()}
+            />
+          );
         })}
       </div>
     );
@@ -96,4 +107,7 @@ const mapDispatchToProps = {
   getChampionsLeagueVideos
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HighlightsPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HighlightsPage);
