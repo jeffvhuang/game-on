@@ -77,7 +77,7 @@ export function sortFootballSchedule(
   // Sort each one by date
   sortFootballByDate(today);
   sortFootballByDate(upcoming);
-  sortFootballByDate(completed);
+  sortFootballByDateDescending(completed);
 
   return { today, upcoming, completed };
 }
@@ -88,6 +88,14 @@ function sortFootballByDate(data: FootballSchedule[]) {
     const dateA = a.eventTimestamp;
     const dateB = b.eventTimestamp;
     return dateA < dateB ? -1 : dateA > dateB ? 1 : 0;
+  });
+}
+
+function sortFootballByDateDescending(data: FootballSchedule[]) {
+  return data.sort(function(a, b) {
+    const dateA = a.eventTimestamp;
+    const dateB = b.eventTimestamp;
+    return dateA < dateB ? 1 : dateA > dateB ? -1 : 0;
   });
 }
 
