@@ -1,42 +1,60 @@
-import * as React from 'react';
-import { Menu, Icon } from 'antd';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { Menu, Icon } from "antd";
+import { Link } from "react-router-dom";
 
-import { appName, paths } from '../../../helpers/constants';
+import { appName, paths } from "../../../helpers/constants";
 
 const Item = Menu.Item;
 const SubMenu = Menu.SubMenu;
+const ItemGroup = Menu.ItemGroup;
 interface State {
-  current: string
+  current: string;
 }
 
 class NavBar extends React.Component<{}, State> {
   state = {
-    current: 'app'
-  }
-  
+    current: "app"
+  };
+
   handleClick = e => {
     this.setState({ current: e.key });
-  }
+  };
 
   render() {
     return (
-      <Menu mode="horizontal" onClick={this.handleClick} selectedKeys={[this.state.current]} subMenuOpenDelay={0}>
+      <Menu
+        mode="horizontal"
+        onClick={this.handleClick}
+        selectedKeys={[this.state.current]}
+        subMenuOpenDelay={0}
+      >
         <Item key="app">
           <Link to={paths.LANDING}>
-            <Icon type="play-circle" />{appName}
+            <Icon type="play-circle" />
+            {appName}
           </Link>
         </Item>
-        {/* <Item key="highlights">
-          <Link to={paths.HIGHLIGHTS}>Highlights</Link>
-        </Item> */}
         <SubMenu title="Sports">
           <Item key="basketball">
             <Link to={paths.SPORTS + paths.BASKETBALL}>Basketball</Link>
           </Item>
-          <Item key="football">
-            <Link to={paths.SPORTS + paths.FOOTBALL}>Football</Link>
-          </Item>
+          <ItemGroup title="Football">
+            <Item key="epl">
+              <Link to={`${paths.SPORTS}${paths.FOOTBALL}/epl`}>
+                English Premier League
+              </Link>
+            </Item>
+            <Item key="europaleague">
+              <Link to={`${paths.SPORTS}${paths.FOOTBALL}/europaleague`}>
+                Europa League
+              </Link>
+            </Item>
+            <Item key="championsleague">
+              <Link to={`${paths.SPORTS}${paths.FOOTBALL}/championsleague`}>
+                Champions League
+              </Link>
+            </Item>
+          </ItemGroup>
           <Item key="tennis">
             <Link to={paths.SPORTS + paths.TENNIS}>Tennis</Link>
           </Item>
