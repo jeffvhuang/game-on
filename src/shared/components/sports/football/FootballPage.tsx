@@ -123,13 +123,18 @@ class FootballPage extends React.Component<Props, State> {
           teams={this.sortTeamsForDropdown(this.props[leagueKey].teams)}
         />
         <FootballScheduleSection
-          games={this.props[leagueKey].live}
-          header="Live"
+          games={this.props[leagueKey].today}
+          header="Today"
           values={values}
         />
         <FootballScheduleSection
           games={this.props[leagueKey].upcoming}
           header="Upcoming"
+          values={values}
+        />
+        <FootballScheduleSection
+          games={this.props[leagueKey].upcoming}
+          header="Past"
           values={values}
         />
         <Button onClick={this.showMore} className="right">

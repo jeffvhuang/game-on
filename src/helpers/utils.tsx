@@ -50,42 +50,36 @@ export function sortNBASchedule(data: NbaSchedule[]) {
 }
 
 /**
- * sort schedule to find matches live, upcoming and recently completed
+ * sort schedule to find matches today, upcoming and recently completed
  * @param {array} data
  */
 export function sortFootballSchedule(
   matches: FootballSchedule[]
 ): FootballSortedSchedule {
-  const live: FootballSchedule[] = [];
+  const today: FootballSchedule[] = [];
   const upcoming: FootballSchedule[] = [];
   const completed: FootballSchedule[] = [];
   const now = new Date();
-  const dateIn24Hrs = new Date(60 * 60 * 24 * 1000 + now.getTime());
-  const date12HrsAgo = new Date(now.getTime() - 60 * 60 * 12 * 1000);
 
   for (let i = 0; i < matches.length; i++) {
     const match = matches[i];
-
     const startDate = new Date(match.eventDate);
-    const isMatchFinished = match.status == "Match Finished" ? true : false;
 
-    // Nested if to ensure matches completed and not started do not reach later if blocks
-    // last block should be live but ensure it is same date
-    if (isMatchFinished) {
-      if (startDate > date12HrsAgo) completed.push(match);
-    } else if (now < startDate) {
-      if (now > dateIn24Hrs) upcoming.push(match);
-    } else if (isSameDate(now, startDate)) {
-      live.push(match);
+    if (isSameDate(now, startDate)) {
+      today.push(match);
+    } else if (now > startDate) {
+      completed.push(match);
+    } else {
+      upcoming.push(match);
     }
   }
 
   // Sort each one by date
-  sortFootballByDate(live);
+  sortFootballByDate(today);
   sortFootballByDate(upcoming);
   sortFootballByDate(completed);
 
-  return { live, upcoming, completed };
+  return { today, upcoming, completed };
 }
 
 // Sort by date for epl api's data
@@ -382,14 +376,10 @@ export function createYoutubeThumnailObjects(videos) {
 }
 
 export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
-  const year = dateTestedAgainst.getFullYear();
-  const month = dateTestedAgainst.getMonth();
-  const monthDate = dateTestedAgainst.getDate();
-
   return (
-    dateToTest.getFullYear() == year &&
-    dateToTest.getMonth() == month &&
-    dateToTest.getDate() == monthDate
+    dateToTest.getFullYear() == dateTestedAgainst.getFullYear() &&
+    dateToTest.getMonth() == dateTestedAgainst.getMonth() &&
+    dateToTest.getDate() == dateTestedAgainst.getDate()
   );
 }
 

@@ -1,13 +1,12 @@
-
-import * as C from './epl-constants';
-import { EplState, EplActionTypes } from './epl-types';
-import { createYoutubeThumnailObjects } from '../../../../helpers/utils';
+import * as C from "./epl-constants";
+import { EplState, EplActionTypes } from "./epl-types";
+import { createYoutubeThumnailObjects } from "../../../../helpers/utils";
 
 const initialState: EplState = {
   isFetching: false,
   schedule: [],
   teams: [],
-  live: [],
+  today: [],
   upcoming: [],
   completed: [],
   videos: [],
@@ -16,28 +15,30 @@ const initialState: EplState = {
 };
 
 function eplReducer(state = initialState, action: EplActionTypes): EplState {
-  switch(action.type) {
+  switch (action.type) {
     case C.GET_EPL_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case C.GET_EPL_SCHEDULE_SUCCESS:
-      return Object.assign({}, state,
-        { 
-          isFetching: false,
-          schedule: action.payload,
-          live: action.sortedSchedule.live,
-          upcoming: action.sortedSchedule.upcoming,
-          completed: action.sortedSchedule.completed
-        });
+      return Object.assign({}, state, {
+        isFetching: false,
+        schedule: action.payload,
+        today: action.sortedSchedule.today,
+        upcoming: action.sortedSchedule.upcoming,
+        completed: action.sortedSchedule.completed
+      });
     case C.GET_EPL_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    
+
     case C.GET_EPL_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case C.GET_EPL_TEAMS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, teams: action.payload });
+      return Object.assign({}, state, {
+        isFetching: false,
+        teams: action.payload
+      });
     case C.GET_EPL_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
- 
+
     // case A.GET_EPL_VIDEOS_REQUEST:
     //   return Object.assign({}, state, { isFetching: true });
     // case A.GET_EPL_VIDEOS_SUCCESS:

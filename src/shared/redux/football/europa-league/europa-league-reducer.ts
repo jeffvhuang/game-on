@@ -1,13 +1,15 @@
-
-import * as C from './europa-league-constants';
-import { EuropaLeagueState, EuropaLeagueActionTypes } from './europa-league-types';
-import { createYoutubeThumnailObjects } from '../../../../helpers/utils';
+import * as C from "./europa-league-constants";
+import {
+  EuropaLeagueState,
+  EuropaLeagueActionTypes
+} from "./europa-league-types";
+import { createYoutubeThumnailObjects } from "../../../../helpers/utils";
 
 const initialState: EuropaLeagueState = {
   isFetching: false,
   schedule: [],
   teams: [],
-  live: [],
+  today: [],
   upcoming: [],
   completed: [],
   videos: [],
@@ -15,29 +17,34 @@ const initialState: EuropaLeagueState = {
   error: {}
 };
 
-function eplReducer(state = initialState, action: EuropaLeagueActionTypes): EuropaLeagueState {
-  switch(action.type) {
+function eplReducer(
+  state = initialState,
+  action: EuropaLeagueActionTypes
+): EuropaLeagueState {
+  switch (action.type) {
     case C.GET_EUROPA_LEAGUE_SCHEDULE_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case C.GET_EUROPA_LEAGUE_SCHEDULE_SUCCESS:
-      return Object.assign({}, state,
-        { 
-          isFetching: false,
-          schedule: action.payload,
-          live: action.sortedSchedule.live,
-          upcoming: action.sortedSchedule.upcoming,
-          completed: action.sortedSchedule.completed
-        });
+      return Object.assign({}, state, {
+        isFetching: false,
+        schedule: action.payload,
+        today: action.sortedSchedule.today,
+        upcoming: action.sortedSchedule.upcoming,
+        completed: action.sortedSchedule.completed
+      });
     case C.GET_EUROPA_LEAGUE_SCHEDULE_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-    
+
     case C.GET_EUROPA_LEAGUE_TEAMS_REQUEST:
       return Object.assign({}, state, { isFetching: true });
     case C.GET_EUROPA_LEAGUE_TEAMS_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, teams: action.payload });
+      return Object.assign({}, state, {
+        isFetching: false,
+        teams: action.payload
+      });
     case C.GET_EUROPA_LEAGUE_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
- 
+
     // case A.GET_EUROPA_LEAGUE_VIDEOS_REQUEST:
     //   return Object.assign({}, state, { isFetching: true });
     // case A.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS:
