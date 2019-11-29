@@ -36,10 +36,10 @@ function BasketballScheduleSection({
       {gamesToShow.length ? (
         <Row>
           <Col span={8}>
-            <h3>Away Team</h3>
+            <h3>Away</h3>
           </Col>
           <Col span={8}>
-            <h3>Home Team</h3>
+            <h3>Home</h3>
           </Col>
           <Col span={8} />
         </Row>

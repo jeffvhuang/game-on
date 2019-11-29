@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 
 import FootballMatchSchedule from "./FootballMatchSchedule";
 import { FootballSchedule } from "../../../../types/football-api/football-schedule.model";
+import FootballMatchScore from "./FootballMatchScore";
 
 interface Props {
   header: string;
@@ -32,10 +33,10 @@ function FootballScheduleSection({ header, games, values, numToShow }: Props) {
       {gamesToShow.length ? (
         <Row>
           <Col span={8}>
-            <h3>Away Team</h3>
+            <h3>Away</h3>
           </Col>
           <Col span={8}>
-            <h3>Home Team</h3>
+            <h3>Home</h3>
           </Col>
           <Col span={8} />
         </Row>
@@ -45,7 +46,11 @@ function FootballScheduleSection({ header, games, values, numToShow }: Props) {
         </Row>
       )}
       {gamesToShow.length > 0 &&
-        gamesToShow.map((g, i) => <FootballMatchSchedule key={i} game={g} />)}
+        gamesToShow.map((g, i) => {
+          if (g.status === "Not Started")
+            return <FootballMatchSchedule key={i} game={g} />;
+          else return <FootballMatchScore key={i} game={g} />;
+        })}
     </div>
   );
 }
