@@ -2,10 +2,11 @@ import * as React from "react";
 import { Row, Col } from "antd";
 
 import NbaMatchSchedule from "./NbaMatchSchedule";
+import { NbaSchedule } from "../../../../types/nba-api/nba-schedule.model";
 
 interface Props {
   header: string;
-  games: any[];
+  games: NbaSchedule[];
   values: string[];
   numToShow?: number;
 }
@@ -16,7 +17,7 @@ function BasketballScheduleSection({
   values,
   numToShow
 }: Props) {
-  let gamesToShow: any[];
+  let gamesToShow: NbaSchedule[];
 
   if (values.length > 0)
     gamesToShow = games.filter(g =>

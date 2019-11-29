@@ -31,7 +31,8 @@ interface State {
   league: string;
   leagueKey: string;
   values: string[];
-  numToShow: number;
+  numToShowUpcoming: number;
+  numToShowPast: number;
 }
 
 type Props = StateProps & DispatchProps;
@@ -44,7 +45,8 @@ class FootballPage extends React.Component<Props, State> {
       league: this.getLeagueDisplayName(props.match.params.league),
       leagueKey: this.getFootballLeagueKey(props.match.params.league),
       values: [],
-      numToShow: 10
+      numToShowUpcoming: 10,
+      numToShowPast: 10
     };
   }
 
@@ -119,9 +121,14 @@ class FootballPage extends React.Component<Props, State> {
     });
   };
 
-  showMore = () =>
+  showMoreUpcoming = () =>
     this.setState(prevState => {
-      return { numToShow: prevState.numToShow + 10 };
+      return { numToShowUpcoming: prevState.numToShowUpcoming + 10 };
+    });
+
+  showMorePast = () =>
+    this.setState(prevState => {
+      return { numToShowPast: prevState.numToShowPast + 10 };
     });
 
   render() {
@@ -142,13 +149,18 @@ class FootballPage extends React.Component<Props, State> {
           games={this.props[leagueKey].upcoming}
           header="Upcoming"
           values={values}
+          numToShow={this.state.numToShowUpcoming}
         />
+        <Button onClick={this.showMoreUpcoming} className="right">
+          More >
+        </Button>
         <FootballScheduleSection
           games={this.props[leagueKey].completed}
           header="Past"
           values={values}
+          numToShow={this.state.numToShowPast}
         />
-        <Button onClick={this.showMore} className="right">
+        <Button onClick={this.showMorePast} className="right">
           More >
         </Button>
       </div>
