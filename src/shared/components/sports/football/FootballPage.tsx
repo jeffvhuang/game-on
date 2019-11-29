@@ -49,6 +49,19 @@ class FootballPage extends React.Component<Props, State> {
   }
 
   componentDidMount() {
+    this.getFootballData();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { params } = this.props.match;
+    if (params.league !== prevProps.match.params.league) {
+      const leagueKey = this.getFootballLeagueKey(params.league);
+      const league = this.getLeagueDisplayName(params.league);
+      this.setState({ league, leagueKey }, () => this.getFootballData());
+    }
+  }
+
+  getFootballData() {
     const props = this.props;
     const { leagueKey } = this.state;
     if (props[leagueKey].teams.length < 1)
