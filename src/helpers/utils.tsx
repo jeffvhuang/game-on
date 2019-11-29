@@ -435,6 +435,13 @@ export function getDayMonthDate(date: string) {
   );
 }
 
+// return format: Wed, 21st Nov
+export function getDateWithOrdinal(date: Date): string {
+  return `${days[date.getDay()]}, ${getNumberWithOrdinal(date.getDate())} ${
+    months[date.getMonth()]
+  }`;
+}
+
 export function isValidDate(date) {
   return (
     date &&
