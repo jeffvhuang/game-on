@@ -33,18 +33,23 @@ function BasketballScheduleSection({
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
-      <Row>
-        <Col span={8}>
-          <h3>Away</h3>
-        </Col>
-        <Col span={8}>
-          <h3>Home</h3>
-        </Col>
-        <Col span={8} />
-      </Row>
-      {gamesToShow.map((g, i) => (
-        <NbaMatchSchedule key={i} game={g} />
-      ))}
+      {gamesToShow.length ? (
+        <Row>
+          <Col span={8}>
+            <h3>Away Team</h3>
+          </Col>
+          <Col span={8}>
+            <h3>Home Team</h3>
+          </Col>
+          <Col span={8} />
+        </Row>
+      ) : (
+        <Row>
+          <Col span={8}>No games to display</Col>
+        </Row>
+      )}
+      {gamesToShow.length > 0 &&
+        gamesToShow.map((g, i) => <NbaMatchSchedule key={i} game={g} />)}
     </div>
   );
 }
