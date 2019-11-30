@@ -154,7 +154,7 @@ export function sortTennisSchedule(data: TennisTournament[]) {
   // Sort each one by date
   sortTennisByDate(ongoing);
   sortTennisByDate(upcoming);
-  sortTennisByDate(completed);
+  sortTennisByDateDescending(completed);
 
   return { ongoing, upcoming, completed };
 }
@@ -182,6 +182,33 @@ function sortTennisByDate(data: TennisTournament[]) {
       (!b.currentSeason || !b.currentSeason.startDate)
     )
       return -1;
+    else return 0;
+  });
+}
+
+function sortTennisByDateDescending(data: TennisTournament[]) {
+  return data.sort(function(a, b) {
+    if (
+      a.currentSeason &&
+      a.currentSeason.startDate &&
+      b.currentSeason &&
+      b.currentSeason.startDate
+    ) {
+      const dateA = a.currentSeason.startDate;
+      const dateB = b.currentSeason.startDate;
+      return dateA < dateB ? -1 : dateA > dateB ? 1 : 0;
+    } else if (
+      b.currentSeason &&
+      b.currentSeason.startDate &&
+      (!a.currentSeason || !a.currentSeason.startDate)
+    )
+      return -1;
+    else if (
+      a.currentSeason &&
+      a.currentSeason.startDate &&
+      (!b.currentSeason || !b.currentSeason.startDate)
+    )
+      return 1;
     else return 0;
   });
 }
