@@ -46,7 +46,17 @@ export function sortNBASchedule(data: NbaSchedule[]) {
     }
   });
 
+  sortNbaByDateDescending(beforeToday);
+
   return { gamesToday, upcoming, beforeToday };
+}
+
+function sortNbaByDateDescending(data: NbaSchedule[]) {
+  return data.sort(function(a, b) {
+    const dateA = a.startTimeUTC;
+    const dateB = b.startTimeUTC;
+    return dateA < dateB ? 1 : dateA > dateB ? -1 : 0;
+  });
 }
 
 /**

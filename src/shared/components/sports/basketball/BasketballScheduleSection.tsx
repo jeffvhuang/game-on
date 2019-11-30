@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 
 import NbaMatchSchedule from "./NbaMatchSchedule";
 import { NbaSchedule } from "../../../../types/nba-api/nba-schedule.model";
+import NbaMatchScore from "./NbaMatchScore";
 
 interface Props {
   header: string;
@@ -28,7 +29,8 @@ function BasketballScheduleSection({
     );
   else gamesToShow = games.slice();
 
-  if (header === "Upcoming") gamesToShow = gamesToShow.slice(0, numToShow);
+  if (header === "Upcoming" || header === "Past")
+    gamesToShow = gamesToShow.slice(0, numToShow);
 
   return (
     <div className="margin-bot">
@@ -49,7 +51,11 @@ function BasketballScheduleSection({
         </Row>
       )}
       {gamesToShow.length > 0 &&
-        gamesToShow.map((g, i) => <NbaMatchSchedule key={i} game={g} />)}
+        gamesToShow.map((g, i) => {
+          if (g.statusGame === "Scheduled")
+            return <NbaMatchSchedule key={i} game={g} />;
+          else return <NbaMatchScore key={i} game={g} />;
+        })}
     </div>
   );
 }

@@ -5,9 +5,10 @@ import {
   getFormattedTime,
   getDateWithOrdinal
 } from "../../../../helpers/utils";
+import { NbaSchedule } from "../../../../types/nba-api/nba-schedule.model";
 
 interface Props {
-  game: any;
+  game: NbaSchedule;
 }
 
 function NbaMatchSchedule({ game }: Props) {

@@ -1,5 +1,5 @@
-@import 'components/_landing.scss';
-@import 'components/_basketball.scss';
+@import "components/_landing.scss";
+@import "components/_basketball.scss";
 
 $winner-header-col-width: 10%;
 
@@ -65,7 +65,7 @@ $winner-header-col-width: 10%;
   .game-row {
     display: flex;
     width: 100%;
-    padding: .5em 0;
+    padding: 0.5em 0;
     border-bottom: 1px solid $light-grey;
 
     &:first-child {
@@ -77,13 +77,13 @@ $winner-header-col-width: 10%;
       padding-bottom: 0;
     }
 
-    >div:first-child,
-    >div:nth-child(2) {
+    > div:first-child,
+    > div:nth-child(2) {
       width: $winner-header-col-width;
     }
 
-    >div {
-      width: (100% - ($winner-header-col-width*2))/2;
+    > div {
+      width: (100% - ($winner-header-col-width * 2))/2;
     }
   }
 }
@@ -94,6 +94,10 @@ $winner-header-col-width: 10%;
 
 .calendar {
   @extend .pad-sides;
+}
+
+.more-btn {
+  height: 40px;
 }
 
 @media only screen and (min-width: 768px) {

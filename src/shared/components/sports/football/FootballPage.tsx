@@ -151,9 +151,11 @@ class FootballPage extends React.Component<Props, State> {
           values={values}
           numToShow={this.state.numToShowUpcoming}
         />
-        <Button onClick={this.showMoreUpcoming} className="right">
-          More >
-        </Button>
+        <div className="more-btn">
+          <Button onClick={this.showMoreUpcoming} className="right">
+            More >
+          </Button>
+        </div>
         <FootballScheduleSection
           games={this.props[leagueKey].completed}
           header="Past"

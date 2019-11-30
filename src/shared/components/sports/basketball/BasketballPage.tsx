@@ -23,7 +23,8 @@ interface DispatchProps {
 
 interface State {
   values: string[];
-  numToShow: number;
+  upcomingToShow: number;
+  pastToShow: number;
 }
 
 type Props = StateProps & DispatchProps;
@@ -34,7 +35,8 @@ class BasketballPage extends React.Component<Props, State> {
 
     this.state = {
       values: [],
-      numToShow: 10
+      upcomingToShow: 10,
+      pastToShow: 10
     };
   }
 
@@ -46,9 +48,14 @@ class BasketballPage extends React.Component<Props, State> {
 
   handleChange = values => this.setState({ values });
 
-  showMore = () =>
+  showMoreUpcoming = () =>
     this.setState(prevState => {
-      return { numToShow: prevState.numToShow + 10 };
+      return { upcomingToShow: prevState.upcomingToShow + 10 };
+    });
+
+  showMorePast = () =>
+    this.setState(prevState => {
+      return { pastToShow: prevState.pastToShow + 10 };
     });
 
   render() {
@@ -68,9 +75,20 @@ class BasketballPage extends React.Component<Props, State> {
           header="Upcoming"
           games={this.props.nba.upcoming}
           values={this.state.values}
-          numToShow={this.state.numToShow}
+          numToShow={this.state.upcomingToShow}
         />
-        <Button onClick={this.showMore} className="right">
+        <div className="more-btn">
+          <Button onClick={this.showMoreUpcoming} className="right">
+            More >
+          </Button>
+        </div>
+        <BasketballScheduleSection
+          header="Past"
+          games={this.props.nba.completed}
+          values={this.state.values}
+          numToShow={this.state.pastToShow}
+        />
+        <Button onClick={this.showMorePast} className="right">
           More >
         </Button>
       </div>

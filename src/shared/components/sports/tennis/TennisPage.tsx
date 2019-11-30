@@ -82,9 +82,11 @@ class TennisPage extends React.Component<Props, State> {
           values={this.state.values}
           numToShow={this.state.numToShowUpcoming}
         />
-        <Button onClick={this.showMoreUpcoming} className="right">
-          More >
-        </Button>
+        <div className="more-btn">
+          <Button onClick={this.showMoreUpcoming} className="right">
+            More >
+          </Button>
+        </div>
         <TennisTournaments
           tournaments={this.props.tennis.completed}
           header="Completed"
