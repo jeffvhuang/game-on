@@ -7,9 +7,10 @@ interface Props {
   header: string;
   games: TennisMatch[];
   values: string[];
+  rounds: number;
 }
 
-function TennisMatches({ header, games, values }: Props) {
+function TennisMatches({ header, games, values, rounds }: Props) {
   return (
     <div className="margin-bot">
       <h2>{header}</h2>

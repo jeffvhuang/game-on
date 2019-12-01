@@ -1,3 +1,4 @@
+//#region imports
 import * as React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -17,7 +18,8 @@ import { TennisState } from "../../../../redux/tennis/tennis-types";
 import { ReduxState } from "../../../../redux/redux-state";
 import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
 import { TennisTournamentInfo } from "../../../../../types/tennis-api/tennis-tournament-info.model";
-
+//#endregion
+//#region interfaces
 interface MatchParams {
   tournamentNumber: string;
 }
@@ -36,9 +38,11 @@ interface State {
   tournamentId: string;
   values: string[];
   tournamentName: string;
+  rounds: number;
 }
 
 type Props = StateProps & DispatchProps;
+//#endregion
 
 class TennisTournamentPage extends React.Component<Props, State> {
   constructor(props) {
@@ -60,10 +64,12 @@ class TennisTournamentPage extends React.Component<Props, State> {
     this.state = {
       tournamentId: id,
       values: [],
-      tournamentName: isSameInfo ? tournamentInfo.tournament.name : ""
+      tournamentName: isSameInfo ? tournamentInfo.tournament.name : "",
+      rounds: tournamentInfo.info.numberOfScheduledMatches
     };
   }
 
+  //#region class methods
   componentDidMount() {
     const id = this.state.tournamentId;
     const { tournamentInfo, tournamentSchedule } = this.props.tennis;
@@ -89,11 +95,15 @@ class TennisTournamentPage extends React.Component<Props, State> {
     if (!info.tournament || info.tournament.id !== id)
       this.props.getTennisTournamentInfo(id).then(data => {
         if (data)
-          this.setState({ tournamentName: data.tournament.currentSeason.name });
+          this.setState({
+            tournamentName: data.tournament.currentSeason.name,
+            rounds: data.info.numberOfScheduledMatches
+          });
       });
   };
 
   handleChange = values => this.setState({ values });
+  //#endregion
 
   render() {
     return (
@@ -107,6 +117,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
           games={this.props.tennis.tournamentSchedule}
           header="Matches"
           values={this.state.values}
+          rounds={this.state.rounds}
         />
         <Link to={paths.EVENTS} className="right">
           More >
@@ -116,6 +127,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
   }
 }
 
+//#region redux connect
 const mapStateToProps = (state: ReduxState) => ({
   tennis: state.tennis
 });
@@ -131,3 +143,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(TennisTournamentPage);
+//#endregion
