@@ -460,31 +460,21 @@ export function getDayMonthDateFromReverseFormat(
 
 export function getDayMonthDate(date: string) {
   // return if it is not a valid date string or object
-  if (!isValidDate(date)) return null;
+  // if (!isValidDate(date)) return null;
+  const d = new Date(date);
 
-  const dateObj = new Date(date);
-  return (
-    days[dateObj.getDay()] +
-    " " +
-    months[dateObj.getMonth()] +
-    " " +
-    dateObj.getDate()
-  );
+  return `${days[d.getDay()]} ${months[d.getMonth()]} ${d.getDate()}`;
 }
 
 // return format: Wed, 21st Nov
-export function getDateWithOrdinal(date: Date): string {
-  return `${days[date.getDay()]}, ${getNumberWithOrdinal(date.getDate())} ${
-    months[date.getMonth()]
+export function getDateWithOrdinal(d: Date): string {
+  return `${days[d.getDay()]}, ${getNumberWithOrdinal(d.getDate())} ${
+    months[d.getMonth()]
   }`;
 }
 
-export function isValidDate(date) {
-  return (
-    date &&
-    Object.prototype.toString.call(date) === "[object Date]" &&
-    !isNaN(date)
-  );
+export function isValidDate(d: string) {
+  return Object.prototype.toString.call(d) === "[object Date]";
 }
 
 export function uuidv4() {

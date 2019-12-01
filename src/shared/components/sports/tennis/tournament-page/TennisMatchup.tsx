@@ -2,9 +2,10 @@ import * as React from "react";
 import { Row, Col } from "antd";
 
 import { getDayMonthDate } from "../../../../../helpers/utils";
+import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
 
 interface Props {
-  match: any;
+  match: TennisMatch;
 }
 
 function TennisMatchup({ match }: Props) {
@@ -32,6 +33,9 @@ function TennisMatchup({ match }: Props) {
         </div>
       </div>
       <div className="right-col">
+        <div className="date-box">
+          <p className="date">{getDayMonthDate(match.scheduled)}</p>
+        </div>
         <div className="line" />
       </div>
     </div>

@@ -1,3 +1,6 @@
+$box-width: 260px;
+$box-height: 100px;
+
 .matchup {
   width: 60%;
   display: flex;
@@ -5,49 +8,60 @@
 }
 
 .left-col {
-  width: 60%;
-
-  .box {
-    height: 100px;
-    width: 270px;
-
-    .player {
-      height: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      > p {
-        margin: 0;
-      }
-
-      .country {
-        margin-left: 20px;
-        width: 50px;
-      }
-
-      .player-name {
-        flex: 1;
-      }
-
-      .seed {
-        margin-left: 10px;
-        font-size: 0.8em;
-      }
-    }
-
-    .top-player {
-      border: 1px solid black;
-    }
-
-    .bottom-player {
-      border: 1px solid black;
-      border-top: none;
-    }
-  }
+  // width: 60%;
 }
 
 .right-col {
   flex: 1;
+
+  .date-box {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    height: $box-height;
+
+    .date {
+      margin: 0;
+    }
+  }
+}
+
+.box {
+  height: $box-height;
+  width: $box-width;
+
+  .player {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > p {
+      margin: 0;
+    }
+
+    .country {
+      margin-left: 20px;
+      width: 50px;
+    }
+
+    .player-name {
+      flex: 1;
+    }
+
+    .seed {
+      margin-left: 10px;
+      font-size: 0.8em;
+    }
+  }
+
+  .top-player {
+    border: 1px solid black;
+  }
+
+  .bottom-player {
+    border: 1px solid black;
+    border-top: none;
+  }
 }
