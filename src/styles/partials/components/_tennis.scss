@@ -1,0 +1,53 @@
+.matchup {
+  width: 60%;
+  display: flex;
+  margin: 30px 0;
+}
+
+.left-col {
+  width: 60%;
+
+  .box {
+    height: 100px;
+    width: 270px;
+
+    .player {
+      height: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > p {
+        margin: 0;
+      }
+
+      .country {
+        margin-left: 20px;
+        width: 50px;
+      }
+
+      .player-name {
+        flex: 1;
+      }
+
+      .seed {
+        margin-left: 10px;
+        font-size: 0.8em;
+      }
+    }
+
+    .top-player {
+      border: 1px solid black;
+    }
+
+    .bottom-player {
+      border: 1px solid black;
+      border-top: none;
+    }
+  }
+}
+
+.right-col {
+  flex: 1;
+}

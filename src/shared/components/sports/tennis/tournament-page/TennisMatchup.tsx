@@ -8,28 +8,51 @@ interface Props {
 }
 
 function TennisMatchup({ match }: Props) {
-  const player1 = match.competitors[0];
-  const player2 = match.competitors[1];
+  const p1 = match.competitors[0];
+  const p2 = match.competitors[1];
 
   return (
-    <Row>
-      <Col span={3} className="capitalise">
-        {match.tournamentRound.name.replace(/_/g, " ")}
-      </Col>
-      <Col span={1}>{player1.countryCode}</Col>
-      <Col span={6}>
-        {player1.name} {player1.seed && "[" + player1.seed + "]"}
-      </Col>
-      <Col span={1}>vs</Col>
-      <Col span={1}>{player2.countryCode}</Col>
-      <Col span={6}>
-        {player2.name} {player2.seed && "[" + player2.seed + "]"}
-      </Col>
-      <Col span={3}>{getDayMonthDate(match.scheduled)}</Col>
-      <Col span={3} className="capitalise">
-        {match.status.replace(/_/g, " ")}
-      </Col>
-    </Row>
+    <div className="matchup">
+      <div className="left-col">
+        <div className="box">
+          <div className="top-player player">
+            <p className="country">{p1.countryCode}</p>
+            <p className="player-name">
+              {p1.name}
+              <span className="seed">{p1.seed && `[${p1.seed}]`}</span>
+            </p>
+          </div>
+          <div className="bottom-player player">
+            <p className="country">{p2.countryCode}</p>
+            <p className="player-name">
+              {p2.name}
+              <span className="seed">{p2.seed && `[${p2.seed}]`}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="right-col">
+        <div className="line" />
+      </div>
+    </div>
+
+    //   <Col span={3} className="capitalise">
+    //     {match.tournamentRound.name.replace(/_/g, " ")}
+    //   </Col>
+    //   <Col span={1}>{p1.countryCode}</Col>
+    //   <Col span={6}>
+    //     {p1.name} {p1.seed && "[" + p1.seed + "]"}
+    //   </Col>
+    //   <Col span={1}>vs</Col>
+    //   <Col span={1}>{p2.countryCode}</Col>
+    //   <Col span={6}>
+    //     {p2.name} {p2.seed && "[" + p2.seed + "]"}
+    //   </Col>
+    //   <Col span={3}>{getDayMonthDate(match.scheduled)}</Col>
+    //   <Col span={3} className="capitalise">
+    //     {match.status.replace(/_/g, " ")}
+    //   </Col>
+    // </Row>
   );
 }
 

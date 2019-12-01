@@ -39,6 +39,7 @@ interface State {
   values: string[];
   tournamentName: string;
   rounds: number;
+  selectedRound: string;
 }
 
 type Props = StateProps & DispatchProps;
@@ -68,7 +69,8 @@ class TennisTournamentPage extends React.Component<Props, State> {
       rounds:
         tournamentInfo && tournamentInfo.info
           ? tournamentInfo.info.numberOfScheduledMatches
-          : 0
+          : 0,
+      selectedRound: "round_of_64"
     };
   }
 
@@ -121,6 +123,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
           header="Matches"
           values={this.state.values}
           rounds={this.state.rounds}
+          selectedRound={this.state.selectedRound}
         />
         <Link to={paths.EVENTS} className="right">
           More >

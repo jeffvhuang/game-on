@@ -8,6 +8,7 @@ interface Props {
   games: TennisMatch[];
   values: string[];
   rounds: number;
+  selectedRound: string;
 }
 
 interface RoundMatches {
@@ -15,7 +16,13 @@ interface RoundMatches {
   matches: TennisMatch[];
 }
 
-function TennisMatches({ header, games, values, rounds }: Props) {
+function TennisMatches({
+  header,
+  games,
+  values,
+  rounds,
+  selectedRound
+}: Props) {
   // Sort the schedule into rounds
   const roundMatches: RoundMatches[] = [];
   if (games[0] && games[0].tournamentRound.name == "qualification")
@@ -39,12 +46,18 @@ function TennisMatches({ header, games, values, rounds }: Props) {
     if (round) round.matches.push(game);
   });
 
+  const roundToShow = roundMatches.find(r => r.round === selectedRound);
+  const matchesToShow = roundToShow ? roundToShow.matches : [];
+
   console.log(roundMatches);
 
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
-      {values.length < 1
+      {matchesToShow.map((m, i) => {
+        return <TennisMatchup key={i} match={m} />;
+      })}
+      {/* {values.length < 1
         ? games.map((g, i) => <TennisMatchup key={i} match={g} />)
         : games.map((g, i) => {
             if (
@@ -54,7 +67,7 @@ function TennisMatches({ header, games, values, rounds }: Props) {
             ) {
               return <TennisMatchup key={i} match={g} />;
             }
-          })}
+          })} */}
     </div>
   );
 }
