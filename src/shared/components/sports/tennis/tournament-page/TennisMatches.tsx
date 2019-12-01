@@ -48,8 +48,18 @@ function TennisMatches({
 
   const roundToShow = roundMatches.find(r => r.round === selectedRound);
   const matchesToShow = roundToShow ? roundToShow.matches : [];
+  matchesToShow.sort(function(a, b) {
+    if (
+      a.competitors.length &&
+      b.competitors.length &&
+      a.competitors[0].bracketNumber &&
+      b.competitors[0].bracketNumber
+    )
+      return a.competitors[0].bracketNumber - b.competitors[0].bracketNumber;
+    return 0;
+  });
 
-  console.log(roundMatches);
+  console.log(matchesToShow);
 
   return (
     <div className="margin-bot">

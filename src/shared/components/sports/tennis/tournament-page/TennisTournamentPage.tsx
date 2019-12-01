@@ -70,7 +70,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
         tournamentInfo && tournamentInfo.info
           ? tournamentInfo.info.numberOfScheduledMatches
           : 0,
-      selectedRound: "round_of_64"
+      selectedRound: "round_of_128"
     };
   }
 
