@@ -65,7 +65,10 @@ class TennisTournamentPage extends React.Component<Props, State> {
       tournamentId: id,
       values: [],
       tournamentName: isSameInfo ? tournamentInfo.tournament.name : "",
-      rounds: tournamentInfo.info.numberOfScheduledMatches
+      rounds:
+        tournamentInfo && tournamentInfo.info
+          ? tournamentInfo.info.numberOfScheduledMatches
+          : 0
     };
   }
 

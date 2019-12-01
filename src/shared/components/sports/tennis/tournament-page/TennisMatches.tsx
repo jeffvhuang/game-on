@@ -10,7 +10,37 @@ interface Props {
   rounds: number;
 }
 
+interface RoundMatches {
+  round: string;
+  matches: TennisMatch[];
+}
+
 function TennisMatches({ header, games, values, rounds }: Props) {
+  // Sort the schedule into rounds
+  const roundMatches: RoundMatches[] = [];
+  if (games[0] && games[0].tournamentRound.name == "qualification")
+    roundMatches.push({ round: "qualification", matches: [] });
+
+  for (let i = rounds; i > 0; i--) {
+    const round =
+      i == 1
+        ? "final"
+        : i == 2
+        ? "semifinal"
+        : i == 3
+        ? "quarterfinal"
+        : `round_of_${Math.pow(2, i)}`;
+
+    roundMatches.push({ round, matches: [] });
+  }
+
+  games.forEach(function(game) {
+    const round = roundMatches.find(r => r.round == game.tournamentRound.name);
+    if (round) round.matches.push(game);
+  });
+
+  console.log(roundMatches);
+
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
