@@ -11,10 +11,8 @@ interface Props {
 function TennisMatchup({ match, topOrBotMatchup }: Props) {
   const p1 = match.competitors[0];
   const p2 = match.competitors[1];
-  const points =
-    topOrBotMatchup == "top"
-      ? "0,49.5 100,49.5 100,100"
-      : "0,49.5 100,49.5 100,0";
+  const topBoxClass = topOrBotMatchup == "bot" ? "line-bot-right" : "";
+  const botBoxClass = topOrBotMatchup == "top" ? "line-top-right" : "";
 
   return (
     <div className="matchup-container">
@@ -44,9 +42,8 @@ function TennisMatchup({ match, topOrBotMatchup }: Props) {
         </div>
       </div>
       <div className="line-col">
-        <svg>
-          <polyline points={points} className="line" />
-        </svg>
+        <div className={topBoxClass} />
+        <div className={botBoxClass} />
       </div>
     </div>
   );
