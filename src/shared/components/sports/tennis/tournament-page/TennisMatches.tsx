@@ -67,7 +67,14 @@ function TennisMatches({
       <div className="tournament-wrapper">
         <div>
           {matchesToShow.map((m, i) => {
-            return <TennisMatchup key={i} match={m} />;
+            const topOrBotMatchup = i % 2 == 0 ? "top" : "bottom";
+            return (
+              <TennisMatchup
+                key={i}
+                match={m}
+                topOrBotMatchup={topOrBotMatchup}
+              />
+            );
           })}
         </div>
         <div>

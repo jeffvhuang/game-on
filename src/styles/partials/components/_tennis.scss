@@ -2,7 +2,20 @@ $box-width: 250px;
 $box-height: 80px;
 $matchup-margin: 10px;
 $player-box-height: $box-height/2;
+$border-line: 0.5px solid black;
 // $next-box-margin: $player-box-height + $matchup-bot-margin/2;
+
+.tournament-wrapper {
+  display: flex;
+
+  > div {
+    flex: 1;
+  }
+}
+
+.matchup-container {
+  display: flex;
+}
 
 .matchup {
   width: 60%;
@@ -75,13 +88,32 @@ $player-box-height: $box-height/2;
   }
 }
 
-.next-box {
-}
+.line-col {
+  flex: 1;
+  height: ($player-box-height * 2 + $matchup-margin * 2);
 
-.tournament-wrapper {
-  display: flex;
+  svg {
+    height: ($player-box-height * 2 + $matchup-margin * 2);
+    width: 100px;
+  }
+
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1;
+  }
 
   > div {
     flex: 1;
+  }
+
+  .line-top-right {
+    border-top: $border-line;
+    border-right: $border-line;
+  }
+
+  .line-bot-right {
+    border-bottom: $border-line;
+    border-right: $border-line;
   }
 }

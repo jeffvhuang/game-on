@@ -15,7 +15,7 @@ function NextTennisMatchup({ match }: Props) {
   return (
     <div className="next-matchup">
       <div className="matchup-left-col">
-        <div className="box next-box">
+        <div className="box">
           <div className="top-player player">
             <p className="country">{p1.countryCode}</p>
             <p className="player-name">
