@@ -8,14 +8,14 @@ interface Props {
   match: TennisMatch;
 }
 
-function TennisMatchup({ match }: Props) {
+function NextTennisMatchup({ match }: Props) {
   const p1 = match.competitors[0];
   const p2 = match.competitors[1];
 
   return (
-    <div className="matchup">
+    <div className="next-matchup">
       <div className="matchup-left-col">
-        <div className="box">
+        <div className="box next-box">
           <div className="top-player player">
             <p className="country">{p1.countryCode}</p>
             <p className="player-name">
@@ -39,25 +39,7 @@ function TennisMatchup({ match }: Props) {
         <div className="line" />
       </div>
     </div>
-
-    //   <Col span={3} className="capitalise">
-    //     {match.tournamentRound.name.replace(/_/g, " ")}
-    //   </Col>
-    //   <Col span={1}>{p1.countryCode}</Col>
-    //   <Col span={6}>
-    //     {p1.name} {p1.seed && "[" + p1.seed + "]"}
-    //   </Col>
-    //   <Col span={1}>vs</Col>
-    //   <Col span={1}>{p2.countryCode}</Col>
-    //   <Col span={6}>
-    //     {p2.name} {p2.seed && "[" + p2.seed + "]"}
-    //   </Col>
-    //   <Col span={3}>{getDayMonthDate(match.scheduled)}</Col>
-    //   <Col span={3} className="capitalise">
-    //     {match.status.replace(/_/g, " ")}
-    //   </Col>
-    // </Row>
   );
 }
 
-export default TennisMatchup;
+export default NextTennisMatchup;

@@ -2,6 +2,7 @@ import * as React from "react";
 
 import TennisMatchup from "./TennisMatchup";
 import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
+import NextTennisMatchup from "./NextTennisMatchup";
 
 interface Props {
   header: string;
@@ -48,25 +49,34 @@ function TennisMatches({
 
   const roundToShow = roundMatches.find(r => r.round === selectedRound);
   const matchesToShow = roundToShow ? roundToShow.matches : [];
-  matchesToShow.sort(function(a, b) {
-    if (
-      a.competitors.length &&
-      b.competitors.length &&
-      a.competitors[0].bracketNumber &&
-      b.competitors[0].bracketNumber
-    )
-      return a.competitors[0].bracketNumber - b.competitors[0].bracketNumber;
-    return 0;
-  });
+  matchesToShow.sort(sortTennisMatches);
 
   console.log(matchesToShow);
+
+  // Get index of round in roundMatches and find next round
+  const index = roundMatches.map(e => e.round).indexOf(selectedRound);
+  const nextRoundMatches =
+    index < rounds - 1 ? roundMatches[index + 1].matches : [];
+  nextRoundMatches.sort(sortTennisMatches);
+
+  console.log(nextRoundMatches);
 
   return (
     <div className="margin-bot">
       <h2>{header}</h2>
-      {matchesToShow.map((m, i) => {
-        return <TennisMatchup key={i} match={m} />;
-      })}
+      <div className="tournament-wrapper">
+        <div>
+          {matchesToShow.map((m, i) => {
+            return <TennisMatchup key={i} match={m} />;
+          })}
+        </div>
+        <div>
+          {nextRoundMatches.map((m, i) => {
+            return <NextTennisMatchup key={i} match={m} />;
+          })}
+        </div>
+      </div>
+
       {/* {values.length < 1
         ? games.map((g, i) => <TennisMatchup key={i} match={g} />)
         : games.map((g, i) => {
@@ -80,6 +90,17 @@ function TennisMatches({
           })} */}
     </div>
   );
+}
+
+function sortTennisMatches(a, b) {
+  if (
+    a.competitors.length &&
+    b.competitors.length &&
+    a.competitors[0].bracketNumber &&
+    b.competitors[0].bracketNumber
+  )
+    return a.competitors[0].bracketNumber - b.competitors[0].bracketNumber;
+  return 0;
 }
 
 export default TennisMatches;

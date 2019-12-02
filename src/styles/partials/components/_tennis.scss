@@ -1,17 +1,26 @@
-$box-width: 260px;
-$box-height: 100px;
+$box-width: 250px;
+$box-height: 80px;
+$matchup-margin: 10px;
+$player-box-height: $box-height/2;
+// $next-box-margin: $player-box-height + $matchup-bot-margin/2;
 
 .matchup {
   width: 60%;
   display: flex;
-  margin: 30px 0;
+  padding: $matchup-margin 0;
 }
 
-.left-col {
+.next-matchup {
+  width: 60%;
+  display: flex;
+  padding: ($player-box-height + $matchup-margin * 2) 0;
+}
+
+.matchup-left-col {
   // width: 60%;
 }
 
-.right-col {
+.matchup-right-col {
   flex: 1;
 
   .date-box {
@@ -31,7 +40,7 @@ $box-height: 100px;
   width: $box-width;
 
   .player {
-    height: 50%;
+    height: $player-box-height;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -42,7 +51,7 @@ $box-height: 100px;
     }
 
     .country {
-      margin-left: 20px;
+      margin-left: 10px;
       width: 50px;
     }
 
@@ -63,5 +72,16 @@ $box-height: 100px;
   .bottom-player {
     border: 1px solid black;
     border-top: none;
+  }
+}
+
+.next-box {
+}
+
+.tournament-wrapper {
+  display: flex;
+
+  > div {
+    flex: 1;
   }
 }
