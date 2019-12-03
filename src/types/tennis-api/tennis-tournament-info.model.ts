@@ -10,7 +10,7 @@ import { TennisStage } from "./tennis-stage.model";
 export interface TennisTournamentInfo {
   tournament: TennisTournament;
   season: TennisSeason;
-  tournamentRound: TennisTournamentRound;
+  tournamentRound: TennisTournamentRound | null;
   info: TennisInfo;
   coverageInfo: TennisCoverageInfo;
   winnerLastSeason: TennisWinner;

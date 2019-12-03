@@ -43,8 +43,12 @@ function TennisMatches({
   }
 
   games.forEach(function(game) {
-    const round = roundMatches.find(r => r.round == game.tournamentRound.name);
-    if (round) round.matches.push(game);
+    if (game.status !== "cancelled") {
+      const round = roundMatches.find(
+        r => r.round == game.tournamentRound.name
+      );
+      if (round) round.matches.push(game);
+    }
   });
 
   const roundToShow = roundMatches.find(r => r.round === selectedRound);
