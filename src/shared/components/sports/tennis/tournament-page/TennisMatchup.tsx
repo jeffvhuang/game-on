@@ -17,7 +17,7 @@ function TennisMatchup({ match, topOrBotMatchup }: Props) {
   return (
     <div className="matchup-container">
       <div className="matchup">
-        <div className="matchup-left-col">
+        <div>
           <div className="box">
             <div className="top-player player">
               <p className="country">{p1.countryCode}</p>
@@ -35,7 +35,7 @@ function TennisMatchup({ match, topOrBotMatchup }: Props) {
             </div>
           </div>
         </div>
-        <div className="matchup-right-col">
+        <div className="date-col">
           <div className="date-box">
             <p className="date">{getDayMonthDate(match.scheduled)}</p>
           </div>

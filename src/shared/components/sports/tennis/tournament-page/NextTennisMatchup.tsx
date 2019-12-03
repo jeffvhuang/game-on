@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Row, Col } from "antd";
 
 import { getDayMonthDate } from "../../../../../helpers/utils";
 import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
@@ -14,7 +13,10 @@ function NextTennisMatchup({ match }: Props) {
 
   return (
     <div className="next-matchup">
-      <div className="matchup-left-col">
+      <div className="pre-box">
+        <div className="pre-box-top" />
+      </div>
+      <div>
         <div className="box">
           <div className="top-player player">
             <p className="country">{p1.countryCode}</p>
@@ -32,7 +34,7 @@ function NextTennisMatchup({ match }: Props) {
           </div>
         </div>
       </div>
-      <div className="matchup-right-col">
+      <div className="date-col">
         <div className="date-box">
           <p className="date">{getDayMonthDate(match.scheduled)}</p>
         </div>

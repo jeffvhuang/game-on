@@ -23,16 +23,23 @@ $border-line: 0.5px solid black;
 }
 
 .next-matchup {
-  width: 70%;
+  width: 100%;
   display: flex;
   padding: ($player-box-height + $matchup-margin * 2) 0;
+
+  .pre-box {
+    height: $box-height;
+    width: 30%;
+
+    .pre-box-top {
+      width: 100%;
+      height: $box-height/2 - 0.5;
+      border-bottom: $border-line;
+    }
+  }
 }
 
-.matchup-left-col {
-  // width: 60%;
-}
-
-.matchup-right-col {
+.date-col {
   flex: 1;
 
   .date-box {
