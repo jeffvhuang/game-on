@@ -34,7 +34,6 @@ interface State {
   tournamentId: string;
   values: string[];
   tournamentName: string;
-  selectedRound: string;
 }
 
 type Props = StateProps & DispatchProps;
@@ -45,7 +44,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
     super(props);
 
     const id = "sr:tournament:" + props.match.params.tournamentNumber;
-    const { tournamentInfo, tournamentSchedule } = props.tennis;
+    const { tournamentInfo } = props.tennis;
     let isSameInfo = true;
 
     if (this.isDifferentId(tournamentInfo, id)) {
@@ -56,8 +55,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
     this.state = {
       tournamentId: id,
       values: [],
-      tournamentName: isSameInfo ? tournamentInfo.tournament.name : "",
-      selectedRound: "round_of_128"
+      tournamentName: isSameInfo ? tournamentInfo.tournament.name : ""
     };
   }
 

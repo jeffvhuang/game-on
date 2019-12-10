@@ -2,9 +2,9 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Button } from "antd";
 
-import TennisMatchup from "./TennisMatchup";
+import TennisRoundLeft from "./TennisRoundLeft";
+import TennisRoundRight from "./TennisRoundRight";
 import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
-import NextTennisMatchup from "./NextTennisMatchup";
 import {
   getTennisTournamentSchedule,
   clearTennisTournamentSchedule
@@ -26,7 +26,7 @@ interface DispatchProps {
 }
 
 interface State {
-  selectedRoundNum: number;
+  selectedRound: string;
   matchesToShow: TennisMatch[];
   nextRoundMatches: TennisMatch[];
 }
@@ -36,24 +36,15 @@ type Props = StateProps & DispatchProps;
 class TennisMatches extends React.Component<Props, State> {
   constructor(props) {
     super(props);
-
     const { tournamentRounds } = props.tennis;
 
-    if (this.isDifferentSchedule(tournamentRounds, props.tournamentId)) {
+    if (this.isDifferentSchedule(tournamentRounds, props.tournamentId))
       props.clearTennisTournamentSchedule();
-    }
-
-    // const matchesToShow = this.getMatchesToShow(tournamentRounds, props.rounds, 1);
-    // const nextRoundMatches = this.getNextRoundMatches(
-    //   roundMatches,
-    //   props.rounds,
-    //   1
-    // );
 
     this.state = {
-      selectedRoundNum: 1,
-      matchesToShow: [],
-      nextRoundMatches: []
+      selectedRound: "",
+      matchesToShow: this.getMatchesToShow(tournamentRounds),
+      nextRoundMatches: this.getNextRoundMatches(tournamentRounds)
     };
   }
 
@@ -73,36 +64,26 @@ class TennisMatches extends React.Component<Props, State> {
 
   getMatchesToShow = (
     roundMatches: RoundMatches[],
-    maxRounds: number,
-    roundInTourn: number
+    roundInTourn: string = ""
   ): TennisMatch[] => {
-    const selectedRound = this.getSelectedRound(maxRounds, roundInTourn);
-    const roundToShow = roundMatches.find(r => r.round === selectedRound);
-    const matchesToShow = roundToShow ? roundToShow.matches : [];
+    if (roundMatches.length < 1) return [];
+    const roundToShow = roundMatches.find(r => r.round === roundInTourn);
+    const matchesToShow = roundToShow
+      ? roundToShow.matches
+      : roundMatches[0].matches;
     return matchesToShow.sort(this.sortTennisMatches);
   };
 
   // Get index of round in roundMatches and find next round
   getNextRoundMatches = (
     roundMatches: RoundMatches[],
-    maxRounds: number,
-    roundInTourn: number
+    roundInTourn: string = ""
   ): TennisMatch[] => {
-    const selectedRound = this.getSelectedRound(maxRounds, roundInTourn);
-    const index = roundMatches.map(e => e.round).indexOf(selectedRound);
+    if (roundMatches.length < 2) return [];
+    const index = roundMatches.map(e => e.round).indexOf(roundInTourn);
     const nextRoundMatches =
-      index < maxRounds - 1 ? roundMatches[index + 1].matches : [];
+      index < roundMatches.length - 1 ? roundMatches[index + 1].matches : [];
     return nextRoundMatches.sort(this.sortTennisMatches);
-  };
-
-  getSelectedRound = function(maxRounds: number, roundInTourn: number): string {
-    return roundInTourn == maxRounds
-      ? "final"
-      : roundInTourn == maxRounds - 1
-      ? "semifinal"
-      : roundInTourn == maxRounds - 2
-      ? "quarterfinal"
-      : `round_of_${Math.pow(2, maxRounds - roundInTourn + 1)}`;
   };
 
   sortTennisMatches = function(a, b) {
@@ -119,9 +100,6 @@ class TennisMatches extends React.Component<Props, State> {
   showRound = () => {};
 
   render() {
-    console.log(this.props.tennis.tournamentRounds);
-    // console.log(this.state.matchesToShow);
-    // console.log(this.state.nextRoundMatches);
     return (
       <div className="margin-bot">
         <h2>Matches</h2>
@@ -134,23 +112,16 @@ class TennisMatches extends React.Component<Props, State> {
           </Button>
         </div>
         <div className="tournament-wrapper">
-          <div>
-            {this.state.matchesToShow.map((m, i) => {
-              const topOrBotMatchup = i % 2 == 0 ? "top" : "bot";
-              return (
-                <TennisMatchup
-                  key={i}
-                  match={m}
-                  topOrBotMatchup={topOrBotMatchup}
-                />
-              );
-            })}
-          </div>
-          <div>
-            {this.state.nextRoundMatches.map((m, i) => {
-              return <NextTennisMatchup key={i} match={m} />;
-            })}
-          </div>
+          <TennisRoundLeft
+            matchesToShow={this.getMatchesToShow(
+              this.props.tennis.tournamentRounds
+            )}
+          />
+          <TennisRoundRight
+            matchesToShow={this.getNextRoundMatches(
+              this.props.tennis.tournamentRounds
+            )}
+          />
         </div>
       </div>
     );
