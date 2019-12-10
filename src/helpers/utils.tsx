@@ -222,20 +222,20 @@ function sortTennisByDateDescending(data: TennisTournament[]) {
   });
 }
 
-export function sortTennisScheduleIntoRounds(schedule: TennisMatch[]): RoundMatches[] {
+export function sortTennisScheduleIntoRounds(
+  schedule: TennisMatch[]
+): RoundMatches[] {
   const roundMatches: RoundMatches[] = [];
   // Create rounds and separate the matches into their rounds
-  for (let i=0; i < schedule.length; i++) {
+  for (let i = 0; i < schedule.length; i++) {
     // Only include the match if round data available and not cancelled
     if (schedule[i].tournamentRound && schedule[i].status !== "cancelled") {
       const round = schedule[i].tournamentRound.name;
-      if (round) {
+      if (round && round !== "qualification") {
         const roundMatch = roundMatches.find(r => r.round == round);
         // Create a new roundMatch object to store matches if it does not exist yet in array
-        if (!roundMatch) 
-          roundMatches.push({ round, matches: [schedule[i]] });
-        else
-          roundMatch.matches.push(schedule[i]);
+        if (!roundMatch) roundMatches.push({ round, matches: [schedule[i]] });
+        else roundMatch.matches.push(schedule[i]);
       }
     }
   }

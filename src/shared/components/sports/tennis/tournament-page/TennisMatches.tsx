@@ -80,6 +80,8 @@ class TennisMatches extends React.Component<Props, State> {
     roundInTourn: string = ""
   ): TennisMatch[] => {
     if (roundMatches.length < 2) return [];
+    if (!roundInTourn)
+      return roundMatches[1].matches.sort(this.sortTennisMatches);
     const index = roundMatches.map(e => e.round).indexOf(roundInTourn);
     const nextRoundMatches =
       index < roundMatches.length - 1 ? roundMatches[index + 1].matches : [];
