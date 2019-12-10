@@ -111,6 +111,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
   //#endregion
 
   render() {
+    console.log(this.state.rounds);
     return (
       <div className="section content">
         <h2 className="page-heading">{this.state.tournamentName}</h2>
@@ -120,10 +121,8 @@ class TennisTournamentPage extends React.Component<Props, State> {
         />
         <TennisMatches
           games={this.props.tennis.tournamentSchedule}
-          header="Matches"
           values={this.state.values}
           rounds={this.state.rounds}
-          selectedRound={this.state.selectedRound}
         />
         <Link to={paths.EVENTS} className="right">
           More >
