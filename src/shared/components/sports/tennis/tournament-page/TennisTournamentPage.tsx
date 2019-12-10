@@ -6,9 +6,7 @@ import { RouteComponentProps } from "react-router";
 
 import { paths } from "../../../../../helpers/constants";
 import {
-  getTennisTournamentSchedule,
   getTennisTournamentInfo,
-  clearTennisTournamentSchedule,
   clearTennisTournamentInfo
 } from "../../../../redux/tennis/tennis-actions";
 
@@ -28,9 +26,7 @@ interface StateProps extends RouteComponentProps<MatchParams> {
 }
 
 interface DispatchProps {
-  getTennisTournamentSchedule;
   getTennisTournamentInfo;
-  clearTennisTournamentSchedule;
   clearTennisTournamentInfo;
 }
 
@@ -38,7 +34,6 @@ interface State {
   tournamentId: string;
   values: string[];
   tournamentName: string;
-  rounds: number;
   selectedRound: string;
 }
 
@@ -58,42 +53,22 @@ class TennisTournamentPage extends React.Component<Props, State> {
       props.clearTennisTournamentInfo();
     }
 
-    if (this.isDifferentSchedule(tournamentSchedule, id)) {
-      props.clearTennisTournamentSchedule();
-    }
-
     this.state = {
       tournamentId: id,
       values: [],
       tournamentName: isSameInfo ? tournamentInfo.tournament.name : "",
-      rounds:
-        tournamentInfo && tournamentInfo.info
-          ? tournamentInfo.info.numberOfScheduledMatches
-          : 0,
       selectedRound: "round_of_128"
     };
   }
 
   //#region class methods
   componentDidMount() {
-    const id = this.state.tournamentId;
-    const { tournamentInfo, tournamentSchedule } = this.props.tennis;
-
-    this.getTournamentSchedule(tournamentSchedule, id);
-    this.getTournamentInfo(tournamentInfo, id);
+    const { tournamentInfo } = this.props.tennis;
+    this.getTournamentInfo(tournamentInfo, this.state.tournamentId);
   }
-
-  isDifferentSchedule = (schedule: TennisMatch[], id: string): boolean => {
-    return schedule.length > 0 && schedule[0].tournament.id !== id;
-  };
 
   isDifferentId = (info: TennisTournamentInfo, id: string): boolean => {
     return !info.tournament || info.tournament.id !== id;
-  };
-
-  getTournamentSchedule = (schedule: TennisMatch[], id: string) => {
-    if (schedule.length < 1 || this.isDifferentSchedule(schedule, id))
-      this.props.getTennisTournamentSchedule(id);
   };
 
   getTournamentInfo = (info: TennisTournamentInfo, id: string) => {
@@ -101,8 +76,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
       this.props.getTennisTournamentInfo(id).then(data => {
         if (data)
           this.setState({
-            tournamentName: data.tournament.currentSeason.name,
-            rounds: data.info.numberOfScheduledMatches
+            tournamentName: data.tournament.currentSeason.name
           });
       });
   };
@@ -111,7 +85,6 @@ class TennisTournamentPage extends React.Component<Props, State> {
   //#endregion
 
   render() {
-    console.log(this.state.rounds);
     return (
       <div className="section content">
         <h2 className="page-heading">{this.state.tournamentName}</h2>
@@ -120,9 +93,8 @@ class TennisTournamentPage extends React.Component<Props, State> {
           options={this.props.tennis.tournamentInfo.competitors || []}
         />
         <TennisMatches
-          games={this.props.tennis.tournamentSchedule}
           values={this.state.values}
-          rounds={this.state.rounds}
+          tournamentId={this.state.tournamentId}
         />
         <Link to={paths.EVENTS} className="right">
           More >
@@ -138,9 +110,7 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getTennisTournamentSchedule,
   getTennisTournamentInfo,
-  clearTennisTournamentSchedule,
   clearTennisTournamentInfo
 };
 

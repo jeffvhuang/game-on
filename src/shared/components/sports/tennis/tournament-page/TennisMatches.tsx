@@ -1,88 +1,74 @@
 import * as React from "react";
+import { connect } from "react-redux";
 import { Button } from "antd";
 
 import TennisMatchup from "./TennisMatchup";
 import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
 import NextTennisMatchup from "./NextTennisMatchup";
+import {
+  getTennisTournamentSchedule,
+  clearTennisTournamentSchedule
+} from "../../../../redux/tennis/tennis-actions";
+import { TennisState } from "../../../../redux/tennis/tennis-types";
+import { RoundMatches } from "../../../../../types/tennis-api/round-matches.model";
+import { ReduxState } from "../../../../redux/redux-state";
 
-interface Props {
-  games: TennisMatch[];
+//#region interfaces
+interface StateProps {
+  tournamentId: string;
   values: string[];
-  rounds: number;
+  tennis: TennisState;
 }
 
-interface RoundMatches {
-  round: string;
-  matches: TennisMatch[];
+interface DispatchProps {
+  getTennisTournamentSchedule;
+  clearTennisTournamentSchedule;
 }
 
 interface State {
   selectedRoundNum: number;
-  roundMatches: RoundMatches[];
   matchesToShow: TennisMatch[];
   nextRoundMatches: TennisMatch[];
 }
+type Props = StateProps & DispatchProps;
+//#endregion
 
 class TennisMatches extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
-    const { games, rounds, values } = props;
+    const { tournamentRounds } = props.tennis;
 
-    let roundMatches = this.initRoundMatches(games, rounds);
-    this.sortMatchesIntoRounds(games, roundMatches);
-    const matchesToShow = this.getMatchesToShow(roundMatches, props.rounds, 1);
-    const nextRoundMatches = this.getNextRoundMatches(
-      roundMatches,
-      props.rounds,
-      1
-    );
+    if (this.isDifferentSchedule(tournamentRounds, props.tournamentId)) {
+      props.clearTennisTournamentSchedule();
+    }
+
+    // const matchesToShow = this.getMatchesToShow(tournamentRounds, props.rounds, 1);
+    // const nextRoundMatches = this.getNextRoundMatches(
+    //   roundMatches,
+    //   props.rounds,
+    //   1
+    // );
 
     this.state = {
       selectedRoundNum: 1,
-      roundMatches,
-      matchesToShow,
-      nextRoundMatches
+      matchesToShow: [],
+      nextRoundMatches: []
     };
   }
 
-  // Sort the schedule into rounds
-  initRoundMatches = function(
-    games: TennisMatch[],
-    rounds: number
-  ): RoundMatches[] {
-    const roundMatches: RoundMatches[] = [];
-    if (games[0] && games[0].tournamentRound.name == "qualification")
-      roundMatches.push({ round: "qualification", matches: [] });
+  componentDidMount() {
+    const { tennis, tournamentId } = this.props;
+    this.getTournamentSchedule(tennis.tournamentRounds, tournamentId);
+  }
 
-    for (let i = rounds; i > 0; i--) {
-      const round =
-        i == 1
-          ? "final"
-          : i == 2
-          ? "semifinal"
-          : i == 3
-          ? "quarterfinal"
-          : `round_of_${Math.pow(2, i)}`;
-
-      roundMatches.push({ round, matches: [] });
-    }
-
-    return roundMatches;
+  getTournamentSchedule = (rm: RoundMatches[], id: string) => {
+    if (rm.length < 1 || this.isDifferentSchedule(rm, id))
+      this.props.getTennisTournamentSchedule(id);
   };
 
-  sortMatchesIntoRounds = function(
-    games: TennisMatch[],
-    roundMatches: RoundMatches[]
-  ): void {
-    games.forEach(function(game) {
-      if (game.status !== "cancelled") {
-        const round = roundMatches.find(
-          r => r.round == game.tournamentRound.name
-        );
-        if (round) round.matches.push(game);
-      }
-    });
+  isDifferentSchedule = (rm: RoundMatches[], id: string): boolean => {
+    return rm.length > 0 && rm[0].matches[0].tournament.id !== id;
   };
 
   getMatchesToShow = (
@@ -133,8 +119,9 @@ class TennisMatches extends React.Component<Props, State> {
   showRound = () => {};
 
   render() {
-    console.log(this.state.matchesToShow);
-    console.log(this.state.nextRoundMatches);
+    console.log(this.props.tennis.tournamentRounds);
+    // console.log(this.state.matchesToShow);
+    // console.log(this.state.nextRoundMatches);
     return (
       <div className="margin-bot">
         <h2>Matches</h2>
@@ -169,5 +156,18 @@ class TennisMatches extends React.Component<Props, State> {
     );
   }
 }
+//#region redux connect
+const mapStateToProps = (state: ReduxState) => ({
+  tennis: state.tennis
+});
 
-export default TennisMatches;
+const mapDispatchToProps = {
+  getTennisTournamentSchedule,
+  clearTennisTournamentSchedule
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TennisMatches);
+//#endregion
