@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { Button } from "antd";
+import { Button, Icon } from "antd";
 
 import TennisRoundLeft from "./TennisRoundLeft";
 import TennisRoundRight from "./TennisRoundRight";
@@ -27,8 +27,6 @@ interface DispatchProps {
 
 interface State {
   selectedRound: string;
-  matchesToShow: TennisMatch[];
-  nextRoundMatches: TennisMatch[];
 }
 type Props = StateProps & DispatchProps;
 //#endregion
@@ -42,9 +40,7 @@ class TennisMatches extends React.Component<Props, State> {
       props.clearTennisTournamentSchedule();
 
     this.state = {
-      selectedRound: "",
-      matchesToShow: this.getMatchesToShow(tournamentRounds),
-      nextRoundMatches: this.getNextRoundMatches(tournamentRounds)
+      selectedRound: ""
     };
   }
 
@@ -112,16 +108,43 @@ class TennisMatches extends React.Component<Props, State> {
     };
   };
 
+  isBtnDisabled = (isRightButton: boolean): boolean => {
+    const { tournamentRounds } = this.props.tennis;
+    // Disable both buttons when no rounds to show
+    if (tournamentRounds.length < 1) return true;
+
+    if (isRightButton) {
+      // Disabled Right button if showing second to last
+      // (since last round will be shown in right column)
+      const secondLastIndex = tournamentRounds.length - 2;
+      return (
+        this.state.selectedRound == tournamentRounds[secondLastIndex].round
+      );
+    } else {
+      // Disabled left if first round selected
+      if (!this.state.selectedRound) return true;
+      return this.state.selectedRound == tournamentRounds[0].round;
+    }
+  };
+
   render() {
     return (
       <div className="margin-bot">
         <h2>Matches</h2>
         <div>
-          <Button onClick={this.showRound(false)} className="left">
-            Left
+          <Button
+            onClick={this.showRound(false)}
+            className="left"
+            disabled={this.isBtnDisabled(false)}
+          >
+            <Icon type="left" />
           </Button>
-          <Button onClick={this.showRound(true)} className="right">
-            Right
+          <Button
+            onClick={this.showRound(true)}
+            className="right"
+            disabled={this.isBtnDisabled(true)}
+          >
+            <Icon type="right" />
           </Button>
         </div>
         <div className="tournament-wrapper">
