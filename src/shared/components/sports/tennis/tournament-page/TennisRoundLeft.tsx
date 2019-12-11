@@ -1,12 +1,16 @@
 import * as React from "react";
 import TennisMatchup from "./TennisMatchup";
 import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
+import { RoundMatches } from "../../../../../types/tennis-api/round-matches.model";
 
 interface Props {
-  matchesToShow: TennisMatch[];
+  selectedRound: string;
+  getMatchesFn: (rm: RoundMatches[], selectedRound: string) => TennisMatch[];
+  roundMatches: RoundMatches[];
 }
 
-function TennisRoundLeft({ matchesToShow }: Props) {
+function TennisRoundLeft({ selectedRound, getMatchesFn, roundMatches }: Props) {
+  const matchesToShow = getMatchesFn(roundMatches, selectedRound);
   return (
     <div>
       {matchesToShow.map((m, i) => {

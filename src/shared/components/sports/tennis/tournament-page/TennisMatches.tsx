@@ -99,30 +99,41 @@ class TennisMatches extends React.Component<Props, State> {
     return 0;
   };
 
-  showRound = () => {};
+  showRound = (isNext: boolean) => {
+    return () => {
+      const { tournamentRounds } = this.props.tennis;
+      const currentRound = this.state.selectedRound
+        ? this.state.selectedRound
+        : tournamentRounds[0].round;
+      const index = tournamentRounds.map(r => r.round).indexOf(currentRound);
+      const nextIndex = isNext ? index + 1 : index - 1;
+      const nextRound = tournamentRounds[nextIndex].round;
+      this.setState({ selectedRound: nextRound });
+    };
+  };
 
   render() {
     return (
       <div className="margin-bot">
         <h2>Matches</h2>
         <div>
-          <Button onClick={this.showRound} className="left">
+          <Button onClick={this.showRound(false)} className="left">
             Left
           </Button>
-          <Button onClick={this.showRound} className="right">
+          <Button onClick={this.showRound(true)} className="right">
             Right
           </Button>
         </div>
         <div className="tournament-wrapper">
           <TennisRoundLeft
-            matchesToShow={this.getMatchesToShow(
-              this.props.tennis.tournamentRounds
-            )}
+            selectedRound={this.state.selectedRound}
+            getMatchesFn={this.getMatchesToShow}
+            roundMatches={this.props.tennis.tournamentRounds}
           />
           <TennisRoundRight
-            matchesToShow={this.getNextRoundMatches(
-              this.props.tennis.tournamentRounds
-            )}
+            selectedRound={this.state.selectedRound}
+            getMatchesFn={this.getNextRoundMatches}
+            roundMatches={this.props.tennis.tournamentRounds}
           />
         </div>
       </div>
