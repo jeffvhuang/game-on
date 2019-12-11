@@ -356,6 +356,11 @@ function sortESportTeams(data: ESportsTeamBase[]) {
 //#endregion
 
 //#region sport specific conversion methods
+export function getTennisRoundName(roundName: string): string {
+  const parts = roundName.split("_");
+  return parts.map(p => capitalise(p)).join(" ");
+}
+
 // data = matches
 export function getESportsTeamsFromMatches(data: ESportsMatch[]) {
   const teams: ESportsTeamBase[] = [];
@@ -515,7 +520,7 @@ export function getNumberWithOrdinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-export function capitaliseFirstLetter(word: string) {
+export function capitalise(word: string) {
   return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
 }
 //#endregion

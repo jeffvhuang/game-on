@@ -1,10 +1,8 @@
 //#region imports
 import * as React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { RouteComponentProps } from "react-router";
 
-import { paths } from "../../../../../helpers/constants";
 import {
   getTennisTournamentInfo,
   clearTennisTournamentInfo
@@ -14,7 +12,6 @@ import SelectDropdown from "../../../common/SelectDropdown";
 import TennisMatches from "./TennisMatches";
 import { TennisState } from "../../../../redux/tennis/tennis-types";
 import { ReduxState } from "../../../../redux/redux-state";
-import { TennisMatch } from "../../../../../types/tennis-api/tennis-match.model";
 import { TennisTournamentInfo } from "../../../../../types/tennis-api/tennis-tournament-info.model";
 //#endregion
 //#region interfaces
@@ -94,9 +91,6 @@ class TennisTournamentPage extends React.Component<Props, State> {
           values={this.state.values}
           tournamentId={this.state.tournamentId}
         />
-        <Link to={paths.EVENTS} className="right">
-          More >
-        </Link>
       </div>
     );
   }

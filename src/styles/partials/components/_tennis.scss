@@ -3,6 +3,7 @@ $box-height: 80px;
 $matchup-margin: 10px;
 $player-box-height: $box-height/2;
 $border-line: 0.5px solid black;
+$date-box-width: 80px;
 // $next-box-margin: $player-box-height + $matchup-bot-margin/2;
 
 .tournament-wrapper {
@@ -10,6 +11,11 @@ $border-line: 0.5px solid black;
 
   > div {
     flex: 1;
+  }
+
+  h3 {
+    width: $box-width;
+    text-align: center;
   }
 }
 
@@ -22,20 +28,29 @@ $border-line: 0.5px solid black;
   padding: $matchup-margin 0;
 }
 
+.right-header-box {
+  width: 100%;
+  display: flex;
+
+  .right-header-pre-box {
+    width: 50px;
+  }
+}
+
 .next-matchup {
   width: 100%;
   display: flex;
   padding: ($player-box-height + $matchup-margin * 2) 0;
+}
 
-  .pre-box {
-    height: $box-height;
-    width: 30%;
+.pre-box {
+  height: $box-height;
+  width: 50px;
 
-    .pre-box-top {
-      width: 100%;
-      height: $box-height/2 - 0.5;
-      border-bottom: $border-line;
-    }
+  .pre-box-top {
+    width: 100%;
+    height: $box-height/2 - 0.5;
+    border-bottom: $border-line;
   }
 }
 
@@ -47,7 +62,7 @@ $border-line: 0.5px solid black;
     align-items: center;
     margin-left: 10px;
     height: $box-height;
-    width: 80px;
+    width: $date-box-width;
 
     .date {
       margin: 0;
