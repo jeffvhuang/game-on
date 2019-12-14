@@ -10,6 +10,7 @@ import { ESportsMatch } from "../types/esports-api/esports-match.model";
 import { TennisMatch } from "../types/tennis-api/tennis-match.model";
 import { FootballSortedSchedule } from "../types/football-api/football-sorted-schedule.model";
 import { TennisSortedMatches } from "../types/tennis-api/tennis-sorted-matches.model";
+import { RoundMatches } from "../types/tennis-api/round-matches.model";
 
 // declare function require(path: string);
 const youtubeLogo = require("../../public/assets/Youtube-logo-2017-640x480.png");
@@ -21,9 +22,7 @@ export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Sorting functions
- */
+//#region sorting
 
 // Functions to sort dates from API data
 // Sort each team for games not yet completed (today or in future)
@@ -223,6 +222,27 @@ function sortTennisByDateDescending(data: TennisTournament[]) {
   });
 }
 
+export function sortTennisScheduleIntoRounds(
+  schedule: TennisMatch[]
+): RoundMatches[] {
+  const roundMatches: RoundMatches[] = [];
+  // Create rounds and separate the matches into their rounds
+  for (let i = 0; i < schedule.length; i++) {
+    // Only include the match if round data available and not cancelled
+    if (schedule[i].tournamentRound && schedule[i].status !== "cancelled") {
+      const round = schedule[i].tournamentRound.name;
+      if (round && round !== "qualification") {
+        const roundMatch = roundMatches.find(r => r.round == round);
+        // Create a new roundMatch object to store matches if it does not exist yet in array
+        if (!roundMatch) roundMatches.push({ round, matches: [schedule[i]] });
+        else roundMatch.matches.push(schedule[i]);
+      }
+    }
+  }
+
+  return roundMatches;
+}
+
 export function sortESportsTournaments(data: ESportsTournament[]) {
   const ongoing: ESportsTournament[] = [];
   const upcoming: ESportsTournament[] = [];
@@ -333,6 +353,13 @@ function sortESportTeams(data: ESportsTeamBase[]) {
     return dateA < dateB ? -1 : dateA > dateB ? 1 : 0;
   });
 }
+//#endregion
+
+//#region sport specific conversion methods
+export function getTennisRoundName(roundName: string): string {
+  const parts = roundName.split("_");
+  return parts.map(p => capitalise(p)).join(" ");
+}
 
 // data = matches
 export function getESportsTeamsFromMatches(data: ESportsMatch[]) {
@@ -402,7 +429,9 @@ export function convertEplTeamsToArray(teams) {
   );
   return ddTeams;
 }
+//#endregion
 
+//#region miscellaneous helper methods
 // Methods to create objects from APIs to show in common thumbnails functions
 export function createYoutubeThumnailObjects(videos) {
   const thumbnails: any[] = [];
@@ -460,31 +489,21 @@ export function getDayMonthDateFromReverseFormat(
 
 export function getDayMonthDate(date: string) {
   // return if it is not a valid date string or object
-  if (!isValidDate(date)) return null;
+  // if (!isValidDate(date)) return null;
+  const d = new Date(date);
 
-  const dateObj = new Date(date);
-  return (
-    days[dateObj.getDay()] +
-    " " +
-    months[dateObj.getMonth()] +
-    " " +
-    dateObj.getDate()
-  );
+  return `${days[d.getDay()]} ${months[d.getMonth()]} ${d.getDate()}`;
 }
 
 // return format: Wed, 21st Nov
-export function getDateWithOrdinal(date: Date): string {
-  return `${days[date.getDay()]}, ${getNumberWithOrdinal(date.getDate())} ${
-    months[date.getMonth()]
+export function getDateWithOrdinal(d: Date): string {
+  return `${days[d.getDay()]}, ${getNumberWithOrdinal(d.getDate())} ${
+    months[d.getMonth()]
   }`;
 }
 
-export function isValidDate(date) {
-  return (
-    date &&
-    Object.prototype.toString.call(date) === "[object Date]" &&
-    !isNaN(date)
-  );
+export function isValidDate(d: string) {
+  return Object.prototype.toString.call(d) === "[object Date]";
 }
 
 export function uuidv4() {
@@ -501,6 +520,7 @@ export function getNumberWithOrdinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-export function capitaliseFirstLetter(word: string) {
+export function capitalise(word: string) {
   return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
 }
+//#endregion

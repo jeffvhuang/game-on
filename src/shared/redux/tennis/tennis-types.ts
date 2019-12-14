@@ -6,6 +6,7 @@ import { TennisSortedTournaments } from "../../../types/tennis-api/tennis-sorted
 import { TennisMatch } from "../../../types/tennis-api/tennis-match.model";
 import { TennisTournamentInfo } from "../../../types/tennis-api/tennis-tournament-info.model";
 import { TennisSortedMatches } from "../../../types/tennis-api/tennis-sorted-matches.model";
+import { RoundMatches } from "../../../types/tennis-api/round-matches.model";
 
 export interface TennisState {
   isFetching: boolean,
@@ -20,6 +21,7 @@ export interface TennisState {
   videos: YoutubePlaylistItem[],
   thumbnails: ThumbnailObject[],
   tournamentSchedule: TennisMatch[],
+  tournamentRounds: RoundMatches[],
   tournamentInfo: TennisTournamentInfo,
   error: any
 }

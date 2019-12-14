@@ -1,0 +1,142 @@
+$box-width: 230px;
+$box-height: 80px;
+$matchup-margin: 10px;
+$player-box-height: $box-height/2;
+$border-line: 0.5px solid black;
+$date-box-width: 80px;
+// $next-box-margin: $player-box-height + $matchup-bot-margin/2;
+
+.tournament-wrapper {
+  display: flex;
+
+  > div {
+    flex: 1;
+  }
+
+  h3 {
+    width: $box-width;
+    text-align: center;
+  }
+}
+
+.matchup-container {
+  display: flex;
+}
+
+.matchup {
+  display: flex;
+  padding: $matchup-margin 0;
+}
+
+.right-header-box {
+  width: 100%;
+  display: flex;
+
+  .right-header-pre-box {
+    width: 50px;
+  }
+}
+
+.next-matchup {
+  width: 100%;
+  display: flex;
+  padding: ($player-box-height + $matchup-margin * 2) 0;
+}
+
+.pre-box {
+  height: $box-height;
+  width: 50px;
+
+  .pre-box-top {
+    width: 100%;
+    height: $box-height/2 - 0.5;
+    border-bottom: $border-line;
+  }
+}
+
+.date-col {
+  flex: 1;
+
+  .date-box {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    height: $box-height;
+    width: $date-box-width;
+
+    .date {
+      margin: 0;
+    }
+  }
+}
+
+.box {
+  height: $box-height;
+  width: $box-width;
+
+  .player {
+    height: $player-box-height;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > p {
+      margin: 0;
+    }
+
+    .country {
+      margin-left: 10px;
+      width: 50px;
+    }
+
+    .player-name {
+      flex: 1;
+    }
+
+    .seed {
+      margin-left: 10px;
+      font-size: 0.8em;
+    }
+  }
+
+  .top-player {
+    border: 1px solid black;
+  }
+
+  .bottom-player {
+    border: 1px solid black;
+    border-top: none;
+  }
+}
+
+.line-col {
+  flex: 1;
+  height: ($player-box-height * 2 + $matchup-margin * 2);
+
+  svg {
+    height: ($player-box-height * 2 + $matchup-margin * 2);
+    width: 100px;
+  }
+
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1;
+  }
+
+  > div {
+    flex: 1;
+    height: 50%;
+  }
+
+  .line-top-right {
+    border-top: $border-line;
+    border-right: $border-line;
+  }
+
+  .line-bot-right {
+    border-bottom: $border-line;
+    border-right: $border-line;
+  }
+}

@@ -1,6 +1,6 @@
 export interface TennisInfo {
-  prizeMoney: number;
-  prizeCurrency: string;
+  prizeMoney: number | null;
+  prizeCurrency: string | null;
   surface: string;
   complex: string;
   numberOfCompetitors: number;
