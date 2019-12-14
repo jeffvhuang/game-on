@@ -1,22 +1,24 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import * as React from "react";
+import { connect } from "react-redux";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
 
-import { getTournamentName } from '../../../../helpers/utils';
-import { getLolTournaments } from '../../../redux/lol/lol-actions';
+import { getTournamentName } from "../../../../helpers/utils";
+import { getLolTournaments } from "../../../redux/lol/lol-actions";
 
-import SelectDropdown from '../../common/SelectDropdown';
-import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/redux-state';
-import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
+import SelectDropdown from "../../common/SelectDropdown";
+import { LolState } from "../../../redux/lol/lol-types";
+import { ReduxState } from "../../../redux/redux-state";
+import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
 
 interface StateProps {
   lol: LolState;
   selectTournament: (any) => void;
-};
+}
 
-interface DispatchProps { getLolTournaments; };
+interface DispatchProps {
+  getLolTournaments;
+}
 type Props = StateProps & DispatchProps;
 interface State {
   values: string[];
@@ -35,8 +37,8 @@ class LolTournamentsContainer extends React.Component<Props, State> {
 
   componentDidMount() {
     const { lol } = this.props;
-    if (!lol.tournaments.length) this.props.getLolTournaments()
-      .then(data => {
+    if (!lol.tournaments.length)
+      this.props.getLolTournaments().then(data => {
         this.setState({ tournaments: data });
       });
   }
@@ -44,18 +46,18 @@ class LolTournamentsContainer extends React.Component<Props, State> {
   handleChange = values => {
     // Either get all tournaments when nothing selected in dropdown or
     // get tournaments that include any team that has been selected
-    const tournaments = (!values.length)
+    const tournaments = !values.length
       ? this.props.lol.tournaments
       : this.props.lol.tournaments.filter(tournament => {
-        for (let i = 0; i < tournament.teams.length; i++) {
-          const team = tournament.teams[i];
-          if (values.some(value => value == team.name)) return tournament;
-        }
-      });
+          for (let i = 0; i < tournament.teams.length; i++) {
+            const team = tournament.teams[i];
+            if (values.some(value => value == team.name)) return tournament;
+          }
+        });
 
     this.setState({ tournaments });
-  }
-  
+  };
+
   getTournamentsForCalendar = (tournaments: ESportsTournament[]) => {
     const events = [] as any[];
 
@@ -71,20 +73,22 @@ class LolTournamentsContainer extends React.Component<Props, State> {
     }
 
     return events;
-  }
+  };
 
   render() {
     return (
-      <div className="section">
-        <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.lol.teams} />
-        </div>
+      <div className="section content">
+        <SelectDropdown
+          handleChange={this.handleChange}
+          options={this.props.lol.teams}
+        />
         <div className="calendar">
-          <FullCalendar defaultView="dayGridMonth"
+          <FullCalendar
+            defaultView="dayGridMonth"
             plugins={[dayGridPlugin]}
             events={this.getTournamentsForCalendar(this.state.tournaments)}
-            eventClick={this.props.selectTournament} />
+            eventClick={this.props.selectTournament}
+          />
         </div>
       </div>
     );
@@ -99,4 +103,7 @@ const mapDispatchToProps = {
   getLolTournaments
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LolTournamentsContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LolTournamentsContainer);

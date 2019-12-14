@@ -1,23 +1,30 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
-import { paths } from '../../../../helpers/constants';
-import { getFormattedTime, getTournamentNameFromMatch } from '../../../../helpers/utils';
-import { getLolMatches, getLolTournaments } from '../../../redux/lol/lol-actions';
+import { paths } from "../../../../helpers/constants";
+import {
+  getFormattedTime,
+  getTournamentNameFromMatch
+} from "../../../../helpers/utils";
+import {
+  getLolMatches,
+  getLolTournaments
+} from "../../../redux/lol/lol-actions";
 
-import SelectDropdown from '../../common/SelectDropdown';
-import LolTournamentMatches from './LolTournamentMatches';
-import TournamentSelectDropdown from '../../common/TournamentSelectDropdown';
-import MatchData from './MatchData';
-import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/redux-state';
+import SelectDropdown from "../../common/SelectDropdown";
+import LolTournamentMatches from "./LolTournamentMatches";
+import TournamentSelectDropdown from "../../common/TournamentSelectDropdown";
+import MatchData from "./MatchData";
+import { LolState } from "../../../redux/lol/lol-types";
+import { ReduxState } from "../../../redux/redux-state";
 
 interface StateProps {
-  lol: LolState
-};
+  lol: LolState;
+}
 interface DispatchProps {
-  getLolMatches; getLolTournaments;
+  getLolMatches;
+  getLolTournaments;
 }
 type Props = StateProps & DispatchProps;
 
@@ -32,7 +39,7 @@ class LolMatchesContainer extends React.Component<Props, State> {
 
     this.state = {
       values: [],
-      tournamentValues: [],
+      tournamentValues: []
     };
   }
 
@@ -43,7 +50,8 @@ class LolMatchesContainer extends React.Component<Props, State> {
   }
 
   handleChange = values => this.setState({ values });
-  handleTournamentChange = tournamentValues => this.setState({ tournamentValues });
+  handleTournamentChange = tournamentValues =>
+    this.setState({ tournamentValues });
 
   getMatchesForTable = (data, values, tournamentValues) => {
     const matches = [] as any[];
@@ -57,14 +65,19 @@ class LolMatchesContainer extends React.Component<Props, State> {
       for (let i = 0; i < data.length; i++) {
         const match = data[i];
         const tournamentNameFromMatch = getTournamentNameFromMatch(match);
-        if (values.some(v => v == match.opponents[0].opponent.name 
-          || v == match.opponents[1].opponent.name)
-          || tournamentValues.some(t => t == tournamentNameFromMatch))
+        if (
+          values.some(
+            v =>
+              v == match.opponents[0].opponent.name ||
+              v == match.opponents[1].opponent.name
+          ) ||
+          tournamentValues.some(t => t == tournamentNameFromMatch)
+        )
           matches.push(this.getMatchTableObject(match));
       }
     }
     return matches;
-  }
+  };
 
   getMatchTableObject = match => {
     const startDate = new Date(match.beginAt);
@@ -80,43 +93,52 @@ class LolMatchesContainer extends React.Component<Props, State> {
       endAt: match.endAt,
       opponents: match.opponents
     };
-  }
+  };
 
   getExpandedRow = () => {
-    return match => <MatchData match={match} 
-      getWinnerName={this.getWinnerName}
-      getWinnerLogo={this.getWinnerLogo} />;
-  }
+    return match => (
+      <MatchData
+        match={match}
+        getWinnerName={this.getWinnerName}
+        getWinnerLogo={this.getWinnerLogo}
+      />
+    );
+  };
 
   getWinnerName = (winnerId, opponents) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return (winner) ? winner.opponent.name : null;
-  }
+    return winner ? winner.opponent.name : null;
+  };
 
   getWinnerLogo = (winnerId, opponents) => {
     const winner = opponents.find(x => x.opponent.id == winnerId);
-    return (winner) ? winner.opponent.imageUrl : null;
-  }
+    return winner ? winner.opponent.imageUrl : null;
+  };
 
   render() {
     return (
       <div className="section">
-        <div className="select-dd">
-          <TournamentSelectDropdown handleChange={this.handleTournamentChange}
-            options={this.props.lol.tournaments} />
-        </div>
-        <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.lol.matchesTeams} />
-        </div>
+        <TournamentSelectDropdown
+          handleChange={this.handleTournamentChange}
+          options={this.props.lol.tournaments}
+        />
+        <SelectDropdown
+          handleChange={this.handleChange}
+          options={this.props.lol.matchesTeams}
+        />
         <div>
-          <LolTournamentMatches header="Matches"
+          <LolTournamentMatches
+            header="Matches"
             matches={this.getMatchesForTable(
-              this.props.lol.matches, 
+              this.props.lol.matches,
               this.state.values,
-              this.state.tournamentValues)}
-            getRow={this.getExpandedRow} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
+              this.state.tournamentValues
+            )}
+            getRow={this.getExpandedRow}
+          />
+          <Link to={paths.EVENTS} className="right">
+            More >
+          </Link>
         </div>
       </div>
     );
@@ -132,5 +154,7 @@ const mapDispatchToProps = {
   getLolTournaments
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LolMatchesContainer);
-
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LolMatchesContainer);
