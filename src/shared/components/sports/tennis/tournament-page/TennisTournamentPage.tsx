@@ -83,10 +83,10 @@ class TennisTournamentPage extends React.Component<Props, State> {
     return (
       <div className="section content">
         <h2 className="page-heading">{this.state.tournamentName}</h2>
-        <SelectDropdown
+        {/* <SelectDropdown
           handleChange={this.handleChange}
           options={this.props.tennis.tournamentInfo.competitors || []}
-        />
+        /> */}
         <TennisMatches
           values={this.state.values}
           tournamentId={this.state.tournamentId}

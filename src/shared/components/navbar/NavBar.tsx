@@ -73,12 +73,12 @@ class NavBar extends React.Component<{}, State> {
             <Link to={paths.ESPORTS + paths.OVERWATCH}>Overwatch</Link>
           </Item>
         </SubMenu>
-        <Item key="events">
+        {/* <Item key="events">
           <Link to={paths.EVENTS}>Events</Link>
-        </Item>
-        <Item key="login" className="right">
+        </Item> */}
+        {/* <Item key="login" className="right">
           <Link to={paths.LOGIN}>Login</Link>
-        </Item>
+        </Item> */}
       </Menu>
     );
   }
