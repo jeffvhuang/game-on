@@ -1,5 +1,4 @@
-import { paths, days, months } from "./constants";
-// import * as youtubeLogo from '../../public/assets/Youtube-logo-2017-640x480.png';
+import { days, months } from "./constants";
 import { NbaSchedule } from "../types/nba-api/nba-schedule.model";
 import { FootballSchedule } from "../types/football-api/football-schedule.model";
 import { TennisTournament } from "../types/tennis-api/tennis-tournament.model";
@@ -12,8 +11,6 @@ import { FootballSortedSchedule } from "../types/football-api/football-sorted-sc
 import { TennisSortedMatches } from "../types/tennis-api/tennis-sorted-matches.model";
 import { RoundMatches } from "../types/tennis-api/round-matches.model";
 
-// declare function require(path: string);
-const youtubeLogo = require("../../public/assets/Youtube-logo-2017-640x480.png");
 export const futureDateString = "Sun Dec 31 2199";
 export const futureDate = new Date(futureDateString);
 
@@ -432,23 +429,6 @@ export function convertEplTeamsToArray(teams) {
 //#endregion
 
 //#region miscellaneous helper methods
-// Methods to create objects from APIs to show in common thumbnails functions
-export function createYoutubeThumnailObjects(videos) {
-  const thumbnails: any[] = [];
-
-  videos.forEach(video => {
-    const imgSrc = video.snippet.thumbnails
-      ? video.snippet.thumbnails.medium.url
-      : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341450.jpg";
-    thumbnails.push({
-      videoId: video.snippet.resourceId.videoId,
-      imgSrc: imgSrc,
-      title: video.snippet.title
-    });
-  });
-  return thumbnails;
-}
-
 export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
   return (
     dateToTest.getFullYear() == dateTestedAgainst.getFullYear() &&

@@ -9,7 +9,6 @@ const initialState: FootballState = {
   today: [],
   upcoming: [],
   completed: [],
-  videos: [],
   thumbnails: [],
   error: {}
 };

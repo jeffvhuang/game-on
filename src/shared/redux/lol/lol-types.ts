@@ -2,8 +2,6 @@ import * as C from "./lol-constants";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 import { ESportsTeamBase } from "../../../types/esports-api/esports-team-base.model";
-import { YoutubePlaylistItem } from "../../../types/youtube/youtube-playlist-item.model";
-import { ThumbnailObject } from "../../../types/tennis-api/thumbnail-object.model";
 import { ESportsSortedTournaments } from "../../../types/esports-api/esports-sorted-tournaments.model";
 import { ESportsTeam } from "../../../types/esports-api/esports-team.model";
 
@@ -17,8 +15,6 @@ export interface LolState {
   tournamentMatches: ESportsMatch[],
   teams: ESportsTeamBase[],
   matchesTeams: ESportsTeamBase[],
-  videos: YoutubePlaylistItem[],
-  thumbnails: ThumbnailObject[],
   error: any
 }
 
@@ -104,20 +100,6 @@ export interface GetLolTeamsFailure {
   err: any;
 }
 
-// Get LOL Videos
-export interface GetLolVideosRequest {
-  type: typeof C.GET_LOL_VIDEOS_REQUEST;
-}
-
-export interface GetLolVideosSuccess {
-  type: typeof C.GET_LOL_VIDEOS_SUCCESS;
-  payload: YoutubePlaylistItem[];
-}
-export interface GetLolVideosFailure {
-  type: typeof C.GET_LOL_VIDEOS_FAILURE;
-  err: any;
-}
-
 export type LolActionTypes =
   GetLolTournamentsRequest |
   GetLolTournamentsSuccess |
@@ -134,7 +116,4 @@ export type LolActionTypes =
   GetLolMatchesFailure |
   GetLolTeamsRequest |
   GetLolTeamsSuccess |
-  GetLolTeamsFailure |
-  GetLolVideosRequest |
-  GetLolVideosSuccess |
-  GetLolVideosFailure;
+  GetLolTeamsFailure;

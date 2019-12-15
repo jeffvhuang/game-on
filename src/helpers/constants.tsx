@@ -182,17 +182,17 @@ export const gameonAPI = {
 };
 
 // Third party APIs
-export const youtubeAPI = {
-  HOST: "https://www.googleapis.com/youtube/v3",
-  KEY: "{your-youtube-api-key}",
-  PLAYLIST: "/playlists",
-  PLAYLIST_ITEMS: "/playlistItems",
-  // playlistId
-  NBA_ID: "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z", // Ximo Pierto - 2018/19
-  CHAMPIONS_LEAGUE_ID: "PLubVgegS36EMhMb1j0NZL7Fcwy5jioEcg", // BTSport Channel, Champions League 2018/19
-  EUROPA_LEAGUE_ID: "PLubVgegS36EMNu3zRwwppiq3HrOjSNveM", // BTSport Channel, Europ League 2018/19
-  DOTA_ID: "UUfsOfLvadg89Bx8Sv_6WERg" // NoobfromUA uploads
-};
+// export const youtubeAPI = {
+//   HOST: "https://www.googleapis.com/youtube/v3",
+//   KEY: "{your-youtube-api-key}",
+//   PLAYLIST: "/playlists",
+//   PLAYLIST_ITEMS: "/playlistItems",
+//   // playlistId
+//   NBA_ID: "PLKddg6CP4-_wVmmCvSwOIkHu0676TdR_z", // Ximo Pierto - 2018/19
+//   CHAMPIONS_LEAGUE_ID: "PLubVgegS36EMhMb1j0NZL7Fcwy5jioEcg", // BTSport Channel, Champions League 2018/19
+//   EUROPA_LEAGUE_ID: "PLubVgegS36EMNu3zRwwppiq3HrOjSNveM", // BTSport Channel, Europ League 2018/19
+//   DOTA_ID: "UUfsOfLvadg89Bx8Sv_6WERg" // NoobfromUA uploads
+// };
 
 /**
  *

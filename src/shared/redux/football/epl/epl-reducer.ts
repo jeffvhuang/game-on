@@ -1,7 +1,6 @@
 import * as C from "./epl-constants";
 import { FootballState } from "../football-types";
 import { EplActionTypes } from "./epl-types";
-import { createYoutubeThumnailObjects } from "../../../../helpers/utils";
 
 const initialState: FootballState = {
   isFetching: false,
@@ -10,7 +9,6 @@ const initialState: FootballState = {
   today: [],
   upcoming: [],
   completed: [],
-  videos: [],
   thumbnails: [],
   error: {}
 };
@@ -42,13 +40,6 @@ function eplReducer(
       });
     case C.GET_EPL_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-
-    // case A.GET_EPL_VIDEOS_REQUEST:
-    //   return Object.assign({}, state, { isFetching: true });
-    // case A.GET_EPL_VIDEOS_SUCCESS:
-    //   return Object.assign({}, state, { isFetching: false, videos: action.payload });
-    // case A.GET_EPL_VIDEOS_FAILURE:
-    //   return Object.assign({}, state, { isFetching: false, error: action.err });
 
     default:
       return state;

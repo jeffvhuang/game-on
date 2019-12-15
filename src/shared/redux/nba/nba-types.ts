@@ -14,8 +14,6 @@ export interface NbaState {
   upcoming: NbaSchedule[],
   completed: NbaSchedule[],
   gameDetails: NbaGameDetails,
-  videos: YoutubePlaylistItem[],
-  thumbnails: ThumbnailObject[],
   error: any
 }
 
@@ -65,20 +63,6 @@ export interface GetNbaTeamsFailure {
   err: any 
 }
 
-// Get NBA Videos
-export interface GetNbaVideosRequest {
-  type: typeof C.GET_NBA_VIDEOS_REQUEST;
-}
-
-export interface GetNbaVideosSuccess {
-  type: typeof C.GET_NBA_VIDEOS_SUCCESS;
-  payload: YoutubePlaylistItem[];
-}
-export interface GetNbaVideosFailure {
-  type: typeof C.GET_NBA_VIDEOS_FAILURE;
-  err: any;
-}
-
 export type NbaActionTypes = 
   GetNbaScheduleRequest | 
   GetNbaScheduleSuccess | 
@@ -88,7 +72,4 @@ export type NbaActionTypes =
   GetNbaGameDetailsFailure |
   GetNbaTeamsRequest |
   GetNbaTeamsSuccess |
-  GetNbaTeamsFailure |
-  GetNbaVideosRequest |
-  GetNbaVideosSuccess |
-  GetNbaVideosFailure;
+  GetNbaTeamsFailure;

@@ -1,6 +1,5 @@
 import * as A from './csgo-constants';
 import { CsgoState, CsgoActionTypes } from './csgo-types';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState: CsgoState = {
   isFetching: false,

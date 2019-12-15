@@ -1,6 +1,5 @@
 import * as A from './lol-constants';
 import { LolState, LolActionTypes } from './lol-types';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
 
 const initialState: LolState = {
   isFetching: false,
@@ -12,8 +11,6 @@ const initialState: LolState = {
   matches: [],
   matchesTeams: [],
   teams: [],
-  videos: [],
-  thumbnails: [],
   error: {}
 };
 
@@ -56,18 +53,6 @@ function lolReducer(state = initialState, action: LolActionTypes): LolState {
       return Object.assign({}, state, { isFetching: false, teams: action.payload });
     case A.GET_LOL_TEAMS_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
-
-    case A.GET_LOL_VIDEOS_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
-    case A.GET_LOL_VIDEOS_SUCCESS:
-      return Object.assign({}, state, {
-        isFetching: false,
-        videos: action.payload,
-        thumbnails: createYoutubeThumnailObjects(action.payload)
-      });
-    case A.GET_LOL_VIDEOS_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
-
 
     default:
       return state;

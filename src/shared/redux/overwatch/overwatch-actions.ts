@@ -1,38 +1,42 @@
-import axios from 'axios';
-import { ThunkAction } from 'redux-thunk';
+import axios from "axios";
+import { ThunkAction } from "redux-thunk";
 
-import * as T from './overwatch-types';
-import * as C from './overwatch-constants';
-import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
+import * as T from "./overwatch-types";
+import * as C from "./overwatch-constants";
+import { gameonAPI } from "../../../helpers/constants";
 import {
   sleep,
   sortESportsTournaments,
   sortESportByDate,
   getESportsTeamsFromMatches
-} from '../../../helpers/utils';
-import { ReduxState } from '../redux-state';
-import { ESportsTournament } from '../../../types/esports-api/esports-tournament.model';
-import { ESportsMatch } from '../../../types/esports-api/esports-match.model';
+} from "../../../helpers/utils";
+import { ReduxState } from "../redux-state";
+import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
+import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 
 // Temporary seed data
-import TOURNAMENTS from '../../../mockApiData/overwatchTournaments.json';
-import MATCHES from '../../../mockApiData/overwatchMatches.json';
-import TOURNAMENT_MATCHES from '../../../mockApiData/overwatchTournamentMatches.json';
+import TOURNAMENTS from "../../../mockApiData/overwatchTournaments.json";
+import MATCHES from "../../../mockApiData/overwatchMatches.json";
+import TOURNAMENT_MATCHES from "../../../mockApiData/overwatchTournamentMatches.json";
 
 // Get Tournaments
 export function getOverwatchTournamentsRequest(): T.GetOverwatchTournamentsRequest {
-  return { type: C.GET_OVERWATCH_TOURNAMENTS_REQUEST }
+  return { type: C.GET_OVERWATCH_TOURNAMENTS_REQUEST };
 }
-export function getOverwatchTournamentsSuccess(payload, sortedTournaments): T.GetOverwatchTournamentsSuccess {
+export function getOverwatchTournamentsSuccess(
+  payload,
+  sortedTournaments
+): T.GetOverwatchTournamentsSuccess {
   return {
-    type:
-      C.GET_OVERWATCH_TOURNAMENTS_SUCCESS,
+    type: C.GET_OVERWATCH_TOURNAMENTS_SUCCESS,
     payload,
     sortedTournaments
-  }
+  };
 }
-export function getOverwatchTournamentsFailure(err): T.GetOverwatchTournamentsFailure {
-  return { type: C.GET_OVERWATCH_TOURNAMENTS_FAILURE, err }
+export function getOverwatchTournamentsFailure(
+  err
+): T.GetOverwatchTournamentsFailure {
+  return { type: C.GET_OVERWATCH_TOURNAMENTS_FAILURE, err };
 }
 
 // export const getOverwatchTournaments = (): ThunkAction<
@@ -51,8 +55,11 @@ export function getOverwatchTournamentsFailure(err): T.GetOverwatchTournamentsFa
 
 // This uses mock data to reduce requests to api
 export const getOverwatchTournaments = (): ThunkAction<
-  Promise<ESportsTournament[]>, ReduxState, null, T.OverwatchActionTypes
-> => async (dispatch) => {
+  Promise<ESportsTournament[]>,
+  ReduxState,
+  null,
+  T.OverwatchActionTypes
+> => async dispatch => {
   dispatch(getOverwatchTournamentsRequest());
   await sleep(1000);
   const tournaments = TOURNAMENTS as ESportsTournament[];
@@ -63,17 +70,20 @@ export const getOverwatchTournaments = (): ThunkAction<
 
 // Get Matches
 export function getOverwatchMatchesRequest(): T.GetOverwatchMatchesRequest {
-  return { type: C.GET_OVERWATCH_MATCHES_REQUEST }
+  return { type: C.GET_OVERWATCH_MATCHES_REQUEST };
 }
-export function getOverwatchMatchesSuccess(payload, matchesTeams): T.GetOverwatchMatchesSuccess {
+export function getOverwatchMatchesSuccess(
+  payload,
+  matchesTeams
+): T.GetOverwatchMatchesSuccess {
   return {
     type: C.GET_OVERWATCH_MATCHES_SUCCESS,
     payload,
     matchesTeams
-  }
+  };
 }
 export function getOverwatchMatchesFailure(err): T.GetOverwatchMatchesFailure {
-  return { type: C.GET_OVERWATCH_MATCHES_FAILURE, err }
+  return { type: C.GET_OVERWATCH_MATCHES_FAILURE, err };
 }
 
 // export const getOverwatchMatches = (): ThunkAction<
@@ -92,8 +102,11 @@ export function getOverwatchMatchesFailure(err): T.GetOverwatchMatchesFailure {
 // };
 
 export const getOverwatchMatches = (): ThunkAction<
-  Promise<ESportsMatch[]>, ReduxState, null, T.OverwatchActionTypes
-> => async (dispatch) => {
+  Promise<ESportsMatch[]>,
+  ReduxState,
+  null,
+  T.OverwatchActionTypes
+> => async dispatch => {
   dispatch(getOverwatchMatchesRequest());
   await sleep(1000);
   const matches = MATCHES as ESportsMatch[];
@@ -104,16 +117,20 @@ export const getOverwatchMatches = (): ThunkAction<
 
 // Get A Tournament's Matches
 export function getOverwatchTournamentMatchesRequest(): T.GetOverwatchTournamentMatchesRequest {
-  return { type: C.GET_OVERWATCH_TOURNAMENT_MATCHES_REQUEST }
+  return { type: C.GET_OVERWATCH_TOURNAMENT_MATCHES_REQUEST };
 }
-export function getOverwatchTournamentMatchesSuccess(payload): T.GetOverwatchTournamentMatchesSuccess {
-  return { type: C.GET_OVERWATCH_TOURNAMENT_MATCHES_SUCCESS, payload }
+export function getOverwatchTournamentMatchesSuccess(
+  payload
+): T.GetOverwatchTournamentMatchesSuccess {
+  return { type: C.GET_OVERWATCH_TOURNAMENT_MATCHES_SUCCESS, payload };
 }
-export function getOverwatchTournamentMatchesFailure(err): T.GetOverwatchTournamentMatchesFailure {
-  return { type: C.GET_OVERWATCH_TOURNAMENT_MATCHES_FAILURE, err }
+export function getOverwatchTournamentMatchesFailure(
+  err
+): T.GetOverwatchTournamentMatchesFailure {
+  return { type: C.GET_OVERWATCH_TOURNAMENT_MATCHES_FAILURE, err };
 }
 export function clearOverwatchTournamentMatchesSuccess(): T.ClearOverwatchTournamentMatchesSuccess {
-  return { type: C.CLEAR_OVERWATCH_TOURNAMENT_MATCHES }
+  return { type: C.CLEAR_OVERWATCH_TOURNAMENT_MATCHES };
 }
 
 // export const getOverwatchTournamentMatches = (tournamentId: string): ThunkAction<
@@ -129,16 +146,24 @@ export function clearOverwatchTournamentMatchesSuccess(): T.ClearOverwatchTourna
 //   });
 // };
 
-export const getOverwatchTournamentMatches = (tournamentId: string): ThunkAction<
-  Promise<void>, ReduxState, null, T.OverwatchActionTypes
-> => async (dispatch) => {
+export const getOverwatchTournamentMatches = (
+  tournamentId: string
+): ThunkAction<
+  Promise<void>,
+  ReduxState,
+  null,
+  T.OverwatchActionTypes
+> => async dispatch => {
   dispatch(getOverwatchTournamentMatchesRequest());
   await sleep(1000);
   dispatch(getOverwatchTournamentMatchesSuccess(TOURNAMENT_MATCHES));
 };
 
 export const clearOverwatchTournamentMatches = (): ThunkAction<
-  Promise<void>, ReduxState, null, T.OverwatchActionTypes
-> => async (dispatch) => {
+  Promise<void>,
+  ReduxState,
+  null,
+  T.OverwatchActionTypes
+> => async dispatch => {
   dispatch(clearOverwatchTournamentMatchesSuccess());
-}
+};

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import DotaSeriesContainer from "./DotaSeriesContainer";
+import DotaSeriesContainer from "./list-view/DotaSeriesContainer";
 
 class DotaPage extends React.Component {
   render() {
