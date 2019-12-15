@@ -1,20 +1,23 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
-import { paths } from '../../../../helpers/constants';
-import { getDotaTournaments, getDotaTournamentMatches } from '../../../redux/dota/dota-actions';
+import { paths } from "../../../../helpers/constants";
+import {
+  getDotaTournaments,
+  getDotaTournamentMatches
+} from "../../../redux/dota/dota-actions";
 
-import SelectDropdown from '../../common/SelectDropdown';
-import DotaTournaments from './DotaTournaments';
-import DotaTournamentMatchesContainer from './DotaTournamentMatchesContainer';
-import { ReduxState } from '../../../redux/redux-state';
-import { DotaState } from '../../../redux/dota/dota-types';
-import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
+import SelectDropdown from "../../common/SelectDropdown";
+import DotaTournaments from "./DotaTournaments";
+import DotaTournamentMatchesContainer from "./DotaTournamentMatchesContainer";
+import { ReduxState } from "../../../redux/redux-state";
+import { DotaState } from "../../../redux/dota/dota-types";
+import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
 
 interface StateProps {
   dota: DotaState;
-};
+}
 interface DispatchProps {
   getDotaTournaments;
   getDotaTournamentMatches;
@@ -22,8 +25,8 @@ interface DispatchProps {
 type Props = StateProps & DispatchProps;
 interface State {
   values: string[];
-  showTournamentsMatches: boolean,
-  tournament?: ESportsTournament,
+  showTournamentsMatches: boolean;
+  tournament?: ESportsTournament;
 }
 
 class DotaTournamentsContainer extends React.Component<Props, State> {
@@ -33,7 +36,7 @@ class DotaTournamentsContainer extends React.Component<Props, State> {
     this.state = {
       values: [],
       showTournamentsMatches: false,
-      tournament: {} as ESportsTournament,
+      tournament: {} as ESportsTournament
     };
   }
 
@@ -44,7 +47,7 @@ class DotaTournamentsContainer extends React.Component<Props, State> {
 
   handleChange = values => this.setState({ values });
 
-  selectTournament = (id) => {
+  selectTournament = id => {
     return () => {
       this.props.getDotaTournamentMatches(id);
       const tournament = this.props.dota.tournaments.find(t => t.id == id);
@@ -53,41 +56,57 @@ class DotaTournamentsContainer extends React.Component<Props, State> {
         tournament
       });
     };
-  }
+  };
 
   render() {
     const { dota } = this.props;
-    const mainClass = (this.state.showTournamentsMatches) ? "reduced-side-width" : "full-width";
-    const ddClass = (this.state.showTournamentsMatches) ? "select-dd-left" : "select-dd";
-    const teams = (this.state.tournament) ? this.state.tournament.teams : []; 
+    const mainClass = this.state.showTournamentsMatches
+      ? "reduced-side-width"
+      : "full-width";
+    const ddClass = this.state.showTournamentsMatches ? "select-dd-left" : "";
+    const teams = this.state.tournament ? this.state.tournament.teams : [];
 
     return (
       <div className="section flex">
         <div className={mainClass}>
           <div className={ddClass}>
-            <SelectDropdown handleChange={this.handleChange}
-              options={this.props.dota.teams} />
+            <SelectDropdown
+              handleChange={this.handleChange}
+              options={this.props.dota.teams}
+            />
           </div>
-          <DotaTournaments header="Ongoing"
+          <DotaTournaments
+            header="Ongoing"
             tournaments={dota.ongoing}
             values={this.state.values}
             showTournamentsMatches={this.state.showTournamentsMatches}
-            selectTournament={this.selectTournament} />
-          <DotaTournaments header="Upcoming"
+            selectTournament={this.selectTournament}
+          />
+          <DotaTournaments
+            header="Upcoming"
             tournaments={dota.upcoming}
             values={this.state.values}
             showTournamentsMatches={this.state.showTournamentsMatches}
-            selectTournament={this.selectTournament} />
-          <DotaTournaments header="Completed"
+            selectTournament={this.selectTournament}
+          />
+          <DotaTournaments
+            header="Completed"
             tournaments={dota.completed}
             values={this.state.values}
             showTournamentsMatches={this.state.showTournamentsMatches}
-            selectTournament={this.selectTournament} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
+            selectTournament={this.selectTournament}
+          />
+          <Link to={paths.EVENTS} className="right">
+            More >
+          </Link>
         </div>
-        {this.state.showTournamentsMatches &&
-          <DotaTournamentMatchesContainer tournament={this.state.tournament}
-            matches={dota.tournamentMatches} teams={teams} />}
+        {this.state.showTournamentsMatches && (
+          <DotaTournamentMatchesContainer
+            tournament={this.state.tournament}
+            matches={dota.tournamentMatches}
+            teams={teams}
+          />
+        )}
       </div>
     );
   }
@@ -102,4 +121,7 @@ const mapDispatchToProps = {
   getDotaTournamentMatches
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DotaTournamentsContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DotaTournamentsContainer);

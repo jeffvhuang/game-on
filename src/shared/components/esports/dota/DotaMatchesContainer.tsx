@@ -1,18 +1,21 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
-import { paths } from '../../../../helpers/constants';
-import { getDotaMatches, getDotaSeries } from '../../../redux/dota/dota-actions';
+import { paths } from "../../../../helpers/constants";
+import {
+  getDotaMatches,
+  getDotaSeries
+} from "../../../redux/dota/dota-actions";
 
-import SelectDropdown from '../../common/SelectDropdown';
-import DotaMatches from './DotaMatches';
-import { DotaState } from '../../../redux/dota/dota-types';
-import { ReduxState } from '../../../redux/redux-state';
+import SelectDropdown from "../../common/SelectDropdown";
+import DotaMatches from "./DotaMatches";
+import { DotaState } from "../../../redux/dota/dota-types";
+import { ReduxState } from "../../../redux/redux-state";
 
 interface StateProps {
   dota: DotaState;
-};
+}
 interface DispatchProps {
   getDotaMatches;
   getDotaSeries;
@@ -42,14 +45,18 @@ class DotaPageContainer extends React.Component<Props, State> {
   render() {
     return (
       <div className="section">
-        <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.dota.matchesTeams} />
-        </div>
-        <DotaMatches header="Most Recent"
+        <SelectDropdown
+          handleChange={this.handleChange}
+          options={this.props.dota.matchesTeams}
+        />
+        <DotaMatches
+          header="Most Recent"
           matches={this.props.dota.matches}
-          values={this.state.values} />
-        <Link to={paths.EVENTS} className="right">More ></Link>
+          values={this.state.values}
+        />
+        <Link to={paths.EVENTS} className="right">
+          More >
+        </Link>
       </div>
     );
   }
@@ -60,9 +67,11 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-    getDotaMatches,
-    getDotaSeries
+  getDotaMatches,
+  getDotaSeries
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DotaPageContainer);
-
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DotaPageContainer);
