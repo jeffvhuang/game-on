@@ -121,3 +121,15 @@ export function getNbaTeamsFailure(err): T.GetNbaTeamsFailure {
 //     // throw(err);
 //   });
 // };
+
+export const getNbaTeams = (): ThunkAction<
+  Promise<T.NbaActionTypes>,
+  ReduxState,
+  null,
+  T.NbaActionTypes
+> => async dispatch => {
+  dispatch(getNbaTeamsRequest());
+  await sleep(1500);
+  const nbaTeams = TEAMS.filter(team => team.nbaFranchise == "1");
+  return dispatch(getNbaTeamsSuccess(nbaTeams));
+};
