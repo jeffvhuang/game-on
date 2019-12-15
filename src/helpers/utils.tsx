@@ -410,6 +410,25 @@ export function getTournamentNameFromMatch(match) {
   return tournamentName;
 }
 
+export function getEsportsTournamentsForCalendar(
+  tournaments: ESportsTournament[]
+) {
+  const events = [] as any[];
+
+  for (let i = 0; i < tournaments.length; i++) {
+    const tournament = tournaments[i];
+
+    events.push({
+      id: tournament.id,
+      title: getTournamentName(tournament),
+      start: tournament.beginAt,
+      end: tournament.endAt
+    });
+  }
+
+  return events;
+}
+
 /**
  * convert to objects to be used in common dropdown function used across all apis
  * @param {array} teams

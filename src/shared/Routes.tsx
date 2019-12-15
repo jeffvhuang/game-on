@@ -9,7 +9,7 @@ import BasketballMatchPage from "./components/sports/basketball/matches/Basketba
 import FootballPage from "./components/sports/football/FootballPage";
 import TennisPage from "./components/sports/tennis/TennisPage";
 import TennisTournamentPage from "./components/sports/tennis/tournament-page/TennisTournamentPage";
-import DotaPage from "./components/esports/dota/DotaPage";
+import DotaPage from "./components/esports/dota/DotaSeriesPage";
 import LolPage from "./components/esports/lol/LolPage";
 import CsgoPage from "./components/esports/csgo/CsgoPage";
 import OverwatchPage from "./components/esports/overwatch/OverwatchPage";

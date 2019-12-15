@@ -28,7 +28,7 @@ interface State {
   tournamentId?: number;
 }
 
-class DotaSeriesContainer extends React.Component<Props, State> {
+class DotaSeriesListContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -109,4 +109,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DotaSeriesContainer);
+)(DotaSeriesListContainer);
