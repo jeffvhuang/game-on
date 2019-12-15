@@ -2,18 +2,18 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { paths } from "../../../../helpers/constants";
+import { paths } from "../../../../../helpers/constants";
 import {
   getDotaTournaments,
   getDotaTournamentMatches
-} from "../../../redux/dota/dota-actions";
+} from "../../../../redux/dota/dota-actions";
 
-import SelectDropdown from "../../common/SelectDropdown";
+import SelectDropdown from "../../../common/SelectDropdown";
 import DotaTournaments from "./DotaTournaments";
 import DotaTournamentMatchesContainer from "./DotaTournamentMatchesContainer";
-import { ReduxState } from "../../../redux/redux-state";
-import { DotaState } from "../../../redux/dota/dota-types";
-import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
+import { ReduxState } from "../../../../redux/redux-state";
+import { DotaState } from "../../../../redux/dota/dota-types";
+import { ESportsTournament } from "../../../../../types/esports-api/esports-tournament.model";
 
 interface StateProps {
   dota: DotaState;

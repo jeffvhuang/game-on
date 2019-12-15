@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Row, Col } from "antd";
 
-import { getDayMonthDate } from "../../../../helpers/utils";
-import { ESportsTournamentBase } from "../../../../types/esports-api/esports-tournament-base.model";
+import { getDayMonthDate } from "../../../../../helpers/utils";
+import { ESportsTournamentBase } from "../../../../../types/esports-api/esports-tournament-base.model";
 
 interface Props {
   tournament: ESportsTournamentBase;

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Collapse } from "antd";
 
 import DotaSeriesTournamentDate from "./DotaSeriesTournamentDate";
-import { ESportsSeries } from "../../../../types/esports-api/espots-series.model";
+import { ESportsSeries } from "../../../../../types/esports-api/espots-series.model";
 
 const Panel = Collapse.Panel;
 

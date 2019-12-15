@@ -1,15 +1,14 @@
 import * as React from "react";
-import { object, array } from "prop-types";
 import { Link } from "react-router-dom";
 
-import { paths } from "../../../../helpers/constants";
-import { getTournamentName } from "../../../../helpers/utils";
+import { paths } from "../../../../../helpers/constants";
+import { getTournamentName } from "../../../../../helpers/utils";
 
-import SelectDropdown from "../../common/SelectDropdown";
+import SelectDropdown from "../../../common/SelectDropdown";
 import DotaTournamentMatches from "./DotaTournamentMatches";
-import { ESportsMatch } from "../../../../types/esports-api/esports-match.model";
-import { ESportsTournamentBase } from "../../../../types/esports-api/esports-tournament-base.model";
-import { ESportsTeamBase } from "../../../../types/esports-api/esports-team-base.model";
+import { ESportsMatch } from "../../../../../types/esports-api/esports-match.model";
+import { ESportsTournamentBase } from "../../../../../types/esports-api/esports-tournament-base.model";
+import { ESportsTeamBase } from "../../../../../types/esports-api/esports-team-base.model";
 
 interface StateProps {
   tournament?: ESportsTournamentBase;

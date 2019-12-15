@@ -2,16 +2,16 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { paths } from "../../../../helpers/constants";
+import { paths } from "../../../../../helpers/constants";
 import {
   getDotaMatches,
   getDotaSeries
-} from "../../../redux/dota/dota-actions";
+} from "../../../../redux/dota/dota-actions";
 
-import SelectDropdown from "../../common/SelectDropdown";
+import SelectDropdown from "../../../common/SelectDropdown";
 import DotaMatches from "./DotaMatches";
-import { DotaState } from "../../../redux/dota/dota-types";
-import { ReduxState } from "../../../redux/redux-state";
+import { DotaState } from "../../../../redux/dota/dota-types";
+import { ReduxState } from "../../../../redux/redux-state";
 
 interface StateProps {
   dota: DotaState;
