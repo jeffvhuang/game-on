@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Row, Col } from 'antd';
-import { NbaGameDetails } from '../../../../../types/nba-api/nba-game-details.model';
+import * as React from "react";
+import { Row, Col } from "antd";
+import { NbaGameDetails } from "../../../../../types/nba-api/nba-game-details.model";
 
 interface Props {
   gameDetails: NbaGameDetails;
-};
+}
 
 function StatsLeadersSection({ gameDetails }: Props) {
   return (
@@ -19,7 +19,7 @@ function StatsLeadersSection({ gameDetails }: Props) {
                 <Col span={10}>{leader.stat}</Col>
                 <Col span={4}>{leader.value}</Col>
               </Row>
-            )
+            );
           })}
         </Col>
         <Col span={10} offset={4} className="stats-leader-col">
@@ -30,7 +30,7 @@ function StatsLeadersSection({ gameDetails }: Props) {
                 <Col span={10}>{leader.stat}</Col>
                 <Col span={4}>{leader.value}</Col>
               </Row>
-            )
+            );
           })}
         </Col>
       </Row>
