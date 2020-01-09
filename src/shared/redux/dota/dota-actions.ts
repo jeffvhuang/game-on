@@ -20,7 +20,7 @@ import TOURNAMENT_MATCHES from "../../../mockApiData/dotaTournamentMatches.json"
 import { ThunkAction } from "redux-thunk";
 import { ReduxState } from "../redux-state";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
-import { ESportsSeries } from "../../../types/esports-api/espots-series.model";
+import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 
 // Data API

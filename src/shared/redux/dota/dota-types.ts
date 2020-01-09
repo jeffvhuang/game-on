@@ -1,6 +1,6 @@
 import * as C from "./dota-constants";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
-import { ESportsSeries } from "../../../types/esports-api/espots-series.model";
+import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 import { ESportsTeamBase } from "../../../types/esports-api/esports-team-base.model";
 import { ESportsSortedTournaments } from "../../../types/esports-api/esports-sorted-tournaments.model";

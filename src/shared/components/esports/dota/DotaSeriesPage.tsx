@@ -48,7 +48,7 @@ class DotaSeriesPage extends React.Component<Props, State> {
           <DotaSeriesListContainer />
         ) : (
           <DotaSeriesCalendarContainer
-            tournaments={this.props.dota.tournaments}
+            series={this.props.dota.series}
             selectTournament={this.selectTournament}
           />
         )}
@@ -58,7 +58,7 @@ class DotaSeriesPage extends React.Component<Props, State> {
 }
 
 const mapStateToProps = (state: ReduxState) => ({
-  lol: state.lol
+  dota: state.dota
 });
 
 const mapDispatchToProps = {

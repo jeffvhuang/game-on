@@ -3,15 +3,15 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
 import SelectDropdown from "../../common/SelectDropdown";
-import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
-import { getEsportsTournamentsForCalendar } from "../../../../helpers/utils";
+import { ESportsSeries } from "../../../../types/esports-api/esports-series.model";
+import { getEsportsTournamentsForCalendarFromSeries } from "../../../../helpers/utils";
 
 interface Props {
-  tournaments: ESportsTournament[];
+  series: ESportsSeries[];
   selectTournament: (id: number) => () => void;
 }
 
-function DotaSeriesCalendarContainer({ tournaments, selectTournament }) {
+function DotaSeriesCalendarContainer({ series, selectTournament }) {
   return (
     <div className="section content">
       {/* <SelectDropdown
@@ -22,7 +22,7 @@ function DotaSeriesCalendarContainer({ tournaments, selectTournament }) {
         <FullCalendar
           defaultView="dayGridMonth"
           plugins={[dayGridPlugin]}
-          events={getEsportsTournamentsForCalendar(tournaments)}
+          events={getEsportsTournamentsForCalendarFromSeries(series)}
           eventClick={selectTournament}
         />
       </div>

@@ -4,7 +4,7 @@ import { FootballSchedule } from "../types/football-api/football-schedule.model"
 import { TennisTournament } from "../types/tennis-api/tennis-tournament.model";
 import { ESportsTournament } from "../types/esports-api/esports-tournament.model";
 import { ESportsTeamBase } from "../types/esports-api/esports-team-base.model";
-import { ESportsSeries } from "../types/esports-api/espots-series.model";
+import { ESportsSeries } from "../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../types/esports-api/esports-match.model";
 import { TennisMatch } from "../types/tennis-api/tennis-match.model";
 import { FootballSortedSchedule } from "../types/football-api/football-sorted-schedule.model";
@@ -392,6 +392,24 @@ export function getTournamentName(tournament: ESportsTournament) {
   return tournamentName;
 }
 
+export function getTournamentNameFromSeries(series: ESportsSeries) {
+  let tournamentName = "";
+  if (series) {
+    if (series.league) tournamentName += series.league.name + " ";
+    tournamentName += series.fullName;
+
+    // Capitalise every word
+    const parts = tournamentName.split(" ");
+    tournamentName = "";
+    for (let i = 0; i < parts.length; i++) {
+      if (i != 0) tournamentName += " ";
+      tournamentName += capitalise(parts[i]);
+    }
+  }
+
+  return tournamentName;
+}
+
 export function getTournamentNameFromMatch(match) {
   let tournamentName = "";
   if (match) {
@@ -421,6 +439,25 @@ export function getEsportsTournamentsForCalendar(
     events.push({
       id: tournament.id,
       title: getTournamentName(tournament),
+      start: tournament.beginAt,
+      end: tournament.endAt
+    });
+  }
+
+  return events;
+}
+
+export function getEsportsTournamentsForCalendarFromSeries(
+  series: ESportsSeries[]
+) {
+  const events = [] as any[];
+
+  for (let i = 0; i < series.length; i++) {
+    const tournament = series[i];
+
+    events.push({
+      id: tournament.id,
+      title: getTournamentNameFromSeries(tournament),
       start: tournament.beginAt,
       end: tournament.endAt
     });
