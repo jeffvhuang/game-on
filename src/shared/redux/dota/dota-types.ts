@@ -18,6 +18,7 @@ export interface DotaState {
   upcoming: ESportsTournament[];
   completed: ESportsTournament[];
   matches: ESportsMatch[];
+  selectedSeries: ESportsSeries;
   tournamentMatches: ESportsMatch[];
   teams: ESportsTeamBase[];
   matchesTeams: ESportsTeamBase[];
@@ -106,6 +107,11 @@ export interface GetDotaTeamsFailure {
   err: any;
 }
 
+export interface SelectDotaSeries {
+  type: typeof C.SELECT_DOTA_SERIES;
+  payload: ESportsSeries;
+}
+
 export type DotaActionTypes =
   | GetDotaTournamentsRequest
   | GetDotaTournamentsSuccess
@@ -122,4 +128,5 @@ export type DotaActionTypes =
   | GetDotaMatchesFailure
   | GetDotaTeamsRequest
   | GetDotaTeamsSuccess
-  | GetDotaTeamsFailure;
+  | GetDotaTeamsFailure
+  | SelectDotaSeries;

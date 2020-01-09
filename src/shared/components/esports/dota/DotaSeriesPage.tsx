@@ -1,9 +1,12 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { useHistory, withRouter, RouteComponentProps } from "react-router-dom";
+import { withRouter, RouteComponentProps } from "react-router-dom";
 import { compose } from "redux";
 
-import { getDotaSeries } from "../../../redux/dota/dota-actions";
+import {
+  getDotaSeries,
+  selectDotaSeries
+} from "../../../redux/dota/dota-actions";
 import { DotaState } from "../../../redux/dota/dota-types";
 import { ReduxState } from "../../../redux/redux-state";
 import DotaSeriesListContainer from "./list-view/DotaSeriesListContainer";
@@ -14,6 +17,7 @@ interface StateProps extends RouteComponentProps<any> {
 }
 interface DispatchProps {
   getDotaSeries;
+  selectDotaSeries;
 }
 type Props = StateProps & DispatchProps;
 interface State {
@@ -39,7 +43,9 @@ class DotaSeriesPage extends React.Component<Props, State> {
     }));
 
   selectTournament = info => {
-    const { history } = this.props;
+    const { history, dota } = this.props;
+    const selectedSeries = dota.series.find(s => s.id == info.event.id);
+    this.props.selectDotaSeries(selectedSeries);
     if (history) history.push(`/esports/dota/${info.event.id}`);
   };
 
@@ -67,7 +73,8 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getDotaSeries
+  getDotaSeries,
+  selectDotaSeries
 };
 
 export default compose(

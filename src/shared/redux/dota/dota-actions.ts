@@ -186,6 +186,7 @@ export function clearDotaTournamentMatchesSuccess(): T.ClearDotaTournamentMatche
 //   Promise<void>, ReduxState, null, T.DotaActionTypes
 // > => async (dispatch) => {
 //   dispatch(getDotaTournamentMatchesRequest());
+//    // /dota/matches
 //   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.MATCHES, {
 //     params: { 'tournamentId': tournamentId }
 //   }).then(response => {
@@ -250,4 +251,28 @@ export const getDotaTeams = (): ThunkAction<
   dispatch(getDotaTeamsRequest());
   await sleep(1000);
   dispatch(getDotaTeamsSuccess([]));
+};
+
+export const selectDotaSeries = (
+  series: ESportsSeries
+): ThunkAction<
+  T.DotaActionTypes,
+  ReduxState,
+  null,
+  T.DotaActionTypes
+> => dispatch => {
+  return dispatch({ type: C.SELECT_DOTA_SERIES, payload: series });
+};
+
+export const getDotaSeriesMatches = (
+  tournamentIds: number[]
+): ThunkAction<
+  Promise<void>,
+  ReduxState,
+  null,
+  T.DotaActionTypes
+> => async dispatch => {
+  // dispatch(getDotaTeamsRequest());
+  // await sleep(1000);
+  // dispatch(getDotaTeamsSuccess([]));
 };
