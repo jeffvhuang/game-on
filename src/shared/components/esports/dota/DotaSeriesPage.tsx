@@ -1,5 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import { useHistory, withRouter, RouteComponentProps } from "react-router-dom";
+import { compose } from "redux";
 
 import { getDotaSeries } from "../../../redux/dota/dota-actions";
 import { DotaState } from "../../../redux/dota/dota-types";
@@ -7,7 +9,7 @@ import { ReduxState } from "../../../redux/redux-state";
 import DotaSeriesListContainer from "./list-view/DotaSeriesListContainer";
 import DotaSeriesCalendarContainer from "./DotaSeriesCalendarContainer";
 
-interface StateProps {
+interface StateProps extends RouteComponentProps<any> {
   dota: DotaState;
 }
 interface DispatchProps {
@@ -36,7 +38,10 @@ class DotaSeriesPage extends React.Component<Props, State> {
       isListView: !prevState.isListView
     }));
 
-  selectTournament = () => {};
+  selectTournament = info => {
+    const { history } = this.props;
+    if (history) history.push(`/esports/dota/${info.event.id}`);
+  };
 
   render() {
     return (
@@ -65,7 +70,10 @@ const mapDispatchToProps = {
   getDotaSeries
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default compose(
+  withRouter,
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
 )(DotaSeriesPage);

@@ -10,6 +10,7 @@ import { TennisMatch } from "../types/tennis-api/tennis-match.model";
 import { FootballSortedSchedule } from "../types/football-api/football-sorted-schedule.model";
 import { TennisSortedMatches } from "../types/tennis-api/tennis-sorted-matches.model";
 import { RoundMatches } from "../types/tennis-api/round-matches.model";
+import { EsportsCalendarEvent } from "../types/game-on-general/esports-calendar-event.model";
 
 export const futureDateString = "Sun Dec 31 2199";
 export const futureDate = new Date(futureDateString);
@@ -449,8 +450,8 @@ export function getEsportsTournamentsForCalendar(
 
 export function getEsportsTournamentsForCalendarFromSeries(
   series: ESportsSeries[]
-) {
-  const events = [] as any[];
+): EsportsCalendarEvent[] {
+  const events = [] as EsportsCalendarEvent[];
 
   for (let i = 0; i < series.length; i++) {
     const tournament = series[i];
@@ -459,7 +460,9 @@ export function getEsportsTournamentsForCalendarFromSeries(
       id: tournament.id,
       title: getTournamentNameFromSeries(tournament),
       start: tournament.beginAt,
-      end: tournament.endAt
+      end: tournament.endAt,
+      leagueId: tournament.leagueId,
+      year: tournament.year
     });
   }
 
