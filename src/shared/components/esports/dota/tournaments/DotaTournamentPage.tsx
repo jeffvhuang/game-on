@@ -43,7 +43,7 @@ class DotaTournamentPage extends React.Component<Props, State> {
     return (
       <div>
         <div className="page-header">
-          <h1>Dota 2 Series: {this.state.matchId}</h1>
+          <h1>Dota 2 Tournament: {this.state.matchId}</h1>
         </div>
       </div>
     );
