@@ -2,7 +2,7 @@ import axios from "axios";
 
 import * as T from "./dota-types";
 import * as C from "./dota-constants";
-import { gameonAPI } from "../../../helpers/constants";
+import { gameonAPI, env } from "../../../helpers/constants";
 import {
   sleep,
   sortESportsTournaments,
@@ -72,7 +72,7 @@ export const getDotaTournaments = (): ThunkAction<
   return tournaments;
 };
 
-// Get Series
+// Get Series (multiple)
 export function getDotaSeriesRequest(): T.GetDotaSeriesRequest {
   return { type: C.GET_DOTA_SERIES_REQUEST };
 }
@@ -264,15 +264,47 @@ export const selectDotaSeries = (
   return dispatch({ type: C.SELECT_DOTA_SERIES, payload: series });
 };
 
-export const getDotaSeriesMatches = (
-  tournamentIds: number[]
+//#region get Dota (single) Series details
+export function getDotaSeriesTournamentsRequest(): T.GetDotaSeriesTournamentsRequest {
+  return { type: C.GET_DOTA_SERIES_TOURNAMENTS_REQUEST };
+}
+export function getDotaSeriesTournamentsSuccess(
+  payload
+): T.GetDotaSeriesTournamentsSuccess {
+  return {
+    type: C.GET_DOTA_SERIES_TOURNAMENTS_SUCCESS,
+    payload
+  };
+}
+export function getDotaSeriesTournamentsFailure(
+  err
+): T.GetDotaSeriesTournamentsFailure {
+  return { type: C.GET_DOTA_SERIES_TOURNAMENTS_FAILURE, err };
+}
+
+export const getDotaSeriesTournaments = (
+  seriesId: number
 ): ThunkAction<
   Promise<void>,
   ReduxState,
   null,
   T.DotaActionTypes
 > => async dispatch => {
-  // dispatch(getDotaTeamsRequest());
-  // await sleep(1000);
-  // dispatch(getDotaTeamsSuccess([]));
+  dispatch(getDotaSeriesTournamentsRequest());
+  if (env === "dev") {
+    dispatch(getDotaSeriesTournamentsSuccess());
+    return;
+  }
+  // /api/dota/tournaments/1880
+  return axios
+    .get(
+      `${gameonAPI.HOST}${gameonAPI.DOTA}${gameonAPI.TOURNAMENTS}/${seriesId}`
+    )
+    .then(response => {
+      dispatch(getDotaSeriesTournamentsSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getDotaSeriesTournamentsFailure(err));
+    });
 };
+//endregion

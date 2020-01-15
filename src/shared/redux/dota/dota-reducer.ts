@@ -1,6 +1,5 @@
 import * as A from "./dota-constants";
 import { DotaState, DotaActionTypes } from "./dota-types";
-import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 
 const initialState: DotaState = {
   isFetching: false,
@@ -8,12 +7,12 @@ const initialState: DotaState = {
   ongoingSeries: [],
   upcomingSeries: [],
   completedSeries: [],
+  selectedSeriesTournaments: [],
   tournaments: [],
   ongoing: [],
   upcoming: [],
   completed: [],
   matches: [],
-  selectedSeries: {} as ESportsSeries,
   tournamentMatches: [],
   teams: [],
   matchesTeams: [],
@@ -60,8 +59,15 @@ function dotaReducer(state = initialState, action: DotaActionTypes): DotaState {
     case A.GET_DOTA_MATCHES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });
 
-    case A.SELECT_DOTA_SERIES:
-      return Object.assign({}, state, { selectedSeries: action.payload });
+    case A.GET_DOTA_SERIES_TOURNAMENTS_REQUEST:
+      return Object.assign({}, state, { isFetching: true });
+    case A.GET_DOTA_SERIES_TOURNAMENTS_SUCCESS:
+      return Object.assign({}, state, {
+        isFetching: false,
+        selectedSeriesTournaments: action.payload
+      });
+    case A.GET_DOTA_SERIES_TOURNAMENTS_FAILURE:
+      return Object.assign({}, state, { isFetching: false, error: action.err });
 
     case A.GET_DOTA_TOURNAMENT_MATCHES_REQUEST:
       return Object.assign({}, state, { isFetching: true });

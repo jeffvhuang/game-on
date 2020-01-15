@@ -7,7 +7,7 @@ import { DotaState } from "../../../../redux/dota/dota-types";
 import { ReduxState } from "../../../../redux/redux-state";
 
 interface MatchParams {
-  matchId: string;
+  id: string;
 }
 interface StateProps extends RouteComponentProps<MatchParams> {
   dota: DotaState;
@@ -17,7 +17,7 @@ interface DispatchProps {
 }
 type Props = StateProps & DispatchProps;
 interface State {
-  matchId: string;
+  id: string;
 }
 
 class DotaTournamentPage extends React.Component<Props, State> {
@@ -25,25 +25,25 @@ class DotaTournamentPage extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      matchId: props.match.params.matchId
+      id: props.match.params.id
     };
   }
 
   componentDidMount() {
     const { dota } = this.props;
-    // Get the tournamentMatches if no matches in array or not matcehs from same tournament
+    // Get the tournaments for selected series if none in array or doesnt match from same tournament
     if (
-      !dota.tournamentMatches.length ||
-      dota.tournamentMatches[0].seriesId.toString() != this.state.matchId
+      !dota.selectedSeriesTournaments.length ||
+      dota.selectedSeriesTournaments[0].seriesId.toString() != this.state.id
     )
-      this.props.getDotaSeriesMatches(this.state.matchId);
+      this.props.getDotaSeriesMatches(this.state.id);
   }
 
   render() {
     return (
       <div>
         <div className="page-header">
-          <h1>Dota 2 Tournament: {this.state.matchId}</h1>
+          <h1>Dota 2 Tournament: {this.state.id}</h1>
         </div>
       </div>
     );
