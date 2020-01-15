@@ -1,0 +1,1332 @@
+[
+  {
+      "teams": [
+          {
+              "slug": "ig-vitality",
+              "name": "iG.Vitality",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1650/iG_Vitality.png",
+              "id": 1650,
+              "acronym": "iG.V"
+          },
+          {
+              "slug": "lgd-gaming-dota-2",
+              "name": "PSG.LGD",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1657/220px_lgd_gaminglogo_square.png",
+              "id": 1657,
+              "acronym": "PSG.LGD"
+          },
+          {
+              "slug": "invictus-gaming-dota-2",
+              "name": "Invictus Gaming",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1662/Invictus_Gaming.png",
+              "id": 1662,
+              "acronym": "iG"
+          },
+          {
+              "slug": "vici-gaming-dota-2",
+              "name": "Vici Gaming",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1676/Vici_Gaming.png",
+              "id": 1676,
+              "acronym": "VG"
+          },
+          {
+              "slug": "team-aster",
+              "name": "Team Aster",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/3360/Team_Aster_logo.png",
+              "id": 3360,
+              "acronym": "Aster"
+          },
+          {
+              "slug": "royal-never-give-up-dota-2",
+              "name": "Royal Never Give Up",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/3364/RNG_Logo.png",
+              "id": 3364,
+              "acronym": "RNG"
+          }
+      ],
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-china-dota2-professional-league-1-2019",
+          "season": "1",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 4252,
+          "id": 1886,
+          "fullName": "Season 1 2019",
+          "endAt": "2020-03-10T19:00:00Z",
+          "description": null,
+          "beginAt": "2019-10-16T22:00:00Z"
+      },
+      "matches": [
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "vici-gaming-vs-invictus-gaming-2020-02-27",
+              "numberOfGames": 3,
+              "name": "Upper Round 1: VG vs iG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549694,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-02-27T06:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "psg-lgd-vs-royal-never-give-up-2020-02-27",
+              "numberOfGames": 3,
+              "name": "Upper Round 1: PSG.LGD vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549695,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-02-27T09:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "ig-vitality-2020-02-28",
+              "numberOfGames": 3,
+              "name": "Lower Round 1: iG.V vs TBD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549700,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-02-28T06:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "team-aster-2020-02-28",
+              "numberOfGames": 3,
+              "name": "Lower Round 1: Aster vs TBD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549701,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-02-28T09:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "2020-02-29",
+              "numberOfGames": 3,
+              "name": "Upper Final: TBD vs TBD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549696,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-02-29T06:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "2020-02-29-300489b6-4a2a-4c4f-8754-6783dde232ff",
+              "numberOfGames": 3,
+              "name": "Lower Round 2: TBD vs TBD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549699,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-02-29T09:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "2020-03-01-22d93913-1557-41c6-b6c5-4c14b8575c9a",
+              "numberOfGames": 3,
+              "name": "Lower Final: TBD vs TBD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549698,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-03-01T04:00:00Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2644,
+              "status": "not_started",
+              "slug": "2020-03-01",
+              "numberOfGames": 5,
+              "name": "Final: TBD vs TBD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549697,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": "2020-03-01T07:00:00Z"
+          }
+      ],
+      "league": {
+          "url": null,
+          "slug": "dota-2-china-dota2-professional-league",
+          "name": "China Dota2 Professional League",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4252/800px-China_Dota2_Professional_League_S1.jpg",
+          "id": 4252
+      },
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "dota-2-china-dota2-professional-league-1-2019-playoffs",
+      "name": "Playoffs",
+      "modifiedAt": "2020-01-08T11:29:34Z",
+      "leagueId": 4252,
+      "id": 2644,
+      "endAt": "2020-03-02T19:00:00Z",
+      "beginAt": "2020-02-24T23:00:00Z",
+      "seriesId": 1886
+  },
+  {
+      "teams": [
+          {
+              "slug": "ig-vitality",
+              "name": "iG.Vitality",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1650/iG_Vitality.png",
+              "id": 1650,
+              "acronym": "iG.V"
+          },
+          {
+              "slug": "newbee",
+              "name": "Newbee",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1652/Newbee_logo.png",
+              "id": 1652,
+              "acronym": "Newbee"
+          },
+          {
+              "slug": "lgd-gaming-dota-2",
+              "name": "PSG.LGD",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1657/220px_lgd_gaminglogo_square.png",
+              "id": 1657,
+              "acronym": "PSG.LGD"
+          },
+          {
+              "slug": "invictus-gaming-dota-2",
+              "name": "Invictus Gaming",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1662/Invictus_Gaming.png",
+              "id": 1662,
+              "acronym": "iG"
+          },
+          {
+              "slug": "keen-gaming",
+              "name": "KEEN GAMING",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1673/Keen_Gaming.png",
+              "id": 1673,
+              "acronym": "KG"
+          },
+          {
+              "slug": "vici-gaming-dota-2",
+              "name": "Vici Gaming",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1676/Vici_Gaming.png",
+              "id": 1676,
+              "acronym": "VG"
+          },
+          {
+              "slug": "ehome",
+              "name": "EHOME",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/1687/EHOME.png",
+              "id": 1687,
+              "acronym": "EHOME"
+          },
+          {
+              "slug": "team-aster",
+              "name": "Team Aster",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/3360/Team_Aster_logo.png",
+              "id": 3360,
+              "acronym": "Aster"
+          },
+          {
+              "slug": "royal-never-give-up-dota-2",
+              "name": "Royal Never Give Up",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/3364/RNG_Logo.png",
+              "id": 3364,
+              "acronym": "RNG"
+          },
+          {
+              "slug": "rtphoon-e-sports-club",
+              "name": "Typhoon E-Sports Club",
+              "imageUrl": "https://cdn.pandascore.co/images/team/image/126050/190px-Typhoon_E-Sports_Club_logo.png",
+              "id": 126050,
+              "acronym": "Typhoon"
+          }
+      ],
+      "series": {
+          "year": 2019,
+          "winnerType": null,
+          "winnerId": null,
+          "slug": "dota-2-china-dota2-professional-league-1-2019",
+          "season": "1",
+          "prizepool": null,
+          "name": null,
+          "leagueId": 4252,
+          "id": 1886,
+          "fullName": "Season 1 2019",
+          "endAt": "2020-03-10T19:00:00Z",
+          "description": null,
+          "beginAt": "2019-10-16T22:00:00Z"
+      },
+      "matches": [
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-invictus-gaming-2019-10-17",
+              "numberOfGames": 3,
+              "name": "VG vs iG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549649,
+              "forfeit": false,
+              "endAt": "2019-10-17T11:08:06Z",
+              "draw": false,
+              "beginAt": "2019-10-17T09:07:11Z"
+          },
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-newbee-2019-10-18",
+              "numberOfGames": 3,
+              "name": "VG vs Newbee",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549650,
+              "forfeit": false,
+              "endAt": "2019-10-18T11:02:30Z",
+              "draw": false,
+              "beginAt": "2019-10-18T09:00:58Z"
+          },
+          {
+              "winnerId": 1673,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-keen-gaming-2019-10-19",
+              "numberOfGames": 3,
+              "name": "VG vs KG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549651,
+              "forfeit": false,
+              "endAt": "2019-10-19T09:03:00Z",
+              "draw": false,
+              "beginAt": "2019-10-19T06:00:39Z"
+          },
+          {
+              "winnerId": 1662,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "royal-never-give-up-vs-invictus-gaming-2019-10-19",
+              "numberOfGames": 3,
+              "name": "RNG vs iG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549652,
+              "forfeit": false,
+              "endAt": "2019-10-19T11:13:44Z",
+              "draw": false,
+              "beginAt": "2019-10-19T09:19:32Z"
+          },
+          {
+              "winnerId": 3360,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "typhoon-e-sports-club-vs-team-aster-2019-10-20",
+              "numberOfGames": 3,
+              "name": "Typhoon vs Aster",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549653,
+              "forfeit": false,
+              "endAt": "2019-10-20T08:35:55Z",
+              "draw": false,
+              "beginAt": "2019-10-20T06:00:27Z"
+          },
+          {
+              "winnerId": 1673,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "ehome-vs-keen-gaming-2019-10-20",
+              "numberOfGames": 3,
+              "name": "EHOME vs KG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549654,
+              "forfeit": false,
+              "endAt": "2019-10-20T11:38:58Z",
+              "draw": false,
+              "beginAt": "2019-10-20T09:02:46Z"
+          },
+          {
+              "winnerId": 1650,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "typhoon-e-sports-club-vs-ig-vitality-2019-10-24",
+              "numberOfGames": 3,
+              "name": "Typhoon vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549656,
+              "forfeit": false,
+              "endAt": "2019-10-24T12:04:37Z",
+              "draw": false,
+              "beginAt": "2019-10-24T09:00:09Z"
+          },
+          {
+              "winnerId": 1652,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "newbee-vs-typhoon-e-sports-club-2019-10-27",
+              "numberOfGames": 3,
+              "name": "Newbee vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549660,
+              "forfeit": false,
+              "endAt": "2019-10-25T08:45:08Z",
+              "draw": false,
+              "beginAt": "2019-10-25T06:04:13Z"
+          },
+          {
+              "winnerId": 1687,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "ehome-vs-typhoon-e-sports-club-2019-10-26",
+              "numberOfGames": 3,
+              "name": "EHOME vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549658,
+              "forfeit": false,
+              "endAt": "2019-10-25T11:55:06Z",
+              "draw": false,
+              "beginAt": "2019-10-25T09:12:26Z"
+          },
+          {
+              "winnerId": 1687,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "ehome-vs-newbee-2019-10-26",
+              "numberOfGames": 3,
+              "name": "EHOME vs Newbee",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549657,
+              "forfeit": false,
+              "endAt": "2019-10-26T11:44:15Z",
+              "draw": false,
+              "beginAt": "2019-10-26T09:21:48Z"
+          },
+          {
+              "winnerId": 1673,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "keen-gaming-vs-ig-vitality-2019-10-27",
+              "numberOfGames": 3,
+              "name": "KG vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549659,
+              "forfeit": false,
+              "endAt": "2019-10-27T09:20:44Z",
+              "draw": false,
+              "beginAt": "2019-10-27T06:00:53Z"
+          },
+          {
+              "winnerId": 126050,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "royal-never-give-up-vs-typhoon-e-sports-club-2019-10-31",
+              "numberOfGames": 3,
+              "name": " RNG vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549661,
+              "forfeit": false,
+              "endAt": "2019-10-31T10:54:22Z",
+              "draw": false,
+              "beginAt": "2019-10-31T09:03:16Z"
+          },
+          {
+              "winnerId": 1650,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "newbee-vs-ig-vitality-2019-11-02",
+              "numberOfGames": 3,
+              "name": " Newbee vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549663,
+              "forfeit": false,
+              "endAt": "2019-11-02T12:53:46Z",
+              "draw": false,
+              "beginAt": "2019-11-02T11:01:21Z"
+          },
+          {
+              "winnerId": 1662,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "invictus-gaming-vs-ig-vitality-2019-11-01",
+              "numberOfGames": 3,
+              "name": " iG vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549662,
+              "forfeit": false,
+              "endAt": "2019-11-03T08:01:48Z",
+              "draw": false,
+              "beginAt": "2019-11-03T06:35:42Z"
+          },
+          {
+              "winnerId": 1662,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "newbee-vs-invictus-gaming-2019-11-03",
+              "numberOfGames": 3,
+              "name": " Newbee vs iG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549664,
+              "forfeit": false,
+              "endAt": "2019-11-03T11:27:55Z",
+              "draw": false,
+              "beginAt": "2019-11-03T08:52:29Z"
+          },
+          {
+              "winnerId": 1650,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "ig-vitality-vs-vici-gaming-2019-11-07",
+              "numberOfGames": 3,
+              "name": " iG.V vs VG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549665,
+              "forfeit": false,
+              "endAt": "2019-11-07T10:52:01Z",
+              "draw": false,
+              "beginAt": "2019-11-07T09:00:04Z"
+          },
+          {
+              "winnerId": 3364,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "newbee-vs-royal-never-give-up-2019-11-10",
+              "numberOfGames": 3,
+              "name": " Newbee vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549669,
+              "forfeit": false,
+              "endAt": "2019-11-08T10:46:52Z",
+              "draw": false,
+              "beginAt": "2019-11-08T08:59:59Z"
+          },
+          {
+              "winnerId": 3364,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "royal-never-give-up-vs-team-aster-2019-11-09",
+              "numberOfGames": 3,
+              "name": "RNG vs Aster",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 550629,
+              "forfeit": false,
+              "endAt": "2019-11-09T08:37:02Z",
+              "draw": false,
+              "beginAt": "2019-11-09T06:00:17Z"
+          },
+          {
+              "winnerId": 1687,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "ehome-vs-ig-vitality-2019-11-09",
+              "numberOfGames": 3,
+              "name": " EHOME vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549667,
+              "forfeit": false,
+              "endAt": "2019-11-09T11:43:27Z",
+              "draw": false,
+              "beginAt": "2019-11-09T09:10:34Z"
+          },
+          {
+              "winnerId": 1650,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "team-aster-vs-ig-vitality-2019-11-10",
+              "numberOfGames": 3,
+              "name": " Aster vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549668,
+              "forfeit": false,
+              "endAt": "2019-11-10T07:33:56Z",
+              "draw": false,
+              "beginAt": "2019-11-10T06:01:24Z"
+          },
+          {
+              "winnerId": 1652,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "team-aster-vs-newbee-2019-11-08",
+              "numberOfGames": 3,
+              "name": " Aster vs Newbee",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549666,
+              "forfeit": false,
+              "endAt": "2019-11-10T11:08:11Z",
+              "draw": false,
+              "beginAt": "2019-11-10T09:01:19Z"
+          },
+          {
+              "winnerId": 3360,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "team-aster-vs-ehome-2019-12-14-7dd6098b-0b57-4545-babe-73bfb9fc62e9",
+              "numberOfGames": 3,
+              "name": "Aster vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 551894,
+              "forfeit": false,
+              "endAt": "2019-12-14T07:31:17Z",
+              "draw": false,
+              "beginAt": "2019-12-14T06:08:01Z"
+          },
+          {
+              "winnerId": 1673,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "keen-gaming-vs-typhoon-e-sports-club-2019-12-15",
+              "numberOfGames": 3,
+              "name": "KG vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 551893,
+              "forfeit": false,
+              "endAt": "2019-12-15T10:15:27Z",
+              "draw": false,
+              "beginAt": "2019-12-15T09:00:46Z"
+          },
+          {
+              "winnerId": 3364,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "royal-never-give-up-vs-ig-vitality-2019-12-20",
+              "numberOfGames": 3,
+              "name": "RNG vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549675,
+              "forfeit": false,
+              "endAt": "2019-12-20T10:43:53Z",
+              "draw": false,
+              "beginAt": "2019-12-20T09:05:02Z"
+          },
+          {
+              "winnerId": 3364,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-royal-never-give-up-2020-01-05",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549693,
+              "forfeit": false,
+              "endAt": "2019-12-26T09:27:00Z",
+              "draw": false,
+              "beginAt": "2019-12-26T06:16:01Z"
+          },
+          {
+              "winnerId": 1657,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-ehome-2019-12-26",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549682,
+              "forfeit": false,
+              "endAt": "2019-12-26T12:18:13Z",
+              "draw": false,
+              "beginAt": "2019-12-26T10:06:01Z"
+          },
+          {
+              "winnerId": 3364,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "royal-never-give-up-vs-ehome-2019-12-27",
+              "numberOfGames": 3,
+              "name": "RNG vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 552145,
+              "forfeit": false,
+              "endAt": "2019-12-27T07:42:09Z",
+              "draw": false,
+              "beginAt": "2019-12-27T06:05:52Z"
+          },
+          {
+              "winnerId": 1657,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-team-aster-2020-01-04",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs Aster",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549690,
+              "forfeit": false,
+              "endAt": "2019-12-27T11:18:28Z",
+              "draw": false,
+              "beginAt": "2019-12-27T09:01:59Z"
+          },
+          {
+              "winnerId": 1657,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "newbee-vs-psg-lgd-2019-12-28",
+              "numberOfGames": 3,
+              "name": "Newbee vs PSG.LGD",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549685,
+              "forfeit": false,
+              "endAt": "2019-12-28T10:46:02Z",
+              "draw": false,
+              "beginAt": "2019-12-28T09:08:02Z"
+          },
+          {
+              "winnerId": 3364,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "keen-gaming-vs-royal-never-give-up-2019-12-22",
+              "numberOfGames": 3,
+              "name": "KG vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549680,
+              "forfeit": false,
+              "endAt": "2019-12-29T07:45:14Z",
+              "draw": false,
+              "beginAt": "2019-12-29T06:08:01Z"
+          },
+          {
+              "winnerId": 1657,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-keen-gaming-2020-01-02",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs KG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549688,
+              "forfeit": false,
+              "endAt": "2019-12-29T09:39:10Z",
+              "draw": false,
+              "beginAt": "2019-12-29T08:05:01Z"
+          },
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-ehome-2020-01-02",
+              "numberOfGames": 3,
+              "name": "VG vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 551896,
+              "forfeit": false,
+              "endAt": "2020-01-02T07:42:01Z",
+              "draw": false,
+              "beginAt": "2020-01-02T06:07:01Z"
+          },
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-royal-never-give-up-2019-12-29",
+              "numberOfGames": 3,
+              "name": "VG vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549686,
+              "forfeit": false,
+              "endAt": "2020-01-02T10:36:33Z",
+              "draw": false,
+              "beginAt": "2020-01-02T08:58:01Z"
+          },
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-typhoon-e-sports-club-2019-12-12",
+              "numberOfGames": 3,
+              "name": "VG vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549670,
+              "forfeit": false,
+              "endAt": "2020-01-03T07:16:36Z",
+              "draw": false,
+              "beginAt": "2020-01-03T06:03:01Z"
+          },
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-vici-gaming-2020-01-03",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs VG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549689,
+              "forfeit": false,
+              "endAt": "2020-01-03T10:46:28Z",
+              "draw": false,
+              "beginAt": "2020-01-03T09:02:30Z"
+          },
+          {
+              "winnerId": 1657,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-invictus-gaming-2019-12-27",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs iG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549683,
+              "forfeit": false,
+              "endAt": "2020-01-04T08:06:37Z",
+              "draw": false,
+              "beginAt": "2020-01-04T06:15:02Z"
+          },
+          {
+              "winnerId": 1687,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "invictus-gaming-vs-ehome-2020-01-04",
+              "numberOfGames": 3,
+              "name": "iG vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 552070,
+              "forfeit": false,
+              "endAt": "2020-01-04T11:56:35Z",
+              "draw": false,
+              "beginAt": "2020-01-04T09:05:01Z"
+          },
+          {
+              "winnerId": 1657,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "psg-lgd-vs-typhoon-e-sports-club-2019-12-29",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549687,
+              "forfeit": false,
+              "endAt": "2020-01-05T10:04:06Z",
+              "draw": false,
+              "beginAt": "2020-01-05T09:00:02Z"
+          },
+          {
+              "winnerId": 1662,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "invictus-gaming-vs-typhoon-e-sports-club-2020-01-06",
+              "numberOfGames": 3,
+              "name": "iG vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549678,
+              "forfeit": false,
+              "endAt": "2020-01-06T10:17:05Z",
+              "draw": false,
+              "beginAt": "2020-01-06T09:07:01Z"
+          },
+          {
+              "winnerId": 1662,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "invictus-gaming-vs-keen-gaming-2020-01-07",
+              "numberOfGames": 3,
+              "name": "iG vs KG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549681,
+              "forfeit": false,
+              "endAt": "2020-01-07T07:49:07Z",
+              "draw": false,
+              "beginAt": "2020-01-07T06:03:01Z"
+          },
+          {
+              "winnerId": 3360,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "invictus-gaming-vs-team-aster-2020-01-07",
+              "numberOfGames": 3,
+              "name": "iG vs Aster",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549674,
+              "forfeit": false,
+              "endAt": "2020-01-07T11:46:30Z",
+              "draw": false,
+              "beginAt": "2020-01-07T09:08:01Z"
+          },
+          {
+              "winnerId": 1676,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "vici-gaming-vs-team-aster-2019-12-28",
+              "numberOfGames": 3,
+              "name": "VG vs Aster",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 551895,
+              "forfeit": false,
+              "endAt": "2020-01-08T08:15:59Z",
+              "draw": false,
+              "beginAt": "2020-01-08T06:10:01Z"
+          },
+          {
+              "winnerId": 3360,
+              "tournamentId": 2643,
+              "status": "finished",
+              "slug": "team-aster-vs-keen-gaming-2019-12-26",
+              "numberOfGames": 3,
+              "name": "Aster vs KG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549676,
+              "forfeit": false,
+              "endAt": "2020-01-08T10:52:49Z",
+              "draw": false,
+              "beginAt": "2020-01-08T09:09:02Z"
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "keen-gaming-vs-newbee-2019-10-24",
+              "numberOfGames": 3,
+              "name": "KG vs Newbee",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549655,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "keen-gaming-vs-royal-never-give-up-2019-12-13",
+              "numberOfGames": 3,
+              "name": " KG vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549671,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "team-aster-vs-ehome-2019-12-14",
+              "numberOfGames": 3,
+              "name": " Aster vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549672,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "royal-never-give-up-vs-ehome-2019-12-19",
+              "numberOfGames": 3,
+              "name": "RNG vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549673,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "ehome-vs-royal-never-give-up-2019-12-20",
+              "numberOfGames": 3,
+              "name": " EHOME vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549677,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "team-aster-vs-royal-never-give-up-2019-12-21",
+              "numberOfGames": 3,
+              "name": " Aster vs RNG",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549679,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "vici-gaming-vs-typhoon-e-sports-club-2019-12-28",
+              "numberOfGames": 3,
+              "name": " VG vs Typhoon",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549684,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "royal-never-give-up-vs-ehome-2020-01-04",
+              "numberOfGames": 3,
+              "name": "RNG vs EHOME",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549691,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          },
+          {
+              "winnerId": null,
+              "tournamentId": 2643,
+              "status": "canceled",
+              "slug": "psg-lgd-vs-ig-vitality-2020-01-05",
+              "numberOfGames": 3,
+              "name": " PSG.LGD vs iG.V",
+              "matchType": "best_of",
+              "live": {
+                  "url": null,
+                  "supported": false,
+                  "opensAt": null
+              },
+              "id": 549692,
+              "forfeit": false,
+              "endAt": null,
+              "draw": false,
+              "beginAt": null
+          }
+      ],
+      "league": {
+          "url": null,
+          "slug": "dota-2-china-dota2-professional-league",
+          "name": "China Dota2 Professional League",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4252/800px-China_Dota2_Professional_League_S1.jpg",
+          "id": 4252
+      },
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "dota-2-china-dota2-professional-league-1-2019-group-stage",
+      "name": "Group Stage",
+      "modifiedAt": "2020-01-13T14:06:48Z",
+      "leagueId": 4252,
+      "id": 2643,
+      "endAt": "2020-01-05T19:00:00Z",
+      "beginAt": "2019-10-16T22:00:00Z",
+      "seriesId": 1886
+  }
+]

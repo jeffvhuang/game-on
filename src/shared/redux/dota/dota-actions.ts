@@ -17,6 +17,7 @@ import SERIES from "../../../mockApiData/dotaSeries.json";
 import MATCHES from "../../../mockApiData/dotaMatches.json";
 import TOURNAMENT_MATCHES from "../../../mockApiData/dotaTournamentMatches.json";
 // import TEAMS from '../../../mockApiData/dotaTeams.json';
+import SERIES_TOURNAMENTS from "../../../mockApiData/dotaSeriesTournaments.json";
 import { ThunkAction } from "redux-thunk";
 import { ReduxState } from "../redux-state";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
@@ -292,13 +293,15 @@ export const getDotaSeriesTournaments = (
 > => async dispatch => {
   dispatch(getDotaSeriesTournamentsRequest());
   if (env === "dev") {
-    dispatch(getDotaSeriesTournamentsSuccess());
+    dispatch(getDotaSeriesTournamentsSuccess(SERIES_TOURNAMENTS));
     return;
   }
-  // /api/dota/tournaments/1880
+  // /api/dota/tournaments
   return axios
     .get(
-      `${gameonAPI.HOST}${gameonAPI.DOTA}${gameonAPI.TOURNAMENTS}/${seriesId}`
+      `${gameonAPI.HOST}${gameonAPI.DOTA}${
+        gameonAPI.TOURNAMENTS
+      }?seriesId=${seriesId}`
     )
     .then(response => {
       dispatch(getDotaSeriesTournamentsSuccess(response.data));

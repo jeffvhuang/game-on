@@ -2,7 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
-import { getDotaSeriesMatches } from "../../../../redux/dota/dota-actions";
+import { getDotaSeriesTournaments } from "../../../../redux/dota/dota-actions";
 import { DotaState } from "../../../../redux/dota/dota-types";
 import { ReduxState } from "../../../../redux/redux-state";
 
@@ -13,7 +13,7 @@ interface StateProps extends RouteComponentProps<MatchParams> {
   dota: DotaState;
 }
 interface DispatchProps {
-  getDotaSeriesMatches;
+  getDotaSeriesTournaments;
 }
 type Props = StateProps & DispatchProps;
 interface State {
@@ -36,7 +36,7 @@ class DotaTournamentPage extends React.Component<Props, State> {
       !dota.selectedSeriesTournaments.length ||
       dota.selectedSeriesTournaments[0].seriesId.toString() != this.state.id
     )
-      this.props.getDotaSeriesMatches(this.state.id);
+      this.props.getDotaSeriesTournaments(this.state.id);
   }
 
   render() {
@@ -55,7 +55,7 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getDotaSeriesMatches
+  getDotaSeriesTournaments
 };
 
 export default connect(
