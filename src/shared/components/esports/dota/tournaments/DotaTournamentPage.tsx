@@ -5,6 +5,7 @@ import { RouteComponentProps } from "react-router-dom";
 import { getDotaSeriesTournaments } from "../../../../redux/dota/dota-actions";
 import { DotaState } from "../../../../redux/dota/dota-types";
 import { ReduxState } from "../../../../redux/redux-state";
+import { ESportsTournament } from "../../../../../types/esports-api/esports-tournament.model";
 
 interface MatchParams {
   id: string;
@@ -39,11 +40,46 @@ class DotaTournamentPage extends React.Component<Props, State> {
       this.props.getDotaSeriesTournaments(this.state.id);
   }
 
+  getTournamentName = (tournaments: ESportsTournament[]) => {
+    return tournaments.length ? tournaments[0].league.name : "";
+  };
+
   render() {
+    const { dota } = this.props;
     return (
       <div>
         <div className="page-header">
-          <h1>Dota 2 Tournament: {this.state.id}</h1>
+          <h1>{this.getTournamentName(dota.selectedSeriesTournaments)}</h1>
+        </div>
+        <div>
+          {dota.selectedSeriesTournaments.map(tournament => (
+            <div key={tournament.id}>
+              <h2>{tournament.name}</h2>
+              <div>
+                <h3>Teams</h3>
+                <div>
+                  {tournament.teams.map(team => (
+                    <div key={team.id}>
+                      <h4>{team.name}</h4>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3>Matches</h3>
+                <div>
+                  {tournament.matches.map(match => (
+                    <div key={match.id}>
+                      <h4>{match.name}</h4>
+                      <div>
+                        {match.matchType} {match.numberOfGames.toString()}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     );
