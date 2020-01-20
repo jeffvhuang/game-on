@@ -47,17 +47,17 @@ class DotaTournamentPage extends React.Component<Props, State> {
   render() {
     const { dota } = this.props;
     return (
-      <div>
+      <div className="section content">
         <div className="page-header">
           <h1>{this.getTournamentName(dota.selectedSeriesTournaments)}</h1>
         </div>
         <div>
           {dota.selectedSeriesTournaments.map(tournament => (
-            <div key={tournament.id}>
+            <div key={tournament.id} className="margin-bot">
               <h2>{tournament.name}</h2>
-              <div>
+              <div className="margin-bot">
                 <h3>Teams</h3>
-                <div>
+                <div className="teams-list">
                   {tournament.teams.map(team => (
                     <div key={team.id}>
                       <h4>{team.name}</h4>
@@ -67,13 +67,14 @@ class DotaTournamentPage extends React.Component<Props, State> {
               </div>
               <div>
                 <h3>Matches</h3>
-                <div>
+                <div className="match-list">
                   {tournament.matches.map(match => (
-                    <div key={match.id}>
+                    <div key={match.id} className="match">
                       <h4>{match.name}</h4>
                       <div>
                         {match.matchType} {match.numberOfGames.toString()}
                       </div>
+                      <div>{match.status}</div>
                     </div>
                   ))}
                 </div>
