@@ -7,6 +7,8 @@ import { DotaState } from "../../../../redux/dota/dota-types";
 import { ReduxState } from "../../../../redux/redux-state";
 import { ESportsTournament } from "../../../../../types/esports-api/esports-tournament.model";
 import { capitalise } from "../../../../../helpers/utils";
+import { ESportsMatchBase } from "../../../../../types/esports-api/esports-match-base.model";
+import { ESportsTeamBase } from "../../../../../types/esports-api/esports-team-base.model";
 
 interface MatchParams {
   id: string;
@@ -51,6 +53,18 @@ class DotaTournamentPage extends React.Component<Props, State> {
     return capitalisedParts.join(" ");
   };
 
+  getStatus = (match: ESportsMatchBase, teams: ESportsTeamBase[]): string => {
+    if (match.status === "not_started") {
+      return "Match time: " + match.beginAt;
+    } else if (match.status === "finished") {
+      if (match.draw) return "Draw";
+      const winner = teams.find(t => t.id == match.winnerId);
+      return winner ? winner.acronym + " Wins" : "Match Finished";
+    } else {
+      return this.capitaliseParts(match.status);
+    }
+  };
+
   render() {
     const { dota } = this.props;
     return (
@@ -75,6 +89,15 @@ class DotaTournamentPage extends React.Component<Props, State> {
               <div>
                 <h3>Matches</h3>
                 <div className="match-list">
+                  <div className="match match-header-row">
+                    <div>
+                      <h4>Matchup</h4>
+                    </div>
+                    <div className="match-type">Game Type</div>
+                    <div>Status</div>
+                  </div>
+                </div>
+                <div className="match-list">
                   {tournament.matches.map(match => (
                     <div key={match.id} className="match">
                       <div>
@@ -84,7 +107,7 @@ class DotaTournamentPage extends React.Component<Props, State> {
                         {this.capitaliseParts(match.matchType)}{" "}
                         {match.numberOfGames.toString()}
                       </div>
-                      <div>{this.capitaliseParts(match.status)}</div>
+                      <div>{this.getStatus(match, tournament.teams)}</div>
                     </div>
                   ))}
                 </div>
