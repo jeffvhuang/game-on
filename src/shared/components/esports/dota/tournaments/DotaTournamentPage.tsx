@@ -6,6 +6,7 @@ import { getDotaSeriesTournaments } from "../../../../redux/dota/dota-actions";
 import { DotaState } from "../../../../redux/dota/dota-types";
 import { ReduxState } from "../../../../redux/redux-state";
 import { ESportsTournament } from "../../../../../types/esports-api/esports-tournament.model";
+import { capitalise } from "../../../../../helpers/utils";
 
 interface MatchParams {
   id: string;
@@ -44,6 +45,12 @@ class DotaTournamentPage extends React.Component<Props, State> {
     return tournaments.length ? tournaments[0].league.name : "";
   };
 
+  capitaliseParts = (bestOf: string): string => {
+    const parts = bestOf.split("_");
+    const capitalisedParts = parts.map(p => capitalise(p));
+    return capitalisedParts.join(" ");
+  };
+
   render() {
     const { dota } = this.props;
     return (
@@ -53,13 +60,13 @@ class DotaTournamentPage extends React.Component<Props, State> {
         </div>
         <div>
           {dota.selectedSeriesTournaments.map(tournament => (
-            <div key={tournament.id} className="margin-bot">
+            <div key={tournament.id} className="tournament-section">
               <h2>{tournament.name}</h2>
-              <div className="margin-bot">
+              <div className="team-section">
                 <h3>Teams</h3>
                 <div className="teams-list">
                   {tournament.teams.map(team => (
-                    <div key={team.id}>
+                    <div key={team.id} className="team-name">
                       <h4>{team.name}</h4>
                     </div>
                   ))}
@@ -70,11 +77,14 @@ class DotaTournamentPage extends React.Component<Props, State> {
                 <div className="match-list">
                   {tournament.matches.map(match => (
                     <div key={match.id} className="match">
-                      <h4>{match.name}</h4>
                       <div>
-                        {match.matchType} {match.numberOfGames.toString()}
+                        <h4>{match.name}</h4>
                       </div>
-                      <div>{match.status}</div>
+                      <div className="match-type">
+                        {this.capitaliseParts(match.matchType)}{" "}
+                        {match.numberOfGames.toString()}
+                      </div>
+                      <div>{this.capitaliseParts(match.status)}</div>
                     </div>
                   ))}
                 </div>

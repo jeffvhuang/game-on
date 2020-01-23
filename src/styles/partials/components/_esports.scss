@@ -1,20 +1,35 @@
-.teams-list {
-  display: flex;
-  justify-content: flex-start;
+.tournament-section {
+  margin-bottom: 40px;
 
-  h4 {
-    margin-right: 20px;
+  .team-section {
+    margin-bottom: 30px;
+
+    .teams-list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .team-name {
+        margin-right: 10px;
+        width: 23%;
+      }
+    }
   }
-}
 
-.match-list {
-  .match {
-    display: flex;
-    justify-content: flex-start;
+  .match-list {
+    .match {
+      display: flex;
+      justify-content: flex-start;
 
-    h4,
-    > div {
-      margin-right: 20px;
+      > div:first-child {
+        width: 50%;
+      }
+
+      > div {
+        width: 20%;
+        margin-right: 20px;
+      }
     }
   }
 }
