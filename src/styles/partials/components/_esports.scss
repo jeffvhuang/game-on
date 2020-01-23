@@ -26,8 +26,13 @@
         width: 40%;
       }
 
-      > div {
-        width: 20%;
+      .match-type {
+        width: 15%;
+        margin-right: 20px;
+      }
+
+      .match-status {
+        width: 35%;
         margin-right: 20px;
       }
     }

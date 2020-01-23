@@ -6,7 +6,11 @@ import { getDotaSeriesTournaments } from "../../../../redux/dota/dota-actions";
 import { DotaState } from "../../../../redux/dota/dota-types";
 import { ReduxState } from "../../../../redux/redux-state";
 import { ESportsTournament } from "../../../../../types/esports-api/esports-tournament.model";
-import { capitalise } from "../../../../../helpers/utils";
+import {
+  capitalise,
+  getDateWithOrdinal,
+  getFormattedTime
+} from "../../../../../helpers/utils";
 import { ESportsMatchBase } from "../../../../../types/esports-api/esports-match-base.model";
 import { ESportsTeamBase } from "../../../../../types/esports-api/esports-team-base.model";
 
@@ -55,7 +59,12 @@ class DotaTournamentPage extends React.Component<Props, State> {
 
   getStatus = (match: ESportsMatchBase, teams: ESportsTeamBase[]): string => {
     if (match.status === "not_started") {
-      return "Match time: " + match.beginAt;
+      console.log(match.beginAt);
+      return (
+        this.parseDate(match.beginAt) +
+        " - " +
+        getFormattedTime(new Date(match.beginAt))
+      );
     } else if (match.status === "finished") {
       if (match.draw) return "Draw";
       const winner = teams.find(t => t.id == match.winnerId);
@@ -63,6 +72,11 @@ class DotaTournamentPage extends React.Component<Props, State> {
     } else {
       return this.capitaliseParts(match.status);
     }
+  };
+
+  parseDate = (date: string): string => {
+    const d = new Date(date);
+    return getDateWithOrdinal(d);
   };
 
   render() {
@@ -107,7 +121,9 @@ class DotaTournamentPage extends React.Component<Props, State> {
                         {this.capitaliseParts(match.matchType)}{" "}
                         {match.numberOfGames.toString()}
                       </div>
-                      <div>{this.getStatus(match, tournament.teams)}</div>
+                      <div className="match-status">
+                        {this.getStatus(match, tournament.teams)}
+                      </div>
                     </div>
                   ))}
                 </div>
