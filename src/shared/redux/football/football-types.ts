@@ -8,7 +8,6 @@ export interface FootballState {
   today: FootballSchedule[];
   upcoming: FootballSchedule[];
   completed: FootballSchedule[];
-  videos: any[];
   thumbnails: any[];
   error: any;
 }

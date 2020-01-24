@@ -13,8 +13,6 @@ const initialState: TennisState = {
   liveMatches: [],
   upcomingMatches: [],
   completedMatches: [],
-  videos: [],
-  thumbnails: [],
   // Following 2 always replaced with the recently selected tournament
   tournamentSchedule: [],
   tournamentRounds: [],

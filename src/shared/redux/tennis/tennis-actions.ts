@@ -3,7 +3,7 @@ import { ThunkAction } from "redux-thunk";
 
 import * as T from "./tennis-types";
 import * as C from "./tennis-constants";
-import { youtubeAPI, gameonAPI } from "../../../helpers/constants";
+import { gameonAPI } from "../../../helpers/constants";
 import {
   sleep,
   sortTennisSchedule,
@@ -18,8 +18,6 @@ import MATCHES from "../../../mockApiData/tennisMatches.json";
 import { ReduxState } from "../redux-state";
 import { TennisTournamentInfo } from "../../../types/tennis-api/tennis-tournament-info.model";
 import { TennisMatch } from "../../../types/tennis-api/tennis-match.model";
-
-// import { PLAYLIST } from '../../../mockApiData/TennisYoutube';
 
 // Get matches
 export function getTennisMatchesRequest(): T.GetTennisMatchesRequest {
@@ -247,42 +245,3 @@ export const clearTennisTournamentInfo = (): ThunkAction<
 > => async dispatch => {
   dispatch(clearTennisTournamentInfoSuccess());
 };
-
-// Get video from youtube playlist of Tennis highlights
-export function getTennisVideosRequest(): T.GetTennisVideosRequest {
-  return { type: C.GET_TENNIS_VIDEOS_REQUEST };
-}
-export function getTennisVideosSuccess(payload): T.GetTennisVideosSuccess {
-  return { type: C.GET_TENNIS_VIDEOS_SUCCESS, payload };
-}
-export function getTennisVideosFailure(err): T.GetTennisVideosFailure {
-  return { type: C.GET_TENNIS_VIDEOS_FAILURE, err };
-}
-
-// export function getTennisVideos() {
-//   return async function (dispatch) {
-//     dispatch(getTennisVideosRequest());
-//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-//       params: {
-//         'part': 'snippet',
-//         'playlistId': youtubeAPI.Tennis_ID,
-//         'maxResults': '25',
-//         'key': youtubeAPI.KEY
-//       }
-//     }).then(response => {
-//       dispatch(getTennisVideosSuccess(response.data.items));
-//     }).catch(err => {
-//       dispatch(getTennisVideosFailure(err));
-//       throw(err);
-//     });
-//   };
-// };
-
-// mock data
-// export function getTennisVideos() {
-//   return async function (dispatch) {
-//     dispatch(getTennisVideosRequest());
-//     await sleep(1500);
-//     return dispatch(getTennisVideosSuccess(PLAYLIST.items));
-//   };
-// };

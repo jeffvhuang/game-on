@@ -1,31 +1,24 @@
 import * as C from "./dota-constants";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
-import { ESportsSeries } from "../../../types/esports-api/espots-series.model";
+import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 import { ESportsTeamBase } from "../../../types/esports-api/esports-team-base.model";
-import { YoutubePlaylistItem } from "../../../types/youtube/youtube-playlist-item.model";
-import { ThumbnailObject } from "../../../types/tennis-api/thumbnail-object.model";
 import { ESportsSortedTournaments } from "../../../types/esports-api/esports-sorted-tournaments.model";
-import { ESportsSortedSeries } from "../../../types/esports-api/esports-sorted-series.model";
 import { ESportsTeam } from "../../../types/esports-api/esports-team.model";
 
 export interface DotaState {
-  isFetching: boolean,
-  series: ESportsSeries[],
-  ongoingSeries: ESportsSeries[],
-  upcomingSeries: ESportsSeries[],
-  completedSeries: ESportsSeries[],
-  tournaments: ESportsTournament[],
-  ongoing: ESportsTournament[],
-  upcoming: ESportsTournament[],
-  completed: ESportsTournament[],
-  matches: ESportsMatch[],
-  tournamentMatches: ESportsMatch[],
-  teams: ESportsTeamBase[],
-  matchesTeams: ESportsTeamBase[],
-  videos: YoutubePlaylistItem[],
-  thumbnails: ThumbnailObject[],
-  error: any
+  isFetching: boolean;
+  series: ESportsSeries[];
+  selectedSeriesTournaments: ESportsTournament[];
+  tournaments: ESportsTournament[];
+  ongoing: ESportsTournament[];
+  upcoming: ESportsTournament[];
+  completed: ESportsTournament[];
+  matches: ESportsMatch[];
+  tournamentMatches: ESportsMatch[];
+  teams: ESportsTeamBase[];
+  matchesTeams: ESportsTeamBase[];
+  error: any;
 }
 
 // Get DOTA Tournaments
@@ -52,7 +45,6 @@ export interface GetDotaSeriesRequest {
 export interface GetDotaSeriesSuccess {
   type: typeof C.GET_DOTA_SERIES_SUCCESS;
   payload: ESportsSeries[];
-  sortedSeries: ESportsSortedSeries;
 }
 
 export interface GetDotaSeriesFailure {
@@ -67,7 +59,7 @@ export interface GetDotaTournamentMatchesRequest {
 
 export interface GetDotaTournamentMatchesSuccess {
   type: typeof C.GET_DOTA_TOURNAMENT_MATCHES_SUCCESS;
-  payload: ESportsMatch[]
+  payload: ESportsMatch[];
 }
 
 export interface GetDotaTournamentMatchesFailure {
@@ -87,7 +79,7 @@ export interface GetDotaMatchesRequest {
 export interface GetDotaMatchesSuccess {
   type: typeof C.GET_DOTA_MATCHES_SUCCESS;
   payload: ESportsMatch[];
-  matchesTeams: ESportsTeamBase[]
+  matchesTeams: ESportsTeamBase[];
 }
 
 export interface GetDotaMatchesFailure {
@@ -110,37 +102,43 @@ export interface GetDotaTeamsFailure {
   err: any;
 }
 
-// Get DOTA Videos
-export interface GetDotaVideosRequest {
-  type: typeof C.GET_DOTA_VIDEOS_REQUEST;
+export interface SelectDotaSeries {
+  type: typeof C.SELECT_DOTA_SERIES;
+  payload: ESportsSeries;
 }
 
-export interface GetDotaVideosSuccess {
-  type: typeof C.GET_DOTA_VIDEOS_SUCCESS;
-  payload: YoutubePlaylistItem[];
+export interface GetDotaSeriesTournamentsRequest {
+  type: typeof C.GET_DOTA_SERIES_TOURNAMENTS_REQUEST;
 }
-export interface GetDotaVideosFailure {
-  type: typeof C.GET_DOTA_VIDEOS_FAILURE;
+
+export interface GetDotaSeriesTournamentsSuccess {
+  type: typeof C.GET_DOTA_SERIES_TOURNAMENTS_SUCCESS;
+  payload: ESportsTournament[];
+}
+
+export interface GetDotaSeriesTournamentsFailure {
+  type: typeof C.GET_DOTA_SERIES_TOURNAMENTS_FAILURE;
   err: any;
 }
 
 export type DotaActionTypes =
-  GetDotaTournamentsRequest |
-  GetDotaTournamentsSuccess |
-  GetDotaTournamentsFailure |
-  GetDotaSeriesRequest |
-  GetDotaSeriesSuccess |
-  GetDotaSeriesFailure |
-  GetDotaTournamentMatchesRequest |
-  GetDotaTournamentMatchesSuccess |
-  GetDotaTournamentMatchesFailure |
-  ClearDotaTournamentMatchesSuccess |
-  GetDotaMatchesRequest |
-  GetDotaMatchesSuccess |
-  GetDotaMatchesFailure |
-  GetDotaTeamsRequest |
-  GetDotaTeamsSuccess |
-  GetDotaTeamsFailure |
-  GetDotaVideosRequest |
-  GetDotaVideosSuccess |
-  GetDotaVideosFailure;
+  | GetDotaTournamentsRequest
+  | GetDotaTournamentsSuccess
+  | GetDotaTournamentsFailure
+  | GetDotaSeriesRequest
+  | GetDotaSeriesSuccess
+  | GetDotaSeriesFailure
+  | GetDotaTournamentMatchesRequest
+  | GetDotaTournamentMatchesSuccess
+  | GetDotaTournamentMatchesFailure
+  | ClearDotaTournamentMatchesSuccess
+  | GetDotaMatchesRequest
+  | GetDotaMatchesSuccess
+  | GetDotaMatchesFailure
+  | GetDotaTeamsRequest
+  | GetDotaTeamsSuccess
+  | GetDotaTeamsFailure
+  | SelectDotaSeries
+  | GetDotaSeriesTournamentsRequest
+  | GetDotaSeriesTournamentsSuccess
+  | GetDotaSeriesTournamentsFailure;

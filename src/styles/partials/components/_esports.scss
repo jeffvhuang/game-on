@@ -1,0 +1,45 @@
+.tournament-section {
+  margin-bottom: 40px;
+
+  .team-section {
+    margin-bottom: 30px;
+
+    .teams-list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .team-name {
+        margin-right: 10px;
+        width: 23%;
+      }
+    }
+  }
+
+  .match-list {
+    .match {
+      display: flex;
+      justify-content: flex-start;
+
+      > div:first-child {
+        width: 40%;
+      }
+
+      .match-type {
+        width: 15%;
+        margin-right: 20px;
+      }
+
+      .match-status {
+        width: 35%;
+        margin-right: 20px;
+      }
+    }
+
+    .match-header-row {
+      border-bottom: 1px solid black;
+      margin-bottom: 10px;
+    }
+  }
+}

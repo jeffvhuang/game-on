@@ -1,42 +1,41 @@
-import axios from 'axios';
-import { ThunkAction } from 'redux-thunk';
+import axios from "axios";
+import { ThunkAction } from "redux-thunk";
 
-import * as T from './csgo-types';
-import * as C from './csgo-constants';
-import { gameonAPI, youtubeAPI } from '../../../helpers/constants';
+import * as T from "./csgo-types";
+import * as C from "./csgo-constants";
+import { gameonAPI } from "../../../helpers/constants";
 import {
   sleep,
   sortESportsTournaments,
   sortESportByDate,
   getESportsTeamsFromMatches
-} from '../../../helpers/utils';
+} from "../../../helpers/utils";
 
 // Temporary seed data
-import TOURNAMENTS from '../../../mockApiData/csgoTournaments.json';
-import MATCHES from '../../../mockApiData/csgoMatches.json';
-import TOURNAMENT_MATCHES from '../../../mockApiData/csgoTournamentMatches.json';
-// import TEAMS from '../../../mockApiData/loTeams.json';
-// import { PLAYLIST } from '../../../mockApiData/csgoYoutube';
-import { ReduxState } from '../redux-state';
-import { ESportsTournament } from '../../../types/esports-api/esports-tournament.model';
-import { ESportsMatch } from '../../../types/esports-api/esports-match.model';
-
+import TOURNAMENTS from "../../../mockApiData/csgoTournaments.json";
+import MATCHES from "../../../mockApiData/csgoMatches.json";
+import TOURNAMENT_MATCHES from "../../../mockApiData/csgoTournamentMatches.json";
+import { ReduxState } from "../redux-state";
+import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
+import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 
 // Data API
 // Get Tournaments
 export function getCsgoTournamentsRequest(): T.GetCsgoTournamentsRequest {
-  return { type: C.GET_CSGO_TOURNAMENTS_REQUEST }
+  return { type: C.GET_CSGO_TOURNAMENTS_REQUEST };
 }
-export function getCsgoTournamentsSuccess(payload, sortedTournaments): T.GetCsgoTournamentsSuccess {
+export function getCsgoTournamentsSuccess(
+  payload,
+  sortedTournaments
+): T.GetCsgoTournamentsSuccess {
   return {
-    type:
-      C.GET_CSGO_TOURNAMENTS_SUCCESS,
+    type: C.GET_CSGO_TOURNAMENTS_SUCCESS,
     payload,
     sortedTournaments
-  }
+  };
 }
 export function getCsgoTournamentsFailure(err): T.GetCsgoTournamentsFailure {
-  return { type: C.GET_CSGO_TOURNAMENTS_FAILURE, err }
+  return { type: C.GET_CSGO_TOURNAMENTS_FAILURE, err };
 }
 
 // export const getCsgoTournaments = (): ThunkAction<
@@ -56,8 +55,11 @@ export function getCsgoTournamentsFailure(err): T.GetCsgoTournamentsFailure {
 
 // This uses mock data to reduce requests to api
 export const getCsgoTournaments = (): ThunkAction<
-  Promise<ESportsTournament[]>, ReduxState, null, T.CsgoActionTypes
-> => async (dispatch) => {
+  Promise<ESportsTournament[]>,
+  ReduxState,
+  null,
+  T.CsgoActionTypes
+> => async dispatch => {
   dispatch(getCsgoTournamentsRequest());
   await sleep(1000);
   const tournaments = TOURNAMENTS as ESportsTournament[];
@@ -68,17 +70,20 @@ export const getCsgoTournaments = (): ThunkAction<
 
 // Get Matches
 export function getCsgoMatchesRequest(): T.GetCsgoMatchesRequest {
-  return { type: C.GET_CSGO_MATCHES_REQUEST }
+  return { type: C.GET_CSGO_MATCHES_REQUEST };
 }
-export function getCsgoMatchesSuccess(payload, matchesTeams): T.GetCsgoMatchesSuccess {
+export function getCsgoMatchesSuccess(
+  payload,
+  matchesTeams
+): T.GetCsgoMatchesSuccess {
   return {
     type: C.GET_CSGO_MATCHES_SUCCESS,
     payload,
     matchesTeams
-  }
+  };
 }
 export function getCsgoMatchesFailure(err): T.GetCsgoMatchesFailure {
-  return { type: C.GET_CSGO_MATCHES_FAILURE, err }
+  return { type: C.GET_CSGO_MATCHES_FAILURE, err };
 }
 
 // export const getCsgoMatches = (): ThunkAction<
@@ -97,8 +102,11 @@ export function getCsgoMatchesFailure(err): T.GetCsgoMatchesFailure {
 // };
 
 export const getCsgoMatches = (): ThunkAction<
-  Promise<ESportsMatch[]>, ReduxState, null, T.CsgoActionTypes
-> => async (dispatch) => {
+  Promise<ESportsMatch[]>,
+  ReduxState,
+  null,
+  T.CsgoActionTypes
+> => async dispatch => {
   dispatch(getCsgoMatchesRequest());
   await sleep(1000);
   const matches = MATCHES as ESportsMatch[];
@@ -109,16 +117,20 @@ export const getCsgoMatches = (): ThunkAction<
 
 // Get A Tournament's Matches
 export function getCsgoTournamentMatchesRequest(): T.GetCsgoTournamentMatchesRequest {
-  return { type: C.GET_CSGO_TOURNAMENT_MATCHES_REQUEST }
+  return { type: C.GET_CSGO_TOURNAMENT_MATCHES_REQUEST };
 }
-export function getCsgoTournamentMatchesSuccess(payload): T.GetCsgoTournamentMatchesSuccess {
-  return { type: C.GET_CSGO_TOURNAMENT_MATCHES_SUCCESS, payload }
+export function getCsgoTournamentMatchesSuccess(
+  payload
+): T.GetCsgoTournamentMatchesSuccess {
+  return { type: C.GET_CSGO_TOURNAMENT_MATCHES_SUCCESS, payload };
 }
-export function getCsgoTournamentMatchesFailure(err): T.GetCsgoTournamentMatchesFailure {
-  return { type: C.GET_CSGO_TOURNAMENT_MATCHES_FAILURE, err }
+export function getCsgoTournamentMatchesFailure(
+  err
+): T.GetCsgoTournamentMatchesFailure {
+  return { type: C.GET_CSGO_TOURNAMENT_MATCHES_FAILURE, err };
 }
 export function clearCsgoTournamentMatchesSuccess(): T.ClearCsgoTournamentMatchesSuccess {
-  return { type: C.CLEAR_CSGO_TOURNAMENT_MATCHES }
+  return { type: C.CLEAR_CSGO_TOURNAMENT_MATCHES };
 }
 
 // export const getCsgoTournamentMatches = (tournamentId: string): ThunkAction<
@@ -134,19 +146,27 @@ export function clearCsgoTournamentMatchesSuccess(): T.ClearCsgoTournamentMatche
 //   });
 // };
 
-export const getCsgoTournamentMatches = (tournamentId: string): ThunkAction<
-  Promise<void>, ReduxState, null, T.CsgoActionTypes
-> => async (dispatch) => {
+export const getCsgoTournamentMatches = (
+  tournamentId: string
+): ThunkAction<
+  Promise<void>,
+  ReduxState,
+  null,
+  T.CsgoActionTypes
+> => async dispatch => {
   dispatch(getCsgoTournamentMatchesRequest());
   await sleep(1000);
   dispatch(getCsgoTournamentMatchesSuccess(TOURNAMENT_MATCHES));
 };
 
 export const clearCsgoTournamentMatches = (): ThunkAction<
-  Promise<void>, ReduxState, null, T.CsgoActionTypes
-> => async (dispatch) => {
+  Promise<void>,
+  ReduxState,
+  null,
+  T.CsgoActionTypes
+> => async dispatch => {
   dispatch(clearCsgoTournamentMatchesSuccess());
-}
+};
 
 // Get Series
 // export function getCsgoSeriesRequest(): T.GetCsgoSeriesRequest {
@@ -217,44 +237,4 @@ export const clearCsgoTournamentMatches = (): ThunkAction<
 //   dispatch(getCsgoTeamsRequest());
 //   await sleep(1000);
 //   return dispatch(getCsgoTeamsSuccess([]));
-// };
-
-
-// Get highlights from youtube
-// export function getCsgoVideosRequest(): T.GetCsgoVideosRequest {
-//   return { type: C.GET_CSGO_VIDEOS_REQUEST }
-// }
-// export function getCsgoVideosSuccess(payload): T.GetCsgoVideosSuccess {
-//   return { type: C.GET_CSGO_VIDEOS_SUCCESS, payload }
-// }
-// export function getCsgoVideosFailure(err): T.GetCsgoVideosFailure {
-//   return { type: C.GET_CSGO_VIDEOS_FAILURE, err }
-// }
-
-// export function getCsgoVideos() {
-//   return async function (dispatch) {
-//     dispatch(getCsgoVideosRequest());
-//     return axios.get(youtubeAPI.HOST + youtubeAPI.PLAYLIST_ITEMS, {
-//       params: {
-//         'part': 'snippet',
-//         'playlistId': youtubeAPI.CSGO_ID,
-//         'maxResults': '25',
-//         'key': youtubeAPI.KEY
-//       }
-//     }).then(response {
-//       dispatch(getCsgoVideosSuccess(response.data.items));
-//     }).catch(err {
-//       dispatch(getCsgoVideosFailure(err));
-//       throw(err);
-//     });
-//   };
-// };
-
-// mock data
-// export const getCsgoVideos = (): ThunkAction<
-//   Promise<T.CsgoActionTypes>, ReduxState, null, T.CsgoActionTypes
-// > => async (dispatch) => {
-//   dispatch(getCsgoVideosRequest());
-//   await sleep(1000);
-//   return dispatch(getCsgoVideosSuccess(PLAYLIST.items));
 // };

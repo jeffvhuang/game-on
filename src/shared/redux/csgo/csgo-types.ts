@@ -2,8 +2,6 @@ import * as C from "./csgo-constants";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 import { ESportsTeamBase } from "../../../types/esports-api/esports-team-base.model";
-import { YoutubePlaylistItem } from "../../../types/youtube/youtube-playlist-item.model";
-import { ThumbnailObject } from "../../../types/tennis-api/thumbnail-object.model";
 import { ESportsSortedTournaments } from "../../../types/esports-api/esports-sorted-tournaments.model";
 import { ESportsTeam } from "../../../types/esports-api/esports-team.model";
 
@@ -17,8 +15,6 @@ export interface CsgoState {
   tournamentMatches: ESportsMatch[],
   teams: ESportsTeamBase[],
   matchesTeams: ESportsTeamBase[],
-  // videos: YoutubePlaylistItem[],
-  // thumbnails: ThumbnailObject[],
   error: any
 }
 
@@ -104,20 +100,6 @@ export interface GetCsgoMatchesFailure {
 //   err: any;
 // }
 
-// Get CSGO Videos
-// export interface GetCsgoVideosRequest {
-//   type: typeof C.GET_CSGO_VIDEOS_REQUEST;
-// }
-
-// export interface GetCsgoVideosSuccess {
-//   type: typeof C.GET_CSGO_VIDEOS_SUCCESS;
-//   payload: YoutubePlaylistItem[];
-// }
-// export interface GetCsgoVideosFailure {
-//   type: typeof C.GET_CSGO_VIDEOS_FAILURE;
-//   err: any;
-// }
-
 export type CsgoActionTypes =
   GetCsgoTournamentsRequest |
   GetCsgoTournamentsSuccess |
@@ -134,7 +116,4 @@ export type CsgoActionTypes =
   // GetCsgoSeriesFailure |
   // GetCsgoTeamsRequest |
   // GetCsgoTeamsSuccess |
-  // GetCsgoTeamsFailure |
-  // GetCsgoVideosRequest |
-  // GetCsgoVideosSuccess |
-  // GetCsgoVideosFailure;
+  // GetCsgoTeamsFailure

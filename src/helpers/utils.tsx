@@ -1,19 +1,18 @@
-import { paths, days, months } from "./constants";
-// import * as youtubeLogo from '../../public/assets/Youtube-logo-2017-640x480.png';
+import { days, months } from "./constants";
 import { NbaSchedule } from "../types/nba-api/nba-schedule.model";
 import { FootballSchedule } from "../types/football-api/football-schedule.model";
 import { TennisTournament } from "../types/tennis-api/tennis-tournament.model";
 import { ESportsTournament } from "../types/esports-api/esports-tournament.model";
 import { ESportsTeamBase } from "../types/esports-api/esports-team-base.model";
-import { ESportsSeries } from "../types/esports-api/espots-series.model";
+import { ESportsSeries } from "../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../types/esports-api/esports-match.model";
 import { TennisMatch } from "../types/tennis-api/tennis-match.model";
 import { FootballSortedSchedule } from "../types/football-api/football-sorted-schedule.model";
 import { TennisSortedMatches } from "../types/tennis-api/tennis-sorted-matches.model";
 import { RoundMatches } from "../types/tennis-api/round-matches.model";
+import { EsportsCalendarEvent } from "../types/game-on-general/esports-calendar-event.model";
+import { EsportsSortedSeries } from "../types/game-on-general/esports-sorted-series.model";
 
-// declare function require(path: string);
-const youtubeLogo = require("../../public/assets/Youtube-logo-2017-640x480.png");
 export const futureDateString = "Sun Dec 31 2199";
 export const futureDate = new Date(futureDateString);
 
@@ -275,10 +274,10 @@ export function sortESportsTournaments(data: ESportsTournament[]) {
   return { ongoing, upcoming, completed, teams };
 }
 
-export function sortESportsSeries(data: ESportsSeries[]) {
-  const ongoingSeries: ESportsSeries[] = [];
-  const upcomingSeries: ESportsSeries[] = [];
-  const completedSeries: ESportsSeries[] = [];
+export function sortESportsSeries(data: ESportsSeries[]): EsportsSortedSeries {
+  const ongoing: ESportsSeries[] = [];
+  const upcoming: ESportsSeries[] = [];
+  const completed: ESportsSeries[] = [];
   const now = Date.now();
 
   // Separate series into today followed by upcoming and past
@@ -287,16 +286,16 @@ export function sortESportsSeries(data: ESportsSeries[]) {
     const beginDate = series.beginAt ? new Date(series.beginAt) : futureDate;
     const endDate = series.endAt ? new Date(series.endAt) : futureDate;
 
-    if (beginDate.getTime() > now) upcomingSeries.push(series);
-    else if (endDate.getTime() < now) completedSeries.push(series);
-    else ongoingSeries.push(series);
+    if (beginDate.getTime() > now) upcoming.push(series);
+    else if (endDate.getTime() < now) completed.push(series);
+    else ongoing.push(series);
   }
 
-  sortESportByDate(ongoingSeries);
-  sortESportByDate(upcomingSeries);
-  sortESportByEndDate(completedSeries);
+  sortESportByDate(ongoing);
+  sortESportByDate(upcoming);
+  sortESportByEndDate(completed);
 
-  return { ongoingSeries, upcomingSeries, completedSeries };
+  return { ongoing, upcoming, completed };
 }
 
 export function sortESportsMatches(data: ESportsMatch[]) {
@@ -395,6 +394,24 @@ export function getTournamentName(tournament: ESportsTournament) {
   return tournamentName;
 }
 
+export function getTournamentNameFromSeries(series: ESportsSeries) {
+  let tournamentName = "";
+  if (series) {
+    if (series.league) tournamentName += series.league.name + " ";
+    tournamentName += series.fullName;
+
+    // Capitalise every word
+    const parts = tournamentName.split(" ");
+    tournamentName = "";
+    for (let i = 0; i < parts.length; i++) {
+      if (i != 0) tournamentName += " ";
+      tournamentName += capitalise(parts[i]);
+    }
+  }
+
+  return tournamentName;
+}
+
 export function getTournamentNameFromMatch(match) {
   let tournamentName = "";
   if (match) {
@@ -411,6 +428,46 @@ export function getTournamentNameFromMatch(match) {
   }
 
   return tournamentName;
+}
+
+export function getEsportsTournamentsForCalendar(
+  tournaments: ESportsTournament[]
+) {
+  const events = [] as any[];
+
+  for (let i = 0; i < tournaments.length; i++) {
+    const tournament = tournaments[i];
+
+    events.push({
+      id: tournament.id,
+      title: getTournamentName(tournament),
+      start: tournament.beginAt,
+      end: tournament.endAt
+    });
+  }
+
+  return events;
+}
+
+export function getEsportsTournamentsForCalendarFromSeries(
+  series: ESportsSeries[]
+): EsportsCalendarEvent[] {
+  const events = [] as EsportsCalendarEvent[];
+
+  for (let i = 0; i < series.length; i++) {
+    const tournament = series[i];
+
+    events.push({
+      id: tournament.id,
+      title: getTournamentNameFromSeries(tournament),
+      start: tournament.beginAt,
+      end: tournament.endAt,
+      leagueId: tournament.leagueId,
+      year: tournament.year
+    });
+  }
+
+  return events;
 }
 
 /**
@@ -432,23 +489,6 @@ export function convertEplTeamsToArray(teams) {
 //#endregion
 
 //#region miscellaneous helper methods
-// Methods to create objects from APIs to show in common thumbnails functions
-export function createYoutubeThumnailObjects(videos) {
-  const thumbnails: any[] = [];
-
-  videos.forEach(video => {
-    const imgSrc = video.snippet.thumbnails
-      ? video.snippet.thumbnails.medium.url
-      : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26341450.jpg";
-    thumbnails.push({
-      videoId: video.snippet.resourceId.videoId,
-      imgSrc: imgSrc,
-      title: video.snippet.title
-    });
-  });
-  return thumbnails;
-}
-
 export function isSameDate(dateTestedAgainst: Date, dateToTest: Date) {
   return (
     dateToTest.getFullYear() == dateTestedAgainst.getFullYear() &&
