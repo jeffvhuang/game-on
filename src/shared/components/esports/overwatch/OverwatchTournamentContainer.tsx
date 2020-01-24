@@ -15,7 +15,7 @@ import {
 import ManualSelectDropdown from "../../common/ManualSelectDropdown";
 import OverwatchTournamentMatches from "./OverwatchTournamentMatches";
 import SingleTournamentSelectDropdown from "../../common/SingleTournamentSelectDropdown";
-import MatchData from "../lol/MatchData";
+import MatchData from "../common/MatchData";
 import { OverwatchState } from "../../../redux/overwatch/overwatch-types";
 import { ReduxState } from "../../../redux/redux-state";
 import { ESportsOpponent } from "../../../../types/esports-api/esports-opponent.model";

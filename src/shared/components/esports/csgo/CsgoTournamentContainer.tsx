@@ -15,7 +15,7 @@ import {
 import ManualSelectDropdown from "../../common/ManualSelectDropdown";
 import CsgoTournamentMatches from "./CsgoTournamentMatches";
 import SingleTournamentSelectDropdown from "../../common/SingleTournamentSelectDropdown";
-import MatchData from "../lol/MatchData";
+import MatchData from "../common/MatchData";
 import { CsgoState } from "../../../redux/csgo/csgo-types";
 import { ReduxState } from "../../../redux/redux-state";
 import { ESportsOpponent } from "../../../../types/esports-api/esports-opponent.model";
