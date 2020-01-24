@@ -10,7 +10,7 @@ import FootballPage from "./components/sports/football/FootballPage";
 import TennisPage from "./components/sports/tennis/TennisPage";
 import TennisTournamentPage from "./components/sports/tennis/tournament-page/TennisTournamentPage";
 import DotaTournamentPage from "./components/esports/dota/tournaments/DotaTournamentPage";
-import DotaSeriesPage from "./components/esports/dota/DotaSeriesPage";
+import DotaPage from "./components/esports/dota/DotaPage";
 import LolPage from "./components/esports/lol/LolPage";
 import CsgoPage from "./components/esports/csgo/CsgoPage";
 import OverwatchPage from "./components/esports/overwatch/OverwatchPage";
@@ -36,8 +36,11 @@ export default class Routes extends React.Component {
           component={TennisTournamentPage}
         />
         <Route path={paths.SPORTS + "/tennis"} component={TennisPage} />
-        <Route path={`${paths.ESPORTS}/dota/:id`} component={DotaTournamentPage} />
-        <Route path={paths.ESPORTS + "/dota"} component={DotaSeriesPage} />
+        <Route
+          path={`${paths.ESPORTS}/dota/:id`}
+          component={DotaTournamentPage}
+        />
+        <Route path={paths.ESPORTS + "/dota"} component={DotaPage} />
         <Route path={paths.ESPORTS + "/lol"} component={LolPage} />
         <Route path={paths.ESPORTS + "/csgo"} component={CsgoPage} />
         <Route path={paths.ESPORTS + "/overwatch"} component={OverwatchPage} />
