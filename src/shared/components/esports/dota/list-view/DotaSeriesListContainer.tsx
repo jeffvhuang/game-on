@@ -38,10 +38,6 @@ class DotaSeriesListContainer extends React.Component<Props, State> {
     };
   }
 
-  componentDidMount() {
-    if (!this.props.dota.series.length) this.props.getDotaSeries();
-  }
-
   getTeams = tournaments => {
     const tournament = tournaments.find(t => t.id == this.state.tournamentId);
     return tournament ? tournament.teams : [];
