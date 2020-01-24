@@ -13,6 +13,7 @@ import {
 
 // Temporary seed data
 import SERIES from "../../../mockApiData/lolSeries.json";
+import SERIES_TOURNAMENTS from "../../../mockApiData/lolSeriesTournaments.json";
 import TOURNAMENTS from "../../../mockApiData/lolTournaments.json";
 import MATCHES from "../../../mockApiData/lolMatches.json";
 import TOURNAMENT_MATCHES from "../../../mockApiData/lolTournamentMatches.json";
@@ -34,8 +35,11 @@ export function getLolSeriesFailure(err): T.GetLolSeriesFailure {
 }
 
 export const getLolSeries = (): ThunkAction<
-  Promise<void>, ReduxState, null, T.LolActionTypes
-> => async (dispatch) => {
+  Promise<void>,
+  ReduxState,
+  null,
+  T.LolActionTypes
+> => async dispatch => {
   dispatch(getLolSeriesRequest());
   if (env === "dev") {
     const series = SERIES as ESportsSeries[];
@@ -43,7 +47,8 @@ export const getLolSeries = (): ThunkAction<
     return;
   }
   // api/lol/series
-  return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES)
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES)
     .then(response => {
       dispatch(getLolSeriesSuccess(response.data));
     })
@@ -52,6 +57,53 @@ export const getLolSeries = (): ThunkAction<
     });
 };
 //#endregion
+
+//#region get Lol (single) Series details
+export function getLolSeriesTournamentsRequest(): T.GetLolSeriesTournamentsRequest {
+  return { type: C.GET_LOL_SERIES_TOURNAMENTS_REQUEST };
+}
+export function getLolSeriesTournamentsSuccess(
+  payload
+): T.GetLolSeriesTournamentsSuccess {
+  return {
+    type: C.GET_LOL_SERIES_TOURNAMENTS_SUCCESS,
+    payload
+  };
+}
+export function getLolSeriesTournamentsFailure(
+  err
+): T.GetLolSeriesTournamentsFailure {
+  return { type: C.GET_LOL_SERIES_TOURNAMENTS_FAILURE, err };
+}
+
+export const getLolSeriesTournaments = (
+  seriesId: number
+): ThunkAction<
+  Promise<void>,
+  ReduxState,
+  null,
+  T.LolActionTypes
+> => async dispatch => {
+  dispatch(getLolSeriesTournamentsRequest());
+  if (env === "dev") {
+    dispatch(getLolSeriesTournamentsSuccess(SERIES_TOURNAMENTS));
+    return;
+  }
+  // /api/dota/tournaments
+  return axios
+    .get(
+      `${gameonAPI.HOST}${gameonAPI.LOL}${
+        gameonAPI.TOURNAMENTS
+      }?seriesId=${seriesId}`
+    )
+    .then(response => {
+      dispatch(getLolSeriesTournamentsSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getLolSeriesTournamentsFailure(err));
+    });
+};
+//endregion
 
 //#region Get Tournaments
 export function getLolTournamentsRequest(): T.GetLolTournamentsRequest {

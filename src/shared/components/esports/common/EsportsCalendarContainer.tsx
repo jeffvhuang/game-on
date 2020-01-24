@@ -11,7 +11,7 @@ interface Props {
   selectTournament: (info: any) => void;
 }
 
-function DotaCalendarContainer({ series, selectTournament }: Props) {
+function EsportsCalendarContainer({ series, selectTournament }: Props) {
   return (
     <div className="section content">
       {/* <SelectDropdown
@@ -30,4 +30,4 @@ function DotaCalendarContainer({ series, selectTournament }: Props) {
   );
 }
 
-export default DotaCalendarContainer;
+export default EsportsCalendarContainer;

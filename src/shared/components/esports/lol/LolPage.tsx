@@ -7,8 +7,8 @@ import { Button } from "antd";
 import { getLolSeries } from "../../../redux/lol/lol-actions";
 import { LolState } from "../../../redux/lol/lol-types";
 import { ReduxState } from "../../../redux/redux-state";
-import DotaSeriesListContainer from "./list-view/LolListContainer";
-import DotaSeriesCalendarContainer from "./LolCalendarContainer";
+import EsportsListContainer from "../common/list-view/EsportsListContainer";
+import EsportsCalendarContainer from "../common/EsportsCalendarContainer";
 
 interface StateProps extends RouteComponentProps<any> {
   lol: LolState;
@@ -62,12 +62,12 @@ class LolPage extends React.Component<Props, State> {
           </Button>
         </div>
         {this.state.isListView ? (
-          <DotaSeriesListContainer
+          <EsportsListContainer
             series={this.props.lol.series}
             selectTournament={this.selectTournament}
           />
         ) : (
-          <DotaSeriesCalendarContainer
+          <EsportsCalendarContainer
             series={this.props.lol.series}
             selectTournament={this.selectCalendarTournament}
           />

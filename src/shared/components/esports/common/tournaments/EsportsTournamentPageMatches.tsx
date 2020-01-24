@@ -13,7 +13,7 @@ interface Props {
   tournament: ESportsTournament;
 }
 
-function DotaTournamentPageMatches({ tournament }: Props) {
+function EsportsTournamentPageMatches({ tournament }: Props) {
   return (
     <div>
       <h3>Matches</h3>
@@ -73,4 +73,4 @@ function parseDate(date: string): string {
   return getDateWithOrdinal(d);
 }
 
-export default DotaTournamentPageMatches;
+export default EsportsTournamentPageMatches;

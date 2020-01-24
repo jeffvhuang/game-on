@@ -6,7 +6,7 @@ interface Props {
   tournament: ESportsTournament;
 }
 
-function DotaTournamentPageTeams({ tournament }: Props) {
+function EsportsTournamentPageTeams({ tournament }: Props) {
   return (
     <div className="team-section">
       <h3>Teams</h3>
@@ -21,4 +21,4 @@ function DotaTournamentPageTeams({ tournament }: Props) {
   );
 }
 
-export default DotaTournamentPageTeams;
+export default EsportsTournamentPageTeams;

@@ -2,28 +2,28 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
-import { getDotaSeriesTournaments } from "../../../../redux/dota/dota-actions";
-import { DotaState } from "../../../../redux/dota/dota-types";
-import { ReduxState } from "../../../../redux/redux-state";
-import { ESportsTournament } from "../../../../../types/esports-api/esports-tournament.model";
-import DotaTournamentPageTeams from "./DotaTournamentPageTeams";
-import DotaTournamentPageMatches from "./DotaTournamentPageMatches";
+import { getLolSeriesTournaments } from "../../../redux/lol/lol-actions";
+import { LolState } from "../../../redux/lol/lol-types";
+import { ReduxState } from "../../../redux/redux-state";
+import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
+import EsportsTournamentPageTeams from "../common/tournaments/EsportsTournamentPageTeams";
+import EsportsTournamentPageMatches from "../common/tournaments/EsportsTournamentPageMatches";
 
 interface MatchParams {
   id: string;
 }
 interface StateProps extends RouteComponentProps<MatchParams> {
-  dota: DotaState;
+  Lol: LolState;
 }
 interface DispatchProps {
-  getDotaSeriesTournaments;
+  getLolSeriesTournaments;
 }
 type Props = StateProps & DispatchProps;
 interface State {
   id: string;
 }
 
-class DotaTournamentPage extends React.Component<Props, State> {
+class LolTournamentPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -33,13 +33,13 @@ class DotaTournamentPage extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    const { dota } = this.props;
+    const { Lol } = this.props;
     // Get the tournaments for selected series if none in array or doesnt match from same tournament
     if (
-      !dota.selectedSeriesTournaments.length ||
-      dota.selectedSeriesTournaments[0].seriesId.toString() != this.state.id
+      !Lol.selectedSeriesTournaments.length ||
+      Lol.selectedSeriesTournaments[0].seriesId.toString() != this.state.id
     )
-      this.props.getDotaSeriesTournaments(this.state.id);
+      this.props.getLolSeriesTournaments(this.state.id);
   }
 
   getTournamentName = (tournaments: ESportsTournament[]) => {
@@ -51,15 +51,15 @@ class DotaTournamentPage extends React.Component<Props, State> {
       <div className="section content">
         <div className="page-header">
           <h1>
-            {this.getTournamentName(this.props.dota.selectedSeriesTournaments)}
+            {this.getTournamentName(this.props.Lol.selectedSeriesTournaments)}
           </h1>
         </div>
         <div>
-          {this.props.dota.selectedSeriesTournaments.map(tournament => (
+          {this.props.Lol.selectedSeriesTournaments.map(tournament => (
             <div key={tournament.id} className="tournament-section">
               <h2>{tournament.name}</h2>
-              <DotaTournamentPageTeams tournament={tournament} />
-              <DotaTournamentPageMatches tournament={tournament} />
+              <EsportsTournamentPageTeams tournament={tournament} />
+              <EsportsTournamentPageMatches tournament={tournament} />
             </div>
           ))}
         </div>
@@ -69,14 +69,14 @@ class DotaTournamentPage extends React.Component<Props, State> {
 }
 
 const mapStateToProps = (state: ReduxState) => ({
-  dota: state.dota
+  lol: state.lol
 });
 
 const mapDispatchToProps = {
-  getDotaSeriesTournaments
+  getLolSeriesTournaments
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DotaTournamentPage);
+)(LolTournamentPage);
