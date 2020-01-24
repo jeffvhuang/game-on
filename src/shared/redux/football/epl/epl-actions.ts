@@ -2,7 +2,7 @@ import axios from "axios";
 
 import * as T from "./epl-types";
 import * as C from "./epl-constants";
-import { gameonAPI } from "../../../../helpers/constants";
+import { gameonAPI, env } from "../../../../helpers/constants";
 import { sleep, sortFootballSchedule } from "../../../../helpers/utils";
 
 // Mock data
@@ -11,7 +11,7 @@ import EPL_SCHEDULE from "../../../../mockApiData/eplSchedule.json";
 import { ThunkAction } from "redux-thunk";
 import { ReduxState } from "../../redux-state";
 
-// Get Schedule
+//#region Get Schedule
 export function getEplScheduleRequest(): T.GetEplScheduleRequest {
   return { type: C.GET_EPL_SCHEDULE_REQUEST };
 }
@@ -25,35 +25,35 @@ export function getEplScheduleFailure(err): T.GetEplScheduleFailure {
   return { type: C.GET_EPL_SCHEDULE_FAILURE, err };
 }
 
-// export const getEplSchedule = (): ThunkAction<
-//   Promise<void>, ReduxState, null, T.EplActionTypes
-// > => async (dispatch) => {
-//   dispatch(getEplScheduleRequest());
-//   return axios({
-//     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.EPL + gameonAPI.SCHEDULE,
-//   }).then(response => {
-//     const sortedSchedule = sortFootballSchedule(response.data);
-//     dispatch(getEplScheduleSuccess(response.data, sortedSchedule));
-//   }).catch(err => {
-//     dispatch(getEplScheduleFailure(err));
-//   });
-// };
-
-// return mock data
 export const getEplSchedule = (): ThunkAction<
-  Promise<T.EplActionTypes>,
+  Promise<void>,
   ReduxState,
   null,
   T.EplActionTypes
 > => async dispatch => {
   dispatch(getEplScheduleRequest());
-  await sleep(1000);
-  const sortedSchedule = sortFootballSchedule(EPL_SCHEDULE);
-  return dispatch(getEplScheduleSuccess(EPL_SCHEDULE, sortedSchedule));
-};
+  if (env === "dev") {
+    await sleep(1000);
+    const sortedSchedule = sortFootballSchedule(EPL_SCHEDULE);
+    dispatch(getEplScheduleSuccess(EPL_SCHEDULE, sortedSchedule));
+    return;
+  }
 
-// Get Teams
+  return axios({
+    method: "get",
+    url: gameonAPI.HOST + gameonAPI.EPL + gameonAPI.SCHEDULE
+  })
+    .then(response => {
+      const sortedSchedule = sortFootballSchedule(response.data);
+      dispatch(getEplScheduleSuccess(response.data, sortedSchedule));
+    })
+    .catch(err => {
+      dispatch(getEplScheduleFailure(err));
+    });
+};
+//#endregion
+
+//#region Get Teams
 export function getEplTeamsRequest(): T.GetEplTeamsRequest {
   return { type: C.GET_EPL_TEAMS_REQUEST };
 }
@@ -64,28 +64,28 @@ export function getEplTeamsFailure(err): T.GetEplTeamsFailure {
   return { type: C.GET_EPL_TEAMS_FAILURE, err };
 }
 
-// export const getEplTeams = (): ThunkAction<
-//   Promise<void>, ReduxState, null, T.EplActionTypes
-// > => async (dispatch) => {
-//   dispatch(getEplTeamsRequest());
-//   return axios({
-//     method: 'get',
-//     url: gameonAPI.HOST + gameonAPI.EPL + gameonAPI.TEAMS
-//   }).then(response => {
-//     dispatch(getEplTeamsSuccess(response.data));
-//   }).catch(err => {
-//     dispatch(getEplTeamsFailure(err));
-//   });
-// };
-
-// return mock data
 export const getEplTeams = (): ThunkAction<
-  Promise<T.EplActionTypes>,
+  Promise<void>,
   ReduxState,
   null,
   T.EplActionTypes
 > => async dispatch => {
   dispatch(getEplTeamsRequest());
-  await sleep(1000);
-  return dispatch(getEplTeamsSuccess(EPL_TEAMS));
+  if (env === "dev") {
+    await sleep(1000);
+    dispatch(getEplTeamsSuccess(EPL_TEAMS));
+    return;
+  }
+
+  return axios({
+    method: "get",
+    url: gameonAPI.HOST + gameonAPI.EPL + gameonAPI.TEAMS
+  })
+    .then(response => {
+      dispatch(getEplTeamsSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getEplTeamsFailure(err));
+    });
 };
+//#endregion

@@ -1,6 +1,7 @@
 import * as C from "./champions-league-constants";
 import { ChampionsLeagueActionTypes } from "./champions-league-types";
 import { FootballState } from "../football-types";
+import { merge } from "../../../../helpers/utils";
 
 const initialState: FootballState = {
   isFetching: false,
@@ -19,9 +20,9 @@ function championsLeagueReducer(
 ): FootballState {
   switch (action.type) {
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
+      return merge(state, { isFetching: true });
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_SUCCESS:
-      return Object.assign({}, state, {
+      return merge(state, {
         isFetching: false,
         schedule: action.payload,
         today: action.sortedSchedule.today,
@@ -29,27 +30,27 @@ function championsLeagueReducer(
         completed: action.sortedSchedule.completed
       });
     case C.GET_CHAMPIONS_LEAGUE_SCHEDULE_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+      return merge(state, { isFetching: false, error: action.err });
 
     case C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
+      return merge(state, { isFetching: true });
     case C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_SUCCESS:
-      return Object.assign({}, state, {
+      return merge(state, {
         isFetching: false,
         live: action.payload
       });
     case C.GET_CHAMPIONS_LEAGUE_GAMES_LIVE_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+      return merge(state, { isFetching: false, error: action.err });
 
     case C.GET_CHAMPIONS_LEAGUE_TEAMS_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
+      return merge(state, { isFetching: true });
     case C.GET_CHAMPIONS_LEAGUE_TEAMS_SUCCESS:
-      return Object.assign({}, state, {
+      return merge(state, {
         isFetching: false,
         teams: action.payload
       });
     case C.GET_CHAMPIONS_LEAGUE_TEAMS_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+      return merge(state, { isFetching: false, error: action.err });
 
     default:
       return state;

@@ -3,7 +3,7 @@ import { ThunkAction } from "redux-thunk";
 
 import * as T from "./csgo-types";
 import * as C from "./csgo-constants";
-import { gameonAPI } from "../../../helpers/constants";
+import { gameonAPI, env } from "../../../helpers/constants";
 import {
   sleep,
   sortESportsTournaments,
@@ -38,22 +38,6 @@ export function getCsgoTournamentsFailure(err): T.GetCsgoTournamentsFailure {
   return { type: C.GET_CSGO_TOURNAMENTS_FAILURE, err };
 }
 
-// export const getCsgoTournaments = (): ThunkAction<
-//   Promise<ESportsTournament[]>, ReduxState, null, T.CsgoActionTypes
-// > => async (dispatch) => {
-//   dispatch(getCsgoTournamentsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.TOURNAMENTS)
-//     .then(response => {
-//       const sortedTournaments = sortESportsTournaments(response.data);
-//       dispatch(getCsgoTournamentsSuccess(response.data, sortedTournaments));
-//       return response.data
-//     }).catch(err => {
-//       dispatch(getCsgoTournamentsFailure(err));
-//       // throw(err);
-//     });
-// };
-
-// This uses mock data to reduce requests to api
 export const getCsgoTournaments = (): ThunkAction<
   Promise<ESportsTournament[]>,
   ReduxState,
@@ -61,11 +45,25 @@ export const getCsgoTournaments = (): ThunkAction<
   T.CsgoActionTypes
 > => async dispatch => {
   dispatch(getCsgoTournamentsRequest());
-  await sleep(1000);
-  const tournaments = TOURNAMENTS as ESportsTournament[];
-  const sortedTournaments = sortESportsTournaments(tournaments);
-  dispatch(getCsgoTournamentsSuccess(tournaments, sortedTournaments));
-  return tournaments;
+  if (env === "dev") {
+    await sleep(1000);
+    const tournaments = TOURNAMENTS as ESportsTournament[];
+    const sortedTournaments = sortESportsTournaments(tournaments);
+    dispatch(getCsgoTournamentsSuccess(tournaments, sortedTournaments));
+    return tournaments;
+  }
+
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.TOURNAMENTS)
+    .then(response => {
+      const sortedTournaments = sortESportsTournaments(response.data);
+      dispatch(getCsgoTournamentsSuccess(response.data, sortedTournaments));
+      return response.data;
+    })
+    .catch(err => {
+      dispatch(getCsgoTournamentsFailure(err));
+      // throw(err);
+    });
 };
 
 // Get Matches
@@ -86,21 +84,6 @@ export function getCsgoMatchesFailure(err): T.GetCsgoMatchesFailure {
   return { type: C.GET_CSGO_MATCHES_FAILURE, err };
 }
 
-// export const getCsgoMatches = (): ThunkAction<
-//   Promise<ESportsMatch[]>, ReduxState, null, T.CsgoActionTypes
-// > => async (dispatch) => {
-//   dispatch(getCsgoMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.MATCHES)
-//     .then(response => {
-//       const matchesTeams = getESportsTeamsFromMatches(response.data);
-//       const sortedMatches = sortESportByDate(response.data);
-//       dispatch(getCsgoMatchesSuccess(sortedMatches, matchesTeams));
-//       return response.data;
-//     }).catch(err => {
-//       dispatch(getCsgoMatchesFailure(err));
-//     });
-// };
-
 export const getCsgoMatches = (): ThunkAction<
   Promise<ESportsMatch[]>,
   ReduxState,
@@ -108,11 +91,24 @@ export const getCsgoMatches = (): ThunkAction<
   T.CsgoActionTypes
 > => async dispatch => {
   dispatch(getCsgoMatchesRequest());
-  await sleep(1000);
-  const matches = MATCHES as ESportsMatch[];
-  const matchesTeams = getESportsTeamsFromMatches(matches);
-  dispatch(getCsgoMatchesSuccess(sortESportByDate(matches), matchesTeams));
-  return matches;
+  if (env === "dev") {
+    const matches = MATCHES as ESportsMatch[];
+    const matchesTeams = getESportsTeamsFromMatches(matches);
+    dispatch(getCsgoMatchesSuccess(sortESportByDate(matches), matchesTeams));
+    return matches;
+  }
+
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.MATCHES)
+    .then(response => {
+      const matchesTeams = getESportsTeamsFromMatches(response.data);
+      const sortedMatches = sortESportByDate(response.data);
+      dispatch(getCsgoMatchesSuccess(sortedMatches, matchesTeams));
+      return response.data;
+    })
+    .catch(err => {
+      dispatch(getCsgoMatchesFailure(err));
+    });
 };
 
 // Get A Tournament's Matches
@@ -133,19 +129,6 @@ export function clearCsgoTournamentMatchesSuccess(): T.ClearCsgoTournamentMatche
   return { type: C.CLEAR_CSGO_TOURNAMENT_MATCHES };
 }
 
-// export const getCsgoTournamentMatches = (tournamentId: string): ThunkAction<
-//   Promise<void>, ReduxState, null, T.CsgoActionTypes
-// > => async (dispatch) => {
-//   dispatch(getCsgoTournamentMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.MATCHES, {
-//     params: { 'tournamentId': tournamentId }
-//   }).then(response => {
-//     dispatch(getCsgoTournamentMatchesSuccess(response.data));
-//   }).catch(err => {
-//     dispatch(getCsgoTournamentMatchesFailure(err));
-//   });
-// };
-
 export const getCsgoTournamentMatches = (
   tournamentId: string
 ): ThunkAction<
@@ -155,8 +138,21 @@ export const getCsgoTournamentMatches = (
   T.CsgoActionTypes
 > => async dispatch => {
   dispatch(getCsgoTournamentMatchesRequest());
-  await sleep(1000);
-  dispatch(getCsgoTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+  if (env === "dev") {
+    await sleep(1000);
+    dispatch(getCsgoTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+  } else {
+    return axios
+      .get(gameonAPI.HOST + gameonAPI.CSGO + gameonAPI.MATCHES, {
+        params: { tournamentId: tournamentId }
+      })
+      .then(response => {
+        dispatch(getCsgoTournamentMatchesSuccess(response.data));
+      })
+      .catch(err => {
+        dispatch(getCsgoTournamentMatchesFailure(err));
+      });
+  }
 };
 
 export const clearCsgoTournamentMatches = (): ThunkAction<

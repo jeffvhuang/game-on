@@ -7,8 +7,7 @@ import {
   sleep,
   sortESportsTournaments,
   sortESportByDate,
-  getESportsTeamsFromMatches,
-  sortESportsSeries
+  getESportsTeamsFromMatches
 } from "../../../helpers/utils";
 
 // Temporary seed data
@@ -25,7 +24,7 @@ import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 
 // Data API
-// Get Tournaments
+//#region Get Tournaments
 export function getDotaTournamentsRequest(): T.GetDotaTournamentsRequest {
   return { type: C.GET_DOTA_TOURNAMENTS_REQUEST };
 }
@@ -43,22 +42,6 @@ export function getDotaTournamentsFailure(err): T.GetDotaTournamentsFailure {
   return { type: C.GET_DOTA_TOURNAMENTS_FAILURE, err };
 }
 
-// export const getDotaTournaments = (): ThunkAction<
-//   Promise<ESportsTournament[]>, ReduxState, null, T.DotaActionTypes
-// > => async (dispatch) => {
-//   dispatch(getDotaTournamentsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.TOURNAMENTS)
-//     .then(response => {
-//       const sortedTournaments = sortESportsTournaments(response.data);
-//       dispatch(getDotaTournamentsSuccess(response.data, sortedTournaments));
-//       return response.data
-//     })
-//     .catch(err => {
-//       dispatch(getDotaTournamentsFailure(err));
-//     });
-// };
-
-// This uses mock data to reduce requests to api
 export const getDotaTournaments = (): ThunkAction<
   Promise<ESportsTournament[]>,
   ReduxState,
@@ -66,14 +49,27 @@ export const getDotaTournaments = (): ThunkAction<
   T.DotaActionTypes
 > => async dispatch => {
   dispatch(getDotaTournamentsRequest());
-  await sleep(1000);
-  const tournaments = TOURNAMENTS as ESportsTournament[];
-  const sortedTournaments = sortESportsTournaments(tournaments);
-  dispatch(getDotaTournamentsSuccess(TOURNAMENTS, sortedTournaments));
-  return tournaments;
-};
+  if (env === "dev") {
+    const tournaments = TOURNAMENTS as ESportsTournament[];
+    const sortedTournaments = sortESportsTournaments(tournaments);
+    dispatch(getDotaTournamentsSuccess(TOURNAMENTS, sortedTournaments));
+    return tournaments;
+  }
 
-// Get Series (multiple)
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.TOURNAMENTS)
+    .then(response => {
+      const sortedTournaments = sortESportsTournaments(response.data);
+      dispatch(getDotaTournamentsSuccess(response.data, sortedTournaments));
+      return response.data;
+    })
+    .catch(err => {
+      dispatch(getDotaTournamentsFailure(err));
+    });
+};
+//#endregion
+
+//#region Get Series (multiple)
 export function getDotaSeriesRequest(): T.GetDotaSeriesRequest {
   return { type: C.GET_DOTA_SERIES_REQUEST };
 }
@@ -84,19 +80,6 @@ export function getDotaSeriesFailure(err): T.GetDotaSeriesFailure {
   return { type: C.GET_DOTA_SERIES_FAILURE, err };
 }
 
-// export const getDotaSeries = (): ThunkAction<
-//   Promise<void>, ReduxState, null, T.DotaActionTypes
-// > => async (dispatch) => {
-//   dispatch(getDotaSeriesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.SERIES)
-//     .then(response => {
-//       dispatch(getDotaSeriesSuccess(response.data));
-//     })
-//     .catch(err => {
-//       dispatch(getDotaSeriesFailure(err));
-//     });
-// };
-
 export const getDotaSeries = (): ThunkAction<
   Promise<void>,
   ReduxState,
@@ -104,12 +87,25 @@ export const getDotaSeries = (): ThunkAction<
   T.DotaActionTypes
 > => async dispatch => {
   dispatch(getDotaSeriesRequest());
-  await sleep(1000);
-  const series = SERIES as ESportsSeries[];
-  dispatch(getDotaSeriesSuccess(series));
-};
+  if (env === "dev") {
+    await sleep(1000);
+    const series = SERIES as ESportsSeries[];
+    dispatch(getDotaSeriesSuccess(series));
+    return;
+  }
 
-// Get Matches
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.SERIES)
+    .then(response => {
+      dispatch(getDotaSeriesSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getDotaSeriesFailure(err));
+    });
+};
+//#endregion
+
+//#region Get Matches
 export function getDotaMatchesRequest(): T.GetDotaMatchesRequest {
   return { type: C.GET_DOTA_MATCHES_REQUEST };
 }
@@ -127,21 +123,6 @@ export function getDotaMatchesFailure(err): T.GetDotaMatchesFailure {
   return { type: C.GET_DOTA_MATCHES_FAILURE, err };
 }
 
-// export const getDotaMatches = (): ThunkAction<
-//   Promise<ESportsMatch[]>, ReduxState, null, T.DotaActionTypes
-// > => async (dispatch) => {
-//   dispatch(getDotaMatchesRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.MATCHES)
-//     .then(response => {
-//       const matchesTeams = getESportsTeamsFromMatches(response.data);
-//       dispatch(getDotaMatchesSuccess(sortESportByDate(response.data), matchesTeams));
-//       return response.data;
-//     })
-//     .catch(err => {
-//       dispatch(getDotaMatchesFailure(err));
-//     });
-// };
-
 export const getDotaMatches = (): ThunkAction<
   Promise<ESportsMatch[]>,
   ReduxState,
@@ -149,14 +130,29 @@ export const getDotaMatches = (): ThunkAction<
   T.DotaActionTypes
 > => async dispatch => {
   dispatch(getDotaMatchesRequest());
-  await sleep(1000);
-  const matches = MATCHES as ESportsMatch[];
-  const matchesTeams = getESportsTeamsFromMatches(matches);
-  dispatch(getDotaMatchesSuccess(sortESportByDate(MATCHES), matchesTeams));
-  return matches;
-};
+  if (env === "dev") {
+    const matches = MATCHES as ESportsMatch[];
+    const matchesTeams = getESportsTeamsFromMatches(matches);
+    dispatch(getDotaMatchesSuccess(sortESportByDate(MATCHES), matchesTeams));
+    return matches;
+  }
 
-// Get A Tournament's Matches
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.MATCHES)
+    .then(response => {
+      const matchesTeams = getESportsTeamsFromMatches(response.data);
+      dispatch(
+        getDotaMatchesSuccess(sortESportByDate(response.data), matchesTeams)
+      );
+      return response.data;
+    })
+    .catch(err => {
+      dispatch(getDotaMatchesFailure(err));
+    });
+};
+//#endregion
+
+//#region Get A Tournament's Matches
 export function getDotaTournamentMatchesRequest(): T.GetDotaTournamentMatchesRequest {
   return { type: C.GET_DOTA_TOURNAMENT_MATCHES_REQUEST };
 }
@@ -174,20 +170,6 @@ export function clearDotaTournamentMatchesSuccess(): T.ClearDotaTournamentMatche
   return { type: C.CLEAR_DOTA_TOURNAMENT_MATCHES };
 }
 
-// export const getDotaTournamentMatches = (tournamentId): ThunkAction<
-//   Promise<void>, ReduxState, null, T.DotaActionTypes
-// > => async (dispatch) => {
-//   dispatch(getDotaTournamentMatchesRequest());
-//    // /dota/matches
-//   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.MATCHES, {
-//     params: { 'tournamentId': tournamentId }
-//   }).then(response => {
-//     dispatch(getDotaTournamentMatchesSuccess(response.data));
-//   }).catch(err => {
-//     dispatch(getDotaTournamentMatchesFailure(err));
-//   });
-// };
-
 export const getDotaTournamentMatches = (
   tournamentId
 ): ThunkAction<
@@ -197,8 +179,22 @@ export const getDotaTournamentMatches = (
   T.DotaActionTypes
 > => async dispatch => {
   dispatch(getDotaTournamentMatchesRequest());
-  await sleep(1000);
-  dispatch(getDotaTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+  if (env === "dev") {
+    dispatch(getDotaTournamentMatchesSuccess(TOURNAMENT_MATCHES));
+    return;
+  }
+
+  // /api/dota/matches
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.MATCHES, {
+      params: { tournamentId: tournamentId }
+    })
+    .then(response => {
+      dispatch(getDotaTournamentMatchesSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getDotaTournamentMatchesFailure(err));
+    });
 };
 
 export const clearDotaTournamentMatches = (): ThunkAction<
@@ -209,8 +205,9 @@ export const clearDotaTournamentMatches = (): ThunkAction<
 > => dispatch => {
   return dispatch(clearDotaTournamentMatchesSuccess());
 };
+//#endregion
 
-// Get Teams
+//#region Get Teams
 export function getDotaTeamsRequest(): T.GetDotaTeamsRequest {
   return { type: C.GET_DOTA_TEAMS_REQUEST };
 }
@@ -221,19 +218,6 @@ export function getDotaTeamsFailure(err): T.GetDotaTeamsFailure {
   return { type: C.GET_DOTA_TEAMS_FAILURE, err };
 }
 
-// export const getDotaTeams = (): ThunkAction<
-//   Promise<void>, ReduxState, null, T.DotaActionTypes
-// > => async (dispatch) => {
-//   dispatch(getDotaTeamsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.TEAMS)
-//     .then(response => {
-//       dispatch(getDotaTeamsSuccess(response.data));
-//     })
-//     .catch(err => {
-//       dispatch(getDotaTeamsFailure(err));
-//     });
-// };
-
 export const getDotaTeams = (): ThunkAction<
   Promise<void>,
   ReduxState,
@@ -241,9 +225,20 @@ export const getDotaTeams = (): ThunkAction<
   T.DotaActionTypes
 > => async dispatch => {
   dispatch(getDotaTeamsRequest());
-  await sleep(1000);
-  dispatch(getDotaTeamsSuccess([]));
+  if (env === "dev") {
+    dispatch(getDotaTeamsSuccess([]));
+  } else {
+    return axios
+      .get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.TEAMS)
+      .then(response => {
+        dispatch(getDotaTeamsSuccess(response.data));
+      })
+      .catch(err => {
+        dispatch(getDotaTeamsFailure(err));
+      });
+  }
 };
+//#endregion
 
 export const selectDotaSeries = (
   series: ESportsSeries
@@ -301,4 +296,4 @@ export const getDotaSeriesTournaments = (
       dispatch(getDotaSeriesTournamentsFailure(err));
     });
 };
-//endregion
+//#endregion
