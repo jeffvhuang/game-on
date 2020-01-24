@@ -9,7 +9,7 @@ const Panel = Collapse.Panel;
 interface Props {
   header: string;
   series: ESportsSeries[];
-  values: string[];
+  values: string[]; // When implementing filtering with select dd
   selectTournament: (id: number) => () => void;
 }
 

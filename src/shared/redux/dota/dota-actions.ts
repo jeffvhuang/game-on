@@ -77,15 +77,8 @@ export const getDotaTournaments = (): ThunkAction<
 export function getDotaSeriesRequest(): T.GetDotaSeriesRequest {
   return { type: C.GET_DOTA_SERIES_REQUEST };
 }
-export function getDotaSeriesSuccess(
-  payload,
-  sortedSeries
-): T.GetDotaSeriesSuccess {
-  return {
-    type: C.GET_DOTA_SERIES_SUCCESS,
-    payload,
-    sortedSeries
-  };
+export function getDotaSeriesSuccess(payload): T.GetDotaSeriesSuccess {
+  return { type: C.GET_DOTA_SERIES_SUCCESS, payload };
 }
 export function getDotaSeriesFailure(err): T.GetDotaSeriesFailure {
   return { type: C.GET_DOTA_SERIES_FAILURE, err };
@@ -114,8 +107,7 @@ export const getDotaSeries = (): ThunkAction<
   dispatch(getDotaSeriesRequest());
   await sleep(1000);
   const series = SERIES as ESportsSeries[];
-  const sortedSeries = sortESportsSeries(series);
-  dispatch(getDotaSeriesSuccess(series, sortedSeries));
+  dispatch(getDotaSeriesSuccess(series));
 };
 
 // Get Matches

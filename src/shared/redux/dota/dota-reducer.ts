@@ -4,9 +4,6 @@ import { DotaState, DotaActionTypes } from "./dota-types";
 const initialState: DotaState = {
   isFetching: false,
   series: [],
-  ongoingSeries: [],
-  upcomingSeries: [],
-  completedSeries: [],
   selectedSeriesTournaments: [],
   tournaments: [],
   ongoing: [],
@@ -40,10 +37,7 @@ function dotaReducer(state = initialState, action: DotaActionTypes): DotaState {
     case A.GET_DOTA_SERIES_SUCCESS:
       return Object.assign({}, state, {
         isFetching: false,
-        series: action.payload,
-        ongoingSeries: action.sortedSeries.ongoingSeries,
-        upcomingSeries: action.sortedSeries.upcomingSeries,
-        completedSeries: action.sortedSeries.completedSeries
+        series: action.payload
       });
     case A.GET_DOTA_SERIES_FAILURE:
       return Object.assign({}, state, { isFetching: false, error: action.err });

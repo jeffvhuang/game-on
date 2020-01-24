@@ -11,6 +11,7 @@ import { FootballSortedSchedule } from "../types/football-api/football-sorted-sc
 import { TennisSortedMatches } from "../types/tennis-api/tennis-sorted-matches.model";
 import { RoundMatches } from "../types/tennis-api/round-matches.model";
 import { EsportsCalendarEvent } from "../types/game-on-general/esports-calendar-event.model";
+import { EsportsSortedSeries } from "../types/game-on-general/esports-sorted-series.model";
 
 export const futureDateString = "Sun Dec 31 2199";
 export const futureDate = new Date(futureDateString);
@@ -273,10 +274,10 @@ export function sortESportsTournaments(data: ESportsTournament[]) {
   return { ongoing, upcoming, completed, teams };
 }
 
-export function sortESportsSeries(data: ESportsSeries[]) {
-  const ongoingSeries: ESportsSeries[] = [];
-  const upcomingSeries: ESportsSeries[] = [];
-  const completedSeries: ESportsSeries[] = [];
+export function sortESportsSeries(data: ESportsSeries[]): EsportsSortedSeries {
+  const ongoing: ESportsSeries[] = [];
+  const upcoming: ESportsSeries[] = [];
+  const completed: ESportsSeries[] = [];
   const now = Date.now();
 
   // Separate series into today followed by upcoming and past
@@ -285,16 +286,16 @@ export function sortESportsSeries(data: ESportsSeries[]) {
     const beginDate = series.beginAt ? new Date(series.beginAt) : futureDate;
     const endDate = series.endAt ? new Date(series.endAt) : futureDate;
 
-    if (beginDate.getTime() > now) upcomingSeries.push(series);
-    else if (endDate.getTime() < now) completedSeries.push(series);
-    else ongoingSeries.push(series);
+    if (beginDate.getTime() > now) upcoming.push(series);
+    else if (endDate.getTime() < now) completed.push(series);
+    else ongoing.push(series);
   }
 
-  sortESportByDate(ongoingSeries);
-  sortESportByDate(upcomingSeries);
-  sortESportByEndDate(completedSeries);
+  sortESportByDate(ongoing);
+  sortESportByDate(upcoming);
+  sortESportByEndDate(completed);
 
-  return { ongoingSeries, upcomingSeries, completedSeries };
+  return { ongoing, upcoming, completed };
 }
 
 export function sortESportsMatches(data: ESportsMatch[]) {

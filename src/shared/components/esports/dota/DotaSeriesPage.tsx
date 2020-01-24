@@ -39,9 +39,15 @@ class DotaSeriesPage extends React.Component<Props, State> {
       isListView: !prevState.isListView
     }));
 
-  selectTournament = info => {
+  selectCalendarTournament = info => {
     const { history } = this.props;
     if (history) history.push(`/esports/dota/${info.event.id}`);
+  };
+
+  selectTournament = (id: number) => {
+    return () => {
+      if (this.props.history) this.props.history.push(`/esports/dota/${id}`);
+    };
   };
 
   render() {
@@ -56,11 +62,14 @@ class DotaSeriesPage extends React.Component<Props, State> {
           </Button>
         </div>
         {this.state.isListView ? (
-          <DotaSeriesListContainer />
+          <DotaSeriesListContainer
+            series={this.props.dota.series}
+            selectTournament={this.selectTournament}
+          />
         ) : (
           <DotaSeriesCalendarContainer
             series={this.props.dota.series}
-            selectTournament={this.selectTournament}
+            selectTournament={this.selectCalendarTournament}
           />
         )}
       </div>

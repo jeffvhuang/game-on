@@ -4,15 +4,11 @@ import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 import { ESportsTeamBase } from "../../../types/esports-api/esports-team-base.model";
 import { ESportsSortedTournaments } from "../../../types/esports-api/esports-sorted-tournaments.model";
-import { ESportsSortedSeries } from "../../../types/esports-api/esports-sorted-series.model";
 import { ESportsTeam } from "../../../types/esports-api/esports-team.model";
 
 export interface DotaState {
   isFetching: boolean;
   series: ESportsSeries[];
-  ongoingSeries: ESportsSeries[];
-  upcomingSeries: ESportsSeries[];
-  completedSeries: ESportsSeries[];
   tournaments: ESportsTournament[];
   ongoing: ESportsTournament[];
   upcoming: ESportsTournament[];
@@ -49,7 +45,6 @@ export interface GetDotaSeriesRequest {
 export interface GetDotaSeriesSuccess {
   type: typeof C.GET_DOTA_SERIES_SUCCESS;
   payload: ESportsSeries[];
-  sortedSeries: ESportsSortedSeries;
 }
 
 export interface GetDotaSeriesFailure {

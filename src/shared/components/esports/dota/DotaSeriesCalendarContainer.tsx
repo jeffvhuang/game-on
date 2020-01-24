@@ -8,10 +8,10 @@ import { getEsportsTournamentsForCalendarFromSeries } from "../../../../helpers/
 
 interface Props {
   series: ESportsSeries[];
-  selectTournament: (id: number) => () => void;
+  selectTournament: (info: any) => void;
 }
 
-function DotaSeriesCalendarContainer({ series, selectTournament }) {
+function DotaSeriesCalendarContainer({ series, selectTournament }: Props) {
   return (
     <div className="section content">
       {/* <SelectDropdown
