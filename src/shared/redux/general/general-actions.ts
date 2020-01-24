@@ -11,7 +11,7 @@ import SORTED_EVENTS from "../../../mockApiData/events.json";
 import SORTED_WEEK_EVENTS from "../../../mockApiData/eventsForWeek.json";
 // import SORTED_WEEK_EVENTS2 from "../../../mockApiData/eventsForWeek2.json";
 
-// Get events sorted into live, upcoming and recently completed
+//#region Get events sorted into live, upcoming and recently completed
 export function getEventsRequest(): T.GetEventsRequest {
   return { type: C.GET_EVENTS_REQUEST };
 }
@@ -22,29 +22,30 @@ export function getEventsFailure(err): T.GetEventsFailure {
   return { type: C.GET_EVENTS_FAILURE, err };
 }
 
-// export const getEvents = (): ThunkAction<
-//   Promise<void>, ReduxState, null, T.GeneralActionTypes
-// > => async (dispatch) => {
-//   dispatch(getEventsRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS)
-//   .then(response => {
-//     dispatch(getEventsSuccess(response.data));
-//   }).catch(err => {
-//     dispatch(getEventsFailure(err));
-//   });
-// };
-
-// mock data
 export const getEvents = (): ThunkAction<
   Promise<void>,
   ReduxState,
   null,
   T.GeneralActionTypes
 > => async dispatch => {
-  dispatch(getEventsSuccess(SORTED_EVENTS));
-};
+  dispatch(getEventsRequest());
+  if (env === "dev") {
+    dispatch(getEventsSuccess(SORTED_EVENTS));
+    return;
+  }
 
-// Get events sorted into live, upcoming and recently completed
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS)
+    .then(response => {
+      dispatch(getEventsSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getEventsFailure(err));
+    });
+};
+//#endregion
+
+//#region Get events sorted into live, upcoming and recently completed
 export function getEventsForWeekRequest(): T.GetEventsForWeekRequest {
   return { type: C.GET_EVENTS_FOR_WEEK_REQUEST };
 }
@@ -55,24 +56,25 @@ export function getEventsForWeekFailure(err): T.GetEventsForWeekFailure {
   return { type: C.GET_EVENTS_FOR_WEEK_FAILURE, err };
 }
 
-// export const getEventsForWeek = (): ThunkAction<
-//   Promise<void>, ReduxState, null, T.GeneralActionTypes
-// > => async (dispatch) => {
-//   dispatch(getEventsForWeekRequest());
-//   return axios.get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS + '/week')
-//   .then(response => {
-//     dispatch(getEventsForWeekSuccess(response.data));
-//   }).catch(err => {
-//     dispatch(getEventsForWeekFailure(err));
-//   });
-// };
-
-// mock data
 export const getEventsForWeek = (): ThunkAction<
   Promise<void>,
   ReduxState,
   null,
   T.GeneralActionTypes
 > => async dispatch => {
-  dispatch(getEventsForWeekSuccess(SORTED_WEEK_EVENTS));
+  dispatch(getEventsForWeekRequest());
+  if (env === "dev") {
+    dispatch(getEventsForWeekSuccess(SORTED_WEEK_EVENTS));
+    return;
+  }
+
+  return axios
+    .get(gameonAPI.HOST + gameonAPI.GENERAL + gameonAPI.EVENTS + "/week")
+    .then(response => {
+      dispatch(getEventsForWeekSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getEventsForWeekFailure(err));
+    });
 };
+//#endregion
