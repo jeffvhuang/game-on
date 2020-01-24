@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { sortESportsSeries } from "../../../../../helpers/utils";
 import SelectDropdown from "../../../common/SelectDropdown";
-import DotaSeries from "./DotaSeries";
+import DotaList from "./DotaList";
 import { ESportsSeries } from "../../../../../types/esports-api/esports-series.model";
 import { EsportsSortedSeries } from "../../../../../types/game-on-general/esports-sorted-series.model";
 
@@ -11,7 +11,7 @@ interface Props {
   selectTournament: (id: number) => () => void;
 }
 
-function DotaSeriesListContainer({ series, selectTournament }: Props) {
+function DotaListContainer({ series, selectTournament }: Props) {
   const sortedSeries: EsportsSortedSeries = sortESportsSeries(series);
 
   return (
@@ -19,19 +19,19 @@ function DotaSeriesListContainer({ series, selectTournament }: Props) {
       <div className="full-width">
         {/* <SelectDropdown handleChange={this.handleChange}
             options={this.props.dota.teams} /> */}
-        <DotaSeries
+        <DotaList
           header="Ongoing"
           series={sortedSeries.ongoing}
           values={[]}
           selectTournament={selectTournament}
         />
-        <DotaSeries
+        <DotaList
           header="Upcoming"
           series={sortedSeries.upcoming}
           values={[]}
           selectTournament={selectTournament}
         />
-        <DotaSeries
+        <DotaList
           header="Completed"
           series={sortedSeries.completed}
           values={[]}
@@ -42,4 +42,4 @@ function DotaSeriesListContainer({ series, selectTournament }: Props) {
   );
 }
 
-export default DotaSeriesListContainer;
+export default DotaListContainer;

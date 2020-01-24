@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Collapse } from "antd";
 
-import DotaSeriesTournamentDate from "./DotaSeriesTournamentDate";
+import DotaListTournamentDate from "./DotaListTournamentDate";
 import { ESportsSeries } from "../../../../../types/esports-api/esports-series.model";
 
 const Panel = Collapse.Panel;
@@ -13,7 +13,7 @@ interface Props {
   selectTournament: (id: number) => () => void;
 }
 
-function DotaSeries({ header, series, values, selectTournament }: Props) {
+function DotaList({ header, series, values, selectTournament }: Props) {
   return (
     <div className="list">
       <h2>{header}</h2>
@@ -22,7 +22,7 @@ function DotaSeries({ header, series, values, selectTournament }: Props) {
           <Panel header={s.league.name + " " + s.name} key={(i + 1).toString()}>
             {s.tournaments.map(t => {
               return (
-                <DotaSeriesTournamentDate
+                <DotaListTournamentDate
                   key={t.id}
                   selectTournament={selectTournament}
                   tournament={t}
@@ -36,4 +36,4 @@ function DotaSeries({ header, series, values, selectTournament }: Props) {
   );
 }
 
-export default DotaSeries;
+export default DotaList;

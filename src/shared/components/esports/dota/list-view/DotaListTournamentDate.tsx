@@ -9,7 +9,7 @@ interface Props {
   selectTournament: (id: number) => () => void;
 }
 
-function DotaSeriesTournamentDate({ tournament, selectTournament }: Props) {
+function DotaListTournamentDate({ tournament, selectTournament }: Props) {
   return (
     <Row onClick={selectTournament(tournament.id)}>
       <Col span={14}>{tournament.name}</Col>
@@ -20,4 +20,4 @@ function DotaSeriesTournamentDate({ tournament, selectTournament }: Props) {
   );
 }
 
-export default DotaSeriesTournamentDate;
+export default DotaListTournamentDate;
