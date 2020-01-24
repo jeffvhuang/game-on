@@ -564,3 +564,7 @@ export function capitalise(word: string) {
   return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
 }
 //#endregion
+
+//#region redux helper methods
+export function merge(prev, next) { return Object.assign({}, prev, next); }
+//#endregion
