@@ -90,8 +90,7 @@ export function getDotaSeriesFailure(err): T.GetDotaSeriesFailure {
 //   dispatch(getDotaSeriesRequest());
 //   return axios.get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.SERIES)
 //     .then(response => {
-//       const sortedSeries = sortESportsSeries(response.data);
-//       dispatch(getDotaSeriesSuccess(response.data, sortedSeries));
+//       dispatch(getDotaSeriesSuccess(response.data));
 //     })
 //     .catch(err => {
 //       dispatch(getDotaSeriesFailure(err));

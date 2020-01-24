@@ -1,0 +1,2824 @@
+[
+  {
+      "league": {
+          "url": "https://www.primeleague.gg/de/start",
+          "slug": "league-of-legends-prime-league-pro-division",
+          "name": "Prime League Pro Division",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4302/220px-Prime_Leaguelogo_square.png",
+          "id": 4302
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-prime-league-pro-division-sprgin-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-21T22:43:13Z",
+              "leagueId": 4302,
+              "id": 3577,
+              "endAt": "2020-03-19T22:00:00Z",
+              "beginAt": "2020-01-20T23:00:00Z",
+              "seriesId": 2402
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-prime-league-pro-division-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4302,
+      "id": 2402,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-20T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://www.ultraliga.pl/",
+          "slug": "league-of-legends-ultraliga",
+          "name": "Ultraliga",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4300/220px-Ultraliga.PNG",
+          "id": 4300
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-ultraliga-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-20T13:35:25Z",
+              "leagueId": 4300,
+              "id": 3571,
+              "endAt": null,
+              "beginAt": "2020-01-27T23:00:00Z",
+              "seriesId": 2398
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-ultraliga-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4300,
+      "id": 2398,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-27T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lvp-slo",
+          "name": "LVP SLO",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4213/_.png",
+          "id": 4213
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lvp-slo-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-15T15:42:11Z",
+              "leagueId": 4213,
+              "id": 3520,
+              "endAt": "2020-03-12T22:00:00Z",
+              "beginAt": "2020-01-23T17:00:00Z",
+              "seriesId": 2370
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lvp-slo-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4213,
+      "id": 2370,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-23T17:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-turkey-championship-league",
+          "name": "TCL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/1003/turkiye-sampiyonluk-ligi-sffudtf.png",
+          "id": 1003
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-turkey-championship-league-winter-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-16T14:00:31Z",
+              "leagueId": 1003,
+              "id": 3518,
+              "endAt": null,
+              "beginAt": "2020-01-31T23:00:00Z",
+              "seriesId": 2369
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-turkey-championship-league-winter-2020",
+      "season": "Winter",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 1003,
+      "id": 2369,
+      "fullName": "Winter 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-31T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lpl-china-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-16T09:35:21Z",
+              "leagueId": 294,
+              "id": 3511,
+              "endAt": "2020-04-05T15:00:00Z",
+              "beginAt": "2020-01-12T23:00:00Z",
+              "seriesId": 2365
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lpl-china-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 294,
+      "id": 2365,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-12T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lec",
+          "name": "LEC",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4197/LEC-2019.png",
+          "id": 4197
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lec-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-21T19:07:24Z",
+              "leagueId": 4197,
+              "id": 3473,
+              "endAt": null,
+              "beginAt": "2020-01-23T23:00:00Z",
+              "seriesId": 2348
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lec-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4197,
+      "id": 2348,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-23T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://lol.gamepedia.com/Challengers_Korea/2018_Season/Summer_Season#Schedule",
+          "slug": "league-of-legends-challenger-korea",
+          "name": "Challenger Korea",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4142/_.png",
+          "id": 4142
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-challenger-korea-spring-2020-promotion",
+              "name": "Promotion",
+              "modifiedAt": "2019-12-18T13:35:35Z",
+              "leagueId": 4142,
+              "id": 3398,
+              "endAt": "2019-12-18T17:00:00Z",
+              "beginAt": "2019-12-17T23:00:00Z",
+              "seriesId": 2306
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-challenger-korea-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4142,
+      "id": 2306,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2019-12-17T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-ljl-japan-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-10T15:12:58Z",
+              "leagueId": 2092,
+              "id": 3504,
+              "endAt": "2020-03-07T23:00:00Z",
+              "beginAt": "2020-02-07T23:00:00Z",
+              "seriesId": 1843
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-ljl-japan-spring-2020-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2020-01-16T13:40:49Z",
+              "leagueId": 2092,
+              "id": 3505,
+              "endAt": null,
+              "beginAt": "2020-03-20T23:00:00Z",
+              "seriesId": 1843
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-ljl-japan-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 2092,
+      "id": 1843,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-02-07T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://c-6rtwjumjzx7877x24ahx78x2eqnjsrnsmx2elfwjsfx2eas.g00.gamepedia.com/g00/3_c-6qtq.lfrjujinf.htr_/c-6RTWJUMJZX77x24myyux3ax2fx2fahx78.qnjsrnsm.lfwjsf.asx2f_$/$?i10c.ua=1&i10c.dv=14",
+          "slug": "league-of-legends-vcs",
+          "name": "VCS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4141/_.png",
+          "id": 4141
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-vcs-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-07T09:36:57Z",
+              "leagueId": 4141,
+              "id": 3519,
+              "endAt": null,
+              "beginAt": "2020-01-31T10:00:00Z",
+              "seriesId": 1842
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-vcs-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4141,
+      "id": 1842,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2020-01-31T10:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-cblol-brazil",
+          "name": "CBLOL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/302/cblol-brazil-dba70xuw.png",
+          "id": 302
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-cblol-brazil-summer-2020-promotion",
+              "name": "Promotion",
+              "modifiedAt": "2019-09-11T15:13:40Z",
+              "leagueId": 302,
+              "id": 2520,
+              "endAt": "2019-09-21T22:00:00Z",
+              "beginAt": "2019-09-20T22:00:00Z",
+              "seriesId": 1838
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-cblol-brazil-summer-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-13T19:15:33Z",
+              "leagueId": 302,
+              "id": 3472,
+              "endAt": "2020-04-11T20:00:00Z",
+              "beginAt": "2019-09-20T22:00:00Z",
+              "seriesId": 1838
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-cblol-brazil-summer-2020",
+      "season": "Split 1",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 302,
+      "id": 1838,
+      "fullName": "Split 1 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2019-09-20T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lck-champions-korea-spring-2020-promotion",
+              "name": "Promotion",
+              "modifiedAt": "2019-09-09T10:11:06Z",
+              "leagueId": 293,
+              "id": 2519,
+              "endAt": "2019-09-10T22:00:00Z",
+              "beginAt": "2019-09-08T22:00:00Z",
+              "seriesId": 1837
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lck-champions-korea-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-16T09:08:51Z",
+              "leagueId": 293,
+              "id": 3509,
+              "endAt": "2020-04-11T22:00:00Z",
+              "beginAt": "2020-02-04T23:00:00Z",
+              "seriesId": 1837
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lck-champions-korea-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 293,
+      "id": 1837,
+      "fullName": "Spring 2020",
+      "endAt": null,
+      "description": null,
+      "beginAt": "2019-09-08T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "",
+          "slug": "league-of-legends-lcs",
+          "name": "LCS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4198/LCS_2019_Logo.png",
+          "id": 4198
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lcs-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-09T08:30:29Z",
+              "leagueId": 4198,
+              "id": 3471,
+              "endAt": "2020-03-21T23:00:00Z",
+              "beginAt": "2020-01-25T22:00:00Z",
+              "seriesId": 2347
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lcs-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4198,
+      "id": 2347,
+      "fullName": "Spring 2020",
+      "endAt": "2020-04-18T22:00:00Z",
+      "description": null,
+      "beginAt": "2020-01-24T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://nexus.leagueoflegends.com/en-us/esports/",
+          "slug": "league-of-legends-lcs-academy",
+          "name": "LCS Academy",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4228/image.png",
+          "id": 4228
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lcs-academy-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-12T19:36:10Z",
+              "leagueId": 4228,
+              "id": 3528,
+              "endAt": "2020-03-21T23:00:00Z",
+              "beginAt": "2020-01-23T23:00:00Z",
+              "seriesId": 2373
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lcs-academy-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4228,
+      "id": 2373,
+      "fullName": "Spring 2020",
+      "endAt": "2020-04-09T22:00:00Z",
+      "description": null,
+      "beginAt": "2020-01-23T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lollfl.com/",
+          "slug": "league-of-legends-lfl",
+          "name": "LFL",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4292/600px-LFL_Logo.png",
+          "id": 4292
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lfl-spring-2020-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-21T19:04:30Z",
+              "leagueId": 4292,
+              "id": 3531,
+              "endAt": "2020-03-03T23:00:00Z",
+              "beginAt": "2020-01-20T23:00:00Z",
+              "seriesId": 2374
+          }
+      ],
+      "year": 2020,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lfl-spring-2020",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4292,
+      "id": 2374,
+      "fullName": "Spring 2020",
+      "endAt": "2020-03-17T23:00:00Z",
+      "description": null,
+      "beginAt": "2020-01-20T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-kespa-cup",
+          "name": "KeSPA Cup",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2711/2017_KeSPA_Cup.png",
+          "id": 2711
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-kespa-cup-2019-elimination-and-qualifying-rounds",
+              "name": "Elimination and Qualifying Rounds",
+              "modifiedAt": "2020-01-05T18:57:57Z",
+              "leagueId": 2711,
+              "id": 3451,
+              "endAt": "2020-01-05T22:00:00Z",
+              "beginAt": "2019-12-22T23:00:00Z",
+              "seriesId": 2337
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 120,
+              "slug": "league-of-legends-kespa-cup-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2020-01-05T18:54:21Z",
+              "leagueId": 2711,
+              "id": 3452,
+              "endAt": "2020-01-05T22:00:00Z",
+              "beginAt": "2019-12-22T23:00:00Z",
+              "seriesId": 2337
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 120,
+      "slug": "league-of-legends-kespa-cup-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 2711,
+      "id": 2337,
+      "fullName": "2019",
+      "endAt": "2020-01-05T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-12-22T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-demacia-cup",
+          "name": "Demacia Cup",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4140/DemaciaCupLogo-lg.png",
+          "id": 4140
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-demacia-cup-2019-group-a",
+              "name": "Group A",
+              "modifiedAt": "2019-12-19T11:03:54Z",
+              "leagueId": 4140,
+              "id": 3399,
+              "endAt": "2019-12-21T13:00:00Z",
+              "beginAt": "2019-12-21T03:00:00Z",
+              "seriesId": 2307
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-demacia-cup-2019-group-c",
+              "name": "Group C",
+              "modifiedAt": "2020-01-13T14:11:30Z",
+              "leagueId": 4140,
+              "id": 3401,
+              "endAt": "2020-12-01T13:00:00Z",
+              "beginAt": "2019-12-21T03:00:00Z",
+              "seriesId": 2307
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-demacia-cup-2019-group-b",
+              "name": "Group B",
+              "modifiedAt": "2019-12-22T05:16:50Z",
+              "leagueId": 4140,
+              "id": 3400,
+              "endAt": "2019-12-22T13:00:00Z",
+              "beginAt": "2019-12-22T03:00:00Z",
+              "seriesId": 2307
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-demacia-cup-2019-group-d",
+              "name": "Group D",
+              "modifiedAt": "2019-12-22T04:17:27Z",
+              "leagueId": 4140,
+              "id": 3402,
+              "endAt": "2019-12-22T13:00:00Z",
+              "beginAt": "2019-12-22T03:00:00Z",
+              "seriesId": 2307
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 74,
+              "slug": "league-of-legends-demacia-cup-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-12-30T10:20:45Z",
+              "leagueId": 4140,
+              "id": 3403,
+              "endAt": "2019-12-29T09:00:00Z",
+              "beginAt": "2019-12-25T23:00:00Z",
+              "seriesId": 2307
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 74,
+      "slug": "league-of-legends-demacia-cup-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4140,
+      "id": 2307,
+      "fullName": "2019",
+      "endAt": "2019-12-29T09:00:00Z",
+      "description": null,
+      "beginAt": "2019-12-20T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://pro.eslgaming.com/deutschland/lol/",
+          "slug": "league-of-legends-esl-meisterschaft",
+          "name": "ESL Meisterschaft",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4264/220px-Esl_de.png",
+          "id": 4264
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-esl-meisterschaft-winter-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-12-04T12:40:59Z",
+              "leagueId": 4264,
+              "id": 3214,
+              "endAt": "2019-11-14T23:00:00Z",
+              "beginAt": "2019-11-13T23:00:00Z",
+              "seriesId": 2202
+          }
+      ],
+      "year": 2019,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-esl-meisterschaft-winter-2019",
+      "season": "Winter",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4264,
+      "id": 2202,
+      "fullName": "Winter 2019",
+      "endAt": "2019-12-14T23:00:00Z",
+      "description": null,
+      "beginAt": "2019-12-13T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-all-star",
+          "name": "All-Star",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/296/logo_large.png",
+          "id": 296
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-all-star-2019-allstar-urf",
+              "name": "AllStar URF",
+              "modifiedAt": "2019-12-08T04:07:37Z",
+              "leagueId": 296,
+              "id": 3424,
+              "endAt": "2019-12-08T05:00:00Z",
+              "beginAt": "2019-12-06T00:00:00Z",
+              "seriesId": 2191
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-all-star-2019-one-vs-one",
+              "name": "AllStar one vs one",
+              "modifiedAt": "2019-12-04T13:42:23Z",
+              "leagueId": 296,
+              "id": 3416,
+              "endAt": "2019-12-08T06:00:00Z",
+              "beginAt": "2019-12-06T01:00:00Z",
+              "seriesId": 2191
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-all-star-2019-allstar-showdown",
+              "name": "AllStar Showmatches",
+              "modifiedAt": "2019-12-08T03:05:44Z",
+              "leagueId": 296,
+              "id": 3425,
+              "endAt": "2019-12-08T04:00:00Z",
+              "beginAt": "2019-12-06T03:15:00Z",
+              "seriesId": 2191
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-all-star-2019-allstar-tandem",
+              "name": "AllStar Tandem",
+              "modifiedAt": "2019-12-08T00:18:22Z",
+              "leagueId": 296,
+              "id": 3426,
+              "endAt": "2019-12-07T01:00:00Z",
+              "beginAt": "2019-12-07T00:00:00Z",
+              "seriesId": 2191
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-all-star-2019-allstar-assassin",
+              "name": "AllStar Assassin",
+              "modifiedAt": "2019-12-07T06:04:12Z",
+              "leagueId": 296,
+              "id": 3427,
+              "endAt": "2019-12-07T07:00:00Z",
+              "beginAt": "2019-12-07T06:00:00Z",
+              "seriesId": 2191
+          }
+      ],
+      "year": 2019,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-all-star-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 296,
+      "id": 2191,
+      "fullName": "2019",
+      "endAt": "2019-12-06T23:00:00Z",
+      "description": null,
+      "beginAt": "2019-12-04T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://lol.polskaligaesportowa.pl/",
+          "slug": "league-of-legends-polska-liga-esportowa",
+          "name": "Polska Liga Esportowa",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4263/800px-FE_PLE_Logo.png",
+          "id": 4263
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-polska-liga-esportowa-november-2019-group-a",
+              "name": "Group A",
+              "modifiedAt": "2020-01-16T11:59:16Z",
+              "leagueId": 4263,
+              "id": 3211,
+              "endAt": "2019-11-24T22:00:00Z",
+              "beginAt": "2019-11-21T14:00:00Z",
+              "seriesId": 2201
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-polska-liga-esportowa-november-2019-group-b",
+              "name": "Group B",
+              "modifiedAt": "2019-11-20T16:19:20Z",
+              "leagueId": 4263,
+              "id": 3212,
+              "endAt": "2019-11-22T22:00:00Z",
+              "beginAt": "2019-11-22T14:00:00Z",
+              "seriesId": 2201
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 126498,
+              "slug": "league-of-legends-polska-liga-esportowa-november-2019-knockout-stage",
+              "name": "Knockout Stage",
+              "modifiedAt": "2019-11-25T09:03:01Z",
+              "leagueId": 4263,
+              "id": 3213,
+              "endAt": "2019-11-24T22:00:00Z",
+              "beginAt": "2019-11-23T16:00:00Z",
+              "seriesId": 2201
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 126498,
+      "slug": "league-of-legends-polska-liga-esportowa-november-2019",
+      "season": "November",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4263,
+      "id": 2201,
+      "fullName": "November 2019",
+      "endAt": "2019-11-24T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-11-21T14:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-world-championship",
+          "name": "World Championship",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/297/worlds-2at6ye9m.png",
+          "id": 297
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 1536,
+              "slug": "league-of-legends-world-championship-2019-play-in-group-a",
+              "name": "Play-in: Group A",
+              "modifiedAt": "2019-11-19T10:46:42Z",
+              "leagueId": 297,
+              "id": 2521,
+              "endAt": "2019-10-07T22:00:00Z",
+              "beginAt": "2019-10-01T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 114,
+              "slug": "league-of-legends-world-championship-2019-play-in-group-b",
+              "name": "Play-in: Group B",
+              "modifiedAt": "2019-11-19T10:46:25Z",
+              "leagueId": 297,
+              "id": 2522,
+              "endAt": "2019-10-07T22:00:00Z",
+              "beginAt": "2019-10-01T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 80,
+              "slug": "league-of-legends-world-championship-2019-play-in-group-c",
+              "name": "Play-in: Group C",
+              "modifiedAt": "2019-11-19T10:46:07Z",
+              "leagueId": 297,
+              "id": 2523,
+              "endAt": "2019-10-07T22:00:00Z",
+              "beginAt": "2019-10-01T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1453,
+              "slug": "league-of-legends-world-championship-2019-play-in-group-d",
+              "name": "Play-in: Group D",
+              "modifiedAt": "2019-11-19T10:45:41Z",
+              "leagueId": 297,
+              "id": 2524,
+              "endAt": "2019-10-07T22:00:00Z",
+              "beginAt": "2019-10-01T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-world-championship-2019-play-in-elimination",
+              "name": "Play-in: Playoffs",
+              "modifiedAt": "2019-10-08T20:18:54Z",
+              "leagueId": 297,
+              "id": 2525,
+              "endAt": "2019-10-08T20:00:00Z",
+              "beginAt": "2019-10-01T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1452,
+              "slug": "league-of-legends-world-championship-2019-group-a",
+              "name": "Group A",
+              "modifiedAt": "2019-11-19T10:47:39Z",
+              "leagueId": 297,
+              "id": 2526,
+              "endAt": "2019-11-09T23:00:00Z",
+              "beginAt": "2019-10-11T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1568,
+              "slug": "league-of-legends-world-championship-2019-group-b",
+              "name": "Group B",
+              "modifiedAt": "2019-11-19T10:47:54Z",
+              "leagueId": 297,
+              "id": 2527,
+              "endAt": "2019-11-09T23:00:00Z",
+              "beginAt": "2019-10-11T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 100,
+              "slug": "league-of-legends-world-championship-2019-group-c",
+              "name": "Group C",
+              "modifiedAt": "2019-11-19T10:48:08Z",
+              "leagueId": 297,
+              "id": 2528,
+              "endAt": "2019-11-09T23:00:00Z",
+              "beginAt": "2019-10-11T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1453,
+              "slug": "league-of-legends-world-championship-2019-group-d",
+              "name": "Group D",
+              "modifiedAt": "2019-11-19T10:48:21Z",
+              "leagueId": 297,
+              "id": 2529,
+              "endAt": "2019-11-09T23:00:00Z",
+              "beginAt": "2019-10-11T22:00:00Z",
+              "seriesId": 1839
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1568,
+              "slug": "league-of-legends-world-championship-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-11-19T10:49:16Z",
+              "leagueId": 297,
+              "id": 2530,
+              "endAt": "2019-11-10T15:19:00Z",
+              "beginAt": "2019-10-26T10:00:00Z",
+              "seriesId": 1839
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 1568,
+      "slug": "league-of-legends-world-championship-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 297,
+      "id": 1839,
+      "fullName": "2019",
+      "endAt": "2019-11-10T15:19:00Z",
+      "description": null,
+      "beginAt": "2019-10-01T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lpl-china-all-star-2019-rookie-match",
+              "name": "Rookie Match",
+              "modifiedAt": "2019-11-26T12:00:56Z",
+              "leagueId": 294,
+              "id": 3365,
+              "endAt": "2019-12-01T08:30:00Z",
+              "beginAt": "2019-12-01T07:00:00Z",
+              "seriesId": 2299
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lpl-china-all-star-2019-legacy-blind-match",
+              "name": "Legacy Blind Match",
+              "modifiedAt": "2019-11-26T12:15:00Z",
+              "leagueId": 294,
+              "id": 3366,
+              "endAt": "2019-12-01T09:30:00Z",
+              "beginAt": "2019-12-01T08:30:00Z",
+              "seriesId": 2299
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lpl-china-all-star-2019-legacy-draft-match",
+              "name": "Legacy Draft Match",
+              "modifiedAt": "2019-11-26T12:13:41Z",
+              "leagueId": 294,
+              "id": 3367,
+              "endAt": "2019-12-01T10:30:00Z",
+              "beginAt": "2019-12-01T09:30:00Z",
+              "seriesId": 2299
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lpl-china-all-star-2019-match",
+              "name": "AllStar Match",
+              "modifiedAt": "2019-11-26T12:04:21Z",
+              "leagueId": 294,
+              "id": 3368,
+              "endAt": "2019-12-01T14:00:00Z",
+              "beginAt": "2019-12-01T10:30:00Z",
+              "seriesId": 2299
+          }
+      ],
+      "year": 2019,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lpl-china-all-star-2019",
+      "season": null,
+      "prizepool": null,
+      "name": "All-Star",
+      "leagueId": 294,
+      "id": 2299,
+      "fullName": "All-star 2019",
+      "endAt": "2019-11-01T14:00:00Z",
+      "description": null,
+      "beginAt": "2019-12-01T07:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-european-masters",
+          "name": "European Masters",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4139/2593d-EU_Masters_Trans-iloveimg-resized.png",
+          "id": 4139
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 126205,
+              "slug": "league-of-legends-european-masters-summer-2019-play-in",
+              "name": "Play-in",
+              "modifiedAt": "2019-09-12T09:55:40Z",
+              "leagueId": 4139,
+              "id": 2518,
+              "endAt": "2019-09-11T22:05:00Z",
+              "beginAt": "2019-09-08T22:00:00Z",
+              "seriesId": 1836
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 125905,
+              "slug": "league-of-legends-european-masters-summer-2019-knockout-stage",
+              "name": "Knockout stage",
+              "modifiedAt": "2019-09-29T21:00:21Z",
+              "leagueId": 4139,
+              "id": 2535,
+              "endAt": "2019-09-29T18:10:00Z",
+              "beginAt": "2019-09-08T22:00:00Z",
+              "seriesId": 1836
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-european-masters-summer-2019-play-in-knockout-stage",
+              "name": "Play-in knockout stage",
+              "modifiedAt": "2020-01-03T12:32:27Z",
+              "leagueId": 4139,
+              "id": 2549,
+              "endAt": "2019-09-12T22:00:00Z",
+              "beginAt": "2019-09-08T22:00:00Z",
+              "seriesId": 1836
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 16,
+              "slug": "league-of-legends-european-masters-summer-2019-group-a",
+              "name": "Group a",
+              "modifiedAt": "2019-10-09T11:08:18Z",
+              "leagueId": 4139,
+              "id": 2531,
+              "endAt": "2019-09-29T18:10:00Z",
+              "beginAt": "2019-09-15T22:00:00Z",
+              "seriesId": 1836
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 125905,
+              "slug": "league-of-legends-european-masters-summer-2019-group-b",
+              "name": "Group b",
+              "modifiedAt": "2019-10-09T11:08:25Z",
+              "leagueId": 4139,
+              "id": 2532,
+              "endAt": "2019-09-29T18:10:00Z",
+              "beginAt": "2019-09-15T22:00:00Z",
+              "seriesId": 1836
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 3339,
+              "slug": "league-of-legends-european-masters-summer-2019-group-c",
+              "name": "Group c",
+              "modifiedAt": "2019-10-09T11:08:40Z",
+              "leagueId": 4139,
+              "id": 2533,
+              "endAt": "2019-09-29T18:10:00Z",
+              "beginAt": "2019-09-15T22:00:00Z",
+              "seriesId": 1836
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 125912,
+              "slug": "league-of-legends-european-masters-summer-2019-group-d",
+              "name": "Group d",
+              "modifiedAt": "2019-10-09T11:08:46Z",
+              "leagueId": 4139,
+              "id": 2534,
+              "endAt": "2019-09-29T18:10:00Z",
+              "beginAt": "2019-09-15T22:00:00Z",
+              "seriesId": 1836
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 125905,
+      "slug": "league-of-legends-european-masters-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4139,
+      "id": 1836,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-29T18:10:00Z",
+      "description": null,
+      "beginAt": "2019-09-08T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lec",
+          "name": "LEC",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4197/LEC-2019.png",
+          "id": 4197
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 88,
+              "slug": "league-of-legends-lec-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-29T00:19:31Z",
+              "leagueId": 4197,
+              "id": 2395,
+              "endAt": "2019-08-09T22:00:00Z",
+              "beginAt": "2019-06-06T22:00:00Z",
+              "seriesId": 1805
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 88,
+              "slug": "league-of-legends-lec-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2020-01-03T11:25:28Z",
+              "leagueId": 4197,
+              "id": 2438,
+              "endAt": "2019-09-07T22:00:00Z",
+              "beginAt": "2019-08-22T22:00:00Z",
+              "seriesId": 1805
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 394,
+              "slug": "league-of-legends-lec-summer-2019-regional-finals",
+              "name": "Regional finals",
+              "modifiedAt": "2019-09-19T12:07:39Z",
+              "leagueId": 4197,
+              "id": 2507,
+              "endAt": "2019-09-14T22:00:00Z",
+              "beginAt": "2019-09-12T22:00:00Z",
+              "seriesId": 1805
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 88,
+      "slug": "league-of-legends-lec-summer-2019",
+      "season": "Summer ",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4197,
+      "id": 1805,
+      "fullName": "Summer  2019",
+      "endAt": "2019-09-19T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-06T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-ljl-japan",
+          "name": "LJL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2092/ljl-japan-j27k8oms.png",
+          "id": 2092
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-ljl-japan-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-18T07:48:59Z",
+              "leagueId": 2092,
+              "id": 2402,
+              "endAt": "2019-08-19T18:00:00Z",
+              "beginAt": "2019-06-14T22:00:00Z",
+              "seriesId": 1810
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 89,
+              "slug": "league-of-legends-ljl-japan-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-16T10:06:23Z",
+              "leagueId": 2092,
+              "id": 2506,
+              "endAt": "2019-09-16T09:35:00Z",
+              "beginAt": "2019-08-31T22:00:00Z",
+              "seriesId": 1810
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 89,
+      "slug": "league-of-legends-ljl-japan-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 2092,
+      "id": 1810,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-16T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-14T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lcl",
+          "name": "LCL",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4004/lcl-hk081cyf.png",
+          "id": 4004
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 21,
+              "slug": "league-of-legends-lcl-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-03T12:29:38Z",
+              "leagueId": 4004,
+              "id": 2394,
+              "endAt": "2019-08-26T18:00:00Z",
+              "beginAt": "2019-07-05T22:00:00Z",
+              "seriesId": 1804
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 19,
+              "slug": "league-of-legends-lcl-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-25T12:54:05Z",
+              "leagueId": 4004,
+              "id": 2516,
+              "endAt": "2019-10-14T22:00:00Z",
+              "beginAt": "2019-08-30T22:00:00Z",
+              "seriesId": 1804
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 19,
+      "slug": "league-of-legends-lcl-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4004,
+      "id": 1804,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-16T13:50:00Z",
+      "description": null,
+      "beginAt": "2019-07-05T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://c-6rtwjumjzx7877x24ahx78x2eqnjsrnsmx2elfwjsfx2eas.g00.gamepedia.com/g00/3_c-6qtq.lfrjujinf.htr_/c-6RTWJUMJZX77x24myyux3ax2fx2fahx78.qnjsrnsm.lfwjsf.asx2f_$/$?i10c.ua=1&i10c.dv=14",
+          "slug": "league-of-legends-vcs",
+          "name": "VCS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4141/_.png",
+          "id": 4141
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-vcs-summer-2019-promotion",
+              "name": "Promotion",
+              "modifiedAt": "2019-05-07T15:36:05Z",
+              "leagueId": 4141,
+              "id": 2317,
+              "endAt": "2019-04-28T09:00:00Z",
+              "beginAt": "2019-04-26T04:00:00Z",
+              "seriesId": 1785
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 124414,
+              "slug": "league-of-legends-vcs-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-14T12:26:10Z",
+              "leagueId": 4141,
+              "id": 2397,
+              "endAt": "2019-08-11T18:00:00Z",
+              "beginAt": "2019-04-26T04:00:00Z",
+              "seriesId": 1785
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 124414,
+              "slug": "league-of-legends-vcs-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2020-01-06T18:30:09Z",
+              "leagueId": 4141,
+              "id": 2493,
+              "endAt": "2019-09-15T18:00:00Z",
+              "beginAt": "2019-08-24T09:00:00Z",
+              "seriesId": 1785
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 589,
+      "slug": "league-of-legends-vcs-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4141,
+      "id": 1785,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-16T08:00:00Z",
+      "description": null,
+      "beginAt": "2019-04-26T04:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 1568,
+              "slug": "league-of-legends-lpl-china-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-09-24T16:37:34Z",
+              "leagueId": 294,
+              "id": 2379,
+              "endAt": "2019-08-17T22:00:00Z",
+              "beginAt": "2019-05-31T22:00:00Z",
+              "seriesId": 1796
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1568,
+              "slug": "league-of-legends-lpl-china-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-06T12:27:23Z",
+              "leagueId": 294,
+              "id": 2500,
+              "endAt": "2019-09-06T12:09:00Z",
+              "beginAt": "2019-08-21T22:00:00Z",
+              "seriesId": 1796
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 411,
+              "slug": "league-of-legends-lpl-china-summer-2019-regional-finals",
+              "name": "Regional finals",
+              "modifiedAt": "2019-09-08T12:15:05Z",
+              "leagueId": 294,
+              "id": 2509,
+              "endAt": "2019-09-07T22:00:00Z",
+              "beginAt": "2019-09-07T06:00:00Z",
+              "seriesId": 1796
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 411,
+      "slug": "league-of-legends-lpl-china-summer-2019",
+      "season": "Summer ",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 294,
+      "id": 1796,
+      "fullName": "Summer  2019",
+      "endAt": "2019-09-09T18:00:00Z",
+      "description": null,
+      "beginAt": "2019-05-31T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "",
+          "slug": "league-of-legends-lcs",
+          "name": "LCS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4198/LCS_2019_Logo.png",
+          "id": 4198
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 390,
+              "slug": "league-of-legends-lcs-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-05T11:54:55Z",
+              "leagueId": 4198,
+              "id": 2378,
+              "endAt": "2019-08-06T18:00:00Z",
+              "beginAt": "2019-05-31T22:00:00Z",
+              "seriesId": 1795
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 390,
+              "slug": "league-of-legends-lcs-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-08-26T00:43:35Z",
+              "leagueId": 4198,
+              "id": 2437,
+              "endAt": "2019-08-26T00:21:00Z",
+              "beginAt": "2019-08-09T22:00:00Z",
+              "seriesId": 1795
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1536,
+              "slug": "league-of-legends-lcs-summer-2019-regional-finals",
+              "name": "Regional finals",
+              "modifiedAt": "2019-09-09T00:43:58Z",
+              "leagueId": 4198,
+              "id": 2512,
+              "endAt": "2019-09-09T18:00:00Z",
+              "beginAt": "2019-09-06T19:00:00Z",
+              "seriesId": 1795
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 390,
+      "slug": "league-of-legends-lcs-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4198,
+      "id": 1795,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-09T18:00:00Z",
+      "description": null,
+      "beginAt": "2019-05-31T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://liquipedia.net/leagueoflegends/LDL/2019/Spring",
+          "slug": "league-of-legends-ldl",
+          "name": "LDL",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4226/LDL_logo.png",
+          "id": 4226
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 126161,
+              "slug": "league-of-legends-ldl-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-12-12T16:25:54Z",
+              "leagueId": 4226,
+              "id": 2483,
+              "endAt": "2019-09-07T22:00:00Z",
+              "beginAt": "2019-06-18T22:00:00Z",
+              "seriesId": 1832
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-ldl-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-17T13:25:53Z",
+              "leagueId": 4226,
+              "id": 2538,
+              "endAt": "2019-09-21T22:00:00Z",
+              "beginAt": "2019-09-13T22:00:00Z",
+              "seriesId": 1832
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 125986,
+      "slug": "league-of-legends-ldl-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4226,
+      "id": 1832,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-08T18:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-18T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-cblol-brazil",
+          "name": "CBLOL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/302/cblol-brazil-dba70xuw.png",
+          "id": 302
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 643,
+              "slug": "league-of-legends-cblol-brazil-winter-2019-promotion-and-access",
+              "name": "Promotion",
+              "modifiedAt": "2019-05-07T13:11:39Z",
+              "leagueId": 302,
+              "id": 2290,
+              "endAt": "2019-04-27T17:30:00Z",
+              "beginAt": "2019-04-27T16:00:00Z",
+              "seriesId": 1776
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 2580,
+              "slug": "league-of-legends-cblol-brazil-winter-2019-regular",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-14T12:11:40Z",
+              "leagueId": 302,
+              "id": 2380,
+              "endAt": "2019-08-11T18:00:00Z",
+              "beginAt": "2019-05-31T22:00:00Z",
+              "seriesId": 1776
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 2580,
+              "slug": "league-of-legends-cblol-brazil-winter-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-25T12:53:46Z",
+              "leagueId": 302,
+              "id": 2494,
+              "endAt": "2019-09-08T18:00:00Z",
+              "beginAt": "2019-08-24T16:00:00Z",
+              "seriesId": 1776
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 2580,
+      "slug": "league-of-legends-cblol-brazil-winter-2019",
+      "season": "Winter",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 302,
+      "id": 1776,
+      "fullName": "Winter 2019",
+      "endAt": "2019-09-08T16:30:00Z",
+      "description": null,
+      "beginAt": "2019-04-26T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lck-champions-korea",
+          "name": "LCK",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/293/LCK_2018_logo.png",
+          "id": 293
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-lck-champions-korea-summer-2019-promotion",
+              "name": "Promotion",
+              "modifiedAt": "2019-07-23T07:13:26Z",
+              "leagueId": 293,
+              "id": 2278,
+              "endAt": "2019-04-21T18:00:00Z",
+              "beginAt": "2019-04-16T07:00:00Z",
+              "seriesId": 1775
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1452,
+              "slug": "league-of-legends-lck-champions-korea-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-11-04T15:03:18Z",
+              "leagueId": 293,
+              "id": 2392,
+              "endAt": "2019-08-17T22:00:00Z",
+              "beginAt": "2019-06-04T22:00:00Z",
+              "seriesId": 1775
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 100,
+              "slug": "league-of-legends-lck-champions-korea-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2020-01-02T13:14:04Z",
+              "leagueId": 293,
+              "id": 2436,
+              "endAt": "2019-08-31T15:00:00Z",
+              "beginAt": "2019-08-21T07:00:00Z",
+              "seriesId": 1775
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1453,
+              "slug": "league-of-legends-lck-champions-korea-summer-2019-regional-finals",
+              "name": "Regional finals",
+              "modifiedAt": "2020-01-02T13:13:26Z",
+              "leagueId": 293,
+              "id": 2510,
+              "endAt": "2019-09-06T22:00:00Z",
+              "beginAt": "2019-09-02T22:00:00Z",
+              "seriesId": 1775
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 100,
+      "slug": "league-of-legends-lck-champions-korea-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 293,
+      "id": 1775,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-08T08:00:00Z",
+      "description": null,
+      "beginAt": "2019-04-16T07:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lvp-slo",
+          "name": "LVP SLO",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4213/_.png",
+          "id": 4213
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 3339,
+              "slug": "league-of-legends-lvp-slo-summer-2019-resuglar-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-07T22:25:21Z",
+              "leagueId": 4213,
+              "id": 2407,
+              "endAt": "2019-08-07T22:18:00Z",
+              "beginAt": "2019-06-03T16:00:00Z",
+              "seriesId": 1811
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 3339,
+              "slug": "league-of-legends-lvp-slo-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-01T22:47:20Z",
+              "leagueId": 4213,
+              "id": 2492,
+              "endAt": "2019-09-01T22:00:00Z",
+              "beginAt": "2019-08-11T22:00:00Z",
+              "seriesId": 1811
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 3339,
+      "slug": "league-of-legends-lvp-slo-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4213,
+      "id": 1811,
+      "fullName": "Summer 2019",
+      "endAt": "2019-09-02T18:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-03T16:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-turkey-championship-league",
+          "name": "TCL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/1003/turkiye-sampiyonluk-ligi-sffudtf.png",
+          "id": 1003
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 124532,
+              "slug": "league-of-legends-turkey-championship-league-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-05T11:49:41Z",
+              "leagueId": 1003,
+              "id": 2396,
+              "endAt": "2019-08-01T18:00:00Z",
+              "beginAt": "2019-06-07T22:00:00Z",
+              "seriesId": 1806
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 124532,
+              "slug": "league-of-legends-turkey-championship-league-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-08-31T17:05:45Z",
+              "leagueId": 1003,
+              "id": 2488,
+              "endAt": "2019-08-31T18:00:00Z",
+              "beginAt": "2019-06-07T22:00:00Z",
+              "seriesId": 1806
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 124532,
+      "slug": "league-of-legends-turkey-championship-league-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 1003,
+      "id": 1806,
+      "fullName": "Summer 2019",
+      "endAt": "2019-08-31T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-07T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lms/",
+          "slug": "league-of-legends-lms-taiwan",
+          "name": "LMS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/295/b030bfca-cac7-11e7-92d4-0e6c723feec8.png",
+          "id": 295
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 125925,
+              "slug": "league-of-legends-lms-taiwan-spring-2019-promotion",
+              "name": "Promotion",
+              "modifiedAt": "2019-05-07T16:05:23Z",
+              "leagueId": 295,
+              "id": 2288,
+              "endAt": "2019-04-24T22:01:00Z",
+              "beginAt": "2019-04-24T22:00:00Z",
+              "seriesId": 1783
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 228,
+              "slug": "league-of-legends-lms-taiwan-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-06T18:05:35Z",
+              "leagueId": 295,
+              "id": 2398,
+              "endAt": "2019-08-31T00:00:00Z",
+              "beginAt": "2019-06-13T00:00:00Z",
+              "seriesId": 1783
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 228,
+              "slug": "league-of-legends-lms-taiwan-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-08-31T17:09:22Z",
+              "leagueId": 295,
+              "id": 2487,
+              "endAt": "2019-09-01T18:00:00Z",
+              "beginAt": "2019-08-23T08:00:00Z",
+              "seriesId": 1783
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 80,
+              "slug": "league-of-legends-lms-taiwan-summer-2019-regional-finals",
+              "name": "Regional finals",
+              "modifiedAt": "2020-01-06T17:58:52Z",
+              "leagueId": 295,
+              "id": 2508,
+              "endAt": "2019-09-07T22:00:00Z",
+              "beginAt": "2019-09-05T22:00:00Z",
+              "seriesId": 1783
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 228,
+      "slug": "league-of-legends-lms-taiwan-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 295,
+      "id": 1783,
+      "fullName": "Summer 2019",
+      "endAt": "2019-08-31T18:00:00Z",
+      "description": "2019 LMS Summer Split",
+      "beginAt": "2019-06-13T00:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://oce.lolesports.com/",
+          "slug": "league-of-legends-opl",
+          "name": "OPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/301/OPL_2018_Logo_Color.png",
+          "id": 301
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-opl-split-2-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-16T06:12:24Z",
+              "leagueId": 301,
+              "id": 2390,
+              "endAt": "2019-08-16T22:00:00Z",
+              "beginAt": "2019-06-06T22:00:00Z",
+              "seriesId": 1802
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 2796,
+              "slug": "league-of-legends-opl-split-2-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-08-31T07:03:45Z",
+              "leagueId": 301,
+              "id": 2501,
+              "endAt": "2019-08-30T22:00:00Z",
+              "beginAt": "2019-08-21T22:00:00Z",
+              "seriesId": 1802
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 2796,
+      "slug": "league-of-legends-opl-split-2-2019",
+      "season": "Split 2",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 301,
+      "id": 1802,
+      "fullName": "Split 2 2019",
+      "endAt": "2019-08-31T09:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-06T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lla",
+          "name": "LLA",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4199/600px-LLA_logo.png",
+          "id": 4199
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 147,
+              "slug": "league-of-legends-lla-opening-2019-799c861e-c33d-42ac-8e89-185de2aadfb4-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-08-05T11:50:32Z",
+              "leagueId": 4199,
+              "id": 2389,
+              "endAt": "2019-08-03T22:00:00Z",
+              "beginAt": "2019-06-07T22:00:00Z",
+              "seriesId": 1801
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 147,
+              "slug": "league-of-legends-lla-opening-2019-799c861e-c33d-42ac-8e89-185de2aadfb4-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2020-01-02T15:30:16Z",
+              "leagueId": 4199,
+              "id": 2482,
+              "endAt": "2019-08-30T22:00:00Z",
+              "beginAt": "2019-08-09T22:00:00Z",
+              "seriesId": 1801
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 147,
+      "slug": "league-of-legends-lla-opening-2019-799c861e-c33d-42ac-8e89-185de2aadfb4",
+      "season": "Closing",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4199,
+      "id": 1801,
+      "fullName": "Closing 2019",
+      "endAt": "2019-08-29T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-07T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://lol.gamepedia.com/Challengers_Korea/2018_Season/Summer_Season#Schedule",
+          "slug": "league-of-legends-challenger-korea",
+          "name": "Challenger Korea",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4142/_.png",
+          "id": 4142
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 126068,
+              "slug": "league-of-legends-challenger-korea-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-03T12:31:17Z",
+              "leagueId": 4142,
+              "id": 2399,
+              "endAt": "2019-08-11T22:00:00Z",
+              "beginAt": "2019-06-05T22:00:00Z",
+              "seriesId": 1807
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1455,
+              "slug": "league-of-legends-challenger-korea-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-08-31T07:02:57Z",
+              "leagueId": 4142,
+              "id": 2499,
+              "endAt": "2019-08-30T18:00:00Z",
+              "beginAt": "2019-08-22T08:00:00Z",
+              "seriesId": 1807
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 1455,
+      "slug": "league-of-legends-challenger-korea-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4142,
+      "id": 1807,
+      "fullName": "Summer 2019",
+      "endAt": "2019-08-11T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-05T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://nexus.leagueoflegends.com/en-us/esports/",
+          "slug": "league-of-legends-lcs-academy",
+          "name": "LCS Academy",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4228/image.png",
+          "id": 4228
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 1597,
+              "slug": "league-of-legends-na-academy-summer-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-07-29T09:26:42Z",
+              "leagueId": 4228,
+              "id": 2391,
+              "endAt": "2019-07-28T22:00:00Z",
+              "beginAt": "2019-05-29T22:00:00Z",
+              "seriesId": 1803
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1595,
+              "slug": "league-of-legends-na-academy-summer-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-09T10:06:35Z",
+              "leagueId": 4228,
+              "id": 2481,
+              "endAt": "2019-08-16T22:00:00Z",
+              "beginAt": "2019-08-01T22:00:00Z",
+              "seriesId": 1803
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 1595,
+      "slug": "league-of-legends-na-academy-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4228,
+      "id": 1803,
+      "fullName": "Summer 2019",
+      "endAt": "2019-07-26T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-05-29T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-rift-rivals-lck-vs-lpl-vs-lms-vcs",
+          "name": "Rift Rivals: LCK vs LPL vs LMS/VCS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4230/Rift_Rivals_Red_2019.png",
+          "id": 4230
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-rift-rivals-lck-vs-lppl-vs-lms-2019-group-stage",
+              "name": "Group stage",
+              "modifiedAt": "2019-11-04T14:28:25Z",
+              "leagueId": 4230,
+              "id": 2401,
+              "endAt": "2019-07-04T22:00:00Z",
+              "beginAt": "2019-07-03T22:00:00Z",
+              "seriesId": 1809
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-rift-rivals-lck-vs-lppl-vs-lms-2019-semifnals",
+              "name": "Semifinals",
+              "modifiedAt": "2019-08-01T11:49:34Z",
+              "leagueId": 4230,
+              "id": 2441,
+              "endAt": "2019-07-06T21:00:00Z",
+              "beginAt": "2019-07-05T22:00:00Z",
+              "seriesId": 1809
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-rift-rivals-lck-vs-lppl-vs-lms-2019-finals",
+              "name": "Finals",
+              "modifiedAt": "2019-11-04T14:39:30Z",
+              "leagueId": 4230,
+              "id": 2440,
+              "endAt": "2019-07-07T21:00:00Z",
+              "beginAt": "2019-07-06T22:00:00Z",
+              "seriesId": 1809
+          }
+      ],
+      "year": 2019,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-rift-rivals-lck-vs-lppl-vs-lms-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4230,
+      "id": 1809,
+      "fullName": "2019",
+      "endAt": "2019-07-07T13:00:00Z",
+      "description": null,
+      "beginAt": "2019-07-04T07:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-rift-rivals",
+          "name": "Rift Rivals: NA vs. EU",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/2107/213px-BlueRift2018.png",
+          "id": 2107
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-rift-rivals-2019-group-stage",
+              "name": "Group stage",
+              "modifiedAt": "2019-06-28T21:02:27Z",
+              "leagueId": 2107,
+              "id": 2400,
+              "endAt": "2019-06-28T22:00:00Z",
+              "beginAt": "2019-06-26T22:00:00Z",
+              "seriesId": 1808
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-rift-rivals-2019-playoff",
+              "name": "Playoffs",
+              "modifiedAt": "2019-07-23T07:49:12Z",
+              "leagueId": 2107,
+              "id": 2424,
+              "endAt": "2019-06-29T22:00:00Z",
+              "beginAt": "2019-06-26T22:00:00Z",
+              "seriesId": 1808
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 88,
+              "slug": "league-of-legends-rift-rivals-2019-2v2-tournament",
+              "name": "2v2 + showmatch",
+              "modifiedAt": "2019-07-23T07:49:22Z",
+              "leagueId": 2107,
+              "id": 2439,
+              "endAt": "2019-06-28T22:00:00Z",
+              "beginAt": "2019-06-27T21:30:00Z",
+              "seriesId": 1808
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": null,
+      "slug": "league-of-legends-rift-rivals-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 2107,
+      "id": 1808,
+      "fullName": "2019",
+      "endAt": "2019-06-29T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-06-26T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://www.cga.cn/nest2019",
+          "slug": "league-of-legends-nest",
+          "name": "NEST",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4225/NEST.png",
+          "id": 4225
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-nest-2019-qualifiers",
+              "name": "Qualifiers",
+              "modifiedAt": "2019-05-07T14:05:03Z",
+              "leagueId": 4225,
+              "id": 2312,
+              "endAt": "2019-04-27T15:00:00Z",
+              "beginAt": "2019-04-22T06:00:00Z",
+              "seriesId": 1782
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 126056,
+              "slug": "league-of-legends-nest-2019-knockout-stage",
+              "name": "Knockout stage",
+              "modifiedAt": "2019-05-26T09:40:13Z",
+              "leagueId": 4225,
+              "id": 2349,
+              "endAt": "2019-05-25T22:00:00Z",
+              "beginAt": "2019-05-24T05:30:00Z",
+              "seriesId": 1782
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 126056,
+      "slug": "league-of-legends-nest-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4225,
+      "id": 1782,
+      "fullName": "2019",
+      "endAt": "2019-05-25T22:00:00Z",
+      "description": null,
+      "beginAt": "2019-04-21T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": "https://liquipedia.net/leagueoflegends/LDL/2019/Spring",
+          "slug": "league-of-legends-ldl",
+          "name": "LDL",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4226/LDL_logo.png",
+          "id": 4226
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 125989,
+              "slug": "league-of-legends-ldl-spring-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2020-01-21T07:40:38Z",
+              "leagueId": 4226,
+              "id": 2361,
+              "endAt": "2019-04-28T11:00:00Z",
+              "beginAt": "2019-02-24T23:00:00Z",
+              "seriesId": 1786
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 201,
+              "slug": "league-of-legends-ldl-spring-2019-season",
+              "name": "Playoffs",
+              "modifiedAt": "2019-05-11T12:54:36Z",
+              "leagueId": 4226,
+              "id": 2326,
+              "endAt": "2019-05-11T12:00:00Z",
+              "beginAt": "2019-05-04T05:00:00Z",
+              "seriesId": 1786
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 201,
+      "slug": "league-of-legends-ldl-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4226,
+      "id": 1786,
+      "fullName": "Spring 2019",
+      "endAt": "2019-05-11T12:00:00Z",
+      "description": null,
+      "beginAt": "2019-02-24T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-mid-invitational",
+          "name": "Mid-Season Invitational",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/300/msi-c8339nuz.png",
+          "id": 300
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 2898,
+              "slug": "league-of-legends-mid-invitational-msi-play-in-2019-play-in-group-a",
+              "name": "Play-in: group a",
+              "modifiedAt": "2019-05-07T13:15:30Z",
+              "leagueId": 300,
+              "id": 2314,
+              "endAt": "2019-05-03T16:00:00Z",
+              "beginAt": "2019-05-01T10:00:00Z",
+              "seriesId": 1784
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 664,
+              "slug": "league-of-legends-mid-invitational-msi-play-in-2019-play-in-group-b",
+              "name": "Play-in: group b",
+              "modifiedAt": "2019-05-07T13:14:09Z",
+              "leagueId": 300,
+              "id": 2315,
+              "endAt": "2019-05-04T16:00:00Z",
+              "beginAt": "2019-05-02T10:00:00Z",
+              "seriesId": 1784
+          },
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-mid-invitational-msi-play-in-2019-knockout-stage",
+              "name": "Play-in: elimination",
+              "modifiedAt": "2019-05-07T15:34:51Z",
+              "leagueId": 300,
+              "id": 2316,
+              "endAt": "2019-05-07T15:00:00Z",
+              "beginAt": "2019-05-05T07:00:00Z",
+              "seriesId": 1784
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 411,
+              "slug": "league-of-legends-mid-invitational-2019-group-stage",
+              "name": "Group stage",
+              "modifiedAt": "2019-05-14T15:47:01Z",
+              "leagueId": 300,
+              "id": 2339,
+              "endAt": "2019-05-18T22:00:00Z",
+              "beginAt": "2019-05-10T10:00:00Z",
+              "seriesId": 1784
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 88,
+              "slug": "league-of-legends-mid-invitational-2019-knockout-stage",
+              "name": "Knockout stage",
+              "modifiedAt": "2019-05-19T11:16:24Z",
+              "leagueId": 300,
+              "id": 2341,
+              "endAt": "2019-05-19T13:00:00Z",
+              "beginAt": "2019-05-17T10:00:00Z",
+              "seriesId": 1784
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 88,
+      "slug": "league-of-legends-mid-invitational-2019",
+      "season": null,
+      "prizepool": null,
+      "name": null,
+      "leagueId": 300,
+      "id": 1784,
+      "fullName": "2019",
+      "endAt": "2019-05-07T15:00:00Z",
+      "description": null,
+      "beginAt": "2019-05-01T10:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-european-masters",
+          "name": "European Masters",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4139/2593d-EU_Masters_Trans-iloveimg-resized.png",
+          "id": 4139
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 247,
+              "slug": "league-of-legends-european-masters-spring-2019-play-in-group-stage",
+              "name": "Play-in: group stage",
+              "modifiedAt": "2019-05-07T15:28:43Z",
+              "leagueId": 4139,
+              "id": 2257,
+              "endAt": "2019-04-10T21:31:00Z",
+              "beginAt": "2019-04-08T16:00:00Z",
+              "seriesId": 1774
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": null,
+              "slug": "league-of-legends-european-masters-spring-2019-play-in-knockout-stage",
+              "name": "Play-in: knockout stage",
+              "modifiedAt": "2019-05-07T15:29:08Z",
+              "leagueId": 4139,
+              "id": 2260,
+              "endAt": "2019-04-11T19:33:00Z",
+              "beginAt": "2019-04-11T16:00:00Z",
+              "seriesId": 1774
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 125905,
+              "slug": "league-of-legends-european-masters-spring-2019-group-a",
+              "name": "Group a",
+              "modifiedAt": "2019-05-07T15:23:36Z",
+              "leagueId": 4139,
+              "id": 2279,
+              "endAt": "2019-04-18T19:00:00Z",
+              "beginAt": "2019-04-15T16:00:00Z",
+              "seriesId": 1774
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 125912,
+              "slug": "league-of-legends-european-masters-spring-2019-group-c",
+              "name": "Group c",
+              "modifiedAt": "2019-05-07T15:24:04Z",
+              "leagueId": 4139,
+              "id": 2281,
+              "endAt": "2019-04-18T21:00:00Z",
+              "beginAt": "2019-04-15T18:00:00Z",
+              "seriesId": 1774
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 247,
+              "slug": "league-of-legends-european-masters-spring-2019-group-d",
+              "name": "Group d",
+              "modifiedAt": "2019-05-07T15:24:19Z",
+              "leagueId": 4139,
+              "id": 2282,
+              "endAt": "2019-04-18T22:00:00Z",
+              "beginAt": "2019-04-15T19:00:00Z",
+              "seriesId": 1774
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 2723,
+              "slug": "league-of-legends-european-masters-spring-2019-group-b",
+              "name": "Group b",
+              "modifiedAt": "2019-05-07T15:12:03Z",
+              "leagueId": 4139,
+              "id": 2280,
+              "endAt": "2019-04-18T20:00:00Z",
+              "beginAt": "2019-04-15T20:00:00Z",
+              "seriesId": 1774
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 125877,
+              "slug": "league-of-legends-european-masters-spring-2019-knockout-stage",
+              "name": "Knockout stage",
+              "modifiedAt": "2019-05-07T15:27:03Z",
+              "leagueId": 4139,
+              "id": 2283,
+              "endAt": "2019-04-21T22:00:00Z",
+              "beginAt": "2019-04-20T16:00:00Z",
+              "seriesId": 1774
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 125877,
+      "slug": "league-of-legends-european-masters-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4139,
+      "id": 1774,
+      "fullName": "Spring 2019",
+      "endAt": "2019-04-30T18:00:00Z",
+      "description": null,
+      "beginAt": "2019-04-08T15:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lpl-china",
+          "slug": "league-of-legends-lpl-china",
+          "name": "LPL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/294/lpl-china-6ygsd4c8.png",
+          "id": 294
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 1568,
+              "slug": "league-of-legends-lpl-china-spring-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-07-22T15:51:45Z",
+              "leagueId": 294,
+              "id": 2035,
+              "endAt": "2019-03-31T16:00:00Z",
+              "beginAt": "2019-01-14T09:00:00Z",
+              "seriesId": 1700
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 411,
+              "slug": "league-of-legends-lpl-china-spring-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-09-25T12:36:43Z",
+              "leagueId": 294,
+              "id": 2209,
+              "endAt": "2019-04-21T18:00:00Z",
+              "beginAt": "2019-04-04T08:00:00Z",
+              "seriesId": 1700
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 411,
+      "slug": "league-of-legends-lpl-china-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 294,
+      "id": 1700,
+      "fullName": "Spring 2019",
+      "endAt": "2019-04-21T18:00:00Z",
+      "description": "2019 LPL Spring Split",
+      "beginAt": "2019-01-14T09:00:00Z"
+  },
+  {
+      "league": {
+          "url": "http://www.lolesports.com/en_US/lms/",
+          "slug": "league-of-legends-lms-taiwan",
+          "name": "LMS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/295/b030bfca-cac7-11e7-92d4-0e6c723feec8.png",
+          "id": 295
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 415,
+              "slug": "league-of-legends-lms-taiwan-summer-2018-97011205-2517-4cbe-8c37-270955e68fd3-promotion-relegation",
+              "name": "Promotion relegation",
+              "modifiedAt": "2019-07-10T12:04:29Z",
+              "leagueId": 295,
+              "id": 1592,
+              "endAt": "2018-09-05T13:14:00Z",
+              "beginAt": "2018-09-05T09:22:00Z",
+              "seriesId": 1596
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 1583,
+              "slug": "league-of-legends-lms-taiwan-spring-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-07-22T16:03:02Z",
+              "leagueId": 295,
+              "id": 2052,
+              "endAt": "2019-03-31T12:43:00Z",
+              "beginAt": "2019-01-17T00:00:00Z",
+              "seriesId": 1596
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 417,
+              "slug": "league-of-legends-lms-taiwan-spring-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-07-23T07:06:25Z",
+              "leagueId": 295,
+              "id": 2226,
+              "endAt": "2019-04-21T18:00:00Z",
+              "beginAt": "2019-04-11T22:00:00Z",
+              "seriesId": 1596
+          }
+      ],
+      "year": 2019,
+      "winnerType": null,
+      "winnerId": null,
+      "slug": "league-of-legends-lms-taiwan-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 295,
+      "id": 1596,
+      "fullName": "Spring 2019",
+      "endAt": "2019-04-21T18:00:00Z",
+      "description": "2019 LMS Spring Split",
+      "beginAt": "2019-01-17T00:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lec",
+          "name": "LEC",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4197/LEC-2019.png",
+          "id": 4197
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 88,
+              "slug": "league-of-legends-lec-spring-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-07-22T16:02:00Z",
+              "leagueId": 4197,
+              "id": 2050,
+              "endAt": "2019-03-16T22:00:00Z",
+              "beginAt": "2019-01-18T00:00:00Z",
+              "seriesId": 1704
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 88,
+              "slug": "league-of-legends-lec-spring-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-07-23T06:43:29Z",
+              "leagueId": 4197,
+              "id": 2190,
+              "endAt": "2019-04-14T17:22:00Z",
+              "beginAt": "2019-03-29T17:00:00Z",
+              "seriesId": 1704
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 88,
+      "slug": "league-of-legends-lec-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4197,
+      "id": 1704,
+      "fullName": "Spring 2019",
+      "endAt": "2019-04-14T17:22:00Z",
+      "description": "2019 LEC Spring Split",
+      "beginAt": "2019-01-18T17:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-lcl",
+          "name": "LCL",
+          "liveSupported": false,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4004/lcl-hk081cyf.png",
+          "id": 4004
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 1718,
+              "slug": "league-of-legends-lcl-spring-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-07-23T05:52:14Z",
+              "leagueId": 4004,
+              "id": 2101,
+              "endAt": "2019-03-24T22:00:00Z",
+              "beginAt": "2019-02-15T23:00:00Z",
+              "seriesId": 1724
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 664,
+              "slug": "league-of-legends-lcl-spring-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-05-27T11:12:28Z",
+              "leagueId": 4004,
+              "id": 2207,
+              "endAt": "2019-04-14T16:58:00Z",
+              "beginAt": "2019-03-29T23:00:00Z",
+              "seriesId": 1724
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 664,
+      "slug": "league-of-legends-lcl-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": null,
+      "leagueId": 4004,
+      "id": 1724,
+      "fullName": "Spring 2019",
+      "endAt": "2019-04-14T16:58:00Z",
+      "description": null,
+      "beginAt": "2019-02-15T23:00:00Z"
+  },
+  {
+      "league": {
+          "url": "",
+          "slug": "league-of-legends-lcs",
+          "name": "LCS",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/4198/LCS_2019_Logo.png",
+          "id": 4198
+      },
+      "tournaments": [
+          {
+              "winnerType": "Team",
+              "winnerId": 390,
+              "slug": "league-of-legends-na-lcs-lcs-spring-2019-regular-season",
+              "name": "Regular season",
+              "modifiedAt": "2019-07-22T16:06:31Z",
+              "leagueId": 4198,
+              "id": 2053,
+              "endAt": "2019-03-25T04:00:00Z",
+              "beginAt": "2019-01-26T00:00:00Z",
+              "seriesId": 1705
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 390,
+              "slug": "league-of-legends-lcs-spring-2019-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-07-23T06:29:21Z",
+              "leagueId": 4198,
+              "id": 2189,
+              "endAt": "2019-04-14T00:57:00Z",
+              "beginAt": "2019-03-30T21:00:00Z",
+              "seriesId": 1705
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 390,
+      "slug": "league-of-legends-lcs-spring-2019",
+      "season": "Spring",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 4198,
+      "id": 1705,
+      "fullName": "Spring 2019",
+      "endAt": "2019-04-14T00:57:00Z",
+      "description": "LCS 2019 Spring Split",
+      "beginAt": "2019-01-26T22:00:00Z"
+  },
+  {
+      "league": {
+          "url": null,
+          "slug": "league-of-legends-cblol-brazil",
+          "name": "CBLOL",
+          "liveSupported": true,
+          "imageUrl": "https://cdn.pandascore.co/images/league/image/302/cblol-brazil-dba70xuw.png",
+          "id": 302
+      },
+      "tournaments": [
+          {
+              "winnerType": null,
+              "winnerId": null,
+              "slug": "league-of-legends-cblol-brazil-summer-2019-promotion",
+              "name": "Promotion and access",
+              "modifiedAt": "2019-05-14T10:08:51Z",
+              "leagueId": 302,
+              "id": 1627,
+              "endAt": "2018-09-16T18:26:21Z",
+              "beginAt": "2018-09-14T21:59:26Z",
+              "seriesId": 1703
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 2580,
+              "slug": "league-of-legends-cblol-brazil-cblol-split1-2019-cblol-roundrobin",
+              "name": "Regular season",
+              "modifiedAt": "2019-05-14T10:00:42Z",
+              "leagueId": 302,
+              "id": 2047,
+              "endAt": "2019-03-25T14:00:00Z",
+              "beginAt": "2019-01-12T00:00:00Z",
+              "seriesId": 1703
+          },
+          {
+              "winnerType": "Team",
+              "winnerId": 158,
+              "slug": "league-of-legends-cblol-brazil-cblol-split1-2019-cblol-split-playoffs",
+              "name": "Playoffs",
+              "modifiedAt": "2019-05-14T09:57:38Z",
+              "leagueId": 302,
+              "id": 2048,
+              "endAt": "2019-04-13T21:05:00Z",
+              "beginAt": "2019-01-12T00:00:00Z",
+              "seriesId": 1703
+          }
+      ],
+      "year": 2019,
+      "winnerType": "Team",
+      "winnerId": 158,
+      "slug": "league-of-legends-cblol-brazil-summer-2019",
+      "season": "Summer",
+      "prizepool": null,
+      "name": "",
+      "leagueId": 302,
+      "id": 1703,
+      "fullName": "Summer 2019",
+      "endAt": "2019-04-13T21:05:00Z",
+      "description": "cblol 2019 1st split",
+      "beginAt": "2018-09-14T21:59:00Z"
+  }
+]

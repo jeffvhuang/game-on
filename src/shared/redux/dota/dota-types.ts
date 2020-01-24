@@ -9,12 +9,12 @@ import { ESportsTeam } from "../../../types/esports-api/esports-team.model";
 export interface DotaState {
   isFetching: boolean;
   series: ESportsSeries[];
+  selectedSeriesTournaments: ESportsTournament[];
   tournaments: ESportsTournament[];
   ongoing: ESportsTournament[];
   upcoming: ESportsTournament[];
   completed: ESportsTournament[];
   matches: ESportsMatch[];
-  selectedSeriesTournaments: ESportsTournament[];
   tournamentMatches: ESportsMatch[];
   teams: ESportsTeamBase[];
   matchesTeams: ESportsTeamBase[];

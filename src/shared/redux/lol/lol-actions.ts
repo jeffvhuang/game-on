@@ -3,7 +3,7 @@ import { ThunkAction } from "redux-thunk";
 
 import * as T from "./lol-types";
 import * as C from "./lol-constants";
-import { gameonAPI } from "../../../helpers/constants";
+import { gameonAPI, env } from "../../../helpers/constants";
 import {
   sleep,
   sortESportsTournaments,
@@ -12,15 +12,48 @@ import {
 } from "../../../helpers/utils";
 
 // Temporary seed data
+import SERIES from "../../../mockApiData/lolSeries.json";
 import TOURNAMENTS from "../../../mockApiData/lolTournaments.json";
 import MATCHES from "../../../mockApiData/lolMatches.json";
 import TOURNAMENT_MATCHES from "../../../mockApiData/lolTournamentMatches.json";
 import { ReduxState } from "../redux-state";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
+import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 
 // Data API
-// Get Tournaments
+//#region Get Series (multiple)
+export function getLolSeriesRequest(): T.GetLolSeriesRequest {
+  return { type: C.GET_LOL_SERIES_REQUEST };
+}
+export function getLolSeriesSuccess(payload): T.GetLolSeriesSuccess {
+  return { type: C.GET_LOL_SERIES_SUCCESS, payload };
+}
+export function getLolSeriesFailure(err): T.GetLolSeriesFailure {
+  return { type: C.GET_LOL_SERIES_FAILURE, err };
+}
+
+export const getLolSeries = (): ThunkAction<
+  Promise<void>, ReduxState, null, T.LolActionTypes
+> => async (dispatch) => {
+  dispatch(getLolSeriesRequest());
+  if (env === "dev") {
+    const series = SERIES as ESportsSeries[];
+    dispatch(getLolSeriesSuccess(series));
+    return;
+  }
+  // api/lol/series
+  return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES)
+    .then(response => {
+      dispatch(getLolSeriesSuccess(response.data));
+    })
+    .catch(err => {
+      dispatch(getLolSeriesFailure(err));
+    });
+};
+//#endregion
+
+//#region Get Tournaments
 export function getLolTournamentsRequest(): T.GetLolTournamentsRequest {
   return { type: C.GET_LOL_TOURNAMENTS_REQUEST };
 }
@@ -67,46 +100,9 @@ export const getLolTournaments = (): ThunkAction<
   dispatch(getLolTournamentsSuccess(tournaments, sortedTournaments));
   return tournaments;
 };
+//#endregion
 
-// Get Series
-// export function getLolSeriesRequest(): T.GetLolSeriesRequest {
-//   return { type: C.GET_LOL_SERIES_REQUEST }
-// }
-// export function getLolSeriesSuccess(payload, sortedSeries): T.GetLolSeriesSuccess {
-//   return { type:
-//     C.GET_LOL_SERIES_SUCCESS,
-//     payload,
-//     sortedSeries
-//   }
-// }
-// export function getLolSeriesFailure(err): T.GetLolSeriesFailure {
-//   return { type: C.GET_LOL_SERIES_FAILURE, err }
-// }
-
-// export function getLolSeries() {
-//   return async function (dispatch) {
-//     dispatch(getLolSeriesRequest());
-//     return axios.get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES)
-//       .then(response {
-//         dispatch(getLolSeriesSuccess(response.data));
-//       })
-//       .catch(err {
-//         dispatch(getLolSeriesFailure(err));
-//         throw(err);
-//       });
-//   };
-// };
-
-// export function getLolSeries() {
-//   return async function (dispatch) {
-//     dispatch(getLolSeriesRequest());
-//     await sleep(1000);
-//     const sortedSeries = sortESportsSeries(SERIES);
-//     return dispatch(getLolSeriesSuccess(SERIES, sortedSeries));
-//   };
-// };
-
-// Get Matches
+//#region Get Matches
 export function getLolMatchesRequest(): T.GetLolMatchesRequest {
   return { type: C.GET_LOL_MATCHES_REQUEST };
 }
@@ -153,8 +149,9 @@ export const getLolMatches = (): ThunkAction<
   dispatch(getLolMatchesSuccess(sortESportByDate(matches), matchesTeams));
   return matches;
 };
+//#endregion
 
-// Get A Tournament's Matches
+//#region Get A Tournament's Matches
 export function getLolTournamentMatchesRequest(): T.GetLolTournamentMatchesRequest {
   return { type: C.GET_LOL_TOURNAMENT_MATCHES_REQUEST };
 }
@@ -207,8 +204,9 @@ export const clearLolTournamentMatches = (): ThunkAction<
 > => dispatch => {
   return dispatch(clearLolTournamentMatchesSuccess());
 };
+//#endregion
 
-// Get Teams
+//#region Get Teams
 export function getLolTeamsRequest(): T.GetLolTeamsRequest {
   return { type: C.GET_LOL_TEAMS_REQUEST };
 }
@@ -243,3 +241,4 @@ export const getLolTeams = (): ThunkAction<
   await sleep(1000);
   return dispatch(getLolTeamsSuccess([]));
 };
+//#endregion

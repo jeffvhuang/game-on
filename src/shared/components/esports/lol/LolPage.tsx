@@ -1,23 +1,24 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Tabs } from 'antd';
+import * as React from "react";
+import { connect } from "react-redux";
+import { withRouter, RouteComponentProps } from "react-router-dom";
+import { compose } from "redux";
+import { Button } from "antd";
 
-import { paths } from '../../../../helpers/constants';
-import { getLolTournaments, getLolTournamentMatches } from '../../../redux/lol/lol-actions';
-import LolTournamentsContainer from './LolTournamentsContainer';
-import LolTournamentContainer from './LolTournamentContainer';
-import LolMatchesContainer from './LolMatchesContainer';
-import { LolState } from '../../../redux/lol/lol-types';
-import { ReduxState } from '../../../redux/redux-state';
+import { getLolSeries } from "../../../redux/lol/lol-actions";
+import { LolState } from "../../../redux/lol/lol-types";
+import { ReduxState } from "../../../redux/redux-state";
+import DotaSeriesListContainer from "./list-view/LolListContainer";
+import DotaSeriesCalendarContainer from "./LolCalendarContainer";
 
-const TabPane = Tabs.TabPane;
-interface StateProps { lol: LolState };
-interface DispatchProps { getLolTournaments; getLolTournamentMatches; };
+interface StateProps extends RouteComponentProps<any> {
+  lol: LolState;
+}
+interface DispatchProps {
+  getLolSeries;
+}
 type Props = StateProps & DispatchProps;
 interface State {
-  activeTab: string;
-  tournamentId?: number;
-  tournamentName: string;
+  isListView: boolean;
 }
 
 class LolPage extends React.Component<Props, State> {
@@ -25,25 +26,29 @@ class LolPage extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      activeTab: "1",
-      tournamentId: undefined,
-      tournamentName: ''
+      isListView: false
     };
   }
 
-  selectTab = (key) => { this.setState({ activeTab: key }); }
-
-  selectTournament = (info) => {
-    const { lol } = this.props;
-    const id = info.event.id;
-    if (!lol.tournamentMatches.length || lol.tournamentMatches[0].tournament.id != id) 
-      this.props.getLolTournamentMatches(id);
-    this.setState({
-      activeTab: "2",
-      tournamentName: info.event.title,
-      tournamentId: id
-    });
+  componentDidMount() {
+    if (!this.props.lol.series.length) this.props.getLolSeries();
   }
+
+  toggleView = () =>
+    this.setState(prevState => ({
+      isListView: !prevState.isListView
+    }));
+
+  selectCalendarTournament = info => {
+    const { history } = this.props;
+    if (history) history.push(`/esports/lol/${info.event.id}`);
+  };
+
+  selectTournament = (id: number) => {
+    return () => {
+      if (this.props.history) this.props.history.push(`/esports/lol/${id}`);
+    };
+  };
 
   render() {
     return (
@@ -51,20 +56,22 @@ class LolPage extends React.Component<Props, State> {
         <div className="page-header">
           <h1>League of Legends</h1>
         </div>
-        <Tabs activeKey={this.state.activeTab} size="large" onTabClick={this.selectTab}>
-          <TabPane tab="Tournaments" key="1">
-            <LolTournamentsContainer selectTournament={this.selectTournament} />
-          </TabPane>
-          <TabPane tab="Tournament" key="2">
-            {/* <LolTournamentContainer selectTournament={this.selectTournament}
-              tournamentId={this.state.tournamentId}
-              tournamentName={this.state.tournamentName} /> */}
-            <LolTournamentContainer />
-          </TabPane>
-          <TabPane tab="Matches" key="3">
-            <LolMatchesContainer />
-          </TabPane>
-        </Tabs>
+        <div className="more-btn">
+          <Button onClick={this.toggleView} className="right">
+            Show {this.state.isListView ? "Calendar" : "List"} View
+          </Button>
+        </div>
+        {this.state.isListView ? (
+          <DotaSeriesListContainer
+            series={this.props.lol.series}
+            selectTournament={this.selectTournament}
+          />
+        ) : (
+          <DotaSeriesCalendarContainer
+            series={this.props.lol.series}
+            selectTournament={this.selectCalendarTournament}
+          />
+        )}
       </div>
     );
   }
@@ -75,8 +82,13 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getLolTournaments,
-  getLolTournamentMatches
+  getLolSeries
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LolPage);
+export default compose(
+  withRouter,
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
+)(LolPage);
