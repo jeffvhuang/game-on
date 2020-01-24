@@ -13,7 +13,7 @@ interface MatchParams {
   id: string;
 }
 interface StateProps extends RouteComponentProps<MatchParams> {
-  Lol: LolState;
+  lol: LolState;
 }
 interface DispatchProps {
   getLolSeriesTournaments;
@@ -33,11 +33,11 @@ class LolTournamentPage extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    const { Lol } = this.props;
+    const { lol } = this.props;
     // Get the tournaments for selected series if none in array or doesnt match from same tournament
     if (
-      !Lol.selectedSeriesTournaments.length ||
-      Lol.selectedSeriesTournaments[0].seriesId.toString() != this.state.id
+      !lol.selectedSeriesTournaments.length ||
+      lol.selectedSeriesTournaments[0].seriesId.toString() != this.state.id
     )
       this.props.getLolSeriesTournaments(this.state.id);
   }
@@ -51,11 +51,11 @@ class LolTournamentPage extends React.Component<Props, State> {
       <div className="section content">
         <div className="page-header">
           <h1>
-            {this.getTournamentName(this.props.Lol.selectedSeriesTournaments)}
+            {this.getTournamentName(this.props.lol.selectedSeriesTournaments)}
           </h1>
         </div>
         <div>
-          {this.props.Lol.selectedSeriesTournaments.map(tournament => (
+          {this.props.lol.selectedSeriesTournaments.map(tournament => (
             <div key={tournament.id} className="tournament-section">
               <h2>{tournament.name}</h2>
               <EsportsTournamentPageTeams tournament={tournament} />
