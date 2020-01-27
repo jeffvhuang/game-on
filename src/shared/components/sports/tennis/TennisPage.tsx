@@ -7,6 +7,7 @@ import TennisTournaments from "./TennisTournaments";
 import { TennisState } from "../../../redux/tennis/tennis-types";
 import { ReduxState } from "../../../redux/redux-state";
 import { Button } from "antd";
+import PageHeader from "../../common/PageHeader";
 
 interface StateProps {
   tennis: TennisState;
@@ -66,7 +67,7 @@ class TennisPage extends React.Component<Props, State> {
   render() {
     return (
       <div className="section content">
-        <h2 className="page-heading">Tennis</h2>
+        <PageHeader title="Tennis" isLoading={this.props.tennis.isFetching} />
         <SelectDropdown
           handleChange={this.handleChange}
           options={tournamentTypes}

@@ -8,6 +8,7 @@ import { ReduxState } from "../../../redux/redux-state";
 import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
 import EsportsTournamentPageTeams from "../common/tournaments/EsportsTournamentPageTeams";
 import EsportsTournamentPageMatches from "../common/tournaments/EsportsTournamentPageMatches";
+import PageHeader from "../../common/PageHeader";
 
 interface MatchParams {
   id: string;
@@ -49,11 +50,7 @@ class DotaTournamentPage extends React.Component<Props, State> {
   render() {
     return (
       <div className="section content">
-        <div className="page-header">
-          <h1>
-            {this.getTournamentName(this.props.dota.selectedSeriesTournaments)}
-          </h1>
-        </div>
+        <PageHeader title={this.getTournamentName(this.props.dota.selectedSeriesTournaments)} isLoading={this.props.dota.isFetching} />
         <div>
           {this.props.dota.selectedSeriesTournaments.map(tournament => (
             <div key={tournament.id} className="tournament-section">

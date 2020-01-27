@@ -13,6 +13,7 @@ import TennisMatches from "./TennisMatches";
 import { TennisState } from "../../../../redux/tennis/tennis-types";
 import { ReduxState } from "../../../../redux/redux-state";
 import { TennisTournamentInfo } from "../../../../../types/tennis-api/tennis-tournament-info.model";
+import PageHeader from "../../../common/PageHeader";
 //#endregion
 //#region interfaces
 interface MatchParams {
@@ -82,7 +83,7 @@ class TennisTournamentPage extends React.Component<Props, State> {
   render() {
     return (
       <div className="section content">
-        <h2 className="page-heading">{this.state.tournamentName}</h2>
+        <PageHeader title={this.state.tournamentName} isLoading={this.props.tennis.isFetching} />
         {/* <SelectDropdown
           handleChange={this.handleChange}
           options={this.props.tennis.tournamentInfo.competitors || []}

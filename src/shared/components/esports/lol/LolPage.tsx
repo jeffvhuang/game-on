@@ -9,6 +9,7 @@ import { LolState } from "../../../redux/lol/lol-types";
 import { ReduxState } from "../../../redux/redux-state";
 import EsportsListContainer from "../common/list-view/EsportsListContainer";
 import EsportsCalendarContainer from "../common/EsportsCalendarContainer";
+import PageHeader from "../../common/PageHeader";
 
 interface StateProps extends RouteComponentProps<any> {
   lol: LolState;
@@ -53,9 +54,7 @@ class LolPage extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <div className="page-header">
-          <h1>League of Legends</h1>
-        </div>
+        <PageHeader title="League of Legends" isLoading={this.props.lol.isFetching} />
         <div className="more-btn">
           <Button onClick={this.toggleView} className="right">
             Show {this.state.isListView ? "Calendar" : "List"} View

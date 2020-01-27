@@ -9,6 +9,7 @@ import { DotaState } from "../../../redux/dota/dota-types";
 import { ReduxState } from "../../../redux/redux-state";
 import EsportsListContainer from "../common/list-view/EsportsListContainer";
 import EsportsCalendarContainer from "../common/EsportsCalendarContainer";
+import PageHeader from "../../common/PageHeader";
 
 interface StateProps extends RouteComponentProps<any> {
   dota: DotaState;
@@ -53,9 +54,7 @@ class DotaPage extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <div className="page-header">
-          <h1>Dota 2</h1>
-        </div>
+        <PageHeader title="Dota 2" isLoading={this.props.dota.isFetching} />
         <div className="more-btn">
           <Button onClick={this.toggleView} className="right">
             Show {this.state.isListView ? "Calendar" : "List"} View

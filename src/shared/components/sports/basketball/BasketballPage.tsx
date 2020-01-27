@@ -10,6 +10,7 @@ import NbaSelectDropdown from "./NbaSelectDropdown";
 import BasketballScheduleSection from "./BasketballScheduleSection";
 import { NbaState } from "../../../redux/nba/nba-types";
 import { ReduxState } from "../../../redux/redux-state";
+import PageHeader from "../../common/PageHeader";
 
 interface StateProps {
   nba: NbaState;
@@ -61,7 +62,7 @@ class BasketballPage extends React.Component<Props, State> {
   render() {
     return (
       <div className="section content">
-        <h2 className="page-heading">NBA</h2>
+        <PageHeader title="NBA" isLoading={this.props.nba.isFetching} />
         <NbaSelectDropdown
           handleChange={this.handleChange}
           teams={this.props.nba.teams}

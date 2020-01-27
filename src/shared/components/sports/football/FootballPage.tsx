@@ -12,7 +12,7 @@ import FootballSelectDropdown from "./FootballSelectDropdown";
 import FootballScheduleSection from "./FootballScheduleSection";
 import { FootballState } from "../../../redux/football/football-types";
 import { ReduxState } from "../../../redux/redux-state";
-import LoadingSpinner from "../../common/LoadingSpinner";
+import PageHeader from "../../common/PageHeader";
 
 interface MatchParams {
   league: string;
@@ -136,12 +136,10 @@ class FootballPage extends React.Component<Props, State> {
     const { league, leagueKey, values } = this.state;
     return (
       <div className="section content">
-        <div className="page-header">
-          <h1>{league}</h1>
-          <div className="loader">
-            {this.props[leagueKey].isFetching && <LoadingSpinner />}
-          </div>
-        </div>
+        <PageHeader
+          title={league}
+          isLoading={this.props[leagueKey].isFetching}
+        />
         <FootballSelectDropdown
           handleChange={this.handleChange}
           teams={this.sortTeamsForDropdown(this.props[leagueKey].teams)}
