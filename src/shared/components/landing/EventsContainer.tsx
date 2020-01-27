@@ -12,6 +12,7 @@ import { GameOnEvent } from "../../../types/game-on-general/game-on-event.model"
 import UpcomingEvents from "./UpcomingEvents";
 import EventsToday from "./EventsToday";
 import SportSelectDropdown from "../common/SportSelectDropdown";
+import PageHeader from "../common/PageHeader";
 
 const { Panel } = Collapse;
 interface StateProps {
@@ -75,6 +76,7 @@ class EventsContainer extends React.Component<Props, State> {
 
     return (
       <div className="section">
+        <PageHeader title="Matches" isLoading={this.props.general.isFetching} />
         <h2 className="page-heading">Matches</h2>
         <SportSelectDropdown handleChange={this.handleChange} />
         <Collapse defaultActiveKey={["1"]} className="events-accordion">
