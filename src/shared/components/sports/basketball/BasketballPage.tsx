@@ -70,11 +70,13 @@ class BasketballPage extends React.Component<Props, State> {
           header="Today"
           games={this.props.nba.gamesToday}
           values={this.state.values}
+          isLoading={this.props.nba.isFetching}
         />
         <BasketballScheduleSection
           header="Upcoming"
           games={this.props.nba.upcoming}
           values={this.state.values}
+          isLoading={this.props.nba.isFetching}
           numToShow={this.state.upcomingToShow}
         />
         <div className="more-btn">
@@ -86,6 +88,7 @@ class BasketballPage extends React.Component<Props, State> {
           header="Past"
           games={this.props.nba.completed}
           values={this.state.values}
+          isLoading={this.props.nba.isFetching}
           numToShow={this.state.pastToShow}
         />
         <Button onClick={this.showMorePast} className="right">

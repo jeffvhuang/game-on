@@ -9,6 +9,7 @@ interface Props {
   header: string;
   games: NbaSchedule[];
   values: string[];
+  isLoading: boolean;
   numToShow?: number;
 }
 
@@ -16,6 +17,7 @@ function BasketballScheduleSection({
   header,
   games,
   values,
+  isLoading,
   numToShow
 }: Props) {
   let gamesToShow: NbaSchedule[];
@@ -47,7 +49,7 @@ function BasketballScheduleSection({
         </Row>
       ) : (
         <Row>
-          <Col span={8}>No games to display</Col>
+          <Col span={8}>{!isLoading && "No games to display"}</Col>
         </Row>
       )}
       {gamesToShow.length > 0 &&

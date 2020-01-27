@@ -9,10 +9,17 @@ interface Props {
   header: string;
   games: FootballSchedule[];
   values: string[];
+  isLoading: boolean;
   numToShow?: number;
 }
 
-function FootballScheduleSection({ header, games, values, numToShow }: Props) {
+function FootballScheduleSection({
+  header,
+  games,
+  values,
+  isLoading,
+  numToShow
+}: Props) {
   let gamesToShow: FootballSchedule[];
 
   if (values.length > 0)
@@ -42,7 +49,7 @@ function FootballScheduleSection({ header, games, values, numToShow }: Props) {
         </Row>
       ) : (
         <Row>
-          <Col span={8}>No games to display</Col>
+          <Col span={8}>{!isLoading && "No games to display"}</Col>
         </Row>
       )}
       {gamesToShow.length > 0 &&

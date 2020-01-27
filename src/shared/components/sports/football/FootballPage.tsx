@@ -144,11 +144,13 @@ class FootballPage extends React.Component<Props, State> {
           games={this.props[leagueKey].today}
           header="Today"
           values={values}
+          isLoading={this.props[leagueKey].isFetching}
         />
         <FootballScheduleSection
           games={this.props[leagueKey].upcoming}
           header="Upcoming"
           values={values}
+          isLoading={this.props[leagueKey].isFetching}
           numToShow={this.state.numToShowUpcoming}
         />
         <div className="more-btn">
@@ -160,6 +162,7 @@ class FootballPage extends React.Component<Props, State> {
           games={this.props[leagueKey].completed}
           header="Past"
           values={values}
+          isLoading={this.props[leagueKey].isFetching}
           numToShow={this.state.numToShowPast}
         />
         <Button onClick={this.showMorePast} className="right">
