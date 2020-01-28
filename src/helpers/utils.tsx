@@ -567,4 +567,20 @@ export function capitalise(word: string) {
 
 //#region redux helper methods
 export function merge(prev, next) { return Object.assign({}, prev, next); }
+
+// month in range 0 - 11
+export function buildUrlRequestRangeQuery(url: string, year: number, month: number): string {
+  if (month < 0 || month > 11) {
+    return url;
+  }
+  const monthBegin = month < 2 ? month + 12 - 1 : month - 1;
+  const yearBegin = month < 2 ? year - 1 : year;
+  const monthEnd = month > 8 ? month - 12 + 4 : month + 4;
+  const yearEnd = month > 8 ? year + 1 : year;
+
+  const monthBeginString = monthBegin < 10 ? `0${monthBegin}` : monthBegin;
+  const monthEndString = monthEnd < 10 ? `0${monthEnd}` : monthEnd;
+
+  return `${url}?rangeBegin=${yearBegin}-${monthBeginString}-01&rangeEnd=${yearEnd}-${monthEndString}-01`;
+}
 //#endregion

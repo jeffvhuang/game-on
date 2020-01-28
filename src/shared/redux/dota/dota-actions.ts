@@ -7,7 +7,8 @@ import {
   sleep,
   sortESportsTournaments,
   sortESportByDate,
-  getESportsTeamsFromMatches
+  getESportsTeamsFromMatches,
+  buildUrlRequestRangeQuery
 } from "../../../helpers/utils";
 
 // Temporary seed data
@@ -80,7 +81,11 @@ export function getDotaSeriesFailure(err): T.GetDotaSeriesFailure {
   return { type: C.GET_DOTA_SERIES_FAILURE, err };
 }
 
-export const getDotaSeries = (): ThunkAction<
+// month 0 - 11 (as per Date.getMonth()
+export const getDotaSeries = (
+  year: number | null = null,
+  month: number | null = null
+): ThunkAction<
   Promise<void>,
   ReduxState,
   null,
@@ -94,8 +99,13 @@ export const getDotaSeries = (): ThunkAction<
     return;
   }
 
+  let url = gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.SERIES;
+  if (year && month != null) {
+    url = buildUrlRequestRangeQuery(url, year, month);
+  }
+
   return axios
-    .get(gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.SERIES)
+    .get(url)
     .then(response => {
       dispatch(getDotaSeriesSuccess(response.data));
     })

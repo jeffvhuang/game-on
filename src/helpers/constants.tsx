@@ -6,7 +6,7 @@ import SubMenu from "antd/lib/menu/SubMenu";
  *
  */
 export let env = "dev";
-// env = "prod";
+env = "prod";
 
 export const appName = "Game On";
 

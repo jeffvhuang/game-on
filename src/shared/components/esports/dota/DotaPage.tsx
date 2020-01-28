@@ -32,7 +32,10 @@ class DotaPage extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    if (!this.props.dota.series.length) this.props.getDotaSeries();
+    if (!this.props.dota.series.length) {
+      const today = new Date();
+      this.props.getDotaSeries(today.getFullYear(), today.getMonth());
+    } 
   }
 
   toggleView = () =>
