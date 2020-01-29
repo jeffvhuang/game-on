@@ -542,6 +542,11 @@ export function getDateWithOrdinal(d: Date): string {
   }`;
 }
 
+export function parseISOStringToDate(s): Date {
+  const b = s.split(/\D+/);
+  return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
+}
+
 export function isValidDate(d: string) {
   return Object.prototype.toString.call(d) === "[object Date]";
 }
@@ -566,10 +571,16 @@ export function capitalise(word: string) {
 //#endregion
 
 //#region redux helper methods
-export function merge(prev, next) { return Object.assign({}, prev, next); }
+export function merge(prev, next) {
+  return Object.assign({}, prev, next);
+}
 
 // month in range 0 - 11
-export function buildUrlRequestRangeQuery(url: string, year: number, month: number): string {
+export function buildUrlRequestRangeQuery(
+  url: string,
+  year: number,
+  month: number
+): string {
   if (month < 0 || month > 11) {
     return url;
   }

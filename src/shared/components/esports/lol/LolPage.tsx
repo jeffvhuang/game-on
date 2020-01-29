@@ -10,6 +10,7 @@ import { ReduxState } from "../../../redux/redux-state";
 import EsportsListContainer from "../common/list-view/EsportsListContainer";
 import EsportsCalendarContainer from "../common/EsportsCalendarContainer";
 import PageHeader from "../../common/PageHeader";
+import { ESportsSeries } from "../../../../types/esports-api/esports-series.model";
 
 interface StateProps extends RouteComponentProps<any> {
   lol: LolState;
@@ -51,10 +52,26 @@ class LolPage extends React.Component<Props, State> {
     };
   };
 
+  getTournamentEvents = (series: ESportsSeries[]) => (
+    fetchInfo,
+    successCallback,
+    failureCallback
+  ) => {
+    console.log(fetchInfo);
+    const { lol } = this.props;
+    // Check first and last dates and compare to current month on calendar
+    // const calendar = document.getElementById('calendar');
+    // const date = (calendar) ? calendar.fullCalendar('getDate');
+    // const currentMonth =
+  };
+
   render() {
     return (
       <div>
-        <PageHeader title="League of Legends" isLoading={this.props.lol.isFetching} />
+        <PageHeader
+          title="League of Legends"
+          isLoading={this.props.lol.isFetching}
+        />
         <div className="more-btn">
           <Button onClick={this.toggleView} className="right">
             Show {this.state.isListView ? "Calendar" : "List"} View
@@ -69,6 +86,7 @@ class LolPage extends React.Component<Props, State> {
           <EsportsCalendarContainer
             series={this.props.lol.series}
             selectTournament={this.selectCalendarTournament}
+            getEvents={this.getTournamentEvents}
           />
         )}
       </div>
