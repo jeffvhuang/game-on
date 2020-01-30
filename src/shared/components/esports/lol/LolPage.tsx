@@ -52,11 +52,7 @@ class LolPage extends React.Component<Props, State> {
     };
   };
 
-  getTournamentEvents = (series: ESportsSeries[]) => (
-    fetchInfo,
-    successCallback,
-    failureCallback
-  ) => {
+  getTournamentEvents = (fetchInfo, successCallback, failureCallback) => {
     console.log(fetchInfo);
     const { lol } = this.props;
     // Check first and last dates and compare to current month on calendar
@@ -84,7 +80,6 @@ class LolPage extends React.Component<Props, State> {
           />
         ) : (
           <EsportsCalendarContainer
-            series={this.props.lol.series}
             selectTournament={this.selectCalendarTournament}
             getEvents={this.getTournamentEvents}
           />

@@ -11,7 +11,10 @@ import EsportsListContainer from "../common/list-view/EsportsListContainer";
 import EsportsCalendarContainer from "../common/EsportsCalendarContainer";
 import PageHeader from "../../common/PageHeader";
 import { ESportsSeries } from "../../../../types/esports-api/esports-series.model";
-import { parseISOStringToDate } from "../../../../helpers/utils";
+import {
+  parseISOStringToDate,
+  getEsportsTournamentsForCalendarFromSeries
+} from "../../../../helpers/utils";
 
 interface StateProps extends RouteComponentProps<any> {
   dota: DotaState;
@@ -22,23 +25,26 @@ interface DispatchProps {
 type Props = StateProps & DispatchProps;
 interface State {
   isListView: boolean;
-  // thisMonthCalled: boolean;
+  thisMonthCalled: number;
 }
 
 class DotaPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
+    const today = new Date();
+
     this.state = {
-      isListView: false
+      isListView: false,
+      thisMonthCalled: today.getMonth()
     };
   }
 
   componentDidMount() {
-    if (this.props.dota.series.length < 1) {
-      const today = new Date();
-      this.props.getDotaSeries(today.getFullYear(), today.getMonth());
-    }
+    // if (this.props.dota.series.length < 1) {
+    //   const today = new Date();
+    //   this.props.getDotaSeries(today.getFullYear(), today.getMonth());
+    // }
   }
 
   toggleView = () =>
@@ -57,15 +63,26 @@ class DotaPage extends React.Component<Props, State> {
     };
   };
 
-  getTournamentEvents = (series: ESportsSeries[]) => {
-    return (fetchInfo, successCallback, failureCallback) => {
-      console.log("fetchinfo", fetchInfo);
+  getTournamentEvents = (fetchInfo, successCallback, failureCallback) => {
+    console.log("fetchinfo", fetchInfo);
+    if (this.props.dota.series.length < 1) {
+      const today = new Date();
+      this.props
+        .getDotaSeries(today.getFullYear(), today.getMonth())
+        .then(data => {
+          successCallback(getEsportsTournamentsForCalendarFromSeries(data));
+        });
+    } else {
       // Get current month
-      // const middleMS =
-      //   (fetchInfo.start.getTime() + fetchInfo.end.getTime()) / 2;
-      // const middleDate = new Date(middleMS);
-      // const currentMonth = middleDate.getMonth();
-      // const currentYear = middleDate.getFullYear();
+      const middleMS =
+        (fetchInfo.start.getTime() + fetchInfo.end.getTime()) / 2;
+      const middleDate = new Date(middleMS);
+      const currentMonth = middleDate.getMonth();
+      const currentYear = middleDate.getFullYear();
+
+      this.props.getDotaSeries(currentYear, currentMonth).then(data => {
+        successCallback(getEsportsTournamentsForCalendarFromSeries(data));
+      });
 
       // const { dota } = this.props;
       // // Check first and last dates and compare to current month on calendar
@@ -96,9 +113,9 @@ class DotaPage extends React.Component<Props, State> {
       //   // ?? options for when to make request for more events data:
       //   /** 1. determine whether closer to later or earlier and then detrmine
       //    whether within 2 months to make request
-      //    2. immediately compare both latest and earliest by using month to convert back
-      //    to date but first of month / end of month then get time again and compare MS
-      //    */
+      //   2. immediately compare both latest and earliest by using month to convert back
+      //   to date but first of month / end of month then get time again and compare MS
+      //   */
 
       //   // after obtaining month, use to create date from 1st
       //   const firstCurrentMonth = new Date(currentYear, currentMonth, 1);
@@ -116,40 +133,8 @@ class DotaPage extends React.Component<Props, State> {
       //     // this.props.getDotaSeries(currentYear, currentMonth);
       //     console.log("make request later");
       //   }
-
-      // Determine whether need to make further request
-      // Find whether closer to later or earlier month ( below doesnt consider year)
-      // if (Math.abs(latestMS - middleMS) < Math.abs(middleMS - earliestMS)) {
-      //   // Closer to latest date
-      //   console.log("closer to latest");
-      //   if (currentMonth < 10) {
-      //     if (latestMonth - currentMonth <= 2) {
-      //       // make request
-      //       console.log("make request - closer to latest & month 0 - 9 (jan - oct)");
-      //     }
-      //   } else {
-      //     if (latestMonth + 12 - currentMonth <= 3) {
-      //       console.log('make request - closer to latest & month 10+ (nov - dec)');
-      //     }
-      //   }
-
-      // } else {
-      //   // Closer to earliest date
-      //   console.log("closer to earliest");
-      //   if (currentMonth > 1) {
-      //     if (currentMonth - earliestMonth <= 2) {
-      //       // make request
-      //       console.log("make request");
-      //     }
-      //   } else {
-      //     if (currentMonth + 12 - earliestMonth <= 2) {
-      //       // make request
-      //       console.log("make request as currentMonth < 2");
-      //     }
-      //   }
       // }
-      // }
-    };
+    }
   };
 
   render() {
@@ -168,7 +153,6 @@ class DotaPage extends React.Component<Props, State> {
           />
         ) : (
           <EsportsCalendarContainer
-            series={this.props.dota.series}
             selectTournament={this.selectCalendarTournament}
             getEvents={this.getTournamentEvents}
           />

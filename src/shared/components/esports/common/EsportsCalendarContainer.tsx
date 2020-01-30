@@ -7,18 +7,11 @@ import { ESportsSeries } from "../../../../types/esports-api/esports-series.mode
 import { getEsportsTournamentsForCalendarFromSeries } from "../../../../helpers/utils";
 
 interface Props {
-  series: ESportsSeries[];
   selectTournament: (info: any) => void;
-  getEvents: (
-    series: ESportsSeries[]
-  ) => (fetchInfo, successCallback, failureCallback) => void;
+  getEvents: (fetchInfo, successCallback, failureCallback) => void;
 }
 
-function EsportsCalendarContainer({
-  series,
-  selectTournament,
-  getEvents
-}: Props) {
+function EsportsCalendarContainer({ selectTournament, getEvents }: Props) {
   return (
     <div className="section content">
       {/* <SelectDropdown
@@ -29,7 +22,7 @@ function EsportsCalendarContainer({
         <FullCalendar
           defaultView="dayGridMonth"
           plugins={[dayGridPlugin]}
-          events={getEvents(series)}
+          events={getEvents}
           eventClick={selectTournament}
         />
       </div>
