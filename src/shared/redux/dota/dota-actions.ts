@@ -81,12 +81,12 @@ export function getDotaSeriesFailure(err): T.GetDotaSeriesFailure {
   return { type: C.GET_DOTA_SERIES_FAILURE, err };
 }
 
-// month 0 - 11 (as per Date.getMonth()
+// month 0 - 11 (as with Date.getMonth())
 export const getDotaSeries = (
   year: number | null = null,
   month: number | null = null
 ): ThunkAction<
-  Promise<void>,
+  Promise<ESportsSeries[]>,
   ReduxState,
   null,
   T.DotaActionTypes
@@ -96,7 +96,7 @@ export const getDotaSeries = (
     await sleep(1000);
     const series = SERIES as ESportsSeries[];
     dispatch(getDotaSeriesSuccess(series));
-    return;
+    return series;
   }
 
   let url = gameonAPI.HOST + gameonAPI.DOTA + gameonAPI.SERIES;
@@ -108,9 +108,10 @@ export const getDotaSeries = (
     .get(url)
     .then(response => {
       dispatch(getDotaSeriesSuccess(response.data));
+      return response.data;
     })
     .catch(err => {
-      dispatch(getDotaSeriesFailure(err));
+      return dispatch(getDotaSeriesFailure(err));
     });
 };
 //#endregion

@@ -542,6 +542,11 @@ export function getDateWithOrdinal(d: Date): string {
   }`;
 }
 
+export function parseISOStringToDate(s): Date {
+  const b = s.split(/\D+/);
+  return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
+}
+
 export function isValidDate(d: string) {
   return Object.prototype.toString.call(d) === "[object Date]";
 }
@@ -566,18 +571,35 @@ export function capitalise(word: string) {
 //#endregion
 
 //#region redux helper methods
-export function merge(prev, next) { return Object.assign({}, prev, next); }
+export function merge(prev, next) {
+  return Object.assign({}, prev, next);
+}
 
 // month in range 0 - 11
-export function buildUrlRequestRangeQuery(url: string, year: number, month: number): string {
+export function buildUrlRequestRangeQuery(
+  url: string,
+  year: number,
+  month: number
+): string {
   if (month < 0 || month > 11) {
     return url;
   }
-  const monthBegin = month < 2 ? month + 12 - 1 : month - 1;
-  const yearBegin = month < 2 ? year - 1 : year;
-  const monthEnd = month > 8 ? month - 12 + 4 : month + 4;
-  const yearEnd = month > 8 ? year + 1 : year;
+  const monthsBehind = 4;
+  const monthsAhead = 4;
+  // add 1 to month since JS Date is 0 - 11, but dateformat yyyy-mm-dd is months 1-12
+  const monthBegin =
+    month < monthsBehind
+      ? month + 1 + 12 - monthsBehind
+      : month + 1 - monthsBehind;
+  const yearBegin = month < monthsBehind ? year - 1 : year;
+  // use monthsAhead + 1 since counting to 1st of following month
+  const monthEnd =
+    month > 12 - (monthsAhead + 1)
+      ? month - 12 + monthsAhead + 1
+      : month + monthsAhead + 1;
+  const yearEnd = month > 12 - (monthsAhead + 1) ? year + 1 : year;
 
+  // add 0 in front of singular digits 2 character month (eg 02 for feb)
   const monthBeginString = monthBegin < 10 ? `0${monthBegin}` : monthBegin;
   const monthEndString = monthEnd < 10 ? `0${monthEnd}` : monthEnd;
 
