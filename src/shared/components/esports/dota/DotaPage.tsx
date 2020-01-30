@@ -10,7 +10,6 @@ import { ReduxState } from "../../../redux/redux-state";
 import EsportsListContainer from "../common/list-view/EsportsListContainer";
 import EsportsCalendarContainer from "../common/EsportsCalendarContainer";
 import PageHeader from "../../common/PageHeader";
-import { ESportsSeries } from "../../../../types/esports-api/esports-series.model";
 import {
   parseISOStringToDate,
   getEsportsTournamentsForCalendarFromSeries
@@ -25,26 +24,15 @@ interface DispatchProps {
 type Props = StateProps & DispatchProps;
 interface State {
   isListView: boolean;
-  thisMonthCalled: number;
 }
 
 class DotaPage extends React.Component<Props, State> {
   constructor(props) {
     super(props);
 
-    const today = new Date();
-
     this.state = {
-      isListView: false,
-      thisMonthCalled: today.getMonth()
+      isListView: false
     };
-  }
-
-  componentDidMount() {
-    // if (this.props.dota.series.length < 1) {
-    //   const today = new Date();
-    //   this.props.getDotaSeries(today.getFullYear(), today.getMonth());
-    // }
   }
 
   toggleView = () =>
@@ -64,7 +52,6 @@ class DotaPage extends React.Component<Props, State> {
   };
 
   getTournamentEvents = (fetchInfo, successCallback, failureCallback) => {
-    console.log("fetchinfo", fetchInfo);
     const { dota, getDotaSeries } = this.props;
     if (dota.series.length < 1) {
       const today = new Date();
@@ -81,37 +68,39 @@ class DotaPage extends React.Component<Props, State> {
       const currentYear = middleDate.getFullYear();
 
       // Check first and last dates and compare to current month on calendar
-      if (dota.series.length > 0) {
-        let latestDate;
-        let earliestDate;
-        let latestMS;
-        let earliestMS;
+      let latestMS;
+      let earliestMS;
 
-        for (let i = 0; i < dota.series.length; i++) {
-          if (dota.series[i].beginAt) {
-            const latestISO = dota.series[i].beginAt;
-            latestDate = parseISOStringToDate(latestISO);
-            latestMS = latestDate.getTime();
-            break;
-          }
+      for (let i = 0; i < dota.series.length; i++) {
+        if (dota.series[i].beginAt) {
+          const latestISO = dota.series[i].beginAt;
+          const latestDate = parseISOStringToDate(latestISO);
+          latestMS = latestDate.getTime();
+          break;
         }
+      }
 
-        for (let i = dota.series.length - 1; i > -1; i--) {
-          if (dota.series[i].beginAt) {
-            const earliestISO = dota.series[i].beginAt;
-            earliestDate = parseISOStringToDate(earliestISO);
-            earliestMS = earliestDate.getTime();
-            break;
-          }
+      for (let i = dota.series.length - 1; i > -1; i--) {
+        if (dota.series[i].beginAt) {
+          const earliestISO = dota.series[i].beginAt;
+          const earliestDate = parseISOStringToDate(earliestISO);
+          earliestMS = earliestDate.getTime();
+          break;
         }
+      }
 
+      if (!latestMS || !earliestMS) {
+        getDotaSeries(currentYear, currentMonth).then(data => {
+          successCallback(getEsportsTournamentsForCalendarFromSeries(data));
+        });
+      } else {
         // After obtaining month, use to create date from 1st
         const firstCurrentMonth = new Date(currentYear, currentMonth, 1);
         const firstCurrentMS = firstCurrentMonth.getTime();
         const endCurrentMonth = new Date(currentYear, currentMonth, 28);
         const endCurrentMS = endCurrentMonth.getTime();
         const millisecInADay = 86400000;
-        const maxMSIn2Months = millisecInADay * 62;
+        const maxMSIn2Months = millisecInADay * 31 * 2;
 
         // If within 2 months of earliest/latest date, make request
         if (firstCurrentMS - earliestMS <= maxMSIn2Months) {

@@ -3,8 +3,6 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
 import SelectDropdown from "../../common/SelectDropdown";
-import { ESportsSeries } from "../../../../types/esports-api/esports-series.model";
-import { getEsportsTournamentsForCalendarFromSeries } from "../../../../helpers/utils";
 
 interface Props {
   selectTournament: (info: any) => void;
