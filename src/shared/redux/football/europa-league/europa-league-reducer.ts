@@ -33,21 +33,11 @@ function eplReducer(
       return merge(state, { isFetching: false, error: action.err });
 
     case C.GET_EUROPA_LEAGUE_TEAMS_REQUEST:
-      return merge(state, { isFetching: true });
+      return state;
     case C.GET_EUROPA_LEAGUE_TEAMS_SUCCESS:
-      return merge(state, {
-        isFetching: false,
-        teams: action.payload
-      });
+      return merge(state, { teams: action.payload });
     case C.GET_EUROPA_LEAGUE_TEAMS_FAILURE:
-      return merge(state, { isFetching: false, error: action.err });
-
-    // case A.GET_EUROPA_LEAGUE_VIDEOS_REQUEST:
-    //   return merge(state, { isFetching: true });
-    // case A.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS:
-    //   return merge(state, { isFetching: false, videos: action.payload });
-    // case A.GET_EUROPA_LEAGUE_VIDEOS_FAILURE:
-    //   return merge(state, { isFetching: false, error: action.err });
+      return merge(state, { error: action.err });
 
     default:
       return state;
