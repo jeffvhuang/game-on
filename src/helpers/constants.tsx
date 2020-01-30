@@ -133,19 +133,19 @@ export const esports = [
     uiName: "League of Legends",
     abbreviation: "LoL",
     selectors: "lol league of legends"
-  },
-  {
-    name: "Counter Strike: Global Offensive",
-    uiName: "Counter Strike: Global Offensive",
-    abbreviation: "csgo",
-    selectors: "csgo cs:go counter strike global offensive"
-  },
-  {
-    name: "Overwatch",
-    uiName: "Overwatch",
-    abbreviation: "ow",
-    selectors: "overwatch ow"
   }
+  // {
+  //   name: "Counter Strike: Global Offensive",
+  //   uiName: "Counter Strike: Global Offensive",
+  //   abbreviation: "csgo",
+  //   selectors: "csgo cs:go counter strike global offensive"
+  // },
+  // {
+  //   name: "Overwatch",
+  //   uiName: "Overwatch",
+  //   abbreviation: "ow",
+  //   selectors: "overwatch ow"
+  // }
   // {
   //   name: "Fortnite",
   //   abbreviation: "fortnite"

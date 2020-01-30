@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { GameOnEvent } from '../../../types/game-on-general/game-on-event.model';
-import UpcomingEvent from './UpcomingEvent';
-import EventWithScore from './EventWithScore';
-import EventWithMessage from './EventWithMessage';
+import * as React from "react";
+import { GameOnEvent } from "../../../types/game-on-general/game-on-event.model";
+import UpcomingEvent from "./UpcomingEvent";
+import EventWithScore from "./EventWithScore";
+import EventWithMessage from "./EventWithMessage";
 
 interface Props {
-  events: GameOnEvent[],
-  values: string[]
-};
+  events: GameOnEvent[];
+  values: string[];
+}
 
 function EventsToday({ events, values }: Props) {
   const now = new Date();
@@ -21,38 +21,42 @@ function EventsToday({ events, values }: Props) {
           if (value.includes(event.selector)) {
             isInValues = true;
             break;
-          } 
+          }
         }
 
         // Only need show event if it is in values
         if (values.length == 0 || isInValues) {
           // Use status to determine appropriate details to show if available
           if (event.status.length) {
-            if (event.status == 'Upcoming') {
+            if (event.status == "Upcoming") {
               return <UpcomingEvent key={event.id} event={event} />;
-            } else if (event.status == 'Live' || event.status == 'Completed') {
+            } else if (event.status == "Live" || event.status == "Completed") {
               return <EventWithScore key={event.id} event={event} />;
-            } else if (event.status == 'Canceled' || event.status == 'Postponed') {
+            } else if (
+              event.status == "Canceled" ||
+              event.status == "Postponed"
+            ) {
               return <EventWithMessage key={event.id} event={event} />;
             }
-          // No status is available so use date
+            // No status is available so use date
           } else {
             // Use date to get status if no status is set
             // Set class for event depending on whether it is completed, live or upcoming
-            const startTime = (event.startTime) ? new Date(event.startTime) : null;
-            const endTime = (event.endTime) ? new Date(event.endTime) : null;
-  
+            const startTime = event.startTime
+              ? new Date(event.startTime)
+              : null;
+            const endTime = event.endTime ? new Date(event.endTime) : null;
+
             if (startTime) {
               if (now < startTime) {
                 return <UpcomingEvent key={event.id} event={event} />;
-              } else { // Either live or completed
+              } else {
+                // Either live or completed
                 return <EventWithScore key={event.id} event={event} />;
               }
             }
           }
         }
-
-        
       })}
     </>
   );

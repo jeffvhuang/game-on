@@ -8,7 +8,7 @@ import { gameonAPI, env } from "../../../helpers/constants";
 
 // Mock data
 import SORTED_EVENTS from "../../../mockApiData/events.json";
-import SORTED_WEEK_EVENTS from "../../../mockApiData/eventsForWeek.json";
+import SORTED_WEEK_EVENTS from "../../../mockApiData/eventsForWeek2.json";
 // import SORTED_WEEK_EVENTS2 from "../../../mockApiData/eventsForWeek2.json";
 
 //#region Get events sorted into live, upcoming and recently completed
