@@ -35,10 +35,13 @@ class DotaPage extends React.Component<Props, State> {
     };
   }
 
-  toggleView = () =>
+  toggleView = () => {
+    // Reset to current month's data
+    this.props.getDotaSeries();
     this.setState(prevState => ({
       isListView: !prevState.isListView
     }));
+  };
 
   selectCalendarTournament = info => {
     const { history } = this.props;
@@ -100,19 +103,15 @@ class DotaPage extends React.Component<Props, State> {
         const endCurrentMonth = new Date(currentYear, currentMonth, 28);
         const endCurrentMS = endCurrentMonth.getTime();
         const millisecInADay = 86400000;
-        const maxMSIn2Months = millisecInADay * 31 * 2;
+        const maxMSIn1Month = millisecInADay * 31;
 
-        // If within 2 months of earliest/latest date, make request
-        if (firstCurrentMS - earliestMS <= maxMSIn2Months) {
+        // If within a month of earliest/latest date, make request
+        const isCloseToEarliest = firstCurrentMS - earliestMS <= maxMSIn1Month;
+        const isCloseToLatest = latestMS - endCurrentMS <= maxMSIn1Month;
+        if (isCloseToEarliest || isCloseToLatest) {
           getDotaSeries(currentYear, currentMonth).then(data => {
             successCallback(getEsportsTournamentsForCalendarFromSeries(data));
           });
-          console.log("make request earlier");
-        } else if (latestMS - endCurrentMS <= maxMSIn2Months) {
-          getDotaSeries(currentYear, currentMonth).then(data => {
-            successCallback(getEsportsTournamentsForCalendarFromSeries(data));
-          });
-          console.log("make request later");
         }
       }
     }

@@ -81,7 +81,7 @@ export function getDotaSeriesFailure(err): T.GetDotaSeriesFailure {
   return { type: C.GET_DOTA_SERIES_FAILURE, err };
 }
 
-// month 0 - 11 (as per Date.getMonth()
+// month 0 - 11 (as with Date.getMonth())
 export const getDotaSeries = (
   year: number | null = null,
   month: number | null = null

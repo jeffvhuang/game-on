@@ -584,7 +584,7 @@ export function buildUrlRequestRangeQuery(
   if (month < 0 || month > 11) {
     return url;
   }
-  const monthsBehind = 3;
+  const monthsBehind = 4;
   const monthsAhead = 4;
   // add 1 to month since JS Date is 0 - 11, but dateformat yyyy-mm-dd is months 1-12
   const monthBegin =
@@ -602,9 +602,7 @@ export function buildUrlRequestRangeQuery(
   // add 0 in front of singular digits 2 character month (eg 02 for feb)
   const monthBeginString = monthBegin < 10 ? `0${monthBegin}` : monthBegin;
   const monthEndString = monthEnd < 10 ? `0${monthEnd}` : monthEnd;
-  console.log(
-    `${url}?rangeBegin=${yearBegin}-${monthBeginString}-01&rangeEnd=${yearEnd}-${monthEndString}-01`
-  );
+
   return `${url}?rangeBegin=${yearBegin}-${monthBeginString}-01&rangeEnd=${yearEnd}-${monthEndString}-01`;
 }
 //#endregion
