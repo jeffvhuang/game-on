@@ -65,14 +65,14 @@ class DotaPage extends React.Component<Props, State> {
 
   getTournamentEvents = (fetchInfo, successCallback, failureCallback) => {
     console.log("fetchinfo", fetchInfo);
-    if (this.props.dota.series.length < 1) {
+    const { dota, getDotaSeries } = this.props;
+    if (dota.series.length < 1) {
       const today = new Date();
-      this.props
-        .getDotaSeries(today.getFullYear(), today.getMonth())
-        .then(data => {
-          successCallback(getEsportsTournamentsForCalendarFromSeries(data));
-        });
+      getDotaSeries(today.getFullYear(), today.getMonth()).then(data => {
+        successCallback(getEsportsTournamentsForCalendarFromSeries(data));
+      });
     } else {
+      // Only make requests fur further event data if necessary (nearing date of most recent or earliest event)
       // Get current month
       const middleMS =
         (fetchInfo.start.getTime() + fetchInfo.end.getTime()) / 2;
@@ -80,60 +80,52 @@ class DotaPage extends React.Component<Props, State> {
       const currentMonth = middleDate.getMonth();
       const currentYear = middleDate.getFullYear();
 
-      this.props.getDotaSeries(currentYear, currentMonth).then(data => {
-        successCallback(getEsportsTournamentsForCalendarFromSeries(data));
-      });
+      // Check first and last dates and compare to current month on calendar
+      if (dota.series.length > 0) {
+        let latestDate;
+        let earliestDate;
+        let latestMS;
+        let earliestMS;
 
-      // const { dota } = this.props;
-      // // Check first and last dates and compare to current month on calendar
-      // if (dota.series.length > 0) {
-      //   let latestDate;
-      //   let earliestDate;
-      //   let latestMS;
-      //   let earliestMS;
+        for (let i = 0; i < dota.series.length; i++) {
+          if (dota.series[i].beginAt) {
+            const latestISO = dota.series[i].beginAt;
+            latestDate = parseISOStringToDate(latestISO);
+            latestMS = latestDate.getTime();
+            break;
+          }
+        }
 
-      //   for (let i = 0; i < dota.series.length; i++) {
-      //     if (dota.series[i].beginAt) {
-      //       const latestISO = dota.series[i].beginAt;
-      //       latestDate = parseISOStringToDate(latestISO);
-      //       latestMS = latestDate.getTime();
-      //       break;
-      //     }
-      //   }
+        for (let i = dota.series.length - 1; i > -1; i--) {
+          if (dota.series[i].beginAt) {
+            const earliestISO = dota.series[i].beginAt;
+            earliestDate = parseISOStringToDate(earliestISO);
+            earliestMS = earliestDate.getTime();
+            break;
+          }
+        }
 
-      //   for (let i = dota.series.length - 1; i > -1; i--) {
-      //     if (dota.series[i].beginAt) {
-      //       const earliestISO = dota.series[i].beginAt;
-      //       earliestDate = parseISOStringToDate(earliestISO);
-      //       earliestMS = earliestDate.getTime();
-      //       break;
-      //     }
-      //   }
+        // After obtaining month, use to create date from 1st
+        const firstCurrentMonth = new Date(currentYear, currentMonth, 1);
+        const firstCurrentMS = firstCurrentMonth.getTime();
+        const endCurrentMonth = new Date(currentYear, currentMonth, 28);
+        const endCurrentMS = endCurrentMonth.getTime();
+        const millisecInADay = 86400000;
+        const maxMSIn2Months = millisecInADay * 62;
 
-      //   // ?? options for when to make request for more events data:
-      //   /** 1. determine whether closer to later or earlier and then detrmine
-      //    whether within 2 months to make request
-      //   2. immediately compare both latest and earliest by using month to convert back
-      //   to date but first of month / end of month then get time again and compare MS
-      //   */
-
-      //   // after obtaining month, use to create date from 1st
-      //   const firstCurrentMonth = new Date(currentYear, currentMonth, 1);
-      //   const firstCurrentMS = firstCurrentMonth.getTime();
-      //   const endCurrentMonth = new Date(currentYear, currentMonth, 28);
-      //   const endCurrentMS = endCurrentMonth.getTime();
-      //   const millisecInADay = 86400000;
-      //   const maxMSIn2Months = millisecInADay * 62;
-
-      //   // If within 2 months of earliest date, make request
-      //   if (firstCurrentMS - earliestMS <= maxMSIn2Months) {
-      //     // this.props.getDotaSeries(currentYear, currentMonth);
-      //     console.log("make request earlier");
-      //   } else if (latestMS - endCurrentMS <= maxMSIn2Months) {
-      //     // this.props.getDotaSeries(currentYear, currentMonth);
-      //     console.log("make request later");
-      //   }
-      // }
+        // If within 2 months of earliest/latest date, make request
+        if (firstCurrentMS - earliestMS <= maxMSIn2Months) {
+          getDotaSeries(currentYear, currentMonth).then(data => {
+            successCallback(getEsportsTournamentsForCalendarFromSeries(data));
+          });
+          console.log("make request earlier");
+        } else if (latestMS - endCurrentMS <= maxMSIn2Months) {
+          getDotaSeries(currentYear, currentMonth).then(data => {
+            successCallback(getEsportsTournamentsForCalendarFromSeries(data));
+          });
+          console.log("make request later");
+        }
+      }
     }
   };
 
