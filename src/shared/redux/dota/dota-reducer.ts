@@ -55,7 +55,7 @@ function dotaReducer(state = initialState, action: DotaActionTypes): DotaState {
       return merge(state, { isFetching: false, error: action.err });
 
     case A.GET_DOTA_SERIES_TOURNAMENTS_REQUEST:
-      return merge(state, { isFetching: true });
+      return merge(state, { isFetching: true, selectedSeriesTournaments: [] });
     case A.GET_DOTA_SERIES_TOURNAMENTS_SUCCESS:
       return merge(state, {
         isFetching: false,

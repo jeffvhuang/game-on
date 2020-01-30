@@ -8,7 +8,8 @@ import {
   sleep,
   sortESportsTournaments,
   sortESportByDate,
-  getESportsTeamsFromMatches
+  getESportsTeamsFromMatches,
+  buildUrlRequestRangeQuery
 } from "../../../helpers/utils";
 
 // Temporary seed data
@@ -34,26 +35,37 @@ export function getLolSeriesFailure(err): T.GetLolSeriesFailure {
   return { type: C.GET_LOL_SERIES_FAILURE, err };
 }
 
-export const getLolSeries = (): ThunkAction<
-  Promise<void>,
+// month 0 - 11 (as with Date.getMonth())
+export const getLolSeries = (
+  year: number | null = null,
+  month: number | null = null
+): ThunkAction<
+  Promise<ESportsSeries[]>,
   ReduxState,
   null,
   T.LolActionTypes
 > => async dispatch => {
   dispatch(getLolSeriesRequest());
   if (env === "dev") {
+    await sleep(1000);
     const series = SERIES as ESportsSeries[];
     dispatch(getLolSeriesSuccess(series));
-    return;
+    return series;
   }
-  // api/lol/series
+
+  let url = gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES;
+  if (year && month != null) {
+    url = buildUrlRequestRangeQuery(url, year, month);
+  }
+
   return axios
-    .get(gameonAPI.HOST + gameonAPI.LOL + gameonAPI.SERIES)
+    .get(url)
     .then(response => {
       dispatch(getLolSeriesSuccess(response.data));
+      return response.data;
     })
     .catch(err => {
-      dispatch(getLolSeriesFailure(err));
+      return dispatch(getLolSeriesFailure(err));
     });
 };
 //#endregion
@@ -89,7 +101,7 @@ export const getLolSeriesTournaments = (
     dispatch(getLolSeriesTournamentsSuccess(SERIES_TOURNAMENTS));
     return;
   }
-  // /api/dota/tournaments
+  // /api/lol/tournaments?seriesId=2337
   return axios
     .get(
       `${gameonAPI.HOST}${gameonAPI.LOL}${

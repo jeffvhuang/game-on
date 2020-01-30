@@ -30,7 +30,7 @@ function lolReducer(state = initialState, action: LolActionTypes): LolState {
       return merge(state, { isFetching: false, error: action.err });
 
     case A.GET_LOL_SERIES_TOURNAMENTS_REQUEST:
-      return merge(state, { isFetching: true });
+      return merge(state, { isFetching: true, selectedSeriesTournaments: [] });
     case A.GET_LOL_SERIES_TOURNAMENTS_SUCCESS:
       return merge(state, {
         isFetching: false,
