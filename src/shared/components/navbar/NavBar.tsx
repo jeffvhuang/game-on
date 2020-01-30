@@ -76,9 +76,9 @@ class NavBar extends React.Component<{}, State> {
         {/* <Item key="events">
           <Link to={paths.EVENTS}>Events</Link>
         </Item> */}
-        {/* <Item key="login" className="right">
-          <Link to={paths.LOGIN}>Login</Link>
-        </Item> */}
+        <Item key="login" className="right">
+          <Link to={paths.LOGIN}>BETA Version</Link>
+        </Item>
       </Menu>
     );
   }
