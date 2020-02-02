@@ -163,7 +163,7 @@ export const gameonAPI = {
   HOST:
     env === "dev"
       ? "https://localhost:44305/api"
-      : "https://gameonapi.azurewebsites.net/index.html/api",
+      : "https://gameonapi.azurewebsites.net/api",
   NBA: "/basketball/nba",
   EPL: "/football/epl",
   CHAMPIONS_LEAGUE: "/football/championsleague",
