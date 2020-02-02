@@ -1,18 +1,18 @@
-const path = require('path');
+const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
     // NB: The entry points will help optimization.splitChunks decide how to chunk the bundles
-    app: './src/index.tsx'
+    app: "./src/index.tsx"
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    path: path.resolve(__dirname, "build"),
+    publicPath: "/"
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(["build"]),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html",
@@ -20,7 +20,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: [".ts", ".tsx", '.js', '.jsx', '.json', '.less']
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".less"]
   },
   module: {
     rules: [
@@ -28,7 +28,7 @@ module.exports = {
         enforce: "pre",
         test: /\.(js)$/,
         exclude: /node_modules/,
-        loader: "source-map-loader",
+        loader: "source-map-loader"
       }
     ]
   }
