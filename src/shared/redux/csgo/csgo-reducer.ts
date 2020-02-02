@@ -1,6 +1,6 @@
 import * as A from './csgo-constants';
 import { CsgoState, CsgoActionTypes } from './csgo-types';
-import { createYoutubeThumnailObjects } from '../../../helpers/utils';
+import { merge } from "../../../helpers/utils";
 
 const initialState: CsgoState = {
   isFetching: false,
@@ -18,9 +18,9 @@ const initialState: CsgoState = {
 function csgoReducer(state = initialState, action: CsgoActionTypes): CsgoState {
   switch (action.type) {
     case A.GET_CSGO_TOURNAMENTS_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
+      return merge(state, { isFetching: true });
     case A.GET_CSGO_TOURNAMENTS_SUCCESS:
-      return Object.assign({}, state,
+      return merge(state,
         {
           isFetching: false,
           tournaments: action.payload,
@@ -30,41 +30,41 @@ function csgoReducer(state = initialState, action: CsgoActionTypes): CsgoState {
           teams: action.sortedTournaments.teams
         });
     case A.GET_CSGO_TOURNAMENTS_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+      return merge(state, { isFetching: false, error: action.err });
 
     case A.GET_CSGO_TOURNAMENT_MATCHES_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
+      return merge(state, { isFetching: true });
     case A.GET_CSGO_TOURNAMENT_MATCHES_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, tournamentMatches: action.payload });
+      return merge(state, { isFetching: false, tournamentMatches: action.payload });
     case A.GET_CSGO_TOURNAMENT_MATCHES_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+      return merge(state, { isFetching: false, error: action.err });
     case A.CLEAR_CSGO_TOURNAMENT_MATCHES:
-      return Object.assign({}, state, { tournamentMatches: [] });
+      return merge(state, { tournamentMatches: [] });
 
     case A.GET_CSGO_MATCHES_REQUEST:
-      return Object.assign({}, state, { isFetching: true });
+      return merge(state, { isFetching: true });
     case A.GET_CSGO_MATCHES_SUCCESS:
-      return Object.assign({}, state, { isFetching: false, matches: action.payload, matchesTeams: action.matchesTeams });
+      return merge(state, { isFetching: false, matches: action.payload, matchesTeams: action.matchesTeams });
     case A.GET_CSGO_MATCHES_FAILURE:
-      return Object.assign({}, state, { isFetching: false, error: action.err });
+      return merge(state, { isFetching: false, error: action.err });
 
     // case A.GET_CSGO_TEAMS_REQUEST:
-    //   return Object.assign({}, state, { isFetching: true });
+    //   return merge(state, { isFetching: true });
     // case A.GET_CSGO_TEAMS_SUCCESS:
-    //   return Object.assign({}, state, { isFetching: false, teams: action.payload });
+    //   return merge(state, { isFetching: false, teams: action.payload });
     // case A.GET_CSGO_TEAMS_FAILURE:
-    //   return Object.assign({}, state, { isFetching: false, error: action.err });
+    //   return merge(state, { isFetching: false, error: action.err });
 
     // case A.GET_CSGO_VIDEOS_REQUEST:
-    //   return Object.assign({}, state, { isFetching: true });
+    //   return merge(state, { isFetching: true });
     // case A.GET_CSGO_VIDEOS_SUCCESS:
-    //   return Object.assign({}, state, {
+    //   return merge(state, {
     //     isFetching: false,
     //     videos: action.payload,
     //     thumbnails: createYoutubeThumnailObjects(action.payload)
     //   });
     // case A.GET_CSGO_VIDEOS_FAILURE:
-    //   return Object.assign({}, state, { isFetching: false, error: action.err });
+    //   return merge(state, { isFetching: false, error: action.err });
 
     default:
       return state;

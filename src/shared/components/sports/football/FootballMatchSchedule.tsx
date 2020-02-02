@@ -1,21 +1,23 @@
-import * as React from 'react';
-import { Row, Col } from 'antd';
+import * as React from "react";
+import { Row, Col } from "antd";
 
-import { getFormattedTime } from '../../../../helpers/utils';
+import {
+  getFormattedTime,
+  getDateWithOrdinal
+} from "../../../../helpers/utils";
+import { FootballSchedule } from "../../../../types/football-api/football-schedule.model";
 
 interface Props {
-  game: any
-};
+  game: FootballSchedule;
+}
 
 function FootballMatchSchedule({ game }: Props) {
   const startDate = new Date(game.eventDate);
-
   return (
     <Row>
-      <Col span={7}>{game.awayTeam.teamName}</Col>
-      <Col span={2}>vs</Col>
-      <Col span={7}>{game.homeTeam.teamName}</Col>
-      <Col span={5}>{startDate.toDateString()}</Col>
+      <Col span={8}>{game.awayTeam.teamName}</Col>
+      <Col span={8}>{game.homeTeam.teamName}</Col>
+      <Col span={5}>{getDateWithOrdinal(startDate)}</Col>
       <Col span={3}>{getFormattedTime(startDate)}</Col>
     </Row>
   );

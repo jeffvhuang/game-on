@@ -1,10 +1,10 @@
-# Introduction
+# Game On
 
 This web app front end allows people to find and see what major tournaments and games are occurring in the sports and/or e-sports worlds.
 
 ## Getting Started
 
-This project was made to be run in conjunction with the [backend API](https://github.com/jeffvhuang/game-on-api.git).
+This project was made to be run in conjunction with the [backend API](https://github.com/jeffvhuang/game-on-api.git). It is currently set to use mock data obtained via the API for development purposes.
 
 ### Requirements
 
@@ -38,7 +38,7 @@ The following instructions can be used to test an optimized production version.
 1. Navigate to the root directory of the project
 2. `npm run build` will create a build directory in the root location
 3. `npm install -g http-server` to install the http npm package globally
-4. `cd build`
+4. `cd dist`
 5. `http-server`
 6. Navigate to http://localhost:8080 in your browser to see the production version running
 

@@ -1,20 +1,7 @@
-import * as C from './europa-league-constants';
+import * as C from "./europa-league-constants";
 import { FootballSchedule } from "../../../../types/football-api/football-schedule.model";
 import { FootballTeam } from "../../../../types/football-api/football-team.model";
-import { FootballSortedSchedule } from '../../../../types/football-api/football-sorted-schedule.model';
-import { YoutubePlaylistItem } from '../../../../types/youtube/youtube-playlist-item.model';
-
-export interface EuropaLeagueState {
-  isFetching: boolean;
-  schedule: FootballSchedule[];
-  teams: FootballTeam[];
-  live: FootballSchedule[];
-  upcoming: FootballSchedule[];
-  completed: FootballSchedule[];
-  videos: any[];
-  thumbnails: any[];
-  error: any;
-}
+import { FootballSortedSchedule } from "../../../../types/football-api/football-sorted-schedule.model";
 
 // Get EUROPA_LEAGUE Schedule
 export interface GetEuropaLeagueScheduleRequest {
@@ -47,28 +34,10 @@ export interface GetEuropaLeagueTeamsFailure {
   err: any;
 }
 
-// Get Videos
-export interface GetEuropaLeagueVideosRequest {
-  type: typeof C.GET_EUROPA_LEAGUE_VIDEOS_REQUEST;
-}
-
-export interface GetEuropaLeagueVideosSuccess {
-  type: typeof C.GET_EUROPA_LEAGUE_VIDEOS_SUCCESS;
-  payload: YoutubePlaylistItem[];
-}
-
-export interface GetEuropaLeagueVideosFailure {
-  type: typeof C.GET_EUROPA_LEAGUE_VIDEOS_FAILURE;
-  err: any;
-}
-
 export type EuropaLeagueActionTypes =
-  GetEuropaLeagueScheduleRequest |
-  GetEuropaLeagueScheduleSuccess |
-  GetEuropaLeagueScheduleFailure |
-  GetEuropaLeagueTeamsRequest |
-  GetEuropaLeagueTeamsSuccess |
-  GetEuropaLeagueTeamsFailure |
-  GetEuropaLeagueVideosRequest |
-  GetEuropaLeagueVideosSuccess |
-  GetEuropaLeagueVideosFailure;
+  | GetEuropaLeagueScheduleRequest
+  | GetEuropaLeagueScheduleSuccess
+  | GetEuropaLeagueScheduleFailure
+  | GetEuropaLeagueTeamsRequest
+  | GetEuropaLeagueTeamsSuccess
+  | GetEuropaLeagueTeamsFailure;

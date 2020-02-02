@@ -1,4 +1,4 @@
-import { ESportsSeries } from "./espots-series.model";
+import { ESportsSeries } from "./esports-series.model";
 
 export interface ESportsSortedSeries {
   ongoingSeries: ESportsSeries[];

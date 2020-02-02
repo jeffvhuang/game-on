@@ -2,24 +2,23 @@ import * as C from "./lol-constants";
 import { ESportsTournament } from "../../../types/esports-api/esports-tournament.model";
 import { ESportsMatch } from "../../../types/esports-api/esports-match.model";
 import { ESportsTeamBase } from "../../../types/esports-api/esports-team-base.model";
-import { YoutubePlaylistItem } from "../../../types/youtube/youtube-playlist-item.model";
-import { ThumbnailObject } from "../../../types/tennis-api/thumbnail-object.model";
 import { ESportsSortedTournaments } from "../../../types/esports-api/esports-sorted-tournaments.model";
 import { ESportsTeam } from "../../../types/esports-api/esports-team.model";
+import { ESportsSeries } from "../../../types/esports-api/esports-series.model";
 
 export interface LolState {
-  isFetching: boolean,
-  tournaments: ESportsTournament[],
-  ongoing: ESportsTournament[],
-  upcoming: ESportsTournament[],
-  completed: ESportsTournament[],
-  matches: ESportsMatch[],
-  tournamentMatches: ESportsMatch[],
-  teams: ESportsTeamBase[],
-  matchesTeams: ESportsTeamBase[],
-  videos: YoutubePlaylistItem[],
-  thumbnails: ThumbnailObject[],
-  error: any
+  isFetching: boolean;
+  series: ESportsSeries[];
+  selectedSeriesTournaments: ESportsTournament[];
+  tournaments: ESportsTournament[];
+  ongoing: ESportsTournament[];
+  upcoming: ESportsTournament[];
+  completed: ESportsTournament[];
+  matches: ESportsMatch[];
+  tournamentMatches: ESportsMatch[];
+  teams: ESportsTeamBase[];
+  matchesTeams: ESportsTeamBase[];
+  error: any;
 }
 
 // Get LOL Tournaments
@@ -39,20 +38,38 @@ export interface GetLolTournamentsFailure {
 }
 
 // Get LOL Series
-// export interface GetLolSeriesRequest {
-//   type: typeof C.GET_LOL_SERIES_REQUEST;
-// }
+export interface GetLolSeriesRequest {
+  type: typeof C.GET_LOL_SERIES_REQUEST;
+}
 
-// export interface GetLolSeriesSuccess {
-//   type: typeof C.GET_LOL_SERIES_SUCCESS;
-//   payload: ESportsSeries[];
-//   sortedSeries: ESportsSortedSeries;
-// }
+export interface GetLolSeriesSuccess {
+  type: typeof C.GET_LOL_SERIES_SUCCESS;
+  payload: ESportsSeries[];
+}
 
-// export interface GetLolSeriesFailure {
-//   type: typeof C.GET_LOL_SERIES_FAILURE;
-//   err: any;
-// }
+export interface GetLolSeriesFailure {
+  type: typeof C.GET_LOL_SERIES_FAILURE;
+  err: any;
+}
+
+export interface SelectLolSeries {
+  type: typeof C.SELECT_LOL_SERIES;
+  payload: ESportsSeries;
+}
+
+export interface GetLolSeriesTournamentsRequest {
+  type: typeof C.GET_LOL_SERIES_TOURNAMENTS_REQUEST;
+}
+
+export interface GetLolSeriesTournamentsSuccess {
+  type: typeof C.GET_LOL_SERIES_TOURNAMENTS_SUCCESS;
+  payload: ESportsTournament[];
+}
+
+export interface GetLolSeriesTournamentsFailure {
+  type: typeof C.GET_LOL_SERIES_TOURNAMENTS_FAILURE;
+  err: any;
+}
 
 // Get a particular tournament's matches
 export interface GetLolTournamentMatchesRequest {
@@ -61,7 +78,7 @@ export interface GetLolTournamentMatchesRequest {
 
 export interface GetLolTournamentMatchesSuccess {
   type: typeof C.GET_LOL_TOURNAMENT_MATCHES_SUCCESS;
-  payload: ESportsMatch[]
+  payload: ESportsMatch[];
 }
 
 export interface GetLolTournamentMatchesFailure {
@@ -81,7 +98,7 @@ export interface GetLolMatchesRequest {
 export interface GetLolMatchesSuccess {
   type: typeof C.GET_LOL_MATCHES_SUCCESS;
   payload: ESportsMatch[];
-  matchesTeams: ESportsTeamBase[]
+  matchesTeams: ESportsTeamBase[];
 }
 
 export interface GetLolMatchesFailure {
@@ -104,37 +121,24 @@ export interface GetLolTeamsFailure {
   err: any;
 }
 
-// Get LOL Videos
-export interface GetLolVideosRequest {
-  type: typeof C.GET_LOL_VIDEOS_REQUEST;
-}
-
-export interface GetLolVideosSuccess {
-  type: typeof C.GET_LOL_VIDEOS_SUCCESS;
-  payload: YoutubePlaylistItem[];
-}
-export interface GetLolVideosFailure {
-  type: typeof C.GET_LOL_VIDEOS_FAILURE;
-  err: any;
-}
-
 export type LolActionTypes =
-  GetLolTournamentsRequest |
-  GetLolTournamentsSuccess |
-  GetLolTournamentsFailure |
-  // GetLolSeriesRequest |
-  // GetLolSeriesSuccess |
-  // GetLolSeriesFailure |
-  GetLolTournamentMatchesRequest |
-  GetLolTournamentMatchesSuccess |
-  GetLolTournamentMatchesFailure |
-  ClearLolTournamentMatchesSuccess |
-  GetLolMatchesRequest |
-  GetLolMatchesSuccess |
-  GetLolMatchesFailure |
-  GetLolTeamsRequest |
-  GetLolTeamsSuccess |
-  GetLolTeamsFailure |
-  GetLolVideosRequest |
-  GetLolVideosSuccess |
-  GetLolVideosFailure;
+  | GetLolTournamentsRequest
+  | GetLolTournamentsSuccess
+  | GetLolTournamentsFailure
+  | GetLolSeriesRequest
+  | GetLolSeriesSuccess
+  | GetLolSeriesFailure
+  | GetLolTournamentMatchesRequest
+  | GetLolTournamentMatchesSuccess
+  | GetLolTournamentMatchesFailure
+  | ClearLolTournamentMatchesSuccess
+  | GetLolMatchesRequest
+  | GetLolMatchesSuccess
+  | GetLolMatchesFailure
+  | GetLolTeamsRequest
+  | GetLolTeamsSuccess
+  | GetLolTeamsFailure
+  | SelectLolSeries
+  | GetLolSeriesTournamentsRequest
+  | GetLolSeriesTournamentsSuccess
+  | GetLolSeriesTournamentsFailure;

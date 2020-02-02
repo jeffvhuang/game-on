@@ -23,3 +23,5 @@ yarn-error.log*
 
 #css files to allow use of sass
 src/**/*.css
+
+.vscode/

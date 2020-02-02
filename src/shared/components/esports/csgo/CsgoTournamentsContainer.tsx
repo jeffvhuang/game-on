@@ -1,21 +1,23 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import * as React from "react";
+import { connect } from "react-redux";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
 
-import { getTournamentName } from '../../../../helpers/utils';
-import { getCsgoTournaments } from '../../../redux/csgo/csgo-actions';
+import { getTournamentName } from "../../../../helpers/utils";
+import { getCsgoTournaments } from "../../../redux/csgo/csgo-actions";
 
-import SelectDropdown from '../../common/SelectDropdown';
-import { CsgoState } from '../../../redux/csgo/csgo-types';
-import { ReduxState } from '../../../redux/redux-state';
-import { ESportsTournament } from '../../../../types/esports-api/esports-tournament.model';
+import SelectDropdown from "../../common/SelectDropdown";
+import { CsgoState } from "../../../redux/csgo/csgo-types";
+import { ReduxState } from "../../../redux/redux-state";
+import { ESportsTournament } from "../../../../types/esports-api/esports-tournament.model";
 
 interface StateProps {
   csgo: CsgoState;
   selectTournament: (any) => void;
-};
-interface DispatchProps { getCsgoTournaments; };
+}
+interface DispatchProps {
+  getCsgoTournaments;
+}
 type Props = StateProps & DispatchProps;
 interface State {
   values: string[];
@@ -34,8 +36,8 @@ class CsgoTournamentsContainer extends React.Component<Props, State> {
 
   componentDidMount() {
     const { csgo } = this.props;
-    if (!csgo.tournaments.length) this.props.getCsgoTournaments()
-      .then(data => {
+    if (!csgo.tournaments.length)
+      this.props.getCsgoTournaments().then(data => {
         this.setState({ tournaments: data });
       });
   }
@@ -43,18 +45,18 @@ class CsgoTournamentsContainer extends React.Component<Props, State> {
   handleChange = values => {
     // Either get all tournaments when nothing selected in dropdown or
     // get tournaments that include any team that has been selected
-    const tournaments = (!values.length)
+    const tournaments = !values.length
       ? this.props.csgo.tournaments
       : this.props.csgo.tournaments.filter(tournament => {
-        for (let i = 0; i < tournament.teams.length; i++) {
-          const team = tournament.teams[i];
-          if (values.some(value => value == team.name)) return tournament;
-        }
-      });
+          for (let i = 0; i < tournament.teams.length; i++) {
+            const team = tournament.teams[i];
+            if (values.some(value => value == team.name)) return tournament;
+          }
+        });
 
     this.setState({ tournaments });
-  }
-  
+  };
+
   getTournamentsForCalendar = (tournaments: ESportsTournament[]) => {
     const events = [] as any[];
 
@@ -70,20 +72,22 @@ class CsgoTournamentsContainer extends React.Component<Props, State> {
     }
 
     return events;
-  }
+  };
 
   render() {
     return (
       <div className="section">
-        <div className="select-dd">
-          <SelectDropdown handleChange={this.handleChange}
-            options={this.props.csgo.teams} />
-        </div>
+        <SelectDropdown
+          handleChange={this.handleChange}
+          options={this.props.csgo.teams}
+        />
         <div className="calendar">
-          <FullCalendar defaultView="dayGridMonth"
+          <FullCalendar
+            defaultView="dayGridMonth"
             plugins={[dayGridPlugin]}
             events={this.getTournamentsForCalendar(this.state.tournaments)}
-            eventClick={this.props.selectTournament} />
+            eventClick={this.props.selectTournament}
+          />
         </div>
       </div>
     );
@@ -98,4 +102,7 @@ const mapDispatchToProps = {
   getCsgoTournaments
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CsgoTournamentsContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CsgoTournamentsContainer);

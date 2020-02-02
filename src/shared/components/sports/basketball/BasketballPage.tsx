@@ -1,27 +1,31 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { connect } from "react-redux";
+import { Button } from "antd";
+import { Link } from "react-router-dom";
 
-import { paths } from '../../../../helpers/constants';
-import { getNbaSchedule, getNbaTeams, getNbaVideos } from '../../../redux/nba/nba-actions';
+import { paths } from "../../../../helpers/constants";
+import { getNbaSchedule, getNbaTeams } from "../../../redux/nba/nba-actions";
 
-import VideoThumbnails from '../../common/VideoThumbnails';
-import NbaSelectDropdown from './NbaSelectDropdown';
-import BasketballScheduleSection from './BasketballScheduleSection';
-import VideoHeader from '../../common/VideoHeader';
-import { NbaState } from '../../../redux/nba/nba-types';
-import { ReduxState } from '../../../redux/redux-state';
+import NbaSelectDropdown from "./NbaSelectDropdown";
+import BasketballScheduleSection from "./BasketballScheduleSection";
+import { NbaState } from "../../../redux/nba/nba-types";
+import { ReduxState } from "../../../redux/redux-state";
+import PageHeader from "../../common/PageHeader";
 
 interface StateProps {
   nba: NbaState;
 }
 
 interface DispatchProps {
-  getNbaSchedule; getNbaTeams; getNbaVideos;
+  getNbaSchedule;
+  getNbaTeams;
+  getNbaVideos;
 }
 
 interface State {
   values: string[];
+  upcomingToShow: number;
+  pastToShow: number;
 }
 
 type Props = StateProps & DispatchProps;
@@ -31,40 +35,66 @@ class BasketballPage extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      values: []
+      values: [],
+      upcomingToShow: 10,
+      pastToShow: 10
     };
   }
 
   componentDidMount() {
     const props = this.props;
-    // if (props.nba.videos.length < 1) props.actions.getNbaVideos();
     if (props.nba.teams.length < 1) props.getNbaTeams();
     if (props.nba.schedule.length < 1) props.getNbaSchedule();
   }
 
   handleChange = values => this.setState({ values });
 
+  showMoreUpcoming = () =>
+    this.setState(prevState => {
+      return { upcomingToShow: prevState.upcomingToShow + 10 };
+    });
+
+  showMorePast = () =>
+    this.setState(prevState => {
+      return { pastToShow: prevState.pastToShow + 10 };
+    });
+
   render() {
     return (
-      <div>
-        {/* <VideoHeader /> */}
-        <h1>Basketball</h1>
-        <NbaSelectDropdown handleChange={this.handleChange} 
-          teams={this.props.nba.teams} />
-        {/* <VideoThumbnails heading="NBA Videos"
-          thumbnails={this.props.nba.thumbnails}
-          showCount={4}
-          showMore
-          showMoreLink={paths.HIGHLIGHTS + '/basketball/nba'} /> */}
-        <div className="section">
-          <BasketballScheduleSection header="Today's Games"
-            games={this.props.nba.gamesToday}
-            values={this.state.values} />
-          <BasketballScheduleSection header="Upcoming"
-            games={this.props.nba.upcoming}
-            values={this.state.values} />
-          <Link to={paths.EVENTS} className="right">More ></Link>
+      <div className="section content">
+        <PageHeader title="NBA" isLoading={this.props.nba.isFetching} />
+        <NbaSelectDropdown
+          handleChange={this.handleChange}
+          teams={this.props.nba.teams}
+        />
+        <BasketballScheduleSection
+          header="Today"
+          games={this.props.nba.gamesToday}
+          values={this.state.values}
+          isLoading={this.props.nba.isFetching}
+        />
+        <BasketballScheduleSection
+          header="Upcoming"
+          games={this.props.nba.upcoming}
+          values={this.state.values}
+          isLoading={this.props.nba.isFetching}
+          numToShow={this.state.upcomingToShow}
+        />
+        <div className="more-btn">
+          <Button onClick={this.showMoreUpcoming} className="right">
+            More >
+          </Button>
         </div>
+        <BasketballScheduleSection
+          header="Past"
+          games={this.props.nba.completed}
+          values={this.state.values}
+          isLoading={this.props.nba.isFetching}
+          numToShow={this.state.pastToShow}
+        />
+        <Button onClick={this.showMorePast} className="right">
+          More >
+        </Button>
       </div>
     );
   }
@@ -75,7 +105,11 @@ const mapStateToProps = (state: ReduxState) => ({
 });
 
 const mapDispatchToProps = {
-  getNbaSchedule, getNbaTeams, getNbaVideos
-}
+  getNbaSchedule,
+  getNbaTeams
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(BasketballPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BasketballPage);

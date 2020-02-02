@@ -1,21 +1,7 @@
-import * as C from './champions-league-constants';
-import { YoutubePlaylistItem } from '../../../../types/youtube/youtube-playlist-item.model';
-import { FootballSchedule } from '../../../../types/football-api/football-schedule.model';
-import { FootballSortedSchedule } from '../../../../types/football-api/football-sorted-schedule.model';
-import { FootballTeam } from '../../../../types/football-api/football-team.model';
-import { ThumbnailObject } from '../../../../types/tennis-api/thumbnail-object.model';
-
-export interface ChampionsLeagueState {
-  isFetching: boolean,
-  teams: FootballTeam[],
-  schedule: FootballSchedule[],
-  live: FootballSchedule[],
-  upcoming: FootballSchedule[],
-  completed: FootballSchedule[],
-  videos: YoutubePlaylistItem[],
-  thumbnails: ThumbnailObject[],
-  error: any
-}
+import * as C from "./champions-league-constants";
+import { FootballSchedule } from "../../../../types/football-api/football-schedule.model";
+import { FootballSortedSchedule } from "../../../../types/football-api/football-sorted-schedule.model";
+import { FootballTeam } from "../../../../types/football-api/football-team.model";
 
 // Get CHAMPIONS LEAGUE Schedule
 export interface GetChampionsLeagueScheduleRequest {
@@ -63,31 +49,13 @@ export interface GetChampionsLeagueTeamsFailure {
   err: any;
 }
 
-// Get Videos
-export interface GetChampionsLeagueVideosRequest {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_REQUEST;
-}
-
-export interface GetChampionsLeagueVideosSuccess {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_SUCCESS;
-  payload: YoutubePlaylistItem[];
-}
-
-export interface GetChampionsLeagueVideosFailure {
-  type: typeof C.GET_CHAMPIONS_LEAGUE_VIDEOS_FAILURE;
-  err: any;
-}
-
 export type ChampionsLeagueActionTypes =
-  GetChampionsLeagueScheduleRequest |
-  GetChampionsLeagueScheduleSuccess |
-  GetChampionsLeagueScheduleFailure |
-  GetChampionsLeagueGamesLiveRequest |
-  GetChampionsLeagueGamesLiveSuccess |
-  GetChampionsLeagueGamesLiveFailure |
-  GetChampionsLeagueTeamsRequest |
-  GetChampionsLeagueTeamsSuccess |
-  GetChampionsLeagueTeamsFailure |
-  GetChampionsLeagueVideosRequest |
-  GetChampionsLeagueVideosSuccess |
-  GetChampionsLeagueVideosFailure;
+  | GetChampionsLeagueScheduleRequest
+  | GetChampionsLeagueScheduleSuccess
+  | GetChampionsLeagueScheduleFailure
+  | GetChampionsLeagueGamesLiveRequest
+  | GetChampionsLeagueGamesLiveSuccess
+  | GetChampionsLeagueGamesLiveFailure
+  | GetChampionsLeagueTeamsRequest
+  | GetChampionsLeagueTeamsSuccess
+  | GetChampionsLeagueTeamsFailure;
