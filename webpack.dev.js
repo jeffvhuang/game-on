@@ -1,28 +1,28 @@
-const AntdScssThemePlugin = require('antd-scss-theme-plugin');
-const merge = require('webpack-merge');
-const common = require('./webpack.config');
-const webpack = require('webpack');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const fs = require('fs');
-const path = require('path');
+const AntdScssThemePlugin = require("antd-scss-theme-plugin");
+const merge = require("webpack-merge");
+const common = require("./webpack.config");
+const webpack = require("webpack");
+const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
+const fs = require("fs");
+const path = require("path");
 
 module.exports = merge(common, {
-  mode: 'development',
+  mode: "development",
   // devtool specifies how info is shown in CLI
-  devtool: 'source-map',
+  devtool: "source-map",
   devServer: {
-    contentBase: './dist',
+    contentBase: "./build",
     historyApiFallback: true,
     hot: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin(),
-    new AntdScssThemePlugin('./src/styles/theme.scss')
+    new AntdScssThemePlugin("./src/styles/theme.scss")
   ],
   output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].chunk.js'
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].chunk.js"
   },
   module: {
     rules: [
@@ -31,16 +31,16 @@ module.exports = merge(common, {
         oneOf: [
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-            loader: require.resolve('url-loader'),
+            loader: require.resolve("url-loader"),
             options: {
               limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
-            },
+              name: "static/media/[name].[hash:8].[ext]"
+            }
           },
           {
             test: /\.(ts|tsx|jsx|mjs)$/,
             exclude: /node_modules/,
-            use: { loader: 'awesome-typescript-loader' },
+            use: { loader: "awesome-typescript-loader" }
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -50,17 +50,17 @@ module.exports = merge(common, {
           {
             test: /\.css$$/,
             use: [
-              'style-loader', // creates style nodes from JS strings
-              'css-loader',
-              'postcss-loader'
+              "style-loader", // creates style nodes from JS strings
+              "css-loader",
+              "postcss-loader"
             ]
           },
           {
             test: /\.less$$/,
             use: [
-              'style-loader',
-              'css-loader',
-              'postcss-loader',
+              "style-loader",
+              "css-loader",
+              "postcss-loader",
               // AntdScssThemePlugin.themify({
               //   loader: 'less-loader',
               //   options: {
@@ -68,7 +68,7 @@ module.exports = merge(common, {
               //   }
               // }),
               {
-                loader: 'less-loader',
+                loader: "less-loader",
                 options: {
                   javascriptEnabled: true
                 }
@@ -90,13 +90,13 @@ module.exports = merge(common, {
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.less$/],
-            loader: require.resolve('file-loader'),
+            loader: require.resolve("file-loader")
             // options: {
             //   name: 'static/media/[name].[hash:8].[ext]',
             // },
-          },
-        ],
-      },
+          }
+        ]
+      }
       // **STOP** Make sure to add the new loader(s) before the "file" loader.
     ]
   }
