@@ -160,7 +160,10 @@ export const sportsList = [...sports, ...esports];
 
 // API from backend
 export const gameonAPI = {
-  HOST: "https://localhost:44305/api",
+  HOST:
+    env === "dev"
+      ? "https://localhost:44305/api"
+      : "https://gameonapi.azurewebsites.net/index.html/api",
   NBA: "/basketball/nba",
   EPL: "/football/epl",
   CHAMPIONS_LEAGUE: "/football/championsleague",
