@@ -30,7 +30,7 @@
     "@types/react-router-dom": "^5.1.2",
     "antd": "^3.19.3",
     "axios": "^0.18.1",
-    "browserslist": "^4.6.2",
+    "browserslist": "^4.16.5",
     "less": "^3.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
